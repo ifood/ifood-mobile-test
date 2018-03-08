@@ -4,6 +4,7 @@ PODS:
     - EFInternetIndicator/Interface (= 0.4.0)
   - EFInternetIndicator/Interface (0.4.0):
     - SwiftMessages
+  - KeychainSwift (10.0.0)
   - ObjectMapper (3.1.0)
   - SwiftLint (0.25.0)
   - SwiftMessages (4.1.0)
@@ -12,6 +13,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - EFInternetIndicator (from `https://github.com/ezefranca/EFInternetIndicator.git`)
+  - KeychainSwift (~> 10.0)
   - ObjectMapper
   - SwiftLint
   - SwiftyVIPER
@@ -28,11 +30,12 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
   EFInternetIndicator: 17d670654e5cab15a8bdff0772da034556dbd81e
+  KeychainSwift: f9f7910449a0c0fd2cabc889121530dd2c477c33
   ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
   SwiftLint: e14651157288e9e01d6e1a71db7014fb5744a8ea
   SwiftMessages: 1bacc783c8f10bdfdc57c14860cae8a1f1fa6591
   SwiftyVIPER: 826670ff53981da482e6a279a6f428f5567530ea
 
-PODFILE CHECKSUM: 72ce02d3cb2a701363a9a08b8e36bbb0dc89e410
+PODFILE CHECKSUM: 693f83e0bb51934c81906452fe9f7c7e7c2893b2
 
 COCOAPODS: 1.3.1

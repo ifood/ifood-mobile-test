@@ -2,7 +2,11 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>twitterSecret</key>
+	<string>nHxOfCp7J08bKYSdZUmJmnFWAZKVBwmAStg6KSkg0GtLDtrzEM</string>
+	<key>twitterKey</key>
+	<string>li4c80UL6plRbeIo0uQb54XcW</string>
 	<key>twitterBaseURL</key>
-	<string>twitterBaseURL</string>
+	<string>https://api.twitter.com</string>
 </dict>
 </plist>

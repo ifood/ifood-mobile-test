@@ -33,21 +33,13 @@ public class Configurations {
         
         let configurations = NSDictionary(contentsOfFile: path)
         
-        guard let config = mainBundle.infoDictionary?["TargetName"] as? String else {
-            throw ConfigurationError.EnvironmentNotFound
-        }
+        print(mainBundle.infoDictionary)
+        print(configurations)
+//        guard let variablesFromFile = configurations?.object(forKey: "twitments") as? [String: AnyObject] else {
+//            throw ConfigurationError.EnvironmentNotFound
+//        }
         
-        guard let currentTarget = AppTarget.init(rawValue: config) else {
-            throw ConfigurationError.EnvironmentNotFound
-        }
-        
-        self.target = currentTarget
-        
-        guard let variablesFromFile = configurations?.object(forKey: target.rawValue) as? [String: AnyObject] else {
-            throw ConfigurationError.EnvironmentNotFound
-        }
-        
-        variables = variablesFromFile
+        variables = configurations as! [String : AnyObject]
     }
     
     func twitterBaseURL() -> String {
@@ -55,5 +47,31 @@ public class Configurations {
             return "twitterBaseURL key not found"
         }
         return baseURL
+    }
+    
+    func twitterKey() -> String {
+        guard let key = variables?["twitterKey"] as? String else {
+            return "twitterKey key not found"
+        }
+        return key.urlHostAllowed
+    }
+    
+    func twitterSecret() -> String {
+        guard let secret = variables?["twitterSecret"] as? String else {
+            return "twitterSecret key not found"
+        }
+        return secret.urlHostAllowed
+    }
+}
+
+class ConfigurationCreator {
+    static func initializer() {
+        do {
+            try Configurations.shared.initializeFromFile()
+        } catch Configurations.ConfigurationError.FileNotFound {
+        } catch Configurations.ConfigurationError.EnvironmentNotFound {
+        } catch {
+            print("====> Erro: Não foi possível carregar as configurações do arquivo <=====")
+        }
     }
 }

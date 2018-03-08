@@ -9,8 +9,8 @@
 import Foundation
 struct API {    
     // MARK: Twitter
-    static let twitterScheme = "https"
     static let twitterBaseURL = Configurations.shared.twitterBaseURL()
-    static let userTimelinePath = "/"
+    static let userTimelinePath = "/1.1/statuses/user_timeline.json"
+    static let authenticationPath = "/oauth2/token"
 }
 

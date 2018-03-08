@@ -12,4 +12,5 @@ import Alamofire
 
 protocol TwitterStore: AbstractStore {
     func userTimeline(_ screenName:String, completion: @escaping completion<[TwitterResult]>)
+    func authentication(_ completion: @escaping completion<Bool>)
 }

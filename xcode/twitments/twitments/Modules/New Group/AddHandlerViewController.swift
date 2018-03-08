@@ -18,11 +18,7 @@ import SwiftyVIPER
 
 /// Should be conformed to by the `AddHandlerViewController` and referenced by `AddHandlerPresenter`
 protocol AddHandlerPresenterViewProtocol: class {
-	/** Sets the title for the view
-	- parameters:
-		- title The title to set
-	*/
-	func set(title: String?)
+    func authenticationStatus(_ status: Bool)
 }
 
 // MARK: -
@@ -44,7 +40,7 @@ class AddHandlerViewController: AbstractViewController, StoryboardIdentifiable, 
     
     @IBOutlet weak private(set) var handleTextField: UITextField? {
         willSet(textfield) {
-            textfield?.textAlignment = .left
+            textfield?.textAlignment = .center
         }
     }
     
@@ -58,7 +54,13 @@ class AddHandlerViewController: AbstractViewController, StoryboardIdentifiable, 
     
     @objc
     func continueTapped() {
-        presenter?.continueTapped()
+        guard let text = self.handleTextField?.text else {
+            return
+        }
+        if !text.isEmpty {
+            AlertMessageView().loading()
+            presenter?.continueTapped(text)
+        }
     }
 
 	// MARK: - Load Functions
@@ -67,11 +69,14 @@ class AddHandlerViewController: AbstractViewController, StoryboardIdentifiable, 
     	super.viewDidLoad()
 		presenter?.viewLoaded()
         view.backgroundColor = .white
+        AlertMessageView().loading()
+        presenter?.authentication()
     }
 
 	// MARK: - AddHandler Presenter to View Protocol
 
-	func set(title: String?) {
-		self.title = title
+	func authenticationStatus(_ status: Bool) {
+		self.continueButton?.isEnabled = status
+        AlertMessageView().showFinished()
 	}
 }

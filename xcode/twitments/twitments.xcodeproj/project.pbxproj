@@ -14,11 +14,6 @@
 		8B0F5B892050CE66002DB497 /* AddHandlerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0F5B842050CE66002DB497 /* AddHandlerPresenter.swift */; };
 		8B0F5B8A2050CE66002DB497 /* AddHandlerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0F5B852050CE66002DB497 /* AddHandlerRouter.swift */; };
 		8B0F5B8B2050CE66002DB497 /* AddHandlerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0F5B862050CE66002DB497 /* AddHandlerViewController.swift */; };
-		8B0F5B922050D690002DB497 /* AddHandlerTestsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0F5B8D2050D690002DB497 /* AddHandlerTestsInteractorTests.swift */; };
-		8B0F5B932050D690002DB497 /* AddHandlerTestsModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0F5B8E2050D690002DB497 /* AddHandlerTestsModuleTests.swift */; };
-		8B0F5B942050D690002DB497 /* AddHandlerTestsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0F5B8F2050D690002DB497 /* AddHandlerTestsPresenterTests.swift */; };
-		8B0F5B952050D690002DB497 /* AddHandlerTestsRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0F5B902050D690002DB497 /* AddHandlerTestsRouterTests.swift */; };
-		8B0F5B962050D690002DB497 /* AddHandlerTestsViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0F5B912050D690002DB497 /* AddHandlerTestsViewTests.swift */; };
 		8B0F5B9A2050DEE3002DB497 /* AbstractViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0F5B992050DEE3002DB497 /* AbstractViewController.swift */; };
 		8B0F5B9D2050DFFD002DB497 /* StoryboardsViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0F5B9C2050DFFD002DB497 /* StoryboardsViewTests.swift */; };
 		8B0F5BA02050E388002DB497 /* TwitterStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0F5B9F2050E388002DB497 /* TwitterStore.swift */; };
@@ -51,6 +46,18 @@
 		8BF117F720515FE000BA7AA9 /* Configurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF117F620515FE000BA7AA9 /* Configurations.swift */; };
 		8BF117F920515FF900BA7AA9 /* Configurations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8BF117F820515FF900BA7AA9 /* Configurations.plist */; };
 		8BF117FB205161F000BA7AA9 /* TwitterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF117FA205161F000BA7AA9 /* TwitterRouter.swift */; };
+		8BF117FE2051781D00BA7AA9 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF117FD2051781D00BA7AA9 /* String+Extensions.swift */; };
+		8BF1180020517D5300BA7AA9 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF117FF20517D5300BA7AA9 /* Authentication.swift */; };
+		8BF11805205187E800BA7AA9 /* AccessTokenDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF11804205187E800BA7AA9 /* AccessTokenDAO.swift */; };
+		8BF118092051974200BA7AA9 /* AddHandlerDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF118082051974200BA7AA9 /* AddHandlerDataProvider.swift */; };
+		8BF1180C2051977E00BA7AA9 /* AbstractDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF1180B2051977E00BA7AA9 /* AbstractDataProvider.swift */; };
+		8BF1180F2051984700BA7AA9 /* TwitterResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF1180E2051984700BA7AA9 /* TwitterResultViewModel.swift */; };
+		8BF118122051A3C200BA7AA9 /* AlertMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF118112051A3C200BA7AA9 /* AlertMessageView.swift */; };
+		8BF118182051AE2100BA7AA9 /* AddHandlerInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF118132051AE2100BA7AA9 /* AddHandlerInteractorTests.swift */; };
+		8BF118192051AE2100BA7AA9 /* AddHandlerModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF118142051AE2100BA7AA9 /* AddHandlerModuleTests.swift */; };
+		8BF1181A2051AE2100BA7AA9 /* AddHandlerPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF118152051AE2100BA7AA9 /* AddHandlerPresenterTests.swift */; };
+		8BF1181B2051AE2100BA7AA9 /* AddHandlerRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF118162051AE2100BA7AA9 /* AddHandlerRouterTests.swift */; };
+		8BF1181C2051AE2100BA7AA9 /* AddHandlerViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF118172051AE2100BA7AA9 /* AddHandlerViewTests.swift */; };
 		9F72FB29B7D2DA199B5BB096 /* Pods_twitments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AAAF4C92787BB5AF4F18119 /* Pods_twitments.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,11 +88,6 @@
 		8B0F5B842050CE66002DB497 /* AddHandlerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHandlerPresenter.swift; sourceTree = "<group>"; };
 		8B0F5B852050CE66002DB497 /* AddHandlerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHandlerRouter.swift; sourceTree = "<group>"; };
 		8B0F5B862050CE66002DB497 /* AddHandlerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHandlerViewController.swift; sourceTree = "<group>"; };
-		8B0F5B8D2050D690002DB497 /* AddHandlerTestsInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHandlerTestsInteractorTests.swift; sourceTree = "<group>"; };
-		8B0F5B8E2050D690002DB497 /* AddHandlerTestsModuleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHandlerTestsModuleTests.swift; sourceTree = "<group>"; };
-		8B0F5B8F2050D690002DB497 /* AddHandlerTestsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHandlerTestsPresenterTests.swift; sourceTree = "<group>"; };
-		8B0F5B902050D690002DB497 /* AddHandlerTestsRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHandlerTestsRouterTests.swift; sourceTree = "<group>"; };
-		8B0F5B912050D690002DB497 /* AddHandlerTestsViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHandlerTestsViewTests.swift; sourceTree = "<group>"; };
 		8B0F5B992050DEE3002DB497 /* AbstractViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractViewController.swift; sourceTree = "<group>"; };
 		8B0F5B9C2050DFFD002DB497 /* StoryboardsViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardsViewTests.swift; sourceTree = "<group>"; };
 		8B0F5B9F2050E388002DB497 /* TwitterStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterStore.swift; sourceTree = "<group>"; };
@@ -124,6 +126,18 @@
 		8BF117F620515FE000BA7AA9 /* Configurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurations.swift; sourceTree = "<group>"; };
 		8BF117F820515FF900BA7AA9 /* Configurations.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Configurations.plist; sourceTree = "<group>"; };
 		8BF117FA205161F000BA7AA9 /* TwitterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterRouter.swift; sourceTree = "<group>"; };
+		8BF117FD2051781D00BA7AA9 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		8BF117FF20517D5300BA7AA9 /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		8BF11804205187E800BA7AA9 /* AccessTokenDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenDAO.swift; sourceTree = "<group>"; };
+		8BF118082051974200BA7AA9 /* AddHandlerDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHandlerDataProvider.swift; sourceTree = "<group>"; };
+		8BF1180B2051977E00BA7AA9 /* AbstractDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractDataProvider.swift; sourceTree = "<group>"; };
+		8BF1180E2051984700BA7AA9 /* TwitterResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterResultViewModel.swift; sourceTree = "<group>"; };
+		8BF118112051A3C200BA7AA9 /* AlertMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessageView.swift; sourceTree = "<group>"; };
+		8BF118132051AE2100BA7AA9 /* AddHandlerInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHandlerInteractorTests.swift; sourceTree = "<group>"; };
+		8BF118142051AE2100BA7AA9 /* AddHandlerModuleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHandlerModuleTests.swift; sourceTree = "<group>"; };
+		8BF118152051AE2100BA7AA9 /* AddHandlerPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHandlerPresenterTests.swift; sourceTree = "<group>"; };
+		8BF118162051AE2100BA7AA9 /* AddHandlerRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHandlerRouterTests.swift; sourceTree = "<group>"; };
+		8BF118172051AE2100BA7AA9 /* AddHandlerViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHandlerViewTests.swift; sourceTree = "<group>"; };
 		B7D38AF6B37AC441F23552C0 /* Pods-twitmentsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twitmentsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-twitmentsTests/Pods-twitmentsTests.release.xcconfig"; sourceTree = "<group>"; };
 		D893D42B95700DC5DDB83678 /* Pods-twitmentsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twitmentsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-twitmentsTests/Pods-twitmentsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E4635B1D664A82F057F27640 /* Pods-twitmentsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twitmentsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-twitmentsUITests/Pods-twitmentsUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -175,8 +189,9 @@
 		8B0F5B8C2050CE71002DB497 /* AddHandler */ = {
 			isa = PBXGroup;
 			children = (
-				8B0F5B822050CE66002DB497 /* AddHandlerInteractor.swift */,
+				8BF118072051972600BA7AA9 /* DataProvider */,
 				8B0F5B832050CE66002DB497 /* AddHandlerModule.swift */,
+				8B0F5B822050CE66002DB497 /* AddHandlerInteractor.swift */,
 				8B0F5B842050CE66002DB497 /* AddHandlerPresenter.swift */,
 				8B0F5B852050CE66002DB497 /* AddHandlerRouter.swift */,
 				8B0F5B862050CE66002DB497 /* AddHandlerViewController.swift */,
@@ -185,26 +200,17 @@
 			path = "New Group";
 			sourceTree = "<group>";
 		};
-		8B0F5B972050D6A5002DB497 /* AddHandlerTests */ = {
-			isa = PBXGroup;
-			children = (
-				8B0F5B8D2050D690002DB497 /* AddHandlerTestsInteractorTests.swift */,
-				8B0F5B8E2050D690002DB497 /* AddHandlerTestsModuleTests.swift */,
-				8B0F5B8F2050D690002DB497 /* AddHandlerTestsPresenterTests.swift */,
-				8B0F5B902050D690002DB497 /* AddHandlerTestsRouterTests.swift */,
-				8B0F5B912050D690002DB497 /* AddHandlerTestsViewTests.swift */,
-			);
-			path = AddHandlerTests;
-			sourceTree = "<group>";
-		};
 		8B0F5B982050DEC0002DB497 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				8BF118102051A3B100BA7AA9 /* Views */,
+				8BF1180D2051981D00BA7AA9 /* ViewModels */,
+				8BF1180A2051976900BA7AA9 /* DataProvider */,
+				8BF11802205187CA00BA7AA9 /* Security */,
 				8BF117F320515F4500BA7AA9 /* Utils */,
 				8BF117F020515C4100BA7AA9 /* Network */,
 				8BF117EF20515C3000BA7AA9 /* Controllers */,
 				8BF117C52050EBFC00BA7AA9 /* Models */,
-				8B0F5B9E2050E375002DB497 /* Clients */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -222,7 +228,6 @@
 			isa = PBXGroup;
 			children = (
 				8BF117BF2050E6B900BA7AA9 /* TwitterClient */,
-				8B0F5BA12050E3E1002DB497 /* AbstractStore.swift */,
 			);
 			path = Clients;
 			sourceTree = "<group>";
@@ -253,7 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				8B0F5B982050DEC0002DB497 /* Common */,
-				8B0F5B8C2050CE71002DB497 /* AddHandler */,
+				8BF118062051970F00BA7AA9 /* Modules */,
 				8B3531962050CC4C0080B87B /* AppDelegate.swift */,
 				8B35319A2050CC4C0080B87B /* Main.storyboard */,
 				8B3531A02050CC4C0080B87B /* Assets.xcassets */,
@@ -270,7 +275,7 @@
 				8B0F5B9B2050DFD9002DB497 /* GeneralTests */,
 				8B3531AE2050CC4C0080B87B /* twitmentsTests.swift */,
 				8B3531B02050CC4C0080B87B /* Info.plist */,
-				8B0F5B972050D6A5002DB497 /* AddHandlerTests */,
+				8BF1181D2051AE2C00BA7AA9 /* AddHandlerTests */,
 			);
 			path = twitmentsTests;
 			sourceTree = "<group>";
@@ -313,6 +318,7 @@
 		8BF117C52050EBFC00BA7AA9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8BF117FF20517D5300BA7AA9 /* Authentication.swift */,
 				8BF117C62050EBFC00BA7AA9 /* Attributes.swift */,
 				8BF117C72050EBFC00BA7AA9 /* BoundingBox.swift */,
 				8BF117C82050EBFC00BA7AA9 /* Coordinates.swift */,
@@ -350,7 +356,8 @@
 		8BF117F020515C4100BA7AA9 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				8BF117F120515C7F00BA7AA9 /* Requester.swift */,
+				8BF1180120517D8400BA7AA9 /* Abstract */,
+				8B0F5B9E2050E375002DB497 /* Clients */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -358,11 +365,98 @@
 		8BF117F320515F4500BA7AA9 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				8BF117FC2051780B00BA7AA9 /* Extensions */,
 				8BF117F420515F6300BA7AA9 /* API.swift */,
 				8BF117F620515FE000BA7AA9 /* Configurations.swift */,
 				8BF117F820515FF900BA7AA9 /* Configurations.plist */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		8BF117FC2051780B00BA7AA9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8BF117FD2051781D00BA7AA9 /* String+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8BF1180120517D8400BA7AA9 /* Abstract */ = {
+			isa = PBXGroup;
+			children = (
+				8B0F5BA12050E3E1002DB497 /* AbstractStore.swift */,
+				8BF117F120515C7F00BA7AA9 /* Requester.swift */,
+			);
+			path = Abstract;
+			sourceTree = "<group>";
+		};
+		8BF11802205187CA00BA7AA9 /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				8BF11803205187D200BA7AA9 /* DAO */,
+			);
+			path = Security;
+			sourceTree = "<group>";
+		};
+		8BF11803205187D200BA7AA9 /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				8BF11804205187E800BA7AA9 /* AccessTokenDAO.swift */,
+			);
+			path = DAO;
+			sourceTree = "<group>";
+		};
+		8BF118062051970F00BA7AA9 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				8B0F5B8C2050CE71002DB497 /* AddHandler */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		8BF118072051972600BA7AA9 /* DataProvider */ = {
+			isa = PBXGroup;
+			children = (
+				8BF118082051974200BA7AA9 /* AddHandlerDataProvider.swift */,
+			);
+			path = DataProvider;
+			sourceTree = "<group>";
+		};
+		8BF1180A2051976900BA7AA9 /* DataProvider */ = {
+			isa = PBXGroup;
+			children = (
+				8BF1180B2051977E00BA7AA9 /* AbstractDataProvider.swift */,
+			);
+			path = DataProvider;
+			sourceTree = "<group>";
+		};
+		8BF1180D2051981D00BA7AA9 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				8BF1180E2051984700BA7AA9 /* TwitterResultViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		8BF118102051A3B100BA7AA9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8BF118112051A3C200BA7AA9 /* AlertMessageView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8BF1181D2051AE2C00BA7AA9 /* AddHandlerTests */ = {
+			isa = PBXGroup;
+			children = (
+				8BF118132051AE2100BA7AA9 /* AddHandlerInteractorTests.swift */,
+				8BF118142051AE2100BA7AA9 /* AddHandlerModuleTests.swift */,
+				8BF118152051AE2100BA7AA9 /* AddHandlerPresenterTests.swift */,
+				8BF118162051AE2100BA7AA9 /* AddHandlerRouterTests.swift */,
+				8BF118172051AE2100BA7AA9 /* AddHandlerViewTests.swift */,
+			);
+			name = AddHandlerTests;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		BEDB7B90464793AB8849830C /* Frameworks */ = {
@@ -572,6 +666,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-twitments/Pods-twitments-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/EFInternetIndicator/EFInternetIndicator.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyVIPER/SwiftyVIPER.framework",
@@ -580,6 +675,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EFInternetIndicator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyVIPER.framework",
@@ -682,21 +778,28 @@
 				8B0F5B8A2050CE66002DB497 /* AddHandlerRouter.swift in Sources */,
 				8B0F5B9A2050DEE3002DB497 /* AbstractViewController.swift in Sources */,
 				8B3531972050CC4C0080B87B /* AppDelegate.swift in Sources */,
+				8BF118122051A3C200BA7AA9 /* AlertMessageView.swift in Sources */,
+				8BF1180020517D5300BA7AA9 /* Authentication.swift in Sources */,
+				8BF118092051974200BA7AA9 /* AddHandlerDataProvider.swift in Sources */,
 				8B0F5B892050CE66002DB497 /* AddHandlerPresenter.swift in Sources */,
 				8B0F5B882050CE66002DB497 /* AddHandlerModule.swift in Sources */,
 				8BF117F520515F6300BA7AA9 /* API.swift in Sources */,
 				8BF117EA2050EBFC00BA7AA9 /* User.swift in Sources */,
 				8B0F5B872050CE66002DB497 /* AddHandlerInteractor.swift in Sources */,
+				8BF117FE2051781D00BA7AA9 /* String+Extensions.swift in Sources */,
 				8BF117E32050EBFC00BA7AA9 /* Place.swift in Sources */,
 				8B0F5BA22050E3E1002DB497 /* AbstractStore.swift in Sources */,
 				8BF117E62050EBFC00BA7AA9 /* Thumb.swift in Sources */,
+				8BF1180C2051977E00BA7AA9 /* AbstractDataProvider.swift in Sources */,
 				8BF117E42050EBFC00BA7AA9 /* Sizes.swift in Sources */,
 				8BF117F720515FE000BA7AA9 /* Configurations.swift in Sources */,
+				8BF1180F2051984700BA7AA9 /* TwitterResultViewModel.swift in Sources */,
 				8BF117DF2050EBFC00BA7AA9 /* Hashtags.swift in Sources */,
 				8BF117E72050EBFC00BA7AA9 /* TwitterResult.swift in Sources */,
 				8BF117DB2050EBFC00BA7AA9 /* Coordinates.swift in Sources */,
 				8BF117C32050E70900BA7AA9 /* TwitterAPIStore.swift in Sources */,
 				8BF117FB205161F000BA7AA9 /* TwitterRouter.swift in Sources */,
+				8BF11805205187E800BA7AA9 /* AccessTokenDAO.swift in Sources */,
 				8BF117E02050EBFC00BA7AA9 /* Large.swift in Sources */,
 				8BF117F220515C7F00BA7AA9 /* Requester.swift in Sources */,
 				8BF117E12050EBFC00BA7AA9 /* Media.swift in Sources */,
@@ -713,14 +816,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B0F5B952050D690002DB497 /* AddHandlerTestsRouterTests.swift in Sources */,
-				8B0F5B932050D690002DB497 /* AddHandlerTestsModuleTests.swift in Sources */,
 				8B3531AF2050CC4C0080B87B /* twitmentsTests.swift in Sources */,
-				8B0F5B922050D690002DB497 /* AddHandlerTestsInteractorTests.swift in Sources */,
+				8BF1181C2051AE2100BA7AA9 /* AddHandlerViewTests.swift in Sources */,
+				8BF1181B2051AE2100BA7AA9 /* AddHandlerRouterTests.swift in Sources */,
+				8BF1181A2051AE2100BA7AA9 /* AddHandlerPresenterTests.swift in Sources */,
 				8B0F5B9D2050DFFD002DB497 /* StoryboardsViewTests.swift in Sources */,
 				8BF117EE2050ED1D00BA7AA9 /* TwitterModelsTests.swift in Sources */,
-				8B0F5B942050D690002DB497 /* AddHandlerTestsPresenterTests.swift in Sources */,
-				8B0F5B962050D690002DB497 /* AddHandlerTestsViewTests.swift in Sources */,
+				8BF118182051AE2100BA7AA9 /* AddHandlerInteractorTests.swift in Sources */,
+				8BF118192051AE2100BA7AA9 /* AddHandlerModuleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
