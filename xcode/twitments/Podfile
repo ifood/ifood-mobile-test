@@ -12,6 +12,7 @@ target 'twitments' do
     pod 'Alamofire'
     pod 'ObjectMapper'
     pod 'KeychainSwift', '~> 10.0'
+    pod 'PINRemoteImage'
     target 'twitmentsTests' do
         inherit! :search_paths
         # Pods for testing

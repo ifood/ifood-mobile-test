@@ -58,6 +58,13 @@
 		8BF1181A2051AE2100BA7AA9 /* AddHandlerPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF118152051AE2100BA7AA9 /* AddHandlerPresenterTests.swift */; };
 		8BF1181B2051AE2100BA7AA9 /* AddHandlerRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF118162051AE2100BA7AA9 /* AddHandlerRouterTests.swift */; };
 		8BF1181C2051AE2100BA7AA9 /* AddHandlerViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF118172051AE2100BA7AA9 /* AddHandlerViewTests.swift */; };
+		8BF118232051C04000BA7AA9 /* ListTweetsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF1181E2051C04000BA7AA9 /* ListTweetsInteractor.swift */; };
+		8BF118242051C04000BA7AA9 /* ListTweetsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF1181F2051C04000BA7AA9 /* ListTweetsModule.swift */; };
+		8BF118252051C04000BA7AA9 /* ListTweetsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF118202051C04000BA7AA9 /* ListTweetsPresenter.swift */; };
+		8BF118262051C04000BA7AA9 /* ListTweetsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF118212051C04000BA7AA9 /* ListTweetsRouter.swift */; };
+		8BF118272051C04000BA7AA9 /* ListTweetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF118222051C04000BA7AA9 /* ListTweetsViewController.swift */; };
+		8BF1182C2051C64700BA7AA9 /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF1182B2051C64700BA7AA9 /* TweetCell.swift */; };
+		8BF846B32051E07B00A3F713 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF846B22051E07B00A3F713 /* Date+Extensions.swift */; };
 		9F72FB29B7D2DA199B5BB096 /* Pods_twitments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AAAF4C92787BB5AF4F18119 /* Pods_twitments.framework */; };
 /* End PBXBuildFile section */
 
@@ -105,6 +112,7 @@
 		8B3531B52050CC4C0080B87B /* twitmentsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = twitmentsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B3531B92050CC4C0080B87B /* twitmentsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = twitmentsUITests.swift; sourceTree = "<group>"; };
 		8B3531BB2050CC4C0080B87B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BD33E532051CEE7001C8762 /* twitments-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "twitments-Bridging-Header.h"; sourceTree = "<group>"; };
 		8BF117C22050E70900BA7AA9 /* TwitterAPIStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterAPIStore.swift; sourceTree = "<group>"; };
 		8BF117C62050EBFC00BA7AA9 /* Attributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attributes.swift; sourceTree = "<group>"; };
 		8BF117C72050EBFC00BA7AA9 /* BoundingBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoundingBox.swift; sourceTree = "<group>"; };
@@ -138,6 +146,13 @@
 		8BF118152051AE2100BA7AA9 /* AddHandlerPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHandlerPresenterTests.swift; sourceTree = "<group>"; };
 		8BF118162051AE2100BA7AA9 /* AddHandlerRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHandlerRouterTests.swift; sourceTree = "<group>"; };
 		8BF118172051AE2100BA7AA9 /* AddHandlerViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHandlerViewTests.swift; sourceTree = "<group>"; };
+		8BF1181E2051C04000BA7AA9 /* ListTweetsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTweetsInteractor.swift; sourceTree = "<group>"; };
+		8BF1181F2051C04000BA7AA9 /* ListTweetsModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTweetsModule.swift; sourceTree = "<group>"; };
+		8BF118202051C04000BA7AA9 /* ListTweetsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTweetsPresenter.swift; sourceTree = "<group>"; };
+		8BF118212051C04000BA7AA9 /* ListTweetsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTweetsRouter.swift; sourceTree = "<group>"; };
+		8BF118222051C04000BA7AA9 /* ListTweetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTweetsViewController.swift; sourceTree = "<group>"; };
+		8BF1182B2051C64700BA7AA9 /* TweetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
+		8BF846B22051E07B00A3F713 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		B7D38AF6B37AC441F23552C0 /* Pods-twitmentsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twitmentsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-twitmentsTests/Pods-twitmentsTests.release.xcconfig"; sourceTree = "<group>"; };
 		D893D42B95700DC5DDB83678 /* Pods-twitmentsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twitmentsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-twitmentsTests/Pods-twitmentsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E4635B1D664A82F057F27640 /* Pods-twitmentsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twitmentsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-twitmentsUITests/Pods-twitmentsUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -260,6 +275,7 @@
 				8B0F5B982050DEC0002DB497 /* Common */,
 				8BF118062051970F00BA7AA9 /* Modules */,
 				8B3531962050CC4C0080B87B /* AppDelegate.swift */,
+				8BD33E532051CEE7001C8762 /* twitments-Bridging-Header.h */,
 				8B35319A2050CC4C0080B87B /* Main.storyboard */,
 				8B3531A02050CC4C0080B87B /* Assets.xcassets */,
 				8B3531A22050CC4C0080B87B /* LaunchScreen.storyboard */,
@@ -377,6 +393,7 @@
 			isa = PBXGroup;
 			children = (
 				8BF117FD2051781D00BA7AA9 /* String+Extensions.swift */,
+				8BF846B22051E07B00A3F713 /* Date+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -410,6 +427,7 @@
 			isa = PBXGroup;
 			children = (
 				8B0F5B8C2050CE71002DB497 /* AddHandler */,
+				8BF118282051C05500BA7AA9 /* ListTweets */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -441,7 +459,8 @@
 		8BF118102051A3B100BA7AA9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				8BF118112051A3C200BA7AA9 /* AlertMessageView.swift */,
+				8BF1182A2051C62A00BA7AA9 /* Cells */,
+				8BF118292051C61E00BA7AA9 /* Views */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -457,6 +476,34 @@
 			);
 			name = AddHandlerTests;
 			path = "New Group";
+			sourceTree = "<group>";
+		};
+		8BF118282051C05500BA7AA9 /* ListTweets */ = {
+			isa = PBXGroup;
+			children = (
+				8BF1181E2051C04000BA7AA9 /* ListTweetsInteractor.swift */,
+				8BF1181F2051C04000BA7AA9 /* ListTweetsModule.swift */,
+				8BF118202051C04000BA7AA9 /* ListTweetsPresenter.swift */,
+				8BF118212051C04000BA7AA9 /* ListTweetsRouter.swift */,
+				8BF118222051C04000BA7AA9 /* ListTweetsViewController.swift */,
+			);
+			path = ListTweets;
+			sourceTree = "<group>";
+		};
+		8BF118292051C61E00BA7AA9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8BF118112051A3C200BA7AA9 /* AlertMessageView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8BF1182A2051C62A00BA7AA9 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8BF1182B2051C64700BA7AA9 /* TweetCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		BEDB7B90464793AB8849830C /* Frameworks */ = {
@@ -546,6 +593,7 @@
 				TargetAttributes = {
 					8B3531922050CC4C0080B87B = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					8B3531A92050CC4C0080B87B = {
@@ -666,8 +714,11 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-twitments/Pods-twitments-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/EFInternetIndicator/EFInternetIndicator.framework",
+				"${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework",
 				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework",
+				"${BUILT_PRODUCTS_DIR}/PINRemoteImage/PINRemoteImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyVIPER/SwiftyVIPER.framework",
 			);
@@ -675,8 +726,11 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EFInternetIndicator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLAnimatedImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINCache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINRemoteImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyVIPER.framework",
 			);
@@ -779,6 +833,7 @@
 				8B0F5B9A2050DEE3002DB497 /* AbstractViewController.swift in Sources */,
 				8B3531972050CC4C0080B87B /* AppDelegate.swift in Sources */,
 				8BF118122051A3C200BA7AA9 /* AlertMessageView.swift in Sources */,
+				8BF118232051C04000BA7AA9 /* ListTweetsInteractor.swift in Sources */,
 				8BF1180020517D5300BA7AA9 /* Authentication.swift in Sources */,
 				8BF118092051974200BA7AA9 /* AddHandlerDataProvider.swift in Sources */,
 				8B0F5B892050CE66002DB497 /* AddHandlerPresenter.swift in Sources */,
@@ -787,6 +842,7 @@
 				8BF117EA2050EBFC00BA7AA9 /* User.swift in Sources */,
 				8B0F5B872050CE66002DB497 /* AddHandlerInteractor.swift in Sources */,
 				8BF117FE2051781D00BA7AA9 /* String+Extensions.swift in Sources */,
+				8BF1182C2051C64700BA7AA9 /* TweetCell.swift in Sources */,
 				8BF117E32050EBFC00BA7AA9 /* Place.swift in Sources */,
 				8B0F5BA22050E3E1002DB497 /* AbstractStore.swift in Sources */,
 				8BF117E62050EBFC00BA7AA9 /* Thumb.swift in Sources */,
@@ -795,15 +851,20 @@
 				8BF117F720515FE000BA7AA9 /* Configurations.swift in Sources */,
 				8BF1180F2051984700BA7AA9 /* TwitterResultViewModel.swift in Sources */,
 				8BF117DF2050EBFC00BA7AA9 /* Hashtags.swift in Sources */,
+				8BF118272051C04000BA7AA9 /* ListTweetsViewController.swift in Sources */,
 				8BF117E72050EBFC00BA7AA9 /* TwitterResult.swift in Sources */,
 				8BF117DB2050EBFC00BA7AA9 /* Coordinates.swift in Sources */,
 				8BF117C32050E70900BA7AA9 /* TwitterAPIStore.swift in Sources */,
 				8BF117FB205161F000BA7AA9 /* TwitterRouter.swift in Sources */,
+				8BF118242051C04000BA7AA9 /* ListTweetsModule.swift in Sources */,
 				8BF11805205187E800BA7AA9 /* AccessTokenDAO.swift in Sources */,
 				8BF117E02050EBFC00BA7AA9 /* Large.swift in Sources */,
 				8BF117F220515C7F00BA7AA9 /* Requester.swift in Sources */,
 				8BF117E12050EBFC00BA7AA9 /* Media.swift in Sources */,
+				8BF846B32051E07B00A3F713 /* Date+Extensions.swift in Sources */,
 				8BF117D92050EBFC00BA7AA9 /* Attributes.swift in Sources */,
+				8BF118252051C04000BA7AA9 /* ListTweetsPresenter.swift in Sources */,
+				8BF118262051C04000BA7AA9 /* ListTweetsRouter.swift in Sources */,
 				8BF117DE2050EBFC00BA7AA9 /* ExtendedEntities.swift in Sources */,
 				8BF117DA2050EBFC00BA7AA9 /* BoundingBox.swift in Sources */,
 				8BF117E22050EBFC00BA7AA9 /* Medium.swift in Sources */,
@@ -982,12 +1043,15 @@
 			baseConfigurationReference = F5C03AD8EF2997997562F6C7 /* Pods-twitments.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 54JDK55DR5;
 				INFOPLIST_FILE = twitments/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ezefranca.twitments;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "twitments/twitments-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -998,12 +1062,14 @@
 			baseConfigurationReference = 874AF0491FAA4991FC7B07D4 /* Pods-twitments.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 54JDK55DR5;
 				INFOPLIST_FILE = twitments/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ezefranca.twitments;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "twitments/twitments-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

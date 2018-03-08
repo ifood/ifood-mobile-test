@@ -15,4 +15,34 @@ public struct TwitterResultViewModel {
     init(model:TwitterResult) {
         self.model = model
     }
+    
+    var profileImageURL : String {
+        guard let url = self.model.user?.profileImageUrlHttps else {
+            return ""
+        }
+        return url
+    }
+    
+    var username : String {
+        guard let username = self.model.user?.screenName else {
+            return ""
+        }
+        return username
+    }
+    
+    var text: String {
+        guard let text = self.model.text else {
+            return ""
+        }
+        return text
+    }
+    
+    var date: String {
+        print(self.model.createdAt)
+        print(self.model.createdAt?.formatted())
+        guard let date = self.model.createdAt?.formatted() else {
+            return ""
+        }
+        return date
+    }
 }

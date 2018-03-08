@@ -30,10 +30,7 @@ final class AddHandlerRouter: RouterProtocol, AddHandlerPresenterRouterProtocol 
     weak var viewController: UIViewController?
     
     func present(_ list: [TwitterResultViewModel]) {
-        list.map {
-            print($0)
-            print("\n\n\nbatata")
-        }
+        ListTweetsModule(viewModels: list).present(from: viewController, style: .coverVertical, completion: nil)
     }
     
 }
