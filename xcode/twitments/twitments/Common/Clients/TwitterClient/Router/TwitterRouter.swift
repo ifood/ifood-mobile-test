@@ -21,12 +21,15 @@ extension AuthProtocol {
 enum TwitterRouter: URLRequestConvertible, AuthProtocol {
     
     // MARK: Services
+    case authentication(headers: [String:Any], grantType: [String:Any])
     case userTimeline(screenName:String)
     
     var method: Alamofire.HTTPMethod {
         switch self {
         case .userTimeline:
             return .get
+        case .authentication(let headers, let grantTypeBody):
+            return .post
         }
     }
     
@@ -34,6 +37,8 @@ enum TwitterRouter: URLRequestConvertible, AuthProtocol {
         switch self {
         case .userTimeline:
             return API.userTimelinePath
+        case .authentication(let headers, let grantTypeBody):
+            return API.twitterBaseURL
         }
     }
     
@@ -60,6 +65,25 @@ enum TwitterRouter: URLRequestConvertible, AuthProtocol {
             urlRequest.httpMethod = method.rawValue
             return try Alamofire.JSONEncoding.default.encode(urlRequest)
 
+        case .authentication(let headers, let grantType):
+            
+            let parameters = ["screen_name":headers]
+            var components = URLComponents()
+            components.scheme = API.twitterScheme
+            components.host   = API.twitterBaseURL
+            components.path   = path
+            
+            if !parameters.isEmpty {
+                components.queryItems = [URLQueryItem]()
+                for (key, value) in parameters {
+                    let queryItem = URLQueryItem(name: key, value: "\(value)")
+                    components.queryItems!.append(queryItem)
+                }
+            }
+            
+            var urlRequest = URLRequest(url: components.url!)
+            urlRequest.httpMethod = method.rawValue
+            return try Alamofire.JSONEncoding.default.encode(urlRequest)
         }
     }
 }
