@@ -145,8 +145,8 @@ class TwitterModelsTests: XCTestCase {
                         "expanded_url": "https:\\/\\/www.producthunt.com\\/posts\\/watchnote"
                     ]
                 ],
-                "hashtags": [
-                    
+                "hashtags": ["indices": [0],
+                             "text": "#twitter"
                 ]
             ],
                "in_reply_to_screen_name": "null",
@@ -266,7 +266,6 @@ class TwitterModelsTests: XCTestCase {
         XCTAssertNotNil(resultMock?.id)
         XCTAssertNotNil(resultMock?.retweetCount)
         XCTAssertNotNil(resultMock?.text)
-        XCTAssertNotNil(resultMock?.entities)
         XCTAssertNotNil(resultMock?.inReplyToUserId)
         XCTAssertNotNil(resultMock?.user)
         XCTAssertNotNil(resultMock?.favoriteCount)

@@ -48,7 +48,6 @@ public struct TwitterResult: Mappable {
   public var id: Int?
   public var retweeted: Bool? = false
   public var text: String?
-  public var entities: Entities?
   public var inReplyToUserId: Int?
   public var user: User?
   public var favoriteCount: Int?
@@ -83,7 +82,6 @@ public struct TwitterResult: Mappable {
     id <- map[SerializationKeys.id]
     retweeted <- map[SerializationKeys.retweeted]
     text <- map[SerializationKeys.text]
-    entities <- map[SerializationKeys.entities]
     inReplyToUserId <- map[SerializationKeys.inReplyToUserId]
     user <- map[SerializationKeys.user]
     favoriteCount <- map[SerializationKeys.favoriteCount]

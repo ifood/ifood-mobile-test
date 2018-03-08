@@ -18,3 +18,7 @@ protocol AbstractStore {
 class AbstractAPIStore {
     var error = NSError(domain: "", code: 900, userInfo: [NSLocalizedDescriptionKey: "Erro ao obter as informações"])
 }
+
+enum AbstractStoreError: Error {
+    case FoundNil(String)
+}

@@ -11,5 +11,5 @@ import UIKit
 import Alamofire
 
 protocol TwitterStore: AbstractStore {
-    func getUserTweets(_ completion: @escaping completion<Bool>)
+    func userTimeline(_ screenName:String, completion: @escaping completion<[TwitterResult]>)
 }

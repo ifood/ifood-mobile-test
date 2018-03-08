@@ -72,7 +72,6 @@ public struct User: Mappable {
   public var profileImageUrlHttps: String?
   public var friendsCount: Int?
   public var id: Int?
-  public var entities: Entities?
   public var profileBackgroundImageUrlHttps: String?
   public var utcOffset: Int?
   public var profileImageUrl: String?
@@ -127,7 +126,6 @@ public struct User: Mappable {
     profileImageUrlHttps <- map[SerializationKeys.profileImageUrlHttps]
     friendsCount <- map[SerializationKeys.friendsCount]
     id <- map[SerializationKeys.id]
-    entities <- map[SerializationKeys.entities]
     profileBackgroundImageUrlHttps <- map[SerializationKeys.profileBackgroundImageUrlHttps]
     utcOffset <- map[SerializationKeys.utcOffset]
     profileImageUrl <- map[SerializationKeys.profileImageUrl]
