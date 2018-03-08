@@ -1,0 +1,38 @@
+PODS:
+  - Alamofire (4.6.0)
+  - EFInternetIndicator (0.4.0):
+    - EFInternetIndicator/Interface (= 0.4.0)
+  - EFInternetIndicator/Interface (0.4.0):
+    - SwiftMessages
+  - ObjectMapper (3.1.0)
+  - SwiftLint (0.25.0)
+  - SwiftMessages (4.1.0)
+  - SwiftyVIPER (2.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - EFInternetIndicator (from `https://github.com/ezefranca/EFInternetIndicator.git`)
+  - ObjectMapper
+  - SwiftLint
+  - SwiftyVIPER
+
+EXTERNAL SOURCES:
+  EFInternetIndicator:
+    :git: https://github.com/ezefranca/EFInternetIndicator.git
+
+CHECKOUT OPTIONS:
+  EFInternetIndicator:
+    :commit: 98648d98b8ad34da52398971680ecf862bb9cdc6
+    :git: https://github.com/ezefranca/EFInternetIndicator.git
+
+SPEC CHECKSUMS:
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  EFInternetIndicator: 17d670654e5cab15a8bdff0772da034556dbd81e
+  ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
+  SwiftLint: e14651157288e9e01d6e1a71db7014fb5744a8ea
+  SwiftMessages: 1bacc783c8f10bdfdc57c14860cae8a1f1fa6591
+  SwiftyVIPER: 826670ff53981da482e6a279a6f428f5567530ea
+
+PODFILE CHECKSUM: 72ce02d3cb2a701363a9a08b8e36bbb0dc89e410
+
+COCOAPODS: 1.3.1
