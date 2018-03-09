@@ -19,6 +19,8 @@ import SwiftyVIPER
 protocol AddHandlerViewPresenterProtocol: ViewPresenterProtocol {
     func continueTapped(_ userName:String)
     func authentication()
+    func presentLoader()
+    func hideLoader()
 }
 
 protocol AddHandlerInteractorPresenterProtocol: AddHandlerDataProvider {
@@ -29,7 +31,7 @@ protocol AddHandlerInteractorPresenterProtocol: AddHandlerDataProvider {
 
 /// The Presenter for the AddHandler module
 final class AddHandlerPresenter: AddHandlerViewPresenterProtocol, AddHandlerInteractorPresenterProtocol {
-
+    
 	// MARK: - Constants
 
 	let router: AddHandlerPresenterRouterProtocol
@@ -53,7 +55,6 @@ final class AddHandlerPresenter: AddHandlerViewPresenterProtocol, AddHandlerInte
 	}
     
     func continueTapped(_ userName: String) {
-        print("Go to next controller")
         interactor.fetchUserTwittes(userName)
     }
     
@@ -64,6 +65,14 @@ final class AddHandlerPresenter: AddHandlerViewPresenterProtocol, AddHandlerInte
     func authentication() {
         interactor.authentication()
     }
+    
+    func presentLoader() {
+        router.presentLoader()
+    }
+    
+    func hideLoader() {
+        router.hideLoader()
+    }
 
 	// MARK: - AddHandler Interactor to Presenter Protocol / DataProvider Protocol
     
@@ -72,18 +81,15 @@ final class AddHandlerPresenter: AddHandlerViewPresenterProtocol, AddHandlerInte
     }
     
     func reloadData(_ provider: AbstractDataProvider?, viewModels: [TwitterResultViewModel]) {
-        print("VIEW MODELS")
-        print(viewModels.count)
-        AlertMessageView().stop()
+        router.hideLoader()
         self.gotoTwittesList(viewModels)
     }
     
     func reloadData(_ provider: AbstractDataProvider?, authentication: Bool) {
-        print("AUTHENTICADO MANO")
         interactor.authenticationStatus(authentication)
     }
     
     func errorData(_ provider: AbstractDataProvider?, error: NSError) {
-        
+        router.hideLoader()
     }
 }

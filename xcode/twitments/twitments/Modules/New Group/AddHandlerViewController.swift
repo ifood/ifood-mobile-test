@@ -58,7 +58,7 @@ class AddHandlerViewController: AbstractViewController, StoryboardIdentifiable, 
             return
         }
         if !text.isEmpty {
-            AlertMessageView().loading()
+            presenter?.presentLoader()
             presenter?.continueTapped(text)
         }
     }
@@ -68,8 +68,7 @@ class AddHandlerViewController: AbstractViewController, StoryboardIdentifiable, 
 	override func viewDidLoad() {
     	super.viewDidLoad()
 		presenter?.viewLoaded()
-        view.backgroundColor = .white
-        AlertMessageView().loading()
+        presenter?.presentLoader()
         presenter?.authentication()
     }
 
@@ -77,6 +76,6 @@ class AddHandlerViewController: AbstractViewController, StoryboardIdentifiable, 
 
 	func authenticationStatus(_ status: Bool) {
 		self.continueButton?.isEnabled = status
-        AlertMessageView().showFinished()
+        AlertMessageView.shared.showFinished()
 	}
 }

@@ -13,6 +13,8 @@ target 'twitments' do
     pod 'ObjectMapper'
     pod 'KeychainSwift', '~> 10.0'
     pod 'PINRemoteImage'
+    pod 'R.swift'
+    pod 'DeckTransition', '~> 2.0'
     target 'twitmentsTests' do
         inherit! :search_paths
         # Pods for testing

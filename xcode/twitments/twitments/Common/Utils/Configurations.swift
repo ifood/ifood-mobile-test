@@ -33,12 +33,6 @@ public class Configurations {
         
         let configurations = NSDictionary(contentsOfFile: path)
         
-        print(mainBundle.infoDictionary)
-        print(configurations)
-//        guard let variablesFromFile = configurations?.object(forKey: "twitments") as? [String: AnyObject] else {
-//            throw ConfigurationError.EnvironmentNotFound
-//        }
-        
         variables = configurations as! [String : AnyObject]
     }
     
@@ -61,6 +55,20 @@ public class Configurations {
             return "twitterSecret key not found"
         }
         return secret.urlHostAllowed
+    }
+    
+    func googleBaseURL() -> String {
+        guard let baseURL = variables?["googleBaseURL"] as? String else {
+            return "googleBaseURL key not found"
+        }
+        return baseURL
+    }
+    
+    func googleToken() -> String {
+        guard let googleToken = variables?["googleToken"] as? String else {
+            return "googleToken key not found"
+        }
+        return googleToken
     }
 }
 

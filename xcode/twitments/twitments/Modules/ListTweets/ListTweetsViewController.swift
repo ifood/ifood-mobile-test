@@ -46,7 +46,12 @@ class ListTweetsViewController: UIViewController, StoryboardIdentifiable, ListTw
     
     @IBOutlet weak private(set) var profile: UIImageView? {
         willSet(profile) {
-            profile?.pin_setImage(from: URL(string: (self.viewModels.first?.profileImageURL)!))
+            guard let image = (self.viewModels.first?.profileImageURL) else {
+                return
+            }
+            if let url = URL(string: image) {
+                profile?.pin_setImage(from: url)
+            }
             profile?.layer.cornerRadius = (profile?.frame.size.width)! / 2
             profile?.layer.masksToBounds = true
         }
@@ -70,7 +75,6 @@ class ListTweetsViewController: UIViewController, StoryboardIdentifiable, ListTw
         presenter?.viewLoaded()
         self.setupTableView()
         self.tableView?.reloadData()
-        //view.backgroundColor = .white
     }
     
     func setViewModels(_ viewModels:[TwitterResultViewModel]) {
@@ -119,5 +123,9 @@ extension ListTweetsViewController : UITableViewDataSource, UITableViewDelegate 
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100.0
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.presenter?.showSentiment(self.viewModels[indexPath.row])
     }
 }

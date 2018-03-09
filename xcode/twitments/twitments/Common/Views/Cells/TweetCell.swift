@@ -10,7 +10,7 @@ import UIKit
 
 class TweetCell: UITableViewCell {
 
-    @IBOutlet weak var _textLabel: UILabel!
+    @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var dateLabel: UILabel!
     
     override func awakeFromNib() {
@@ -23,7 +23,7 @@ class TweetCell: UITableViewCell {
     }
     
     func setup(viewModel:TwitterResultViewModel) {
-        _textLabel.text = viewModel.text
+        textView.text = viewModel.text
         dateLabel.text = viewModel.date
     }
 

@@ -33,7 +33,7 @@ class TwitterAPIStore: AbstractAPIStore, TwitterStore {
     func authentication(_ completion: @escaping (Bool, NSError?) -> Void) {
         do {
             let urlRequest = try TwitterRouter.authentication(headers: headers, grantType: grantType).asURLRequest()
-            print(urlRequest)
+            
             Requester.shared.alamofire.request(urlRequest)
                 .responseJSON(completionHandler: { (response) in
                     

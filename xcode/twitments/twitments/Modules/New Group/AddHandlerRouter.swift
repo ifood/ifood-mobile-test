@@ -12,12 +12,14 @@
 
 import UIKit
 import SwiftyVIPER
+import DeckTransition
 
 // MARK: Protocols
 
-/// Should be conformed to by the `AddHandlerRouter` and referenced by `AddHandlerPresenter`
 protocol AddHandlerPresenterRouterProtocol: PresenterRouterProtocol {
     func present(_ list:[TwitterResultViewModel])
+    func presentLoader()
+    func hideLoader()
 }
 
 // MARK: -
@@ -30,7 +32,18 @@ final class AddHandlerRouter: RouterProtocol, AddHandlerPresenterRouterProtocol 
     weak var viewController: UIViewController?
     
     func present(_ list: [TwitterResultViewModel]) {
-        ListTweetsModule(viewModels: list).present(from: viewController, style: .coverVertical, completion: nil)
+        let module = ListTweetsModule(viewModels: list)
+        let transitionDelegate = DeckTransitioningDelegate()
+        module.viewController.transitioningDelegate = transitionDelegate
+        module.viewController.modalPresentationStyle = .custom
+        module.present(from: viewController, style: .coverVertical)
     }
     
+    func presentLoader() {
+        AlertMessageView.shared.loading(bottom: true)
+    }
+    
+    func hideLoader() {
+        AlertMessageView.shared.stop()
+    }
 }

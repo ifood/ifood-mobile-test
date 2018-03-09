@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.6.0)
+  - DeckTransition (2.0.0)
   - EFInternetIndicator (0.4.0):
     - EFInternetIndicator/Interface (= 0.4.0)
   - EFInternetIndicator/Interface (0.4.0):
@@ -15,16 +16,21 @@ PODS:
   - PINRemoteImage/FLAnimatedImage (2.1.4):
     - FLAnimatedImage (>= 1.0)
     - PINRemoteImage/Core
+  - R.swift (4.0.0):
+    - R.swift.Library (~> 4.0.0)
+  - R.swift.Library (4.0.0)
   - SwiftLint (0.25.0)
   - SwiftMessages (4.1.0)
   - SwiftyVIPER (2.0)
 
 DEPENDENCIES:
   - Alamofire
+  - DeckTransition (~> 2.0)
   - EFInternetIndicator (from `https://github.com/ezefranca/EFInternetIndicator.git`)
   - KeychainSwift (~> 10.0)
   - ObjectMapper
   - PINRemoteImage
+  - R.swift
   - SwiftLint
   - SwiftyVIPER
 
@@ -39,16 +45,19 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  DeckTransition: 2300694f94fbeca2c103f365dc9dc09ffae14a4f
   EFInternetIndicator: 17d670654e5cab15a8bdff0772da034556dbd81e
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   KeychainSwift: f9f7910449a0c0fd2cabc889121530dd2c477c33
   ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
   PINCache: ce36ed282031b92fc7733ffe831f474ff80fddc2
   PINRemoteImage: 4ac4011c5caefd6befd99758e09becede05d3226
+  R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
+  R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
   SwiftLint: e14651157288e9e01d6e1a71db7014fb5744a8ea
   SwiftMessages: 1bacc783c8f10bdfdc57c14860cae8a1f1fa6591
   SwiftyVIPER: 826670ff53981da482e6a279a6f428f5567530ea
 
-PODFILE CHECKSUM: 4dac484d03b5f81858c9fd6ad96950c3b79bda7f
+PODFILE CHECKSUM: 387b803669c83a57d6a0695a91ccb6ead88c6808
 
 COCOAPODS: 1.3.1

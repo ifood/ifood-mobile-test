@@ -38,8 +38,6 @@ public struct TwitterResultViewModel {
     }
     
     var date: String {
-        print(self.model.createdAt)
-        print(self.model.createdAt?.formatted())
         guard let date = self.model.createdAt?.formatted() else {
             return ""
         }
