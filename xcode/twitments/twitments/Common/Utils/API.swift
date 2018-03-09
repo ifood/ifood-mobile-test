@@ -18,10 +18,8 @@ struct API {
     static let sentimentsPath = "/v1/documents:analyzeSentiment?fields=documentSentiment"
 }
 
-//import Foundation
 //
 ///// Rules based on https://cloud.google.com/natural-language/docs/reference/rest/v1/Sentiment
-//struct TweetSentimentBusiness {
 //
 //    func analyzeFeeling(sentiment: TweetSentimentAnalysis) -> TweetFeeling {
 //        switch sentiment.magnitude {
@@ -42,6 +40,4 @@ struct API {
 //            return .normal
 //        }
 //    }
-//
-//}
 

@@ -84,7 +84,6 @@
 		8BF846EE2051F1C700A3F713 /* TwitterSentimentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF846ED2051F1C700A3F713 /* TwitterSentimentViewModel.swift */; };
 		8BF846F02051FE4600A3F713 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF846EF2051FE4600A3F713 /* UITextField+Extension.swift */; };
 		8BF846F22052083500A3F713 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF846F12052083500A3F713 /* UIColor+Extensions.swift */; };
-		8BF846F72052235D00A3F713 /* GoogleRouterold.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF846F62052235D00A3F713 /* GoogleRouterold.swift */; };
 		8BF846F9205224A000A3F713 /* GoogleStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF846F8205224A000A3F713 /* GoogleStore.swift */; };
 		8BF847002052343300A3F713 /* DocumentSentiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF846FC2052343300A3F713 /* DocumentSentiment.swift */; };
 		8BF847012052343300A3F713 /* Sentences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF846FD2052343300A3F713 /* Sentences.swift */; };
@@ -199,7 +198,6 @@
 		8BF846ED2051F1C700A3F713 /* TwitterSentimentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterSentimentViewModel.swift; sourceTree = "<group>"; };
 		8BF846EF2051FE4600A3F713 /* UITextField+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		8BF846F12052083500A3F713 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
-		8BF846F62052235D00A3F713 /* GoogleRouterold.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleRouterold.swift; sourceTree = "<group>"; };
 		8BF846F8205224A000A3F713 /* GoogleStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleStore.swift; sourceTree = "<group>"; };
 		8BF846FC2052343300A3F713 /* DocumentSentiment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentSentiment.swift; sourceTree = "<group>"; };
 		8BF846FD2052343300A3F713 /* Sentences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sentences.swift; sourceTree = "<group>"; };
@@ -638,7 +636,6 @@
 			isa = PBXGroup;
 			children = (
 				8BF847042052A21F00A3F713 /* GoogleRouter.swift */,
-				8BF846F62052235D00A3F713 /* GoogleRouterold.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -1024,7 +1021,6 @@
 				8BF118262051C04000BA7AA9 /* ListTweetsRouter.swift in Sources */,
 				8BF117DE2050EBFC00BA7AA9 /* ExtendedEntities.swift in Sources */,
 				8BF117DA2050EBFC00BA7AA9 /* BoundingBox.swift in Sources */,
-				8BF846F72052235D00A3F713 /* GoogleRouterold.swift in Sources */,
 				8BF117E22050EBFC00BA7AA9 /* Medium.swift in Sources */,
 				8B0F5B8B2050CE66002DB497 /* AddHandlerViewController.swift in Sources */,
 				8BF117E52050EBFC00BA7AA9 /* Small.swift in Sources */,
