@@ -35,6 +35,7 @@ class ShowSentimentPresenterTests: XCTestCase {
 		presenter?.viewAppearing()
 		presenter?.viewAppeared()
 		presenter?.viewDisappeared()
+        interactor?.requestTitle()
 		XCTAssertEqual(interactor?.titleRequested, true)
 	}
 
@@ -72,35 +73,66 @@ class ShowSentimentPresenterTests: XCTestCase {
 // MARK: -
 
 private class MockRouter: RouterProtocol, ShowSentimentPresenterRouterProtocol {
+    
 	// MARK: Variables
+    var isShowingLoader:Bool = false
 
 	var viewController: UIViewController?
+    
+    func presentLoader() {
+        self.isShowingLoader = true
+    }
+    
+    func hideLoader() {
+        self.isShowingLoader = false
+    }
 }
 
 // MARK: -
 
 private class MockInteractor: ShowSentimentPresenterInteractorProtocol {
+    
 	// MARK: Variables
 
 	var titleRequested: Bool = false
-
+    var message: String = ""
+    var dataProvider: Bool = false
 	// MARK: Functions
 
 	func requestTitle() {
 		titleRequested = true
 	}
+    
+    func avaliateSentiment(_ message: String) {
+        self.message = message
+    }
+    
+    func setDataProvider(_ dataProvider: ShowSentimentDataProvider) {
+        self.dataProvider = true
+    }
 }
 
 // MARK: -
 
 private class MockView: ShowSentimentPresenterViewProtocol {
+
 	// MARK: Variables
 
 	var title: String?
 
 	// MARK: Functions
+    
+    func set(sentiment: Feeling) {
+        
+    }
 
 	func set(title: String?) {
-		self.title = title
+        if let _title = title {
+            self.set(title: _title)
+        }
 	}
+    
+    func set(title: String) {
+        self.title = title
+    }
 }

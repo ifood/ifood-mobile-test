@@ -33,6 +33,6 @@ final class ListTweetsInteractor: ListTweetsPresenterInteractorProtocol {
 	// MARK: - ListTweets Presenter to Interactor Protocol
 
 	func requestTitle() {
-		presenter?.set(title: "ListTweets")
+		presenter?.set(title: "Tweet's Feed")
 	}
 }

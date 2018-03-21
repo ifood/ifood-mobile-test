@@ -22,12 +22,13 @@ class ShowSentimentInteractorTests: XCTestCase {
 	// MARK: - Variables
 
 	private var presenter: MockPresenter?
-	private var interactor: ShowSentimentInteractor?
+	private var interactor: MockShowSentimentInteractor?
 
 	// MARK: Test Functions
 
 	func testPresenter() {
 		interactor?.requestTitle()
+        XCTAssertTrue((interactor?.titleRequested)!)
 		XCTAssertEqual(presenter?.title, "ShowSentiment")
 	}
 
@@ -36,10 +37,8 @@ class ShowSentimentInteractorTests: XCTestCase {
     override func setUp() {
         super.setUp()
 		// Put setup code here. This method is called before the invocation of each test method in the class.
-
 		presenter = MockPresenter()
-
-		interactor = ShowSentimentInteractor()
+		interactor = MockShowSentimentInteractor()
 		interactor?.presenter = presenter
     }
 
@@ -64,4 +63,27 @@ private class MockPresenter: ShowSentimentInteractorPresenterProtocol {
 	func set(title: String?) {
 		self.title = title
 	}
+}
+
+class MockShowSentimentInteractor: ShowSentimentPresenterInteractorProtocol {
+
+    var titleRequested: Bool = false
+    var avaliateSentiment: Bool = false
+    var setDataProvider: Bool = false
+    
+    fileprivate var presenter: MockPresenter?
+    // MARK: Functions
+    
+    func requestTitle() {
+        titleRequested = true
+        presenter?.set(title: "ShowSentiment")
+    }
+    
+    func avaliateSentiment(_ message: String) {
+        avaliateSentiment = true
+    }
+    
+    func setDataProvider(_ dataProvider: ShowSentimentDataProvider) {
+        setDataProvider = true
+    }
 }

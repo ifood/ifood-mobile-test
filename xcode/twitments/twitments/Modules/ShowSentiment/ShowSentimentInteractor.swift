@@ -17,22 +17,27 @@ import SwiftyVIPER
 
 /// Should be conformed to by the `ShowSentimentInteractor` and referenced by `ShowSentimentPresenter`
 protocol ShowSentimentPresenterInteractorProtocol {
-	/// Requests the title for the presenter
-	func requestTitle()
+	func avaliateSentiment(_ message: String)
+    func setDataProvider(_ dataProvider: ShowSentimentDataProvider)
 }
 
 // MARK: -
 
 /// The Interactor for the ShowSentiment module
 final class ShowSentimentInteractor: ShowSentimentPresenterInteractorProtocol {
-
+    
 	// MARK: - Variables
 
 	weak var presenter: ShowSentimentInteractorPresenterProtocol?
-
+    fileprivate var manager: ShowSentimentDataProviderManager?
 	// MARK: - ShowSentiment Presenter to Interactor Protocol
-
-	func requestTitle() {
-		presenter?.set(title: "ShowSentiment")
-	}
+    
+    func setDataProvider(_ dataProvider: ShowSentimentDataProvider) {
+        manager = ShowSentimentDataProviderManager()
+        manager?.dataProvider = dataProvider
+    }
+    
+    func avaliateSentiment(_ message: String) {
+        manager?.avaliateSentiment(message)
+    }
 }

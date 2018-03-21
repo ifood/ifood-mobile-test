@@ -17,8 +17,8 @@ public struct DocumentSentiment: Mappable {
   }
 
   // MARK: Properties
-  public var magnitude: Float?
-  public var score: Float?
+  public var magnitude: Double?
+  public var score: Double?
 
   // MARK: ObjectMapper Initializers
   /// Map a JSON object to this class using ObjectMapper.

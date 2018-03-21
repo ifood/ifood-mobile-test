@@ -17,9 +17,5 @@ class AbstractViewController: UIViewController, InternetStatusIndicable {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.startMonitoringInternet(backgroundColor: UIColor.darkGray, message: "Por favor, verifique sua conexão com a internet", remoteHostName: "apple.com")
-        GoogleAPIStore().sentimentsOf(tweet: "I hate this API") { (sentiment, error) in
-            print(sentiment)
-            print(error)
-        }
     }
 }

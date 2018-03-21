@@ -19,22 +19,19 @@ import SwiftyVIPER
 /// Should be conformed to by the `ShowSentimentPresenter` and referenced by `ShowSentimentViewController`
 protocol ShowSentimentViewPresenterProtocol: ViewPresenterProtocol {
     func closeSelected()
-    func presentLoader()
+    func loader(show:Bool)
+    func avaliateSentiment(_ message: String)
 }
 
 /// Should be conformed to by the `ShowSentimentPresenter` and referenced by `ShowSentimentInteractor`
 protocol ShowSentimentInteractorPresenterProtocol: class {
-	/** Sets the title for the presenter
-	- parameters:
-		- title The title to set
-	*/
-	func set(title: String?)
+    
 }
 
 // MARK: -
 
 /// The Presenter for the ShowSentiment module
-final class ShowSentimentPresenter: ShowSentimentViewPresenterProtocol, ShowSentimentInteractorPresenterProtocol {
+final class ShowSentimentPresenter: ShowSentimentViewPresenterProtocol, ShowSentimentInteractorPresenterProtocol, ShowSentimentDataProvider {
 
 	// MARK: - Constants
 
@@ -55,7 +52,7 @@ final class ShowSentimentPresenter: ShowSentimentViewPresenterProtocol, ShowSent
 	// MARK: - ShowSentiment View to Presenter Protocol
 
 	func viewLoaded() {
-		interactor.requestTitle()
+        interactor.setDataProvider(self)
 	}
     
     func closeSelected() {
@@ -63,13 +60,35 @@ final class ShowSentimentPresenter: ShowSentimentViewPresenterProtocol, ShowSent
         router.dismiss(completion: nil)
     }
     
-    func presentLoader() {
-        router.presentLoader()
+    func loader(show:Bool) {
+        if show {
+            router.presentLoader()
+        } else {
+            router.hideLoader()
+        }
     }
     
-	// MARK: - ShowSentiment Interactor to Presenter Protocol
-
-	func set(title: String?) {
-		view?.set(title: title)
-	}
+    func avaliateSentiment(_ message: String) {
+        interactor.avaliateSentiment(message)
+    }
+    
+    func set(title: String) {
+        view?.set(title: title)
+    }
+    
+    // MARK: ShowSentimentDataProvider
+    
+    func reloadData(_ provider: AbstractDataProvider?, viewModels: TwitterSentimentViewModel) {
+        print(viewModels)
+    }
+    
+    func reloadData(_ provider: AbstractDataProvider?, sentiments: Feeling) {
+        router.hideLoader()
+        view?.set(sentiment: sentiments)
+    }
+    
+    func errorData(_ provider: AbstractDataProvider?, error: NSError) {
+        print(error)
+        router.hideLoader()
+    }
 }

@@ -62,11 +62,11 @@ class AddHandlerViewTests: XCTestCase {
 
 private class MockPresenter: AddHandlerViewPresenterProtocol {
 
-    
     // MARK: Variables
     var isViewLoaded: Bool = false
     var isContinueTapped: Bool = false
     var isAuthentication: Bool = false
+    var isShowingLoader: Bool = false
     var userName: String = ""
     
 	// MARK: Functions
@@ -80,8 +80,15 @@ private class MockPresenter: AddHandlerViewPresenterProtocol {
         self.userName = userName
     }
     
-    
     func authentication() {
         isAuthentication = true
+    }
+    
+    func presentLoader() {
+        isShowingLoader = true
+    }
+    
+    func hideLoader() {
+        isShowingLoader = false
     }
 }

@@ -92,6 +92,8 @@
 		8BF847052052A21F00A3F713 /* GoogleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF847042052A21F00A3F713 /* GoogleRouter.swift */; };
 		8BF847072052A24F00A3F713 /* GoogleAPIStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF847062052A24F00A3F713 /* GoogleAPIStore.swift */; };
 		9F72FB29B7D2DA199B5BB096 /* Pods_twitments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AAAF4C92787BB5AF4F18119 /* Pods_twitments.framework */; };
+		A2C2BAAB2062D96600AF6054 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C2BAAA2062D96600AF6054 /* UITableView+Extensions.swift */; };
+		A2C2BAAD2062DED100AF6054 /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C2BAAC2062DED100AF6054 /* UIButton+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -205,6 +207,8 @@
 		8BF846FF2052343300A3F713 /* Text.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
 		8BF847042052A21F00A3F713 /* GoogleRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleRouter.swift; sourceTree = "<group>"; };
 		8BF847062052A24F00A3F713 /* GoogleAPIStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleAPIStore.swift; sourceTree = "<group>"; };
+		A2C2BAAA2062D96600AF6054 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
+		A2C2BAAC2062DED100AF6054 /* UIButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
 		B7D38AF6B37AC441F23552C0 /* Pods-twitmentsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twitmentsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-twitmentsTests/Pods-twitmentsTests.release.xcconfig"; sourceTree = "<group>"; };
 		D893D42B95700DC5DDB83678 /* Pods-twitmentsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twitmentsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-twitmentsTests/Pods-twitmentsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E4635B1D664A82F057F27640 /* Pods-twitmentsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twitmentsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-twitmentsUITests/Pods-twitmentsUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -455,6 +459,8 @@
 				8BF117FD2051781D00BA7AA9 /* String+Extensions.swift */,
 				8BF846B22051E07B00A3F713 /* Date+Extensions.swift */,
 				8BF846F12052083500A3F713 /* UIColor+Extensions.swift */,
+				A2C2BAAA2062D96600AF6054 /* UITableView+Extensions.swift */,
+				A2C2BAAC2062DED100AF6054 /* UIButton+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -980,6 +986,7 @@
 				8BF847012052343300A3F713 /* Sentences.swift in Sources */,
 				8BF1180020517D5300BA7AA9 /* Authentication.swift in Sources */,
 				8BF118092051974200BA7AA9 /* AddHandlerDataProvider.swift in Sources */,
+				A2C2BAAB2062D96600AF6054 /* UITableView+Extensions.swift in Sources */,
 				8B0F5B892050CE66002DB497 /* AddHandlerPresenter.swift in Sources */,
 				8B0F5B882050CE66002DB497 /* AddHandlerModule.swift in Sources */,
 				8BF117F520515F6300BA7AA9 /* API.swift in Sources */,
@@ -1017,6 +1024,7 @@
 				8BF847022052343300A3F713 /* Sentiment.swift in Sources */,
 				8BF117D92050EBFC00BA7AA9 /* Attributes.swift in Sources */,
 				8BF118252051C04000BA7AA9 /* ListTweetsPresenter.swift in Sources */,
+				A2C2BAAD2062DED100AF6054 /* UIButton+Extensions.swift in Sources */,
 				8BF846D22051EC2600A3F713 /* ShowSentimentViewController.swift in Sources */,
 				8BF118262051C04000BA7AA9 /* ListTweetsRouter.swift in Sources */,
 				8BF117DE2050EBFC00BA7AA9 /* ExtendedEntities.swift in Sources */,

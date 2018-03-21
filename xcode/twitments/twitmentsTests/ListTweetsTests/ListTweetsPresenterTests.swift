@@ -77,8 +77,17 @@ private class MockRouter: RouterProtocol, ListTweetsPresenterRouterProtocol {
 	var viewController: UIViewController?
     
     func present(_ to: TwitterResultViewModel) {
-        ShowSentimentModule().present(from: viewController, style: .coverVertical)
+        ShowSentimentModule(viewModel: to).present(from: viewController, style: .coverVertical)
     }
+    
+    func presentLoader() {
+        
+    }
+    
+    func hideLoader() {
+        
+    }
+    
 }
 
 // MARK: -

@@ -73,11 +73,20 @@ class AddHandlerPresenterTests: XCTestCase {
 // MARK: -
 
 private class MockRouter: RouterProtocol, AddHandlerPresenterRouterProtocol {
-    
+
     var isPresented = false
+    var isShowingLoader = false
     
     func present(_ list: [TwitterResultViewModel]) {
         self.isPresented = true
+    }
+    
+    func presentLoader() {
+        self.isShowingLoader = true
+    }
+    
+    func hideLoader() {
+        self.isShowingLoader = false
     }
     
 	// MARK: Variables

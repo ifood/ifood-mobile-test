@@ -28,7 +28,7 @@ class ListTweetsInteractorTests: XCTestCase {
 
 	func testPresenter() {
 		interactor?.requestTitle()
-		XCTAssertEqual(presenter?.title, "ListTweets")
+		XCTAssertEqual(presenter?.title, "Tweet's Feed")
 	}
 
 	// MARK: Setup

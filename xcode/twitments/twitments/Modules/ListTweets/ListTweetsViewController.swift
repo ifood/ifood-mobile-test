@@ -16,12 +16,7 @@ import SwiftyVIPER
 
 // MARK: Protocols
 
-/// Should be conformed to by the `ListTweetsViewController` and referenced by `ListTweetsPresenter`
 protocol ListTweetsPresenterViewProtocol: class {
-    /** Sets the title for the view
-     - parameters:
-     - title The title to set
-     */
     func set(title: String?)
 }
 
@@ -97,8 +92,13 @@ class ListTweetsViewController: UIViewController, StoryboardIdentifiable, ListTw
     
     func set(title: String?) {
         self.title = title
+        if let profile =  (self.header?.text) {
+            self.header?.text = profile + "\n" + "Twitter Feed's"
+        }
     }
 }
+
+    // MARK: - ListTweets UITableViewDataSource and UITableViewDelegate
 
 extension ListTweetsViewController : UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -126,6 +126,7 @@ extension ListTweetsViewController : UITableViewDataSource, UITableViewDelegate 
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.tableView?.deselectSelectedRow(animated: true)
         self.presenter?.showSentiment(self.viewModels[indexPath.row])
     }
 }

@@ -22,18 +22,12 @@ class GoogleAPIStore: AbstractAPIStore, GoogleStore {
         let urlRequest = try GoogleRouter.sentimentOf(tweet: tweet).asURLRequest()
         Requester.shared.alamofire.request(urlRequest)
             .responseJSON(completionHandler: { response in
-                print(urlRequest.urlRequest)
-                print(urlRequest.urlRequest?.httpBody)
-                print(response)
                 guard let responseLoad = response.response else { return }
-                
                 let error = NSError(domain: "\(responseLoad.statusCode)", code: responseLoad.statusCode, userInfo: nil)
-                
                 switch responseLoad.statusCode {
-                    
                 case 200:
                     guard let json = response.result.value as? [String: Any] else { completion(nil, self.error); return }
-                    let sentiments = Mapper<DocumentSentiment>().map(JSON: json)
+                    let sentiments = Mapper<DocumentSentiment>().map(JSON: json["documentSentiment"] as! [String : Any])
                     completion(sentiments, nil)
                 default:
                     completion(nil, error)

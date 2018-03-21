@@ -16,21 +16,15 @@ import SwiftyVIPER
 
 // MARK: Protocols
 
-/// Should be conformed to by the `ShowSentimentViewController` and referenced by `ShowSentimentPresenter`
 protocol ShowSentimentPresenterViewProtocol: class {
-	/** Sets the title for the view
-	- parameters:
-		- title The title to set
-	*/
-	func set(title: String?)
+	func set(sentiment: Feeling)
+    func set(title: String)
 }
 
 // MARK: -
 
 /// The View Controller for the ShowSentiment module
 class ShowSentimentViewController: UIViewController, StoryboardIdentifiable, ShowSentimentPresenterViewProtocol {
-
-	// MARK: - Constants
 
 	// MARK: Variables
 
@@ -55,13 +49,20 @@ class ShowSentimentViewController: UIViewController, StoryboardIdentifiable, Sho
             tweetLabel?.text = self.viewModel?.text
         }
     }
-
+    
+    @IBOutlet weak var sentimentLabel: UILabel!
+    
 	// MARK: - Load Functions
 
 	override func viewDidLoad() {
     	super.viewDidLoad()
 		presenter?.viewLoaded()
-        presenter?.presentLoader()
+        presenter?.loader(show: true)
+        if let tweet = (viewModel?.text) {
+            presenter?.avaliateSentiment(tweet)
+        } else {
+            presenter?.loader(show: false)
+        }
     }
     
     @objc
@@ -75,8 +76,13 @@ class ShowSentimentViewController: UIViewController, StoryboardIdentifiable, Sho
     
 
 	// MARK: - ShowSentiment Presenter to View Protocol
-
-	func set(title: String?) {
-		self.title = title
-	}
+    
+    func set(sentiment: Feeling) {
+        self.sentimentLabel.isHidden = false
+        self.sentimentLabel.text = sentiment.emojiValue
+    }
+    
+    func set(title: String) {
+        self.title = title
+    }
 }

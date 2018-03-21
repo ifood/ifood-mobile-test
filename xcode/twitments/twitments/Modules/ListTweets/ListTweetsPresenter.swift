@@ -23,10 +23,6 @@ protocol ListTweetsViewPresenterProtocol: ViewPresenterProtocol {
 
 /// Should be conformed to by the `ListTweetsPresenter` and referenced by `ListTweetsInteractor`
 protocol ListTweetsInteractorPresenterProtocol: class {
-	/** Sets the title for the presenter
-	- parameters:
-		- title The title to set
-	*/
 	func set(title: String?)
 }
 
