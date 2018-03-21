@@ -14,8 +14,8 @@ protocol AddHandlerDataProvider: AbstractDataProvider {
 }
 
 class AddHandlerDataProviderManager: AbstractDataProviderManager<AddHandlerDataProvider, TwitterResultViewModel> {
-    
-    func fetchUserTwittes(_ userName:String) {
+
+    func fetchUserTwittes(_ userName: String) {
         TwitterAPIStore().userTimeline(userName) { [weak self] (result, error) in
             guard let _error = error else {
                 let viewModels = result.flatMap { TwitterResultViewModel(model: $0) }
@@ -25,7 +25,7 @@ class AddHandlerDataProviderManager: AbstractDataProviderManager<AddHandlerDataP
             self?.dataProvider?.errorData(self?.dataProvider, error: _error)
         }
     }
-    
+
     func authenticate() {
         TwitterAPIStore().authentication { (authentication, error) in
             guard let _error = error else {

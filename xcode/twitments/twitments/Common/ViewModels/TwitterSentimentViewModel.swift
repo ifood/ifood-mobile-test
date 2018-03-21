@@ -9,10 +9,10 @@
 import Foundation
 
 public struct TwitterSentimentViewModel {
-    
-    fileprivate var model:TwitterResultViewModel
-    
-    init(model:TwitterResultViewModel) {
+
+    fileprivate var model: TwitterResultViewModel
+
+    init(model: TwitterResultViewModel) {
         self.model = model
     }
 }

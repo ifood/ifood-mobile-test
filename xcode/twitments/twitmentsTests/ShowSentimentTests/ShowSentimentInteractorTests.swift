@@ -70,19 +70,19 @@ class MockShowSentimentInteractor: ShowSentimentPresenterInteractorProtocol {
     var titleRequested: Bool = false
     var avaliateSentiment: Bool = false
     var setDataProvider: Bool = false
-    
+
     fileprivate var presenter: MockPresenter?
     // MARK: Functions
-    
+
     func requestTitle() {
         titleRequested = true
         presenter?.set(title: "ShowSentiment")
     }
-    
+
     func avaliateSentiment(_ message: String) {
         avaliateSentiment = true
     }
-    
+
     func setDataProvider(_ dataProvider: ShowSentimentDataProvider) {
         setDataProvider = true
     }

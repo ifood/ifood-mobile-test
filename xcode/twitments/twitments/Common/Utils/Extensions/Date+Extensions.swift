@@ -9,7 +9,7 @@
 import Foundation
 extension String {
     func formatted() -> String {
-        
+
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "EEE MMM dd HH:mm:ss ZZZZZ yyyy"
         dateFormatter.calendar = Calendar(identifier: .iso8601)

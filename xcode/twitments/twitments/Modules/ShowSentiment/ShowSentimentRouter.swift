@@ -28,11 +28,11 @@ final class ShowSentimentRouter: RouterProtocol, ShowSentimentPresenterRouterPro
 
 	// MARK: - Variables
 	weak var viewController: UIViewController?
-    
+
     func presentLoader() {
         AlertMessageView.shared.loading(bottom: true)
     }
-    
+
     func hideLoader() {
         AlertMessageView.shared.stop()
     }

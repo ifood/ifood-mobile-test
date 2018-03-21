@@ -10,7 +10,7 @@ import Foundation
 import ObjectMapper
 
 class TwitterAPIStore: AbstractAPIStore, TwitterStore {
-    
+
     fileprivate var grantType: Data {
         let grant = "grant_type=client_credentials"
         guard let data = grant.data(using: .utf8) else {
@@ -18,7 +18,7 @@ class TwitterAPIStore: AbstractAPIStore, TwitterStore {
         }
         return data
     }
-    
+
     fileprivate var headers: [String: String] {
         let key = Configurations.shared.twitterKey()
         let secret = Configurations.shared.twitterSecret()
@@ -29,26 +29,26 @@ class TwitterAPIStore: AbstractAPIStore, TwitterStore {
         return ["Authorization": "Basic \(encoded)",
             "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"]
     }
-    
+
     func authentication(_ completion: @escaping (Bool, NSError?) -> Void) {
         do {
             let urlRequest = try TwitterRouter.authentication(headers: headers, grantType: grantType).asURLRequest()
-            
+
             Requester.shared.alamofire.request(urlRequest)
                 .responseJSON(completionHandler: { (response) in
-                    
+
                     guard let responseLoad = response.response else {
                         completion(false, nil)
                         return
                     }
-                    
+
                     let error = NSError(domain: "Erro Code:\(responseLoad.statusCode)", code: responseLoad.statusCode, userInfo: nil)
-                    
+
                     switch responseLoad.statusCode {
-                        
+
                     case 200:
                         guard let json = response.result.value as? [String: Any] else {
-                            completion(false, self.error)
+                            completion(false, self.genericError)
                             return
                         }
                         let result = Mapper<Authentication>().map(JSON: json)
@@ -58,30 +58,32 @@ class TwitterAPIStore: AbstractAPIStore, TwitterStore {
                         completion(false, error)
                     }
                 })
-        } catch {}
+        } catch {
+            return
+        }
     }
-    
+
     func userTimeline(_ screenName: String, completion: @escaping ([TwitterResult], NSError?) -> Void) {
-        
+
         do {
-            
+
             let urlRequest = try TwitterRouter.userTimeline(screenName: screenName).asURLRequest()
             Requester.shared.alamofire.request(urlRequest)
-                
+
                 .responseJSON(completionHandler: { response in
-                    
+
                     guard let responseLoad = response.response else { return }
-                    
+
                     let error = NSError(domain: "\(responseLoad.statusCode)", code: responseLoad.statusCode, userInfo: nil)
-                    
+
                     switch responseLoad.statusCode {
-                        
+
                     case 200:
-                        guard let json = response.result.value as? [[String: Any]] else { completion([], self.error); return }
+                        guard let json = response.result.value as? [[String: Any]] else { completion([], self.genericError); return }
                         let twittes = Mapper<TwitterResult>().mapArray(JSONArray: json)
                         completion(twittes, nil)
                     case 400, 403:
-                        self.authentication({ (authorization, error) in
+                        self.authentication({ (authorization, _) in
                             if authorization {
                                 self.userTimeline(screenName, completion: completion)
                             }
@@ -89,11 +91,13 @@ class TwitterAPIStore: AbstractAPIStore, TwitterStore {
                     default:
                         completion([], error)
                     }
-                    
+
                 })
-            
+
             throw AbstractStoreError.FoundNil("userTimeline")
-            
-        } catch {}
+
+        } catch {
+            return
+        }
     }
 }

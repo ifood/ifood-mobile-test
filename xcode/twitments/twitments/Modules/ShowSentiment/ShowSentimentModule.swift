@@ -24,7 +24,7 @@ final class ShowSentimentModule: ModuleProtocol {
 
 	// MARK: Variables
     private var viewModel: TwitterResultViewModel
-    
+
 	private(set) lazy var interactor: ShowSentimentInteractor = {
 		ShowSentimentInteractor()
 	}()
@@ -52,7 +52,7 @@ final class ShowSentimentModule: ModuleProtocol {
 
 	// MARK: Inits
 
-    init(viewModel:TwitterResultViewModel) {
+    init(viewModel: TwitterResultViewModel) {
         self.viewModel = viewModel
 		presenter.view = view
 		router.viewController = view

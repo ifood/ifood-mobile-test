@@ -9,7 +9,7 @@
 import Foundation
 
 extension String {
-    
+
     var urlHostAllowed: String {
         guard let _string = self.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else {
             return self

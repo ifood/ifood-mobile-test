@@ -30,28 +30,28 @@ class ShowSentimentViewController: UIViewController, StoryboardIdentifiable, Sho
 
 	var presenter: ShowSentimentViewPresenterProtocol?
     private var viewModel: TwitterResultViewModel?
-    
+
     @IBOutlet weak private(set) var closeButton: UIButton? {
         willSet(button) {
             button?.addTarget(self, action: #selector(closeSelected), for: .touchUpInside)
         }
     }
-    
+
     @IBOutlet weak private(set) var borderVIew: UIView? {
         willSet(view) {
             view?.clipsToBounds = true
             view?.layer.cornerRadius = 20
         }
     }
-    
+
     @IBOutlet weak private(set) var tweetLabel: UILabel? {
         willSet(tweetLabel) {
             tweetLabel?.text = self.viewModel?.text
         }
     }
-    
+
     @IBOutlet weak var sentimentLabel: UILabel!
-    
+
 	// MARK: - Load Functions
 
 	override func viewDidLoad() {
@@ -64,24 +64,23 @@ class ShowSentimentViewController: UIViewController, StoryboardIdentifiable, Sho
             presenter?.loader(show: false)
         }
     }
-    
+
     @objc
     func closeSelected() {
         presenter?.closeSelected()
     }
-    
-    func setViewModel(_ viewModel:TwitterResultViewModel) {
+
+    func setViewModel(_ viewModel: TwitterResultViewModel) {
         self.viewModel = viewModel
     }
-    
 
 	// MARK: - ShowSentiment Presenter to View Protocol
-    
+
     func set(sentiment: Feeling) {
         self.sentimentLabel.isHidden = false
         self.sentimentLabel.text = sentiment.emojiValue
     }
-    
+
     func set(title: String) {
         self.title = title
     }

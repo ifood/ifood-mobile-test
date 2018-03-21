@@ -25,18 +25,18 @@ protocol ShowSentimentPresenterInteractorProtocol {
 
 /// The Interactor for the ShowSentiment module
 final class ShowSentimentInteractor: ShowSentimentPresenterInteractorProtocol {
-    
+
 	// MARK: - Variables
 
 	weak var presenter: ShowSentimentInteractorPresenterProtocol?
     fileprivate var manager: ShowSentimentDataProviderManager?
 	// MARK: - ShowSentiment Presenter to Interactor Protocol
-    
+
     func setDataProvider(_ dataProvider: ShowSentimentDataProvider) {
         manager = ShowSentimentDataProviderManager()
         manager?.dataProvider = dataProvider
     }
-    
+
     func avaliateSentiment(_ message: String) {
         manager?.avaliateSentiment(message)
     }

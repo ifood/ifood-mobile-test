@@ -7,12 +7,12 @@
 //
 
 import Foundation
-struct API {    
+struct API {
     // MARK: Twitter
     static let twitterBaseURL = Configurations.shared.twitterBaseURL()
     static let userTimelinePath = "/1.1/statuses/user_timeline.json"
     static let authenticationPath = "/oauth2/token"
-    
+
     // MARK: Google
     static let googleBaseURL = Configurations.shared.googleBaseURL()
     static let sentimentsPath = "/v1/documents:analyzeSentiment?fields=documentSentiment"
@@ -40,4 +40,3 @@ struct API {
 //            return .normal
 //        }
 //    }
-

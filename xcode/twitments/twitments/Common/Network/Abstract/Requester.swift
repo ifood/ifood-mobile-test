@@ -10,16 +10,16 @@ import Alamofire
 import Foundation
 
 public class Requester {
-    
+
     // MARK: Shared Instance
     static let shared: Requester = {
         let instance = Requester()
         return instance
     }()
-    
+
     let cookies = HTTPCookieStorage.shared
     var alamofire: Alamofire.SessionManager!
-    
+
     func setupAlamofire() {
         let configuration = URLSessionConfiguration.default
         configuration.timeoutIntervalForRequest = 30

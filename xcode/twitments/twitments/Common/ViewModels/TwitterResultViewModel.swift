@@ -9,34 +9,34 @@
 import Foundation
 
 public struct TwitterResultViewModel {
-    
-    fileprivate var model:TwitterResult
-    
-    init(model:TwitterResult) {
+
+    fileprivate var model: TwitterResult
+
+    init(model: TwitterResult) {
         self.model = model
     }
-    
-    var profileImageURL : String {
+
+    var profileImageURL: String {
         guard let url = self.model.user?.profileImageUrlHttps else {
             return ""
         }
         return url
     }
-    
-    var username : String {
+
+    var username: String {
         guard let username = self.model.user?.screenName else {
             return ""
         }
         return username
     }
-    
+
     var text: String {
         guard let text = self.model.text else {
             return ""
         }
         return text
     }
-    
+
     var date: String {
         guard let date = self.model.createdAt?.formatted() else {
             return ""

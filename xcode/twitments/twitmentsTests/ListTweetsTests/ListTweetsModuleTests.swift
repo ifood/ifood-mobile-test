@@ -59,7 +59,7 @@ class ListTweetsModuleTests: XCTestCase {
 		// Put teardown code here. This method is called after the invocation of each test method in the class.
 		super.tearDown()
 	}
-    
+
     func mockTestViewModels() -> [TwitterResultViewModel] {
         let mock: [String: Any] = ["place": [
             "bounding_box": [
@@ -83,7 +83,7 @@ class ListTweetsModuleTests: XCTestCase {
                "favorite_count": 1, "possibly_sensitive": false,
                "lang": "en",
                "entities": [
-                "media" : [
+                "media": [
                     [
                         "id_str": "943449534742581249",
                         "media_url_https": "https:\\/\\/pbs.twimg.com\\/media\\/DRfOWm3W0AEbRHU.jpg",
@@ -122,7 +122,7 @@ class ListTweetsModuleTests: XCTestCase {
                     ]
                 ],
                 "symbols": [
-                    
+
                 ],
                 "user_mentions": [
                     [
@@ -170,7 +170,7 @@ class ListTweetsModuleTests: XCTestCase {
                 "entities": [
                     "description": [
                         "urls": [
-                            
+
                         ]
                     ]
                 ],

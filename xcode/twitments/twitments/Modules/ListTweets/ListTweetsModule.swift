@@ -23,7 +23,7 @@ final class ListTweetsModule: ModuleProtocol {
 	let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
 
 	// MARK: Variables
-    
+
     private var viewModels: [TwitterResultViewModel]
 
 	private(set) lazy var interactor: ListTweetsInteractor = {
@@ -53,7 +53,7 @@ final class ListTweetsModule: ModuleProtocol {
 
 	// MARK: Inits
 
-    init(viewModels:[TwitterResultViewModel]) {
+    init(viewModels: [TwitterResultViewModel]) {
         self.viewModels = viewModels
 		presenter.view = view
 		router.viewController = view

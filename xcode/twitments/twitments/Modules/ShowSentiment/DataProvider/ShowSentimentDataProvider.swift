@@ -9,12 +9,12 @@
 import Foundation
 
 public enum Feeling {
-    
+
     case happy
     case normal
     case bad
     case none
-    
+
     var emojiValue: String {
         switch self {
         case .happy:
@@ -27,7 +27,7 @@ public enum Feeling {
             return "😶"
         }
     }
-    
+
     var textValue: String {
         switch self {
         case .happy:
@@ -40,31 +40,31 @@ public enum Feeling {
             return "Nothing"
         }
     }
-    
+
     var showTextValue: String {
         return self.emojiValue + "\n" + self.textValue
     }
 }
 
 struct SentimentConverter {
-    
+
     static func analyzeFeeling(document: DocumentSentiment) -> Feeling {
-       
+
         guard let sentiment = document.magnitude else {
             return .none
         }
-        
+
         guard let score = document.score else {
             return .none
         }
-        
+
         switch sentiment {
         case 0...0.09999:
             return .normal
         default:
             break
         }
-        
+
         switch score {
         case 0:
             return .normal
@@ -76,7 +76,7 @@ struct SentimentConverter {
             return .none
         }
     }
-    
+
 }
 
 protocol ShowSentimentDataProvider: AbstractDataProvider {
@@ -85,8 +85,8 @@ protocol ShowSentimentDataProvider: AbstractDataProvider {
 }
 
 class ShowSentimentDataProviderManager: AbstractDataProviderManager<ShowSentimentDataProvider, TwitterSentimentViewModel> {
-    
-    func avaliateSentiment(_ message:String) {
+
+    func avaliateSentiment(_ message: String) {
         GoogleAPIStore().sentimentsOf(tweet: message) { [weak self] (result, error) in
             guard let _error = error else {
                 guard let _result = result else {

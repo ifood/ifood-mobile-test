@@ -71,16 +71,16 @@ private class MockPresenter: ShowSentimentViewPresenterProtocol {
 	func viewLoaded() {
 		isViewLoaded = true
 	}
-    
+
     func closeSelected() {
-        
+
     }
-    
+
     func loader(show: Bool) {
-        
+
     }
-    
+
     func avaliateSentiment(_ message: String) {
-        
+
     }
 }

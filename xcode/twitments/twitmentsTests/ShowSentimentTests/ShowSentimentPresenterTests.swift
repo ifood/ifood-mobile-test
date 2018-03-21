@@ -73,16 +73,16 @@ class ShowSentimentPresenterTests: XCTestCase {
 // MARK: -
 
 private class MockRouter: RouterProtocol, ShowSentimentPresenterRouterProtocol {
-    
+
 	// MARK: Variables
-    var isShowingLoader:Bool = false
+    var isShowingLoader: Bool = false
 
 	var viewController: UIViewController?
-    
+
     func presentLoader() {
         self.isShowingLoader = true
     }
-    
+
     func hideLoader() {
         self.isShowingLoader = false
     }
@@ -91,7 +91,7 @@ private class MockRouter: RouterProtocol, ShowSentimentPresenterRouterProtocol {
 // MARK: -
 
 private class MockInteractor: ShowSentimentPresenterInteractorProtocol {
-    
+
 	// MARK: Variables
 
 	var titleRequested: Bool = false
@@ -102,11 +102,11 @@ private class MockInteractor: ShowSentimentPresenterInteractorProtocol {
 	func requestTitle() {
 		titleRequested = true
 	}
-    
+
     func avaliateSentiment(_ message: String) {
         self.message = message
     }
-    
+
     func setDataProvider(_ dataProvider: ShowSentimentDataProvider) {
         self.dataProvider = true
     }
@@ -121,9 +121,9 @@ private class MockView: ShowSentimentPresenterViewProtocol {
 	var title: String?
 
 	// MARK: Functions
-    
+
     func set(sentiment: Feeling) {
-        
+
     }
 
 	func set(title: String?) {
@@ -131,7 +131,7 @@ private class MockView: ShowSentimentPresenterViewProtocol {
             self.set(title: _title)
         }
 	}
-    
+
     func set(title: String) {
         self.title = title
     }

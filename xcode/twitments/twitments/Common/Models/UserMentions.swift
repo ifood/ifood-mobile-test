@@ -30,7 +30,7 @@ public struct UserMentions: Mappable {
   /// Map a JSON object to this class using ObjectMapper.
   ///
   /// - parameter map: A mapping from ObjectMapper.
-  public init?(map: Map){
+  public init?(map: Map) {
 
   }
 

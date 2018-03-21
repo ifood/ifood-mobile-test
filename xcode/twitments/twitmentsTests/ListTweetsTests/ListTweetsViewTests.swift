@@ -66,7 +66,7 @@ private class MockPresenter: ListTweetsViewPresenterProtocol {
     var isClosed: Bool = false
     var isShowSentiment: Bool = false
 	// MARK: Functions
-    
+
     func showSentiment(_ to: TwitterResultViewModel) {
         isShowSentiment = true
     }
@@ -74,7 +74,7 @@ private class MockPresenter: ListTweetsViewPresenterProtocol {
 	func viewLoaded() {
 		isViewLoaded = true
 	}
-    
+
     func closeSelected() {
         isClosed = true
     }

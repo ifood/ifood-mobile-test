@@ -11,9 +11,9 @@ import Foundation
 import UIKit
 
 class AbstractViewController: UIViewController, InternetStatusIndicable {
-    
+
     var internetConnectionIndicator: InternetViewIndicator?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.startMonitoringInternet(backgroundColor: UIColor.darkGray, message: "Por favor, verifique sua conexão com a internet", remoteHostName: "apple.com")

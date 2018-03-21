@@ -10,18 +10,18 @@ import Foundation
 import UIKit
 import Alamofire
 
-protocol GoogleStore : AbstractStore {
-    func sentimentsOf(tweet: String, completion: @escaping completion<DocumentSentiment?>)
+protocol GoogleStore: AbstractStore {
+    func sentimentsOf(tweet: String, completion: @escaping Completion<DocumentSentiment?>)
 }
 
 class GoogleAdapter: RequestAdapter {
-    
-    fileprivate let token : String
-    
-    init(_ token:String) {
+
+    fileprivate let token: String
+
+    init(_ token: String) {
         self.token = token
     }
-    
+
     func adapt(_ urlRequest: URLRequest) throws -> URLRequest {
         var urlRequest = urlRequest
         guard let url = urlRequest.url else { return urlRequest }

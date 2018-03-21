@@ -17,10 +17,10 @@ import SwiftyVIPER
 
 /// Should be conformed to by the `AddHandlerInteractor` and referenced by `AddHandlerPresenter`
 protocol AddHandlerPresenterInteractorProtocol {
-    func setDataProvider(_ dataProvider:AddHandlerDataProvider)
-    func fetchUserTwittes(_ userName:String)
+    func setDataProvider(_ dataProvider: AddHandlerDataProvider)
+    func fetchUserTwittes(_ userName: String)
     func authentication()
-    func authenticationStatus(_ status:Bool)
+    func authenticationStatus(_ status: Bool)
 }
 
 // MARK: -
@@ -34,20 +34,20 @@ final class AddHandlerInteractor: AddHandlerPresenterInteractorProtocol {
     fileprivate var manager: AddHandlerDataProviderManager?
 
 	// MARK: - AddHandler Presenter to Interactor Protocol
-    
+
     func setDataProvider(_ dataProvider: AddHandlerDataProvider) {
         manager = AddHandlerDataProviderManager()
         manager?.dataProvider = dataProvider
     }
-    
-    func fetchUserTwittes(_ userName:String) {
+
+    func fetchUserTwittes(_ userName: String) {
         manager?.fetchUserTwittes(userName)
     }
-    
+
     func authentication() {
         manager?.authenticate()
     }
-    
+
     func authenticationStatus(_ status: Bool) {
         presenter?.authenticationStatus(status)
     }

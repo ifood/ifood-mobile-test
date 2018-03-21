@@ -20,7 +20,6 @@
 		8B0F5BA22050E3E1002DB497 /* AbstractStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0F5BA12050E3E1002DB497 /* AbstractStore.swift */; };
 		8B3531972050CC4C0080B87B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3531962050CC4C0080B87B /* AppDelegate.swift */; };
 		8B35319C2050CC4C0080B87B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B35319A2050CC4C0080B87B /* Main.storyboard */; };
-		8B35319F2050CC4C0080B87B /* twitments.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8B35319D2050CC4C0080B87B /* twitments.xcdatamodeld */; };
 		8B3531A12050CC4C0080B87B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B3531A02050CC4C0080B87B /* Assets.xcassets */; };
 		8B3531A42050CC4C0080B87B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B3531A22050CC4C0080B87B /* LaunchScreen.storyboard */; };
 		8B3531AF2050CC4C0080B87B /* twitmentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3531AE2050CC4C0080B87B /* twitmentsTests.swift */; };
@@ -91,6 +90,7 @@
 		8BF847032052343300A3F713 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF846FF2052343300A3F713 /* Text.swift */; };
 		8BF847052052A21F00A3F713 /* GoogleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF847042052A21F00A3F713 /* GoogleRouter.swift */; };
 		8BF847072052A24F00A3F713 /* GoogleAPIStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF847062052A24F00A3F713 /* GoogleAPIStore.swift */; };
+		8BF8478820631A2C00A3F713 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BF8478720631A2C00A3F713 /* Default-568h@2x.png */; };
 		9F72FB29B7D2DA199B5BB096 /* Pods_twitments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AAAF4C92787BB5AF4F18119 /* Pods_twitments.framework */; };
 		A2C2BAAB2062D96600AF6054 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C2BAAA2062D96600AF6054 /* UITableView+Extensions.swift */; };
 		A2C2BAAD2062DED100AF6054 /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C2BAAC2062DED100AF6054 /* UIButton+Extensions.swift */; };
@@ -130,10 +130,8 @@
 		8B3531932050CC4C0080B87B /* twitments.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = twitments.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B3531962050CC4C0080B87B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B35319B2050CC4C0080B87B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8B35319E2050CC4C0080B87B /* twitments.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = twitments.xcdatamodel; sourceTree = "<group>"; };
 		8B3531A02050CC4C0080B87B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B3531A32050CC4C0080B87B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8B3531A52050CC4C0080B87B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B3531AA2050CC4C0080B87B /* twitmentsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = twitmentsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B3531AE2050CC4C0080B87B /* twitmentsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = twitmentsTests.swift; sourceTree = "<group>"; };
 		8B3531B02050CC4C0080B87B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -207,6 +205,8 @@
 		8BF846FF2052343300A3F713 /* Text.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
 		8BF847042052A21F00A3F713 /* GoogleRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleRouter.swift; sourceTree = "<group>"; };
 		8BF847062052A24F00A3F713 /* GoogleAPIStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleAPIStore.swift; sourceTree = "<group>"; };
+		8BF8478720631A2C00A3F713 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		8BF8478A20631B3D00A3F713 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = twitments/Info.plist; sourceTree = "<group>"; };
 		A2C2BAAA2062D96600AF6054 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		A2C2BAAC2062DED100AF6054 /* UIButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
 		B7D38AF6B37AC441F23552C0 /* Pods-twitmentsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twitmentsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-twitmentsTests/Pods-twitmentsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -307,7 +307,10 @@
 		8B35318A2050CC4C0080B87B = {
 			isa = PBXGroup;
 			children = (
+				8BF8478720631A2C00A3F713 /* Default-568h@2x.png */,
 				8B3531952050CC4C0080B87B /* twitments */,
+				8BD33E532051CEE7001C8762 /* twitments-Bridging-Header.h */,
+				8BF8478A20631B3D00A3F713 /* Info.plist */,
 				8B3531AD2050CC4C0080B87B /* twitmentsTests */,
 				8B3531B82050CC4C0080B87B /* twitmentsUITests */,
 				8B3531942050CC4C0080B87B /* Products */,
@@ -329,15 +332,9 @@
 		8B3531952050CC4C0080B87B /* twitments */ = {
 			isa = PBXGroup;
 			children = (
+				8BF84786206319C200A3F713 /* Application */,
 				8B0F5B982050DEC0002DB497 /* Common */,
 				8BF118062051970F00BA7AA9 /* Modules */,
-				8B3531962050CC4C0080B87B /* AppDelegate.swift */,
-				8BD33E532051CEE7001C8762 /* twitments-Bridging-Header.h */,
-				8B35319A2050CC4C0080B87B /* Main.storyboard */,
-				8B3531A02050CC4C0080B87B /* Assets.xcassets */,
-				8B3531A22050CC4C0080B87B /* LaunchScreen.storyboard */,
-				8B3531A52050CC4C0080B87B /* Info.plist */,
-				8B35319D2050CC4C0080B87B /* twitments.xcdatamodeld */,
 			);
 			path = twitments;
 			sourceTree = "<group>";
@@ -646,6 +643,17 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		8BF84786206319C200A3F713 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				8B3531962050CC4C0080B87B /* AppDelegate.swift */,
+				8B35319A2050CC4C0080B87B /* Main.storyboard */,
+				8B3531A02050CC4C0080B87B /* Assets.xcassets */,
+				8B3531A22050CC4C0080B87B /* LaunchScreen.storyboard */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
 		BEDB7B90464793AB8849830C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -664,6 +672,7 @@
 			buildConfigurationList = 8B3531BE2050CC4C0080B87B /* Build configuration list for PBXNativeTarget "twitments" */;
 			buildPhases = (
 				D3B97C7BDE60EBED934ECA47 /* [CP] Check Pods Manifest.lock */,
+				8BF847852063159000A3F713 /* SwiftLint */,
 				8B35318F2050CC4C0080B87B /* Sources */,
 				8B3531902050CC4C0080B87B /* Frameworks */,
 				8B3531912050CC4C0080B87B /* Resources */,
@@ -776,6 +785,7 @@
 				8B3531A42050CC4C0080B87B /* LaunchScreen.storyboard in Resources */,
 				8BF117F920515FF900BA7AA9 /* Configurations.plist in Resources */,
 				8B3531A12050CC4C0080B87B /* Assets.xcassets in Resources */,
+				8BF8478820631A2C00A3F713 /* Default-568h@2x.png in Resources */,
 				8B35319C2050CC4C0080B87B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -898,6 +908,20 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-twitmentsTests/Pods-twitmentsTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		8BF847852063159000A3F713 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
 		9F4D5815E5B25C7167DD7213 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -971,7 +995,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B35319F2050CC4C0080B87B /* twitments.xcdatamodeld in Sources */,
 				8B0F5BA02050E388002DB497 /* TwitterStore.swift in Sources */,
 				8BF846EE2051F1C700A3F713 /* TwitterSentimentViewModel.swift in Sources */,
 				8BF846F22052083500A3F713 /* UIColor+Extensions.swift in Sources */,
@@ -1222,7 +1245,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ezefranca.twitments;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "twitments/twitments-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "twitments-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1241,7 +1264,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ezefranca.twitments;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "twitments/twitments-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "twitments-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1357,19 +1380,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		8B35319D2050CC4C0080B87B /* twitments.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				8B35319E2050CC4C0080B87B /* twitments.xcdatamodel */,
-			);
-			currentVersion = 8B35319E2050CC4C0080B87B /* twitments.xcdatamodel */;
-			path = twitments.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 8B35318B2050CC4C0080B87B /* Project object */;
 }

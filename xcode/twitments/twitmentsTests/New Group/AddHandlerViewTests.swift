@@ -68,26 +68,26 @@ private class MockPresenter: AddHandlerViewPresenterProtocol {
     var isAuthentication: Bool = false
     var isShowingLoader: Bool = false
     var userName: String = ""
-    
+
 	// MARK: Functions
 
 	func viewLoaded() {
 		isViewLoaded = true
 	}
-    
+
     func continueTapped(_ userName: String) {
         isContinueTapped = true
         self.userName = userName
     }
-    
+
     func authentication() {
         isAuthentication = true
     }
-    
+
     func presentLoader() {
         isShowingLoader = true
     }
-    
+
     func hideLoader() {
         isShowingLoader = false
     }

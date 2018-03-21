@@ -81,7 +81,7 @@ class TwitterModelsTests: XCTestCase {
                "favorite_count": 1, "possibly_sensitive": false,
                "lang": "en",
                "entities": [
-                "media" : [
+                "media": [
                     [
                         "id_str": "943449534742581249",
                         "media_url_https": "https:\\/\\/pbs.twimg.com\\/media\\/DRfOWm3W0AEbRHU.jpg",
@@ -120,7 +120,7 @@ class TwitterModelsTests: XCTestCase {
                     ]
                 ],
                 "symbols": [
-                    
+
                 ],
                 "user_mentions": [
                     [
@@ -168,7 +168,7 @@ class TwitterModelsTests: XCTestCase {
                 "entities": [
                     "description": [
                         "urls": [
-                            
+
                         ]
                     ]
                 ],
@@ -278,7 +278,7 @@ class TwitterModelsTests: XCTestCase {
         XCTAssertNotNil(resultMock?.favoriteCount)
         XCTAssertNotNil(resultMock?.possiblySensitive)
         XCTAssertNotNil(resultMock?.createdAt)
-        
+
     }
-    
+
 }

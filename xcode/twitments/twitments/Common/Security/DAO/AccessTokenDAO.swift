@@ -17,11 +17,11 @@ class AccessTokenDAO: NSObject {
             keychain.set(_token, forKey: "kAccessTokenDAO")
         }
     }
-    
+
     static func removeToken() {
 
     }
-    
+
     static func getToken() -> String {
         let keychain = KeychainSwift()
         guard let _key = keychain.get("kAccessTokenDAO") else {

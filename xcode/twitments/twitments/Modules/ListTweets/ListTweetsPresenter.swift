@@ -18,7 +18,7 @@ import SwiftyVIPER
 
 protocol ListTweetsViewPresenterProtocol: ViewPresenterProtocol {
     func closeSelected()
-    func showSentiment(_ to:TwitterResultViewModel)
+    func showSentiment(_ to: TwitterResultViewModel)
 }
 
 /// Should be conformed to by the `ListTweetsPresenter` and referenced by `ListTweetsInteractor`
@@ -52,16 +52,15 @@ final class ListTweetsPresenter: ListTweetsViewPresenterProtocol, ListTweetsInte
 	func viewLoaded() {
 		interactor.requestTitle()
 	}
-    
+
     func closeSelected() {
         router.hideLoader()
         router.dismiss(completion: nil)
     }
-    
+
     func showSentiment(_ to: TwitterResultViewModel) {
         router.present(to)
     }
-    
 
 	// MARK: - ListTweets Interactor to Presenter Protocol
 

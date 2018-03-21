@@ -13,7 +13,7 @@ protocol AbstractDataProvider: class {
 }
 
 class AbstractDataProviderManager<T, S> {
-    let dataError = NSError(domain: "data error", code: 0, userInfo: nil)
+    let dataError = NSError(domain: "Erro ao criar algum dos objetos", code: 0, userInfo: nil)
     var dataProvider: T?
     var viewModel: S?
 }

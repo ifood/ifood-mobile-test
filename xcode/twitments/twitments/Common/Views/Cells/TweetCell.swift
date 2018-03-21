@@ -12,7 +12,7 @@ class TweetCell: UITableViewCell {
 
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var dateLabel: UILabel!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,8 +21,8 @@ class TweetCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-    
-    func setup(viewModel:TwitterResultViewModel) {
+
+    func setup(viewModel: TwitterResultViewModel) {
         textView.text = viewModel.text
         dateLabel.text = viewModel.date
     }

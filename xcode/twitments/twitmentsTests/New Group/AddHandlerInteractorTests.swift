@@ -50,23 +50,22 @@ class AddHandlerInteractorTests: XCTestCase {
 // MARK: -
 
 private class MockPresenter: AddHandlerInteractorPresenterProtocol {
-    
+
     func authenticationStatus(_ status: Bool) {
         self.status = status
     }
-    
+
     func reloadData(_ provider: AbstractDataProvider?, viewModels: [TwitterResultViewModel]) {
-        
+
     }
-    
+
     func reloadData(_ provider: AbstractDataProvider?, authentication: Bool) {
-        
+
     }
-    
+
     func errorData(_ provider: AbstractDataProvider?, error: NSError) {
-        
+
     }
-    
 
 	// MARK: Variables
 

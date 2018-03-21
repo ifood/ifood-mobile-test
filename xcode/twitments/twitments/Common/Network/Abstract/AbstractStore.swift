@@ -11,12 +11,12 @@ import Foundation
 import ObjectMapper
 
 protocol AbstractStore {
-    var error: NSError { get set }
-    typealias completion<T> = (_ result: T, _ failure: NSError?) -> Void
+    var genericError: NSError { get set }
+    typealias Completion<T> = (_ result: T, _ failure: NSError?) -> Void
 }
 
 class AbstractAPIStore {
-    var error = NSError(domain: "", code: 900, userInfo: [NSLocalizedDescriptionKey: "Erro ao obter as informações"])
+    var genericError = NSError(domain: "Erro ao obter informações", code: 900, userInfo: [NSLocalizedDescriptionKey: "Erro ao obter as informações"])
 }
 
 enum AbstractStoreError: Error {

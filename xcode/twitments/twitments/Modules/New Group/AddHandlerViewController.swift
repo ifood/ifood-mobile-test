@@ -31,27 +31,27 @@ class AddHandlerViewController: AbstractViewController, StoryboardIdentifiable, 
 	// MARK: Variables
 
 	var presenter: AddHandlerViewPresenterProtocol?
-    
+
     @IBOutlet weak private(set) var messageLabel: UILabel? {
         willSet(label) {
             label?.textAlignment = .center
         }
     }
-    
+
     @IBOutlet weak private(set) var handleTextField: UITextField? {
         willSet(textfield) {
             textfield?.textAlignment = .center
         }
     }
-    
+
     @IBOutlet weak private(set) var continueButton: UIButton? {
         willSet(button) {
             button?.addTarget(self, action: #selector(continueTapped), for: .touchUpInside)
         }
     }
-    
+
     // MARK: - Functions
-    
+
     @objc
     func continueTapped() {
         guard let text = self.handleTextField?.text else {

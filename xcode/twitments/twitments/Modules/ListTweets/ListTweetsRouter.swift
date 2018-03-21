@@ -29,7 +29,7 @@ final class ListTweetsRouter: RouterProtocol, ListTweetsPresenterRouterProtocol 
 	// MARK: - Variables
 
 	weak var viewController: UIViewController?
-    
+
     func present(_ to: TwitterResultViewModel) {
         let module = ShowSentimentModule(viewModel: to)
         let transitionDelegate = DeckTransitioningDelegate()
@@ -37,11 +37,11 @@ final class ListTweetsRouter: RouterProtocol, ListTweetsPresenterRouterProtocol 
         module.viewController.modalPresentationStyle = .custom
         module.present(from: viewController, style: .coverVertical)
     }
-    
+
     func presentLoader() {
         AlertMessageView.shared.loading()
     }
-    
+
     func hideLoader() {
         AlertMessageView.shared.stop()
     }

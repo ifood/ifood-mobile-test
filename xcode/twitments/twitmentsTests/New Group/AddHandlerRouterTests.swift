@@ -34,7 +34,7 @@ class AddHandlerRouterTests: XCTestCase {
     override func tearDown() {
         super.tearDown()
     }
-    
+
     func testRouter() {
         XCTAssertNotNil(router)
     }

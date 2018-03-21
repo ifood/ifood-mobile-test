@@ -72,22 +72,22 @@ class ListTweetsPresenterTests: XCTestCase {
 // MARK: -
 
 private class MockRouter: RouterProtocol, ListTweetsPresenterRouterProtocol {
-    
+
 	// MARK: Variables
 	var viewController: UIViewController?
-    
+
     func present(_ to: TwitterResultViewModel) {
         ShowSentimentModule(viewModel: to).present(from: viewController, style: .coverVertical)
     }
-    
+
     func presentLoader() {
-        
+
     }
-    
+
     func hideLoader() {
-        
+
     }
-    
+
 }
 
 // MARK: -

@@ -10,29 +10,29 @@ import Foundation
 import Alamofire
 
 enum GoogleRouter: URLRequestConvertible {
-    
+
     case sentimentOf(tweet: String)
-    
+
     var method: HTTPMethod {
         switch self {
         case .sentimentOf:
             return .post
         }
     }
-    
+
     var path: String {
         switch self {
         case .sentimentOf:
             return API.sentimentsPath
         }
     }
-    
+
     func asURLRequest() throws -> URLRequest {
-        
+
         let baseUrl = try API.googleBaseURL.appending(self.path).asURL()
         var urlRequest = URLRequest(url: baseUrl)
         urlRequest.httpMethod = method.rawValue
-        
+
         switch self {
         case let .sentimentOf(message):
             let params = ["document": [
@@ -42,7 +42,7 @@ enum GoogleRouter: URLRequestConvertible {
             ]
             return try JSONEncoding.default.encode(urlRequest, with: params)
         }
-        
+
     }
-    
+
 }
