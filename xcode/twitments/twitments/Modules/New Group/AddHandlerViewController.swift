@@ -71,6 +71,10 @@ class AddHandlerViewController: AbstractViewController, StoryboardIdentifiable, 
         presenter?.presentLoader()
         presenter?.authentication()
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 
 	// MARK: - AddHandler Presenter to View Protocol
 

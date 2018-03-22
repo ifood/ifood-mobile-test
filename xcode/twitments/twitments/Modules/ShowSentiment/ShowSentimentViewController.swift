@@ -77,8 +77,11 @@ class ShowSentimentViewController: UIViewController, StoryboardIdentifiable, Sho
 	// MARK: - ShowSentiment Presenter to View Protocol
 
     func set(sentiment: Feeling) {
-        self.sentimentLabel.isHidden = false
-        self.sentimentLabel.text = sentiment.emojiValue
+        UIView.animate(withDuration: 1.0) {
+            self.sentimentLabel.isHidden = false
+            self.sentimentLabel.text = sentiment.emojiValue
+            self.borderVIew?.backgroundColor = UIColor.emotionalColor(sentiment)
+        }
     }
 
     func set(title: String) {

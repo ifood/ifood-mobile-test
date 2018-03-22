@@ -202,7 +202,7 @@
                                 <state key="normal" image="close"/>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.82924503090000001" blue="0.01745466515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="0.82745098039215681" blue="0.015686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="GeN-OE-BWQ" firstAttribute="top" secondItem="m1p-6X-dCC" secondAttribute="bottom" constant="15" id="2O6-NJ-66f"/>
                             <constraint firstItem="GeN-OE-BWQ" firstAttribute="leading" secondItem="jaJ-Wp-lWt" secondAttribute="leading" constant="16" id="4gT-Ot-7mV"/>
@@ -255,7 +255,6 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="cMl-Se-oMB" secondAttribute="bottom" id="2Su-Yr-Qy5"/>
                                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="cMl-Se-oMB" secondAttribute="trailing" id="7mb-vW-fvb"/>
@@ -265,9 +264,9 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sentiment Analysis" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5wf-XI-KLD">
-                                                <rect key="frame" x="16" y="31" width="265.33333333333331" height="41"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="30"/>
-                                                <color key="textColor" red="0.3407306671" green="0.66949135069999999" blue="0.93964445590000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <rect key="frame" x="16" y="34" width="248" height="38"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="28"/>
+                                                <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😀" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mKn-L4-Svl">
@@ -287,15 +286,30 @@
                                                 </constraints>
                                                 <state key="normal" image="close"/>
                                             </button>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="OVz-lW-Bh2">
+                                                <rect key="frame" x="10" y="491" width="355" height="102"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="102" id="7gv-0i-MVN"/>
+                                                </constraints>
+                                                <string key="text">Happy Tweet: yellow color on screen with a 😃 emoji
+Neutral Tweet: grey colour on screen with a 😐 emoji
+Sad Tweet: blue color on screen with a 😔 emoji</string>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="10"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="CZE-4p-zc4" firstAttribute="top" secondItem="AET-Em-XD6" secondAttribute="bottom" constant="44" id="4f0-W2-OSr"/>
                                             <constraint firstItem="CZE-4p-zc4" firstAttribute="centerX" secondItem="s2B-md-4jl" secondAttribute="centerX" constant="1" id="9hH-GS-eEj"/>
+                                            <constraint firstItem="OVz-lW-Bh2" firstAttribute="top" secondItem="mKn-L4-Svl" secondAttribute="bottom" constant="40" id="9oi-Mk-Uxf"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5wf-XI-KLD" secondAttribute="trailing" constant="20" symbolic="YES" id="BOX-y4-Wgr"/>
                                             <constraint firstItem="5wf-XI-KLD" firstAttribute="leading" secondItem="s2B-md-4jl" secondAttribute="leading" constant="16" id="G73-bI-dSv"/>
+                                            <constraint firstItem="OVz-lW-Bh2" firstAttribute="leading" secondItem="s2B-md-4jl" secondAttribute="leading" constant="10" id="JKg-b6-oPE"/>
                                             <constraint firstAttribute="trailing" secondItem="AET-Em-XD6" secondAttribute="trailing" constant="8" id="XHJ-9n-cle"/>
+                                            <constraint firstItem="OVz-lW-Bh2" firstAttribute="top" relation="greaterThanOrEqual" secondItem="mKn-L4-Svl" secondAttribute="bottom" constant="40" id="YFf-iD-f9I"/>
                                             <constraint firstItem="CZE-4p-zc4" firstAttribute="top" secondItem="5wf-XI-KLD" secondAttribute="bottom" constant="10" id="gjP-ID-jhi"/>
+                                            <constraint firstAttribute="trailing" secondItem="OVz-lW-Bh2" secondAttribute="trailing" constant="10" id="lEU-gs-LTg"/>
                                             <constraint firstItem="mKn-L4-Svl" firstAttribute="centerY" secondItem="s2B-md-4jl" secondAttribute="centerY" id="p7g-uC-alE"/>
                                             <constraint firstItem="mKn-L4-Svl" firstAttribute="centerX" secondItem="s2B-md-4jl" secondAttribute="centerX" id="qlK-Mi-Mov"/>
                                             <constraint firstItem="AET-Em-XD6" firstAttribute="top" secondItem="s2B-md-4jl" secondAttribute="top" constant="8" id="y20-VE-iXS"/>

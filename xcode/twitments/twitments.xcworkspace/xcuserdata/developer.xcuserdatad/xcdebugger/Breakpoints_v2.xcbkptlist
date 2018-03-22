@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "twitments/Common/Utils/Configurations.swift"
-            timestampString = "543380904.128003"
+            timestampString = "543383351.709288"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "42"
@@ -106,7 +106,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "twitments/Common/Network/Clients/GoogleClient/Store/GoogleAPIStore.swift"
-            timestampString = "543380904.13828"
+            timestampString = "543383351.710073"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "20"
@@ -122,7 +122,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "twitments/Common/Network/Clients/GoogleClient/Store/GoogleAPIStore.swift"
-            timestampString = "543380904.147451"
+            timestampString = "543383351.710339"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "21"
@@ -138,7 +138,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "twitments/Common/Network/Clients/GoogleClient/Store/GoogleAPIStore.swift"
-            timestampString = "543380904.152793"
+            timestampString = "543383351.710428"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "23"
@@ -154,7 +154,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "twitments/Common/Network/Clients/GoogleClient/Store/GoogleAPIStore.swift"
-            timestampString = "543380904.1530581"
+            timestampString = "543383351.710511"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "29"
@@ -170,7 +170,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "twitments/Common/Network/Clients/GoogleClient/Store/GoogleAPIStore.swift"
-            timestampString = "543380904.156279"
+            timestampString = "543383351.710593"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "30"
@@ -186,7 +186,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "twitments/Common/Network/Clients/GoogleClient/Store/GoogleAPIStore.swift"
-            timestampString = "543380904.161582"
+            timestampString = "543383351.710673"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "32"
@@ -202,13 +202,45 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "twitments/Common/Network/Clients/GoogleClient/Store/GoogleAPIStore.swift"
-            timestampString = "543380904.1664619"
+            timestampString = "543383351.710753"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "35"
             endingLineNumber = "35"
             landmarkName = "sentimentsOf(tweet:completion:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "twitments.GoogleAPIStore.sentimentsOf(tweet: Swift.String, completion: (Swift.Optional&lt;twitments.DocumentSentiment&gt;, Swift.Optional&lt;__ObjC.NSError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "twitments"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/developer/Desktop/Projetos2016/ifood-mobile-test/xcode/twitments/twitments/Common/Network/Clients/GoogleClient/Store/GoogleAPIStore.swift"
+                  timestampString = "543382222.730372"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "512">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in twitments.GoogleAPIStore.sentimentsOf(tweet: Swift.String, completion: (Swift.Optional&lt;twitments.DocumentSentiment&gt;, Swift.Optional&lt;__ObjC.NSError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "twitments"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/developer/Desktop/Projetos2016/ifood-mobile-test/xcode/twitments/twitments/Common/Network/Clients/GoogleClient/Store/GoogleAPIStore.swift"
+                  timestampString = "543382222.7327909"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "2132">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -218,7 +250,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "twitments/Common/Network/Clients/GoogleClient/Store/GoogleAPIStore.swift"
-            timestampString = "543380904.166706"
+            timestampString = "543383351.710832"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "40"
@@ -298,12 +330,12 @@
                   moduleName = "twitments"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/developer/Desktop/Projetos2016/ifood-mobile-test/xcode/twitments/twitments/Common/Network/Clients/GoogleClient/Router/GoogleRouter.swift"
-                  timestampString = "543326405.793363"
+                  timestampString = "543382222.764887"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "43"
                   endingLineNumber = "43"
-                  offsetFromSymbolStart = "1244">
+                  offsetFromSymbolStart = "972">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -313,12 +345,12 @@
                   moduleName = "twitments"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/developer/Desktop/Projetos2016/ifood-mobile-test/xcode/twitments/twitments/Common/Network/Clients/GoogleClient/Router/GoogleRouter.swift"
-                  timestampString = "543326405.797961"
+                  timestampString = "543382222.767387"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "43"
                   endingLineNumber = "43"
-                  offsetFromSymbolStart = "1487">
+                  offsetFromSymbolStart = "1160">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -378,7 +410,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "twitments/Common/Utils/Configurations.swift"
-            timestampString = "543380904.169114"
+            timestampString = "543383351.71152"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "62"
@@ -394,7 +426,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "twitments/Common/Utils/Configurations.swift"
-            timestampString = "543380904.169282"
+            timestampString = "543383351.711583"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "61"
@@ -410,7 +442,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "twitments/Common/Utils/Configurations.swift"
-            timestampString = "543380904.169367"
+            timestampString = "543383351.7116441"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "64"

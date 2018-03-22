@@ -18,6 +18,7 @@ extension String {
         guard let value = dateFormatter.date(from: self) else {
             return ""
         }
+        dateFormatter.dateFormat = "MM/dd/yyyy HH:mm:ss"
         return dateFormatter.string(from: value)
     }
 }
