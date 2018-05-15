@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="tweetanalyzer.com.tweetanalyzer">
+    package="br.com.tweetanalyzer">
 
     <application
         android:allowBackup="true"

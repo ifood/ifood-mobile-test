@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Tweet Analyzer</string>
+
+    <!--Tweet logo description-->
+    <string name="tweet_logo_description">Tweet Analyzer logo description</string>
+
+    <string name="search_tweet_name">Search</string>
+
 </resources>

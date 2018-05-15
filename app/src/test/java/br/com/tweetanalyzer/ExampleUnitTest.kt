@@ -1,4 +1,4 @@
-package tweetanalyzer.com.tweetanalyzer
+package br.com.tweetanalyzer
 
 import org.junit.Test
 

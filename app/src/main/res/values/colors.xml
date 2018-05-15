@@ -3,4 +3,14 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <!--Fab Button color-->
+    <!--<color name="fabButton">#00aced</color>-->
+
+    <!--Button text color-->
+    <color name="btn_white_text">#FFFFFF</color>
+
+    <!--Button colors-->
+    <color name="button_pressed">#0084b4</color>
+    <color name="button_released">#00aced</color>
 </resources>

@@ -1,4 +1,4 @@
-package tweetanalyzer.com.tweetanalyzer
+package br.com.tweetanalyzer
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4
