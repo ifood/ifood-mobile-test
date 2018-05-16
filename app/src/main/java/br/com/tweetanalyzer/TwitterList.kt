@@ -1,5 +1,6 @@
 package br.com.tweetanalyzer
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.DefaultItemAnimator
@@ -7,6 +8,7 @@ import android.support.v7.widget.LinearLayoutManager
 import android.view.MenuItem
 import android.view.View
 import kotlinx.android.synthetic.main.twitter_list.*
+
 
 /**
  * Created by gabrielsamorim
@@ -32,6 +34,8 @@ class TwitterList : AppCompatActivity() {
         getExtras()
 
         initLayout()
+
+        startSearch()
     }
 
     private fun getExtras() {
@@ -47,5 +51,11 @@ class TwitterList : AppCompatActivity() {
         twitter_recycler_view.visibility = View.GONE
 
         twitter_progress.visibility = View.VISIBLE
+    }
+
+    private fun startSearch() {
+        val i = Intent(this, TwitterService::class.java)
+        i.putExtra(Constant.SEARCH_INPUT, searchString)
+        startService(i)
     }
 }

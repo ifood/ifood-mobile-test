@@ -11,7 +11,14 @@ class TwitterService : IntentService("RequestTwitterList") {
 
     override fun onHandleIntent(intent: Intent?) {
         if (intent != null) {
-            val searchAttribute = intent.dataString
+            val twitterUser = intent.getStringExtra(Constant.SEARCH_INPUT)
+
+            if (twitterUser != null)
+                searchTwitter(twitterUser)
         }
+    }
+
+    private fun searchTwitter(twitterUser: String) {
+
     }
 }
