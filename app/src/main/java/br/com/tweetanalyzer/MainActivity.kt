@@ -1,12 +1,12 @@
 package br.com.tweetanalyzer
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v4.view.animation.FastOutLinearInInterpolator
 import android.support.v7.app.AppCompatActivity
 import android.transition.Fade
 import android.transition.TransitionManager
 import android.transition.TransitionSet
-import android.util.Log
 import android.view.View
 import android.view.inputmethod.EditorInfo
 import kotlinx.android.synthetic.main.activity_main.*
@@ -43,6 +43,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun startSearch() {
-        Log.e(javaClass.name, "Start Search")
+        //TODO validate input
+        startActivity(Intent(this, TwitterList::class.java).apply {
+            putExtra(Constant.SEARCH_INPUT, item_input_et.text.toString())
+        })
     }
 }
