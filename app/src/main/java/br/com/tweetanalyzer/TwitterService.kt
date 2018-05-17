@@ -38,7 +38,6 @@ class TwitterService : IntentService("RequestTwitterList") {
 
     private fun searchTwitter(twitterUser: String) {
         //start the search
-
         val result = ApiSearchService().getTwitterList("Bearer " + PreferenceController.getToken(baseContext), twitterUser)
     }
 }

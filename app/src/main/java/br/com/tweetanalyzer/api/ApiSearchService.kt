@@ -13,7 +13,7 @@ import retrofit2.converter.gson.GsonConverterFactory
  */
 class ApiSearchService {
 
-    fun getTwitterList(auth: String, search: String): TwitterModel? = getTwitterAPI()?.getTwitterList(auth, search)?.execute()?.body()
+    fun getTwitterList(auth: String, search: String): List<TwitterModel>? = getTwitterAPI()?.getTwitterList(auth, search)?.execute()?.body()
 
     fun getAuth(auth: String, authType: String): TokenType? = getTwitterAPI()?.getToken(auth, authType)?.execute()?.body()
 

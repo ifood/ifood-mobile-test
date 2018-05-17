@@ -8,7 +8,6 @@ class TwitterConstants {
     companion object {
         const val CONSUMER_KEY = "zdQVsYmWytX9TvwzREFZRkQ5T"
         const val CONSUMER_SECRET = "cecjFZbBvgqA8al55kENP9DmMO6BGjr0uL9A3KZjF4rrNMI8AE"
-        const val OWNER_ID = "3482546597"
 
         const val SEARCH_URL_TWITTER = "https://api.twitter.com"
         const val TOKEN_TWITTER = "$CONSUMER_KEY:$CONSUMER_SECRET"

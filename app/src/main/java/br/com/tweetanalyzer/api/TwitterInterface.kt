@@ -11,9 +11,8 @@ import retrofit2.http.*
  */
 interface TwitterInterface {
 
-    //TODO update Twitter user model
     @GET(TwitterConstants.SEARCH_USER_TIMELINE)
-    fun getTwitterList(@Header("Authorization") authorization: String, @Query("screen_name") twitterUser: String): Call<TwitterModel>
+    fun getTwitterList(@Header("Authorization") authorization: String, @Query("screen_name") twitterUser: String): Call<List<TwitterModel>>
 
     @FormUrlEncoded
     @POST("/oauth2/token")

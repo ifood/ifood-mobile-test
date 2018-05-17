@@ -7,10 +7,12 @@ import android.support.v7.app.AppCompatActivity
 import android.transition.Fade
 import android.transition.TransitionManager
 import android.transition.TransitionSet
-import android.util.Log
 import android.view.View
 import android.view.inputmethod.EditorInfo
-import br.com.tweetanalyzer.*
+import android.widget.Toast
+import br.com.tweetanalyzer.PreferenceController
+import br.com.tweetanalyzer.R
+import br.com.tweetanalyzer.TwitterService
 import br.com.tweetanalyzer.eventbus.TokenRetrieveEvent
 import br.com.tweetanalyzer.util.Constant
 import kotlinx.android.synthetic.main.activity_main.*
@@ -49,10 +51,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             val i = Intent(this, TwitterService::class.java)
             i.putExtra(Constant.JOB_TYPE, Constant.JOB_TYPE_GET_AUTH)
             startService(i)
-        } /*else {
-            val token = PreferenceController.getToken(this)
-            Log.e("TOKEN", token)
-        }*/
+        }
     }
 
     override fun onStop() {
@@ -77,10 +76,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     @Subscribe(threadMode = ThreadMode.MAIN)
     fun onMessageEvent(event: TokenRetrieveEvent) {
-        if (event.success) {
-            //do something
-        } else {
-            //error message
+        if (!event.success) {
+            //TODO build a better error message
+            Toast.makeText(this, "Error Initializing", Toast.LENGTH_LONG).show()
         }
     }
 }
