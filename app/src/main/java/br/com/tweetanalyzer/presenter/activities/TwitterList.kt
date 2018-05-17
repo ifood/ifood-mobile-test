@@ -1,4 +1,4 @@
-package br.com.tweetanalyzer
+package br.com.tweetanalyzer.presenter.activities
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,6 +7,9 @@ import android.support.v7.widget.DefaultItemAnimator
 import android.support.v7.widget.LinearLayoutManager
 import android.view.MenuItem
 import android.view.View
+import br.com.tweetanalyzer.R
+import br.com.tweetanalyzer.TwitterService
+import br.com.tweetanalyzer.util.Constant
 import kotlinx.android.synthetic.main.twitter_list.*
 
 
@@ -55,6 +58,7 @@ class TwitterList : AppCompatActivity() {
 
     private fun startSearch() {
         val i = Intent(this, TwitterService::class.java)
+        i.putExtra(Constant.JOB_TYPE, Constant.JOB_TYPE_SEARCH_INPUT)
         i.putExtra(Constant.SEARCH_INPUT, searchString)
         startService(i)
     }
