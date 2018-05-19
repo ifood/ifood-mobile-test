@@ -4,13 +4,15 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
-    <!--Fab Button color-->
-    <!--<color name="fabButton">#00aced</color>-->
-
     <!--Button text color-->
     <color name="btn_white_text">#FFFFFF</color>
 
     <!--Button colors-->
     <color name="button_pressed">#0084b4</color>
     <color name="button_released">#00aced</color>
+
+    <!--Profile colors-->
+    <color name="user_info_background">#FFFFFF</color>
+    <color name="description_background">#FFFFFF</color>
+    <color name="profile_text_color">#000000</color>
 </resources>

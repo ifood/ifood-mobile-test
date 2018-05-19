@@ -6,4 +6,6 @@
 
     <string name="search_tweet_name">Search</string>
 
+    <string name="followers">Followers: </string>
+    <string name="following">Following: </string>
 </resources>

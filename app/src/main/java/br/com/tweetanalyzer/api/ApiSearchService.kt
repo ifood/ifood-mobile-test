@@ -2,6 +2,7 @@ package br.com.tweetanalyzer.api
 
 import br.com.tweetanalyzer.models.TokenType
 import br.com.tweetanalyzer.models.TwitterModel
+import br.com.tweetanalyzer.models.TwitterUserInfo
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -12,6 +13,8 @@ import retrofit2.converter.gson.GsonConverterFactory
  * on 16/05/18.
  */
 class ApiSearchService {
+
+    fun getTwitterUser(auth: String, search: String): TwitterUserInfo? = getTwitterAPI()?.getUserInfo(auth, search)?.execute()?.body()
 
     fun getTwitterList(auth: String, search: String): List<TwitterModel>? = getTwitterAPI()?.getTwitterList(auth, search)?.execute()?.body()
 

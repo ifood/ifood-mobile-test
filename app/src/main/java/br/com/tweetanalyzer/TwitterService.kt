@@ -5,6 +5,7 @@ import android.content.Intent
 import br.com.tweetanalyzer.api.ApiSearchService
 import br.com.tweetanalyzer.api.TwitterConstants
 import br.com.tweetanalyzer.eventbus.TokenRetrieveEvent
+import br.com.tweetanalyzer.eventbus.TwetterListResult
 import br.com.tweetanalyzer.util.Constant
 import br.com.tweetanalyzer.util.Util
 import org.greenrobot.eventbus.EventBus
@@ -17,9 +18,9 @@ class TwitterService : IntentService("RequestTwitterList") {
 
     override fun onHandleIntent(intent: Intent?) {
         if (intent != null) {
-            val jobType = intent.getIntExtra(Constant.JOB_TYPE, -1)
-            when (jobType) {
+            when (intent.getIntExtra(Constant.JOB_TYPE, -1)) {
                 Constant.JOB_TYPE_GET_AUTH -> getAuth()
+                Constant.JOB_GET_USER_INFO -> getUserInfo(intent.getStringExtra(Constant.SEARCH_USER_INPUT))
                 Constant.JOB_TYPE_SEARCH_INPUT -> searchTwitter(intent.getStringExtra(Constant.SEARCH_INPUT))
             }
         }
@@ -36,8 +37,9 @@ class TwitterService : IntentService("RequestTwitterList") {
             EventBus.getDefault().post(TokenRetrieveEvent(false))
     }
 
-    private fun searchTwitter(twitterUser: String) {
-        //start the search
-        val result = ApiSearchService().getTwitterList("Bearer " + PreferenceController.getToken(baseContext), twitterUser)
-    }
+    private fun getUserInfo(userName: String) =
+            EventBus.getDefault().post(ApiSearchService().getTwitterUser("Bearer " + PreferenceController.getToken(baseContext), userName))
+
+    private fun searchTwitter(twitterUser: String) =
+            EventBus.getDefault().post(TwetterListResult(ApiSearchService().getTwitterList("Bearer " + PreferenceController.getToken(baseContext), twitterUser)))
 }

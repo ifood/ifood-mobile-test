@@ -48,9 +48,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         EventBus.getDefault().register(this)
 
         if (PreferenceController.getToken(this).isEmpty()) {
-            val i = Intent(this, TwitterService::class.java)
-            i.putExtra(Constant.JOB_TYPE, Constant.JOB_TYPE_GET_AUTH)
-            startService(i)
+            startService(Intent(this, TwitterService::class.java).apply {
+                putExtra(Constant.JOB_TYPE, Constant.JOB_TYPE_GET_AUTH)
+            })
         }
     }
 

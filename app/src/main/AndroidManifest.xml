@@ -19,8 +19,10 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".presenter.activities.TwitterList"
-            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".presenter.activities.TwitterList"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
 
         <service
             android:name=".TwitterService"

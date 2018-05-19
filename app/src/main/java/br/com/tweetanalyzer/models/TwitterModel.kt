@@ -11,5 +11,4 @@ data class TwitterModel(@SerializedName("create_at") val createAt: String,
                         @SerializedName("text") val description: String,
                         @SerializedName("in_reply_to_status_id") val replyStatusId: String,
                         @SerializedName("in_reply_to_user_id") val replyUserId: String,
-                        @SerializedName("in_reply_to_screen_name") val replyScreenName: String,
-                        @SerializedName("user") val user: TwitterUser)
+                        @SerializedName("in_reply_to_screen_name") val replyScreenName: String)

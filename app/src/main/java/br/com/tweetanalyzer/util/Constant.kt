@@ -8,10 +8,13 @@ class Constant {
     companion object {
         const val JOB_TYPE = "job.type"
 
+        //Job Type
         const val JOB_TYPE_GET_AUTH = 0
-        const val JOB_TYPE_SEARCH_INPUT = 1
+        const val JOB_GET_USER_INFO = 1
+        const val JOB_TYPE_SEARCH_INPUT = 2
 
-
-        const val SEARCH_INPUT = "search.input.string"
+        //Searche Type
+        const val SEARCH_USER_INPUT = "search.user.input"
+        const val SEARCH_INPUT = "search.user.tweets"
     }
 }
