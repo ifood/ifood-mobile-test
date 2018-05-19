@@ -8,7 +8,6 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.DefaultItemAnimator
 import android.support.v7.widget.DividerItemDecoration
 import android.support.v7.widget.LinearLayoutManager
-import android.view.MenuItem
 import android.view.View
 import android.view.animation.AlphaAnimation
 import android.view.animation.Animation
@@ -54,23 +53,13 @@ class TwitterList : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener, A
         handleToolbarTitleVisibility(percentage)
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean =
-            when (item.itemId) {
-                android.R.id.home -> {
-                    finish()
-                    true
-                }
-                else -> super.onOptionsItemSelected(item)
-            }
-
-    private val PERCENTAGE_TO_SHOW_TITLE_AT_TOOLBAR: Float = 0.9f
+    private val PERCENTAGE_TO_SHOW_TITLE_AT_TOOLBAR: Float = 0.8f
     private val PERCENTAGE_TO_HIDE_TITLE_DETAILS: Float = 0.3f
     private val ALPHA_ANIMATIONS_DURATION: Long = 200
 
     private var mIsTheTitleVisible = false
     private var mIsTheTitleContainerVisible = true
 
-    private lateinit var tweetListAdapter: TwitterListAdapter
     private lateinit var searchString: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
