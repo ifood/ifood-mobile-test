@@ -6,8 +6,8 @@ import android.support.design.widget.AppBarLayout
 import android.support.v4.content.ContextCompat
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.DefaultItemAnimator
+import android.support.v7.widget.DividerItemDecoration
 import android.support.v7.widget.LinearLayoutManager
-import android.util.Log
 import android.view.MenuItem
 import android.view.View
 import android.view.animation.AlphaAnimation
@@ -16,6 +16,7 @@ import br.com.tweetanalyzer.R
 import br.com.tweetanalyzer.TwitterService
 import br.com.tweetanalyzer.eventbus.TwetterListResult
 import br.com.tweetanalyzer.models.TwitterUserInfo
+import br.com.tweetanalyzer.presenter.adapter.TwitterListAdapter
 import br.com.tweetanalyzer.util.Constant
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.toolbar_layout.*
@@ -69,6 +70,7 @@ class TwitterList : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener, A
     private var mIsTheTitleVisible = false
     private var mIsTheTitleContainerVisible = true
 
+    private lateinit var tweetListAdapter: TwitterListAdapter
     private lateinit var searchString: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -99,6 +101,7 @@ class TwitterList : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener, A
 
         twitter_recycler_view.layoutManager = LinearLayoutManager(this)
         twitter_recycler_view.itemAnimator = DefaultItemAnimator()
+        twitter_recycler_view.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
         twitter_recycler_view.visibility = View.GONE
 
         twitter_progress.visibility = View.VISIBLE
@@ -177,10 +180,13 @@ class TwitterList : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener, A
         searchTweets()
     }
 
-    @Subscribe(threadMode = ThreadMode.POSTING)
-    fun onMessageEvent(tweetList: TwetterListResult) {
-        Log.e(javaClass.name, tweetList.toString())
-        //tweetList.tweetList?.forEach { Log.e(javaClass.name, it.user.name) }
-        //TODO update the adapter
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    fun onMessageEvent(tweetsResult: TwetterListResult) {
+        if (tweetsResult.tweetList!!.isNotEmpty()) {
+            twitter_recycler_view.adapter = TwitterListAdapter(this, tweetsResult.tweetList)
+            twitter_recycler_view.visibility = View.VISIBLE
+            twitter_progress.visibility = View.GONE
+        }
+        //TODO validate
     }
 }
