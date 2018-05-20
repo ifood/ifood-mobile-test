@@ -3,10 +3,7 @@ package br.com.tweetanalyzer.twitterApi
 import br.com.tweetanalyzer.models.TokenType
 import br.com.tweetanalyzer.models.TwitterModel
 import br.com.tweetanalyzer.models.TwitterUserInfo
-import okhttp3.OkHttpClient
-import okhttp3.logging.HttpLoggingInterceptor
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
+import br.com.tweetanalyzer.util.RetrofitBuilder
 
 /**
  * Created by gabrielsamorim
@@ -20,19 +17,7 @@ class ApiSearchService {
 
     fun getAuth(auth: String, authType: String): TokenType? = getTwitterAPI()?.getToken(auth, authType)?.execute()?.body()
 
-    private fun getTwitterAPI(): TwitterInterface? {
-        val logging = HttpLoggingInterceptor()
-        logging.level = HttpLoggingInterceptor.Level.BODY
-
-        val httpClient = OkHttpClient.Builder()
-        httpClient.addInterceptor(logging)
-
-        return Retrofit.Builder()
-                .baseUrl(TwitterConstants.SEARCH_URL_TWITTER)
-                .addConverterFactory(GsonConverterFactory.create())
-                .client(httpClient.build())
-                .build()
-                .create(TwitterInterface::class.java)
-    }
-
+    private fun getTwitterAPI(): TwitterInterface? =
+            RetrofitBuilder().getRetrofit(TwitterConstants.SEARCH_URL_TWITTER)
+                    .create(TwitterInterface::class.java)
 }
