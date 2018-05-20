@@ -22,6 +22,7 @@ import br.com.tweetanalyzer.services.util.ServiceConstants
 import br.com.tweetanalyzer.util.GlideUtil
 import com.ethanhua.skeleton.RecyclerViewSkeletonScreen
 import com.ethanhua.skeleton.Skeleton
+import com.ethanhua.skeleton.ViewSkeletonScreen
 import com.google.gson.Gson
 import kotlinx.android.synthetic.main.toolbar_layout.*
 import kotlinx.android.synthetic.main.twitter_list.*
@@ -47,6 +48,7 @@ class TwitterList : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener, A
     private var adapter: TwitterListAdapter = TwitterListAdapter(this, listOf())
 
     private lateinit var skeletonScreen: RecyclerViewSkeletonScreen
+    private lateinit var userSkeletonView: ViewSkeletonScreen
     private lateinit var searchString: String
 
     private lateinit var user: TwitterUserInfo
@@ -157,6 +159,8 @@ class TwitterList : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener, A
 
         GlideUtil.glideImage(this, user.backgroundImageUrl, profile_background_image)
         GlideUtil.glideImage(this, user.imageUrl, user_profile_image)
+
+        //userSkeletonView.hide()
     }
 
     private fun startService(jobType: JobType, searchType: String, search: String) {
@@ -167,11 +171,18 @@ class TwitterList : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener, A
     }
 
     private fun searchUser() {
+        startUserLoadingAnimation()
         startService(JobType.GET_USER_INFO, ServiceConstants.SEARCH_USER_INPUT, searchString)
     }
 
     private fun searchTweets() {
         startService(JobType.SEARCH_INPUT, ServiceConstants.SEARCH_INPUT, searchString)
+    }
+
+    private fun startUserLoadingAnimation() {
+        userSkeletonView = Skeleton.bind(header_view)
+                .load(R.layout.twitter_list_header_skeleton_view)
+                .show()
     }
 
     override fun onAnimationRepeat(animation: Animation?) {

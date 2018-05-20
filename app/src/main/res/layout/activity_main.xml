@@ -54,7 +54,7 @@
                 android:inputType="text"
                 android:minHeight="50dp"
                 android:textColor="@color/white_text"
-                android:textCursorDrawable="@drawable/edittextcursor_shape" />
+                android:textCursorDrawable="@drawable/edit_text_cursor_shape" />
 
             <TextView
                 android:id="@+id/search_button"
