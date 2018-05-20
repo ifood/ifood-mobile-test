@@ -6,10 +6,18 @@
 
     <string name="search_tweet_name">Search</string>
 
+    <!--TwitterList-->
     <string name="followers">Followers: </string>
     <string name="following">Following: </string>
 
+    <!--Analysis result-->
     <string name="happy_twitter">Happy Tweet </string>
     <string name="neutral_twiiter">Neutral Tweet </string>
     <string name="sad_twitter">Sad Tweet </string>
+
+    <!--Error messages-->
+    <string name="error_get_token">Something wrong happened, please restart the application</string>
+    <string name="empty_search">Sorry, The search field cannot be blank</string>
+    <string name="user_not_found">It seems to not exist this user.\nCan you try again?</string>
+
 </resources>

@@ -12,12 +12,13 @@ import android.view.View
 import android.view.animation.AlphaAnimation
 import android.view.animation.Animation
 import br.com.tweetanalyzer.R
-import br.com.tweetanalyzer.services.SearchService
 import br.com.tweetanalyzer.events.TwetterListResult
+import br.com.tweetanalyzer.events.UserInfoEvent
 import br.com.tweetanalyzer.models.JobType
 import br.com.tweetanalyzer.models.TwitterUserInfo
 import br.com.tweetanalyzer.presenter.adapter.TwitterListAdapter
-import br.com.tweetanalyzer.util.Constant
+import br.com.tweetanalyzer.services.SearchService
+import br.com.tweetanalyzer.services.util.ServiceConstants
 import br.com.tweetanalyzer.util.GlideUtil
 import com.ethanhua.skeleton.RecyclerViewSkeletonScreen
 import com.ethanhua.skeleton.Skeleton
@@ -87,7 +88,7 @@ class TwitterList : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener, A
     }
 
     private fun getExtras() {
-        searchString = intent.getStringExtra(Constant.SEARCH_INPUT)
+        searchString = intent.getStringExtra(ServiceConstants.SEARCH_INPUT)
     }
 
     private fun initLayout() {
@@ -158,22 +159,30 @@ class TwitterList : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener, A
 
     private fun startService(jobType: JobType, searchType: String, search: String) {
         val i = Intent(this, SearchService::class.java)
-        i.putExtra(Constant.JOB_TYPE, jobType.name)
+        i.putExtra(ServiceConstants.JOB_TYPE, jobType.name)
         i.putExtra(searchType, search)
         startService(i)
     }
 
     private fun searchUser() {
-        startService(JobType.GET_USER_INFO, Constant.SEARCH_USER_INPUT, searchString)
+        startService(JobType.GET_USER_INFO, ServiceConstants.SEARCH_USER_INPUT, searchString)
     }
 
     private fun searchTweets() {
-        startService(JobType.SEARCH_INPUT, Constant.SEARCH_INPUT, searchString)
+        startService(JobType.SEARCH_INPUT, ServiceConstants.SEARCH_INPUT, searchString)
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)
-    fun onUserInfoEvent(user: TwitterUserInfo) {
-        updateUserInfo(user)
+    fun onUserInfoEvent(userInfo: UserInfoEvent) {
+        if (userInfo.user == null) {
+            val resultIntent = Intent()
+            resultIntent.putExtra(MainActivity.ERROR_MESSAGE, getString(R.string.user_not_found))
+            setResult(MainActivity.ACTIVITY_RESULT_CODE_ERROR, resultIntent)
+            finish()
+            return
+        }
+
+        updateUserInfo(userInfo.user)
 
         searchTweets()
     }
@@ -185,7 +194,10 @@ class TwitterList : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener, A
                 it.score = -2.0
             })
             adapter.setTweetList(tweetsResult.tweetList)
-            skeletonScreen.hide()
+        } else {
+            //Hide skeleton if the user does not have any tweet to show
+            card_recycler_view.visibility = View.GONE
         }
+        skeletonScreen.hide()
     }
 }

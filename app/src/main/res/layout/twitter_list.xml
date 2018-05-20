@@ -52,7 +52,7 @@
         android:src="@drawable/ic_default_image"
         app:finalHeight="@dimen/image_final_width"
         app:finalYPosition="4dp"
-        app:layout_behavior=".AvatarImageBehavior"
+        app:layout_behavior=".view.AvatarImageBehavior"
         app:startHeight="4dp"
         app:startToolbarPosition="4dp"
         app:startXPosition="2dp" />

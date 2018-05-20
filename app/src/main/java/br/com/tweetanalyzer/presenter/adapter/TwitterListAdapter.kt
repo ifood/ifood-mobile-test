@@ -14,7 +14,7 @@ import br.com.tweetanalyzer.services.SearchService
 import br.com.tweetanalyzer.events.AnalyseSearchResult
 import br.com.tweetanalyzer.models.JobType
 import br.com.tweetanalyzer.models.TwitterModel
-import br.com.tweetanalyzer.util.Constant
+import br.com.tweetanalyzer.services.util.ServiceConstants
 import br.com.tweetanalyzer.util.DateFormat
 import br.com.tweetanalyzer.util.EmotionUtils
 import com.dd.processbutton.iml.ActionProcessButton
@@ -60,8 +60,8 @@ class TwitterListAdapter(private val context: Context,
             holder.analyseButton.progress = 50
 
             val i = Intent(context, SearchService::class.java)
-            i.putExtra(Constant.JOB_TYPE, JobType.ANALYSE_SENTIMENT.name)
-            i.putExtra(Constant.ANALYSE_SENTIMENT, Gson().toJson(tweet))
+            i.putExtra(ServiceConstants.JOB_TYPE, JobType.ANALYSE_SENTIMENT.name)
+            i.putExtra(ServiceConstants.ANALYSE_SENTIMENT, Gson().toJson(tweet))
             context.startService(i)
         })
     }

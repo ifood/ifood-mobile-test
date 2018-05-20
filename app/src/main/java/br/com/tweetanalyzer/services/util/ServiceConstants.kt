@@ -1,10 +1,10 @@
-package br.com.tweetanalyzer.util
+package br.com.tweetanalyzer.services.util
 
 /**
  * Created by gabrielsamorim
  * on 15/05/18.
  */
-class Constant {
+class ServiceConstants {
     companion object {
         const val JOB_TYPE = "job.type"
 
