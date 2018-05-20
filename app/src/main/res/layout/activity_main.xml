@@ -38,7 +38,7 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/search_edit_text"
             android:orientation="horizontal"
-            android:visibility="gone"
+            android:visibility="visible"
             android:weightSum="1">
 
             <EditText
@@ -48,7 +48,7 @@
                 android:layout_gravity="top|center"
                 android:layout_marginEnd="10dp"
                 android:layout_marginStart="10dp"
-                android:layout_weight="0.8"
+                android:layout_weight="0.85"
                 android:backgroundTint="@color/edit_text_hind_background_color"
                 android:imeOptions="actionDone"
                 android:inputType="text"
@@ -61,7 +61,7 @@
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center_vertical"
-                android:layout_weight="0.2"
+                android:layout_weight="0.15"
                 android:background="@drawable/search_button_shape" />
         </LinearLayout>
 
