@@ -2,7 +2,6 @@ package br.com.tweetanalyzer.presenter.adapter
 
 import android.content.Context
 import android.content.Intent
-import android.support.text.emoji.EmojiCompat
 import android.support.v4.content.ContextCompat
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
@@ -17,6 +16,7 @@ import br.com.tweetanalyzer.models.JobType
 import br.com.tweetanalyzer.models.TwitterModel
 import br.com.tweetanalyzer.util.Constant
 import br.com.tweetanalyzer.util.DateFormat
+import br.com.tweetanalyzer.util.EmotionUtils
 import com.dd.processbutton.iml.ActionProcessButton
 import com.google.gson.Gson
 import org.greenrobot.eventbus.EventBus
@@ -51,7 +51,9 @@ class TwitterListAdapter(private val context: Context,
         holder.tweetText.text = tweet.description
 
         holder.tweetCreatedAt.text = DateFormat().convertDate(tweet.createAt)
-        setSentimentView(tweet, holder)
+
+        if (tweet.score != -2.0)
+            setSentimentView(tweet, holder)
 
         holder.analyseButton.setOnClickListener({
             //Init the button animation
@@ -72,17 +74,17 @@ class TwitterListAdapter(private val context: Context,
             tweet.score in NaturalLanguageConstant.GOD_SCORE -> {
                 colorId = R.color.good_sentiment_color
                 textColorId = R.color.happy_text_color
-                textSentiment = EmojiCompat.get().process(context.getString(R.string.happy_twitter))
+                textSentiment = context.getString(R.string.happy_twitter) + EmotionUtils().getEmotion(EmotionUtils.HAPPY_EMOTION)
             }
             tweet.score in NaturalLanguageConstant.NORMAL_SCORE -> {
                 colorId = R.color.normal_sentiment_color
                 textColorId = R.color.neutral_text_color
-                textSentiment = EmojiCompat.get().process(context.getString(R.string.neutral_twiiter))
+                textSentiment = context.getString(R.string.neutral_twiiter) + EmotionUtils().getEmotion(EmotionUtils.NEUTRAL_EMOTION)
             }
             tweet.score in NaturalLanguageConstant.BAD_SCORE -> {
                 colorId = R.color.bad_sentiment_color
                 textColorId = R.color.sad_text_color
-                textSentiment = EmojiCompat.get().process(context.getString(R.string.sad_twitter))
+                textSentiment = context.getString(R.string.sad_twitter) + EmotionUtils().getEmotion(EmotionUtils.SAD_EMOTION)
             }
         }
         if (colorId != 0 && textSentiment != null) {

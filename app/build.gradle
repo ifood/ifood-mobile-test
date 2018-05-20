@@ -39,7 +39,6 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:4.7.1'
     implementation 'com.google.cloud:google-cloud-language:1.28.0'
     implementation 'com.github.dmytrodanylyk.android-process-button:library:1.0.4'
-    implementation "com.android.support:support-emoji-bundled:27.1.1"
     implementation 'com.ethanhua:skeleton:1.1.0'
     implementation 'io.supercharge:shimmerlayout:2.0.0'
 

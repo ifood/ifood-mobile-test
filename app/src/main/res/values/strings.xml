@@ -9,7 +9,7 @@
     <string name="followers">Followers: </string>
     <string name="following">Following: </string>
 
-    <string name="happy_twitter">Happy Tweet \ud83d\ude03</string>
-    <string name="neutral_twiiter">Neutral Tweet \ud83d\ude10</string>
-    <string name="sad_twitter">Sad Tweet \ud83d\ude14</string>
+    <string name="happy_twitter">Happy Tweet </string>
+    <string name="neutral_twiiter">Neutral Tweet </string>
+    <string name="sad_twitter">Sad Tweet </string>
 </resources>
