@@ -15,6 +15,7 @@ import br.com.tweetanalyzer.R
 import br.com.tweetanalyzer.events.TwetterListResult
 import br.com.tweetanalyzer.events.UserInfoEvent
 import br.com.tweetanalyzer.models.JobType
+import br.com.tweetanalyzer.models.TweetList
 import br.com.tweetanalyzer.models.TwitterUserInfo
 import br.com.tweetanalyzer.presenter.adapter.TwitterListAdapter
 import br.com.tweetanalyzer.services.SearchService
@@ -22,6 +23,7 @@ import br.com.tweetanalyzer.services.util.ServiceConstants
 import br.com.tweetanalyzer.util.GlideUtil
 import com.ethanhua.skeleton.RecyclerViewSkeletonScreen
 import com.ethanhua.skeleton.Skeleton
+import com.google.gson.Gson
 import kotlinx.android.synthetic.main.toolbar_layout.*
 import kotlinx.android.synthetic.main.twitter_list.*
 import kotlinx.android.synthetic.main.twitter_list_content_view.*
@@ -36,37 +38,20 @@ import org.greenrobot.eventbus.ThreadMode
  * on 15/05/18.
  */
 class TwitterList : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener, Animation.AnimationListener {
-    override fun onAnimationRepeat(animation: Animation?) {
-        //do nothing
-    }
+    private val percentShowToolbarTitle: Float = 0.8f
+    private val percentHideToolbarDetails: Float = 0.3f
+    private val animationDuration: Long = 200
 
-    override fun onAnimationEnd(animation: Animation?) {
-        main_toolbar.setBackgroundColor(ContextCompat.getColor(this,
-                if (mIsTheTitleVisible) R.color.colorPrimary else android.R.color.transparent))
-    }
-
-    override fun onAnimationStart(animation: Animation?) {
-        //do nothing
-    }
-
-    override fun onOffsetChanged(appBarLayout: AppBarLayout?, offset: Int) {
-        val maxScroll = appBarLayout?.totalScrollRange
-        val percentage = Math.abs(offset).toFloat() / maxScroll!!.toFloat()
-
-        handleAlphaOnTitle(percentage)
-        handleToolbarTitleVisibility(percentage)
-    }
-
-    private val PERCENTAGE_TO_SHOW_TITLE_AT_TOOLBAR: Float = 0.8f
-    private val PERCENTAGE_TO_HIDE_TITLE_DETAILS: Float = 0.3f
-    private val ALPHA_ANIMATIONS_DURATION: Long = 200
-
-    private var mIsTheTitleVisible = false
-    private var mIsTheTitleContainerVisible = true
+    private var isTitleVisible = false
+    private var isTitleContainerVisible = true
 
     private var adapter: TwitterListAdapter = TwitterListAdapter(this, listOf())
+
     private lateinit var skeletonScreen: RecyclerViewSkeletonScreen
     private lateinit var searchString: String
+
+    private lateinit var user: TwitterUserInfo
+    private lateinit var tweets: TweetList
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -74,7 +59,11 @@ class TwitterList : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener, A
 
         getExtras()
         initLayout()
-        searchUser()
+
+        if (savedInstanceState == null)
+            searchUser()
+        else
+            handleSavedInstance(savedInstanceState)
     }
 
     override fun onStart() {
@@ -85,6 +74,13 @@ class TwitterList : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener, A
     override fun onStop() {
         super.onStop()
         EventBus.getDefault().unregister(this)
+    }
+
+    override fun onSaveInstanceState(outState: Bundle?) {
+        super.onSaveInstanceState(outState)
+
+        outState?.putString("user_info", Gson().toJson(user))
+        outState?.putString("tweets_list", Gson().toJson(tweets))
     }
 
     private fun getExtras() {
@@ -108,30 +104,37 @@ class TwitterList : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener, A
         startAlphaAnimation(toolbar_title, 0, View.INVISIBLE)
     }
 
+    private fun handleSavedInstance(savedInstanceState: Bundle) {
+        user = Gson().fromJson(savedInstanceState.getString("user_info"), TwitterUserInfo::class.java)
+        tweets = Gson().fromJson(savedInstanceState.getString("tweets_list"), TweetList::class.java)
+        updateUserInfo(user)
+        twitter_recycler_view.adapter = TwitterListAdapter(this, tweets.tweetList)
+    }
+
     private fun handleToolbarTitleVisibility(percentage: Float) {
-        if (percentage >= PERCENTAGE_TO_SHOW_TITLE_AT_TOOLBAR) {
-            if (!mIsTheTitleVisible) {
-                startAlphaAnimation(toolbar_title, ALPHA_ANIMATIONS_DURATION, View.VISIBLE)
-                mIsTheTitleVisible = true
+        if (percentage >= percentShowToolbarTitle) {
+            if (!isTitleVisible) {
+                startAlphaAnimation(toolbar_title, animationDuration, View.VISIBLE)
+                isTitleVisible = true
             }
         } else {
-            if (mIsTheTitleVisible) {
-                startAlphaAnimation(toolbar_title, ALPHA_ANIMATIONS_DURATION, View.INVISIBLE)
-                mIsTheTitleVisible = false
+            if (isTitleVisible) {
+                startAlphaAnimation(toolbar_title, animationDuration, View.INVISIBLE)
+                isTitleVisible = false
             }
         }
     }
 
     private fun handleAlphaOnTitle(percentage: Float) {
-        if (percentage >= PERCENTAGE_TO_HIDE_TITLE_DETAILS) {
-            if (mIsTheTitleContainerVisible) {
-                startAlphaAnimation(profile_info_view, ALPHA_ANIMATIONS_DURATION, View.INVISIBLE)
-                mIsTheTitleContainerVisible = false
+        if (percentage >= percentHideToolbarDetails) {
+            if (isTitleContainerVisible) {
+                startAlphaAnimation(profile_info_view, animationDuration, View.INVISIBLE)
+                isTitleContainerVisible = false
             }
         } else {
-            if (!mIsTheTitleContainerVisible) {
-                startAlphaAnimation(profile_info_view, ALPHA_ANIMATIONS_DURATION, View.VISIBLE)
-                mIsTheTitleContainerVisible = true
+            if (!isTitleContainerVisible) {
+                startAlphaAnimation(profile_info_view, animationDuration, View.VISIBLE)
+                isTitleContainerVisible = true
             }
         }
     }
@@ -172,24 +175,48 @@ class TwitterList : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener, A
         startService(JobType.SEARCH_INPUT, ServiceConstants.SEARCH_INPUT, searchString)
     }
 
+    override fun onAnimationRepeat(animation: Animation?) {
+        //do nothing
+    }
+
+    override fun onAnimationEnd(animation: Animation?) {
+        main_toolbar.setBackgroundColor(ContextCompat.getColor(this,
+                if (isTitleVisible) R.color.colorPrimary else android.R.color.transparent))
+    }
+
+    override fun onAnimationStart(animation: Animation?) {
+        //do nothing
+    }
+
+    override fun onOffsetChanged(appBarLayout: AppBarLayout?, offset: Int) {
+        val maxScroll = appBarLayout?.totalScrollRange
+        val percentage = Math.abs(offset).toFloat() / maxScroll!!.toFloat()
+
+        handleAlphaOnTitle(percentage)
+        handleToolbarTitleVisibility(percentage)
+    }
+
     @Subscribe(threadMode = ThreadMode.MAIN)
     fun onUserInfoEvent(userInfo: UserInfoEvent) {
         if (userInfo.user == null) {
-            val resultIntent = Intent()
-            resultIntent.putExtra(MainActivity.ERROR_MESSAGE, getString(R.string.user_not_found))
-            setResult(MainActivity.ACTIVITY_RESULT_CODE_ERROR, resultIntent)
+            setResult(MainActivity.ACTIVITY_RESULT_CODE_ERROR, Intent().apply {
+                putExtra(MainActivity.ERROR_MESSAGE, getString(R.string.user_not_found))
+            })
             finish()
             return
         }
 
-        updateUserInfo(userInfo.user)
+        user = userInfo.user
 
+        updateUserInfo(userInfo.user)
         searchTweets()
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)
     fun onMessageEvent(tweetsResult: TwetterListResult) {
         if (tweetsResult.tweetList!!.isNotEmpty()) {
+            tweets = TweetList(tweetsResult.tweetList)
+
             tweetsResult.tweetList.forEach({
                 it.score = -2.0
             })

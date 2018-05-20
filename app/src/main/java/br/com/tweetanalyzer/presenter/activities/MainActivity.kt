@@ -32,12 +32,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         const val ERROR_MESSAGE = "error_message"
     }
 
-    override fun onClick(v: View?) {
-        when (v?.id) {
-            R.id.btn_search -> searchPerson()
-        }
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -50,6 +44,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             } else
                 false
         })
+
+        if (savedInstanceState != null)
+            handleSavedInstance(savedInstanceState)
     }
 
     override fun onStart() {
@@ -70,12 +67,24 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         EventBus.getDefault().unregister(this)
     }
 
+    override fun onSaveInstanceState(outState: Bundle?) {
+        super.onSaveInstanceState(outState)
+
+        outState?.putBoolean("started_search", item_input_et.isShown)
+    }
+
+    private fun handleSavedInstance(savedInstance: Bundle) = showSearchView(savedInstance.getBoolean("started_search"))
+
+    private fun showSearchView(isToShow: Boolean) {
+        btn_search.visibility = if (isToShow) View.GONE else View.VISIBLE
+        item_input_et.visibility = if (isToShow) View.VISIBLE else View.GONE
+    }
+
     private fun searchPerson() {
         val set = TransitionSet().addTransition(Fade()).setInterpolator(FastOutLinearInInterpolator())
         TransitionManager.beginDelayedTransition(transitions_container, set)
 
-        btn_search.visibility = View.GONE
-        item_input_et.visibility = View.VISIBLE
+        showSearchView(true)
     }
 
     private fun showSnackbar(msg: String) {
@@ -108,6 +117,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             ACTIVITY_RESULT_CODE_ERROR ->
                 if (data != null) showSnackbar(data.getStringExtra(MainActivity.ERROR_MESSAGE))
 
+        }
+    }
+
+    override fun onClick(v: View?) {
+        when (v?.id) {
+            R.id.btn_search -> searchPerson()
         }
     }
 
