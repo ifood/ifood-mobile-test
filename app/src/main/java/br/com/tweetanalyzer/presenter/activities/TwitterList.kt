@@ -49,6 +49,7 @@ class TwitterList : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener, A
 
     private lateinit var skeletonScreen: RecyclerViewSkeletonScreen
     private lateinit var userSkeletonView: ViewSkeletonScreen
+
     private lateinit var searchString: String
 
     private lateinit var user: TwitterUserInfo
@@ -150,6 +151,8 @@ class TwitterList : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener, A
     }
 
     private fun updateUserInfo(user: TwitterUserInfo) {
+        userSkeletonView.hide()
+
         toolbar_title.text = user.userName
         user_name.text = user.userName
         screen_name.text = user.screenName
@@ -159,8 +162,6 @@ class TwitterList : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener, A
 
         GlideUtil.glideImage(this, user.backgroundImageUrl, profile_background_image)
         GlideUtil.glideImage(this, user.imageUrl, user_profile_image)
-
-        //userSkeletonView.hide()
     }
 
     private fun startService(jobType: JobType, searchType: String, search: String) {
@@ -180,7 +181,7 @@ class TwitterList : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener, A
     }
 
     private fun startUserLoadingAnimation() {
-        userSkeletonView = Skeleton.bind(header_view)
+        userSkeletonView = Skeleton.bind(profile_info_view)
                 .load(R.layout.twitter_list_header_skeleton_view)
                 .show()
     }
@@ -219,6 +220,7 @@ class TwitterList : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener, A
         user = userInfo.user
 
         updateUserInfo(userInfo.user)
+
         searchTweets()
     }
 
