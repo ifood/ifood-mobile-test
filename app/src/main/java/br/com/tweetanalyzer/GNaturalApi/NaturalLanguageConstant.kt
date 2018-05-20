@@ -13,7 +13,7 @@ class NaturalLanguageConstant {
 
 
         val BAD_SCORE = -1.0..-0.25
-        val MEDIUM_SCORE = -0.25..0.25
+        val NORMAL_SCORE = -0.25..0.25
         val GOD_SCORE = 0.25..1.0
     }
 }

@@ -1,7 +1,7 @@
 package br.com.tweetanalyzer.GNaturalApi
 
-import br.com.tweetanalyzer.models.SentimentalAnalyseRequest
-import br.com.tweetanalyzer.models.SentimentalAnalyseResult
+import br.com.tweetanalyzer.models.TweetAnalyseResult
+import br.com.tweetanalyzer.models.TweetAnalyseRequest
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.POST
@@ -13,7 +13,8 @@ import retrofit2.http.Query
  */
 interface GoogleNaturalInterface {
 
+    //TODO
     @POST(NaturalLanguageConstant.SEARCH_URL)
     fun analyzeText(@Query("key") auth: String,
-                    @Body request: SentimentalAnalyseRequest): Call<SentimentalAnalyseResult>
+                    @Body request: TweetAnalyseRequest): Call<TweetAnalyseResult>
 }

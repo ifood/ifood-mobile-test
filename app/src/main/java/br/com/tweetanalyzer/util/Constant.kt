@@ -4,17 +4,7 @@ package br.com.tweetanalyzer.util
  * Created by gabrielsamorim
  * on 15/05/18.
  */
-
-enum class JobType {
-    UNKNOWN,
-    GET_AUTH,
-    GET_USER_INFO,
-    SEARCH_INPUT,
-    ANALYSE_SENTIMENT
-}
-
 class Constant {
-
     companion object {
         const val JOB_TYPE = "job.type"
 

@@ -1,8 +1,8 @@
 package br.com.tweetanalyzer.GNaturalApi
 
 import br.com.tweetanalyzer.models.Document
-import br.com.tweetanalyzer.models.SentimentalAnalyseRequest
-import br.com.tweetanalyzer.models.SentimentalAnalyseResult
+import br.com.tweetanalyzer.models.TweetAnalyseResult
+import br.com.tweetanalyzer.models.TweetAnalyseRequest
 import br.com.tweetanalyzer.util.RetrofitBuilder
 
 
@@ -12,8 +12,8 @@ import br.com.tweetanalyzer.util.RetrofitBuilder
  */
 class NLanguageSearch {
 
-    fun analyseText(doc: Document): SentimentalAnalyseResult? = getNaturalAPI()
-            ?.analyzeText(NaturalLanguageConstant.GOOGLE_API_KEY, SentimentalAnalyseRequest(doc))?.execute()?.body()
+    fun analyseText(doc: Document): TweetAnalyseResult? = getNaturalAPI()
+            ?.analyzeText(NaturalLanguageConstant.GOOGLE_API_KEY, TweetAnalyseRequest(doc))?.execute()?.body()
 
     private fun getNaturalAPI(): GoogleNaturalInterface? =
             RetrofitBuilder().getRetrofit(NaturalLanguageConstant.GOOGLE_NATURAL_API_URL)

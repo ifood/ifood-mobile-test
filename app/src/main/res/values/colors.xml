@@ -18,4 +18,14 @@
 
     <!--Skeleton background colors-->
     <color name="color_line">#DFDFDF</color>
+
+    <!--Sentiment background colors-->
+    <color name="good_sentiment_color">#008000</color>
+    <color name="normal_sentiment_color">#FFF000</color>
+    <color name="bad_sentiment_color">#FF0000</color>
+
+    <color name="happy_text_color">#FFFFFF</color>
+    <color name="neutral_text_color">#000000</color>
+    <color name="sad_text_color">#FFFFFF</color>
+
 </resources>

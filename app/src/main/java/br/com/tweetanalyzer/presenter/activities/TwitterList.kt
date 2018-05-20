@@ -14,12 +14,11 @@ import android.view.animation.Animation
 import br.com.tweetanalyzer.R
 import br.com.tweetanalyzer.SearchService
 import br.com.tweetanalyzer.events.TwetterListResult
-import br.com.tweetanalyzer.models.TwitterModel
+import br.com.tweetanalyzer.models.JobType
 import br.com.tweetanalyzer.models.TwitterUserInfo
 import br.com.tweetanalyzer.presenter.adapter.TwitterListAdapter
 import br.com.tweetanalyzer.util.Constant
 import br.com.tweetanalyzer.util.GlideUtil
-import br.com.tweetanalyzer.util.JobType
 import com.ethanhua.skeleton.RecyclerViewSkeletonScreen
 import com.ethanhua.skeleton.Skeleton
 import kotlinx.android.synthetic.main.toolbar_layout.*
@@ -35,11 +34,7 @@ import org.greenrobot.eventbus.ThreadMode
  * Created by gabrielsamorim
  * on 15/05/18.
  */
-class TwitterList : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener, Animation.AnimationListener, TwitterListAdapter.OnItemClicked {
-    override fun onItemClicked(item: TwitterModel) {
-        startService(JobType.ANALYSE_SENTIMENT, Constant.ANALYSE_SENTIMENT, item.description)
-    }
-
+class TwitterList : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener, Animation.AnimationListener {
     override fun onAnimationRepeat(animation: Animation?) {
         //do nothing
     }
@@ -68,7 +63,7 @@ class TwitterList : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener, A
     private var mIsTheTitleVisible = false
     private var mIsTheTitleContainerVisible = true
 
-    private var adapter: TwitterListAdapter = TwitterListAdapter(listOf(), this)
+    private var adapter: TwitterListAdapter = TwitterListAdapter(this, listOf())
     private lateinit var skeletonScreen: RecyclerViewSkeletonScreen
     private lateinit var searchString: String
 
@@ -163,7 +158,7 @@ class TwitterList : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener, A
 
     private fun startService(jobType: JobType, searchType: String, search: String) {
         val i = Intent(this, SearchService::class.java)
-        i.putExtra(Constant.JOB_TYPE, jobType)
+        i.putExtra(Constant.JOB_TYPE, jobType.name)
         i.putExtra(searchType, search)
         startService(i)
     }
@@ -186,7 +181,10 @@ class TwitterList : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener, A
     @Subscribe(threadMode = ThreadMode.MAIN)
     fun onMessageEvent(tweetsResult: TwetterListResult) {
         if (tweetsResult.tweetList!!.isNotEmpty()) {
-            adapter.setContent(tweetsResult.tweetList)
+            tweetsResult.tweetList.forEach({
+                it.score = -2.0
+            })
+            adapter.setTweetList(tweetsResult.tweetList)
             skeletonScreen.hide()
         }
     }
