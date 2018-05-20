@@ -9,6 +9,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:gravity="center_vertical"
         android:orientation="horizontal"
@@ -19,6 +21,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.6"
+            android:background="@color/color_line"
             android:drawableStart="@drawable/ic_at_twitter"
             android:ellipsize="end"
             android:gravity="center_vertical"
@@ -30,7 +33,10 @@
             android:id="@+id/retweet_count"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="5dp"
             android:layout_weight="0.2"
+            android:background="@color/color_line"
             android:drawableStart="@drawable/ic_retweet"
             android:gravity="center_vertical"
             android:maxLines="1" />
@@ -40,6 +46,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.2"
+            android:background="@color/color_line"
             android:drawableStart="@drawable/ic_like_tweet"
             android:gravity="center_vertical"
             android:maxLines="1" />
@@ -48,18 +55,20 @@
     <TextView
         android:id="@+id/tweet_text"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginStart="10dp" />
+        android:layout_marginStart="10dp"
+        android:background="@color/color_line" />
 
     <TextView
         android:id="@+id/create_at"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="80dp"
+        android:layout_height="25dp"
+        android:layout_gravity="end"
         android:layout_marginEnd="10dp"
         android:layout_marginTop="5dp"
-        android:maxLines="1"
-        android:textAlignment="viewEnd" />
+        android:background="@color/color_line"
+        android:maxLines="1" />
 
 
 </LinearLayout>

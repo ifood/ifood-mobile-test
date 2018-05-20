@@ -1,4 +1,4 @@
-package br.com.tweetanalyzer.api
+package br.com.tweetanalyzer.twitterApi
 
 import br.com.tweetanalyzer.models.TokenType
 import br.com.tweetanalyzer.models.TwitterModel

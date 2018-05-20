@@ -25,7 +25,7 @@
 
 
         <service
-            android:name=".TwitterService"
+            android:name=".SearchService"
             android:exported="false" />
     </application>
 

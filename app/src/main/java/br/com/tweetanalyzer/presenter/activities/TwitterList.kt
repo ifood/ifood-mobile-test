@@ -12,12 +12,15 @@ import android.view.View
 import android.view.animation.AlphaAnimation
 import android.view.animation.Animation
 import br.com.tweetanalyzer.R
-import br.com.tweetanalyzer.TwitterService
+import br.com.tweetanalyzer.SearchService
 import br.com.tweetanalyzer.eventbus.TwetterListResult
+import br.com.tweetanalyzer.models.TwitterModel
 import br.com.tweetanalyzer.models.TwitterUserInfo
 import br.com.tweetanalyzer.presenter.adapter.TwitterListAdapter
 import br.com.tweetanalyzer.util.Constant
-import com.bumptech.glide.Glide
+import br.com.tweetanalyzer.util.GlideUtil
+import com.ethanhua.skeleton.RecyclerViewSkeletonScreen
+import com.ethanhua.skeleton.Skeleton
 import kotlinx.android.synthetic.main.toolbar_layout.*
 import kotlinx.android.synthetic.main.twitter_list.*
 import kotlinx.android.synthetic.main.twitter_list_content_view.*
@@ -31,7 +34,16 @@ import org.greenrobot.eventbus.ThreadMode
  * Created by gabrielsamorim
  * on 15/05/18.
  */
-class TwitterList : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener, Animation.AnimationListener {
+class TwitterList : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener, Animation.AnimationListener, TwitterListAdapter.OnItemClicked {
+    override fun onItemClicked(item: TwitterModel) {
+        startService(Constant.JOB_ANALYSE_SENTIMENT, Constant.ANALYSE_SENTIMENT, item.description)
+/*
+        val i = Intent(this, SearchService::class.java)
+        i.putExtra(Constant.JOB_TYPE, Constant.JOB_ANALYSE_SENTIMENT)
+        i.putExtra(Constant.ANALYSE_SENTIMENT, item.description)
+        startService(i)*/
+    }
+
     override fun onAnimationRepeat(animation: Animation?) {
         //do nothing
     }
@@ -60,6 +72,8 @@ class TwitterList : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener, A
     private var mIsTheTitleVisible = false
     private var mIsTheTitleContainerVisible = true
 
+    private var adapter: TwitterListAdapter = TwitterListAdapter(listOf(), this)
+    private lateinit var skeletonScreen: RecyclerViewSkeletonScreen
     private lateinit var searchString: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -91,9 +105,13 @@ class TwitterList : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener, A
         twitter_recycler_view.layoutManager = LinearLayoutManager(this)
         twitter_recycler_view.itemAnimator = DefaultItemAnimator()
         twitter_recycler_view.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
-        twitter_recycler_view.visibility = View.GONE
+        twitter_recycler_view.adapter = adapter
 
-        twitter_progress.visibility = View.VISIBLE
+        skeletonScreen = Skeleton.bind(twitter_recycler_view)
+                .adapter(adapter)
+                .load(R.layout.twitter_list_skeleton_row)
+                .show()
+
 
         startAlphaAnimation(toolbar_title, 0, View.INVISIBLE)
     }
@@ -135,22 +153,7 @@ class TwitterList : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener, A
         v.startAnimation(alphaAnimation)
     }
 
-    private fun searchUser() {
-        val i = Intent(this, TwitterService::class.java)
-        i.putExtra(Constant.JOB_TYPE, Constant.JOB_GET_USER_INFO)
-        i.putExtra(Constant.SEARCH_USER_INPUT, searchString)
-        startService(i)
-    }
-
-    private fun searchTweets() {
-        val i = Intent(this, TwitterService::class.java)
-        i.putExtra(Constant.JOB_TYPE, Constant.JOB_TYPE_SEARCH_INPUT)
-        i.putExtra(Constant.SEARCH_INPUT, searchString)
-        startService(i)
-    }
-
-    @Subscribe(threadMode = ThreadMode.MAIN)
-    fun onUserInfoEvent(user: TwitterUserInfo) {
+    private fun updateUserInfo(user: TwitterUserInfo) {
         toolbar_title.text = user.userName
         user_name.text = user.userName
         screen_name.text = user.screenName
@@ -158,13 +161,36 @@ class TwitterList : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener, A
         profile_following.text = user.followingCount
         profile_followers.text = user.followersCount
 
-        Glide.with(this)
-                .load(user.backgroundImageUrl)
-                .into(profile_background_image)
+        GlideUtil.glideImage(this, user.backgroundImageUrl, profile_background_image)
+        GlideUtil.glideImage(this, user.imageUrl, user_profile_image)
+    }
 
-        Glide.with(this)
-                .load(user.imageUrl)
-                .into(user_profile_image)
+    private fun startService(jobType: Int, searchType: String, search: String) {
+        val i = Intent(this, SearchService::class.java)
+        i.putExtra(Constant.JOB_TYPE, jobType)
+        i.putExtra(searchType, search)
+        startService(i)
+    }
+
+    private fun searchUser() {
+        startService(Constant.JOB_GET_USER_INFO, Constant.SEARCH_USER_INPUT, searchString)
+        /*val i = Intent(this, SearchService::class.java)
+        i.putExtra(Constant.JOB_TYPE, Constant.JOB_GET_USER_INFO)
+        i.putExtra(Constant.SEARCH_USER_INPUT, searchString)
+        startService(i)*/
+    }
+
+    private fun searchTweets() {
+        startService(Constant.JOB_TYPE_SEARCH_INPUT, Constant.SEARCH_INPUT, searchString)
+        /*val i = Intent(this, SearchService::class.java)
+        i.putExtra(Constant.JOB_TYPE, Constant.JOB_TYPE_SEARCH_INPUT)
+        i.putExtra(Constant.SEARCH_INPUT, searchString)
+        startService(i)*/
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    fun onUserInfoEvent(user: TwitterUserInfo) {
+        updateUserInfo(user)
 
         searchTweets()
     }
@@ -172,9 +198,8 @@ class TwitterList : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener, A
     @Subscribe(threadMode = ThreadMode.MAIN)
     fun onMessageEvent(tweetsResult: TwetterListResult) {
         if (tweetsResult.tweetList!!.isNotEmpty()) {
-            twitter_recycler_view.adapter = TwitterListAdapter(this, tweetsResult.tweetList)
-            twitter_recycler_view.visibility = View.VISIBLE
-            twitter_progress.visibility = View.GONE
+            adapter.setContent(tweetsResult.tweetList)
+            skeletonScreen.hide()
         }
         //TODO validate
     }

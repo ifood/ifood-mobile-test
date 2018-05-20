@@ -12,7 +12,7 @@ import android.view.inputmethod.EditorInfo
 import android.widget.Toast
 import br.com.tweetanalyzer.PreferenceController
 import br.com.tweetanalyzer.R
-import br.com.tweetanalyzer.TwitterService
+import br.com.tweetanalyzer.SearchService
 import br.com.tweetanalyzer.eventbus.TokenRetrieveEvent
 import br.com.tweetanalyzer.util.Constant
 import kotlinx.android.synthetic.main.activity_main.*
@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         EventBus.getDefault().register(this)
 
         if (PreferenceController.getToken(this).isEmpty()) {
-            startService(Intent(this, TwitterService::class.java).apply {
+            startService(Intent(this, SearchService::class.java).apply {
                 putExtra(Constant.JOB_TYPE, Constant.JOB_TYPE_GET_AUTH)
             })
         }

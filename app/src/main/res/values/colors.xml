@@ -15,4 +15,7 @@
     <color name="user_info_background">@color/colorPrimary</color>
     <color name="description_background">#FFFFFF</color>
     <color name="profile_text_color">#FFFFFF</color>
+
+    <!--Skeleton background colors-->
+    <color name="color_line">#DFDFDF</color>
 </resources>

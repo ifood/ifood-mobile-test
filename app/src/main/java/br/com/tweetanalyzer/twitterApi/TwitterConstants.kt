@@ -1,4 +1,4 @@
-package br.com.tweetanalyzer.api
+package br.com.tweetanalyzer.twitterApi
 
 /**
  * Created by gabrielsamorim
