@@ -13,8 +13,9 @@ import android.widget.Toast
 import br.com.tweetanalyzer.PreferenceController
 import br.com.tweetanalyzer.R
 import br.com.tweetanalyzer.SearchService
-import br.com.tweetanalyzer.eventbus.TokenRetrieveEvent
+import br.com.tweetanalyzer.events.TokenRetrieveEvent
 import br.com.tweetanalyzer.util.Constant
+import br.com.tweetanalyzer.util.JobType
 import kotlinx.android.synthetic.main.activity_main.*
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
@@ -49,7 +50,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         if (PreferenceController.getToken(this).isEmpty()) {
             startService(Intent(this, SearchService::class.java).apply {
-                putExtra(Constant.JOB_TYPE, Constant.JOB_TYPE_GET_AUTH)
+                putExtra(Constant.JOB_TYPE, JobType.GET_AUTH)
             })
         }
     }

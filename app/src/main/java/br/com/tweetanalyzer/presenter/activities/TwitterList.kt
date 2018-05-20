@@ -13,12 +13,13 @@ import android.view.animation.AlphaAnimation
 import android.view.animation.Animation
 import br.com.tweetanalyzer.R
 import br.com.tweetanalyzer.SearchService
-import br.com.tweetanalyzer.eventbus.TwetterListResult
+import br.com.tweetanalyzer.events.TwetterListResult
 import br.com.tweetanalyzer.models.TwitterModel
 import br.com.tweetanalyzer.models.TwitterUserInfo
 import br.com.tweetanalyzer.presenter.adapter.TwitterListAdapter
 import br.com.tweetanalyzer.util.Constant
 import br.com.tweetanalyzer.util.GlideUtil
+import br.com.tweetanalyzer.util.JobType
 import com.ethanhua.skeleton.RecyclerViewSkeletonScreen
 import com.ethanhua.skeleton.Skeleton
 import kotlinx.android.synthetic.main.toolbar_layout.*
@@ -36,12 +37,7 @@ import org.greenrobot.eventbus.ThreadMode
  */
 class TwitterList : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener, Animation.AnimationListener, TwitterListAdapter.OnItemClicked {
     override fun onItemClicked(item: TwitterModel) {
-        startService(Constant.JOB_ANALYSE_SENTIMENT, Constant.ANALYSE_SENTIMENT, item.description)
-/*
-        val i = Intent(this, SearchService::class.java)
-        i.putExtra(Constant.JOB_TYPE, Constant.JOB_ANALYSE_SENTIMENT)
-        i.putExtra(Constant.ANALYSE_SENTIMENT, item.description)
-        startService(i)*/
+        startService(JobType.ANALYSE_SENTIMENT, Constant.ANALYSE_SENTIMENT, item.description)
     }
 
     override fun onAnimationRepeat(animation: Animation?) {
@@ -165,7 +161,7 @@ class TwitterList : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener, A
         GlideUtil.glideImage(this, user.imageUrl, user_profile_image)
     }
 
-    private fun startService(jobType: Int, searchType: String, search: String) {
+    private fun startService(jobType: JobType, searchType: String, search: String) {
         val i = Intent(this, SearchService::class.java)
         i.putExtra(Constant.JOB_TYPE, jobType)
         i.putExtra(searchType, search)
@@ -173,19 +169,11 @@ class TwitterList : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener, A
     }
 
     private fun searchUser() {
-        startService(Constant.JOB_GET_USER_INFO, Constant.SEARCH_USER_INPUT, searchString)
-        /*val i = Intent(this, SearchService::class.java)
-        i.putExtra(Constant.JOB_TYPE, Constant.JOB_GET_USER_INFO)
-        i.putExtra(Constant.SEARCH_USER_INPUT, searchString)
-        startService(i)*/
+        startService(JobType.GET_USER_INFO, Constant.SEARCH_USER_INPUT, searchString)
     }
 
     private fun searchTweets() {
-        startService(Constant.JOB_TYPE_SEARCH_INPUT, Constant.SEARCH_INPUT, searchString)
-        /*val i = Intent(this, SearchService::class.java)
-        i.putExtra(Constant.JOB_TYPE, Constant.JOB_TYPE_SEARCH_INPUT)
-        i.putExtra(Constant.SEARCH_INPUT, searchString)
-        startService(i)*/
+        startService(JobType.SEARCH_INPUT, Constant.SEARCH_INPUT, searchString)
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)
@@ -201,6 +189,5 @@ class TwitterList : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener, A
             adapter.setContent(tweetsResult.tweetList)
             skeletonScreen.hide()
         }
-        //TODO validate
     }
 }

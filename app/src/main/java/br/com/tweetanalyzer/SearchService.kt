@@ -3,13 +3,14 @@ package br.com.tweetanalyzer
 import android.app.IntentService
 import android.content.Intent
 import br.com.tweetanalyzer.GNaturalApi.NLanguageSearch
-import br.com.tweetanalyzer.eventbus.TokenRetrieveEvent
-import br.com.tweetanalyzer.eventbus.TwetterListResult
+import br.com.tweetanalyzer.events.TokenRetrieveEvent
+import br.com.tweetanalyzer.events.TwetterListResult
 import br.com.tweetanalyzer.models.Document
 import br.com.tweetanalyzer.models.SentimentalAnalyseResult
 import br.com.tweetanalyzer.twitterApi.ApiSearchService
 import br.com.tweetanalyzer.twitterApi.TwitterConstants
 import br.com.tweetanalyzer.util.Constant
+import br.com.tweetanalyzer.util.JobType
 import br.com.tweetanalyzer.util.Util
 import org.greenrobot.eventbus.EventBus
 
@@ -21,11 +22,13 @@ class SearchService : IntentService("RequestTwitterList") {
 
     override fun onHandleIntent(intent: Intent?) {
         if (intent != null) {
-            when (intent.getIntExtra(Constant.JOB_TYPE, -1)) {
-                Constant.JOB_TYPE_GET_AUTH -> getAuth()
-                Constant.JOB_GET_USER_INFO -> getUserInfo(intent.getStringExtra(Constant.SEARCH_USER_INPUT))
-                Constant.JOB_TYPE_SEARCH_INPUT -> searchTwitter(intent.getStringExtra(Constant.SEARCH_INPUT))
-                Constant.JOB_ANALYSE_SENTIMENT -> analyseSentiment(intent.getStringExtra(Constant.ANALYSE_SENTIMENT))
+            val jobType = JobType.valueOf(intent.getIntExtra(Constant.JOB_TYPE, 0).toString())
+            when (jobType) {
+                JobType.GET_AUTH -> getAuth()
+                JobType.GET_USER_INFO -> getUserInfo(intent.getStringExtra(Constant.SEARCH_USER_INPUT))
+                JobType.SEARCH_INPUT -> searchTwitter(intent.getStringExtra(Constant.SEARCH_INPUT))
+                JobType.ANALYSE_SENTIMENT -> analyseSentiment(intent.getStringExtra(Constant.ANALYSE_SENTIMENT))
+                JobType.UNKNOWN -> {/*do nothing */}
             }
         }
     }

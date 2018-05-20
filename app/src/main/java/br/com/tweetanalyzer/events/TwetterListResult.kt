@@ -1,4 +1,4 @@
-package br.com.tweetanalyzer.eventbus
+package br.com.tweetanalyzer.events
 
 import br.com.tweetanalyzer.models.TwitterModel
 
