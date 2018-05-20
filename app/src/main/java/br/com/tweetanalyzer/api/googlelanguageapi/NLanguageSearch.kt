@@ -1,4 +1,4 @@
-package br.com.tweetanalyzer.GNaturalApi
+package br.com.tweetanalyzer.api.googlelanguageapi
 
 import br.com.tweetanalyzer.models.Document
 import br.com.tweetanalyzer.models.TweetAnalyseResult

@@ -1,16 +1,17 @@
-package br.com.tweetanalyzer
+package br.com.tweetanalyzer.services
 
 import android.app.IntentService
 import android.content.Intent
-import br.com.tweetanalyzer.GNaturalApi.NLanguageSearch
+import br.com.tweetanalyzer.controller.PreferenceController
+import br.com.tweetanalyzer.api.googlelanguageapi.NLanguageSearch
 import br.com.tweetanalyzer.events.AnalyseSearchResult
 import br.com.tweetanalyzer.events.TokenRetrieveEvent
 import br.com.tweetanalyzer.events.TwetterListResult
 import br.com.tweetanalyzer.models.Document
 import br.com.tweetanalyzer.models.JobType
 import br.com.tweetanalyzer.models.TwitterModel
-import br.com.tweetanalyzer.twitterApi.ApiSearchService
-import br.com.tweetanalyzer.twitterApi.TwitterConstants
+import br.com.tweetanalyzer.api.twitterapi.ApiSearchService
+import br.com.tweetanalyzer.api.twitterapi.TwitterConstants
 import br.com.tweetanalyzer.util.Constant
 import br.com.tweetanalyzer.util.Util
 import com.google.gson.Gson

@@ -8,9 +8,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import br.com.tweetanalyzer.GNaturalApi.NaturalLanguageConstant
+import br.com.tweetanalyzer.api.googlelanguageapi.NaturalLanguageConstant
 import br.com.tweetanalyzer.R
-import br.com.tweetanalyzer.SearchService
+import br.com.tweetanalyzer.services.SearchService
 import br.com.tweetanalyzer.events.AnalyseSearchResult
 import br.com.tweetanalyzer.models.JobType
 import br.com.tweetanalyzer.models.TwitterModel

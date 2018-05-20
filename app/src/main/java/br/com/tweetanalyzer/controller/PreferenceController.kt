@@ -1,4 +1,4 @@
-package br.com.tweetanalyzer
+package br.com.tweetanalyzer.controller
 
 import android.content.Context
 import android.content.SharedPreferences

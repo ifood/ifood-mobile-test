@@ -25,7 +25,7 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
 
         <service
-            android:name=".SearchService"
+            android:name=".services.SearchService"
             android:exported="false" />
     </application>
 

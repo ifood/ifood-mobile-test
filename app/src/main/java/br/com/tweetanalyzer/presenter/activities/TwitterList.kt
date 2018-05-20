@@ -12,7 +12,7 @@ import android.view.View
 import android.view.animation.AlphaAnimation
 import android.view.animation.Animation
 import br.com.tweetanalyzer.R
-import br.com.tweetanalyzer.SearchService
+import br.com.tweetanalyzer.services.SearchService
 import br.com.tweetanalyzer.events.TwetterListResult
 import br.com.tweetanalyzer.models.JobType
 import br.com.tweetanalyzer.models.TwitterUserInfo

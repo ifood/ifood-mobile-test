@@ -1,4 +1,4 @@
-package br.com.tweetanalyzer.GNaturalApi
+package br.com.tweetanalyzer.api.googlelanguageapi
 
 /**
  * Created by gabrielsamorim

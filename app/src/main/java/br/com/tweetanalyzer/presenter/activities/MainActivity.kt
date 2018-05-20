@@ -10,9 +10,9 @@ import android.transition.TransitionSet
 import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.widget.Toast
-import br.com.tweetanalyzer.PreferenceController
+import br.com.tweetanalyzer.controller.PreferenceController
 import br.com.tweetanalyzer.R
-import br.com.tweetanalyzer.SearchService
+import br.com.tweetanalyzer.services.SearchService
 import br.com.tweetanalyzer.events.TokenRetrieveEvent
 import br.com.tweetanalyzer.models.JobType
 import br.com.tweetanalyzer.util.Constant
@@ -70,6 +70,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun startSearch() {
+        if (item_input_et.text.toString().isEmpty()) {
+
+        }
+
         startActivity(Intent(this, TwitterList::class.java).apply {
             putExtra(Constant.SEARCH_INPUT, item_input_et.text.toString())
         })

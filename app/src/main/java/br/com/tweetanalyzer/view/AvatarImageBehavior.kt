@@ -1,4 +1,4 @@
-package br.com.tweetanalyzer
+package br.com.tweetanalyzer.view
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -6,6 +6,7 @@ import android.support.design.widget.CoordinatorLayout
 import android.support.v7.widget.Toolbar
 import android.util.AttributeSet
 import android.view.View
+import br.com.tweetanalyzer.R
 import de.hdodenhof.circleimageview.CircleImageView
 
 
