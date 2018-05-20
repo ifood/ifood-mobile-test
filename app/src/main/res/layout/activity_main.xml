@@ -38,7 +38,7 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/search_edit_text"
             android:orientation="horizontal"
-            android:visibility="visible"
+            android:visibility="gone"
             android:weightSum="1">
 
             <EditText
