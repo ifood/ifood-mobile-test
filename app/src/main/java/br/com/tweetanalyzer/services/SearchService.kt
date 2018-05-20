@@ -8,7 +8,7 @@ import br.com.tweetanalyzer.api.twitterapi.TwitterConstants
 import br.com.tweetanalyzer.controller.PreferenceController
 import br.com.tweetanalyzer.events.AnalyseSearchResult
 import br.com.tweetanalyzer.events.TokenRetrieveEvent
-import br.com.tweetanalyzer.events.TwetterListResult
+import br.com.tweetanalyzer.events.TwitterListResult
 import br.com.tweetanalyzer.events.UserInfoEvent
 import br.com.tweetanalyzer.models.Document
 import br.com.tweetanalyzer.models.JobType
@@ -52,7 +52,7 @@ class SearchService : IntentService("RequestTwitterList") {
             EventBus.getDefault().post(UserInfoEvent(ApiSearchService().getTwitterUser("Bearer " + PreferenceController.getToken(baseContext), userName)))
 
     private fun searchTwitter(twitterUser: String) =
-            EventBus.getDefault().post(TwetterListResult(ApiSearchService().getTwitterList("Bearer " + PreferenceController.getToken(baseContext), twitterUser)))
+            EventBus.getDefault().post(TwitterListResult(ApiSearchService().getTwitterList("Bearer " + PreferenceController.getToken(baseContext), twitterUser)))
 
     private fun analyseSentiment(item: TwitterModel) =
             EventBus.getDefault().post(AnalyseSearchResult(NLanguageSearch().analyseText(Document(item.description)), item))

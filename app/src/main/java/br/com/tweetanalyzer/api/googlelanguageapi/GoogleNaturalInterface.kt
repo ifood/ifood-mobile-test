@@ -1,7 +1,7 @@
 package br.com.tweetanalyzer.api.googlelanguageapi
 
-import br.com.tweetanalyzer.models.TweetAnalyseResult
 import br.com.tweetanalyzer.models.TweetAnalyseRequest
+import br.com.tweetanalyzer.models.TweetAnalyseResult
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.POST
@@ -13,7 +13,6 @@ import retrofit2.http.Query
  */
 interface GoogleNaturalInterface {
 
-    //TODO
     @POST(NaturalLanguageConstant.SEARCH_URL)
     fun analyzeText(@Query("key") auth: String,
                     @Body request: TweetAnalyseRequest): Call<TweetAnalyseResult>

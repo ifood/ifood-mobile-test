@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        btn_search.setOnClickListener(this)
+        btn_show_search_view.setOnClickListener(this)
         item_input_et.setOnEditorActionListener({ _, actionId, _ ->
             if (actionId == EditorInfo.IME_ACTION_DONE) {
                 startSearch()
@@ -44,6 +44,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             } else
                 false
         })
+        search_button.setOnClickListener(this)
 
         if (savedInstanceState != null)
             handleSavedInstance(savedInstanceState)
@@ -76,11 +77,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private fun handleSavedInstance(savedInstance: Bundle) = showSearchView(savedInstance.getBoolean("started_search"))
 
     private fun showSearchView(isToShow: Boolean) {
-        btn_search.visibility = if (isToShow) View.GONE else View.VISIBLE
-        item_input_et.visibility = if (isToShow) View.VISIBLE else View.GONE
+        btn_show_search_view.visibility = if (isToShow) View.GONE else View.VISIBLE
+        search_view.visibility = if (isToShow) View.VISIBLE else View.GONE
     }
 
-    private fun searchPerson() {
+    private fun showSearchView() {
         val set = TransitionSet().addTransition(Fade()).setInterpolator(FastOutLinearInInterpolator())
         TransitionManager.beginDelayedTransition(transitions_container, set)
 
@@ -122,7 +123,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(v: View?) {
         when (v?.id) {
-            R.id.btn_search -> searchPerson()
+            R.id.btn_show_search_view -> showSearchView()
+            R.id.search_button -> startSearch()
         }
     }
 

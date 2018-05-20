@@ -20,28 +20,50 @@
         android:layout_height="match_parent">
 
         <Button
-            android:id="@+id/btn_search"
+            android:id="@+id/btn_show_search_view"
             android:layout_width="171dp"
             android:layout_height="54dp"
             android:layout_gravity="bottom|center"
             android:layout_marginBottom="20dp"
             android:background="@drawable/button_shape"
             android:text="@string/search_tweet_name"
-            android:textColor="@color/btn_white_text" />
+            android:textColor="@color/white_text" />
 
-        <EditText
-            android:id="@+id/item_input_et"
+        <LinearLayout
+            android:id="@+id/search_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="top|center"
             android:layout_marginEnd="20dp"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:imeOptions="actionDone"
-            android:inputType="text"
-            android:minHeight="50dp"
-            android:textColor="@android:color/black"
-            android:visibility="gone" />
+            android:layout_marginTop="10dp"
+            android:background="@drawable/search_edit_text"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="1">
+
+            <EditText
+                android:id="@+id/item_input_et"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|center"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_weight="0.8"
+                android:backgroundTint="@color/edit_text_hind_background_color"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:minHeight="50dp"
+                android:textColor="@color/white_text"
+                android:textCursorDrawable="@drawable/edittextcursor_shape" />
+
+            <TextView
+                android:id="@+id/search_button"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.2"
+                android:background="@drawable/search_button_shape" />
+        </LinearLayout>
 
 
     </FrameLayout>

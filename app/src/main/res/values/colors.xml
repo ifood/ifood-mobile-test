@@ -4,12 +4,16 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
-    <!--Button text color-->
-    <color name="btn_white_text">#FFFFFF</color>
+    <!--Text color-->
+    <color name="white_text">#FFFFFF</color>
 
     <!--Button colors-->
     <color name="button_pressed">#0084b4</color>
     <color name="button_released">#00aced</color>
+
+    <!--EditText Background color-->
+    <color name="edit_text_background_color">#00aced</color>
+    <color name="edit_text_hind_background_color">#FFFFFF</color>
 
     <!--Profile colors-->
     <color name="user_info_background">@color/colorPrimary</color>

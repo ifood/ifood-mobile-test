@@ -12,10 +12,9 @@ import android.view.View
 import android.view.animation.AlphaAnimation
 import android.view.animation.Animation
 import br.com.tweetanalyzer.R
-import br.com.tweetanalyzer.events.TwetterListResult
+import br.com.tweetanalyzer.events.TwitterListResult
 import br.com.tweetanalyzer.events.UserInfoEvent
 import br.com.tweetanalyzer.models.JobType
-import br.com.tweetanalyzer.models.TweetList
 import br.com.tweetanalyzer.models.TwitterUserInfo
 import br.com.tweetanalyzer.presenter.adapter.TwitterListAdapter
 import br.com.tweetanalyzer.services.SearchService
@@ -51,7 +50,7 @@ class TwitterList : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener, A
     private lateinit var searchString: String
 
     private lateinit var user: TwitterUserInfo
-    private lateinit var tweets: TweetList
+    private lateinit var tweets: TwitterListResult
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -106,9 +105,9 @@ class TwitterList : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener, A
 
     private fun handleSavedInstance(savedInstanceState: Bundle) {
         user = Gson().fromJson(savedInstanceState.getString("user_info"), TwitterUserInfo::class.java)
-        tweets = Gson().fromJson(savedInstanceState.getString("tweets_list"), TweetList::class.java)
+        tweets = Gson().fromJson(savedInstanceState.getString("tweets_list"), TwitterListResult::class.java)
         updateUserInfo(user)
-        twitter_recycler_view.adapter = TwitterListAdapter(this, tweets.tweetList)
+        twitter_recycler_view.adapter = TwitterListAdapter(this, tweets.tweetList!!)
     }
 
     private fun handleToolbarTitleVisibility(percentage: Float) {
@@ -213,9 +212,9 @@ class TwitterList : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener, A
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)
-    fun onMessageEvent(tweetsResult: TwetterListResult) {
+    fun onMessageEvent(tweetsResult: TwitterListResult) {
         if (tweetsResult.tweetList!!.isNotEmpty()) {
-            tweets = TweetList(tweetsResult.tweetList)
+            tweets = TwitterListResult(tweetsResult.tweetList)
 
             tweetsResult.tweetList.forEach({
                 it.score = -2.0

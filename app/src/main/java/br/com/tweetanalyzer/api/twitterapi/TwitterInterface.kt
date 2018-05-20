@@ -19,6 +19,6 @@ interface TwitterInterface {
     fun getTwitterList(@Header("Authorization") authorization: String, @Query("screen_name") twitterUser: String): Call<List<TwitterModel>>
 
     @FormUrlEncoded
-    @POST(TwitterConstants.GET_AUTH_TWIITER)
+    @POST(TwitterConstants.GET_AUTH_TWITTER)
     fun getToken(@Header("Authorization") authorization: String, @Field("grant_type") type: String): Call<TokenType>
 }

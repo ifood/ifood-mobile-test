@@ -13,7 +13,7 @@ class TwitterConstants {
 
         const val SEARCH_URL_TWITTER = "https://api.twitter.com"
 
-        const val GET_AUTH_TWIITER = "/oauth2/token"
+        const val GET_AUTH_TWITTER = "/oauth2/token"
         const val SEARCH_USER_INFO = "/1.1/users/show.json"
         const val SEARCH_USER_TIMELINE = "/1.1/statuses/user_timeline.json"
     }
