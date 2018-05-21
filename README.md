@@ -11,3 +11,5 @@ The application searchs the twitters from user, then it's possible to analyse if
 * com.github.dmytrodanylyk.android-process-button
 * Skeleton
 * ShimmerLayout
+
+![Alt text](tweet_analyse.png?raw=true "Title")
