@@ -57,7 +57,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         if (PreferenceController.getToken(this).isEmpty()) {
             startService(Intent(this, SearchService::class.java).apply {
-                putExtra(ServiceConstants.JOB_TYPE, JobType.GET_AUTH)
+                putExtra(ServiceConstants.JOB_TYPE, JobType.GET_AUTH.name)
             })
         }
     }
