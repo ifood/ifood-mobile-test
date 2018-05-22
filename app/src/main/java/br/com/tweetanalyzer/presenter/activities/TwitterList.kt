@@ -48,7 +48,7 @@ class TwitterList : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener, A
     private var adapter: TwitterListAdapter = TwitterListAdapter(this, listOf())
 
     private lateinit var skeletonScreen: RecyclerViewSkeletonScreen
-    private lateinit var userSkeletonView: ViewSkeletonScreen
+    private var userSkeletonView: ViewSkeletonScreen? = null
 
     private lateinit var searchString: String
 
@@ -151,7 +151,8 @@ class TwitterList : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener, A
     }
 
     private fun updateUserInfo(user: TwitterUserInfo) {
-        userSkeletonView.hide()
+        if (userSkeletonView != null)
+            userSkeletonView?.hide()
 
         toolbar_title.text = user.userName
         user_name.text = user.userName
