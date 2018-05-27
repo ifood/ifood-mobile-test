@@ -20,7 +20,7 @@ class TweetsCoordinator: Coordinator {
     }
 
     func start() {
-        let vm = TweetsListViewModel()
+        let vm = TweetsListViewModel(twitterDataSource: TwitterDataSource())
         let vc = TweetsTableViewController(viewModel: vm)
         navigationController.pushViewController(vc, animated: false)
     }

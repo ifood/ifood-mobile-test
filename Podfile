@@ -7,6 +7,9 @@ target 'Twimotion' do
   # Swift lint/gen via cocoapods to run on CI/CD
   pod 'SwiftLint'
   pod 'SwiftGen'
+  
+  # Security
+  pod 'SwiftKeychainWrapper'
 
   # RxSwift
   pod 'RxSwift',    '~> 4.0'

@@ -7,11 +7,22 @@
 //
 
 import Foundation
+import RxSwift
 
 protocol TweetsListViewModelType {
 
 }
 
 struct TweetsListViewModel: TweetsListViewModelType {
+
+    // MARK: - Private properties
+    private let twitterDataSource: TwitterDataSourceType
+
+    // MARK: - Rx
+    private let tweets = Variable<[Tweet]>([])
+
+    init(twitterDataSource: TwitterDataSourceType) {
+        self.twitterDataSource = twitterDataSource
+    }
 
 }

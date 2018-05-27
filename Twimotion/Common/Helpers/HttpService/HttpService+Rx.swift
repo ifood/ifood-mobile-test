@@ -31,7 +31,7 @@ extension Reactive where Base: HttpServiceType {
 
 extension PrimitiveSequence where TraitType == SingleTrait, ElementType == Data {
     /// Maps received data at key path into a Decodable object. If the conversion fails, the signal errors.
-    public func map<D: Decodable>(_ type: D.Type, using decoder: JSONDecoder = JSONDecoder()) -> Single<D> {
+    public func map<D: Decodable>(_ type: D.Type, using decoder: JSONDecoder = JSONDecoder.sharedDecoder) -> Single<D> {
         return flatMap { data in
             do {
                 let res = try decoder.decode(type, from: data)

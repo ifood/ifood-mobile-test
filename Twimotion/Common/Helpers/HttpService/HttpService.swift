@@ -7,12 +7,13 @@
 //
 
 import Foundation
+import RxSwift
 
 protocol TargetType {
     var baseURL: URL { get }
     var path: String { get }
     var method: HttpMethod { get }
-    var jsonParameters: [String: Any] { get }
+    var body: Data? { get }
     var headers: [String: String]? { get }
 }
 
@@ -20,8 +21,9 @@ extension TargetType {
     func urlRequest() -> URLRequest {
 
         // generate url
-        let urlPath = [self.baseURL.absoluteString, self.path].joined()
-        let url = URL(string: urlPath)!
+        guard let url = URLComponents(string: "\(baseURL.absoluteString)\(path)")?.url else {
+            fatalError("invalid URL")
+        }
 
         var request = URLRequest(url: url)
 
@@ -29,11 +31,7 @@ extension TargetType {
         request.httpMethod = self.method.rawValue
 
         /// body
-        switch self.method {
-        case .get: break
-        default:
-            request.httpBody = try? JSONSerialization.data(withJSONObject: self.jsonParameters, options: [])
-        }
+        request.httpBody = self.body
 
         /// headers
         self.headers?.forEach { it in
@@ -74,10 +72,14 @@ class HttpService<Target: TargetType>: HttpServiceType {
     // MARK: - Initializer
 
     init(
-        configuration: URLSessionConfiguration = URLSessionConfiguration.default,
+        urlSession: URLSession? = nil,
         requestClosure: @escaping ((Target) -> URLRequest) = { $0.urlRequest() }
-        ) {
-        self.session = URLSession(configuration: configuration)
+    ) {
+        self.session = URLSession(
+            configuration: URLSessionConfiguration.default,
+            delegate: HttpServiceSessionDelegate(),
+            delegateQueue: nil
+        )
         self.requestClosure = requestClosure
     }
 
@@ -86,7 +88,7 @@ class HttpService<Target: TargetType>: HttpServiceType {
         let request = requestClosure(endpoint)
 
         //2 - execute task
-        let task = URLSession.shared.dataTask(with: request) { data, _, error in
+        let task = self.session.dataTask(with: request) { data, _, error in
             guard let data = data else {
                 responseData(Result.failure(error!))
                 return
@@ -99,4 +101,17 @@ class HttpService<Target: TargetType>: HttpServiceType {
         return task
     }
 
+}
+
+class HttpServiceSessionDelegate: NSObject, URLSessionDelegate {
+
+    func urlSession(_ session: URLSession, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
+        if challenge.previousFailureCount > 0 {
+            completionHandler(URLSession.AuthChallengeDisposition.cancelAuthenticationChallenge, nil)
+        } else if let serverTrust = challenge.protectionSpace.serverTrust {
+            completionHandler(URLSession.AuthChallengeDisposition.useCredential, URLCredential(trust: serverTrust))
+        } else {
+            print("unknown state. error: ")
+        }
+    }
 }

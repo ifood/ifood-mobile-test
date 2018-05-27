@@ -16,7 +16,7 @@ class TweetsTableViewController: UITableViewController {
 
     init(viewModel: TweetsListViewModelType) {
         self.viewModel = viewModel
-        super.init(nibName: "TweetsTableViewController", bundle: nil)
+        super.init(nibName: nil, bundle: nil)
     }
 
     required init?(coder aDecoder: NSCoder) {
