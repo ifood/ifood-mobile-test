@@ -14,6 +14,12 @@ protocol TwitterDataSourceType {
     func getLatestTweets(from user: TwitterUser) -> Observable<[Tweet]>
 }
 
+enum TwitterError: Error {
+    case authenticationError
+    case couldNotLoadUser
+    case couldNotLoadTweets
+}
+
 class TwitterDataSource {
 
     lazy var twitterApi = HttpService<TwitterAPI>()
@@ -33,6 +39,7 @@ class TwitterDataSource {
             .map { $0.accessToken }
             .do(onSuccess: TwitterAccessToken.saveToken)
             .asObservable()
+            .catchError { _ in Observable.error(TwitterError.authenticationError) }
     }
 }
 
@@ -45,7 +52,7 @@ extension TwitterDataSource: TwitterDataSourceType {
                 return api.rx
                     .request(.getUser(username: username))
                     .map(TwitterUser.self)
-
+                    .catchError { _ in Single.error(TwitterError.couldNotLoadUser) }
             }
     }
 
@@ -56,8 +63,8 @@ extension TwitterDataSource: TwitterDataSourceType {
                 return api.rx
                     .request(.getLastestTweets(username: user.screenName))
                     .map([Tweet].self)
+                    .catchError { _ in Single.error(TwitterError.couldNotLoadTweets) }
             }
-            .catchErrorJustReturn([])
     }
 }
 

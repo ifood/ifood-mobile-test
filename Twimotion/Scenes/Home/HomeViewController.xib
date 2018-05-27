@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Twimotion" customModuleProvider="target">
+            <connections>
+                <outlet property="activityIndicator" destination="qSR-Ud-Xin" id="SDD-P6-65Q"/>
+                <outlet property="listTweetsButton" destination="1W4-gH-Q4H" id="RBQ-av-6nC"/>
+                <outlet property="usernameTextField" destination="QJC-Th-FZ9" id="RZ0-ug-zNe"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Analyze tweet sentiment" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ts-IB-rA5">
+                    <rect key="frame" x="33" y="202" width="308" height="29"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="sag-72-xyw">
+                    <rect key="frame" x="138" y="70" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="E4i-Iv-5iV"/>
+                        <constraint firstAttribute="height" constant="100" id="RKt-Eu-OlE"/>
+                    </constraints>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="E86-aE-Dhf">
+                    <rect key="frame" x="24" y="263" width="327" height="52.5"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="@username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QJC-Th-FZ9">
+                            <rect key="frame" x="0.0" y="0.0" width="327" height="30"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" textContentType="nickname"/>
+                        </textField>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type a Twitter username to list it's tweets" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLm-3z-X73">
+                            <rect key="frame" x="0.0" y="38" width="327" height="14.5"/>
+                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="12"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1W4-gH-Q4H">
+                    <rect key="frame" x="150" y="347.5" width="75" height="30"/>
+                    <state key="normal" title="List tweets"/>
+                </button>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="qSR-Ud-Xin">
+                    <rect key="frame" x="177" y="347.5" width="20" height="20"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="sag-72-xyw" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="GA4-ga-O6J"/>
+                <constraint firstItem="E86-aE-Dhf" firstAttribute="top" secondItem="5Ts-IB-rA5" secondAttribute="bottom" constant="32" id="IV0-fa-dAd"/>
+                <constraint firstItem="sag-72-xyw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="Mqu-tJ-Fxm"/>
+                <constraint firstItem="1W4-gH-Q4H" firstAttribute="top" secondItem="E86-aE-Dhf" secondAttribute="bottom" constant="32" id="PDw-DH-IaO"/>
+                <constraint firstItem="1W4-gH-Q4H" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="V9f-l0-ti4"/>
+                <constraint firstItem="5Ts-IB-rA5" firstAttribute="top" secondItem="sag-72-xyw" secondAttribute="bottom" constant="32" id="Wmz-Eo-Uks"/>
+                <constraint firstItem="5Ts-IB-rA5" firstAttribute="centerX" secondItem="E86-aE-Dhf" secondAttribute="centerX" id="XIR-Ej-bXH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="E86-aE-Dhf" secondAttribute="trailing" constant="24" id="Zkc-uP-aaZ"/>
+                <constraint firstItem="qSR-Ud-Xin" firstAttribute="top" secondItem="E86-aE-Dhf" secondAttribute="bottom" constant="32" id="aZK-fU-Ulz"/>
+                <constraint firstItem="qSR-Ud-Xin" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="b2Q-75-qgz"/>
+                <constraint firstItem="5Ts-IB-rA5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="33" id="h8f-dz-aQ4"/>
+                <constraint firstItem="E86-aE-Dhf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="kfq-4c-yMP"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="24.5" y="51.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="logo" width="125" height="125"/>
+    </resources>
+</document>

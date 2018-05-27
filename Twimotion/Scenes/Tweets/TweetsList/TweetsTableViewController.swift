@@ -2,7 +2,7 @@
 //  TweetsTableViewController.swift
 //  Twimotion
 //
-//  Created by Antony on 26/05/18.
+//  Created by Antony on 27/05/18.
 //  Copyright © 2018 Twimotion. All rights reserved.
 //
 
@@ -27,7 +27,29 @@ class TweetsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupViews()
+        bindViews()
+    }
+
+}
+
+// MARK: - Setups
+extension TweetsTableViewController {
+    private func setupViews() {
+        if #available(iOS 11.0, *) {
+            self.navigationController?.navigationBar.prefersLargeTitles = true
+            self.navigationItem.largeTitleDisplayMode = .always
+        }
+        self.navigationController?.isNavigationBarHidden = false
         self.clearsSelectionOnViewWillAppear = false
+    }
+}
+
+// MARK: - Rx
+extension TweetsTableViewController {
+
+    private func bindViews() {
+        title = L10n.Tweets.title
     }
 
 }

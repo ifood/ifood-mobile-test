@@ -17,11 +17,13 @@ struct TweetsListViewModel: TweetsListViewModelType {
 
     // MARK: - Private properties
     private let twitterDataSource: TwitterDataSourceType
+    private let twitterUser: TwitterUser
 
     // MARK: - Rx
     private let tweets = Variable<[Tweet]>([])
 
-    init(twitterDataSource: TwitterDataSourceType) {
+    init(twitterUser: TwitterUser, twitterDataSource: TwitterDataSourceType) {
+        self.twitterUser = twitterUser
         self.twitterDataSource = twitterDataSource
     }
 

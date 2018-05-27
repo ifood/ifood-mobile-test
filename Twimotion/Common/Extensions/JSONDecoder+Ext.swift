@@ -12,7 +12,7 @@ public extension JSONDecoder {
     public static var sharedDecoder: JSONDecoder {
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
-        decoder.dateDecodingStrategy = .iso8601
+//        decoder.dateDecodingStrategy = .iso8601
         return decoder
     }
 }

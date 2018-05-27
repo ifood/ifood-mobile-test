@@ -10,19 +10,27 @@ import Foundation
 import UIKit
 
 class TweetsCoordinator: Coordinator {
+
     var childCoordinators: [Coordinator] = [Coordinator]()
     var rootViewController: UIViewController { return navigationController }
 
     var navigationController: UINavigationController
 
-    init(navigationController: UINavigationController) {
+    var twitterUser: TwitterUser
+
+    init(twitterUser: TwitterUser, navigationController: UINavigationController) {
+        self.twitterUser = twitterUser
         self.navigationController = navigationController
     }
 
     func start() {
-        let vm = TweetsListViewModel(twitterDataSource: TwitterDataSource())
+        let vm = TweetsListViewModel(
+            twitterUser: twitterUser,
+            twitterDataSource: TwitterDataSource()
+        )
         let vc = TweetsTableViewController(viewModel: vm)
-        navigationController.pushViewController(vc, animated: false)
+
+        navigationController.pushViewController(vc, animated: true)
     }
 
 }

@@ -20,9 +20,9 @@ class AppCoordinator: Coordinator {
     }
 
     func start() {
-        let tweetsCoordinator = TweetsCoordinator(navigationController: navigationController)
-        tweetsCoordinator.start()
-        childCoordinators.append(tweetsCoordinator)
+        let homeCoordinator = HomeCoordinator(navigationController: navigationController)
+        homeCoordinator.start()
+        childCoordinators.append(homeCoordinator)
     }
 
 }
