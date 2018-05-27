@@ -57,7 +57,7 @@ extension TwitterDataSource: TwitterDataSourceType {
                     .request(.getLastestTweets(username: user.screenName))
                     .map([Tweet].self)
             }
-            //.catchErrorJustReturn([])
+            .catchErrorJustReturn([])
     }
 }
 
