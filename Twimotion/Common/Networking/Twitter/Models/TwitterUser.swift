@@ -10,5 +10,7 @@ import Foundation
 
 struct TwitterUser: Decodable {
     let idStr: String
+    let name: String
     let screenName: String
+    let profileImageUrlHttps: String
 }

@@ -10,8 +10,10 @@ import Foundation
 import RxSwift
 
 protocol HomeViewModelType {
+    //inputs
     var username: Variable<String> { get }
     var listTweets: PublishSubject<Void> { get }
+    //outputs
     var couldNotLoadUser: PublishSubject<Void> { get }
     var isLoadingUser: BehaviorSubject<Bool> { get }
 }

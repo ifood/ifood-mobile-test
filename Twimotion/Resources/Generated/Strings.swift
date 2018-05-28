@@ -21,8 +21,8 @@ internal enum L10n {
   }
 
   internal enum Tweets {
-    /// Tweets
-    internal static let title = L10n.tr("Localizable", "tweets.title")
+    /// Tweets not found!
+    internal static let tweetsNotFound = L10n.tr("Localizable", "tweets.tweets_not_found")
   }
 }
 // swiftlint:enable explicit_type_interface identifier_name line_length nesting type_body_length type_name

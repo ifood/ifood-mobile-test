@@ -9,4 +9,5 @@
 "home.could_not_load_user_alert.message" = "Could not load user. Try another username!";
 "home.could_not_load_user_alert.OK" = "OK";
 
-"tweets.title" = "Tweets";
+"tweets.tweets_not_found" = "Tweets not found!";
+

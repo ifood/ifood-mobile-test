@@ -12,4 +12,5 @@ struct Tweet: Decodable {
     let idStr: String
     let text: String
     let user: TwitterUser
+    let createdAt: Date
 }

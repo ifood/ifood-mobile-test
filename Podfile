@@ -14,6 +14,10 @@ target 'Twimotion' do
   # RxSwift
   pod 'RxSwift',    '~> 4.0'
   pod 'RxCocoa',    '~> 4.0'
+  pod 'RxDataSources', '~> 3.0'
+
+  # ImageLoader
+  pod 'PINRemoteImage', '~> 2.1.4'
 
   target 'TwimotionTests' do
     inherit! :search_paths

@@ -34,11 +34,13 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.isNavigationBarHidden = true
-
         bindViews()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = true
+    }
 }
 
 // MARK: - Rx
@@ -49,6 +51,7 @@ extension HomeViewController {
         guard let viewModel = viewModel else { fatalError("viewModel should not be nil") }
 
         usernameTextField.rx.text.orEmpty
+            .map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
             .bind(to: viewModel.username)
             .disposed(by: disposeBag)
 

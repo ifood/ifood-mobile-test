@@ -28,7 +28,7 @@ class TweetsCoordinator: Coordinator {
             twitterUser: twitterUser,
             twitterDataSource: TwitterDataSource()
         )
-        let vc = TweetsTableViewController(viewModel: vm)
+        let vc = TweetListViewController(viewModel: vm)
 
         navigationController.pushViewController(vc, animated: true)
     }
