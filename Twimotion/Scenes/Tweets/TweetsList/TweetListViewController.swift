@@ -19,6 +19,8 @@ class TweetListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var emptyAlertLabel: UILabel!
+    @IBOutlet weak var tryAgainButton: UIButton!
+    @IBOutlet weak var emptyAlertView: UIStackView!
 
     // MARK: - Initializers
 
@@ -57,9 +59,7 @@ extension TweetListViewController {
         tableView.registerCellWithNib(TweetCell.self)
 
         // emptyAlert label
-        // TODO: add button to retry
         emptyAlertLabel.text = L10n.Tweets.tweetsNotFound
-        emptyAlertLabel.isHidden = true
     }
 }
 
@@ -72,19 +72,38 @@ extension TweetListViewController {
 
         bindTableView()
 
+        // Inputs
+        tryAgainButton.rx.tap
+            .bind(to: viewModel.retryLoadTweets)
+            .disposed(by: disposeBag)
+
+        // Outpts
         viewModel.username
             .map { "@\($0)" }
             .bind(to: self.rx.title)
             .disposed(by: disposeBag)
 
-        viewModel.couldNotLoadTweets.bind { [weak emptyAlertLabel] in
-            emptyAlertLabel?.isHidden = false
-        }.disposed(by: disposeBag)
+        viewModel.isLoadingTweets
+            .map { !$0 }
+            .bind(to: activityIndicator.rx.isHidden)
+            .disposed(by: disposeBag)
 
-        viewModel.isLoadingTweets.bind { [weak self] isLoading in
-            self?.activityIndicator.isHidden = !isLoading
-            self?.tableView.isHidden = isLoading
-        }.disposed(by: disposeBag)
+        // when could not load tweets should show emptyAlertView
+        viewModel.couldNotLoadTweets
+            .map { !$0 }
+            .bind(to: emptyAlertView.rx.isHidden)
+            .disposed(by: disposeBag)
+
+        // when isLoading or did occured any errors, then tableView should be hide
+        Observable
+            .combineLatest(
+                viewModel.couldNotLoadTweets,
+                viewModel.isLoadingTweets,
+                resultSelector: { (isLoading: $0, errorLoading: $1)}
+            )
+            .flatMap { Observable<Bool>.just($0.isLoading || $0.errorLoading) }
+            .bind(to: tableView.rx.isHidden)
+            .disposed(by: disposeBag)
 
     }
 

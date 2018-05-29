@@ -15,10 +15,11 @@ typealias TweetsListSectionViewModel = SectionModel<String, TweetItemViewModel>
 protocol TweetsListViewModelType {
     //inputs
     var selectTweetEvent: PublishSubject<Int> { get }
+    var retryLoadTweets: PublishSubject<Void> { get }
 
     // outputs
     var username: Observable<String> { get }
-    var couldNotLoadTweets: PublishSubject<Void> { get }
+    var couldNotLoadTweets: BehaviorSubject<Bool> { get }
     var isLoadingTweets: BehaviorSubject<Bool> { get }
     var cellViewModels: Observable<[TweetsListSectionViewModel]> { get }
 }
@@ -40,6 +41,7 @@ class TweetsListViewModel: TweetsListViewModelType {
 
     /// Inputs
     var selectTweetEvent = PublishSubject<Int>()
+    var retryLoadTweets = PublishSubject<Void>()
 
     /// Outputs
 
@@ -47,7 +49,7 @@ class TweetsListViewModel: TweetsListViewModelType {
         return twitterUser.asObservable().map { $0.screenName }
     }
 
-    let couldNotLoadTweets = PublishSubject<Void>()
+    let couldNotLoadTweets = BehaviorSubject<Bool>(value: false)
 
     let isLoadingTweets = BehaviorSubject<Bool>(value: false)
 
@@ -65,6 +67,10 @@ class TweetsListViewModel: TweetsListViewModelType {
     init(twitterUser: TwitterUser, twitterDataSource: TwitterDataSourceType) {
         self.twitterUser = Variable(twitterUser)
         self.twitterDataSource = twitterDataSource
+
+        retryLoadTweets
+            .bind { [weak self] in self?.loadLastestTweets() }
+            .disposed(by: disposeBag)
 
         // when select new tweet should notify delegate
         selectTweetEvent
@@ -86,11 +92,13 @@ class TweetsListViewModel: TweetsListViewModelType {
 }
 
 extension TweetsListViewModel {
+
     private func loadLastestTweets() {
         isLoadingTweets.onNext(true)
+        couldNotLoadTweets.onNext(false)
+
         twitterUser.asObservable()
             .flatMapLatest(twitterDataSource.getLatestTweets)
-            .retry(2)
             .observeOn(MainScheduler.instance)
             .subscribe { [weak self] event in
                 self?.isLoadingTweets.onNext(false)
@@ -99,10 +107,11 @@ extension TweetsListViewModel {
                 case .next(let tweets):
                     self?.tweets.value = tweets
                 case .error:
-                    self?.couldNotLoadTweets.onNext(())
+                    self?.couldNotLoadTweets.onNext(true)
                 default: break
                 }
             }
             .disposed(by: disposeBag)
     }
+
 }
