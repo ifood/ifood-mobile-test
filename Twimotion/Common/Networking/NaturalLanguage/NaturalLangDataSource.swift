@@ -9,11 +9,11 @@
 import Foundation
 import RxSwift
 
-protocol NaturalLanDataSourceType {
+protocol NaturalLangDataSourceType {
     func getSentiment(text: String) -> Observable<Sentiment>
 }
 
-class NaturalLangDataSource: NaturalLanDataSourceType {
+class NaturalLangDataSource: NaturalLangDataSourceType {
 
     lazy var naturalLangApi = HttpService<NaturalLangAPI>()
 

@@ -17,9 +17,9 @@ extension DocumentSentiment {
 
     var sentiment: Sentiment {
         switch score {
-        case let score where score < -0.3:
+        case let score where score < 0:
             return .sad
-        case let score where score > 0.3:
+        case let score where score > 0:
             return .happy
         default:
             return .neutral

@@ -89,16 +89,29 @@ extension TweetListViewController {
     }
 
     private func bindTableView() {
+
+        guard let viewModel = viewModel else { fatalError("viewModel should not be nil") }
+
         let dataSource = RxTableViewSectionedReloadDataSource<TweetsListSectionViewModel>(configureCell: { _, tableView, indexPath, vm -> TweetCell in
             let cell = tableView.dequeueReusableCell(type: TweetCell.self, indexPath: indexPath)
             cell.viewModel = vm
             return cell
         })
 
+        dataSource.titleForHeaderInSection = { ds, index in
+            return ds.sectionModels[index].model
+        }
+
         tableView.dataSource = nil
 
-        viewModel?.cellViewModels
+        viewModel.cellViewModels
             .bind(to: tableView.rx.items(dataSource: dataSource))
+            .disposed(by: disposeBag)
+
+        tableView.rx.itemSelected
+            .observeOn(MainScheduler.asyncInstance)
+            .map { $0.row }
+            .bind(to: viewModel.selectTweetEvent)
             .disposed(by: disposeBag)
     }
 }

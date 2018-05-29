@@ -13,6 +13,9 @@ import RxDataSources
 typealias TweetsListSectionViewModel = SectionModel<String, TweetItemViewModel>
 
 protocol TweetsListViewModelType {
+    //inputs
+    var selectTweetEvent: PublishSubject<Int> { get }
+
     // outputs
     var username: Observable<String> { get }
     var couldNotLoadTweets: PublishSubject<Void> { get }
@@ -20,7 +23,13 @@ protocol TweetsListViewModelType {
     var cellViewModels: Observable<[TweetsListSectionViewModel]> { get }
 }
 
+protocol TweetsListViewModelDelegate: class {
+    func didSelectTweet(_ tweet: Tweet)
+}
+
 class TweetsListViewModel: TweetsListViewModelType {
+
+    weak var delegate: TweetsListViewModelDelegate?
 
     // MARK: - Private properties
     private let twitterDataSource: TwitterDataSourceType
@@ -29,7 +38,10 @@ class TweetsListViewModel: TweetsListViewModelType {
     // MARK: - Rx
     var disposeBag = DisposeBag()
 
-    //outputs
+    /// Inputs
+    var selectTweetEvent = PublishSubject<Int>()
+
+    /// Outputs
 
     var username: Observable<String> {
         return twitterUser.asObservable().map { $0.screenName }
@@ -42,7 +54,7 @@ class TweetsListViewModel: TweetsListViewModelType {
     var cellViewModels: Observable<[TweetsListSectionViewModel]> {
         return tweets.asObservable().map {
             let vms = $0.map(TweetItemViewModel.init)
-            let section = TweetsListSectionViewModel(model: "", items: vms)
+            let section = TweetsListSectionViewModel(model: L10n.Tweets.tweetsSectionMessage, items: vms)
             return [section]
         }
     }
@@ -54,6 +66,20 @@ class TweetsListViewModel: TweetsListViewModelType {
         self.twitterUser = Variable(twitterUser)
         self.twitterDataSource = twitterDataSource
 
+        // when select new tweet should notify delegate
+        selectTweetEvent
+            .flatMap { [weak tweets] index -> Observable<Tweet> in
+                guard let strongTweets = tweets,
+                    strongTweets.value.count >= index else {
+                    fatalError("element not found")
+                }
+                return Observable.just(strongTweets.value[index])
+            }
+            .bind { [weak self] tweet in
+                self?.delegate?.didSelectTweet(tweet)
+            }.disposed(by: disposeBag)
+
+        // load sentiment for current Tweet
         loadLastestTweets()
     }
 
@@ -64,6 +90,7 @@ extension TweetsListViewModel {
         isLoadingTweets.onNext(true)
         twitterUser.asObservable()
             .flatMapLatest(twitterDataSource.getLatestTweets)
+            .retry(2)
             .observeOn(MainScheduler.instance)
             .subscribe { [weak self] event in
                 self?.isLoadingTweets.onNext(false)

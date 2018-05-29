@@ -10,6 +10,12 @@ import UIKit
 
 extension UITableView {
 
+    func deselectRows(_ animated: Bool = false) {
+        indexPathsForSelectedRows?.forEach {
+            deselectRow(at: $0, animated: animated)
+        }
+    }
+
     func registerCell(_ cellClass: UITableViewCell.Type) {
         self.register(cellClass, forCellReuseIdentifier: String(describing: cellClass))
     }

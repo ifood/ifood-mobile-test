@@ -10,4 +10,10 @@
 "home.could_not_load_user_alert.OK" = "OK";
 
 "tweets.tweets_not_found" = "Tweets not found!";
+"tweets.tweets_section_message" = "Select one tweet to analyse its sentiment.";
+
+"tweet_sentiment.error_message" = "Couldn't load tweet sentiment. Try again later!";
+
+
+
 

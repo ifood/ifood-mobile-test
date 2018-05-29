@@ -20,9 +20,16 @@ internal enum L10n {
     }
   }
 
+  internal enum TweetSentiment {
+    /// Couldn't load tweet sentiment. Try again later!
+    internal static let errorMessage = L10n.tr("Localizable", "tweet_sentiment.error_message")
+  }
+
   internal enum Tweets {
     /// Tweets not found!
     internal static let tweetsNotFound = L10n.tr("Localizable", "tweets.tweets_not_found")
+    /// Select one tweet to analyse its sentiment.
+    internal static let tweetsSectionMessage = L10n.tr("Localizable", "tweets.tweets_section_message")
   }
 }
 // swiftlint:enable explicit_type_interface identifier_name line_length nesting type_body_length type_name
