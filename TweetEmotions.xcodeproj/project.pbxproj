@@ -11,6 +11,8 @@
 		08C0449220BF487000BA5CCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08C0449120BF487000BA5CCC /* Assets.xcassets */; };
 		08C0449520BF487000BA5CCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08C0449320BF487000BA5CCC /* LaunchScreen.storyboard */; };
 		08C044A020BF487000BA5CCC /* TweetEmotionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C0449F20BF487000BA5CCC /* TweetEmotionsTests.swift */; };
+		D46260F96AFF717280FC20EF /* Pods_TweetEmotions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 248B2EAC531476DA7B97B550 /* Pods_TweetEmotions.framework */; };
+		E441A46DF25AB88E42D0AC1B /* Pods_TweetEmotionsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9366C5F172825BE9FEFDAAA /* Pods_TweetEmotionsTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,6 +26,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		008BA5DBD6EADD56E6D50087 /* Pods-TweetEmotions.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TweetEmotions.release.xcconfig"; path = "Pods/Target Support Files/Pods-TweetEmotions/Pods-TweetEmotions.release.xcconfig"; sourceTree = "<group>"; };
 		08C0448720BF486F00BA5CCC /* TweetEmotions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TweetEmotions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08C0448A20BF486F00BA5CCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08C0449120BF487000BA5CCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -32,6 +35,11 @@
 		08C0449B20BF487000BA5CCC /* TweetEmotionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TweetEmotionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		08C0449F20BF487000BA5CCC /* TweetEmotionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetEmotionsTests.swift; sourceTree = "<group>"; };
 		08C044A120BF487000BA5CCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		248B2EAC531476DA7B97B550 /* Pods_TweetEmotions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TweetEmotions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		64C59A47A79DB324E957F95E /* Pods-TweetEmotionsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TweetEmotionsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TweetEmotionsTests/Pods-TweetEmotionsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6F1E57ED6B203AF6B82275B4 /* Pods-TweetEmotions.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TweetEmotions.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TweetEmotions/Pods-TweetEmotions.debug.xcconfig"; sourceTree = "<group>"; };
+		8AA3F823C935BBECFBA13B45 /* Pods-TweetEmotionsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TweetEmotionsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TweetEmotionsTests/Pods-TweetEmotionsTests.release.xcconfig"; sourceTree = "<group>"; };
+		A9366C5F172825BE9FEFDAAA /* Pods_TweetEmotionsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TweetEmotionsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D46260F96AFF717280FC20EF /* Pods_TweetEmotions.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E441A46DF25AB88E42D0AC1B /* Pods_TweetEmotionsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +68,8 @@
 				08C0448820BF486F00BA5CCC /* Products */,
 				08C0448920BF486F00BA5CCC /* TweetEmotions */,
 				08C0449E20BF487000BA5CCC /* TweetEmotionsTests */,
+				43C619C3D10B82657D530C8E /* Pods */,
+				C8348C4E0D748558B721449D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -138,6 +150,26 @@
 			path = LaunchScreen;
 			sourceTree = "<group>";
 		};
+		43C619C3D10B82657D530C8E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6F1E57ED6B203AF6B82275B4 /* Pods-TweetEmotions.debug.xcconfig */,
+				008BA5DBD6EADD56E6D50087 /* Pods-TweetEmotions.release.xcconfig */,
+				64C59A47A79DB324E957F95E /* Pods-TweetEmotionsTests.debug.xcconfig */,
+				8AA3F823C935BBECFBA13B45 /* Pods-TweetEmotionsTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C8348C4E0D748558B721449D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				248B2EAC531476DA7B97B550 /* Pods_TweetEmotions.framework */,
+				A9366C5F172825BE9FEFDAAA /* Pods_TweetEmotionsTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -145,7 +177,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 08C044A420BF487000BA5CCC /* Build configuration list for PBXNativeTarget "TweetEmotions" */;
 			buildPhases = (
+				C468339622BA879749B1FF5A /* [CP] Check Pods Manifest.lock */,
 				08C0448320BF486F00BA5CCC /* Sources */,
+				0819D4AE20BF4B53002288E7 /* SwiftLint */,
 				08C0448420BF486F00BA5CCC /* Frameworks */,
 				08C0448520BF486F00BA5CCC /* Resources */,
 			);
@@ -162,6 +196,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 08C044A720BF487000BA5CCC /* Build configuration list for PBXNativeTarget "TweetEmotionsTests" */;
 			buildPhases = (
+				2962F0061287EF1514355B14 /* [CP] Check Pods Manifest.lock */,
 				08C0449720BF487000BA5CCC /* Sources */,
 				08C0449820BF487000BA5CCC /* Frameworks */,
 				08C0449920BF487000BA5CCC /* Resources */,
@@ -232,6 +267,59 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0819D4AE20BF4B53002288E7 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
+		};
+		2962F0061287EF1514355B14 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TweetEmotionsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C468339622BA879749B1FF5A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TweetEmotions-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		08C0448320BF486F00BA5CCC /* Sources */ = {
@@ -389,6 +477,7 @@
 		};
 		08C044A520BF487000BA5CCC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F1E57ED6B203AF6B82275B4 /* Pods-TweetEmotions.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -407,6 +496,7 @@
 		};
 		08C044A620BF487000BA5CCC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 008BA5DBD6EADD56E6D50087 /* Pods-TweetEmotions.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -425,6 +515,7 @@
 		};
 		08C044A820BF487000BA5CCC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64C59A47A79DB324E957F95E /* Pods-TweetEmotionsTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -446,6 +537,7 @@
 		};
 		08C044A920BF487000BA5CCC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8AA3F823C935BBECFBA13B45 /* Pods-TweetEmotionsTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
