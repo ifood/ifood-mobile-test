@@ -25,6 +25,7 @@ class TweetSentimentViewController: UIViewController {
     @IBOutlet weak var contentWrapper: UIStackView!
     @IBOutlet weak var wrapperCenterYConstraint: NSLayoutConstraint!
     @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet weak var tweetLabel: UILabel!
 
     // MARK: - Initializers
 
@@ -107,6 +108,10 @@ extension TweetSentimentViewController {
             .disposed(by: disposeBag)
 
         /// Outputs
+
+        viewModel.tweetDescription
+            .bind(to: tweetLabel.rx.text)
+            .disposed(by: disposeBag)
 
         //isLoading sentiment
         viewModel.isLoadingSentiment

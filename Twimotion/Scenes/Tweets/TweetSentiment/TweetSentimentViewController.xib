@@ -18,6 +18,7 @@
                 <outlet property="emojiLabel" destination="FWz-WD-veO" id="rcl-5t-bMq"/>
                 <outlet property="errorLabel" destination="DyE-Sr-pQb" id="asP-cD-3jA"/>
                 <outlet property="messageLabel" destination="qb1-Zm-YZi" id="9jc-Yj-QEr"/>
+                <outlet property="tweetLabel" destination="PM3-Cb-4kU" id="oNr-98-hjv"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="wrapperCenterYConstraint" destination="fVi-nh-49X" id="awv-r4-is0"/>
                 <outlet property="wrapperView" destination="Bid-qx-Elx" id="EeG-6I-owp"/>
@@ -29,10 +30,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bid-qx-Elx">
-                    <rect key="frame" x="44" y="235" width="287" height="197"/>
+                    <rect key="frame" x="44" y="216.5" width="287" height="234"/>
                     <subviews>
                         <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label Label Label Label Label Label Label Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DyE-Sr-pQb">
-                            <rect key="frame" x="24" y="71" width="239" height="55"/>
+                            <rect key="frame" x="24" y="89.5" width="239" height="55"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="55" id="rLf-L2-Q4A"/>
                             </constraints>
@@ -41,15 +42,15 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uX5-Hi-XBw">
-                            <rect key="frame" x="236" y="16" width="35" height="26"/>
+                            <rect key="frame" x="236" y="16.5" width="35" height="26"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="26" id="x39-rX-bHy"/>
                                 <constraint firstAttribute="width" constant="35" id="xe5-lN-8aF"/>
                             </constraints>
                             <state key="normal" image="close"/>
                         </button>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="fmf-t4-Icr">
-                            <rect key="frame" x="24" y="54" width="239" height="89"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="fmf-t4-Icr">
+                            <rect key="frame" x="24" y="54.5" width="239" height="126"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😐" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FWz-WD-veO">
                                     <rect key="frame" x="94" y="0.0" width="51" height="56.5"/>
@@ -58,15 +59,21 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This tweet is sad!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qb1-Zm-YZi">
-                                    <rect key="frame" x="53" y="68.5" width="133.5" height="20.5"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <rect key="frame" x="48" y="72.5" width="143" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;Happy tweet!&quot; - @twitter" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PM3-Cb-4kU">
+                                    <rect key="frame" x="36" y="109" width="167" height="17"/>
+                                    <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
                         </stackView>
                         <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="n5a-yp-rb8">
-                            <rect key="frame" x="133" y="88.5" width="20" height="20"/>
+                            <rect key="frame" x="133" y="107" width="20" height="20"/>
                         </activityIndicatorView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -77,10 +84,10 @@
                         <constraint firstAttribute="trailing" secondItem="uX5-Hi-XBw" secondAttribute="trailing" constant="16" id="Anh-QN-fJ6"/>
                         <constraint firstItem="DyE-Sr-pQb" firstAttribute="centerX" secondItem="Bid-qx-Elx" secondAttribute="centerX" id="K62-S0-oNJ"/>
                         <constraint firstAttribute="trailing" secondItem="fmf-t4-Icr" secondAttribute="trailing" constant="24" id="O5G-xT-W1S"/>
+                        <constraint firstAttribute="bottom" secondItem="fmf-t4-Icr" secondAttribute="bottom" constant="54" id="PKV-HA-PVC"/>
                         <constraint firstItem="uX5-Hi-XBw" firstAttribute="top" secondItem="Bid-qx-Elx" secondAttribute="top" constant="16" id="Pco-et-yeP"/>
                         <constraint firstItem="n5a-yp-rb8" firstAttribute="centerX" secondItem="Bid-qx-Elx" secondAttribute="centerX" id="SWc-RW-Bud"/>
                         <constraint firstItem="DyE-Sr-pQb" firstAttribute="centerY" secondItem="Bid-qx-Elx" secondAttribute="centerY" id="f3i-T4-NXT"/>
-                        <constraint firstAttribute="bottom" secondItem="fmf-t4-Icr" secondAttribute="bottom" constant="54" id="gBX-vR-qD0"/>
                         <constraint firstItem="fmf-t4-Icr" firstAttribute="top" secondItem="uX5-Hi-XBw" secondAttribute="bottom" constant="12" id="nFE-bz-JDJ"/>
                         <constraint firstItem="DyE-Sr-pQb" firstAttribute="leading" secondItem="Bid-qx-Elx" secondAttribute="leading" constant="24" id="wgS-iR-gF8"/>
                         <constraint firstItem="fmf-t4-Icr" firstAttribute="centerX" secondItem="Bid-qx-Elx" secondAttribute="centerX" id="wmZ-AW-1Ab"/>

@@ -15,6 +15,7 @@ protocol TweetSentimentViewModelType {
     var dismissEvent: PublishSubject<Void> { get }
 
     //outputs
+    var tweetDescription: Observable<String> { get }
     var sentimentEmoji: Observable<String> { get }
     var sentimentDescription: Observable<String> { get }
     var sentimentColor: Observable<UIColor> { get }
@@ -40,6 +41,11 @@ class TweetSentimentViewModel: TweetSentimentViewModelType {
     // outputs
     let isLoadingSentiment = BehaviorSubject<Bool>(value: false)
     let errorLoadingSentiment = BehaviorSubject<Bool>(value: false)
+
+    var tweetDescription: Observable<String> {
+        return tweet.asObservable()
+            .map { "\"\($0.text)\" - @\($0.user.screenName)" }
+    }
 
     var sentimentEmoji: Observable<String> {
         return sentiment.asObservable().map {
