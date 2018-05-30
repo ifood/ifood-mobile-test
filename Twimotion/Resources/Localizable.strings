@@ -14,6 +14,11 @@
 
 "tweet_sentiment.error_message" = "Couldn't load tweet sentiment. Try again later!";
 
+"tweet_sentiment.happy_message" = "This is a happy tweet!";
+"tweet_sentiment.neutral_message" = "This is a normal tweet!";
+"tweet_sentiment.sad_message" = "This is a sad tweet!";
+
+
 
 
 

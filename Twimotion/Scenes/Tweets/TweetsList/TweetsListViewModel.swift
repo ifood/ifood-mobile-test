@@ -15,7 +15,7 @@ typealias TweetsListSectionViewModel = SectionModel<String, TweetItemViewModel>
 protocol TweetsListViewModelType {
     //inputs
     var selectTweetEvent: PublishSubject<Int> { get }
-    var retryLoadTweets: PublishSubject<Void> { get }
+    var loadTweets: PublishSubject<Void> { get }
 
     // outputs
     var username: Observable<String> { get }
@@ -41,7 +41,7 @@ class TweetsListViewModel: TweetsListViewModelType {
 
     /// Inputs
     var selectTweetEvent = PublishSubject<Int>()
-    var retryLoadTweets = PublishSubject<Void>()
+    var loadTweets = PublishSubject<Void>()
 
     /// Outputs
 
@@ -68,7 +68,7 @@ class TweetsListViewModel: TweetsListViewModelType {
         self.twitterUser = Variable(twitterUser)
         self.twitterDataSource = twitterDataSource
 
-        retryLoadTweets
+        loadTweets
             .bind { [weak self] in self?.loadLastestTweets() }
             .disposed(by: disposeBag)
 
@@ -85,8 +85,6 @@ class TweetsListViewModel: TweetsListViewModelType {
                 self?.delegate?.didSelectTweet(tweet)
             }.disposed(by: disposeBag)
 
-        // load sentiment for current Tweet
-        loadLastestTweets()
     }
 
 }
@@ -99,7 +97,6 @@ extension TweetsListViewModel {
 
         twitterUser.asObservable()
             .flatMapLatest(twitterDataSource.getLatestTweets)
-            .observeOn(MainScheduler.instance)
             .subscribe { [weak self] event in
                 self?.isLoadingTweets.onNext(false)
 

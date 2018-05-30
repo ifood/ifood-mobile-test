@@ -74,7 +74,7 @@ extension TweetListViewController {
 
         // Inputs
         tryAgainButton.rx.tap
-            .bind(to: viewModel.retryLoadTweets)
+            .bind(to: viewModel.loadTweets)
             .disposed(by: disposeBag)
 
         // Outpts
@@ -84,14 +84,16 @@ extension TweetListViewController {
             .disposed(by: disposeBag)
 
         viewModel.isLoadingTweets
+            .asDriver(onErrorJustReturn: true)
             .map { !$0 }
-            .bind(to: activityIndicator.rx.isHidden)
+            .drive(activityIndicator.rx.isHidden)
             .disposed(by: disposeBag)
 
         // when could not load tweets should show emptyAlertView
         viewModel.couldNotLoadTweets
+            .asDriver(onErrorJustReturn: true)
             .map { !$0 }
-            .bind(to: emptyAlertView.rx.isHidden)
+            .drive(emptyAlertView.rx.isHidden)
             .disposed(by: disposeBag)
 
         // when isLoading or did occured any errors, then tableView should be hide
@@ -105,6 +107,8 @@ extension TweetListViewController {
             .bind(to: tableView.rx.isHidden)
             .disposed(by: disposeBag)
 
+        // Load lastest tweets
+        viewModel.loadTweets.onNext(())
     }
 
     private func bindTableView() {

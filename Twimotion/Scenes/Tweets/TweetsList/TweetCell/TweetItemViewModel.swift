@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol TweetsItemViewModel {
+protocol TweetItemViewModelType {
     var profileImageUrl: URL? { get }
     var username: String { get }
     var name: String { get }
@@ -16,7 +16,7 @@ protocol TweetsItemViewModel {
     var text: String { get }
 }
 
-struct TweetItemViewModel {
+struct TweetItemViewModel: TweetItemViewModelType {
     private let tweet: Tweet
 
     var profileImageUrl: URL? {

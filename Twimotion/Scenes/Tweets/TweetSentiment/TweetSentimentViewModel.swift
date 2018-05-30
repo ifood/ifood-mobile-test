@@ -13,6 +13,7 @@ import RxSwift
 protocol TweetSentimentViewModelType {
     // inputs
     var dismissEvent: PublishSubject<Void> { get }
+    var loadSentiment: PublishSubject<Void> { get }
 
     //outputs
     var tweetDescription: Observable<String> { get }
@@ -37,6 +38,7 @@ class TweetSentimentViewModel: TweetSentimentViewModelType {
     // MARK: - RxBindings
     //inputs
     let dismissEvent = PublishSubject<Void>()
+    let loadSentiment = PublishSubject<Void>()
 
     // outputs
     let isLoadingSentiment = BehaviorSubject<Bool>(value: false)
@@ -60,9 +62,9 @@ class TweetSentimentViewModel: TweetSentimentViewModelType {
     var sentimentDescription: Observable<String> {
         return sentiment.asObservable().map {
             switch $0 {
-            case .happy: return "This is a happy tweet!"
-            case .neutral: return "This is a normal tweet!"
-            case .sad: return "This is a sad tweet!"
+            case .happy: return L10n.TweetSentiment.happyMessage
+            case .neutral: return L10n.TweetSentiment.neutralMessage
+            case .sad: return L10n.TweetSentiment.sadMessage
             }
         }
     }
@@ -93,14 +95,16 @@ class TweetSentimentViewModel: TweetSentimentViewModelType {
             .bind(onNext: { [weak self] in self?.delegate?.didDismissedPopup() })
             .disposed(by: disposeBag)
 
-        loadSentiment()
+        loadSentiment
+            .bind { [weak self] in self?.loadTweetSentiment() }
+            .disposed(by: disposeBag)
     }
 
 }
 
 extension TweetSentimentViewModel {
 
-    private func loadSentiment() {
+    private func loadTweetSentiment() {
         isLoadingSentiment.onNext(true)
 
         tweet.asObservable()

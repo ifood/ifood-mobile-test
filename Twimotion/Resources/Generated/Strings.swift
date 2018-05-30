@@ -23,6 +23,12 @@ internal enum L10n {
   internal enum TweetSentiment {
     /// Couldn't load tweet sentiment. Try again later!
     internal static let errorMessage = L10n.tr("Localizable", "tweet_sentiment.error_message")
+    /// This is a happy tweet!
+    internal static let happyMessage = L10n.tr("Localizable", "tweet_sentiment.happy_message")
+    /// This is a normal tweet!
+    internal static let neutralMessage = L10n.tr("Localizable", "tweet_sentiment.neutral_message")
+    /// This is a sad tweet!
+    internal static let sadMessage = L10n.tr("Localizable", "tweet_sentiment.sad_message")
   }
 
   internal enum Tweets {

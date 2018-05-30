@@ -52,7 +52,7 @@ class TweetSentimentViewController: UIViewController {
 
     override func loadView() {
         super.loadView()
-        self.wrapperCenterYConstraint.constant = 450.0
+        self.wrapperCenterYConstraint.constant = 600.0
         self.view.layoutIfNeeded()
     }
 
@@ -154,5 +154,7 @@ extension TweetSentimentViewController {
             }
             .disposed(by: disposeBag)
 
+        // request load sentiment
+        viewModel.loadSentiment.onNext(())
     }
 }
