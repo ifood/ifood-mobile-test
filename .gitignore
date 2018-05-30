@@ -42,7 +42,6 @@ xcuserdata/
 
 ## Playgrounds
 timeline.xctimeline
-playground.xcworkspace
 
 # Swift Package Manager
 #
@@ -67,23 +66,4 @@ fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
 
-### Xcode ###
-# Xcode
-#
-# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
-## Build generated
-
-## Various settings
-
-## Other
-
-### Xcode Patch ###
-*.xcodeproj/*
-!*.xcodeproj/project.pbxproj
-!*.xcodeproj/xcshareddata/
-!*.xcworkspace/contents.xcworkspacedata
-/*.gcno
-
-
-# End of https://www.gitignore.io/api/xcode,swift,cocoapods
