@@ -1,0 +1,28 @@
+GEM
+  specs:
+    CFPropertyList (3.0.0)
+    atomos (0.1.2)
+    claide (1.0.2)
+    clamp (0.6.5)
+    colored2 (3.1.2)
+    colorize (0.8.1)
+    nanaimo (0.2.5)
+    synx (0.2.1)
+      clamp (~> 0.6)
+      colorize (~> 0.7)
+      xcodeproj (~> 1.0)
+    xcodeproj (1.5.7)
+      CFPropertyList (>= 2.3.3, < 4.0)
+      atomos (~> 0.1.2)
+      claide (>= 1.0.2, < 2.0)
+      colored2 (~> 3.1)
+      nanaimo (~> 0.2.4)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  synx (~> 0.2)
+
+BUNDLED WITH
+   1.16.1
