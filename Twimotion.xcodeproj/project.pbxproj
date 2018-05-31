@@ -13,10 +13,10 @@
 		0A4FB44120BE82A6001917A0 /* TweetItemViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4FB44020BE82A6001917A0 /* TweetItemViewModelTests.swift */; };
 		0A4FB44320BE878D001917A0 /* TweetSentimentViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4FB44220BE878D001917A0 /* TweetSentimentViewModelTests.swift */; };
 		0A4FB44520BE882F001917A0 /* NaturalLangDataSourceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4FB44420BE882F001917A0 /* NaturalLangDataSourceMock.swift */; };
+		0A72860420BF99E800D2461F /* TwimotionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A72860320BF99E800D2461F /* TwimotionUITests.swift */; };
 		0A9BA0AE20B9DD6F0045B5EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9BA0AD20B9DD6F0045B5EF /* AppDelegate.swift */; };
 		0A9BA0B520B9DD700045B5EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A9BA0B420B9DD700045B5EF /* Assets.xcassets */; };
 		0A9BA0B820B9DD700045B5EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A9BA0B620B9DD700045B5EF /* LaunchScreen.storyboard */; };
-		0A9BA0CE20B9DD700045B5EF /* TwimotionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9BA0CD20B9DD700045B5EF /* TwimotionUITests.swift */; };
 		0A9BA0E020B9E0A60045B5EF /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9BA0DF20B9E0A60045B5EF /* Strings.swift */; };
 		0A9BA0E220B9E0B20045B5EF /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9BA0E120B9E0B20045B5EF /* Assets.swift */; };
 		0A9BA0E420B9E14F0045B5EF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0A9BA0E320B9E14F0045B5EF /* Localizable.strings */; };
@@ -59,18 +59,17 @@
 		0AF2312220BB85AC0055DC8A /* TweetListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AF2312020BB85AC0055DC8A /* TweetListViewController.xib */; };
 		5D253CF3626568182C843FC6 /* Pods_Twimotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C90259CD8EFED624FF49C06 /* Pods_Twimotion.framework */; };
 		6E846DF97DFD7BA29BDA7852 /* Pods_TwimotionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02634258F098F43DFE4BACCB /* Pods_TwimotionTests.framework */; };
-		E9E636C3331F46D70C3937FA /* Pods_TwimotionUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AB776B6FDD60BA30E0145F8 /* Pods_TwimotionUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0A9BA0BF20B9DD700045B5EF /* PBXContainerItemProxy */ = {
+		0A72860620BF99E800D2461F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0A9BA0A220B9DD6F0045B5EF /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 0A9BA0A920B9DD6F0045B5EF;
 			remoteInfo = Twimotion;
 		};
-		0A9BA0CA20B9DD700045B5EF /* PBXContainerItemProxy */ = {
+		0A9BA0BF20B9DD700045B5EF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0A9BA0A220B9DD6F0045B5EF /* Project object */;
 			proxyType = 1;
@@ -87,6 +86,9 @@
 		0A4FB44020BE82A6001917A0 /* TweetItemViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetItemViewModelTests.swift; sourceTree = "<group>"; };
 		0A4FB44220BE878D001917A0 /* TweetSentimentViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetSentimentViewModelTests.swift; sourceTree = "<group>"; };
 		0A4FB44420BE882F001917A0 /* NaturalLangDataSourceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaturalLangDataSourceMock.swift; sourceTree = "<group>"; };
+		0A72860120BF99E800D2461F /* TwimotionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwimotionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A72860320BF99E800D2461F /* TwimotionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwimotionUITests.swift; sourceTree = "<group>"; };
+		0A72860520BF99E800D2461F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A9BA0AA20B9DD6F0045B5EF /* Twimotion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twimotion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A9BA0AD20B9DD6F0045B5EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A9BA0B420B9DD700045B5EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -94,9 +96,6 @@
 		0A9BA0B920B9DD700045B5EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A9BA0BE20B9DD700045B5EF /* TwimotionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwimotionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A9BA0C420B9DD700045B5EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0A9BA0C920B9DD700045B5EF /* TwimotionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwimotionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0A9BA0CD20B9DD700045B5EF /* TwimotionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwimotionUITests.swift; sourceTree = "<group>"; };
-		0A9BA0CF20B9DD700045B5EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A9BA0DF20B9E0A60045B5EF /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		0A9BA0E120B9E0B20045B5EF /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		0A9BA0E320B9E14F0045B5EF /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -148,6 +147,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0A7285FE20BF99E800D2461F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0A9BA0A720B9DD6F0045B5EF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -161,14 +167,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E846DF97DFD7BA29BDA7852 /* Pods_TwimotionTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0A9BA0C620B9DD700045B5EF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E9E636C3331F46D70C3937FA /* Pods_TwimotionUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,12 +194,21 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
+		0A72860220BF99E800D2461F /* TwimotionUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0A72860320BF99E800D2461F /* TwimotionUITests.swift */,
+				0A72860520BF99E800D2461F /* Info.plist */,
+			);
+			path = TwimotionUITests;
+			sourceTree = "<group>";
+		};
 		0A9BA0A120B9DD6F0045B5EF = {
 			isa = PBXGroup;
 			children = (
 				0A9BA0AC20B9DD6F0045B5EF /* Twimotion */,
 				0A9BA0C120B9DD700045B5EF /* TwimotionTests */,
-				0A9BA0CC20B9DD700045B5EF /* TwimotionUITests */,
+				0A72860220BF99E800D2461F /* TwimotionUITests */,
 				0A9BA0AB20B9DD6F0045B5EF /* Products */,
 				22C43A941F912EA4BDDEA157 /* Pods */,
 				D35A783476C27F1DF2DA7F4E /* Frameworks */,
@@ -213,7 +220,7 @@
 			children = (
 				0A9BA0AA20B9DD6F0045B5EF /* Twimotion.app */,
 				0A9BA0BE20B9DD700045B5EF /* TwimotionTests.xctest */,
-				0A9BA0C920B9DD700045B5EF /* TwimotionUITests.xctest */,
+				0A72860120BF99E800D2461F /* TwimotionUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -241,15 +248,6 @@
 				0A9BA0C420B9DD700045B5EF /* Info.plist */,
 			);
 			path = TwimotionTests;
-			sourceTree = "<group>";
-		};
-		0A9BA0CC20B9DD700045B5EF /* TwimotionUITests */ = {
-			isa = PBXGroup;
-			children = (
-				0A9BA0CD20B9DD700045B5EF /* TwimotionUITests.swift */,
-				0A9BA0CF20B9DD700045B5EF /* Info.plist */,
-			);
-			path = TwimotionUITests;
 			sourceTree = "<group>";
 		};
 		0A9BA0DD20B9E04C0045B5EF /* Resources */ = {
@@ -465,6 +463,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0A72860020BF99E800D2461F /* TwimotionUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A72860820BF99E800D2461F /* Build configuration list for PBXNativeTarget "TwimotionUITests" */;
+			buildPhases = (
+				0A7285FD20BF99E800D2461F /* Sources */,
+				0A7285FE20BF99E800D2461F /* Frameworks */,
+				0A7285FF20BF99E800D2461F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0A72860720BF99E800D2461F /* PBXTargetDependency */,
+			);
+			name = TwimotionUITests;
+			productName = TwimotionUITests;
+			productReference = 0A72860120BF99E800D2461F /* TwimotionUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		0A9BA0A920B9DD6F0045B5EF /* Twimotion */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0A9BA0D220B9DD700045B5EF /* Build configuration list for PBXNativeTarget "Twimotion" */;
@@ -508,27 +524,6 @@
 			productReference = 0A9BA0BE20B9DD700045B5EF /* TwimotionTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		0A9BA0C820B9DD700045B5EF /* TwimotionUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0A9BA0D820B9DD700045B5EF /* Build configuration list for PBXNativeTarget "TwimotionUITests" */;
-			buildPhases = (
-				2E581DABBB20EADA0949F834 /* [CP] Check Pods Manifest.lock */,
-				0A9BA0C520B9DD700045B5EF /* Sources */,
-				0A9BA0C620B9DD700045B5EF /* Frameworks */,
-				0A9BA0C720B9DD700045B5EF /* Resources */,
-				F53C94CE98E9E11B32610DD7 /* [CP] Embed Pods Frameworks */,
-				760F09584CE2C09159BE1ADD /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0A9BA0CB20B9DD700045B5EF /* PBXTargetDependency */,
-			);
-			name = TwimotionUITests;
-			productName = TwimotionUITests;
-			productReference = 0A9BA0C920B9DD700045B5EF /* TwimotionUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -539,14 +534,14 @@
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = Twimotion;
 				TargetAttributes = {
+					0A72860020BF99E800D2461F = {
+						CreatedOnToolsVersion = 9.3.1;
+						TestTargetID = 0A9BA0A920B9DD6F0045B5EF;
+					};
 					0A9BA0A920B9DD6F0045B5EF = {
 						CreatedOnToolsVersion = 9.3.1;
 					};
 					0A9BA0BD20B9DD700045B5EF = {
-						CreatedOnToolsVersion = 9.3.1;
-						TestTargetID = 0A9BA0A920B9DD6F0045B5EF;
-					};
-					0A9BA0C820B9DD700045B5EF = {
 						CreatedOnToolsVersion = 9.3.1;
 						TestTargetID = 0A9BA0A920B9DD6F0045B5EF;
 					};
@@ -567,12 +562,19 @@
 			targets = (
 				0A9BA0A920B9DD6F0045B5EF /* Twimotion */,
 				0A9BA0BD20B9DD700045B5EF /* TwimotionTests */,
-				0A9BA0C820B9DD700045B5EF /* TwimotionUITests */,
+				0A72860020BF99E800D2461F /* TwimotionUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0A7285FF20BF99E800D2461F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0A9BA0A820B9DD6F0045B5EF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -592,13 +594,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AA63FA620BA66A7005E72D8 /* user_timeline.json in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0A9BA0C720B9DD700045B5EF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -632,24 +627,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"$PODS_ROOT\"/SwiftGen/bin/swiftgen xcassets -t swift4 \"$PROJECT_DIR/Twimotion/Resources/Assets.xcassets\" --output \"$PROJECT_DIR/Twimotion/Resources/Generated/Assets.swift\"\n\n\"$PODS_ROOT\"/SwiftGen/bin/swiftgen strings -t structured-swift4 \"$PROJECT_DIR/Twimotion/Resources/Localizable.strings\" --output \"$PROJECT_DIR/Twimotion/Resources/Generated/Strings.swift\"\n";
-		};
-		2E581DABBB20EADA0949F834 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TwimotionUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
 		};
 		3142C93AAE736A183149C718 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -690,21 +667,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TwimotionTests/Pods-TwimotionTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		760F09584CE2C09159BE1ADD /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TwimotionUITests/Pods-TwimotionUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7BB2FEE80D55994017D9C3B7 /* [CP] Embed Pods Frameworks */ = {
@@ -790,24 +752,17 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Twimotion/Pods-Twimotion-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F53C94CE98E9E11B32610DD7 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TwimotionUITests/Pods-TwimotionUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0A7285FD20BF99E800D2461F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A72860420BF99E800D2461F /* TwimotionUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0A9BA0A620B9DD6F0045B5EF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -863,26 +818,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0A9BA0C520B9DD700045B5EF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0A9BA0CE20B9DD700045B5EF /* TwimotionUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		0A72860720BF99E800D2461F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0A9BA0A920B9DD6F0045B5EF /* Twimotion */;
+			targetProxy = 0A72860620BF99E800D2461F /* PBXContainerItemProxy */;
+		};
 		0A9BA0C020B9DD700045B5EF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 0A9BA0A920B9DD6F0045B5EF /* Twimotion */;
 			targetProxy = 0A9BA0BF20B9DD700045B5EF /* PBXContainerItemProxy */;
-		};
-		0A9BA0CB20B9DD700045B5EF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0A9BA0A920B9DD6F0045B5EF /* Twimotion */;
-			targetProxy = 0A9BA0CA20B9DD700045B5EF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -898,6 +845,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0A72860920BF99E800D2461F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AD62P27W7L;
+				INFOPLIST_FILE = TwimotionUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.twimotion.TwimotionUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Twimotion;
+			};
+			name = Debug;
+		};
+		0A72860A20BF99E800D2461F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AD62P27W7L;
+				INFOPLIST_FILE = TwimotionUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.twimotion.TwimotionUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Twimotion;
+			};
+			name = Release;
+		};
 		0A9BA0D020B9DD700045B5EF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1096,51 +1081,18 @@
 			};
 			name = Release;
 		};
-		0A9BA0D920B9DD700045B5EF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0FBE205068244209408DA004 /* Pods-TwimotionUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AD62P27W7L;
-				INFOPLIST_FILE = TwimotionUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.twimotion.TwimotionUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Twimotion;
-			};
-			name = Debug;
-		};
-		0A9BA0DA20B9DD700045B5EF /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C767B70FD76A1BB5D494CC3D /* Pods-TwimotionUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AD62P27W7L;
-				INFOPLIST_FILE = TwimotionUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.twimotion.TwimotionUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Twimotion;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0A72860820BF99E800D2461F /* Build configuration list for PBXNativeTarget "TwimotionUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A72860920BF99E800D2461F /* Debug */,
+				0A72860A20BF99E800D2461F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		0A9BA0A520B9DD6F0045B5EF /* Build configuration list for PBXProject "Twimotion" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1164,15 +1116,6 @@
 			buildConfigurations = (
 				0A9BA0D620B9DD700045B5EF /* Debug */,
 				0A9BA0D720B9DD700045B5EF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0A9BA0D820B9DD700045B5EF /* Build configuration list for PBXNativeTarget "TwimotionUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0A9BA0D920B9DD700045B5EF /* Debug */,
-				0A9BA0DA20B9DD700045B5EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
