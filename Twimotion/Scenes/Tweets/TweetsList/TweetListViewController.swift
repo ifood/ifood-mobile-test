@@ -21,6 +21,7 @@ class TweetListViewController: UIViewController {
     @IBOutlet weak var emptyAlertLabel: UILabel!
     @IBOutlet weak var tryAgainButton: UIButton!
     @IBOutlet weak var emptyAlertView: UIStackView!
+    @IBOutlet weak var userHasNotTweetedLabel: UILabel!
 
     // MARK: - Initializers
 
@@ -107,6 +108,12 @@ extension TweetListViewController {
             .bind(to: tableView.rx.isHidden)
             .disposed(by: disposeBag)
 
+        viewModel.username
+            .map { L10n.Tweets.userHasNotTweetedYet($0) }
+            .asDriver(onErrorJustReturn: L10n.Tweets.userHasNotTweetedYetDefault)
+            .drive(userHasNotTweetedLabel.rx.text)
+            .disposed(by: disposeBag)
+
         // Load lastest tweets
         viewModel.loadTweets.onNext(())
     }
@@ -127,8 +134,19 @@ extension TweetListViewController {
 
         tableView.dataSource = nil
 
-        viewModel.cellViewModels
+        let cellsViewModel = viewModel.cellViewModels.share()
+
+        cellsViewModel
             .bind(to: tableView.rx.items(dataSource: dataSource))
+            .disposed(by: disposeBag)
+
+        cellsViewModel
+            .map { $0.first?.items.isEmpty ?? false } // has no tweets?
+            .asDriver(onErrorJustReturn: false)
+            .drive(onNext: { [weak self] hasNoTweets in
+                self?.userHasNotTweetedLabel.isHidden = !hasNoTweets
+                self?.tableView.isHidden = hasNoTweets
+            })
             .disposed(by: disposeBag)
 
         tableView.rx.itemSelected

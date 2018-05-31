@@ -17,6 +17,7 @@
                 <outlet property="emptyAlertView" destination="WMg-jX-9AW" id="Jnp-ep-aiw"/>
                 <outlet property="tableView" destination="ONd-CI-coM" id="mZK-3p-jGZ"/>
                 <outlet property="tryAgainButton" destination="ta3-DT-Zgg" id="hbX-ym-GZi"/>
+                <outlet property="userHasNotTweetedLabel" destination="dHg-hq-HZl" id="UrN-ac-jzS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -33,7 +34,7 @@
                     <rect key="frame" x="177" y="323.5" width="20" height="20"/>
                 </activityIndicatorView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="WMg-jX-9AW">
-                    <rect key="frame" x="156" y="310" width="63" height="47"/>
+                    <rect key="frame" x="156" y="310.5" width="63" height="47"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0bP-rV-r3U">
                             <rect key="frame" x="0.0" y="0.0" width="63" height="17"/>
@@ -47,11 +48,20 @@
                         </button>
                     </subviews>
                 </stackView>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@user has not tweeted yet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dHg-hq-HZl">
+                    <rect key="frame" x="24" y="323" width="327" height="20.5"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <color key="textColor" red="0.52417116119999996" green="0.52417116119999996" blue="0.52417116119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="WMg-jX-9AW" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="8ZQ-Ro-ZUw"/>
+                <constraint firstItem="dHg-hq-HZl" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="8oF-BL-q4p"/>
                 <constraint firstItem="NLW-op-EIx" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="AwR-M8-wZr"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dHg-hq-HZl" secondAttribute="trailing" constant="24" id="Fg1-p8-TqL"/>
+                <constraint firstItem="dHg-hq-HZl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="Iob-ML-yX3"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ONd-CI-coM" secondAttribute="bottom" id="UuB-LJ-HDS"/>
                 <constraint firstItem="WMg-jX-9AW" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="VYE-kl-4YE"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ONd-CI-coM" secondAttribute="trailing" id="ZWH-7t-FjX"/>

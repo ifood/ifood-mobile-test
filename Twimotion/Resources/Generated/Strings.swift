@@ -36,6 +36,12 @@ internal enum L10n {
     internal static let tweetsNotFound = L10n.tr("Localizable", "tweets.tweets_not_found")
     /// Select one tweet to analyse its sentiment.
     internal static let tweetsSectionMessage = L10n.tr("Localizable", "tweets.tweets_section_message")
+    /// @%@ has not tweeted yet.
+    internal static func userHasNotTweetedYet(_ p1: String) -> String {
+      return L10n.tr("Localizable", "tweets.user_has_not_tweeted_yet", p1)
+    }
+    /// User has not tweeted yet.
+    internal static let userHasNotTweetedYetDefault = L10n.tr("Localizable", "tweets.user_has_not_tweeted_yet_default")
   }
 }
 // swiftlint:enable explicit_type_interface identifier_name line_length nesting type_body_length type_name
