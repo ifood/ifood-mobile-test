@@ -21,6 +21,7 @@ final class TweetsListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        addTapGesture()
         setupDataSource()
     }
     
@@ -47,8 +48,21 @@ final class TweetsListViewController: UIViewController {
             print(error)
         }
         
-        dataSource.loadTweets(for: "rafael_csa")
+        loadUserTimeline()
     }
+    
+    private func addTapGesture() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(loadUserTimeline))
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc
+    private func loadUserTimeline() {
+        lastTimelineLoaded = lastTimelineLoaded == "rafael_csa" ? "siracusa" : "rafael_csa"
+        dataSource.loadTweets(for: lastTimelineLoaded)
+    }
+    
+    private var lastTimelineLoaded = "rafael_csa"
 }
 
 extension TweetsListViewController: UITableViewDataSource {

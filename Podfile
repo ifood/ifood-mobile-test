@@ -7,6 +7,7 @@ use_frameworks!
 
 def thirdParty
     pod 'SwiftLint'
+    pod 'KeychainAccess'
 end
 
 target 'TweetEmotions' do

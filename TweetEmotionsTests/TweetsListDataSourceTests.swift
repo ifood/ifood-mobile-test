@@ -44,7 +44,7 @@ final class TweetsListDataSourceTests: XCTestCase {
         wait(for: [expectation], timeout: 5)
     }
     
-    private let username = "Johnny Appleseed"
+    private let username = "johnny_appleseed"
 }
 
 private final class TwitterServiceMock: TwitterServiceable {
@@ -53,24 +53,16 @@ private final class TwitterServiceMock: TwitterServiceable {
     }
     
     func getTweets(for username: String, completion: @escaping (Result<[Tweet]>) -> Void) {
-        DispatchQueue.global().asyncAfter(deadline: .now() + 1) {
-            if let numberOfTweetsToLoad = self.numberOfTweetsToLoad {
-                let tweets = (0..<numberOfTweetsToLoad).map { _ in self.createRandomTweet() }
-                let result: Result<[Tweet]> = Result.success(tweets)
-                completion(result)
-                
-            } else {
-                let error = NetworkError.noData
-                let result: Result<[Tweet]> = Result.failure(error)
-                completion(result)
-            }
+        if let numberOfTweetsToLoad = self.numberOfTweetsToLoad {
+            let tweets = (0..<numberOfTweetsToLoad).map { _ in Tweet.createRandomTweet() }
+            let result: Result<[Tweet]> = Result.success(tweets)
+            completion(result)
+            
+        } else {
+            let error = NetworkError.noData
+            let result: Result<[Tweet]> = Result.failure(error)
+            completion(result)
         }
-    }
-    
-    private func createRandomTweet() -> Tweet {
-        let id = Int(arc4random_uniform(UInt32(numberOfTweetsToLoad ?? 100)))
-        let text = "\(id)"
-        return Tweet(id: id, text: text)
     }
     
     private let numberOfTweetsToLoad: Int?

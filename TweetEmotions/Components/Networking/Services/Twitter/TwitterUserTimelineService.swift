@@ -1,6 +1,10 @@
 import Foundation
 
-final class TwitterUserTimelineService: Service {
+protocol TwitterUserTimelineServiceable {
+    func getTimeline(for username: String, with authenticationToken: AuthenticationToken, completion: @escaping (Result<[Tweet]>) -> Void)
+}
+
+final class TwitterUserTimelineService: Service, TwitterUserTimelineServiceable {
     // MARK: Service
     
     typealias Loadable = [Tweet]

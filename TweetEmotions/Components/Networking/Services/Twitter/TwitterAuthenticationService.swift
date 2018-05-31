@@ -1,6 +1,10 @@
 import Foundation
 
-final class TwitterAuthenticationService: Service {
+protocol TwitterAuthenticationServiceable {
+    func authenticate(completion: @escaping (Result<AuthenticationToken>) -> Void)
+}
+
+final class TwitterAuthenticationService: Service, TwitterAuthenticationServiceable {
     // MARK: Service
     
     typealias Loadable = AuthenticationToken

@@ -11,6 +11,9 @@
 		08027A2320C047B700C290B2 /* TweetsListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08027A2220C047B700C290B2 /* TweetsListDataSource.swift */; };
 		08027A2620C08C1200C290B2 /* URL+QueryItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08027A2520C08C1200C290B2 /* URL+QueryItems.swift */; };
 		08027A2820C08E6C00C290B2 /* TweetsListDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08027A2720C08E6C00C290B2 /* TweetsListDataSourceTests.swift */; };
+		08027A2A20C096C500C290B2 /* TwitterAuthenticationTokenProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08027A2920C096C500C290B2 /* TwitterAuthenticationTokenProvider.swift */; };
+		08027A2C20C09B1D00C290B2 /* TwitterServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08027A2B20C09B1D00C290B2 /* TwitterServiceTests.swift */; };
+		08027A2E20C09CD100C290B2 /* Tweet+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08027A2D20C09CD100C290B2 /* Tweet+Random.swift */; };
 		0819D4B120BF4D13002288E7 /* TweetsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0819D4B020BF4D13002288E7 /* TweetsListViewController.swift */; };
 		0819D4B420BF4E45002288E7 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0819D4B320BF4E45002288E7 /* AppCoordinator.swift */; };
 		0819D4B820C02F37002288E7 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0819D4B720C02F37002288E7 /* NetworkClient.swift */; };
@@ -47,6 +50,9 @@
 		08027A2220C047B700C290B2 /* TweetsListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetsListDataSource.swift; sourceTree = "<group>"; };
 		08027A2520C08C1200C290B2 /* URL+QueryItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+QueryItems.swift"; sourceTree = "<group>"; };
 		08027A2720C08E6C00C290B2 /* TweetsListDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetsListDataSourceTests.swift; sourceTree = "<group>"; };
+		08027A2920C096C500C290B2 /* TwitterAuthenticationTokenProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterAuthenticationTokenProvider.swift; sourceTree = "<group>"; };
+		08027A2B20C09B1D00C290B2 /* TwitterServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterServiceTests.swift; sourceTree = "<group>"; };
+		08027A2D20C09CD100C290B2 /* Tweet+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tweet+Random.swift"; sourceTree = "<group>"; };
 		0819D4B020BF4D13002288E7 /* TweetsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetsListViewController.swift; sourceTree = "<group>"; };
 		0819D4B320BF4E45002288E7 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		0819D4B720C02F37002288E7 /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
@@ -99,8 +105,8 @@
 			children = (
 				08027A1F20C044A000C290B2 /* SupportingFiles */,
 				0819D4D420C04187002288E7 /* TwitterAuthenticationService.swift */,
-				0819D4D620C04306002288E7 /* TwitterUserTimelineService.swift */,
 				08027A2020C044DE00C290B2 /* TwitterService.swift */,
+				0819D4D620C04306002288E7 /* TwitterUserTimelineService.swift */,
 			);
 			path = Twitter;
 			sourceTree = "<group>";
@@ -109,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				0819D4D220C03AF5002288E7 /* TwitterAPIEnvironment.swift */,
+				08027A2920C096C500C290B2 /* TwitterAuthenticationTokenProvider.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -117,6 +124,14 @@
 			isa = PBXGroup;
 			children = (
 				08027A2520C08C1200C290B2 /* URL+QueryItems.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		08027A2F20C09D1600C290B2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				08027A2D20C09CD100C290B2 /* Tweet+Random.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -132,8 +147,8 @@
 		0819D4B220BF4D27002288E7 /* TweetsList */ = {
 			isa = PBXGroup;
 			children = (
-				0819D4B020BF4D13002288E7 /* TweetsListViewController.swift */,
 				08027A2220C047B700C290B2 /* TweetsListDataSource.swift */,
+				0819D4B020BF4D13002288E7 /* TweetsListViewController.swift */,
 			);
 			path = TweetsList;
 			sourceTree = "<group>";
@@ -224,8 +239,8 @@
 		08C0448920BF486F00BA5CCC /* TweetEmotions */ = {
 			isa = PBXGroup;
 			children = (
-				08027A2420C08C0600C290B2 /* Extensions */,
 				08C044AA20BF497F00BA5CCC /* Components */,
+				08027A2420C08C0600C290B2 /* Extensions */,
 				0819D4B920C02F5B002288E7 /* Models */,
 				08C044AC20BF49BE00BA5CCC /* Resources */,
 				0819D4AF20BF4CF9002288E7 /* Scenes */,
@@ -236,8 +251,10 @@
 		08C0449E20BF487000BA5CCC /* TweetEmotionsTests */ = {
 			isa = PBXGroup;
 			children = (
+				08027A2F20C09D1600C290B2 /* Extensions */,
 				08C044A120BF487000BA5CCC /* Info.plist */,
 				08027A2720C08E6C00C290B2 /* TweetsListDataSourceTests.swift */,
+				08027A2B20C09B1D00C290B2 /* TwitterServiceTests.swift */,
 			);
 			path = TweetEmotionsTests;
 			sourceTree = "<group>";
@@ -326,6 +343,7 @@
 				0819D4AE20BF4B53002288E7 /* SwiftLint */,
 				08C0448420BF486F00BA5CCC /* Frameworks */,
 				08C0448520BF486F00BA5CCC /* Resources */,
+				F3C0C1BAAB022FD1D22C2D7D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -344,6 +362,7 @@
 				08C0449720BF487000BA5CCC /* Sources */,
 				08C0449820BF487000BA5CCC /* Frameworks */,
 				08C0449920BF487000BA5CCC /* Resources */,
+				5D3B45D48123BB9649A820F6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -446,6 +465,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		5D3B45D48123BB9649A820F6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TweetEmotionsTests/Pods-TweetEmotionsTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TweetEmotionsTests/Pods-TweetEmotionsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C468339622BA879749B1FF5A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -462,6 +499,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3C0C1BAAB022FD1D22C2D7D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TweetEmotions/Pods-TweetEmotions-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TweetEmotions/Pods-TweetEmotions-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -487,6 +542,7 @@
 				0819D4B820C02F37002288E7 /* NetworkClient.swift in Sources */,
 				0819D4CA20C0309F002288E7 /* Service.swift in Sources */,
 				0819D4BF20C02F9D002288E7 /* HTTPStatusCode.swift in Sources */,
+				08027A2A20C096C500C290B2 /* TwitterAuthenticationTokenProvider.swift in Sources */,
 				0819D4C620C02FE8002288E7 /* ResourceLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -496,6 +552,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				08027A2820C08E6C00C290B2 /* TweetsListDataSourceTests.swift in Sources */,
+				08027A2C20C09B1D00C290B2 /* TwitterServiceTests.swift in Sources */,
+				08027A2E20C09CD100C290B2 /* Tweet+Random.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -644,10 +702,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8YWUAYQLV8;
 				INFOPLIST_FILE = TweetEmotions/Resources/SupportingFiles/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rafaelcsa.TweetEmotions;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -663,10 +718,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8YWUAYQLV8;
 				INFOPLIST_FILE = TweetEmotions/Resources/SupportingFiles/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rafaelcsa.TweetEmotions;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -678,17 +730,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 64C59A47A79DB324E957F95E /* Pods-TweetEmotionsTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8YWUAYQLV8;
 				INFOPLIST_FILE = TweetEmotionsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rafaelcsa.TweetEmotionsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -702,17 +749,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8AA3F823C935BBECFBA13B45 /* Pods-TweetEmotionsTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8YWUAYQLV8;
 				INFOPLIST_FILE = TweetEmotionsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rafaelcsa.TweetEmotionsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

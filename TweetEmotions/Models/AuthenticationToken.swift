@@ -1,6 +1,6 @@
 import Foundation
 
-struct AuthenticationToken: Decodable {
+struct AuthenticationToken: Decodable, Equatable {
     let accessToken: String
     let tokenType: AuthenticationTokenType
 }

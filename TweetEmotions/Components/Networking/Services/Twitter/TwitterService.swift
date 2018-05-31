@@ -8,16 +8,17 @@ final class TwitterService: TwitterServiceable {
     
     // MARK: Init/Deinit
     
-    init(authenticationService: TwitterAuthenticationService, userTimelineService: TwitterUserTimelineService) {
+    init(authenticationService: TwitterAuthenticationServiceable, userTimelineService: TwitterUserTimelineServiceable, tokenProvider: TwitterAuthenticationTokenProviding) {
         self.authenticationService = authenticationService
         self.userTimelineService = userTimelineService
+        self.tokenProvider = tokenProvider
     }
     
     // MARK: Public methods
     
     func getTweets(for username: String, completion: @escaping(Result<[Tweet]>) -> Void) {
-        if let bearerToken = bearerToken {
-            getTimeline(for: username, with: bearerToken, completion: completion)
+        if let authenticationToken = tokenProvider.authenticationToken {
+            getTimeline(for: username, with: authenticationToken, completion: completion)
         } else {
             authenticateThenGetTimeline(for: username, completion: completion)
         }
@@ -25,15 +26,13 @@ final class TwitterService: TwitterServiceable {
     
     // MARK: Private properties
     
-    private let authenticationService: TwitterAuthenticationService
-    private let userTimelineService: TwitterUserTimelineService
-    
-    private var bearerToken: String?
+    private let authenticationService: TwitterAuthenticationServiceable
+    private let userTimelineService: TwitterUserTimelineServiceable
+    private let tokenProvider: TwitterAuthenticationTokenProviding
     
     // MARK: Private methods
     
-    private func getTimeline(for username: String, with bearerToken: String, completion: @escaping(Result<[Tweet]>) -> Void) {
-        let authenticationToken = AuthenticationToken(accessToken: bearerToken, tokenType: .bearer)
+    private func getTimeline(for username: String, with authenticationToken: AuthenticationToken, completion: @escaping(Result<[Tweet]>) -> Void) {
         userTimelineService.getTimeline(for: username, with: authenticationToken, completion: completion)
     }
     
@@ -43,8 +42,8 @@ final class TwitterService: TwitterServiceable {
             
             switch result {
             case .success(let authenticationToken):
-                strongSelf.bearerToken = authenticationToken.accessToken
-                strongSelf.getTimeline(for: username, with: authenticationToken.accessToken, completion: completion)
+                strongSelf.tokenProvider.authenticationToken = authenticationToken
+                strongSelf.getTimeline(for: username, with: authenticationToken, completion: completion)
                 
             case .failure(let error):
                 let result: Result<[Tweet]> = Result.failure(error)
