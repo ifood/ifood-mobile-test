@@ -31,8 +31,11 @@ final class TweetsListViewController: UIViewController {
     
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
-        tableView.dataSource = self
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 80
         tableView.tableFooterView = UIView()
+        tableView.dataSource = self
+        TweetsListCell.register(for: tableView)
         return tableView
     }()
     
@@ -75,9 +78,9 @@ extension TweetsListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
+        let cell = TweetsListCell.dequeueCell(from: tableView, at: indexPath)
         let tweet = dataSource.tweets[indexPath.row]
-        cell.textLabel?.text = tweet.text
+        cell.tweet = tweet
         return cell
     }
 }
