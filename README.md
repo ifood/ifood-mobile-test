@@ -1,5 +1,7 @@
 # Twimotion (ifood-mobile-test)
 
+[![Build Status](https://www.bitrise.io/app/52c2b00d0351759b/status.svg?token=b7iPbh7SGM9_4nF-5EtTuQ)](https://www.bitrise.io/app/52c2b00d0351759b)
+
 An iOS app that analyse a tweet sentiment.
 
 ---- 
