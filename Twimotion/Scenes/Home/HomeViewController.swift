@@ -50,10 +50,13 @@ extension HomeViewController {
 
         guard let viewModel = viewModel else { fatalError("viewModel should not be nil") }
 
-        usernameTextField.rx.text.orEmpty
-            .map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
-            .bind(to: viewModel.username)
-            .disposed(by: disposeBag)
+        let usernameFormatted = usernameTextField.rx.text.orEmpty.changed
+            .map { $0.trimmingCharacters(in: .whitespaces).replacingOccurrences(of: " ", with: "") }
+            .distinctUntilChanged()
+            .share()
+
+        usernameFormatted.bind(to: viewModel.username).disposed(by: disposeBag)
+        usernameFormatted.bind(to: usernameTextField.rx.text).disposed(by: disposeBag)
 
         // enable ListTweets button when username is not empty
         viewModel.username
