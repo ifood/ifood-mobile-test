@@ -18,6 +18,10 @@
 		08027A3320C0A43700C290B2 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08027A3220C0A43700C290B2 /* UIView+Constraints.swift */; };
 		08027A3520C0A6BF00C290B2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08027A3420C0A6BF00C290B2 /* User.swift */; };
 		08027A3820C0A73B00C290B2 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08027A3720C0A73B00C290B2 /* ReusableView.swift */; };
+		08027A3A20C0D71A00C290B2 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08027A3920C0D71A00C290B2 /* ImageLoader.swift */; };
+		08027A3D20C0D76400C290B2 /* HasLoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08027A3B20C0D76400C290B2 /* HasLoadingState.swift */; };
+		08027A3E20C0D76400C290B2 /* FileManaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08027A3C20C0D76400C290B2 /* FileManaging.swift */; };
+		08027A4020C0E59200C290B2 /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08027A3F20C0E59200C290B2 /* ProfileImageView.swift */; };
 		0819D4B120BF4D13002288E7 /* TweetsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0819D4B020BF4D13002288E7 /* TweetsListViewController.swift */; };
 		0819D4B420BF4E45002288E7 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0819D4B320BF4E45002288E7 /* AppCoordinator.swift */; };
 		0819D4B820C02F37002288E7 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0819D4B720C02F37002288E7 /* NetworkClient.swift */; };
@@ -61,6 +65,10 @@
 		08027A3220C0A43700C290B2 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		08027A3420C0A6BF00C290B2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		08027A3720C0A73B00C290B2 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		08027A3920C0D71A00C290B2 /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		08027A3B20C0D76400C290B2 /* HasLoadingState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HasLoadingState.swift; sourceTree = "<group>"; };
+		08027A3C20C0D76400C290B2 /* FileManaging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManaging.swift; sourceTree = "<group>"; };
+		08027A3F20C0E59200C290B2 /* ProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageView.swift; sourceTree = "<group>"; };
 		0819D4B020BF4D13002288E7 /* TweetsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetsListViewController.swift; sourceTree = "<group>"; };
 		0819D4B320BF4E45002288E7 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		0819D4B720C02F37002288E7 /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
@@ -131,8 +139,8 @@
 		08027A2420C08C0600C290B2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				08027A2520C08C1200C290B2 /* URL+QueryItems.swift */,
 				08027A3220C0A43700C290B2 /* UIView+Constraints.swift */,
+				08027A2520C08C1200C290B2 /* URL+QueryItems.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -148,9 +156,19 @@
 		08027A3620C0A72C00C290B2 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				08027A3C20C0D76400C290B2 /* FileManaging.swift */,
+				08027A3B20C0D76400C290B2 /* HasLoadingState.swift */,
 				08027A3720C0A73B00C290B2 /* ReusableView.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		08027A4120C0E5F600C290B2 /* SupportingViews */ = {
+			isa = PBXGroup;
+			children = (
+				08027A3F20C0E59200C290B2 /* ProfileImageView.swift */,
+			);
+			path = SupportingViews;
 			sourceTree = "<group>";
 		};
 		0819D4AF20BF4CF9002288E7 /* Scenes */ = {
@@ -164,9 +182,10 @@
 		0819D4B220BF4D27002288E7 /* TweetsList */ = {
 			isa = PBXGroup;
 			children = (
+				08027A4120C0E5F600C290B2 /* SupportingViews */,
+				08027A3020C0A30000C290B2 /* TweetsListCell.swift */,
 				08027A2220C047B700C290B2 /* TweetsListDataSource.swift */,
 				0819D4B020BF4D13002288E7 /* TweetsListViewController.swift */,
-				08027A3020C0A30000C290B2 /* TweetsListCell.swift */,
 			);
 			path = TweetsList;
 			sourceTree = "<group>";
@@ -221,6 +240,7 @@
 		0819D4C220C02FE8002288E7 /* Loaders */ = {
 			isa = PBXGroup;
 			children = (
+				08027A3920C0D71A00C290B2 /* ImageLoader.swift */,
 				0819D4C420C02FE8002288E7 /* ResourceLoader.swift */,
 			);
 			path = Loaders;
@@ -258,10 +278,10 @@
 		08C0448920BF486F00BA5CCC /* TweetEmotions */ = {
 			isa = PBXGroup;
 			children = (
-				08027A3620C0A72C00C290B2 /* Protocols */,
 				08C044AA20BF497F00BA5CCC /* Components */,
 				08027A2420C08C0600C290B2 /* Extensions */,
 				0819D4B920C02F5B002288E7 /* Models */,
+				08027A3620C0A72C00C290B2 /* Protocols */,
 				08C044AC20BF49BE00BA5CCC /* Resources */,
 				0819D4AF20BF4CF9002288E7 /* Scenes */,
 			);
@@ -550,17 +570,21 @@
 				0819D4BD20C02F86002288E7 /* Result.swift in Sources */,
 				0819D4CE20C03124002288E7 /* AuthenticationToken.swift in Sources */,
 				08027A2120C044DE00C290B2 /* TwitterService.swift in Sources */,
+				08027A4020C0E59200C290B2 /* ProfileImageView.swift in Sources */,
 				0819D4B420BF4E45002288E7 /* AppCoordinator.swift in Sources */,
+				08027A3E20C0D76400C290B2 /* FileManaging.swift in Sources */,
 				0819D4D320C03AF5002288E7 /* TwitterAPIEnvironment.swift in Sources */,
 				0819D4D020C03624002288E7 /* Tweet.swift in Sources */,
 				08027A3320C0A43700C290B2 /* UIView+Constraints.swift in Sources */,
 				08027A2620C08C1200C290B2 /* URL+QueryItems.swift in Sources */,
 				0819D4B120BF4D13002288E7 /* TweetsListViewController.swift in Sources */,
 				0819D4BB20C02F6C002288E7 /* NetworkActivityIndicatorController.swift in Sources */,
+				08027A3D20C0D76400C290B2 /* HasLoadingState.swift in Sources */,
 				08027A2320C047B700C290B2 /* TweetsListDataSource.swift in Sources */,
 				08C0448B20BF486F00BA5CCC /* AppDelegate.swift in Sources */,
 				0819D4D520C04187002288E7 /* TwitterAuthenticationService.swift in Sources */,
 				0819D4D720C04306002288E7 /* TwitterUserTimelineService.swift in Sources */,
+				08027A3A20C0D71A00C290B2 /* ImageLoader.swift in Sources */,
 				08027A3820C0A73B00C290B2 /* ReusableView.swift in Sources */,
 				0819D4B820C02F37002288E7 /* NetworkClient.swift in Sources */,
 				0819D4CA20C0309F002288E7 /* Service.swift in Sources */,
@@ -726,10 +750,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8YWUAYQLV8;
 				INFOPLIST_FILE = TweetEmotions/Resources/SupportingFiles/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rafaelcsa.TweetEmotions;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -745,10 +766,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8YWUAYQLV8;
 				INFOPLIST_FILE = TweetEmotions/Resources/SupportingFiles/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rafaelcsa.TweetEmotions;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -765,11 +783,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8YWUAYQLV8;
 				INFOPLIST_FILE = TweetEmotionsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rafaelcsa.TweetEmotionsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -788,11 +802,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8YWUAYQLV8;
 				INFOPLIST_FILE = TweetEmotionsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rafaelcsa.TweetEmotionsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

@@ -12,4 +12,8 @@ struct Tweet: Decodable {
     var userScreenName: String {
         return user.screenName
     }
+    
+    var profileImageUrl: URL {
+        return user.profileImageUrl
+    }
 }

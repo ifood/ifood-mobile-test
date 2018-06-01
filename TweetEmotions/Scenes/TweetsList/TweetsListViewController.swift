@@ -22,7 +22,7 @@ final class TweetsListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addTapGesture()
-        setupDataSource()
+        loadTweets()
     }
     
     // MARK: Private properties
@@ -41,28 +41,29 @@ final class TweetsListViewController: UIViewController {
     
     // MARK: Private methods
     
-    private func setupDataSource() {
-        dataSource.displayTweets = { [weak self] in
+    private func loadTweets() {
+        dataSource.loadTweets(for: lastTimelineLoaded) { [weak self] result in
             guard let strongSelf = self else { return }
-            strongSelf.tableView.reloadData()
+            
+            switch result {
+            case .success:
+                strongSelf.tableView.reloadData()
+                
+            case .failure(let error):
+                print(error)
+            }
         }
-        
-        dataSource.displayError = { error in
-            print(error)
-        }
-        
-        loadUserTimeline()
     }
     
     private func addTapGesture() {
-        let tap = UITapGestureRecognizer(target: self, action: #selector(loadUserTimeline))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(changeUserTimeline))
         view.addGestureRecognizer(tap)
     }
     
     @objc
-    private func loadUserTimeline() {
+    private func changeUserTimeline() {
         lastTimelineLoaded = lastTimelineLoaded == "rafael_csa" ? "siracusa" : "rafael_csa"
-        dataSource.loadTweets(for: lastTimelineLoaded)
+        loadTweets()
     }
     
     private var lastTimelineLoaded = "rafael_csa"
@@ -81,6 +82,27 @@ extension TweetsListViewController: UITableViewDataSource {
         let cell = TweetsListCell.dequeueCell(from: tableView, at: indexPath)
         let tweet = dataSource.tweets[indexPath.row]
         cell.tweet = tweet
+        
+        loadProfileImage(for: tweet, in: cell)
+        
         return cell
+    }
+    
+    private func loadProfileImage(for tweet: Tweet, in cell: TweetsListCell) {
+        cell.loadingState = .isLoading
+        dataSource.loadProfileImage(for: tweet) { result in
+            switch result {
+            case .success(let image):
+                // The check below is not really needed as we currently only display
+                // a single's user timeline at a time, but leaving it here anyway
+                // as a best practice.
+                guard let cellTweetId = cell.tweet?.id, cellTweetId == tweet.id else { return }
+                cell.profileImage = image
+                cell.loadingState = .idle
+                
+            case .failure(let error):
+                cell.loadingState = .hasError(error)
+            }
+        }
     }
 }

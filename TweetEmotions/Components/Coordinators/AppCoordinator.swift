@@ -17,7 +17,8 @@ final class AppCoordinator {
         let userTimelineService = TwitterUserTimelineService(resourceLoader: resourceLoader)
         let tokenProvider = TwitterAuthenticationTokenProvider()
         let twitterService = TwitterService(authenticationService: authenticationService, userTimelineService: userTimelineService, tokenProvider: tokenProvider)
-        let dataSource = TweetsListDataSource(twitterService: twitterService)
+        let imageLoader = ImageLoader(networkClient: networkClient)
+        let dataSource = TweetsListDataSource(twitterService: twitterService, imageLoader: imageLoader)
         
         self.tweetsListViewController = TweetsListViewController(dataSource: dataSource)
     }

@@ -1,6 +1,14 @@
 import UIKit
 
-final class TweetsListCell: UITableViewCell, ReusableView {
+final class TweetsListCell: UITableViewCell, ReusableView, HasLoadingState {
+    
+    // MARK: HasLoadingState
+    
+    var loadingState: LoadingState = .idle {
+        didSet {
+            profileImageView.loadingState = loadingState
+        }
+    }
     
     // MARK: Public properties
     
@@ -9,6 +17,12 @@ final class TweetsListCell: UITableViewCell, ReusableView {
             userNameLabel.text = tweet?.userName
             userScreenNameLabel.text = "@\(tweet?.userScreenName ?? "")"
             tweetTextLabel.text = tweet?.text
+        }
+    }
+    
+    var profileImage: UIImage? {
+        didSet {
+            profileImageView.image = profileImage
         }
     }
     
@@ -21,8 +35,8 @@ final class TweetsListCell: UITableViewCell, ReusableView {
     
     // MARK: Private properties
     
-    private lazy var profileImageView: UIImageView = {
-        let imageView = UIImageView()
+    private lazy var profileImageView: ProfileImageView = {
+        let imageView = ProfileImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -63,14 +77,14 @@ final class TweetsListCell: UITableViewCell, ReusableView {
     }
     
     private func addConstraints() {
-        let spacing: CGFloat = 8
+        let spacing = SizeRatios.defaultSpacing
         
         activateConstraints([
             profileImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: spacing * 2),
             profileImageView.leadingAnchor.constraint(equalTo: contentView.readableContentGuide.leadingAnchor)
         ])
         
-        profileImageView.constrainSize(to: 50)
+        profileImageView.constrainSize(to: SizeRatios.profileImageViewSize)
         
         activateConstraints([
             userNameLabel.topAnchor.constraint(equalTo: profileImageView.topAnchor),
@@ -92,5 +106,22 @@ final class TweetsListCell: UITableViewCell, ReusableView {
         
         userNameLabel.setContentHuggingPriority(UILayoutPriority.defaultHigh, for: .horizontal)
         userScreenNameLabel.setContentCompressionResistancePriority(UILayoutPriority.required, for: .horizontal)
+    }
+}
+
+private extension TweetsListCell {
+    private struct SizeRatios {
+        static let defaultSpacingToScreenWidthRatio: CGFloat = 0.021
+        static let profileImageViewToScreenWidthRatio: CGFloat = 0.14
+        
+        static var defaultSpacing: CGFloat {
+            return UIScreen.main.bounds.width * defaultSpacingToScreenWidthRatio
+        }
+        
+        static var profileImageViewSize: CGFloat {
+            return UIScreen.main.bounds.width * profileImageViewToScreenWidthRatio
+        }
+        
+        private init() {}
     }
 }
