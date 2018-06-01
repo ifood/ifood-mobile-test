@@ -17,7 +17,7 @@ An iOS app that analyse a tweet sentiment.
 </p>
 
 ## Requirements
-1. Xcode 9.
+1. Xcode 9.3.*.
 2. Swift 4.1.
 3. Cocoapods version `1.4.0`
 
@@ -28,7 +28,7 @@ An iOS app that analyse a tweet sentiment.
 
 ## Architecture
 
-This app conforms to [**MVVM** (Model-View-ViewModel)](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel) with [Coordinator](https://will.townsend.io/2016/an-ios-coordinator-pattern) Patter and was implemented using Swift 4.1.
+This app conforms to [**MVVM** (Model-View-ViewModel)](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel) patter to help us with unit tests and [Coordinators](https://will.townsend.io/2016/an-ios-coordinator-pattern) which is responsible for the application's navigation flow.
 
 ### Dependencies
 > All of dependencies and third libraries used in this project as well as its versions can be found in [Podfile](https://github.com/antonyalkmim/Twimotion/blob/master/Podfile).
