@@ -1,6 +1,14 @@
 import UIKit
 
-final class TweetsListViewController: UIViewController {
+final class TweetsListViewController: UIViewController, HasLoadingState {
+    
+    // MARK: HasLoadingState
+    
+    var loadingState: LoadingState = .idle {
+        didSet {
+            didSetLoadingState()
+        }
+    }
     
     // MARK: Init/Deinit
     
@@ -15,12 +23,10 @@ final class TweetsListViewController: UIViewController {
     
     // MARK: UIViewController overrides
     
-    override func loadView() {
-        view = tableView
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        addSubviews()
+        addConstraints()
         addTapGesture()
         loadTweets()
     }
@@ -35,23 +41,72 @@ final class TweetsListViewController: UIViewController {
         tableView.estimatedRowHeight = 80
         tableView.tableFooterView = UIView()
         tableView.dataSource = self
+        tableView.translatesAutoresizingMaskIntoConstraints = false
         TweetsListCell.register(for: tableView)
         return tableView
     }()
     
+    private lazy var spinner: UIActivityIndicatorView = {
+        let spinner = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+        spinner.hidesWhenStopped = true
+        spinner.translatesAutoresizingMaskIntoConstraints = false
+        return spinner
+    }()
+    
+    private lazy var errorView: ErrorView = {
+        let view = ErrorView()
+        view.isHidden = true
+        view.delegate = self
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     // MARK: Private methods
     
+    private func addSubviews() {
+        view.addSubview(spinner)
+        view.addSubview(errorView)
+        view.addSubview(tableView)
+    }
+    
+    private func addConstraints() {
+        spinner.centerInSuperview()
+        errorView.constrainToSafeAndReadableGuides()
+        tableView.constrainToSafeAndReadableGuides()
+    }
+    
     private func loadTweets() {
+        loadingState = .isLoading
         dataSource.loadTweets(for: lastTimelineLoaded) { [weak self] result in
             guard let strongSelf = self else { return }
             
             switch result {
             case .success:
-                strongSelf.tableView.reloadData()
+                strongSelf.loadingState = .idle
                 
             case .failure(let error):
-                print(error)
+                strongSelf.loadingState = .hasError(error)
             }
+        }
+    }
+    
+    private func didSetLoadingState() {
+        switch loadingState {
+        case .idle:
+            spinner.stopAnimating()
+            errorView.isHidden = true
+            tableView.isHidden = false
+            tableView.reloadData()
+            
+        case .isLoading:
+            spinner.startAnimating()
+            errorView.isHidden = true
+            tableView.isHidden = true
+            
+        case .hasError:
+            spinner.stopAnimating()
+            errorView.isHidden = false
+            tableView.isHidden = true
         }
     }
     
@@ -104,5 +159,11 @@ extension TweetsListViewController: UITableViewDataSource {
                 cell.loadingState = .hasError(error)
             }
         }
+    }
+}
+
+extension TweetsListViewController: ErrorViewDelegate {
+    func retry() {
+        loadTweets()
     }
 }

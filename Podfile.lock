@@ -1,20 +1,24 @@
 PODS:
   - KeychainAccess (3.1.1)
+  - SwiftGen (5.3.0)
   - SwiftLint (0.25.1)
 
 DEPENDENCIES:
   - KeychainAccess
+  - SwiftGen
   - SwiftLint
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - KeychainAccess
+    - SwiftGen
     - SwiftLint
 
 SPEC CHECKSUMS:
   KeychainAccess: 7bd430028059754a3debab3cfc0bd1fc7fb85df3
+  SwiftGen: 4379bd3640b0a212a0f6ea3c494adba385513d10
   SwiftLint: ce933681be10c3266e82576dad676fa815a602e9
 
-PODFILE CHECKSUM: 1008402b1c98297531b7afe26d3b94551d222f35
+PODFILE CHECKSUM: 8c47ab923690ea1d5ddfcf19e95f31fe8f96c245
 
 COCOAPODS: 1.5.0

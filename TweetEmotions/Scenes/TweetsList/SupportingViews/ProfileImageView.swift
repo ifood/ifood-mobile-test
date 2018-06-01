@@ -6,7 +6,7 @@ final class ProfileImageView: UIImageView, HasLoadingState {
     
     var loadingState: LoadingState = .idle {
         didSet {
-            didChangeLoadingState()
+            didSetLoadingState()
         }
     }
     
@@ -42,7 +42,7 @@ final class ProfileImageView: UIImageView, HasLoadingState {
         spinner.centerInSuperview()
     }
     
-    private func didChangeLoadingState() {
+    private func didSetLoadingState() {
         switch loadingState {
         case .idle:
             spinner.stopAnimating()

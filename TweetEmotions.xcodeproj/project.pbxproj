@@ -22,6 +22,9 @@
 		08027A3D20C0D76400C290B2 /* HasLoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08027A3B20C0D76400C290B2 /* HasLoadingState.swift */; };
 		08027A3E20C0D76400C290B2 /* FileManaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08027A3C20C0D76400C290B2 /* FileManaging.swift */; };
 		08027A4020C0E59200C290B2 /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08027A3F20C0E59200C290B2 /* ProfileImageView.swift */; };
+		08027A4320C0EAD300C290B2 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08027A4220C0EAD300C290B2 /* ErrorView.swift */; };
+		08027A4620C0EEE400C290B2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 08027A4520C0EEE400C290B2 /* Localizable.strings */; };
+		08027A4A20C0F0F200C290B2 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08027A4920C0F0F200C290B2 /* Localization.swift */; };
 		0819D4B120BF4D13002288E7 /* TweetsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0819D4B020BF4D13002288E7 /* TweetsListViewController.swift */; };
 		0819D4B420BF4E45002288E7 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0819D4B320BF4E45002288E7 /* AppCoordinator.swift */; };
 		0819D4B820C02F37002288E7 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0819D4B720C02F37002288E7 /* NetworkClient.swift */; };
@@ -69,6 +72,9 @@
 		08027A3B20C0D76400C290B2 /* HasLoadingState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HasLoadingState.swift; sourceTree = "<group>"; };
 		08027A3C20C0D76400C290B2 /* FileManaging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManaging.swift; sourceTree = "<group>"; };
 		08027A3F20C0E59200C290B2 /* ProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageView.swift; sourceTree = "<group>"; };
+		08027A4220C0EAD300C290B2 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		08027A4520C0EEE400C290B2 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		08027A4920C0F0F200C290B2 /* Localization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
 		0819D4B020BF4D13002288E7 /* TweetsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetsListViewController.swift; sourceTree = "<group>"; };
 		0819D4B320BF4E45002288E7 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		0819D4B720C02F37002288E7 /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
@@ -166,9 +172,26 @@
 		08027A4120C0E5F600C290B2 /* SupportingViews */ = {
 			isa = PBXGroup;
 			children = (
+				08027A4220C0EAD300C290B2 /* ErrorView.swift */,
 				08027A3F20C0E59200C290B2 /* ProfileImageView.swift */,
 			);
 			path = SupportingViews;
+			sourceTree = "<group>";
+		};
+		08027A4420C0EEC300C290B2 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				08027A4520C0EEE400C290B2 /* Localizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		08027A4820C0F0F200C290B2 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				08027A4920C0F0F200C290B2 /* Localization.swift */,
+			);
+			path = Generated;
 			sourceTree = "<group>";
 		};
 		0819D4AF20BF4CF9002288E7 /* Scenes */ = {
@@ -321,7 +344,9 @@
 			isa = PBXGroup;
 			children = (
 				08C044AD20BF49D100BA5CCC /* Assets */,
+				08027A4820C0F0F200C290B2 /* Generated */,
 				08C044AF20BF49E200BA5CCC /* LaunchScreen */,
+				08027A4420C0EEC300C290B2 /* Localization */,
 				08C044AE20BF49D800BA5CCC /* SupportingFiles */,
 			);
 			path = Resources;
@@ -379,6 +404,7 @@
 			buildConfigurationList = 08C044A420BF487000BA5CCC /* Build configuration list for PBXNativeTarget "TweetEmotions" */;
 			buildPhases = (
 				C468339622BA879749B1FF5A /* [CP] Check Pods Manifest.lock */,
+				08027A4720C0F05200C290B2 /* SwiftGen */,
 				08C0448320BF486F00BA5CCC /* Sources */,
 				0819D4AE20BF4B53002288E7 /* SwiftLint */,
 				08C0448420BF486F00BA5CCC /* Frameworks */,
@@ -459,6 +485,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08C0449520BF487000BA5CCC /* LaunchScreen.storyboard in Resources */,
+				08027A4620C0EEE400C290B2 /* Localizable.strings in Resources */,
 				08C0449220BF487000BA5CCC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -473,6 +500,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		08027A4720C0F05200C290B2 /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = $PODS_ROOT/SwiftGen/bin/swiftgen;
+		};
 		0819D4AE20BF4B53002288E7 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -568,11 +609,13 @@
 			files = (
 				08027A3120C0A30000C290B2 /* TweetsListCell.swift in Sources */,
 				0819D4BD20C02F86002288E7 /* Result.swift in Sources */,
+				08027A4A20C0F0F200C290B2 /* Localization.swift in Sources */,
 				0819D4CE20C03124002288E7 /* AuthenticationToken.swift in Sources */,
 				08027A2120C044DE00C290B2 /* TwitterService.swift in Sources */,
 				08027A4020C0E59200C290B2 /* ProfileImageView.swift in Sources */,
 				0819D4B420BF4E45002288E7 /* AppCoordinator.swift in Sources */,
 				08027A3E20C0D76400C290B2 /* FileManaging.swift in Sources */,
+				08027A4320C0EAD300C290B2 /* ErrorView.swift in Sources */,
 				0819D4D320C03AF5002288E7 /* TwitterAPIEnvironment.swift in Sources */,
 				0819D4D020C03624002288E7 /* Tweet.swift in Sources */,
 				08027A3320C0A43700C290B2 /* UIView+Constraints.swift in Sources */,
@@ -750,7 +793,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8YWUAYQLV8;
 				INFOPLIST_FILE = TweetEmotions/Resources/SupportingFiles/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rafaelcsa.TweetEmotions;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -766,7 +812,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8YWUAYQLV8;
 				INFOPLIST_FILE = TweetEmotions/Resources/SupportingFiles/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rafaelcsa.TweetEmotions;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -783,7 +832,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8YWUAYQLV8;
 				INFOPLIST_FILE = TweetEmotionsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rafaelcsa.TweetEmotionsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -802,7 +855,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8YWUAYQLV8;
 				INFOPLIST_FILE = TweetEmotionsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rafaelcsa.TweetEmotionsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
