@@ -1,0 +1,39 @@
+disabled_rules:
+  - line_length
+  - trailing_whitespace
+  - leading_whitespace
+  - identifier_name
+  - large_tuple
+  - multiline_parameters
+  - multiline_arguments
+
+opt_in_rules:
+  - attributes
+  - closure_end_indentation
+  - closure_spacing
+  - cyclomatic_complexity
+  - contains_over_first_not_nil
+  - empty_count
+  - explicit_init
+  - fatal_error_message
+  - first_where
+  - force_unwrapping
+  - implicit_return
+  - implicitly_unwrapped_optional
+  - number_separator
+  - overridden_super_call
+  - pattern_matching_keywords
+  - private_action
+  - private_outlet
+  - prohibited_super_call
+  - sorted_first_last
+  - strict_fileprivate
+  - unneeded_parentheses_in_closure_argument
+  - yoda_condition
+
+included:
+  - TweetEmotions
+  - TweetEmotionsTests
+
+excluded:
+  - Pods

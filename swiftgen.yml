@@ -1,0 +1,9 @@
+input_dir: TweetEmotions/Resources/
+output_dir: TweetEmotions/Resources/Generated/
+strings:
+  paths: 
+    - Localization/Localizable.strings
+  output: Localization.swift
+  templateName: structured-swift4
+  params:
+    enumName: Localization

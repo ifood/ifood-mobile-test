@@ -1,0 +1,3 @@
+// ErrorView
+"error_view_failed_to_load_data_message" = "Failed to load data. Please make sure you have an active network connection.";
+"error_view_retry_button_title" = "Try again";
