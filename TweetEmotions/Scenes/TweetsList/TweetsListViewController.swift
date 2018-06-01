@@ -25,10 +25,9 @@ final class TweetsListViewController: UIViewController, HasLoadingState {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupSearchController()
         addSubviews()
         addConstraints()
-        addTapGesture()
-        loadTweets()
     }
     
     // MARK: Private properties
@@ -44,6 +43,16 @@ final class TweetsListViewController: UIViewController, HasLoadingState {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         TweetsListCell.register(for: tableView)
         return tableView
+    }()
+    
+    private lazy var searchController: UISearchController = {
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.dimsBackgroundDuringPresentation = false
+        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.definesPresentationContext = true
+        searchController.searchBar.delegate = self
+        searchController.searchBar.autocapitalizationType = .none
+        return searchController
     }()
     
     private lazy var spinner: UIActivityIndicatorView = {
@@ -63,6 +72,10 @@ final class TweetsListViewController: UIViewController, HasLoadingState {
     
     // MARK: Private methods
     
+    private func setupSearchController() {
+        navigationItem.searchController = searchController
+    }
+    
     private func addSubviews() {
         view.addSubview(spinner)
         view.addSubview(errorView)
@@ -75,9 +88,9 @@ final class TweetsListViewController: UIViewController, HasLoadingState {
         tableView.constrainToSafeAndReadableGuides()
     }
     
-    private func loadTweets() {
+    private func loadTweets(for username: String) {
         loadingState = .isLoading
-        dataSource.loadTweets(for: lastTimelineLoaded) { [weak self] result in
+        dataSource.loadTweets(for: username) { [weak self] result in
             guard let strongSelf = self else { return }
             
             switch result {
@@ -109,19 +122,6 @@ final class TweetsListViewController: UIViewController, HasLoadingState {
             tableView.isHidden = true
         }
     }
-    
-    private func addTapGesture() {
-        let tap = UITapGestureRecognizer(target: self, action: #selector(changeUserTimeline))
-        view.addGestureRecognizer(tap)
-    }
-    
-    @objc
-    private func changeUserTimeline() {
-        lastTimelineLoaded = lastTimelineLoaded == "rafael_csa" ? "siracusa" : "rafael_csa"
-        loadTweets()
-    }
-    
-    private var lastTimelineLoaded = "rafael_csa"
 }
 
 extension TweetsListViewController: UITableViewDataSource {
@@ -162,8 +162,16 @@ extension TweetsListViewController: UITableViewDataSource {
     }
 }
 
+extension TweetsListViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let username = searchController.searchBar.text else { return }
+        loadTweets(for: username)
+    }
+}
+
 extension TweetsListViewController: ErrorViewDelegate {
     func retry() {
-        loadTweets()
+        guard let username = searchController.searchBar.text else { return }
+        loadTweets(for: username)
     }
 }
