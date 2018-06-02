@@ -10,20 +10,20 @@ public class TweetViewHolder extends RecyclerView.ViewHolder {
 
     private final TextView text;
 
-    private final View container;
+    private final View cardView;
 
     private final TweetViewInterface presenter;
 
     public TweetViewHolder(View itemView) {
         super(itemView);
         text = itemView.findViewById(R.id.tweet_item_text);
-        container = itemView.findViewById(R.id.tweet_item_container);
+        cardView = itemView.findViewById(R.id.card_view);
         presenter = new TweetViewImplementation();
     }
 
     public void bind(Tweet tweet) {
         text.setText(tweet.getText());
-        container.setOnClickListener(new ItemClick(tweet));
+        cardView.setOnClickListener(new ItemClick(tweet));
     }
 
     private class ItemClick implements View.OnClickListener {

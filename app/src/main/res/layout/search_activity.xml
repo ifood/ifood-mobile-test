@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <ProgressBar
         android:id="@+id/searchProgressBar"
         style="?android:attr/progressBarStyle"
@@ -18,15 +19,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
-        <LinearLayout
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/recView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
 
-        </LinearLayout>
 </android.support.constraint.ConstraintLayout>

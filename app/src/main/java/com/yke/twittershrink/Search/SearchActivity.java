@@ -43,11 +43,6 @@ public class SearchActivity extends AppCompatActivity implements SearchInterface
         searchImp.onSearch(userSearchName);
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-    }
-
     public void setItems(List<Tweet> tweets) {
         if (tweets.size() > 0) {
             adapter.setTweets(tweets);
