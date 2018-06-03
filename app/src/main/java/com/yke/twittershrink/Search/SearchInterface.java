@@ -11,5 +11,5 @@ public interface SearchInterface {
 
     void setItems(List<Tweet> tweets);
 
-    void dismissLoading();
+    void removeLoading();
 }

@@ -19,12 +19,12 @@ public class MoodImplementation {
      */
     private class TextMoodAnalyzeListener implements Downloader.RequestListener<Mood> {
         @Override
-        public void onFinishDownload(Mood mood) {
+        public void onDownloadFinish(Mood mood) {
             if (mood != null) {
                MoodTest moodTest = new MoodTest();
-               String fell = moodTest.AnalyzeTweetMood(mood.getDocument().getScore());
+               String feeling = moodTest.AnalyzeTweetMood(mood.getDocument().getScore());
 
-               switch (fell) {
+               switch (feeling) {
                    case "HAPPY":
                        viewInterface.happyTweet();
                        break;

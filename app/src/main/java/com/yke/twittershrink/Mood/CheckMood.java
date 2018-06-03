@@ -1,19 +1,26 @@
 package com.yke.twittershrink.Mood;
 
+import android.annotation.SuppressLint;
 import android.net.Uri;
+import android.os.AsyncTask;
+import android.util.Log;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
-import com.yke.twittershrink.Const.AppConstants;
+import com.yke.twittershrink.Const.GoogleApiConstants;
 import com.yke.twittershrink.Downloader;
 
+import java.io.IOException;
 import java.lang.reflect.Type;
 
 import okhttp3.MediaType;
 import okhttp3.RequestBody;
+import okhttp3.Response;
 
 public class CheckMood extends Downloader<Mood> {
 
+    private static final String TAG = CheckMood.class.getSimpleName();
     private String text;
 
     private RequestListener<Mood> listener;
@@ -37,9 +44,9 @@ public class CheckMood extends Downloader<Mood> {
 
     @Override
     protected String getUrl() {
-        Uri uri = Uri.parse(AppConstants.ANALYZE_SENTIMENT_URL)
+        Uri uri = Uri.parse(GoogleApiConstants.ANALYZE_SENTIMENT_URL)
                 .buildUpon()
-                .appendQueryParameter("key", AppConstants.KEY)
+                .appendQueryParameter("key", GoogleApiConstants.KEY)
                 .build();
 
         return uri.toString();
@@ -54,7 +61,8 @@ public class CheckMood extends Downloader<Mood> {
         request.setDocument(contBean);
         request.setEncodingType("UTF8");
 
-        Gson gson = new Gson();
+        Gson gson = new GsonBuilder()
+                        .create();
 
         RequestBody body = RequestBody.create(MediaType.parse("application/json;"),
                                                                 gson.toJson(request));
@@ -64,11 +72,46 @@ public class CheckMood extends Downloader<Mood> {
                           .build();
     }
 
+    @SuppressLint("StaticFieldLeak")
+    public class GetData extends AsyncTask<Void, Void, Mood> {
+
+        @Override
+        protected Mood doInBackground(Void... params) {
+            Mood mood = null;
+
+            try {
+                Response response = getRequestClient().newCall(getRequest()).execute();
+                if (response.isSuccessful()) {
+                    assert response.body() != null;
+                    String json = response
+                            .body()
+                            .string();
+
+                    Gson gson = new GsonBuilder()
+                            .create();
+                    mood = gson.fromJson(json, getType());
+                }
+
+            } catch (IOException e) {
+                Log.e(TAG, "Error on request: ", e);
+            }
+
+            return mood;
+        }
+
+        @Override
+        protected void onPostExecute(Mood mood) {
+            if (getRequestListener() != null) {
+                getRequestListener().onDownloadFinish(mood);
+            }
+        }
+    }
+
 
     private class CheckMoodCallback implements RequestListener<Mood> {
         @Override
-        public void onFinishDownload(Mood mood) {
-            listener.onFinishDownload(mood);
+        public void onDownloadFinish(Mood mood) {
+            listener.onDownloadFinish(mood);
         }
     }
 }

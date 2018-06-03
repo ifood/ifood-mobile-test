@@ -44,7 +44,7 @@ public class SearchActivity extends AppCompatActivity implements SearchInterface
     }
 
     public void setItems(List<Tweet> tweets) {
-        if (tweets.size() > 0) {
+        if (!tweets.isEmpty()) {
             adapter.setTweets(tweets);
         } else {
             Toast.makeText(this, "User Not Found", Toast.LENGTH_SHORT).show();
@@ -52,7 +52,7 @@ public class SearchActivity extends AppCompatActivity implements SearchInterface
     }
 
     @Override
-    public void dismissLoading() {
+    public void removeLoading() {
         ProgressBar progressBar = findViewById(R.id.searchProgressBar);
         progressBar.setVisibility(View.GONE);
     }

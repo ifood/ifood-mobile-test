@@ -1,9 +1,9 @@
 package com.yke.twittershrink.Const;
 
-public class AppConstants {
+public interface TwitterApiConstants {
 
     /**
-     *  Twitter Constants:
+     *  Twitter API Constants:
      */
     public static final String CONSUMER_KEY = "DLvdcgSJ1fdA3TSnSrQLVInVP";
 
@@ -13,16 +13,6 @@ public class AppConstants {
 
     public static final String CUSTOMER_TOKEN_SECRET = "FMr04toyVx3auYd3PvFu1MsOcdKt2PewPDsZSRihpSSSp";
 
-    /**
-     *  To get requested user timeline:
-     */
     public static final String USER_TIMELINE_URL = "https://api.twitter.com/1.1/statuses/user_timeline.json";
-
-    /**
-     *  Google Sentiment:
-     */
-    public static final String ANALYZE_SENTIMENT_URL = "https://language.googleapis.com/v1/documents:analyzeSentiment";
-
-    public static final String KEY = "AIzaSyCp_tUzJpHNSHc9nhid3mb6FL18iSqhchU";
 
 }

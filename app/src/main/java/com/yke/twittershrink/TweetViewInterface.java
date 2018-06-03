@@ -5,8 +5,8 @@ import android.view.View;
 interface TweetViewInterface {
 
     /**
-     *  Onclick Interface:
+     *  OnClick Interface:
      */
-    void onClick(View view, String text);
+    void onTweetClicked(View view, String text);
 }
 

@@ -6,8 +6,8 @@ public class MoodContent {
 
     private String content;
 
-    public void setType(String type1) {
-        type = type1;
+    public void setType(String type) {
+        this.type = type;
     }
 
     public void setContent(String content1) {

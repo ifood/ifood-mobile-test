@@ -5,6 +5,7 @@ import android.os.AsyncTask;
 import android.util.Log;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import java.io.IOException;
 import java.lang.reflect.Type;
@@ -46,7 +47,7 @@ public abstract class Downloader<T> {
          *
          * @param bean Parsed object.
          */
-        void onFinishDownload(T bean);
+        void onDownloadFinish(T bean);
     }
 
     /**
@@ -67,7 +68,8 @@ public abstract class Downloader<T> {
                                   .body()
                                   .string();
 
-                    Gson gson = new Gson();
+                    Gson gson = new GsonBuilder()
+                                .create();
                     bean = gson.fromJson(json, getType());
                 }
 
@@ -81,7 +83,7 @@ public abstract class Downloader<T> {
         @Override
         protected void onPostExecute(T bean) {
             if (getRequestListener() != null) {
-                getRequestListener().onFinishDownload(bean);
+                getRequestListener().onDownloadFinish(bean);
             }
         }
     }

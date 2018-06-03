@@ -10,6 +10,10 @@ public class Mood {
     @SerializedName("documentSentiment")
     private Document document;
 
+    public Mood(Document document) {
+        this.document = document;
+    }
+
     public Document getDocument() {
         return document;
     }

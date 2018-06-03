@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
                 String text = editText.getText().toString();
                 Intent intent = new Intent(getApplicationContext(), SearchActivity.class);
                 intent.putExtra("User", text);
-                if (text.length() > 0) {
+                if (!text.isEmpty()) {
                     MainActivity.this.startActivity(intent);
                 } else {
                     Toast.makeText(MainActivity.this, "Invalid Search Input",

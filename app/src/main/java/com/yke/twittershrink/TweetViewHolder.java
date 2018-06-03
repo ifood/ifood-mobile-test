@@ -18,7 +18,7 @@ public class TweetViewHolder extends RecyclerView.ViewHolder {
         super(itemView);
         text = itemView.findViewById(R.id.tweet_item_text);
         cardView = itemView.findViewById(R.id.card_view);
-        presenter = new TweetViewImplementation();
+        presenter = new TweetPresenter();
     }
 
     public void bind(Tweet tweet) {
@@ -36,7 +36,7 @@ public class TweetViewHolder extends RecyclerView.ViewHolder {
 
         @Override
         public void onClick(View view) {
-            presenter.onClick(view, tweet.getText());
+            presenter.onTweetClicked(view, tweet.getText());
         }
     }
 }

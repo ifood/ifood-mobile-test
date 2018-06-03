@@ -25,16 +25,16 @@ public class SearchImplementation {
     }
 
     /**
-     * Listener Called at the end of Download:
+     *  Listener Called at the end of Download:
      */
     private class TweetsCallback implements TweetDownloader.RequestListener<Tweet[]> {
 
         @Override
-        public void onFinishDownload(Tweet[] tweets) {
+        public void onDownloadFinish(Tweet[] tweets) {
             if (tweets != null && tweets.length > 0) {
                 ArrayList<Tweet> tweetList = new ArrayList<>(Arrays.asList(tweets));
                 searchInterface.setItems(tweetList);
-                searchInterface.dismissLoading();
+                searchInterface.removeLoading();
             }
         }
     }
