@@ -1,22 +1,11 @@
 package com.yke.twittershrink;
 
-import android.annotation.SuppressLint;
-import android.os.AsyncTask;
-import android.util.Log;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-
-import java.io.IOException;
 import java.lang.reflect.Type;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
-import okhttp3.Response;
 
 public abstract class Downloader<T> {
-
-    private static final String TAG = Downloader.class.getSimpleName();
 
     protected abstract RequestListener<T> getRequestListener();
 
@@ -48,43 +37,5 @@ public abstract class Downloader<T> {
          * @param bean Parsed object.
          */
         void onDownloadFinish(T bean);
-    }
-
-    /**
-     *  Execute download task:
-     */
-    @SuppressLint("StaticFieldLeak")
-    public class GetData extends AsyncTask<Void, Void, T> {
-
-        @Override
-        protected T doInBackground(Void... params) {
-            T bean = null;
-
-            try {
-                Response response = getRequestClient().newCall(getRequest()).execute();
-                if (response.isSuccessful()) {
-                    assert response.body() != null;
-                    String json = response
-                                  .body()
-                                  .string();
-
-                    Gson gson = new GsonBuilder()
-                                .create();
-                    bean = gson.fromJson(json, getType());
-                }
-
-            } catch (IOException e) {
-                Log.e(TAG, "Error on request: ", e);
-            }
-
-            return bean;
-        }
-
-        @Override
-        protected void onPostExecute(T bean) {
-            if (getRequestListener() != null) {
-                getRequestListener().onDownloadFinish(bean);
-            }
-        }
     }
 }

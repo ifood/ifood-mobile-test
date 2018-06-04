@@ -28,7 +28,7 @@ public class CheckMood extends Downloader<Mood> {
     public void analyzeText(String text, RequestListener<Mood> listener) {
         this.text = text;
         this.listener = listener;
-        new GetData().execute();
+        new GetMoodData().execute();
     }
 
     @Override
@@ -52,6 +52,9 @@ public class CheckMood extends Downloader<Mood> {
         return uri.toString();
     }
 
+
+    //TODO: Check indico.io API approach, Google NLP has an little problem to recognize capital letters, and can be tricked to a neutral mood by that.
+
     @Override
     protected okhttp3.Request getRequest() {
         Request request = new Request();
@@ -73,7 +76,7 @@ public class CheckMood extends Downloader<Mood> {
     }
 
     @SuppressLint("StaticFieldLeak")
-    public class GetData extends AsyncTask<Void, Void, Mood> {
+    private class GetMoodData extends AsyncTask<Void, Void, Mood> {
 
         @Override
         protected Mood doInBackground(Void... params) {

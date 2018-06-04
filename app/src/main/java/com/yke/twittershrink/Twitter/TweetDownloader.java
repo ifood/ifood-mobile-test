@@ -70,7 +70,7 @@ public class TweetDownloader extends Downloader<Tweet[]> {
     }
 
     @SuppressLint("StaticFieldLeak")
-    public class GetData extends AsyncTask<Void, Void, Tweet[]> {
+    private class GetData extends AsyncTask<Void, Void, Tweet[]> {
 
         @Override
         protected Tweet[] doInBackground(Void... params) {
