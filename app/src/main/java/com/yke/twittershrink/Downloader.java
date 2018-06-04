@@ -12,6 +12,8 @@ public abstract class Downloader<T> {
     protected abstract String getUrl();
 
     protected abstract Type getType();
+    
+    //TODO: Check http://loopj.com/android-async-http/
 
     protected OkHttpClient getRequestClient() {
         return new OkHttpClient.Builder().build();
