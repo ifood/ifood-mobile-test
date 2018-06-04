@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">TwitterShrink</string>
+    <string name="mainButtonString">Search</string>
+    <string name="searchValue">Name</string>
+    <string name="search_button">Search Button</string>
+
+    <string name="principal_image_for_main_activity">Principal image for main activity</string>
+
+    <string name="score_sad">SAD</string>
+    <string name="sad_tweet">Sad Tweet</string>
+
+    <string name="score_neutral">NEUTRAL</string>
+    <string name="neutral_tweet">Neutral Tweet</string>
+
+    <string name="score_happy">HAPPY</string>
+    <string name="happy_tweet">Happy Tweet</string>
+
+    <string name="moodError">Error when analyzing tweet</string>
+</resources>
