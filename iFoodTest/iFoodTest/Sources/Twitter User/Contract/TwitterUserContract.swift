@@ -13,7 +13,7 @@ protocol TwitterUserBuilderProtocol {
 }
 
 protocol TwitterUserRouterProtocol {    
-    func showTweetsFor(user twitterUser: String)
+    func presentTweetListFor(user twitterUser: String)
 }
 
 protocol TwitterUserViewProtocol: class {

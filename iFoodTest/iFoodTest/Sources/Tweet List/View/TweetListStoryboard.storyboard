@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tweet List View Controller-->
+        <scene sceneID="7g0-mx-JLS">
+            <objects>
+                <viewController storyboardIdentifier="TweetListViewController" id="dei-ET-Vki" customClass="TweetListViewController" customModule="iFoodTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OoI-Ac-pJz" customClass="TweetListView" customModule="iFoodTest" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="A73-4Y-15S">
+                                <rect key="frame" x="16" y="95" width="343" height="552"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="dei-ET-Vki" id="MBB-tA-GFi"/>
+                                    <outlet property="delegate" destination="dei-ET-Vki" id="1sp-ZM-nZh"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="BLl-Sl-H1a" firstAttribute="bottom" secondItem="A73-4Y-15S" secondAttribute="bottom" constant="20" id="U5h-Ch-Bkx"/>
+                            <constraint firstItem="A73-4Y-15S" firstAttribute="leading" secondItem="BLl-Sl-H1a" secondAttribute="leading" constant="16" id="hO8-ky-q1u"/>
+                            <constraint firstItem="A73-4Y-15S" firstAttribute="top" secondItem="BLl-Sl-H1a" secondAttribute="top" constant="31" id="iH3-ug-aHM"/>
+                            <constraint firstItem="BLl-Sl-H1a" firstAttribute="trailing" secondItem="A73-4Y-15S" secondAttribute="trailing" constant="16" id="rKE-sJ-BQc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BLl-Sl-H1a"/>
+                        <connections>
+                            <outlet property="tableView" destination="A73-4Y-15S" id="xuH-oh-aTn"/>
+                        </connections>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zdu-nA-HJs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-42.399999999999999" y="167.76611694152925"/>
+        </scene>
+    </scenes>
+</document>

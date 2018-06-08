@@ -9,10 +9,10 @@
 import UIKit
 
 final class TwitterUserRouter: TwitterUserRouterProtocol {
+    weak var viewController: UIViewController?
     
-    func showTwitterUserScreen() {}
-    
-    func showTweetsFor(user twitterUser: String) {
-        
+    func presentTweetListFor(user twitterUser: String) {
+        let tweetListModuleViewController = TweetListBuilder.assembleModule(forTwitterUser: twitterUser)
+        viewController?.navigationController?.pushViewController(tweetListModuleViewController, animated: true)
     }
 }

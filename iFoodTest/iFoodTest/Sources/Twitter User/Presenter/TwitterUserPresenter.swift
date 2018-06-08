@@ -14,6 +14,6 @@ final class TwitterUserPresenter: TwitterUserPresenterProtocol {
     var router: TwitterUserRouterProtocol!
     
     func showTweetsFor(user twitterUser: String) {
-        print(twitterUser)
+        router.presentTweetListFor(user: twitterUser)
     }
 }

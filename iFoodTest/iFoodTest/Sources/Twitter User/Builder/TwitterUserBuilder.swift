@@ -19,6 +19,7 @@ final class TwitterUserBuilder: TwitterUserBuilderProtocol {
         
         view.presenter = presenter
         presenter.router = router
+        router.viewController = view
         
         return navigation
     }
