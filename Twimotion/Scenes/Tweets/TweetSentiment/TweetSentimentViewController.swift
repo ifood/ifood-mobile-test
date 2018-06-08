@@ -147,9 +147,9 @@ extension TweetSentimentViewController {
         //backgroundColor
         viewModel.sentimentColor
             .observeOn(MainScheduler.asyncInstance)
-            .bind { sentimentColor in
+            .bind { [weak self] sentimentColor in
                 UIView.animate(withDuration: 0.3) {
-                    self.wrapperView.backgroundColor = sentimentColor
+                    self?.wrapperView.backgroundColor = sentimentColor
                 }
             }
             .disposed(by: disposeBag)
