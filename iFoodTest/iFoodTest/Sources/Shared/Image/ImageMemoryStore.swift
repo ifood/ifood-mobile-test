@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 class ImageMemoryStore: ImageStoreProtocol {
     
     fileprivate var imageCache = [String: UIImage]()
@@ -20,7 +19,6 @@ class ImageMemoryStore: ImageStoreProtocol {
     deinit {
         NotificationCenter.default.removeObserver(self, name: .UIApplicationDidReceiveMemoryWarning, object: nil)
     }
-    
     
     func loadImage(url: URL, completion: @escaping (UIImage?, Error?) -> ()) {
         

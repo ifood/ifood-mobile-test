@@ -6,8 +6,18 @@
 //  Copyright © 2018 Mauricio Cesar Maniglia Junior. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 final class TweetListRouter: TweetListRouterProtocol {
+    weak var viewController: UIViewController?
     
+    func presentTweetSentimentForTweet(_ tweet: Tweet) {
+        let tweetSentimentModuleViewController = TweetSentimentBuilder.assembleModule(forTweet: tweet)
+        tweetSentimentModuleViewController.definesPresentationContext = true
+        tweetSentimentModuleViewController.providesPresentationContextTransitionStyle = true
+        tweetSentimentModuleViewController.modalPresentationStyle = .overCurrentContext
+        tweetSentimentModuleViewController.modalTransitionStyle = .crossDissolve
+        
+        viewController?.navigationController?.present(tweetSentimentModuleViewController, animated: true, completion: nil)
+    }
 }

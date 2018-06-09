@@ -19,7 +19,18 @@ enum TwitterAPIEndPoint {
     case getUser(String)
     case getLastestTweets(String)
     
-    var url: URL? {
+    var urlRequest: URLRequest {
+        var request = URLRequest(url: url!)
+        request.httpMethod = method
+        request.httpBody = body
+        _ = headers.map { (key, value) in
+            request.addValue(value, forHTTPHeaderField: key)
+        }
+        
+        return request
+    }
+    
+    private var url: URL? {
         switch self {
         case .getAccessToken:
             return URL(string: "\(TwitterAPI.baseURLString)/oauth2/token")
@@ -30,7 +41,7 @@ enum TwitterAPIEndPoint {
         }
     }
     
-    var method: String {
+    private var method: String {
         switch self {
         case .getAccessToken:
             return "POST"
@@ -39,7 +50,7 @@ enum TwitterAPIEndPoint {
         }
     }
     
-    var body: Data? {
+    private var body: Data? {
         switch self {
         case .getAccessToken:
             return "grant_type=client_credentials".data(using: String.Encoding.utf8)
@@ -48,7 +59,7 @@ enum TwitterAPIEndPoint {
         }
     }
     
-    var headers: [String: String] {
+    private var headers: [String: String] {
         switch self {
         case .getAccessToken:
             let basicAuthToken = "\(TwitterAPI.clientKey):\(TwitterAPI.clientSecret)".data(using: .utf8)

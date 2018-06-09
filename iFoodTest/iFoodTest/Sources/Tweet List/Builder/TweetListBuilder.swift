@@ -22,6 +22,7 @@ final class TweetListBuilder: TweetListBuilderProtocol {
         presenter.router = router
         presenter.twitterUser = twitterUser
         presenter.interactor = interactor
+        router.viewController = view
         
         return view
     }

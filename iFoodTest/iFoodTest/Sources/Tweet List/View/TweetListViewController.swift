@@ -38,7 +38,7 @@ final class TweetListViewController: UIViewController, TweetListViewProtocol {
     
 }
 
-extension TweetListViewController: UITableViewDataSource {
+extension TweetListViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tweets.count
     }
@@ -50,5 +50,10 @@ extension TweetListViewController: UITableViewDataSource {
         cell.setup(tweet)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let tweet = tweets[indexPath.row]
+        presenter.didSelectTweeet(tweet)
     }
 }

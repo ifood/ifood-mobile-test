@@ -18,6 +18,10 @@ final class TweetListPresenter: TweetListPresenterProtocol {
     func viewDidLoad() {
         interactor.fetchTweetsForUser(twitterUser)
     }
+    
+    func didSelectTweeet(_ tweet: Tweet) {
+        router.presentTweetSentimentForTweet(tweet)
+    }
 }
 
 extension TweetListPresenter: TweetListInteractorOutputProtocol {

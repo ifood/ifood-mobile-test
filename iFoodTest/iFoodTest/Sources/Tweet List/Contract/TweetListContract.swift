@@ -13,7 +13,7 @@ protocol TweetListBuilderProtocol {
 }
 
 protocol TweetListRouterProtocol {
-    
+    func presentTweetSentimentForTweet(_ tweet: Tweet)
 }
 
 protocol TweetListViewProtocol: class {
@@ -28,6 +28,7 @@ protocol TweetListPresenterProtocol: class {
     var interactor: TweetListInteractorProtocol! { get set }
     
     func viewDidLoad()
+    func didSelectTweeet(_ tweet: Tweet)
 }
 
 protocol TweetListInteractorProtocol: class {
