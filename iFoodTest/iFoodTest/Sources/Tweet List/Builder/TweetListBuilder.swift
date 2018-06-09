@@ -18,6 +18,7 @@ final class TweetListBuilder: TweetListBuilderProtocol {
         let interactor = TweetListInteractor(output: presenter)
         
         view.presenter = presenter
+        presenter.view = view
         presenter.router = router
         presenter.twitterUser = twitterUser
         presenter.interactor = interactor

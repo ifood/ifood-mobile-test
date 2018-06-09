@@ -18,6 +18,8 @@ protocol TweetListRouterProtocol {
 
 protocol TweetListViewProtocol: class {
     var presenter: TweetListPresenterProtocol! { get set }
+    
+    func displayTweets(_ tweets: [Tweet])
 }
 
 protocol TweetListPresenterProtocol: class {
@@ -31,13 +33,13 @@ protocol TweetListPresenterProtocol: class {
 protocol TweetListInteractorProtocol: class {
     weak var output: TweetListInteractorOutputProtocol! { get set }
     
-    func fetchTweets()
+    func fetchTweetsForUser(_ user: String)
 }
 
 protocol TweetListInteractorOutputProtocol: class {
-    func tweetsFetched(_ tweets: [String])
+    func tweetsFetched(_ tweets: [Tweet])
 }
 
 protocol TweetListStoreProtocol: class {
-    func fetchTweets(completion: @escaping ([Tweet]?, Error?) -> ())
+    func fetchTweets(forUser user: String, completion: @escaping ([Tweet]?, Error?) -> ())
 }

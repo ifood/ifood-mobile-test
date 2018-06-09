@@ -14,13 +14,15 @@ class TweetListTableViewCell: UITableViewCell {
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var tweetLabel: UILabel!
     
-    func setup(_ tweet: String) {
-        userNameLabel.text = tweet
-        tweetLabel.text = "blablablala"
+    func setup(_ tweet: Tweet) {
+        userNameLabel.text = tweet.user.name
+        tweetLabel.text = tweet.text
+        userThumbImageView.setImageURL(url: tweet.user.profileImageUrl, placeholder: UIImage(named: "placeholder"))
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        self.userThumbImageView.layer.cornerRadius = self.userThumbImageView.frame.size.width / 2;
+        self.userThumbImageView.clipsToBounds = true;
     }
 }

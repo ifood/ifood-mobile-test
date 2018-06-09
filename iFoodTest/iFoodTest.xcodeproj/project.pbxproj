@@ -11,6 +11,13 @@
 		2B1CE88020CA105B00CC5E8C /* TweetListAPIStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1CE87F20CA105B00CC5E8C /* TweetListAPIStore.swift */; };
 		2B1CE88320CA116400CC5E8C /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1CE88220CA116400CC5E8C /* NetworkClient.swift */; };
 		2B1CE88620CA130800CC5E8C /* TwitterAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1CE88520CA130800CC5E8C /* TwitterAPI.swift */; };
+		2B7322BD20CC134B002B3BBF /* TwitterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7322BC20CC134B002B3BBF /* TwitterUser.swift */; };
+		2B7322BF20CC13EF002B3BBF /* Parsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7322BE20CC13EF002B3BBF /* Parsable.swift */; };
+		2B7322C220CC5B1D002B3BBF /* UIImageView+RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7322C120CC5B1D002B3BBF /* UIImageView+RemoteImage.swift */; };
+		2B7322C520CC5B71002B3BBF /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7322C420CC5B71002B3BBF /* ImageManager.swift */; };
+		2B7322C720CC5BD0002B3BBF /* ImageMemoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7322C620CC5BCF002B3BBF /* ImageMemoryStore.swift */; };
+		2B7322C920CC5C2F002B3BBF /* ImageNetworkStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7322C820CC5C2F002B3BBF /* ImageNetworkStore.swift */; };
+		2B7322CB20CC5C69002B3BBF /* ImageStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7322CA20CC5C69002B3BBF /* ImageStoreProtocol.swift */; };
 		2BDB729720C95BC900BFC45C /* TwitterUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDB729620C95BC900BFC45C /* TwitterUserView.swift */; };
 		2BDB729920C9C96A00BFC45C /* TwitterUserStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BDB729820C9C96A00BFC45C /* TwitterUserStoryboard.storyboard */; };
 		2BDB729B20C9D1EC00BFC45C /* TweetListContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDB729A20C9D1EC00BFC45C /* TweetListContract.swift */; };
@@ -64,6 +71,13 @@
 		2B1CE87F20CA105B00CC5E8C /* TweetListAPIStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetListAPIStore.swift; sourceTree = "<group>"; };
 		2B1CE88220CA116400CC5E8C /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		2B1CE88520CA130800CC5E8C /* TwitterAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterAPI.swift; sourceTree = "<group>"; };
+		2B7322BC20CC134B002B3BBF /* TwitterUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterUser.swift; sourceTree = "<group>"; };
+		2B7322BE20CC13EF002B3BBF /* Parsable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parsable.swift; sourceTree = "<group>"; };
+		2B7322C120CC5B1D002B3BBF /* UIImageView+RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+RemoteImage.swift"; sourceTree = "<group>"; };
+		2B7322C420CC5B71002B3BBF /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
+		2B7322C620CC5BCF002B3BBF /* ImageMemoryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageMemoryStore.swift; sourceTree = "<group>"; };
+		2B7322C820CC5C2F002B3BBF /* ImageNetworkStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageNetworkStore.swift; sourceTree = "<group>"; };
+		2B7322CA20CC5C69002B3BBF /* ImageStoreProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStoreProtocol.swift; sourceTree = "<group>"; };
 		2BDB729620C95BC900BFC45C /* TwitterUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterUserView.swift; sourceTree = "<group>"; };
 		2BDB729820C9C96A00BFC45C /* TwitterUserStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TwitterUserStoryboard.storyboard; sourceTree = "<group>"; };
 		2BDB729A20C9D1EC00BFC45C /* TweetListContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetListContract.swift; sourceTree = "<group>"; };
@@ -142,13 +156,34 @@
 			path = Configuration;
 			sourceTree = "<group>";
 		};
+		2B7322C020CC5B0E002B3BBF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2B7322C120CC5B1D002B3BBF /* UIImageView+RemoteImage.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2B7322C320CC5B5D002B3BBF /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				2B7322C420CC5B71002B3BBF /* ImageManager.swift */,
+				2B7322C620CC5BCF002B3BBF /* ImageMemoryStore.swift */,
+				2B7322C820CC5C2F002B3BBF /* ImageNetworkStore.swift */,
+				2B7322CA20CC5C69002B3BBF /* ImageStoreProtocol.swift */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
 		2BE9976120CAC5B60003DBC8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				2BE9977520CB44300003DBC8 /* Keychain */,
 				2BE9976220CAC5C50003DBC8 /* Tweet.swift */,
+				2B7322BC20CC134B002B3BBF /* TwitterUser.swift */,
 				2BE9976920CAFBB30003DBC8 /* TwitterAccessToken.swift */,
 				2BE9976F20CB2EA50003DBC8 /* Data+JSON.swift */,
+				2B7322BE20CC13EF002B3BBF /* Parsable.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -460,6 +495,8 @@
 		2BFDF44A20C8BF5100B9C71F /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				2B7322C320CC5B5D002B3BBF /* Image */,
+				2B7322C020CC5B0E002B3BBF /* View */,
 				2BE9976120CAC5B60003DBC8 /* Model */,
 				2B1CE88420CA12F900CC5E8C /* Configuration */,
 				2B1CE88120CA114A00CC5E8C /* Network */,
@@ -611,17 +648,23 @@
 				2BDB72A720C9D2DB00BFC45C /* TweetListInteractor.swift in Sources */,
 				2BFDF45620C8D3B200B9C71F /* TwitterUserViewController.swift in Sources */,
 				2BDB729D20C9D24000BFC45C /* TweetListBuilder.swift in Sources */,
+				2B7322C220CC5B1D002B3BBF /* UIImageView+RemoteImage.swift in Sources */,
 				2B1CE87E20CA0EA200CC5E8C /* TweetListWorker.swift in Sources */,
 				2BDB72A520C9D2C500BFC45C /* TweetListPresenter.swift in Sources */,
 				2BDB72A320C9D2A600BFC45C /* TweetListView.swift in Sources */,
+				2B7322C920CC5C2F002B3BBF /* ImageNetworkStore.swift in Sources */,
+				2B7322CB20CC5C69002B3BBF /* ImageStoreProtocol.swift in Sources */,
+				2B7322BF20CC13EF002B3BBF /* Parsable.swift in Sources */,
 				2BE9977420CB44110003DBC8 /* KeychainWrapper.swift in Sources */,
 				2B1CE88320CA116400CC5E8C /* NetworkClient.swift in Sources */,
 				2BFDF45420C8CC4400B9C71F /* TwitterUserBuilder.swift in Sources */,
 				2BDB729F20C9D27600BFC45C /* TweetListRouter.swift in Sources */,
 				2BDB729720C95BC900BFC45C /* TwitterUserView.swift in Sources */,
+				2B7322C720CC5BD0002B3BBF /* ImageMemoryStore.swift in Sources */,
 				2BE9977020CB2EA50003DBC8 /* Data+JSON.swift in Sources */,
 				2BFDF44E20C8C11A00B9C71F /* RootRouter.swift in Sources */,
 				2BE9976A20CAFBB30003DBC8 /* TwitterAccessToken.swift in Sources */,
+				2B7322C520CC5B71002B3BBF /* ImageManager.swift in Sources */,
 				2B1CE88620CA130800CC5E8C /* TwitterAPI.swift in Sources */,
 				2BFDF45220C8C86900B9C71F /* TwitterUserRouter.swift in Sources */,
 				2BFDF44C20C8C01300B9C71F /* RootContract.swift in Sources */,
@@ -629,6 +672,7 @@
 				2BDB72AC20C9DCCF00BFC45C /* TweetListTableViewCell.swift in Sources */,
 				2BE9977320CB44110003DBC8 /* KeychainItemAccessibility.swift in Sources */,
 				2BE9976320CAC5C50003DBC8 /* Tweet.swift in Sources */,
+				2B7322BD20CC134B002B3BBF /* TwitterUser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

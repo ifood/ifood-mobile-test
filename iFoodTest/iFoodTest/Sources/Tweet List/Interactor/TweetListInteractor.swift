@@ -19,10 +19,18 @@ final class TweetListInteractor: TweetListInteractorProtocol {
         self.worker = worker
     }
     
-    func fetchTweets() {
+    func fetchTweetsForUser(_ user: String) {
         
-        worker.fetchTweets { (tweets, error) in
+        worker.fetchTweets(forUser: user) { [weak self] tweets, error in
+            //self?.output.tweetsFetched(tweets)
             
+            if let strongSelf = self {
+                if let tweetError = error {
+                    //strongSelf.output.presentError(error: tweetError)
+                } else if let tweetsArray = tweets {
+                    strongSelf.output.tweetsFetched(tweetsArray)
+                }
+            }
         }
     }
 }

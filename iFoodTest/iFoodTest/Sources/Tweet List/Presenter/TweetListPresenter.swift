@@ -16,13 +16,13 @@ final class TweetListPresenter: TweetListPresenterProtocol {
     var twitterUser: String!
     
     func viewDidLoad() {
-        interactor.fetchTweets()
+        interactor.fetchTweetsForUser(twitterUser)
     }
 }
 
 extension TweetListPresenter: TweetListInteractorOutputProtocol {
     
-    func tweetsFetched(_ tweets: [String]) {
-        
+    func tweetsFetched(_ tweets: [Tweet]) {
+        self.view?.displayTweets(tweets)
     }
 }

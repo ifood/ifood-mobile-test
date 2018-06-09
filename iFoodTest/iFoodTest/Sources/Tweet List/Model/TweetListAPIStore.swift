@@ -26,14 +26,42 @@ final class TweetListAPIStore: TweetListStoreProtocol {
         self.networkClient = networkClient
     }
     
-    func fetchTweets(completion: @escaping ([Tweet]?, Error?) -> ()) {
+    func fetchTweets(forUser user: String, completion: @escaping ([Tweet]?, Error?) -> ()) {
         checkAuthentication { (success, error) in
-            
+            if success {
+                guard let url = TwitterAPIEndPoint.getLastestTweets(user).url else {
+                    completion([], TweetListStoreError.invalidURL)
+                    return
+                }
+                
+                var request = URLRequest(url: url)
+                request.httpMethod = TwitterAPIEndPoint.getLastestTweets(user).method
+                _ = TwitterAPIEndPoint.getLastestTweets(user).headers.map { (key, value) in
+                    request.addValue(value, forHTTPHeaderField: key)
+                }
+                
+                self.networkClient.sendRequest(request: request) { (data, response, error) in
+                    var tweets: [Tweet]?
+                    var tweetError: Error?
+                    
+                    if let jsonArray = data?.jsonArray() {
+                        tweets = jsonArray.flatMap { tweetDictionary -> Tweet? in
+                            return Tweet.fromJSON(json: tweetDictionary)
+                        }
+                    } else {
+                        tweetError = TweetListStoreError.invalidResponse
+                    }
+                    
+                    completion(tweets, tweetError)
+                }
+            } else {
+                completion([], error)
+            }
         }
     }
     
     fileprivate func checkAuthentication(completion: @escaping (Bool, Error?) -> ()) {
-        let accessToken = TwitterAccessToken.loadAccessToken()
+        let accessToken = TwitterAccessToken.accessToken()
         if accessToken.isEmpty == false {
             completion(true, nil)
             return

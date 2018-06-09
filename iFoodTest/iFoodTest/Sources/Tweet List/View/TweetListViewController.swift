@@ -10,6 +10,8 @@ import UIKit
 
 final class TweetListViewController: UIViewController, TweetListViewProtocol {
     
+    fileprivate var tweets: [Tweet] = []
+    
     var presenter: TweetListPresenterProtocol!
     var mainView: TweetListView {
         guard let mainView = self.view as? TweetListView else { fatalError("ControllerWithMainViewFatalErrorMainView") }
@@ -28,16 +30,25 @@ final class TweetListViewController: UIViewController, TweetListViewProtocol {
         let nib = UINib(nibName: "TweetListTableViewCell", bundle: nil)
         mainView.tableView.register(nib, forCellReuseIdentifier: "TweetListTableViewCell")
     }
+    
+    func displayTweets(_ tweets: [Tweet]) {        
+        self.tweets = tweets
+        self.mainView.tableView.reloadData()
+    }
+    
 }
 
 extension TweetListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return tweets.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TweetListTableViewCell") as! TweetListTableViewCell
-        cell.setup("oxi")
+        let tweet = tweets[indexPath.row]
+        
+        cell.setup(tweet)
+        
         return cell
     }
 }

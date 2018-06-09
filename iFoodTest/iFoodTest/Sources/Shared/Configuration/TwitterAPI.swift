@@ -61,7 +61,7 @@ enum TwitterAPIEndPoint {
         default:
             return [
                 "Content-type": "application/json",
-                "Authorization": "Bearer \(TwitterAccessToken.loadAccessToken())"
+                "Authorization": "Bearer \(TwitterAccessToken.accessToken())"
             ]
         }
     }

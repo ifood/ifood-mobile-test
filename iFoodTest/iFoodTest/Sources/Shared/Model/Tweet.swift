@@ -9,5 +9,32 @@
 import Foundation
 
 struct Tweet {
+    let idStr: String
+    let user: TwitterUser
+    let text: String
+    let createdAt: Date
+}
+
+extension Tweet: Parsable {
     
+    private struct Constants {
+        static let idStrKey = "id_str"
+        static let userKey = "user"
+        static let textKey = "text"
+        static let createdAtKey = "created_at"
+    }
+    
+    static func fromJSON(json: [String: Any]) -> Tweet? {
+        
+        if let idString = json[Constants.idStrKey] as? String,
+            let userJson = json[Constants.userKey] as? [String: Any],
+            let user = TwitterUser.fromJSON(json: userJson),
+            let text = json[Constants.textKey] as? String,
+            let createdAt = json[Constants.createdAtKey] as? String {
+            
+            return Tweet(idStr: idString, user: user, text: text, createdAt: Date())
+        }
+        
+        return nil
+    }
 }

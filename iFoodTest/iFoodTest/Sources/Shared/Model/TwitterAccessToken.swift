@@ -13,7 +13,7 @@ struct TwitterAccessToken {
         KeychainWrapper.standard.set(token, forKey: "twitterAccessToken")
     }
     
-    static func loadAccessToken() -> String {
+    static func accessToken() -> String {
         return KeychainWrapper.standard.string(forKey: "twitterAccessToken") ?? ""
     }
 }
