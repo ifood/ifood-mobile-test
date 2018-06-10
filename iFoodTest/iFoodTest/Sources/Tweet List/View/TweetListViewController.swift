@@ -10,7 +10,8 @@ import UIKit
 
 final class TweetListViewController: UIViewController, TweetListViewProtocol {
     
-    fileprivate var tweets: [Tweet] = []
+    fileprivate let kTableViewCellIdentifier = "TweetListTableViewCell"
+    fileprivate var tweets: [Tweet] = []    
     
     var presenter: TweetListPresenterProtocol!
     var mainView: TweetListView {
@@ -25,15 +26,24 @@ final class TweetListViewController: UIViewController, TweetListViewProtocol {
     }
     
     fileprivate func setupView() {
+        mainView.showLoadingScreen()
+        
         mainView.tableView.rowHeight = UITableViewAutomaticDimension
         mainView.tableView.estimatedRowHeight = 230.0
-        let nib = UINib(nibName: "TweetListTableViewCell", bundle: nil)
-        mainView.tableView.register(nib, forCellReuseIdentifier: "TweetListTableViewCell")
+        let nib = UINib(nibName: kTableViewCellIdentifier, bundle: nil)
+        mainView.tableView.register(nib, forCellReuseIdentifier: kTableViewCellIdentifier)
     }
     
-    func displayTweets(_ tweets: [Tweet]) {        
+    func displayTweets(_ tweets: [Tweet], forUser user: String) {
+        mainView.hideLoadingScreen()
+        
         self.tweets = tweets
-        self.mainView.tableView.reloadData()
+        mainView.tableView.reloadData()
+        navigationItem.title = "@\(user)"
+    }
+    
+    func displayErrorMessage(_ error: String) {
+        mainView.showError(error)
     }
     
 }
@@ -44,7 +54,7 @@ extension TweetListViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TweetListTableViewCell") as! TweetListTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: kTableViewCellIdentifier) as! TweetListTableViewCell
         let tweet = tweets[indexPath.row]
         
         cell.setup(tweet)

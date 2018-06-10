@@ -19,8 +19,7 @@ class ImageManager {
         
         memoryStore.loadImage(url: url) { [weak self] cachedImage, memoryStoreError in
             
-            if let strongSelf = self {
-                
+            if let strongSelf = self {                
                 if let _ = cachedImage {
                     completion(cachedImage, nil)
                 } else {
@@ -40,8 +39,6 @@ class ImageManager {
     func clearCache() {
         memoryStore.removeAllImages()
     }
-    
-    // MARK: - Private
     
     private func setNetworkActivityIndicatorVisible(visible: Bool) {        
         if updateNetworkStatusActivityIndicator {

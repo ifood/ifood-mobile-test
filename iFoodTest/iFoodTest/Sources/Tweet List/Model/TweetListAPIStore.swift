@@ -8,13 +8,14 @@
 
 import Foundation
 
+enum TweetListStoreError: Error {
+    case generic
+    case invalidURL
+    case invalidResponse
+    case invalidTwitterUser
+}
+
 final class TweetListAPIStore: TweetListStoreProtocol {
-    
-    enum TweetListStoreError: Error {
-        case generic
-        case invalidURL
-        case invalidResponse
-    }
     
     fileprivate struct Constants {
         static let accessToken = "access_token"
@@ -26,27 +27,30 @@ final class TweetListAPIStore: TweetListStoreProtocol {
         self.networkClient = networkClient
     }
     
-    func fetchTweets(forUser user: String, completion: @escaping ([Tweet]?, Error?) -> ()) {
+    func fetchTweets(forUser user: String, completion: @escaping ([Tweet]?, TweetListStoreError?) -> ()) {
         checkAuthentication { (success, error) in
             if success {
                 let request = TwitterAPIEndPoint.getLastestTweets(user).urlRequest
                 
                 self.networkClient.sendRequest(request: request) { (data, response, error) in
                     var tweets: [Tweet]?
-                    var tweetError: Error?
+                    
+                    if let _ = error {
+                        completion([], TweetListStoreError.generic)
+                        return
+                    }
                     
                     if let jsonArray = data?.jsonArray() {
                         tweets = jsonArray.flatMap { tweetDictionary -> Tweet? in
                             return Tweet.fromJSON(json: tweetDictionary)
                         }
+                        completion(tweets, nil)
                     } else {
-                        tweetError = TweetListStoreError.invalidResponse
+                        completion([], TweetListStoreError.invalidTwitterUser)
                     }
-                    
-                    completion(tweets, tweetError)
                 }
             } else {
-                completion([], error)
+                completion([], TweetListStoreError.invalidResponse)
             }
         }
     }

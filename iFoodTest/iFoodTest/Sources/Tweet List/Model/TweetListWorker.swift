@@ -16,7 +16,7 @@ final class TweetListWorker {
         self.store = store
     }
     
-    func fetchTweets(forUser user: String, completion: @escaping ([Tweet]?, Error?) -> ()) {        
+    func fetchTweets(forUser user: String, completion: @escaping ([Tweet]?, TweetListStoreError?) -> ()) {        
         store.fetchTweets(forUser: user, completion: completion)
     }
 }

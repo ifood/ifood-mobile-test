@@ -22,13 +22,28 @@ final class TweetListInteractor: TweetListInteractorProtocol {
     func fetchTweetsForUser(_ user: String) {
         
         worker.fetchTweets(forUser: user) { [weak self] tweets, error in
-            //self?.output.tweetsFetched(tweets)
             
             if let strongSelf = self {
                 if let tweetError = error {
-                    //strongSelf.output.presentError(error: tweetError)
+                    
+                    var errorDescription: String
+                    
+                    switch tweetError {
+                    case .invalidTwitterUser:
+                        errorDescription = Localization.TweetList.invalidTwitterUserErrorTitle
+                    default:
+                        errorDescription = Localization.TweetList.failedLoadTwitterUserErrorTItle
+                    }
+                    
+                    strongSelf.output.presentError(errorDescription)
+                    
                 } else if let tweetsArray = tweets {
-                    strongSelf.output.tweetsFetched(tweetsArray)
+                    
+                    if tweetsArray.count > 0 {
+                        strongSelf.output.tweetsFetched(tweetsArray)
+                    } else {
+                        strongSelf.output.presentError(Localization.TweetList.tweetsNotFoundErrorTitle)
+                    }
                 }
             }
         }

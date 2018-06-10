@@ -17,11 +17,23 @@ final class TwitterUserViewController: UIViewController, TwitterUserViewProtocol
     }
 
     override func viewDidLoad() {
-        super.viewDidLoad()        
+        super.viewDidLoad()
+        mainView.twitterUserTextField.addTarget(self, action: #selector(textFieldsIsNotEmpty), for: .editingChanged)
     }
     
     @IBAction func didClickListTweets(_ sender: Any) {
         presenter.showTweetsFor(user: mainView.twitterUserTextField.text!)
+    }
+    
+    @objc fileprivate func textFieldsIsNotEmpty(sender: UITextField) {
+        sender.text = sender.text?.trimmingCharacters(in: .whitespaces)
+        
+        guard let name = mainView.twitterUserTextField.text, !name.isEmpty else {
+            mainView.listTweetsButton.isEnabled = false
+            return
+        }
+        
+        mainView.listTweetsButton.isEnabled = true
     }
     
 }

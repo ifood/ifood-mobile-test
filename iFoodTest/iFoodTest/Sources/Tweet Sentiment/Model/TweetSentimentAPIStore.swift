@@ -25,11 +25,21 @@ final class TweetSentimentAPIStore: TweetSentimentStoreProtocol {
         self.networkClient = networkClient
     }
     
-    func fetchSentimentAnalysisForTweet(_ tweet: Tweet) {
+    func fetchSentimentAnalysis(forTweet tweet: Tweet, completion: @escaping (TextSentiment?, Error?) -> ()) {
         let request = GoogleNaturalLanguageAPIEndPoint.analyzeSentiment(text: tweet.text).urlRequest
         
         networkClient.sendRequest(request: request) { (data, response, error) in
-                        
+            var textSentiment: TextSentiment?
+            var textSentimentError: Error?
+            
+            if let jsonDictionary = data?.jsonDictionary(),
+            let jsonDocumentSentiment = jsonDictionary[Constants.textSentiment] as? [String: Any] {
+                textSentiment = TextSentiment.fromJSON(json: jsonDocumentSentiment)
+            } else {
+                textSentimentError = TweetSentimentStoreError.invalidResponse
+            }
+            
+            completion(textSentiment, textSentimentError)
         }
     }
     

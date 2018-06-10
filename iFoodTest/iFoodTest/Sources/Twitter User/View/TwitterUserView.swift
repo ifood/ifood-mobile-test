@@ -10,8 +10,18 @@ import UIKit
 
 final class TwitterUserView: UIView {
     
-    @IBOutlet weak var logoImageView: UIImageView!
+    @IBOutlet weak var twitterUserHomeTitle: UILabel!
     @IBOutlet weak var twitterUserTextField: UITextField!
     @IBOutlet weak var listTweetsButton: UIButton!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        setupViews()
+    }
+    
+    fileprivate func setupViews() {
+        listTweetsButton.isEnabled = false
+        listTweetsButton.setTitle(Localization.TwitterUser.listTweetsButtonTitle, for: .normal)
+        twitterUserHomeTitle.text = Localization.TwitterUser.homeTitle
+    }
 }

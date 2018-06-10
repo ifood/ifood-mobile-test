@@ -15,7 +15,7 @@ final class TweetSentimentWorker: TweetSentimentStoreProtocol {
         self.store = store
     }
     
-    func fetchSentimentAnalysisForTweet(_ tweet: Tweet) {
-        store.fetchSentimentAnalysisForTweet(tweet)
+    func fetchSentimentAnalysis(forTweet tweet: Tweet, completion: @escaping (TextSentiment?, Error?) -> ()) {
+        store.fetchSentimentAnalysis(forTweet: tweet, completion: completion)
     }
 }

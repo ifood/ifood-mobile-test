@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  iFoodTest
+
+  Created by Mauricio Cesar Maniglia Junior on 10/06/18.
+  Copyright © 2018 Mauricio Cesar Maniglia Junior. All rights reserved.
+*/
+
+HOME_TITLE = "Analyse Tweet Sentiment";
+LIST_TWEETS_BUTTON_TITLE = "List tweets";
+
+INVALID_TWITTER_USER_ERROR_TITLE = "Invalid twitter user";
+FAILED_LOAD_TWITTER_USER_ERROR_TITLE = "Could not load twitter user. Try another one!";
+TWEETS_NOT_FOUND_ERROR_TITLE = "Tweets not found!";
+
+FAILED_LOAD_TWEET_SENTIMENT_ERROR_TITLE = "Couldn't load tweet sentiment. Try again later!";
+

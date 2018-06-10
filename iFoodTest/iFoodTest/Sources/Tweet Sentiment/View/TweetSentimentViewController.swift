@@ -25,4 +25,11 @@ final class TweetSentimentViewController: UIViewController, TweetSentimentViewPr
         presenter.didSelectClose()
     }
     
+    func showTweetSentiment(_ tweetSentiment: TweetSentiment) {
+        mainView.setupTweetSentiment(tweetSentiment)
+    }
+    
+    func displayErrorMessage(_ error: String) {
+        mainView.showError(error)
+    }
 }

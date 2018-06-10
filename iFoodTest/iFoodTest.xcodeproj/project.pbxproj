@@ -30,6 +30,11 @@
 		2B7322DF20CC6DB7002B3BBF /* TweetSentimentAPIStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7322DE20CC6DB7002B3BBF /* TweetSentimentAPIStore.swift */; };
 		2B7322E120CC8C68002B3BBF /* GoogleNaturalLanguageAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7322E020CC8C68002B3BBF /* GoogleNaturalLanguageAPI.swift */; };
 		2B7322E320CCB095002B3BBF /* TextSentiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7322E220CCB095002B3BBF /* TextSentiment.swift */; };
+		2B7322E520CCB7A8002B3BBF /* TweetSentiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7322E420CCB7A8002B3BBF /* TweetSentiment.swift */; };
+		2B7322E720CD5795002B3BBF /* UIColor+Sentiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7322E620CD5795002B3BBF /* UIColor+Sentiment.swift */; };
+		2B7322EC20CDBA06002B3BBF /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7322EB20CDBA06002B3BBF /* Localization.swift */; };
+		2B7322EE20CDBB52002B3BBF /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7322ED20CDBB52002B3BBF /* String+Localized.swift */; };
+		2B7322F120CDBE22002B3BBF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2B7322F320CDBE22002B3BBF /* Localizable.strings */; };
 		2BDB729720C95BC900BFC45C /* TwitterUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDB729620C95BC900BFC45C /* TwitterUserView.swift */; };
 		2BDB729920C9C96A00BFC45C /* TwitterUserStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BDB729820C9C96A00BFC45C /* TwitterUserStoryboard.storyboard */; };
 		2BDB729B20C9D1EC00BFC45C /* TweetListContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDB729A20C9D1EC00BFC45C /* TweetListContract.swift */; };
@@ -102,6 +107,11 @@
 		2B7322DE20CC6DB7002B3BBF /* TweetSentimentAPIStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetSentimentAPIStore.swift; sourceTree = "<group>"; };
 		2B7322E020CC8C68002B3BBF /* GoogleNaturalLanguageAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleNaturalLanguageAPI.swift; sourceTree = "<group>"; };
 		2B7322E220CCB095002B3BBF /* TextSentiment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSentiment.swift; sourceTree = "<group>"; };
+		2B7322E420CCB7A8002B3BBF /* TweetSentiment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetSentiment.swift; sourceTree = "<group>"; };
+		2B7322E620CD5795002B3BBF /* UIColor+Sentiment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Sentiment.swift"; sourceTree = "<group>"; };
+		2B7322EB20CDBA06002B3BBF /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
+		2B7322ED20CDBB52002B3BBF /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
+		2B7322F220CDBE22002B3BBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2BDB729620C95BC900BFC45C /* TwitterUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterUserView.swift; sourceTree = "<group>"; };
 		2BDB729820C9C96A00BFC45C /* TwitterUserStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TwitterUserStoryboard.storyboard; sourceTree = "<group>"; };
 		2BDB729A20C9D1EC00BFC45C /* TweetListContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetListContract.swift; sourceTree = "<group>"; };
@@ -185,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				2B7322C120CC5B1D002B3BBF /* UIImageView+RemoteImage.swift */,
+				2B7322E620CD5795002B3BBF /* UIColor+Sentiment.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -198,6 +209,15 @@
 				2B7322CA20CC5C69002B3BBF /* ImageStoreProtocol.swift */,
 			);
 			path = Image;
+			sourceTree = "<group>";
+		};
+		2B7322EA20CDB9EC002B3BBF /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				2B7322EB20CDBA06002B3BBF /* Localization.swift */,
+				2B7322ED20CDBB52002B3BBF /* String+Localized.swift */,
+			);
+			path = Strings;
 			sourceTree = "<group>";
 		};
 		2BE9976120CAC5B60003DBC8 /* Model */ = {
@@ -290,6 +310,7 @@
 			children = (
 				2BFDF40520C8B9D100B9C71F /* Assets.xcassets */,
 				2BFDF40720C8B9D100B9C71F /* LaunchScreen.storyboard */,
+				2B7322F320CDBE22002B3BBF /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -449,6 +470,7 @@
 			children = (
 				2B7322DC20CC6D91002B3BBF /* TweetSentimentWorker.swift */,
 				2B7322DE20CC6DB7002B3BBF /* TweetSentimentAPIStore.swift */,
+				2B7322E420CCB7A8002B3BBF /* TweetSentiment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -472,8 +494,8 @@
 		2BFDF44320C8BDE700B9C71F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2B7322CC20CC66A3002B3BBF /* TweetSentimentViewController.swift */,
 				2B7322CE20CC66CC002B3BBF /* TweetSentimentView.swift */,
+				2B7322CC20CC66A3002B3BBF /* TweetSentimentViewController.swift */,
 				2B7322D020CC6701002B3BBF /* TweetSentimentStoryboard.storyboard */,
 			);
 			path = View;
@@ -531,6 +553,7 @@
 		2BFDF44A20C8BF5100B9C71F /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				2B7322EA20CDB9EC002B3BBF /* Strings */,
 				2B7322C320CC5B5D002B3BBF /* Image */,
 				2B7322C020CC5B0E002B3BBF /* View */,
 				2BE9976120CAC5B60003DBC8 /* Model */,
@@ -650,6 +673,7 @@
 				2BDB72AD20C9DCCF00BFC45C /* TweetListTableViewCell.xib in Resources */,
 				2BDB729920C9C96A00BFC45C /* TwitterUserStoryboard.storyboard in Resources */,
 				2BFDF40920C8B9D100B9C71F /* LaunchScreen.storyboard in Resources */,
+				2B7322F120CDBE22002B3BBF /* Localizable.strings in Resources */,
 				2BFDF40620C8B9D100B9C71F /* Assets.xcassets in Resources */,
 				2BDB72A920C9DA8800BFC45C /* TweetListStoryboard.storyboard in Resources */,
 				2B7322D120CC6701002B3BBF /* TweetSentimentStoryboard.storyboard in Resources */,
@@ -684,6 +708,7 @@
 				2B1CE88020CA105B00CC5E8C /* TweetListAPIStore.swift in Sources */,
 				2B7322DB20CC6D72002B3BBF /* TweetSentimentInteractor.swift in Sources */,
 				2BFDF3FF20C8B9D100B9C71F /* AppDelegate.swift in Sources */,
+				2B7322E520CCB7A8002B3BBF /* TweetSentiment.swift in Sources */,
 				2BDB72A120C9D29500BFC45C /* TweetListViewController.swift in Sources */,
 				2BDB72A720C9D2DB00BFC45C /* TweetListInteractor.swift in Sources */,
 				2BFDF45620C8D3B200B9C71F /* TwitterUserViewController.swift in Sources */,
@@ -711,11 +736,14 @@
 				2BFDF44E20C8C11A00B9C71F /* RootRouter.swift in Sources */,
 				2B7322D920CC6D62002B3BBF /* TweetSentimentPresenter.swift in Sources */,
 				2BE9976A20CAFBB30003DBC8 /* TwitterAccessToken.swift in Sources */,
+				2B7322EC20CDBA06002B3BBF /* Localization.swift in Sources */,
 				2B7322C520CC5B71002B3BBF /* ImageManager.swift in Sources */,
 				2B1CE88620CA130800CC5E8C /* TwitterAPI.swift in Sources */,
 				2BFDF45220C8C86900B9C71F /* TwitterUserRouter.swift in Sources */,
 				2BFDF44C20C8C01300B9C71F /* RootContract.swift in Sources */,
+				2B7322E720CD5795002B3BBF /* UIColor+Sentiment.swift in Sources */,
 				2BFDF45820C8D47E00B9C71F /* TwitterUserPresenter.swift in Sources */,
+				2B7322EE20CDBB52002B3BBF /* String+Localized.swift in Sources */,
 				2BDB72AC20C9DCCF00BFC45C /* TweetListTableViewCell.swift in Sources */,
 				2BE9977320CB44110003DBC8 /* KeychainItemAccessibility.swift in Sources */,
 				2BE9976320CAC5C50003DBC8 /* Tweet.swift in Sources */,
@@ -756,6 +784,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		2B7322F320CDBE22002B3BBF /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B7322F220CDBE22002B3BBF /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		2BFDF40720C8B9D100B9C71F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -880,11 +916,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = iFoodTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mauriciomaniglia.iFoodTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -894,11 +931,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = iFoodTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mauriciomaniglia.iFoodTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

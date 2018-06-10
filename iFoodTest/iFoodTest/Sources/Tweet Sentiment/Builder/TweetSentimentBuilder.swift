@@ -9,6 +9,7 @@
 import UIKit
 
 final class TweetSentimentBuilder: TweetSentimentBuilderProtocol {
+    
     static func assembleModule(forTweet tweet: Tweet) -> UIViewController {
         let storyboard = UIStoryboard(name: "TweetSentimentStoryboard", bundle: nil)
         let view = storyboard.instantiateViewController(withIdentifier: "TweetSentimentViewController") as! TweetSentimentViewController
@@ -21,6 +22,7 @@ final class TweetSentimentBuilder: TweetSentimentBuilderProtocol {
         presenter.router = router
         presenter.tweet = tweet
         presenter.interactor = interactor
+        interactor.output = presenter
         router.viewController = view
         
         return view

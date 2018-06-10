@@ -18,6 +18,9 @@ protocol TweetSentimentRouterProtocol {
 
 protocol TweetSentimentViewProtocol: class {
     var presenter: TweetSentimentPresenterProtocol! { get set }
+    
+    func showTweetSentiment(_ tweetSentiment: TweetSentiment)
+    func displayErrorMessage(_ error: String)
 }
 
 protocol TweetSentimentPresenterProtocol: class {
@@ -36,9 +39,10 @@ protocol TweetSentimentInteractorProtocol: class {
 }
 
 protocol TweetSentimentInteractorOutputProtocol: class {
-    
+    func textSentimentFetched(_ text: TextSentiment)
+    func presentError(_ error: String)
 }
 
 protocol TweetSentimentStoreProtocol: class {
-    func fetchSentimentAnalysisForTweet(_ tweet: Tweet)
+    func fetchSentimentAnalysis(forTweet tweet: Tweet, completion: @escaping (TextSentiment?, Error?) -> ())
 }

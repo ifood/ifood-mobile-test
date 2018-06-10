@@ -19,6 +19,15 @@ final class TweetSentimentInteractor: TweetSentimentInteractorProtocol {
     }
     
     func fetchSentimentAnalysisForTweet(_ tweet: Tweet) {
-        worker.fetchSentimentAnalysisForTweet(tweet)
+        worker.fetchSentimentAnalysis(forTweet: tweet) { [weak self] textSentiment, error in
+            
+            if let strongSelf = self {
+                if let _ = error {
+                    strongSelf.output.presentError(Localization.TweetSentiment.failedLoadTweetSentimentErrorTitle)
+                } else if let textSentiment = textSentiment {
+                    strongSelf.output.textSentimentFetched(textSentiment)
+                }
+            }
+        }
     }
 }

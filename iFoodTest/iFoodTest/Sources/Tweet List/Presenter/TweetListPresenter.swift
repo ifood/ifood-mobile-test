@@ -27,6 +27,10 @@ final class TweetListPresenter: TweetListPresenterProtocol {
 extension TweetListPresenter: TweetListInteractorOutputProtocol {
     
     func tweetsFetched(_ tweets: [Tweet]) {
-        self.view?.displayTweets(tweets)
+        self.view?.displayTweets(tweets, forUser:twitterUser)
+    }
+    
+    func presentError(_ error: String) {
+        self.view?.displayErrorMessage(error)
     }
 }
