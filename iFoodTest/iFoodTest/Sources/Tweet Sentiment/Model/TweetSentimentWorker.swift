@@ -8,6 +8,14 @@
 
 import Foundation
 
-final class TweetSentimentWorker {
+final class TweetSentimentWorker: TweetSentimentStoreProtocol {
+    fileprivate var store: TweetSentimentStoreProtocol
     
+    init(store: TweetSentimentStoreProtocol = TweetSentimentAPIStore()) {
+        self.store = store
+    }
+    
+    func fetchSentimentAnalysisForTweet(_ tweet: Tweet) {
+        store.fetchSentimentAnalysisForTweet(tweet)
+    }
 }

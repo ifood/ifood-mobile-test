@@ -16,7 +16,7 @@ final class TweetSentimentPresenter: TweetSentimentPresenterProtocol {
     var tweet: Tweet!
     
     func viewDidLoad() {
-        
+        interactor.fetchSentimentAnalysisForTweet(tweet)
     }
     
     func didSelectClose() {

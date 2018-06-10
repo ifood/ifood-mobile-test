@@ -8,6 +8,29 @@
 
 import Foundation
 
-final class TweetSentimentAPIStore {
+final class TweetSentimentAPIStore: TweetSentimentStoreProtocol {
+    enum TweetSentimentStoreError: Error {
+        case generic
+        case invalidURL
+        case invalidResponse
+    }
+    
+    fileprivate struct Constants {
+        static let textSentiment = "documentSentiment"
+    }
+    
+    fileprivate let networkClient: NetworkClientProtocol
+    
+    init(networkClient: NetworkClientProtocol = NetworkClient.sharedInstance) {
+        self.networkClient = networkClient
+    }
+    
+    func fetchSentimentAnalysisForTweet(_ tweet: Tweet) {
+        let request = GoogleNaturalLanguageAPIEndPoint.analyzeSentiment(text: tweet.text).urlRequest
+        
+        networkClient.sendRequest(request: request) { (data, response, error) in
+                        
+        }
+    }
     
 }

@@ -31,6 +31,8 @@ protocol TweetSentimentPresenterProtocol: class {
 
 protocol TweetSentimentInteractorProtocol: class {
     weak var output: TweetSentimentInteractorOutputProtocol! { get set }
+    
+    func fetchSentimentAnalysisForTweet(_ tweet: Tweet)
 }
 
 protocol TweetSentimentInteractorOutputProtocol: class {
@@ -38,5 +40,5 @@ protocol TweetSentimentInteractorOutputProtocol: class {
 }
 
 protocol TweetSentimentStoreProtocol: class {
-    
+    func fetchSentimentAnalysisForTweet(_ tweet: Tweet)
 }

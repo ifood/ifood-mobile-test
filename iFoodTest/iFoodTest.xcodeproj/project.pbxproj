@@ -28,6 +28,8 @@
 		2B7322DB20CC6D72002B3BBF /* TweetSentimentInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7322DA20CC6D72002B3BBF /* TweetSentimentInteractor.swift */; };
 		2B7322DD20CC6D91002B3BBF /* TweetSentimentWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7322DC20CC6D91002B3BBF /* TweetSentimentWorker.swift */; };
 		2B7322DF20CC6DB7002B3BBF /* TweetSentimentAPIStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7322DE20CC6DB7002B3BBF /* TweetSentimentAPIStore.swift */; };
+		2B7322E120CC8C68002B3BBF /* GoogleNaturalLanguageAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7322E020CC8C68002B3BBF /* GoogleNaturalLanguageAPI.swift */; };
+		2B7322E320CCB095002B3BBF /* TextSentiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7322E220CCB095002B3BBF /* TextSentiment.swift */; };
 		2BDB729720C95BC900BFC45C /* TwitterUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDB729620C95BC900BFC45C /* TwitterUserView.swift */; };
 		2BDB729920C9C96A00BFC45C /* TwitterUserStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BDB729820C9C96A00BFC45C /* TwitterUserStoryboard.storyboard */; };
 		2BDB729B20C9D1EC00BFC45C /* TweetListContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDB729A20C9D1EC00BFC45C /* TweetListContract.swift */; };
@@ -98,6 +100,8 @@
 		2B7322DA20CC6D72002B3BBF /* TweetSentimentInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetSentimentInteractor.swift; sourceTree = "<group>"; };
 		2B7322DC20CC6D91002B3BBF /* TweetSentimentWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetSentimentWorker.swift; sourceTree = "<group>"; };
 		2B7322DE20CC6DB7002B3BBF /* TweetSentimentAPIStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetSentimentAPIStore.swift; sourceTree = "<group>"; };
+		2B7322E020CC8C68002B3BBF /* GoogleNaturalLanguageAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleNaturalLanguageAPI.swift; sourceTree = "<group>"; };
+		2B7322E220CCB095002B3BBF /* TextSentiment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSentiment.swift; sourceTree = "<group>"; };
 		2BDB729620C95BC900BFC45C /* TwitterUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterUserView.swift; sourceTree = "<group>"; };
 		2BDB729820C9C96A00BFC45C /* TwitterUserStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TwitterUserStoryboard.storyboard; sourceTree = "<group>"; };
 		2BDB729A20C9D1EC00BFC45C /* TweetListContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetListContract.swift; sourceTree = "<group>"; };
@@ -172,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				2B1CE88520CA130800CC5E8C /* TwitterAPI.swift */,
+				2B7322E020CC8C68002B3BBF /* GoogleNaturalLanguageAPI.swift */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -204,6 +209,7 @@
 				2BE9976920CAFBB30003DBC8 /* TwitterAccessToken.swift */,
 				2BE9976F20CB2EA50003DBC8 /* Data+JSON.swift */,
 				2B7322BE20CC13EF002B3BBF /* Parsable.swift */,
+				2B7322E220CCB095002B3BBF /* TextSentiment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -673,6 +679,7 @@
 			files = (
 				2BFDF45020C8C1C600B9C71F /* TwitterUserContract.swift in Sources */,
 				2BDB729B20C9D1EC00BFC45C /* TweetListContract.swift in Sources */,
+				2B7322E320CCB095002B3BBF /* TextSentiment.swift in Sources */,
 				2B7322D520CC6D36002B3BBF /* TweetSentimentBuilder.swift in Sources */,
 				2B1CE88020CA105B00CC5E8C /* TweetListAPIStore.swift in Sources */,
 				2B7322DB20CC6D72002B3BBF /* TweetSentimentInteractor.swift in Sources */,
@@ -687,6 +694,7 @@
 				2BDB72A520C9D2C500BFC45C /* TweetListPresenter.swift in Sources */,
 				2BDB72A320C9D2A600BFC45C /* TweetListView.swift in Sources */,
 				2B7322D320CC6D1D002B3BBF /* TweetSentimentContract.swift in Sources */,
+				2B7322E120CC8C68002B3BBF /* GoogleNaturalLanguageAPI.swift in Sources */,
 				2B7322DF20CC6DB7002B3BBF /* TweetSentimentAPIStore.swift in Sources */,
 				2B7322C920CC5C2F002B3BBF /* ImageNetworkStore.swift in Sources */,
 				2B7322CB20CC5C69002B3BBF /* ImageStoreProtocol.swift in Sources */,

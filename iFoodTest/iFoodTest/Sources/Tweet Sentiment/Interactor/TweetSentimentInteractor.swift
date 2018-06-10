@@ -17,4 +17,8 @@ final class TweetSentimentInteractor: TweetSentimentInteractorProtocol {
         self.output = output
         self.worker = worker
     }
+    
+    func fetchSentimentAnalysisForTweet(_ tweet: Tweet) {
+        worker.fetchSentimentAnalysisForTweet(tweet)
+    }
 }
