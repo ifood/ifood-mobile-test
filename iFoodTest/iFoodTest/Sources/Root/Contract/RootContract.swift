@@ -8,6 +8,6 @@
 
 import UIKit
 
-protocol RootContractProtocol: class {
+protocol RootRouterProtocol: class {
     func presentTwitterUserScreen(in window: UIWindow)
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class RootRouter: RootContractProtocol {
+final class RootRouter: RootRouterProtocol {
     
     func presentTwitterUserScreen(in window: UIWindow) {
         window.makeKeyAndVisible()

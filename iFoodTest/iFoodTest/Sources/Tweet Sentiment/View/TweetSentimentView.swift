@@ -26,7 +26,6 @@ final class TweetSentimentView: UIView {
         emojiLabel.text = tweetSentiment.emoji
         textLabel.text = tweetSentiment.tweet
         containerMessageView.backgroundColor = tweetSentiment.color
-        
         showContainerMessage()
     }
     
