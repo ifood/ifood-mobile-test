@@ -1,0 +1,41 @@
+disabled_rules:
+  - trailing_newline
+  - type_name
+  - large_tuple
+  - multiple_closures_with_trailing_closure
+  - identifier_name
+  - file_length
+  - shorthand_operator
+  - line_length
+
+opt_in_rules:
+  - type_body_length
+  - empty_count
+  - force_cast
+  - force_try
+  - leading_whitespace
+  - function_body_length
+  - function_parameter_count
+  - legacy_constant
+  - operator_whitespace
+  - return_arrow_whitespace
+  - todo
+  - nesting
+  - operator_usage_whitespace
+  - unneeded_parentheses_in_closure_argument
+
+included: # paths to include during linting. `--path` is ignored if present.
+  - Twimotion
+
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+  - Pods
+
+
+empty_count: warning
+type_body_length:
+  warning: 300
+implicit_getter: warning
+force_cast: warning
+force_try: warning
+shorthand_operator: warning
+compiler_protocol_init: warning

@@ -1,0 +1,60 @@
+PODS:
+  - Differentiator (3.0.2)
+  - FLAnimatedImage (1.0.12)
+  - Nimble (7.1.1)
+  - PINCache (2.3)
+  - PINRemoteImage (2.1.4):
+    - PINRemoteImage/FLAnimatedImage (= 2.1.4)
+  - PINRemoteImage/Core (2.1.4):
+    - PINCache (>= 2.1)
+  - PINRemoteImage/FLAnimatedImage (2.1.4):
+    - FLAnimatedImage (>= 1.0)
+    - PINRemoteImage/Core
+  - Quick (1.3.0)
+  - RxBlocking (4.1.2):
+    - RxSwift (~> 4.0)
+  - RxCocoa (4.1.2):
+    - RxSwift (~> 4.0)
+  - RxDataSources (3.0.2):
+    - Differentiator (~> 3.0)
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
+  - RxSwift (4.1.2)
+  - RxTest (4.1.2):
+    - RxSwift (~> 4.0)
+  - SwiftGen (5.3.0)
+  - SwiftKeychainWrapper (3.0.1)
+  - SwiftLint (0.25.1)
+
+DEPENDENCIES:
+  - Nimble
+  - PINRemoteImage (~> 2.1.4)
+  - Quick
+  - RxBlocking (~> 4.0)
+  - RxCocoa (~> 4.0)
+  - RxDataSources (~> 3.0)
+  - RxSwift (~> 4.0)
+  - RxTest (~> 4.0)
+  - SwiftGen
+  - SwiftKeychainWrapper
+  - SwiftLint
+
+SPEC CHECKSUMS:
+  Differentiator: a87be69eba49ec4ab460c7671143ee3a9eececfd
+  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
+  Nimble: 391f07782af4b37914f9bd7b2ffbb952731b8202
+  PINCache: ce36ed282031b92fc7733ffe831f474ff80fddc2
+  PINRemoteImage: 4ac4011c5caefd6befd99758e09becede05d3226
+  Quick: 03278013f71aa05fe9ecabc94fbcc6835f1ee76f
+  RxBlocking: f6054985901412fc8c02daa84e92d4ba68c61389
+  RxCocoa: d88ba0f1f6abf040011a9eb4b539324fc426843a
+  RxDataSources: cb7c31e652a87ebb919da45f716bbb87b3765f6b
+  RxSwift: e49536837d9901277638493ea537394d4b55f570
+  RxTest: e634f15fd2c2cd0e0120132ef7a4f7be69ad0393
+  SwiftGen: 4379bd3640b0a212a0f6ea3c494adba385513d10
+  SwiftKeychainWrapper: 38952a3636320ae61bad3513cadd870929de7a4a
+  SwiftLint: ce933681be10c3266e82576dad676fa815a602e9
+
+PODFILE CHECKSUM: 4fb14d1e5fcefa32ca78239fd94891bd5fffdc5f
+
+COCOAPODS: 1.4.0
