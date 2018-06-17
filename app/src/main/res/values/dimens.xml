@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dimen_ldpi">4dp</dimen>
+    <dimen name="dimen_mdpi">8dp</dimen>
+    <dimen name="dimen_hdpi">16dp</dimen>
+    <dimen name="dimen_xhdpi">32dp</dimen>
+    <dimen name="dimen_xxhdpi">48dp</dimen>
+    <dimen name="dimen_xxxhdpi">64dp</dimen>
+
+    <dimen name="text_mdpi">14sp</dimen>
+    <dimen name="text_hdpi">18sp</dimen>
+    <dimen name="text_xhdpi">22sp</dimen>
+
+
+    <dimen name="icon_minimal">8dp</dimen>
+    <dimen name="icon_smaller">22dp</dimen>
+    <dimen name="icon_small">32dp</dimen>
+    <dimen name="icon_medium">64dp</dimen>
+    <dimen name="icon_big">96dp</dimen>
+    <dimen name="icon_bigger">128dp</dimen>
+
+    <dimen name="divider_height">1dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+</resources>
