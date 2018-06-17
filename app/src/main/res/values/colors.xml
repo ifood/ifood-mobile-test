@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#03A9F4</color>
+    <color name="colorPrimaryDark">#0288D1</color>
+    <color name="colorPrimaryLight">#B3E5FC</color>
+    <color name="colorAccent">#0288D1</color>
+    <color name="colorBackground">#ecede0</color>
+    
+    <color name= "primaryText">#333333</color>
+    <color name="secundatyText">#757575</color>
+
+    <color name="iFoodRedColor">#AB0D1D</color>
+    <color name="twetterBlue">#2B8EF0</color>
+    <color name="colorWhite">#FFF</color>
+    <color name="colorBlack">#000</color>
+
+
+    <color name="tweetMoodSad">#B3E5FC</color>
+    <color name="tweetMoodNeutral">#9E9E9E</color>
+    <color name="tweetMoodHappy">#FFEB3B</color>
+</resources>

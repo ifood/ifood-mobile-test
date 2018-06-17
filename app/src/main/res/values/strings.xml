@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Tweet Mood iFood</string>
+
+    <string name="label_twitter_username_text">Enter with a Twitter username to analysis the tweets mood</string>
+    <string name="label_twitter_username">Twitter username</string>
+    <string name="label_mandatory_field">Field must not be empty</string>
+
+    <string name="com.twitter.sdk.android.CONSUMER_KEY">GjRYstuXfhdgH7o55xW8O3klO</string>
+    <string name="com.twitter.sdk.android.CONSUMER_SECRET">4Mq7YxoCpSPda0c0zTnN73PXBbWhtDJ18uRLOv29iveM3iWInU</string>
+
+    <string name="action_ok">OK</string>
+    <string name="action_return">Return</string>
+    <string name="action_search">Search</string>
+
+    <string name="error_generic">Sorry,an error has occurred! Try again.</string>
+    <string name="error_tweet_search_not_found">Sorry,an error has occurred! Try again.</string>
+    <string name="error_tweet_not_found">There is no public tweets for the user.</string>
+    <string name="error_google_sentimental_analysis">Error making the sentimental analysis! Try again</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

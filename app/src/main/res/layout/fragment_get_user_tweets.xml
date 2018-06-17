@@ -1,0 +1,94 @@
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="br.com.ifood.tweetmood.presentation.view.getuser.GetUserTweetsFragment">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground">
+
+        <android.support.constraint.Guideline
+            android:id="@+id/gl_margin_left"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/dimen_hdpi"/>
+
+        <android.support.constraint.Guideline
+            android:id="@+id/gl_margin_right"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/dimen_hdpi"/>
+
+        <TextView
+            android:id="@+id/tv_app_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_hdpi"
+            android:text="@string/app_name"
+            android:textColor="@color/twetterBlue"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/gl_margin_right"
+            app:layout_constraintStart_toStartOf="@id/gl_margin_left"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_twitter_logo"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_twitter_logo_blue"
+            android:tint="@color/twetterBlue"
+            app:layout_constraintEnd_toEndOf="@id/gl_margin_right"
+            app:layout_constraintStart_toStartOf="@id/gl_margin_left"
+            app:layout_constraintTop_toBottomOf="@+id/tv_app_title" />
+
+        <TextView
+            android:id="@+id/tv_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_xxhdpi"
+            android:text="@string/label_twitter_username_text"
+            android:textSize="@dimen/text_hdpi"
+            app:layout_constraintStart_toStartOf="@id/gl_margin_left"
+            app:layout_constraintEnd_toEndOf="@id/gl_margin_right"
+            app:layout_constraintTop_toBottomOf="@id/iv_twitter_logo"/>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/tlUsername"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_mdpi"
+            app:layout_constraintTop_toBottomOf="@+id/tv_text"
+            app:layout_constraintLeft_toLeftOf="@+id/gl_margin_left"
+            app:layout_constraintRight_toLeftOf="@+id/gl_margin_right">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/etUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/label_twitter_username"
+                android:inputType="text"
+                android:maxLines="1"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/btSearchUser"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_hdpi"
+            android:text="@string/action_search"
+            android:background="@drawable/bg_rounded_dark_blue"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintStart_toStartOf="@id/gl_margin_left"
+            app:layout_constraintEnd_toEndOf="@id/gl_margin_right"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    </android.support.constraint.ConstraintLayout>
+</layout>
+

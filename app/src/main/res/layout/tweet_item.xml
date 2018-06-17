@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="tweet"
+            type="br.com.ifood.tweetmood.domain.model.TweetModel"/>
+
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/clItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_mdpi"
+        android:layout_marginBottom="@dimen/dimen_mdpi"
+        android:layout_marginStart="@dimen/dimen_hdpi"
+        android:layout_marginEnd="@dimen/dimen_hdpi"
+        android:background="@drawable/bg_rounded_dark_blue"
+        android:backgroundTint="@color/colorWhite">
+
+        <android.support.constraint.Guideline
+            android:id="@+id/gl_margin_left"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/dimen_hdpi"/>
+
+        <android.support.constraint.Guideline
+            android:id="@+id/gl_margin_right"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/dimen_hdpi"/>
+
+        <ImageView
+            android:layout_width="@dimen/dimen_xxhdpi"
+            android:layout_height="@dimen/dimen_xxhdpi"
+            android:layout_marginTop="@dimen/dimen_hdpi"
+            android:src="@drawable/ic_twitter_logo_blue"
+            android:tint="@color/twetterBlue"
+            app:layout_constraintEnd_toEndOf="@id/gl_margin_right"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/ivAvatar"
+            android:layout_width="@dimen/dimen_xxhdpi"
+            android:layout_height="@dimen/dimen_xxhdpi"
+            android:layout_marginTop="@dimen/dimen_hdpi"
+            app:layout_constraintStart_toStartOf="@id/gl_margin_left"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_mdpi"
+            android:text="@{tweet.name}"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_hdpi"
+            app:layout_constraintStart_toEndOf="@id/ivAvatar"
+            app:layout_constraintTop_toTopOf="@id/ivAvatar"/>
+
+        <TextView
+            android:id="@+id/tvScreenName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_mdpi"
+            android:text="@{tweet.screenName}"
+            app:layout_constraintStart_toEndOf="@id/ivAvatar"
+            app:layout_constraintTop_toBottomOf="@id/tvName"/>
+
+        <TextView
+            android:id="@+id/tvText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_mdpi"
+            android:layout_marginTop="@dimen/dimen_hdpi"
+            android:layout_marginBottom="@dimen/dimen_hdpi"
+            app:layout_constraintStart_toStartOf="@id/gl_margin_left"
+            app:layout_constraintEnd_toEndOf="@id/gl_margin_right"
+            app:layout_constraintTop_toBottomOf="@id/ivAvatar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="@{tweet.text}"/>
+
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

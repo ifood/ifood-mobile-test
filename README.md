@@ -1,18 +1,23 @@
-# ifood-mobile-test
+# Tweet Mood - iFood mobile test
+
+## Goal
 Create an app that given an Twitter username it will list user's tweets. When I tap one of the tweets the app will visualy indicate if it's a happy, neutral or sad tweet.
 
-## Business rules
-* Happy Tweet: We want a vibrant yellow color on screen with a 😃 emoji
-* Neutral Tweet: We want a grey colour on screen with a 😐 emoji
-* Sad Tweet: We want a blue color on screen with a 😔 emoji
-* For the first release we will only support english language
+## Solution
 
-### Hints
-* You may use Twitter's oficial API (https://developer.twitter.com) to fetch user's tweets 
-* Google's Natural Language API (https://cloud.google.com/natural-language/) may help you with sentimental analysis.
+This project was developed in Java using the MVVM standard with LiveData. Some of the principles of clean architecture were also used to delimit responsibilities and make single, separating the interest of each module and maintaining the business rules without knowing any detail about the outside world.
 
-## Non functional requirements
-* As this app will be a worldwide success, it must be prepared to be fault tolerant, responsive and resilient.
-* Use whatever language, tools and frameworks you feel comfortable to.
-* Briefly elaborate on your solution, architecture details, choice of patterns and frameworks.
-* Fork this repository and submit your code.
+### Twitter connection
+
+To connect with Twitter we used the client Search Tweets API. This api returns a collection of relevant Tweets matching a specified query, in this case, the query was a match between the the user's text imputed and the Twitter username. For example, if the user types NASA, the search will look for @NASA.
+
+### Google Sentimental Analysis
+
+To consume Google services an api rest was created using Retrofit and OkHttp. This choice was made due to the low complexity of the elements used for calls on Google Cloud Natural Language services.
+
+## Main Frameworks and libraries
+* Lombok: reduce boilerplate and create getters, setters, builders and others
+* Data binding and butterKnife: used to bind the layouts and boilerplate reduction.
+* Picasso: manipulation of images
+* Retrofit, Okhttp and Gson: responsible for http connections and object conversions
+* Dagger2: making dependency injection

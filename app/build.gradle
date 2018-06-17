@@ -1,0 +1,92 @@
+apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "br.com.ifood.tweetmood"
+        minSdkVersion 22
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        buildConfigField 'String', 'HOST', '"https://language.googleapis.com/"'
+        buildConfigField 'String', 'API_VERSION', '"v1beta2/"'
+        buildConfigField 'String', 'GOOGLE_KEY', '"AIzaSyAvyWmcOxrmGw6a0PjUFUoyA0GgMOwFD0s"'
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    packagingOptions {
+        exclude 'META-INF/INDEX.LIST'
+    }
+
+    //Retrolambda
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:support-v4:27.1.1'
+    compile 'com.android.support:design:27.1.1'
+    compile 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.1'
+
+    // retrofit dependencies
+    implementation "com.squareup.retrofit2:retrofit:$rootProject.retrofit"
+    implementation "com.squareup.retrofit2:converter-gson:$rootProject.retrofit"
+    implementation "com.squareup.retrofit2:adapter-rxjava:$rootProject.retrofit"
+    implementation "com.squareup.okhttp3:okhttp:$rootProject.okHttp3"
+    implementation "com.squareup.okhttp3:logging-interceptor:$rootProject.okHttp3"
+    implementation "com.squareup:otto:$rootProject.otto"
+    implementation "com.google.code.gson:gson:$rootProject.gson"
+
+    //picasso
+    implementation "com.squareup.picasso:picasso:$rootProject.picasso"
+
+    // twitter client
+    implementation 'com.twitter.sdk.android:twitter:3.1.1'
+    implementation 'org.twitter4j:twitter4j-core:4.0.1'
+
+    // lombok dependencies
+    compileOnly "org.projectlombok:lombok:$rootProject.lombok"
+    annotationProcessor "org.projectlombok:lombok:$rootProject.lombok"
+
+
+    // android arch
+    compile "android.arch.lifecycle:extensions:1.1.1"
+
+    // butter knife dependencies
+    implementation "com.jakewharton:butterknife:$rootProject.butterKnife"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.butterKnife"
+
+    // Dagger dependencies
+    annotationProcessor "com.google.dagger:dagger-compiler:$rootProject.dagger"
+    implementation "com.google.dagger:dagger:$rootProject.dagger"
+    implementation "com.google.dagger:dagger-android:$rootProject.dagger"
+    implementation "com.google.dagger:dagger-android-support:$rootProject.dagger"
+    annotationProcessor "com.google.dagger:dagger-android-processor:$rootProject.dagger"
+    provided 'org.glassfish:javax.annotation:10.0-b28'
+
+    testImplementation 'junit:junit:4.12'
+
+    testImplementation 'org.mockito:mockito-core:1.10.19'
+
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestCompile 'com.android.support.test:rules:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}
