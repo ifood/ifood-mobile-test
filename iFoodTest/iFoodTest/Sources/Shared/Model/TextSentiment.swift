@@ -36,8 +36,8 @@ extension TextSentiment: Parsable {
     }
     
     static func fromJSON(json: [String: Any]) -> TextSentiment? {
-        if let score = json[Constants.scoreKey] as? Float {
-            return TextSentiment(score: score)
+        if let score = json[Constants.scoreKey] as? NSNumber {
+            return TextSentiment(score: score.floatValue)
         }
         
         return nil
