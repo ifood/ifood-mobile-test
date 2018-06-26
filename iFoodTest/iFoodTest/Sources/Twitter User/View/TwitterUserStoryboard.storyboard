@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Twitter User View Controller-->
+        <scene sceneID="eEa-7p-gNT">
+            <objects>
+                <viewController storyboardIdentifier="TwitterUserViewController" id="GRS-S0-tzJ" customClass="TwitterUserViewController" customModule="iFoodTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="k8k-Rq-6HB" customClass="TwitterUserView" customModule="iFoodTest" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gbY-pc-K9S">
+                                <rect key="frame" x="16" y="97" width="343" height="30"/>
+                                <color key="textColor" red="0.1450980392" green="0.1333333333" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Analyse Tweet Sentiment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="boJ-hv-hf7">
+                                <rect key="frame" x="91" y="43" width="193" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="6B7-5K-9Ab"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.1450980392" green="0.1333333333" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nGn-U8-MBa">
+                                <rect key="frame" x="144" y="152" width="87" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="87" id="W4B-Cf-hPN"/>
+                                    <constraint firstAttribute="height" constant="34" id="xBt-sT-CVS"/>
+                                </constraints>
+                                <state key="normal" title="List tweets">
+                                    <color key="titleColor" red="0.0" green="0.36470588240000001" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="didClickListTweets:" destination="GRS-S0-tzJ" eventType="touchUpInside" id="7sQ-jw-W48"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nGn-U8-MBa" firstAttribute="centerX" secondItem="k8k-Rq-6HB" secondAttribute="centerX" id="2rx-Yk-VYg"/>
+                            <constraint firstItem="gbY-pc-K9S" firstAttribute="top" secondItem="boJ-hv-hf7" secondAttribute="bottom" constant="33" id="IzY-e0-6tt"/>
+                            <constraint firstItem="nGn-U8-MBa" firstAttribute="top" secondItem="gbY-pc-K9S" secondAttribute="bottom" constant="25" id="Jyt-mG-05E"/>
+                            <constraint firstItem="boJ-hv-hf7" firstAttribute="centerX" secondItem="k8k-Rq-6HB" secondAttribute="centerX" id="Yh9-FT-0nM"/>
+                            <constraint firstItem="gbY-pc-K9S" firstAttribute="leading" secondItem="PGn-1t-4iA" secondAttribute="leading" constant="16" id="al2-EB-gga"/>
+                            <constraint firstItem="boJ-hv-hf7" firstAttribute="top" secondItem="PGn-1t-4iA" secondAttribute="top" constant="23" id="lYQ-r9-6B2"/>
+                            <constraint firstItem="PGn-1t-4iA" firstAttribute="trailing" secondItem="gbY-pc-K9S" secondAttribute="trailing" constant="16" id="mNW-qx-cUK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PGn-1t-4iA"/>
+                        <connections>
+                            <outlet property="listTweetsButton" destination="nGn-U8-MBa" id="6wK-rV-bXS"/>
+                            <outlet property="twitterUserHomeTitle" destination="boJ-hv-hf7" id="jDX-pD-5j1"/>
+                            <outlet property="twitterUserTextField" destination="gbY-pc-K9S" id="cRU-3H-qBr"/>
+                        </connections>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u8n-Yv-mc4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="292" y="-86.806596701649184"/>
+        </scene>
+    </scenes>
+</document>
