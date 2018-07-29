@@ -21,6 +21,7 @@ public class AndroidApplication extends Application {
     private void setupTwitter(){
         TwitterConfig config = new TwitterConfig.Builder(this)
                 .logger(new DefaultLogger(Log.DEBUG))
+                .twitterAuthConfig(new TwitterAuthConfig(BuildConfig.TWITTER_CONSUMER_KEY, BuildConfig.TWITTER_CONSUMER_SECRET))
                 .debug(true)
                 .build();
 
