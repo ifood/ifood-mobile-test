@@ -4,7 +4,7 @@ import android.arch.lifecycle.LiveData;
 
 import com.rafamatias.nlp.data.repository.TweetsDataRepository;
 import com.rafamatias.nlp.domain.Resource;
-import com.rafamatias.nlp.presentation.model.Tweet;
+import com.rafamatias.nlp.presentation.model.TweetModel;
 import com.rafamatias.nlp.domain.repository.TweetRepository;
 
 import java.util.List;
@@ -20,7 +20,7 @@ public class GetTweetsInteractor {
         this.tweetRepository = tweetRepository;
     }
 
-    public LiveData<Resource<List<Tweet>>> getTweets() {
-        return tweetRepository.getTweets();
+    public LiveData<Resource<List<TweetModel>>> getTweets(String username) {
+        return tweetRepository.getTweets(username);
     }
 }

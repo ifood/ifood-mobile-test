@@ -17,8 +17,11 @@ import android.view.ViewGroup;
 import com.rafamatias.nlp.R;
 import com.rafamatias.nlp.databinding.FragmentTweetBinding;
 import com.rafamatias.nlp.domain.Resource;
-import com.rafamatias.nlp.presentation.model.Tweet;
+import com.rafamatias.nlp.presentation.model.TweetModel;
 import com.rafamatias.nlp.presentation.viewModel.TweetViewModel;
+
+import java.text.SimpleDateFormat;
+import java.util.Locale;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -31,8 +34,9 @@ public class TweetFragment extends Fragment {
 
     private FragmentTweetBinding binding;
     private TweetViewModel viewModel;
-    private Tweet tweet;
+    private TweetModel tweetModel;
     private AssetManager assetManager;
+    private SimpleDateFormat dateFormat;
 
     public TweetFragment() {
         // Required empty public constructor
@@ -44,11 +48,11 @@ public class TweetFragment extends Fragment {
      *
      * @return A new instance of fragment TweetFragment.
      */
-    public static TweetFragment newInstance(Tweet tweet) {
+    public static TweetFragment newInstance(TweetModel tweetModel) {
         TweetFragment fragment = new TweetFragment();
 
         Bundle bundle = new Bundle();
-        bundle.putParcelable(PARAM_TWEET, tweet);
+        bundle.putParcelable(PARAM_TWEET, tweetModel);
 
         fragment.setArguments(bundle);
 
@@ -63,7 +67,9 @@ public class TweetFragment extends Fragment {
             args = new Bundle();
         }
 
-        tweet = args.getParcelable(PARAM_TWEET);
+        // TODO: get from string resource because of localization
+        dateFormat = new SimpleDateFormat("MMM d", Locale.getDefault());
+        tweetModel = args.getParcelable(PARAM_TWEET);
     }
 
     @Override
@@ -78,7 +84,7 @@ public class TweetFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         setupLayout();
-        setupViewModel(tweet);
+        setupViewModel(tweetModel);
     }
 
     @Override
@@ -93,20 +99,23 @@ public class TweetFragment extends Fragment {
         binding.textTweet.setTypeface(typeFace);
     }
 
-    private void setupViewModel(Tweet tweet) {
-        viewModel.init(tweet);
-        viewModel.getText().observe(this, new Observer<Resource<String>>() {
+    private void setupViewModel(TweetModel tweetModel) {
+        viewModel.init(tweetModel);
+        viewModel.getTweet().observe(this, new Observer<Resource<TweetModel>>() {
             @Override
-            public void onChanged(@Nullable Resource<String> stringResource) {
-                switch (stringResource.state){
+            public void onChanged(@NonNull Resource<TweetModel> resource) {
+                switch (resource.state){
                     case SUCCESS:
-                        binding.textTweet.setText(getString(R.string.text_tweet, stringResource.data));
+                        showTweet(resource.data);
                         break;
                 }
             }
         });
     }
 
-
+    private void showTweet(TweetModel data) {
+        binding.textTweet.setText(getString(R.string.text_tweet, data.getText()));
+        binding.textDate.setText(dateFormat.format(data.createdAt()));
+    }
 
 }

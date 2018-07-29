@@ -5,26 +5,25 @@ import android.arch.lifecycle.MutableLiveData;
 import android.arch.lifecycle.ViewModel;
 
 import com.rafamatias.nlp.domain.Resource;
-import com.rafamatias.nlp.presentation.model.Tweet;
+import com.rafamatias.nlp.presentation.model.TweetModel;
 
 import org.jetbrains.annotations.Nullable;
 
 public class TweetViewModel extends ViewModel {
 
-    private MutableLiveData<Resource<String>> text = new MutableLiveData<>();
+    private MutableLiveData<Resource<TweetModel>> tweetModel = new MutableLiveData<>();
 
-    public void init(@Nullable Tweet tweet){
-
-        if(tweet == null){
-            text.setValue(Resource.<String>error("Tweet cannot be null"));
+    public void init(@Nullable TweetModel tweetModel){
+        if(tweetModel == null){
+            this.tweetModel.setValue(Resource.<TweetModel>error("Tweet cannot be null"));
             return;
         }
 
-        text.setValue(Resource.success(tweet.getText()));
+        this.tweetModel.setValue(Resource.success(tweetModel));
     }
 
-    public LiveData<Resource<String>> getText(){
-        return text;
+    public LiveData<Resource<TweetModel>> getTweet(){
+        return tweetModel;
     }
 
 }

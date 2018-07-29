@@ -4,8 +4,9 @@ import android.arch.lifecycle.MutableLiveData;
 import android.arch.lifecycle.Observer;
 
 import com.rafamatias.nlp.domain.Resource;
+import com.rafamatias.nlp.domain.interactor.GetDefaultUsernameInteractor;
 import com.rafamatias.nlp.domain.interactor.GetTweetsInteractor;
-import com.rafamatias.nlp.presentation.model.Tweet;
+import com.rafamatias.nlp.presentation.model.TweetModel;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -21,21 +22,23 @@ import static org.mockito.Mockito.when;
 @RunWith(MockitoJUnitRunner.class)
 public class TweetsViewModelTest {
 
+    private static final String FAKE_USERNAME = "rafamatias";
     private TweetsViewModel tweetsViewModel;
     @Mock private GetTweetsInteractor tweetsInteractor;
-    @Mock private Observer<Resource<List<Tweet>>> observer;
-    private MutableLiveData<Resource<List<Tweet>>> fakeResource = new MutableLiveData<>();
+    @Mock private GetDefaultUsernameInteractor userDefaultInteractor;
+    @Mock private Observer<Resource<List<TweetModel>>> observer;
+    private MutableLiveData<Resource<List<TweetModel>>> fakeResource = new MutableLiveData<>();
 
     @Before
     public void setUp() throws Exception {
-        tweetsViewModel = new TweetsViewModel(tweetsInteractor);
-        when(tweetsInteractor.getTweets()).thenReturn(fakeResource);
+        tweetsViewModel = new TweetsViewModel(tweetsInteractor, userDefaultInteractor);
+        when(tweetsInteractor.getTweets(FAKE_USERNAME)).thenReturn(fakeResource);
     }
 
     @Test
     public void getTweets_withResource_assertLoading() {
         tweetsViewModel.getTweets().observeForever(observer);
-        verify(tweetsInteractor).getTweets();
+        verify(tweetsInteractor).getTweets(FAKE_USERNAME);
     }
 
 }

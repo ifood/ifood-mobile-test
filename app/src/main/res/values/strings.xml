@@ -7,4 +7,9 @@
     <string name="button_swap_description">Swap account</string>
 
     <string name="text_tweet">“ %s ”</string>
+    <string name="text_username">\@%s</string>
+    <string name="abc_try_again">Try again</string>
+    <string name="abc_generic_error">Ops! We had an unexpected error</string>
+    <string name="title_dialog_change_username">Change Username</string>
+    <string name="abc_change">Change</string>
 </resources>
