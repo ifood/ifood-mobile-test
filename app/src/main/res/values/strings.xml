@@ -5,4 +5,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="button_search_description">Search account</string>
     <string name="button_swap_description">Swap account</string>
+
+    <string name="text_tweet">“ %s ”</string>
 </resources>

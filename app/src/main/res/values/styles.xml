@@ -10,4 +10,9 @@
         <item name="windowActionBar">false</item>
     </style>
 
+    <style name="AppTheme.TextTweet">
+        <item name="android:textSize">26sp</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
 </resources>
