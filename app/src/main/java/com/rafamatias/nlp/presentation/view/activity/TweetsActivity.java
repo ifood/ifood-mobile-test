@@ -51,7 +51,7 @@ public class TweetsActivity extends AppCompatActivity {
     }
 
     public void actionRetry(View view){
-        viewModel.getTweets();
+        viewModel.loadTweets();
     }
 
     public void onChangeUsername(View view){
@@ -108,7 +108,7 @@ public class TweetsActivity extends AppCompatActivity {
                 .setPositiveButton(R.string.abc_change, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        viewModel.getTweets(usernameText.getText().toString());
+                        viewModel.loadTweets(usernameText.getText().toString());
                     }
                 });
     }

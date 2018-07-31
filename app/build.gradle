@@ -40,6 +40,7 @@ dependencies {
     implementation "android.arch.lifecycle:extensions:$arch_version"
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
     implementation "com.squareup.moshi:moshi:$moshi_version"
+    implementation 'com.squareup.retrofit2:converter-moshi:2.3.0'
     implementation 'com.twitter.sdk.android:twitter-core:3.1.1'
     implementation 'com.squareup.okhttp3:logging-interceptor:3.11.0'
     testImplementation 'junit:junit:4.12'

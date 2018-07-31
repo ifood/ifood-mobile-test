@@ -1,21 +1,17 @@
 package com.rafamatias.nlp.data.repository;
 
-import android.arch.lifecycle.LiveData;
-import android.arch.lifecycle.MutableLiveData;
-
-import com.rafamatias.nlp.domain.Resource;
+import com.rafamatias.nlp.data.entity.SentimentRequest;
+import com.rafamatias.nlp.data.entity.SentimentResponse;
+import com.rafamatias.nlp.data.net.GoogleService;
 import com.rafamatias.nlp.domain.repository.SentimentRepository;
-import com.rafamatias.nlp.presentation.model.Sentiment;
+
+import retrofit2.Call;
 
 public class SentimentDataRepository implements SentimentRepository {
 
     @Override
-    public LiveData<Resource<Sentiment>> getSentiment(String text) {
-
-        MutableLiveData<Resource<Sentiment>> result = new MutableLiveData<>();
-        result.setValue(Resource.success(new Sentiment(0.2f, 0.2f)));
-        return result;
-
+    public Call<SentimentResponse> getSentiment(String content) {
+        return GoogleService.getInstance().analyzeSentiment(SentimentRequest.withContext(content));
     }
 
 }

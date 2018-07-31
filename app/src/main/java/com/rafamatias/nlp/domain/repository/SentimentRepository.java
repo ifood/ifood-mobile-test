@@ -1,12 +1,11 @@
 package com.rafamatias.nlp.domain.repository;
 
-import android.arch.lifecycle.LiveData;
+import com.rafamatias.nlp.data.entity.SentimentResponse;
 
-import com.rafamatias.nlp.domain.Resource;
-import com.rafamatias.nlp.presentation.model.Sentiment;
+import retrofit2.Call;
 
 public interface SentimentRepository {
 
-    LiveData<Resource<Sentiment>> getSentiment(String text);
+    Call<SentimentResponse> getSentiment(String content);
 
 }

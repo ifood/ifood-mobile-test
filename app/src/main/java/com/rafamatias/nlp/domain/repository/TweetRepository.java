@@ -1,12 +1,11 @@
 package com.rafamatias.nlp.domain.repository;
 
-import android.arch.lifecycle.LiveData;
-
-import com.rafamatias.nlp.presentation.model.TweetModel;
-import com.rafamatias.nlp.domain.Resource;
+import com.twitter.sdk.android.core.models.Tweet;
 
 import java.util.List;
 
+import retrofit2.Call;
+
 public interface TweetRepository {
-    LiveData<Resource<List<TweetModel>>> getTweets(String username);
+    Call<List<Tweet>> getTweets(String username);
 }

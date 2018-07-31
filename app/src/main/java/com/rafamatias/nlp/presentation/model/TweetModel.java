@@ -14,7 +14,7 @@ public class TweetModel implements Parcelable {
     private String createdAt;
 
     /**
-     * @param text
+     * @param text Tweet
      * @param createdAt Thu Apr 06 15:24:15 +0000 2017
      */
     public TweetModel(String text, String createdAt) {

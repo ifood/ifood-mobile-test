@@ -1,4 +1,4 @@
-package com.rafamatias.nlp.data.mapper;
+package com.rafamatias.nlp.domain.mapper;
 
 
 import com.rafamatias.nlp.presentation.model.TweetModel;
@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-public class TweetDataMapper {
+public class TweetMapper {
 
     public static List<TweetModel> fromTweets(Collection<Tweet> tweets) {
         List<TweetModel> result = new ArrayList<TweetModel>();
