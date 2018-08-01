@@ -1,18 +1,16 @@
 package com.rafamatias.nlp.presentation.model;
 
-public class Sentiment {
+public class SentimentModel {
     public enum Type {
         HAPPY,
         NEUTRAL,
         SAD
     }
 
-    private float score;
-    private float magnitude;
+    private double score;
 
-    public Sentiment(float score, float magnitude) {
+    public SentimentModel(double score) {
         this.score = score;
-        this.magnitude = magnitude;
     }
 
     public Type getSentiment(){
@@ -20,7 +18,7 @@ public class Sentiment {
             return Type.SAD;
         }else if(score > 0.2){
             return Type.HAPPY;
-        }else{
+        }else {
             return Type.NEUTRAL;
         }
     }

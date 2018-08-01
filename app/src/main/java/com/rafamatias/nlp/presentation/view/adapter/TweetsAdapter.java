@@ -5,7 +5,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentStatePagerAdapter;
-import android.support.v4.app.FragmentTransaction;
 
 import com.rafamatias.nlp.presentation.model.TweetModel;
 import com.rafamatias.nlp.presentation.view.fragment.TweetFragment;

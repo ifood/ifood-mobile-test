@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="sentimentHappy">#ffffa1</color>
+    <color name="sentimentNeutral">#d1d1d1</color>
+    <color name="sentimentSad">#b5cbff</color>
+
 </resources>

@@ -3,6 +3,7 @@ package com.rafamatias.nlp.domain;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
+// TODO: Resource can use exceptions because is great to implement for views
 public class Resource<T> {
     public enum State {
         SUCCESS,

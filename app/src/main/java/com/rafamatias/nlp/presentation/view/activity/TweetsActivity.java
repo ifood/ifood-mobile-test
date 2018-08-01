@@ -34,17 +34,13 @@ public class TweetsActivity extends AppCompatActivity {
 
     private ActivityTweetsBinding binding;
     private TweetsAdapter viewPagerAdapter;
-    private List<TweetModel> viewPagerData = new ArrayList<>();
+    private List<TweetModel> viewPagerData;
     private TweetsViewModel viewModel;
-
-    private EditText usernameText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_tweets);
-
-        usernameText = new EditText(this);
 
         setupViewModel();
         setupViewPager();
@@ -65,6 +61,7 @@ public class TweetsActivity extends AppCompatActivity {
     }
 
     private void setupViewPager() {
+        viewPagerData = new ArrayList<>();
         viewPagerAdapter = new TweetsAdapter(getSupportFragmentManager(), viewPagerData);
         binding.viewPager.setAdapter(viewPagerAdapter);
     }

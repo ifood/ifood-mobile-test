@@ -10,7 +10,7 @@ import retrofit2.Call;
 
 public class TweetsDataRepository implements TweetRepository {
 
-    private TwitterApi twitterApi;
+    private final TwitterApi twitterApi;
 
     public TweetsDataRepository(){
         this(TwitterApi.getInstance());

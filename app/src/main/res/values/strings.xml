@@ -12,4 +12,9 @@
     <string name="abc_generic_error">Ops! We had an unexpected error</string>
     <string name="title_dialog_change_username">Change Username</string>
     <string name="abc_change">Change</string>
+
+    <string name="text_sentiment_happy">&#128515;</string>
+    <string name="text_sentiment_neutral">&#128528;</string>
+    <string name="text_sentiment_sad">&#128533;</string>
+    <string name="text_sentiment_finish">Cannot show sentiment</string>
 </resources>

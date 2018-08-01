@@ -9,9 +9,9 @@ import java.util.Date;
 import java.util.Locale;
 
 public class TweetModel implements Parcelable {
-    private SimpleDateFormat dateParse;
-    private String text;
-    private String createdAt;
+    private final SimpleDateFormat dateParse = new SimpleDateFormat("E MMM d k:m:s Z yyyy", Locale.getDefault());
+    private final String text;
+    private final String createdAt;
 
     /**
      * @param text Tweet
@@ -20,7 +20,6 @@ public class TweetModel implements Parcelable {
     public TweetModel(String text, String createdAt) {
         this.text = text;
         this.createdAt = createdAt;
-        this.dateParse = new SimpleDateFormat("E MMM d k:m:s Z yyyy", Locale.getDefault());
     }
 
     private TweetModel(Parcel in) {
@@ -50,6 +49,7 @@ public class TweetModel implements Parcelable {
             return new TweetModel[size];
         }
     };
+
 
     public String getText() {
         return text;

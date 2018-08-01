@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +18,7 @@ import android.view.ViewGroup;
 import com.rafamatias.nlp.R;
 import com.rafamatias.nlp.databinding.FragmentTweetBinding;
 import com.rafamatias.nlp.domain.Resource;
+import com.rafamatias.nlp.presentation.model.SentimentModel;
 import com.rafamatias.nlp.presentation.model.TweetModel;
 import com.rafamatias.nlp.presentation.viewModel.TweetViewModel;
 
@@ -37,6 +39,7 @@ public class TweetFragment extends Fragment {
     private TweetModel tweetModel;
     private AssetManager assetManager;
     private SimpleDateFormat dateFormat;
+    private Context context;
 
     public TweetFragment() {
         // Required empty public constructor
@@ -90,8 +93,9 @@ public class TweetFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        assetManager = context.getAssets();
-        viewModel = ViewModelProviders.of(this).get(TweetViewModel.class);
+        this.context = context;
+        this.assetManager = context.getAssets();
+        this.viewModel = ViewModelProviders.of(this).get(TweetViewModel.class);
     }
 
     private void setupLayout(){
@@ -103,7 +107,7 @@ public class TweetFragment extends Fragment {
         viewModel.init(tweetModel);
         viewModel.getTweet().observe(this, new Observer<Resource<TweetModel>>() {
             @Override
-            public void onChanged(@NonNull Resource<TweetModel> resource) {
+            public void onChanged(Resource<TweetModel> resource) {
                 switch (resource.state){
                     case SUCCESS:
                         showTweet(resource.data);
@@ -111,6 +115,46 @@ public class TweetFragment extends Fragment {
                 }
             }
         });
+
+        viewModel.getSentiment().observe(this, new Observer<Resource<SentimentModel>>() {
+            @Override
+            public void onChanged(Resource<SentimentModel> resource) {
+                switch (resource.state){
+                    case SUCCESS:
+                        onSentimentSuccess(resource.data);
+                        break;
+                    default:
+                        onSentimentDefault();
+                        break;
+                }
+            }
+        });
+    }
+
+    private void onSentimentDefault(){
+        binding.textSentiment.setText(getString(R.string.text_sentiment_finish));
+    }
+
+    private void onSentimentSuccess(SentimentModel data) {
+        int textResourceId = R.string.text_sentiment_neutral;
+        int backgroundColor = ContextCompat.getColor(context, R.color.sentimentNeutral);
+
+        switch (data.getSentiment()){
+            case HAPPY:
+                textResourceId = R.string.text_sentiment_happy;
+                backgroundColor = ContextCompat.getColor(context, R.color.sentimentHappy);
+                break;
+            case SAD:
+                textResourceId = R.string.text_sentiment_sad;
+                backgroundColor = ContextCompat.getColor(context, R.color.sentimentSad);
+                break;
+        }
+
+        binding.textSentiment.setText(getString(textResourceId));
+        binding.textSentiment.setVisibility(View.VISIBLE);
+        binding.progressBar.setVisibility(View.GONE);
+        binding.cardview.setCardBackgroundColor(backgroundColor);
+
     }
 
     private void showTweet(TweetModel data) {

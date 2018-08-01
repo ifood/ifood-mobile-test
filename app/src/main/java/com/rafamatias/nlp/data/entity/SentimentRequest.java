@@ -9,7 +9,7 @@ public class SentimentRequest {
     }
 
     static class Document {
-        public Document(String content) {
+        Document(String content) {
             this.content = content;
         }
 

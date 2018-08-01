@@ -7,6 +7,7 @@ import com.rafamatias.nlp.domain.repository.SentimentRepository;
 
 import retrofit2.Call;
 
+// TODO: Implement database data source. It is not necessary analyze sentiment of a Tweet again
 public class SentimentDataRepository implements SentimentRepository {
 
     @Override

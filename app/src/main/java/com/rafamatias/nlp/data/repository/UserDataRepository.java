@@ -5,6 +5,7 @@ import com.rafamatias.nlp.domain.repository.UserRepository;
 import java.util.ArrayList;
 import java.util.List;
 
+// TODO: UserDataRepository Can it be from search history?
 public class UserDataRepository implements UserRepository {
 
     private final ArrayList<String> names;

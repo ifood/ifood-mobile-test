@@ -27,11 +27,11 @@ public class GetTweetsInteractor extends MediatorLiveData<Resource<List<TweetMod
     }
 
     public void getTweets(String username) {
-        setValue(Resource.<List<TweetModel>>loading());
+        setValue(Resource.loading());
         tweetRepository.getTweets(username).enqueue(callback);
     }
 
-    private Callback<List<Tweet>> callback = new Callback<List<Tweet>>() {
+    private final Callback<List<Tweet>> callback = new Callback<List<Tweet>>() {
         @Override
         public void success(Result<List<Tweet>> result) {
             List<TweetModel> data = TweetMapper.fromTweets(result.data);
@@ -40,7 +40,7 @@ public class GetTweetsInteractor extends MediatorLiveData<Resource<List<TweetMod
 
         @Override
         public void failure(TwitterException exception) {
-            setValue(Resource.<List<TweetModel>>error(exception.getMessage()));
+            setValue(Resource.error(exception.getMessage()));
         }
     };
 
