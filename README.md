@@ -19,7 +19,7 @@ Create an app that given an Twitter username it will list user's tweets. When I 
 
 ## Screenshots
 
-!(images/screenshot-01.png)
-!(images/screenshot-02.png)
-!(images/screenshot-03.png)
+![screenshot](images/screenshot-01.png)
+![screenshot](images/screenshot-02.png)
+![screenshot](images/screenshot-03.png)
 
