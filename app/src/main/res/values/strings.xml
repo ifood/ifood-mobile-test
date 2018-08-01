@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Sentiments</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="button_search_description">Search account</string>
+    <string name="button_swap_description">Swap account</string>
+
+    <string name="text_tweet">“ %s ”</string>
+    <string name="text_username">\@%s</string>
+    <string name="abc_try_again">Try again</string>
+    <string name="abc_generic_error">Ops! We had an unexpected error</string>
+    <string name="title_dialog_change_username">Change Username</string>
+    <string name="abc_change">Change</string>
+
+    <string name="text_sentiment_happy">&#128515;</string>
+    <string name="text_sentiment_neutral">&#128528;</string>
+    <string name="text_sentiment_sad">&#128533;</string>
+    <string name="text_sentiment_finish">Cannot show sentiment</string>
+</resources>
