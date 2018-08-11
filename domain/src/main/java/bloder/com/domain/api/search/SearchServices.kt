@@ -8,5 +8,5 @@ import retrofit2.http.Query
 
 interface SearchServices {
 
-    @GET("tweets.json") fun searchTweets(@Query("q") name: String) : Single<Response<SearchResponsePayload>>
+    @GET("search/tweets.json") fun searchTweets(@Query("q") name: String) : Single<Response<SearchResponsePayload>>
 }
