@@ -1,8 +1,8 @@
 package bloder.com.domain.repository
 
-import kotlin.reflect.KProperty
+import bloder.com.domain.repository.resources.SearchRepository
 
 interface RepositoryFactory {
 
-
+    fun forSearch() : SearchRepository
 }
