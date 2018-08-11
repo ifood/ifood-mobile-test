@@ -18,7 +18,7 @@ class SearchResponseGod(
     }
 
     override fun unknown(code: Int) {
-        emmiter.onError(Throwable())
+        emmiter.onError(SearchError(SEARCH_ERROR.UNKNOWN, "Unknown problem!"))
     }
 }
 

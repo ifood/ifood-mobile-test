@@ -8,9 +8,9 @@ import io.reactivex.Single
 
 class SearchRepositoryTest : SearchRepository {
 
-    override fun searchTweets(name: String): Single<List<Status>> = Single.create<List<Status>> {
+    override fun searchTweets(name: String): Single<List<Status>> = Single.just(
         listOf(
                 Status("", "Test!", User("Bloder", ""))
         )
-    }
+    )
 }

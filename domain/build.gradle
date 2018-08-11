@@ -4,6 +4,10 @@ apply plugin: 'kotlin-android'
 android {
     compileSdkVersion 26
 
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+
     defaultConfig {
         minSdkVersion 16
         targetSdkVersion 26
@@ -36,6 +40,7 @@ dependencies {
     implementation "com.squareup.okhttp3:logging-interceptor:$okhttp3"
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     testImplementation "org.mockito:mockito-core:$mockito"
+    testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:$mockitoKotlin"
     testImplementation "org.assertj:assertj-core:$assertj_version"
     testImplementation "android.arch.core:core-testing:$arch_test_version"
     testImplementation "junit:junit:$junit"
