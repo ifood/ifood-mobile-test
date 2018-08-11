@@ -7,17 +7,12 @@ import io.reactivex.disposables.Disposable
 
 open class UseCase {
 
-    private var repository: RepositoryFactory = ProductionRepository()
+    protected var repository: RepositoryFactory = ProductionRepository()
     private var disposables = CompositeDisposable()
 
+    fun dispose() = disposables.clear()
 
-    fun dispose() {
-        disposables.clear()
-    }
-
-    fun addDisposable(disposable: Disposable) {
-        disposables.add(disposable)
-    }
+    fun addDisposable(disposable: Disposable) = disposables.add(disposable)
 
     fun testWith(repository: RepositoryFactory) {
         this.repository = repository
