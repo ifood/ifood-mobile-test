@@ -1,8 +1,7 @@
 package bloder.com.domain
 
-import com.ir.domain.binding.SingleUseCaseBinding
+import bloder.com.domain.binding.SingleUseCaseBinding
 import io.reactivex.Single
-import io.reactivex.schedulers.Schedulers
 
 abstract class SingleUseCase : UseCase() {
 
