@@ -6,5 +6,5 @@ import io.reactivex.Single
 
 interface SearchRepository {
 
-    fun searchTweets(name: String) : Single<List<Status>>
+    fun searchTweets(auth: String, name: String) : Single<List<Status>>
 }

@@ -7,7 +7,7 @@ import bloder.com.domain.models.Status
 
 open class SearchTweetsInteractor : SingleUseCase() {
 
-    fun searchTweetsFrom(name: String) : SingleUseCaseBinding<List<Status>> {
-        return run(repository.forSearch().searchTweets(name))
+    fun searchTweetsFrom(auth: String, name: String) : SingleUseCaseBinding<List<Status>> {
+        return run(repository.forSearch().searchTweets(auth, name))
     }
 }

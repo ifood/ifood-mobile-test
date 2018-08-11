@@ -28,12 +28,12 @@ class SearchTweetsInteractorTest {
     }
 
     @Test fun completeFetching() {
-        val test = interactor.searchTweetsFrom("Bloder").subscribe {}.test()
+        val test = interactor.searchTweetsFrom("", "Bloder").subscribe {}.test()
         test.assertComplete()
     }
 
     @Test fun returnDataFilled() {
-        val test = interactor.searchTweetsFrom("Bloder").subscribe {}.test()
+        val test = interactor.searchTweetsFrom("", "Bloder").subscribe {}.test()
         test.assertValue { status ->
             status.isNotEmpty() && status.first().tweet.toLowerCase() == "test!"
         }
@@ -45,10 +45,10 @@ class SearchTweetsInteractorTest {
         val searchRepository = mock<SearchRepository>()
         interactor.testWith(repository)
         whenever(repository.forSearch()).thenReturn(searchRepository)
-        whenever(searchRepository.searchTweets(any())).thenReturn(Single.create<List<Status>> {
+        whenever(searchRepository.searchTweets(any(), any())).thenReturn(Single.create<List<Status>> {
             it.onError(SearchError(SEARCH_ERROR.UNKNOWN, errorMessage))
         })
-        val test = interactor.searchTweetsFrom("").subscribe {}.test()
+        val test = interactor.searchTweetsFrom("", "").subscribe {}.test()
         test.assertError { error ->
             error is SearchError && error.errorMessage == errorMessage
         }

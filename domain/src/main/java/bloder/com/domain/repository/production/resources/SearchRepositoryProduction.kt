@@ -11,8 +11,8 @@ import io.reactivex.schedulers.Schedulers
 
 class SearchRepositoryProduction : SearchRepository {
 
-    override fun searchTweets(name: String): Single<List<Status>> = SearchApi().service()
-            .searchTweets(name)
+    override fun searchTweets(auth: String, name: String): Single<List<Status>> = SearchApi().service()
+            .searchTweets(auth, name)
             .observeOn(AndroidSchedulers.mainThread())
             .subscribeOn(Schedulers.newThread())
             .flatMap { response ->
