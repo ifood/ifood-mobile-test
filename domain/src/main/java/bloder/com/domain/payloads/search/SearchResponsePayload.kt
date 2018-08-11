@@ -1,6 +1,6 @@
-package bloder.com.domain.payloads
+package bloder.com.domain.payloads.search
 
-import bloder.com.domain.models.Status
+import bloder.com.domain.models.search.Status
 import com.google.gson.annotations.SerializedName
 
 data class SearchResponsePayload(

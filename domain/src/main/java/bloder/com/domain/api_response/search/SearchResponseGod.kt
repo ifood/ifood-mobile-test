@@ -1,8 +1,8 @@
 package bloder.com.domain.api_response.search
 
 import bloder.com.domain.api_response.ResponseGod
-import bloder.com.domain.models.Status
-import bloder.com.domain.payloads.SearchResponsePayload
+import bloder.com.domain.models.search.Status
+import bloder.com.domain.payloads.search.SearchResponsePayload
 import io.reactivex.SingleEmitter
 import retrofit2.Response
 

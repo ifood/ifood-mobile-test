@@ -1,7 +1,7 @@
 package bloder.com.domain.repository.test.resources
 
-import bloder.com.domain.models.Status
-import bloder.com.domain.models.User
+import bloder.com.domain.models.search.Status
+import bloder.com.domain.models.search.User
 import bloder.com.domain.repository.resources.SearchRepository
 import io.reactivex.Single
 

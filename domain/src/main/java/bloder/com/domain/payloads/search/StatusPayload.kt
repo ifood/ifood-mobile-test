@@ -1,7 +1,7 @@
-package bloder.com.domain.payloads
+package bloder.com.domain.payloads.search
 
-import bloder.com.domain.models.Status
-import bloder.com.domain.models.User
+import bloder.com.domain.models.search.Status
+import bloder.com.domain.models.search.User
 import com.google.gson.annotations.SerializedName
 
 
