@@ -4,7 +4,9 @@ apply plugin: 'kotlin-android'
 android {
     compileSdkVersion 26
 
-
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
 
     defaultConfig {
         minSdkVersion 16
@@ -34,6 +36,7 @@ dependencies {
     implementation "io.reactivex.rxjava2:rxandroid:$rx_android"
     implementation "io.reactivex.rxjava2:rxjava:$rx_java"
     testImplementation "org.mockito:mockito-core:$mockito"
+    testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:$mockitoKotlin"
     testImplementation "org.assertj:assertj-core:$assertj_version"
     testImplementation "android.arch.core:core-testing:$arch_test_version"
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
