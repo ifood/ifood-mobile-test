@@ -34,12 +34,12 @@ dependencies {
     testImplementation "org.mockito:mockito-core:$mockito"
     testImplementation "org.assertj:assertj-core:$assertj_version"
     testImplementation "android.arch.core:core-testing:$arch_test_version"
-    testImplementation "junit:junit:$junit"
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation "org.jetbrains.kotlin:kotlin-reflect:1.2.60"
+    testImplementation "junit:junit:$junit"
+    implementation 'com.google.cloud:google-cloud-language:1.35.0'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 }
 repositories {
     mavenCentral()
