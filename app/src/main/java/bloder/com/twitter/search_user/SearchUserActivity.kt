@@ -1,7 +1,8 @@
-package bloder.com.twitter
+package bloder.com.twitter.search_user
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import bloder.com.twitter.R
 
 
 class SearchUserActivity : AppCompatActivity() {
