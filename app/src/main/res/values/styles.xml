@@ -13,6 +13,11 @@
         <item name="android:windowContentOverlay">@null</item>
     </style>
 
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
     <style name="AppTheme.ProgressTheme">
         <item name="colorAccent">@color/colorPrimary</item> <!-- Whatever color you want-->
     </style>

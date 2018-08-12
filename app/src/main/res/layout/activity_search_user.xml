@@ -7,13 +7,30 @@
     android:layout_height="match_parent"
     tools:context="bloder.com.twitter.search_user.SearchUserActivity">
 
-    <TextView
+    <ImageView
+        android:id="@+id/twitter_logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:src="@drawable/splash_icon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="200dp"/>
+
+    <EditText
+        android:id="@+id/search_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/search_tweets_from_any_user"
+        android:textSize="20sp"
+        android:textColor="#9E9E9E"
+        android:textAlignment="center"
+        android:background="@null"
+        android:imeOptions="actionSearch"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
 </android.support.constraint.ConstraintLayout>
