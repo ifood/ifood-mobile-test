@@ -8,6 +8,7 @@ import bloder.com.domain.repository.RepositoryFactory
 import bloder.com.domain.repository.resources.AuthRepository
 import bloder.com.presentation.twitter.auth.AuthState
 import bloder.com.presentation.twitter.auth.AuthViewModel
+import com.nhaarman.mockitokotlin2.any
 import com.nhaarman.mockitokotlin2.mock
 import com.nhaarman.mockitokotlin2.whenever
 import io.reactivex.Single
@@ -31,13 +32,13 @@ class AuthViewModelTest {
     }
 
     @Test fun completeGetTwitterAuth() {
-        viewModel.getTwitterAuthToken("")
+        viewModel.getTwitterAuthToken("", "")
         Assert.assertTrue(viewModel.state().value is AuthState.TwitterAuthTokenFetched)
     }
 
     @Test fun shouldGetErrorOnAuthGetting() {
         forceToGetAuthErrorState(AuthError(AUTH_ERROR.UNKNOWN, ""))
-        viewModel.getTwitterAuthToken("")
+        viewModel.getTwitterAuthToken("", "")
         Assert.assertTrue(viewModel.state().value is AuthState.TwitterAuthTokenFetchFailed)
     }
 
@@ -45,7 +46,7 @@ class AuthViewModelTest {
         val authRepository = mock<AuthRepository>()
         interactor.testWith(repository)
         whenever(repository.forAuth()).thenReturn(authRepository)
-        whenever(authRepository.getTwitterAuthToken("")).thenReturn(Single.create {
+        whenever(authRepository.getTwitterAuthToken(any())).thenReturn(Single.create {
             it.onError(error)
         })
     }
