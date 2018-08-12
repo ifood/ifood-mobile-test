@@ -19,7 +19,7 @@
         android:layout_marginBottom="200dp"/>
 
     <EditText
-        android:id="@+id/search_text"
+        android:id="@+id/search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/search_tweets_from_any_user"

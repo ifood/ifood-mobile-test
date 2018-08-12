@@ -14,7 +14,8 @@ class SearchViewModel(private val interactor: TwitterInteractor) : AppViewModel<
         dispatch(SearchTweetsState.Setup)
     }
 
-    fun fetchTweetsFrom(name: String, auth: String) {
+    fun fetchTweetsFrom(name: String, authToken: String) {
+        val auth = "Bearer $authToken"
         interactor.searchTweetsFrom(auth, name).subscribe {
             onSuccess { tweets ->
                 dispatch(SearchTweetsState.TweetsFetched(tweets))
