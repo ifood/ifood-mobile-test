@@ -8,7 +8,6 @@ import io.reactivex.schedulers.Schedulers
 abstract class SingleUseCase : UseCase() {
 
     protected fun <T> run(single: Single<T>) : SingleUseCaseBinding<T> {
-        single.observeOn(AndroidSchedulers.mainThread()).subscribeOn(Schedulers.newThread())
         return SingleUseCaseBinding(this, single)
     }
 }
