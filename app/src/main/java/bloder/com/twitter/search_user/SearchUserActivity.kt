@@ -1,11 +1,14 @@
 package bloder.com.twitter.search_user
 
+import android.app.Activity
 import android.os.Build
 import android.os.Bundle
 import android.support.v4.content.ContextCompat
 import android.support.v7.app.AlertDialog
+import android.view.View
 import android.view.WindowManager
 import android.view.inputmethod.EditorInfo
+import android.view.inputmethod.InputMethodManager
 import bloder.com.domain.models.search.Status
 import bloder.com.presentation.AppViewModel
 import bloder.com.presentation.twitter.search.SearchTweetsState
@@ -37,24 +40,44 @@ class SearchUserActivity : StateActivity<SearchTweetsState>() {
 
     private fun setup() {
         search.setOnEditorActionListener { text, action, _ ->
-            if (action == EditorInfo.IME_ACTION_SEARCH) {
-                viewModel.fetchTweetsFrom(text.text.toString(), authPreferences.getAuthToken(this@SearchUserActivity))
+            if (action == EditorInfo.IME_ACTION_SEARCH && text.text.isNotBlank()) {
+                fetchTweetsFrom(text.text.toString())
             }
             true
         }
     }
 
     private fun onTweetsFetched(tweets: List<Status>) {
-        
+        onFetchResult()
     }
 
     private fun onTweetsFetchFailed(errorMessage: String) {
+        onFetchResult()
         AlertDialog.Builder(this)
                 .setTitle(getString(R.string.ops_error))
                 .setMessage(errorMessage)
                 .setPositiveButton(getString(R.string.ok)) { dialog, _ ->
                     dialog.dismiss()
                 }.show()
+    }
+
+    private fun fetchTweetsFrom(user: String) {
+        search_progress.visibility = View.VISIBLE
+        hideKeyboard()
+        search.isEnabled = false
+        viewModel.fetchTweetsFrom(user, authPreferences.getAuthToken(this@SearchUserActivity))
+    }
+
+    private fun onFetchResult() {
+        search_progress.visibility = View.GONE
+        search.isEnabled = true
+    }
+
+    private fun hideKeyboard() {
+        val imm = getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
+        var view = currentFocus
+        if (view == null) view = View(this)
+        imm.hideSoftInputFromWindow(view.windowToken, 0)
     }
 
     private fun changeSystemBarColor() = if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {

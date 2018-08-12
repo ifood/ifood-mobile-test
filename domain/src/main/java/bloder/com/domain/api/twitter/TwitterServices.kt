@@ -1,7 +1,7 @@
 package bloder.com.domain.api.twitter
 
 import bloder.com.domain.payloads.auth.TwitterAuthPayload
-import bloder.com.domain.payloads.search.SearchResponsePayload
+import bloder.com.domain.payloads.search.StatusPayload
 import io.reactivex.Single
 import retrofit2.Response
 import retrofit2.http.*
@@ -12,7 +12,7 @@ interface TwitterServices {
     fun searchTweets(
             @Header("authorization") auth: String,
             @Query("screen_name") name: String
-    ) : Single<Response<SearchResponsePayload>>
+    ) : Single<Response<List<StatusPayload>>>
 
     @FormUrlEncoded
     @POST("oauth2/token")

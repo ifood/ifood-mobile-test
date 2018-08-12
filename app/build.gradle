@@ -27,6 +27,7 @@ dependencies {
     implementation project(':domain')
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    implementation 'com.android.support:design:27.1.1'
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation "org.koin:koin-android:$koin"
     implementation "org.koin:koin-android-architecture:$koin"

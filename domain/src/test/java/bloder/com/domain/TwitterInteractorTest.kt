@@ -58,6 +58,21 @@ class TwitterInteractorTest {
         }
     }
 
+    @Test fun returnNotFoundErrorOnTweetsSearch() {
+        val errorMessage = "User not found"
+        val repository = mock<RepositoryFactory>()
+        val searchRepository = mock<SearchRepository>()
+        interactor.testWith(repository)
+        whenever(repository.forSearch()).thenReturn(searchRepository)
+        whenever(searchRepository.searchTweets(any(), any())).thenReturn(Single.create<List<Status>> {
+            it.onError(SearchError(SEARCH_ERROR.NOT_FOUND, errorMessage))
+        })
+        val test = interactor.searchTweetsFrom("", "").subscribe {}.test()
+        test.assertError { error ->
+            error is SearchError && error.reason == SEARCH_ERROR.NOT_FOUND && error.errorMessage == errorMessage
+        }
+    }
+
     @Test fun completeAuthTokenCall() {
         val test = interactor.getTwitterAuthToken("").subscribe {}.test()
         test.assertComplete()
