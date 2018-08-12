@@ -14,6 +14,7 @@ interface TwitterServices {
             @Query("screen_name") name: String
     ) : Single<Response<SearchResponsePayload>>
 
+    @FormUrlEncoded
     @POST("oauth2/token")
     fun getAuthToken(
             @Header("authorization") auth: String,

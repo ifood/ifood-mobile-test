@@ -10,6 +10,8 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        buildConfigField "String", "CONSUMER_KEY", '"zdQVsYmWytX9TvwzREFZRkQ5T"'
+        buildConfigField "String", "CONSUMER_SECRET", '"cecjFZbBvgqA8al55kENP9DmMO6BGjr0uL9A3KZjF4rrNMI8AE"'
     }
     buildTypes {
         release {

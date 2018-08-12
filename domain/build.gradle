@@ -16,8 +16,6 @@ android {
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         buildConfigField "String", "TWITTER_API", '"https://api.twitter.com/"'
-        buildConfigField "String", "CONSUMER_KEY", '"zdQVsYmWytX9TvwzREFZRkQ5T"'
-        buildConfigField "String", "CONSUMER_SECRET", '"cecjFZbBvgqA8al55kENP9DmMO6BGjr0uL9A3KZjF4rrNMI8AE"'
     }
 
     buildTypes {
