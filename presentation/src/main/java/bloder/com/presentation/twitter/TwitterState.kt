@@ -1,4 +1,4 @@
-package bloder.com.presentation.search
+package bloder.com.presentation.twitter
 
 import bloder.com.domain.models.search.Status
 

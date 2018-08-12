@@ -1,4 +1,4 @@
-package bloder.com.presentation.search
+package bloder.com.presentation.twitter
 
 import android.arch.lifecycle.Lifecycle
 import android.arch.lifecycle.OnLifecycleEvent

@@ -9,8 +9,8 @@ import bloder.com.domain.interactor.TwitterInteractor
 import bloder.com.domain.repository.RepositoryFactory
 import bloder.com.domain.repository.resources.AuthRepository
 import bloder.com.domain.repository.resources.SearchRepository
-import bloder.com.presentation.search.TwitterState
-import bloder.com.presentation.search.TwitterViewModel
+import bloder.com.presentation.twitter.TwitterState
+import bloder.com.presentation.twitter.TwitterViewModel
 import com.nhaarman.mockitokotlin2.mock
 import com.nhaarman.mockitokotlin2.whenever
 import io.reactivex.Single
