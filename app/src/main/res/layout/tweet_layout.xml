@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp"
+    android:foreground="?attr/selectableItemBackgroundBorderless">
+
+    <ImageView
+        android:id="@+id/user_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/splash_icon"
+        android:cropToPadding="true"
+        android:foreground="@drawable/rounded_image" />
+
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/user_image"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+        android:text="Bloder"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:id="@+id/user_screen_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/user_name"
+        app:layout_constraintBottom_toTopOf="@+id/tweet"
+        android:layout_marginLeft="10dp"
+        android:text="'@bloder"
+        android:textColor="#9E9E9E"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/tweet_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="#9E9E9E"
+        android:text="08/10/2018"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/tweet"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintLeft_toRightOf="@id/user_image"
+        app:layout_constraintTop_toBottomOf="@id/user_name"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="asdasdasjojoijoijoijoijoijoijoijijoijoijiojoijojjioijioijioijodasdasdkasndkjanskdnaksjndkajsndkajnskdnaskdnaksndakjsndkasjdnaksjdnkajsndkajsndkajsnkjasnkjasnsjakdjnaksjdnsakjdn" />
+
+</android.support.constraint.ConstraintLayout>

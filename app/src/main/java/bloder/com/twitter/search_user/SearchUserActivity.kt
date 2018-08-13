@@ -49,7 +49,7 @@ class SearchUserActivity : StateActivity<SearchTweetsState>() {
 
     private fun onTweetsFetched(tweets: List<Status>) {
         onFetchResult()
-        SearchedTweetsDialog().show(supportFragmentManager, "")
+        SearchedTweetsDialog(tweets, search.text.toString()).show(supportFragmentManager, "")
     }
 
     private fun onTweetsFetchFailed(errorMessage: String) {

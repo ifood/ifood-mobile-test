@@ -12,18 +12,21 @@
         android:padding="15dp">
 
         <ImageView
+            android:id="@+id/close"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_close"
+            android:background="?attr/selectableItemBackgroundBorderless"
             android:tint="@color/colorPrimary"
             app:layout_constraintTop_toBottomOf="parent"
             app:layout_constraintBottom_toTopOf="parent"/>
 
         <TextView
+            android:id="@+id/search_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="name"
-            android:textSize="20sp"
+            android:textSize="16sp"
             android:textColor="#9E9E9E"
             android:textAlignment="center"
             app:layout_constraintRight_toLeftOf="parent"
@@ -39,7 +42,7 @@
         app:layout_constraintBottom_toBottomOf="@id/header"/>
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/tweets"
+        android:id="@+id/tweet_list"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"

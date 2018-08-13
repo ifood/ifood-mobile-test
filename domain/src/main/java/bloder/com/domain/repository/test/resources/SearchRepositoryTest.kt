@@ -10,7 +10,7 @@ class SearchRepositoryTest : SearchRepository {
 
     override fun searchTweets(auth:String, name: String): Single<List<Status>> = Single.just(
         listOf(
-                Status("", "Test!", User("Bloder", ""))
+                Status("", "Test!", User("Bloder", "", ""))
         )
     )
 }

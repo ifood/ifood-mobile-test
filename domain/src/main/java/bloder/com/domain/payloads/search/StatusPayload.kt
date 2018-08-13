@@ -13,6 +13,6 @@ data class StatusPayload(
     fun toModel() : Status = Status(
             createdAt ?: "",
             tweet ?: "",
-            user?.toModel() ?: User("", "")
+            user?.toModel() ?: User("", "",  "")
     )
 }
