@@ -1,4 +1,4 @@
-package bloder.com.domain.payloads.sentiment
+package bloder.com.domain.payloads.sentiment.request
 
 import com.google.gson.annotations.SerializedName
 
