@@ -2,13 +2,15 @@ package bloder.com.twitter
 
 import android.annotation.SuppressLint
 import android.app.Dialog
+import android.arch.lifecycle.Observer
 import android.support.design.widget.BottomSheetBehavior
 import android.support.design.widget.BottomSheetDialogFragment
 import android.support.design.widget.CoordinatorLayout
 import android.util.DisplayMetrics
 import android.view.View
+import bloder.com.presentation.AppViewModel
 
-abstract class FullScreenBottomSheet() : BottomSheetDialogFragment() {
+abstract class FullScreenBottomSheet<State> : BottomSheetDialogFragment() {
 
     private val bottomSheetBehaviorCallback = object : BottomSheetBehavior.BottomSheetCallback() {
         override fun onSlide(bottomSheet: View, slideOffset: Float) {}
@@ -24,6 +26,7 @@ abstract class FullScreenBottomSheet() : BottomSheetDialogFragment() {
         val inflatedView = View.inflate(context, viewToInflate(), null)
         dialog?.setContentView(inflatedView)
         makeFullScreen(inflatedView)
+        observeViewModel()
         onViewInflated(inflatedView)
     }
 
@@ -51,6 +54,13 @@ abstract class FullScreenBottomSheet() : BottomSheetDialogFragment() {
         params.height = screenHeight
         parent.layoutParams = params
     }
+
+    private fun observeViewModel() = provideViewModel().state().observe(this, Observer {
+        it?.let { handleState(it) }
+    })
+
+    abstract fun handleState(state: State)
+    abstract fun provideViewModel() : AppViewModel<State>
 
     abstract fun viewToInflate() : Int
     abstract fun onViewInflated(view: View)
