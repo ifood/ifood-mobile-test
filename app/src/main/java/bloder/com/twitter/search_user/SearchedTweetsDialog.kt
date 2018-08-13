@@ -44,7 +44,7 @@ class SearchedTweetsDialog @SuppressLint("ValidFragment") constructor
     override fun provideViewModel(): AppViewModel<SentimentState> = viewModel
 
     private fun onSentimentGenerated(tweet: String, sentiment: SENTIMENT) {
-        
+
     }
 
     private fun errorOnGeneratingSentiment(errorMessage: String) {
