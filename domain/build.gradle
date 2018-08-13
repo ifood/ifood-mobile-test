@@ -16,6 +16,8 @@ android {
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         buildConfigField "String", "TWITTER_API", '"https://api.twitter.com/"'
+        buildConfigField "String", "GOOGLE_LANGUAGE_API", '"https://language.googleapis.com/v1beta2/"'
+        buildConfigField "String", "GOOGLE_API_KEY", '"AIzaSyDs0DT_p6dP-Y2Q8wdkVbe2u9IUSOu78gw"'
     }
 
     buildTypes {

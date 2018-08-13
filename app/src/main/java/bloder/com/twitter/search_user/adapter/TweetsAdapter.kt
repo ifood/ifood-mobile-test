@@ -1,8 +1,6 @@
 package bloder.com.twitter.search_user.adapter
 
 import android.content.Context
-import android.os.Build
-import android.support.annotation.RequiresApi
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -24,12 +22,12 @@ class TweetsAdapter(private val context: Context, private val tweets: List<Statu
     class ViewHolder(context: Context, parent: ViewGroup) : RecyclerView.ViewHolder(LayoutInflater.from(context).inflate(R.layout.tweet_layout, parent, false)) {
 
         fun bind(tweet: Status) {
-            itemView.setOnClickListener {}
             itemView.user_image shows tweet.user.profileImage
             itemView.user_name shows tweet.user.name
             itemView.user_screen_name shows "@${ tweet.user.screenName }"
             itemView.tweet shows tweet.tweet
             itemView.tweet_date shows readableDate(tweet.createdAt)
+            itemView.setOnClickListener {}
         }
 
         private fun readableDate(date: String) : String {
