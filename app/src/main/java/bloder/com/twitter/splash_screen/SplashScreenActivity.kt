@@ -46,6 +46,7 @@ class SplashScreenActivity : StateActivity<AuthState>() {
         AlertDialog.Builder(this)
                 .setTitle(getString(R.string.ops_error))
                 .setMessage(errorMessage)
+                .setCancelable(false)
                 .setPositiveButton(getString(R.string.try_again)) { dialog, _ ->
                     dialog.dismiss()
                     setup()

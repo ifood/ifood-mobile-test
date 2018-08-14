@@ -12,7 +12,7 @@ class SentimentViewModel(private val interactor: SentimentInteractor) : AppViewM
                 dispatch(SentimentState.SentimentGenerated(sentiment.getSentiment()))
             }
             onError {
-                dispatch(SentimentState.ErrorWhenGenerateSentiment("A unknown problem has occurred"))
+                dispatch(SentimentState.ErrorWhenGenerateSentiment("Could not calculate the feeling"))
             }
         }
     }
