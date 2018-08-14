@@ -9,7 +9,7 @@ class SentimentViewModel(private val interactor: SentimentInteractor) : AppViewM
     fun getSentimentFor(tweet: String) {
         interactor.getSentimentFrom(tweet).subscribe {
             onSuccess { sentiment ->
-                dispatch(SentimentState.SentimentGenerated(tweet, sentiment.getSentiment()))
+                dispatch(SentimentState.SentimentGenerated(sentiment.getSentiment()))
             }
             onError {
                 dispatch(SentimentState.ErrorWhenGenerateSentiment("A unknown problem has occurred"))

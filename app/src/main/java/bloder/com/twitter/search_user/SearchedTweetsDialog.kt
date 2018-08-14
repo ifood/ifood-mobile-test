@@ -1,6 +1,7 @@
 package bloder.com.twitter.search_user
 
 import android.annotation.SuppressLint
+import android.app.ProgressDialog
 import android.support.v7.app.AlertDialog
 import android.support.v7.widget.LinearLayoutManager
 import android.view.View
@@ -24,6 +25,7 @@ class SearchedTweetsDialog @SuppressLint("ValidFragment") constructor
     constructor() : this(listOf(), "")
 
     private val viewModel: SentimentViewModel by inject()
+    private val sentimentProgress by lazy { ProgressDialog(context) }
 
     override fun viewToInflate(): Int = R.layout.searched_user_dialog
 
@@ -32,22 +34,26 @@ class SearchedTweetsDialog @SuppressLint("ValidFragment") constructor
             view.close.setOnClickListener { dismiss() }
             view.search_text shows search
             view.tweet_list.layoutManager = LinearLayoutManager(context)
-            view.tweet_list.adapter = TweetsAdapter(context, tweets)
+            view.tweet_list.adapter = TweetsAdapter(context, tweets) { tweet ->
+                generateSentimentWith(tweet.tweet)
+            }
         }
     }
 
     override fun handleState(state: SentimentState) = when(state) {
-        is SentimentState.SentimentGenerated -> onSentimentGenerated(state.tweet, state.sentiment)
+        is SentimentState.SentimentGenerated -> onSentimentGenerated(state.sentiment)
         is SentimentState.ErrorWhenGenerateSentiment -> errorOnGeneratingSentiment(state.errorMessage)
     }
 
     override fun provideViewModel(): AppViewModel<SentimentState> = viewModel
 
-    private fun onSentimentGenerated(tweet: String, sentiment: SENTIMENT) {
-
+    private fun onSentimentGenerated(sentiment: SENTIMENT) {
+        if (sentimentProgress.isShowing) sentimentProgress.dismiss()
+        SentimentDialog.get(sentiment).show(activity?.supportFragmentManager, "")
     }
 
     private fun errorOnGeneratingSentiment(errorMessage: String) {
+        if (sentimentProgress.isShowing) sentimentProgress.dismiss()
         context?.let {
             AlertDialog.Builder(it)
                     .setTitle(getString(R.string.ops_error))
@@ -57,10 +63,16 @@ class SearchedTweetsDialog @SuppressLint("ValidFragment") constructor
                     }.show()
         }
     }
+
+    private fun generateSentimentWith(tweet: String) {
+        sentimentProgress.setTitle("Sentiment")
+        sentimentProgress.setMessage("Calculating tweet sentiment")
+        sentimentProgress.setCancelable(false)
+        sentimentProgress.show()
+        viewModel.getSentimentFor(tweet)
+    }
 }
 
 infix fun ImageView.shows(url: String) = Picasso.get().load(url).into(this)
-
-infix fun TextView.shows(text: String) {
-    this.text = text
-}
+infix fun ImageView.shows(drawable: Int) = Picasso.get().load(drawable).into(this)
+infix fun TextView.shows(text: String) { this.text = text }

@@ -11,15 +11,15 @@ import kotlinx.android.synthetic.main.tweet_layout.view.*
 import java.text.SimpleDateFormat
 import java.util.*
 
-class TweetsAdapter(private val context: Context, private val tweets: List<Status>) : RecyclerView.Adapter<TweetsAdapter.ViewHolder>() {
+class TweetsAdapter(private val context: Context, private val tweets: List<Status>, private val onTweetClicked: (Status) -> Any?) : RecyclerView.Adapter<TweetsAdapter.ViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder = ViewHolder(context, parent)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder = ViewHolder(context, parent, onTweetClicked)
 
     override fun getItemCount(): Int = tweets.size
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) = holder.bind(tweets[position])
 
-    class ViewHolder(context: Context, parent: ViewGroup) : RecyclerView.ViewHolder(LayoutInflater.from(context).inflate(R.layout.tweet_layout, parent, false)) {
+    class ViewHolder(context: Context, parent: ViewGroup, private val onTweetClicked: (Status) -> Any?) : RecyclerView.ViewHolder(LayoutInflater.from(context).inflate(R.layout.tweet_layout, parent, false)) {
 
         fun bind(tweet: Status) {
             itemView.user_image shows tweet.user.profileImage
@@ -27,7 +27,7 @@ class TweetsAdapter(private val context: Context, private val tweets: List<Statu
             itemView.user_screen_name shows "@${ tweet.user.screenName }"
             itemView.tweet shows tweet.tweet
             itemView.tweet_date shows readableDate(tweet.createdAt)
-            itemView.setOnClickListener {}
+            itemView.setOnClickListener { onTweetClicked(tweet) }
         }
 
         private fun readableDate(date: String) : String {

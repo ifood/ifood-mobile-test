@@ -10,6 +10,5 @@ class Sentiment(private val score: Double) {
 }
 
 enum class SENTIMENT {
-
     HAPPY, NEUTRAL, SAD
 }

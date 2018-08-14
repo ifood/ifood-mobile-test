@@ -11,7 +11,7 @@ import retrofit2.http.Query
 
 interface SentimentServices {
 
-    @POST("documents:analyzeSentiment")
+    @POST("./documents:analyzeSentiment")
     fun analyzeTweet(
             @Query("key") key: String = BuildConfig.GOOGLE_API_KEY,
             @Body request: SentimentAnalyzerRequest

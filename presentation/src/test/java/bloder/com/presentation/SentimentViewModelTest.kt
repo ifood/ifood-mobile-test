@@ -1,13 +1,11 @@
 package bloder.com.presentation
 
 import android.arch.core.executor.testing.InstantTaskExecutorRule
-import bloder.com.domain.api_response.auth.AUTH_ERROR
-import bloder.com.domain.api_response.auth.AuthError
 import bloder.com.domain.interactor.SentimentInteractor
+import bloder.com.domain.models.sentiment.SENTIMENT
+import bloder.com.domain.models.sentiment.Sentiment
 import bloder.com.domain.repository.RepositoryFactory
-import bloder.com.domain.repository.resources.AuthRepository
 import bloder.com.domain.repository.resources.SentimentRepository
-import bloder.com.presentation.twitter.auth.AuthState
 import bloder.com.presentation.twitter.sentiment.SentimentState
 import bloder.com.presentation.twitter.sentiment.SentimentViewModel
 import com.nhaarman.mockitokotlin2.any
@@ -44,12 +42,48 @@ class SentimentViewModelTest {
         Assert.assertTrue(viewModel.state().value is SentimentState.ErrorWhenGenerateSentiment)
     }
 
+    @Test fun shouldGetHappySentiment() {
+        forceToGetSentiment(0.8)
+        viewModel.getSentimentFor("test")
+        Assert.assertTrue(
+                viewModel.state().value is SentimentState.SentimentGenerated
+                        && (viewModel.state().value as SentimentState.SentimentGenerated).sentiment == SENTIMENT.HAPPY
+        )
+    }
+
+    @Test fun shouldGetNeutralSentiment() {
+        forceToGetSentiment(0.2)
+        viewModel.getSentimentFor("test")
+        Assert.assertTrue(
+                viewModel.state().value is SentimentState.SentimentGenerated
+                        && (viewModel.state().value as SentimentState.SentimentGenerated).sentiment == SENTIMENT.NEUTRAL
+        )
+    }
+
+    @Test fun shouldGetSadSentiment() {
+        forceToGetSentiment(-0.6)
+        viewModel.getSentimentFor("test")
+        Assert.assertTrue(
+                viewModel.state().value is SentimentState.SentimentGenerated
+                        && (viewModel.state().value as SentimentState.SentimentGenerated).sentiment == SENTIMENT.SAD
+        )
+    }
+
     private fun forceToGetAuthErrorState(error: Throwable) {
         val sentimentRepository = mock<SentimentRepository>()
         interactor.testWith(repository)
         whenever(repository.forSentiment()).thenReturn(sentimentRepository)
         whenever(sentimentRepository.getSentimentFor(any())).thenReturn(Single.create {
             it.onError(error)
+        })
+    }
+
+    private fun forceToGetSentiment(sentiment: Double) {
+        val sentimentRepository = mock<SentimentRepository>()
+        interactor.testWith(repository)
+        whenever(repository.forSentiment()).thenReturn(sentimentRepository)
+        whenever(sentimentRepository.getSentimentFor(any())).thenReturn(Single.create {
+            it.onSuccess(Sentiment(sentiment))
         })
     }
 }
