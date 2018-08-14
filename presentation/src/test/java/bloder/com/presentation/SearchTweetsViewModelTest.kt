@@ -8,6 +8,7 @@ import bloder.com.domain.repository.RepositoryFactory
 import bloder.com.domain.repository.resources.SearchRepository
 import bloder.com.presentation.twitter.search.SearchTweetsState
 import bloder.com.presentation.twitter.search.SearchViewModel
+import com.nhaarman.mockitokotlin2.any
 import com.nhaarman.mockitokotlin2.mock
 import com.nhaarman.mockitokotlin2.whenever
 import io.reactivex.Single
@@ -45,7 +46,7 @@ class SearchTweetsViewModelTest {
         val searchRepository = mock<SearchRepository>()
         interactor.testWith(repository)
         whenever(repository.forSearch()).thenReturn(searchRepository)
-        whenever(searchRepository.searchTweets("", "")).thenReturn(Single.create {
+        whenever(searchRepository.searchTweets(any(), any())).thenReturn(Single.create {
             it.onError(error)
         })
     }
