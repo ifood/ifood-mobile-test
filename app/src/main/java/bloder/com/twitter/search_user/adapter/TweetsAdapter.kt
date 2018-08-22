@@ -31,7 +31,7 @@ class TweetsAdapter(private val context: Context, private val tweets: List<Statu
         }
 
         private fun readableDate(date: String) : String {
-            val formatter = SimpleDateFormat("E MMM dd HH:mm:ss Z yyyy")
+            val formatter = SimpleDateFormat("E MMM dd HH:mm:ss Z yyyy", Locale.US)
             val dateFormatted = formatter.parse(date) as Date
             val cal = Calendar.getInstance()
             cal.time = dateFormatted
