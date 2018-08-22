@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">twitter</string>
+    <string name="ops_error">Ops!</string>
+    <string name="try_again">Try again</string>
+    <string name="search_tweets_from_any_user">Search tweets from any user</string>
+    <string name="ok">Ok</string>
+</resources>
