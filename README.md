@@ -16,3 +16,28 @@ Create an app that given an Twitter username it will list user's tweets. When I 
 * Use whatever language, tools and frameworks you feel comfortable to.
 * Briefly elaborate on your solution, architecture details, choice of patterns and frameworks.
 * Fork this repository and submit your code.
+
+## Solution
+
+#### Language
+
+This Solution was developed with Kotlin
+
+#### Architecture
+
+This Solution is trying to follow MVVM and Clean Architecture concepts.
+
+#### Libraries
+
+* RxJava2
+* RxAndroid
+* Junit
+* ViewModel
+* Lifecycle
+* LiveData
+* Koin
+* Retrofit
+* Gson
+* Picasso
+* OkHttp
+* Mockito Kotlin
