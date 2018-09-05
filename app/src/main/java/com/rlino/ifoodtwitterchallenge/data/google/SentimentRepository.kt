@@ -8,7 +8,18 @@ import java.util.*
 import java.util.concurrent.ThreadLocalRandom
 
 
-class SentimentRepository {
+class SentimentRepository private constructor() {
+
+    companion object {
+
+        // For Singleton instantiation
+        @Volatile private var instance: SentimentRepository? = null
+
+        fun getInstance() =
+                instance ?: synchronized(this) {
+                    instance ?: SentimentRepository().also { instance = it }
+                }
+    }
 
 //    fun getSentimentFromText(text: String): SentimentType {
 //        LanguageServiceClient.create().use {

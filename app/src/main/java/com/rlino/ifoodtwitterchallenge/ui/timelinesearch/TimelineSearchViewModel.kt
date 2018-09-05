@@ -11,8 +11,8 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 
 class TimelineSearchViewModel(
-        private val twitterRepository: TwitterRepository = TwitterRepository(),
-        private val sentimentRepository: SentimentRepository = SentimentRepository()
+        private val twitterRepository: TwitterRepository = TwitterRepository.getInstance(),
+        private val sentimentRepository: SentimentRepository = SentimentRepository.getInstance()
 ) : BaseViewModel() {
 
     private val _snackbarMessage: MutableLiveData<String> = MutableLiveData()
