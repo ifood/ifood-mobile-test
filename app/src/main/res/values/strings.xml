@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">iFoodTwitterChallenge</string>
+    <string name="username">Username</string>
 </resources>
