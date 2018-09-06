@@ -3,8 +3,8 @@ package com.rlino.ifoodtwitterchallenge.ui.timelinesearch
 import android.arch.lifecycle.LiveData
 import android.arch.lifecycle.MutableLiveData
 import com.rlino.ifoodtwitterchallenge.data.google.SentimentRepository
-import com.rlino.ifoodtwitterchallenge.data.google.SentimentType
 import com.rlino.ifoodtwitterchallenge.data.twitter.TwitterRepository
+import com.rlino.ifoodtwitterchallenge.model.Sentiment
 import com.rlino.ifoodtwitterchallenge.model.Tweets
 import com.rlino.ifoodtwitterchallenge.ui.BaseViewModel
 import com.rlino.ifoodtwitterchallenge.ui.Event
@@ -28,8 +28,8 @@ class TimelineSearchViewModel(
     val isLoading: LiveData<Boolean>
         get() = _isLoading
 
-    private val _tweetSentiment = MutableLiveData<Event<SentimentType>>()
-    val tweetSentiment: LiveData<Event<SentimentType>>
+    private val _tweetSentiment = MutableLiveData<Event<Sentiment>>()
+    val tweetSentiment: LiveData<Event<Sentiment>>
         get() = _tweetSentiment
 
 

@@ -10,7 +10,7 @@ import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.SearchView
 import android.view.Menu
 import com.rlino.ifoodtwitterchallenge.R
-import com.rlino.ifoodtwitterchallenge.data.google.SentimentType
+import com.rlino.ifoodtwitterchallenge.model.Sentiment
 import com.rlino.ifoodtwitterchallenge.model.Tweet
 import com.rlino.ifoodtwitterchallenge.ui.*
 import kotlinx.android.synthetic.main.activity_timeline_search.*
@@ -75,7 +75,7 @@ class TimelineSearchActivity : AppCompatActivity() {
         viewModel.analyzeTweet(tweet.text)
     }
 
-    private fun showSentiment(sentiment: SentimentType) {
+    private fun showSentiment(sentiment: Sentiment) {
         sentiment.apply {
             emojiField.text = emoji.toEmojiString()
             sentimentIndicatorLayout.setBackgroundColor(Color.parseColor(color))

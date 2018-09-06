@@ -3,6 +3,7 @@ package com.rlino.ifoodtwitterchallenge.data.google
 import com.google.cloud.language.v1.Document
 import com.google.cloud.language.v1.Document.Type
 import com.google.cloud.language.v1.LanguageServiceClient
+import com.rlino.ifoodtwitterchallenge.model.Sentiment
 import io.reactivex.Single
 import java.util.*
 import java.util.concurrent.ThreadLocalRandom
@@ -42,28 +43,15 @@ class SentimentRepository private constructor() {
 //        }
 //    }
 
-    fun getSentimentFromText(text: String): Single<SentimentType> {
+    fun getSentimentFromText(text: String): Single<Sentiment> {
         val result = ThreadLocalRandom.current().nextDouble(0.0, 2.0)
         return Single.just(when(result) {
-            in 0.0..0.75 -> SentimentType.Negative
-            in 0.75..1.25 -> SentimentType.Neutral
-            in 1.25..2.0 -> SentimentType.Positive
-            else -> SentimentType.Neutral
+            in 0.0..0.75 -> Sentiment.Negative
+            in 0.75..1.25 -> Sentiment.Neutral
+            in 1.25..2.0 -> Sentiment.Positive
+            else -> Sentiment.Neutral
         })
     }
 
 
-}
-
-sealed class SentimentType(
-        val color: String,
-        val emoji: Int
-) {
-    object Negative: SentimentType("#0000FF", 0x1f614)
-    object Positive: SentimentType("#00ff00", 0x1f603)
-    object Neutral: SentimentType("#D3D3D3", 0x1f610)
-
-    override fun toString(): String {
-        return javaClass.simpleName
-    }
 }
