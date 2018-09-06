@@ -6,7 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AlphaAnimation
 import com.rlino.ifoodtwitterchallenge.R
-import kotlinx.android.synthetic.main.activity_timeline_search.*
+import io.reactivex.Single
+import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.schedulers.Schedulers
 
 
 fun ViewGroup.showLoadingOverlay() {
@@ -22,6 +24,22 @@ fun ViewGroup.hideLoadingOverlay() {
     removeView(findViewWithTag("LOADING_VIEW"))
 }
 
+inline fun ViewGroup.fadeIn(duration: Long = 150) {
+    visibility = View.VISIBLE
+    startAnimation(AlphaAnimation(0.0f, 1.0f).apply {
+        this.duration = duration
+        this.fillAfter = true
+    })
+}
+
+inline fun ViewGroup.fadeOut(duration: Long = 150) {
+    startAnimation(AlphaAnimation(1.0f, 0.0f).apply {
+        this.duration = duration
+        this.fillAfter = true
+    })
+    visibility = View.GONE
+}
+
 inline fun ViewGroup.blink(delay: Long = 700) {
     fadeIn()
     Handler().postDelayed({
@@ -29,20 +47,8 @@ inline fun ViewGroup.blink(delay: Long = 700) {
     }, delay)
 }
 
-inline fun ViewGroup.fadeIn(duration: Long = 150) {
-    visibility = View.VISIBLE
-    val alpha = AlphaAnimation(0.0f, 1.0f)
-    alpha.duration = duration
-    alpha.fillAfter = true
-    startAnimation(alpha)
-}
-
-inline fun ViewGroup.fadeOut(duration: Long = 150) {
-    val alpha = AlphaAnimation(1.0f, 0.0f)
-    alpha.duration = duration
-    alpha.fillAfter = true
-    startAnimation(alpha)
-    visibility = View.GONE
-}
-
 inline fun Int.toEmojiString(): String = String(Character.toChars(this))
+
+
+inline fun <T> Single<T>.defaultSchedulers(): Single<T> = subscribeOn(Schedulers.io()).
+        observeOn(AndroidSchedulers.mainThread())

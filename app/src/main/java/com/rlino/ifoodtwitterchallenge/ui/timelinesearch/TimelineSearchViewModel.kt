@@ -8,8 +8,8 @@ import com.rlino.ifoodtwitterchallenge.model.Sentiment
 import com.rlino.ifoodtwitterchallenge.model.Tweets
 import com.rlino.ifoodtwitterchallenge.ui.BaseViewModel
 import com.rlino.ifoodtwitterchallenge.ui.Event
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.schedulers.Schedulers
+import com.rlino.ifoodtwitterchallenge.ui.defaultSchedulers
+import io.reactivex.Single
 
 class TimelineSearchViewModel(
         private val twitterRepository: TwitterRepository = TwitterRepository.getInstance(),
@@ -35,20 +35,20 @@ class TimelineSearchViewModel(
 
     fun searchTweetsForUsername(username: String) {
         disposable.add(twitterRepository.getTweetsFromUser(username)
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .doOnSubscribe { _isLoading.value = true }
-                .doOnEvent { _, _ ->  _isLoading.value = false }
+                .defaultSchedulers()
+                .updateLoading()
                 .subscribe(_tweets::setValue) { t -> _snackbarMessage.value = Event(t.message ?: "Error") })
     }
 
     fun analyzeTweet(text: String) {
         disposable.add(sentimentRepository.getSentimentFromText(text)
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .doOnEvent { _, _ ->  _isLoading.value = false }
+                .defaultSchedulers()
+                .updateLoading()
                 .subscribe( { s -> _tweetSentiment.value = Event(s) },
                         { t -> _snackbarMessage.value = Event(t.message ?: "Error") } ))
     }
+
+    private fun <T> Single<T>.updateLoading(): Single<T> = doOnSubscribe { _isLoading.value = true }
+                .doOnEvent { _, _ -> _isLoading.value = false}
 
 }
