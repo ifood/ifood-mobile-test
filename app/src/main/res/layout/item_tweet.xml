@@ -11,12 +11,13 @@
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:padding="@dimen/default_padding">
 
         <TextView
             android:id="@+id/tweetText"
             android:layout_width="0dp"
+            android:text="@{tweet.text}"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

@@ -21,6 +21,12 @@ class TweetsAdapter : RecyclerView.Adapter<TweetsAdapter.ViewHolder>() {
         holder.bind(list[position])
     }
 
+    fun setData(data: List<Tweet>) {
+        list.clear()
+        list.addAll(data)
+        notifyDataSetChanged()
+    }
+
     class ViewHolder(private val binding: ItemTweetBinding) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(tweet: Tweet) {

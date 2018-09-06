@@ -1,5 +1,6 @@
 package br.com.fornaro.tweetssentiment.view.tweets
 
+import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -36,5 +37,10 @@ class TweetsActivity : AppCompatActivity() {
 
     private fun setupViewModel(username: String) {
         viewModel = ViewModelProviders.of(this).get(TweetsViewModel::class.java)
+        viewModel.getTweets(username).observe(this, Observer {
+            if (it != null) {
+                viewAdapter.setData(it)
+            }
+        })
     }
 }
