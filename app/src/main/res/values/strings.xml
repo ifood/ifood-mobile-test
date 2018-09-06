@@ -3,4 +3,5 @@
     <string name="username">Username</string>
     <string name="search">Search</string>
     <string name="search_hint">Twitter\'s username</string>
+    <string name="network_failure_try_again">Check if you are connected to the internet and try again</string>
 </resources>
