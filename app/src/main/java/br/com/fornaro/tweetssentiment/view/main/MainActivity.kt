@@ -1,12 +1,15 @@
 package br.com.fornaro.tweetssentiment.view.main
 
 import android.arch.lifecycle.ViewModelProviders
+import android.content.Intent
 import android.databinding.DataBindingUtil
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import br.com.fornaro.tweetssentiment.R
+import br.com.fornaro.tweetssentiment.common.AppConstants
 import br.com.fornaro.tweetssentiment.databinding.ActivityMainBinding
+import br.com.fornaro.tweetssentiment.view.tweets.TweetsActivity
 import br.com.fornaro.tweetssentiment.viewmodel.MainViewModel
 
 class MainActivity : AppCompatActivity() {
@@ -41,6 +44,9 @@ class MainActivity : AppCompatActivity() {
         }
 
         override fun showTweetsListScreen(username: String) {
+            val intent = Intent(this@MainActivity, TweetsActivity::class.java)
+            intent.putExtra(AppConstants.EXTRA_USERNAME, username)
+            startActivity(intent)
         }
     }
 }
