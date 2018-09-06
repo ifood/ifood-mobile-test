@@ -6,4 +6,6 @@
     <string name="see_tweets">See tweets</string>
     <string name="no_username">Type a Tweeter username</string>
     <string name="no_internet">No internet connection</string>
+
+    <string name="analyze">Analyze</string>
 </resources>

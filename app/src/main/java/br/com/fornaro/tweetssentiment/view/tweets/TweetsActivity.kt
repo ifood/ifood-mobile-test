@@ -12,6 +12,7 @@ import kotlinx.android.synthetic.main.activity_tweets.*
 class TweetsActivity : AppCompatActivity() {
 
     private lateinit var viewModel: TweetsViewModel
+    private val viewAdapter = TweetsAdapter()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,10 +26,11 @@ class TweetsActivity : AppCompatActivity() {
     }
 
     private fun setupRecyclerView() {
+
         recyclerView.apply {
             setHasFixedSize(true)
             addItemDecoration(DividerItemDecoration(this@TweetsActivity, DividerItemDecoration.VERTICAL))
-//            adapter = viewAdapter
+            adapter = viewAdapter
         }
     }
 
