@@ -7,6 +7,7 @@ import com.rlino.ifoodtwitterchallenge.data.google.SentimentType
 import com.rlino.ifoodtwitterchallenge.data.twitter.TwitterRepository
 import com.rlino.ifoodtwitterchallenge.model.Tweets
 import com.rlino.ifoodtwitterchallenge.ui.BaseViewModel
+import com.rlino.ifoodtwitterchallenge.ui.Event
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 
@@ -15,8 +16,8 @@ class TimelineSearchViewModel(
         private val sentimentRepository: SentimentRepository = SentimentRepository.getInstance()
 ) : BaseViewModel() {
 
-    private val _snackbarMessage: MutableLiveData<String> = MutableLiveData()
-    val snackbarMessage: LiveData<String>
+    private val _snackbarMessage: MutableLiveData<Event<String>> = MutableLiveData()
+    val snackbarMessage: LiveData<Event<String>>
         get() = _snackbarMessage
 
     private val _tweets = MutableLiveData<Tweets>()
@@ -27,9 +28,9 @@ class TimelineSearchViewModel(
     val isLoading: LiveData<Boolean>
         get() = _isLoading
 
-    private val _tweetMeaning = MutableLiveData<SentimentType>()
-    val tweetMeaning: LiveData<SentimentType>
-        get() = _tweetMeaning
+    private val _tweetSentiment = MutableLiveData<Event<SentimentType>>()
+    val tweetSentiment: LiveData<Event<SentimentType>>
+        get() = _tweetSentiment
 
 
     fun searchTweetsForUsername(username: String) {
@@ -38,7 +39,7 @@ class TimelineSearchViewModel(
                 .observeOn(AndroidSchedulers.mainThread())
                 .doOnSubscribe { _isLoading.value = true }
                 .doOnEvent { _, _ ->  _isLoading.value = false }
-                .subscribe(_tweets::setValue) { t -> _snackbarMessage.value = t.message })
+                .subscribe(_tweets::setValue) { t -> _snackbarMessage.value = Event(t.message ?: "Error") })
     }
 
     fun analyzeTweet(text: String) {
@@ -46,8 +47,8 @@ class TimelineSearchViewModel(
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .doOnEvent { _, _ ->  _isLoading.value = false }
-                .subscribe( { s -> _tweetMeaning.value = s },
-                        { t -> _snackbarMessage.value = t.message } ))
+                .subscribe( { s -> _tweetSentiment.value = Event(s) },
+                        { t -> _snackbarMessage.value = Event(t.message ?: "Error") } ))
     }
 
 }

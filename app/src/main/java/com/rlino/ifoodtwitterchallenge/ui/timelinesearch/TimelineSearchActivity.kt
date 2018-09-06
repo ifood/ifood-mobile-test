@@ -7,14 +7,14 @@ import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
+import android.support.v7.widget.SearchView
+import android.view.Menu
 import com.rlino.ifoodtwitterchallenge.R
 import com.rlino.ifoodtwitterchallenge.data.google.SentimentType
 import com.rlino.ifoodtwitterchallenge.model.Tweet
-import com.rlino.ifoodtwitterchallenge.ui.blink
-import com.rlino.ifoodtwitterchallenge.ui.hideLoadingOverlay
-import com.rlino.ifoodtwitterchallenge.ui.showLoadingOverlay
-import com.rlino.ifoodtwitterchallenge.ui.toEmojiString
+import com.rlino.ifoodtwitterchallenge.ui.*
 import kotlinx.android.synthetic.main.activity_timeline_search.*
+
 
 class TimelineSearchActivity : AppCompatActivity() {
 
@@ -34,8 +34,8 @@ class TimelineSearchActivity : AppCompatActivity() {
             }
         })
 
-        viewModel.snackbarMessage.observe(this, Observer {
-            it?.apply { Snackbar.make(container, it, Snackbar.LENGTH_SHORT).show() }
+        viewModel.snackbarMessage.observe(this, EventObserver {
+            Snackbar.make(container, it, Snackbar.LENGTH_SHORT).show()
         })
 
         viewModel.isLoading.observe(this, Observer {
@@ -45,18 +45,30 @@ class TimelineSearchActivity : AppCompatActivity() {
             }
         })
 
-        viewModel.tweetMeaning.observe(this, Observer {
-            it?.apply {
-                showSentiment(this)
-            }
+        viewModel.tweetSentiment.observe(this, EventObserver{
+            showSentiment(it)
         })
-
-        search.setOnClickListener {
-            viewModel.searchTweetsForUsername(usernameField.toString())
-        }
 
         tweetsList.layoutManager = layoutManager
         tweetsList.adapter = adapter
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.search_menu, menu)
+
+        val myActionMenuItem = menu.findItem(R.id.action_search)
+        val searchView = myActionMenuItem.actionView as SearchView
+        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String): Boolean {
+                viewModel.searchTweetsForUsername(query)
+                return false
+            }
+
+            override fun onQueryTextChange(s: String): Boolean {
+                return false
+            }
+        })
+        return true
     }
 
     private fun tweetClicked(tweet: Tweet) {

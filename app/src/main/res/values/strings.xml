@@ -1,4 +1,6 @@
 <resources>
-    <string name="app_name">iFoodTwitterChallenge</string>
+    <string name="app_name">iFood Twitter Challenge</string>
     <string name="username">Username</string>
+    <string name="search">Search</string>
+    <string name="search_hint">Twitter\'s username</string>
 </resources>
