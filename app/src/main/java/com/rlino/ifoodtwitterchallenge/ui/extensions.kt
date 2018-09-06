@@ -10,10 +10,9 @@ import io.reactivex.Single
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 
-
 fun ViewGroup.showLoadingOverlay() {
     val loadingView = LayoutInflater.from(context).inflate(R.layout.loading_overlay, this, false)
-    loadingView.tag = "LOADING_VIEW"
+    loadingView.tag = context.getText(R.string.loading_view_tag)
     addView(loadingView)
     loadingView.setOnClickListener { }
     loadingView.bringToFront()
@@ -21,7 +20,7 @@ fun ViewGroup.showLoadingOverlay() {
 }
 
 fun ViewGroup.hideLoadingOverlay() {
-    removeView(findViewWithTag("LOADING_VIEW"))
+    removeView(findViewWithTag(context.getText(R.string.loading_view_tag)))
 }
 
 inline fun ViewGroup.fadeIn(duration: Long = 150) {
