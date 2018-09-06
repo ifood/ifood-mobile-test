@@ -2,7 +2,9 @@ package com.rlino.ifoodtwitterchallenge.ui.timelinesearch
 
 import android.arch.lifecycle.LiveData
 import android.arch.lifecycle.MutableLiveData
+import com.rlino.ifoodtwitterchallenge.data.google.SentimentErrorHandler
 import com.rlino.ifoodtwitterchallenge.data.google.SentimentRepository
+import com.rlino.ifoodtwitterchallenge.data.twitter.TweetsFetchErrorHandler
 import com.rlino.ifoodtwitterchallenge.data.twitter.TwitterRepository
 import com.rlino.ifoodtwitterchallenge.model.Sentiment
 import com.rlino.ifoodtwitterchallenge.model.Tweets
@@ -13,11 +15,13 @@ import io.reactivex.Single
 
 class TimelineSearchViewModel(
         private val twitterRepository: TwitterRepository = TwitterRepository.getInstance(),
-        private val sentimentRepository: SentimentRepository = SentimentRepository.getInstance()
+        private val sentimentRepository: SentimentRepository = SentimentRepository.getInstance(),
+        private val tweetsErrorHandler: TweetsFetchErrorHandler = TweetsFetchErrorHandler(),
+        private val sentimentErrorHandler: SentimentErrorHandler = SentimentErrorHandler()
 ) : BaseViewModel() {
 
-    private val _snackbarMessage: MutableLiveData<Event<String>> = MutableLiveData()
-    val snackbarMessage: LiveData<Event<String>>
+    private val _snackbarMessage: MutableLiveData<Event<Int>> = MutableLiveData()
+    val snackbarMessage: LiveData<Event<Int>>
         get() = _snackbarMessage
 
     private val _tweets = MutableLiveData<Tweets>()
@@ -37,7 +41,7 @@ class TimelineSearchViewModel(
         disposable.add(twitterRepository.getTweetsFromUser(username)
                 .defaultSchedulers()
                 .updateLoading()
-                .subscribe(_tweets::setValue) { t -> _snackbarMessage.value = Event(t.message ?: "Error") })
+                .subscribe(_tweets::setValue) { t -> _snackbarMessage.value = tweetsErrorHandler.logThenHandle(t) })
     }
 
     fun analyzeTweet(text: String) {
@@ -45,7 +49,7 @@ class TimelineSearchViewModel(
                 .defaultSchedulers()
                 .updateLoading()
                 .subscribe( { s -> _tweetSentiment.value = Event(s) },
-                        { t -> _snackbarMessage.value = Event(t.message ?: "Error") } ))
+                        { t -> _snackbarMessage.value = sentimentErrorHandler.logThenHandle(t) } ))
     }
 
     private fun <T> Single<T>.updateLoading(): Single<T> = doOnSubscribe { _isLoading.value = true }
