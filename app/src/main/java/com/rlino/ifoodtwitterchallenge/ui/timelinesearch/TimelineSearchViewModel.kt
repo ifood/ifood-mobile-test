@@ -3,12 +3,9 @@ package com.rlino.ifoodtwitterchallenge.ui.timelinesearch
 import android.arch.lifecycle.LiveData
 import android.arch.lifecycle.MutableLiveData
 import com.rlino.ifoodtwitterchallenge.data.google.SentimentErrorHandler
-import com.rlino.ifoodtwitterchallenge.data.google.SentimentRepository
 import com.rlino.ifoodtwitterchallenge.data.twitter.TweetsFetchErrorHandler
-import com.rlino.ifoodtwitterchallenge.data.twitter.TwitterRepository
-import com.rlino.ifoodtwitterchallenge.defaultSchedulers
+import com.rlino.ifoodtwitterchallenge.domain.google.GetSentimentUseCase
 import com.rlino.ifoodtwitterchallenge.domain.twitter.FetchTweetsUseCase
-import com.rlino.ifoodtwitterchallenge.logErrors
 import com.rlino.ifoodtwitterchallenge.model.Sentiment
 import com.rlino.ifoodtwitterchallenge.model.Tweets
 import com.rlino.ifoodtwitterchallenge.ui.BaseViewModel
@@ -18,7 +15,7 @@ import javax.inject.Inject
 
 class TimelineSearchViewModel @Inject constructor(
         private val fetchTweetsUseCase: FetchTweetsUseCase,
-        private val sentimentRepository: SentimentRepository,
+        private val getSentimentUseCase: GetSentimentUseCase,
         private val tweetsErrorHandler: TweetsFetchErrorHandler,
         private val sentimentErrorHandler: SentimentErrorHandler
 ) : BaseViewModel() {
@@ -47,9 +44,7 @@ class TimelineSearchViewModel @Inject constructor(
     }
 
     fun analyzeTweet(text: String) {
-        disposable.add(sentimentRepository.getSentimentFromText(text)
-                .defaultSchedulers()
-                .logErrors()
+        disposable.add(getSentimentUseCase(text)
                 .updateLoading()
                 .subscribe( { s -> _tweetSentiment.value = Event(s) },
                         { t -> _snackbarMessage.value = sentimentErrorHandler.handle(t) } ))
