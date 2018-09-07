@@ -14,7 +14,7 @@ class MockTwitterApi : TwitterApi {
                 Tweet(Date(), 6125123, "tweet3"),
                 Tweet(Date(), 61267162, "tweet4"),
                 Tweet(Date(), 61123643, "tweet5")
-        )).delay(3, TimeUnit.SECONDS)
+        )).delay(1, TimeUnit.SECONDS)
     }
 
 }

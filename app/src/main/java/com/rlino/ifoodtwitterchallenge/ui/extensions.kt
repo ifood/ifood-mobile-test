@@ -23,7 +23,7 @@ fun ViewGroup.hideLoadingOverlay() {
     removeView(findViewWithTag(context.getText(R.string.loading_view_tag)))
 }
 
-inline fun ViewGroup.fadeIn(duration: Long = 150) {
+inline fun ViewGroup.fadeIn(duration: Long = 250) {
     visibility = View.VISIBLE
     startAnimation(AlphaAnimation(0.0f, 1.0f).apply {
         this.duration = duration
@@ -31,7 +31,7 @@ inline fun ViewGroup.fadeIn(duration: Long = 150) {
     })
 }
 
-inline fun ViewGroup.fadeOut(duration: Long = 150) {
+inline fun ViewGroup.fadeOut(duration: Long = 250) {
     startAnimation(AlphaAnimation(1.0f, 0.0f).apply {
         this.duration = duration
         this.fillAfter = true
