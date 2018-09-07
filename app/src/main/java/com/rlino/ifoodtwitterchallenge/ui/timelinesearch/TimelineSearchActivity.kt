@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.SearchView
 import android.view.Menu
+import android.view.View
 import com.rlino.ifoodtwitterchallenge.R
 import com.rlino.ifoodtwitterchallenge.model.Sentiment
 import com.rlino.ifoodtwitterchallenge.model.Tweet
@@ -30,8 +31,14 @@ class TimelineSearchActivity : AppCompatActivity() {
 
         viewModel.tweets.observe(this, Observer {
             it?.apply {
-                adapter.submitList(tweets)
-            }
+                when (tweets.isEmpty()) {
+                    true -> showEmptyView()
+                    false -> {
+                        showList()
+                        adapter.submitList(tweets)
+                    }
+                }
+            } ?: showPreSearchText()
         })
 
         viewModel.snackbarMessage.observe(this, EventObserver {
@@ -81,5 +88,23 @@ class TimelineSearchActivity : AppCompatActivity() {
             sentimentIndicatorLayout.setBackgroundColor(Color.parseColor(color))
             sentimentIndicatorLayout.blink()
         }
+    }
+
+    private fun showEmptyView() {
+        tweetsList.visibility = View.GONE
+        preSearch.visibility = View.GONE
+        noResultsText.visibility = View.VISIBLE
+    }
+
+    private fun showPreSearchText() {
+        tweetsList.visibility = View.GONE
+        preSearch.visibility = View.VISIBLE
+        noResultsText.visibility = View.GONE
+    }
+
+    private fun showList() {
+        tweetsList.visibility = View.VISIBLE
+        preSearch.visibility = View.GONE
+        noResultsText.visibility = View.GONE
     }
 }
