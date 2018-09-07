@@ -39,6 +39,11 @@ class TweetsActivity : AppCompatActivity(), TweetsAdapter.OnTweetListener {
     private fun setupViewModel(username: String) {
         viewModel = ViewModelProviders.of(this).get(TweetsViewModel::class.java)
         viewModel.callback = callback
+
+        viewModel.getUser(username).observe(this, Observer {
+            it
+        })
+
         viewModel.getTweets(username).observe(this, Observer {
             if (it != null) {
                 viewAdapter.setData(it)

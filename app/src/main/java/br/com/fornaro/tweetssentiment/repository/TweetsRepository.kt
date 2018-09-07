@@ -2,12 +2,8 @@ package br.com.fornaro.tweetssentiment.repository
 
 import android.arch.lifecycle.LiveData
 import android.arch.lifecycle.MutableLiveData
-import br.com.fornaro.tweetssentiment.api.NaturalLanguageApi
 import br.com.fornaro.tweetssentiment.api.TweeterApi
-import br.com.fornaro.tweetssentiment.model.Document
-import br.com.fornaro.tweetssentiment.model.SentimentRequest
-import br.com.fornaro.tweetssentiment.model.SentimentResponse
-import br.com.fornaro.tweetssentiment.model.Tweet
+import br.com.fornaro.tweetssentiment.model.*
 import okhttp3.OkHttpClient
 import retrofit2.Call
 import retrofit2.Callback
@@ -19,15 +15,33 @@ import se.akerfeldt.okhttp.signpost.SigningInterceptor
 
 class TweetsRepository {
 
+    private val api = Retrofit.Builder()
+            .baseUrl("https://api.twitter.com/")
+            .client(getRequestClient())
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+            .create(TweeterApi::class.java)
+
+    fun getUser(username: String): LiveData<User> {
+        val data = MutableLiveData<User>()
+
+        api.getUser(username)
+                .enqueue(object : Callback<User> {
+                    override fun onFailure(call: Call<User>?, t: Throwable?) {
+                    }
+
+                    override fun onResponse(call: Call<User>?, response: Response<User>?) {
+                        if (response?.isSuccessful!!) {
+                            data.value = response.body()
+                        }
+                    }
+                })
+
+        return data
+    }
+
     fun getTweets(username: String): LiveData<List<Tweet>>? {
         val data = MutableLiveData<List<Tweet>>()
-
-        val api = Retrofit.Builder()
-                .baseUrl("https://api.twitter.com/")
-                .client(getRequestClient())
-                .addConverterFactory(GsonConverterFactory.create())
-                .build()
-                .create(TweeterApi::class.java)
 
         api.getTweets(username)
                 .enqueue(object : Callback<List<Tweet>> {
@@ -53,30 +67,5 @@ class TweetsRepository {
         return OkHttpClient.Builder()
                 .addInterceptor(SigningInterceptor(consumer))
                 .build()
-    }
-
-    fun analyzeTweet(tweet: Tweet): LiveData<Tweet> {
-        val data = MutableLiveData<Tweet>()
-
-        val api = Retrofit.Builder()
-                .baseUrl("https://language.googleapis.com/")
-                .addConverterFactory(GsonConverterFactory.create())
-                .build()
-                .create(NaturalLanguageApi::class.java)
-
-        api.analyzeSentiment("AIzaSyCSzI5ttkTqKCtCaAuRWgDk-q-41F8ukdg", SentimentRequest(Document(tweet.text)))
-                .enqueue(object : Callback<SentimentResponse> {
-                    override fun onFailure(call: Call<SentimentResponse>?, t: Throwable?) {
-                    }
-
-                    override fun onResponse(call: Call<SentimentResponse>?, response: Response<SentimentResponse>?) {
-                        if (response?.isSuccessful!!) {
-                            tweet.sentiment = response.body()?.getSentiment()!!
-                            data.value = tweet
-                        }
-                    }
-                })
-
-        return data
     }
 }
