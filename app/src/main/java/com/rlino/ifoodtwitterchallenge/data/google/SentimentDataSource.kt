@@ -5,21 +5,13 @@ import com.google.api.services.language.v1.model.AnnotateTextRequest
 import com.google.api.services.language.v1.model.AnnotateTextResponse
 import com.google.api.services.language.v1.model.Document
 import com.google.api.services.language.v1.model.Features
+import javax.inject.Inject
+import javax.inject.Singleton
 
-class SentimentDataSource private constructor(
-        private val naturalLanguageService : CloudNaturalLanguage = NaturalLanguageServiceProvider.naturalLanguageService
+@Singleton
+class SentimentDataSource @Inject constructor(
+        private val naturalLanguageService : CloudNaturalLanguage
 ) {
-
-    companion object {
-
-        // For Singleton instantiation
-        @Volatile private var instance: SentimentDataSource? = null
-
-        fun getInstance() =
-                instance ?: synchronized(this) {
-                    instance ?: SentimentDataSource().also { instance = it }
-                }
-    }
 
     fun analyzeText(text: String): AnnotateTextResponse {
         return getAnnotateTextRequest(getFeatures(), getDocument(text)).run {

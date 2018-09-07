@@ -1,11 +1,11 @@
 package com.rlino.ifoodtwitterchallenge.ui.timelinesearch
 
 import android.arch.lifecycle.Observer
+import android.arch.lifecycle.ViewModelProvider
 import android.arch.lifecycle.ViewModelProviders
 import android.graphics.Color
 import android.os.Bundle
 import android.support.design.widget.Snackbar
-import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.SearchView
 import android.view.Menu
@@ -14,12 +14,17 @@ import com.rlino.ifoodtwitterchallenge.*
 import com.rlino.ifoodtwitterchallenge.model.Sentiment
 import com.rlino.ifoodtwitterchallenge.model.Tweet
 import com.rlino.ifoodtwitterchallenge.ui.EventObserver
+import dagger.android.support.DaggerAppCompatActivity
 import kotlinx.android.synthetic.main.activity_timeline_search.*
+import javax.inject.Inject
 
 
-class TimelineSearchActivity : AppCompatActivity() {
+class TimelineSearchActivity : DaggerAppCompatActivity() {
 
-    private val viewModel by lazy { ViewModelProviders.of(this).get(TimelineSearchViewModel::class.java) }
+    @Inject
+    lateinit var viewModelFactory: ViewModelProvider.Factory
+
+    private val viewModel by lazy { ViewModelProviders.of(this, viewModelFactory).get(TimelineSearchViewModel::class.java) }
 
     private val layoutManager by lazy { LinearLayoutManager(this) }
 

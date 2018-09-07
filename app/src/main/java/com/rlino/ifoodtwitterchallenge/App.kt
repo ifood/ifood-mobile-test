@@ -1,14 +1,15 @@
 package com.rlino.ifoodtwitterchallenge
 
-import android.app.Application
-import timber.log.Timber
 import com.crashlytics.android.Crashlytics
+import com.rlino.ifoodtwitterchallenge.di.DaggerAppComponent
 import com.rlino.ifoodtwitterchallenge.logger.CrashlyticsTree
+import dagger.android.AndroidInjector
+import dagger.android.DaggerApplication
 import io.fabric.sdk.android.Fabric
+import timber.log.Timber
 
 
-
-class App : Application() {
+class App : DaggerApplication() {
 
     override fun onCreate() {
         super.onCreate()
@@ -19,5 +20,9 @@ class App : Application() {
         else
             Timber.plant(CrashlyticsTree())
 
+    }
+
+    override fun applicationInjector(): AndroidInjector<out DaggerApplication> {
+        return DaggerAppComponent.builder().create(this)
     }
 }

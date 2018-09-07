@@ -2,23 +2,14 @@ package com.rlino.ifoodtwitterchallenge.data.google
 
 import com.rlino.ifoodtwitterchallenge.model.Sentiment
 import io.reactivex.Single
+import javax.inject.Inject
+import javax.inject.Singleton
 
 
-class SentimentRepository private constructor(
-        private val sentimentDataSource: SentimentDataSource = SentimentDataSource.getInstance()
+@Singleton
+class SentimentRepository @Inject constructor(
+        private val sentimentDataSource: SentimentDataSource
 ) {
-
-    companion object {
-
-        // For Singleton instantiation
-        @Volatile private var instance: SentimentRepository? = null
-
-        fun getInstance() =
-                instance ?: synchronized(this) {
-                    instance ?: SentimentRepository().also { instance = it }
-                }
-
-    }
 
     fun getSentimentFromText(text: String): Single<Sentiment> {
         return Single.create<Sentiment> { emitter ->

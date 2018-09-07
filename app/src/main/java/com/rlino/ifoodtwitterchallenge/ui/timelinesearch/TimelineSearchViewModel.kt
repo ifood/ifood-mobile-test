@@ -7,18 +7,19 @@ import com.rlino.ifoodtwitterchallenge.data.google.SentimentRepository
 import com.rlino.ifoodtwitterchallenge.data.twitter.TweetsFetchErrorHandler
 import com.rlino.ifoodtwitterchallenge.data.twitter.TwitterRepository
 import com.rlino.ifoodtwitterchallenge.defaultSchedulers
-import com.rlino.ifoodtwitterchallenge.log
+import com.rlino.ifoodtwitterchallenge.logErrors
 import com.rlino.ifoodtwitterchallenge.model.Sentiment
 import com.rlino.ifoodtwitterchallenge.model.Tweets
 import com.rlino.ifoodtwitterchallenge.ui.BaseViewModel
 import com.rlino.ifoodtwitterchallenge.ui.Event
 import io.reactivex.Single
+import javax.inject.Inject
 
-class TimelineSearchViewModel(
-        private val twitterRepository: TwitterRepository = TwitterRepository.getInstance(),
-        private val sentimentRepository: SentimentRepository = SentimentRepository.getInstance(),
-        private val tweetsErrorHandler: TweetsFetchErrorHandler = TweetsFetchErrorHandler(),
-        private val sentimentErrorHandler: SentimentErrorHandler = SentimentErrorHandler()
+class TimelineSearchViewModel @Inject constructor(
+        private val twitterRepository: TwitterRepository,
+        private val sentimentRepository: SentimentRepository,
+        private val tweetsErrorHandler: TweetsFetchErrorHandler,
+        private val sentimentErrorHandler: SentimentErrorHandler
 ) : BaseViewModel() {
 
     private val _snackbarMessage: MutableLiveData<Event<Int>> = MutableLiveData()
@@ -41,7 +42,7 @@ class TimelineSearchViewModel(
     fun searchTweetsForUsername(username: String) {
         disposable.add(twitterRepository.getTweetsFromUser(username)
                 .defaultSchedulers()
-                .log()
+                .logErrors()
                 .updateLoading()
                 .subscribe(_tweets::setValue) { t -> _snackbarMessage.value = tweetsErrorHandler.handle(t) })
     }
@@ -49,7 +50,7 @@ class TimelineSearchViewModel(
     fun analyzeTweet(text: String) {
         disposable.add(sentimentRepository.getSentimentFromText(text)
                 .defaultSchedulers()
-                .log()
+                .logErrors()
                 .updateLoading()
                 .subscribe( { s -> _tweetSentiment.value = Event(s) },
                         { t -> _snackbarMessage.value = sentimentErrorHandler.handle(t) } ))

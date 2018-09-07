@@ -52,4 +52,4 @@ inline fun Int.toEmojiString(): String = String(Character.toChars(this))
 inline fun <T> Single<T>.defaultSchedulers(): Single<T> = subscribeOn(Schedulers.io()).
         observeOn(AndroidSchedulers.mainThread())
 
-inline fun <T> Single<T>.log(): Single<T> = doOnError { Timber.e(it) }
+inline fun <T> Single<T>.logErrors(): Single<T> = doOnError { Timber.e(it) }
