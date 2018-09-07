@@ -5,6 +5,7 @@ import android.arch.lifecycle.ViewModelProviders
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.DividerItemDecoration
+import android.widget.Toast
 import br.com.fornaro.tweetssentiment.R
 import br.com.fornaro.tweetssentiment.common.AppConstants
 import br.com.fornaro.tweetssentiment.model.Tweet
@@ -37,6 +38,7 @@ class TweetsActivity : AppCompatActivity(), TweetsAdapter.OnTweetListener {
 
     private fun setupViewModel(username: String) {
         viewModel = ViewModelProviders.of(this).get(TweetsViewModel::class.java)
+        viewModel.callback = callback
         viewModel.getTweets(username).observe(this, Observer {
             if (it != null) {
                 viewAdapter.setData(it)
@@ -45,8 +47,14 @@ class TweetsActivity : AppCompatActivity(), TweetsAdapter.OnTweetListener {
     }
 
     override fun analyze(tweet: Tweet) {
-        viewModel.analyze(tweet).observe(this, Observer {
+        viewModel.analyze(tweet)?.observe(this, Observer {
             viewAdapter.notifyDataSetChanged()
         })
+    }
+
+    private val callback = object : TweetsCallback {
+        override fun onNoInternetConnection() {
+            Toast.makeText(this@TweetsActivity, R.string.no_internet, Toast.LENGTH_SHORT).show()
+        }
     }
 }
