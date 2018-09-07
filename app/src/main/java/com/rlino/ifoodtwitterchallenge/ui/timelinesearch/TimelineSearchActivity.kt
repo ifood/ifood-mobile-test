@@ -10,10 +10,10 @@ import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.SearchView
 import android.view.Menu
 import android.view.View
-import com.rlino.ifoodtwitterchallenge.R
+import com.rlino.ifoodtwitterchallenge.*
 import com.rlino.ifoodtwitterchallenge.model.Sentiment
 import com.rlino.ifoodtwitterchallenge.model.Tweet
-import com.rlino.ifoodtwitterchallenge.ui.*
+import com.rlino.ifoodtwitterchallenge.ui.EventObserver
 import kotlinx.android.synthetic.main.activity_timeline_search.*
 
 

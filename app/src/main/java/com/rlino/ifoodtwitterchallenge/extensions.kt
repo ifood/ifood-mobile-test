@@ -1,14 +1,14 @@
-package com.rlino.ifoodtwitterchallenge.ui
+package com.rlino.ifoodtwitterchallenge
 
 import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AlphaAnimation
-import com.rlino.ifoodtwitterchallenge.R
 import io.reactivex.Single
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
+import timber.log.Timber
 
 fun ViewGroup.showLoadingOverlay() {
     val loadingView = LayoutInflater.from(context).inflate(R.layout.loading_overlay, this, false)
@@ -51,3 +51,5 @@ inline fun Int.toEmojiString(): String = String(Character.toChars(this))
 
 inline fun <T> Single<T>.defaultSchedulers(): Single<T> = subscribeOn(Schedulers.io()).
         observeOn(AndroidSchedulers.mainThread())
+
+inline fun <T> Single<T>.log(): Single<T> = doOnError { Timber.e(it) }

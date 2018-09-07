@@ -24,7 +24,7 @@ class SentimentDataSource private constructor(
     fun analyzeText(text: String): AnnotateTextResponse {
         return getAnnotateTextRequest(getFeatures(), getDocument(text)).run {
             naturalLanguageService.documents().annotateText(this).execute()
-        } ?: throw NoSentimentFound()
+        }
     }
 
     private fun getDocument(text: String) = Document().apply {
@@ -42,5 +42,3 @@ class SentimentDataSource private constructor(
         this.document = document
     }
 }
-
-class NoSentimentFound : Exception()

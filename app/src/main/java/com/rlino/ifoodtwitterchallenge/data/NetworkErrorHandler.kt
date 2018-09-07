@@ -8,7 +8,7 @@ import java.io.IOException
 
 class NetworkErrorHandler(
         private val commonErrorHandler: CommonErrorHandler = CommonErrorHandler()
-) : ErrorHandler {
+) : ErrorHandler by commonErrorHandler {
 
     override fun handle(t: Throwable): Event<Int> {
         return when(t) {
