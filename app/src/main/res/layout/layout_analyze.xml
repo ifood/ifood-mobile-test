@@ -31,7 +31,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:visibleInvisible="@{tweet.sentiment == Sentiment.None &amp;&amp; !isAnalyzing}" />
+            app:visibleInvisible="@{tweet.sentiment == null &amp;&amp; !isAnalyzing}" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -46,7 +46,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:visibleInvisible="@{tweet.sentiment != Sentiment.None}" />
+            app:visibleInvisible="@{tweet.sentiment != null}" />
 
         <ProgressBar
             android:layout_width="wrap_content"
