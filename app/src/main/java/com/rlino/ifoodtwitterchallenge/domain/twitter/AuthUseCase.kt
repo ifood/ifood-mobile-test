@@ -6,7 +6,7 @@ import io.reactivex.Single
 import javax.inject.Inject
 
 class AuthUseCase @Inject constructor(
-        val twitterRepository: TwitterRepository
+        private val twitterRepository: TwitterRepository
 ) : SingleUseCase<Unit, String>() {
 
     override fun execute(parameters: Unit): Single<String> {
@@ -14,6 +14,3 @@ class AuthUseCase @Inject constructor(
     }
 
 }
-
-
-class AuthUseCaseParameters()
