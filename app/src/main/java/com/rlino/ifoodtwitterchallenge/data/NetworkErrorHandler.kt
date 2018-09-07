@@ -5,9 +5,10 @@ import com.rlino.ifoodtwitterchallenge.error.CommonErrorHandler
 import com.rlino.ifoodtwitterchallenge.error.ErrorHandler
 import com.rlino.ifoodtwitterchallenge.ui.Event
 import java.io.IOException
+import javax.inject.Inject
 
-class NetworkErrorHandler(
-        private val commonErrorHandler: CommonErrorHandler = CommonErrorHandler()
+class NetworkErrorHandler @Inject constructor(
+        private val commonErrorHandler: CommonErrorHandler
 ) : ErrorHandler by commonErrorHandler {
 
     override fun handle(t: Throwable): Event<Int> {

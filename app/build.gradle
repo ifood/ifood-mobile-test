@@ -6,6 +6,8 @@ apply plugin: 'kotlin-android-extensions'
 
 apply plugin: 'io.fabric'
 
+apply plugin: 'kotlin-kapt'
+
 android {
     compileSdkVersion 27
     defaultConfig {
@@ -79,5 +81,10 @@ dependencies {
 
     implementation group: 'com.google.apis', name: 'google-api-services-language', version: 'v1-rev388-1.22.0' exclude module: 'httpclient'
     implementation group: 'com.google.api-client', name: 'google-api-client-android', version: '1.22.0' exclude module: 'httpclient'
+
+    implementation 'com.google.dagger:dagger:2.16'
+    kapt 'com.google.dagger:dagger-compiler:2.16'
+    implementation 'com.google.dagger:dagger-android-support:2.16'
+    kapt 'com.google.dagger:dagger-android-processor:2.16'
 
 }

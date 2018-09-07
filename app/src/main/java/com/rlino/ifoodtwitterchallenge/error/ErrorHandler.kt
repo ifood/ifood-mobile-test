@@ -2,6 +2,7 @@ package com.rlino.ifoodtwitterchallenge.error
 
 import com.rlino.ifoodtwitterchallenge.R
 import com.rlino.ifoodtwitterchallenge.ui.Event
+import javax.inject.Inject
 
 interface ErrorHandler {
 
@@ -9,6 +10,6 @@ interface ErrorHandler {
 
 }
 
-class CommonErrorHandler : ErrorHandler {
+class CommonErrorHandler @Inject constructor() : ErrorHandler {
     override fun handle(t: Throwable): Event<Int> = Event(R.string.something_went_wrong)
 }
