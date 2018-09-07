@@ -3,11 +3,12 @@ package br.com.fornaro.tweetssentiment.model
 import android.content.Context
 import android.support.v4.content.ContextCompat
 import br.com.fornaro.tweetssentiment.R
+import com.google.gson.annotations.SerializedName
 
 data class Tweet(
-        val id: Long,
         val text: String,
-        var sentiment: Sentiment = Sentiment.None
+        @SerializedName("created_at") val createdAt: String,
+        var sentiment: Sentiment? = null
 ) {
     fun getSentimentText(context: Context): String {
         return when (sentiment) {
