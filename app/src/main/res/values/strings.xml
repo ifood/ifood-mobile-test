@@ -8,4 +8,7 @@
     <string name="no_internet">No internet connection</string>
 
     <string name="analyze">Analyze</string>
+    <string name="happy">%s Happy</string>
+    <string name="neutral">%s Neutral</string>
+    <string name="sad">%s Sad</string>
 </resources>

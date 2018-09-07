@@ -37,7 +37,7 @@ class TweetsAdapter(private val listener: TweetsAdapter.OnTweetListener) : Recyc
             binding.tweet = tweet
             binding.executePendingBindings()
 
-            binding.anallyzeButton.setOnClickListener { listener.analyze(tweet) }
+            binding.analyzeLayout?.analyzeButton?.setOnClickListener { listener.analyze(tweet) }
         }
     }
 }
