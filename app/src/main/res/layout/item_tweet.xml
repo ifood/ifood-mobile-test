@@ -4,6 +4,10 @@
 
     <data>
 
+        <import type="android.view.View" />
+
+        <import type="br.com.fornaro.tweetssentiment.model.Sentiment" />
+
         <variable
             name="tweet"
             type="br.com.fornaro.tweetssentiment.model.Tweet" />
@@ -17,8 +21,8 @@
         <TextView
             android:id="@+id/tweetText"
             android:layout_width="0dp"
-            android:text="@{tweet.text}"
             android:layout_height="wrap_content"
+            android:text="@{tweet.text}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -30,7 +34,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="@string/analyze"
-            app:layout_constraintTop_toBottomOf="@id/tweetText" />
+            android:visibility="@{tweet.sentiment == Sentiment.None ? View.VISIBLE : View.GONE}"
+            app:layout_constraintTop_toBottomOf="@+id/tweetText" />
 
     </android.support.constraint.ConstraintLayout>
 </layout>

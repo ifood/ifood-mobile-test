@@ -6,7 +6,11 @@ import android.view.ViewGroup
 import br.com.fornaro.tweetssentiment.databinding.ItemTweetBinding
 import br.com.fornaro.tweetssentiment.model.Tweet
 
-class TweetsAdapter : RecyclerView.Adapter<TweetsAdapter.ViewHolder>() {
+class TweetsAdapter(private val listener: TweetsAdapter.OnTweetListener) : RecyclerView.Adapter<TweetsAdapter.ViewHolder>() {
+
+    interface OnTweetListener {
+        fun analyze(tweet: Tweet)
+    }
 
     private val list = mutableListOf<Tweet>()
 
@@ -18,7 +22,7 @@ class TweetsAdapter : RecyclerView.Adapter<TweetsAdapter.ViewHolder>() {
     override fun getItemCount() = list.size
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(list[position])
+        holder.bind(list[position], listener)
     }
 
     fun setData(data: List<Tweet>) {
@@ -29,9 +33,11 @@ class TweetsAdapter : RecyclerView.Adapter<TweetsAdapter.ViewHolder>() {
 
     class ViewHolder(private val binding: ItemTweetBinding) : RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(tweet: Tweet) {
+        fun bind(tweet: Tweet, listener: OnTweetListener) {
             binding.tweet = tweet
             binding.executePendingBindings()
+
+            binding.anallyzeButton.setOnClickListener { listener.analyze(tweet) }
         }
     }
 }

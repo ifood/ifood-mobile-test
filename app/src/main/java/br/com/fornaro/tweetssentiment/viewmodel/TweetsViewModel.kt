@@ -17,4 +17,8 @@ class TweetsViewModel(application: Application) : AndroidViewModel(application) 
         }
         return tweetsLiveData!!
     }
+
+    fun analyze(tweet: Tweet): LiveData<Tweet> {
+        return tweetsRepository.analyzeTweet(tweet)
+    }
 }

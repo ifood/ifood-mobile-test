@@ -7,13 +7,14 @@ import android.os.Bundle
 import android.support.v7.widget.DividerItemDecoration
 import br.com.fornaro.tweetssentiment.R
 import br.com.fornaro.tweetssentiment.common.AppConstants
+import br.com.fornaro.tweetssentiment.model.Tweet
 import br.com.fornaro.tweetssentiment.viewmodel.TweetsViewModel
 import kotlinx.android.synthetic.main.activity_tweets.*
 
-class TweetsActivity : AppCompatActivity() {
+class TweetsActivity : AppCompatActivity(), TweetsAdapter.OnTweetListener {
 
     private lateinit var viewModel: TweetsViewModel
-    private val viewAdapter = TweetsAdapter()
+    private val viewAdapter = TweetsAdapter(this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,7 +28,6 @@ class TweetsActivity : AppCompatActivity() {
     }
 
     private fun setupRecyclerView() {
-
         recyclerView.apply {
             setHasFixedSize(true)
             addItemDecoration(DividerItemDecoration(this@TweetsActivity, DividerItemDecoration.VERTICAL))
@@ -41,6 +41,12 @@ class TweetsActivity : AppCompatActivity() {
             if (it != null) {
                 viewAdapter.setData(it)
             }
+        })
+    }
+
+    override fun analyze(tweet: Tweet) {
+        viewModel.analyze(tweet).observe(this, Observer {
+            viewAdapter.notifyDataSetChanged()
         })
     }
 }
