@@ -2,12 +2,13 @@ package com.rlino.ifoodtwitterchallenge.data.twitter
 
 import dagger.Module
 import dagger.Provides
+import retrofit2.Retrofit
 
 @Module
 class TwitterModule {
 
     @Provides
-    fun provideTwitterApi(): TwitterApi {
+    fun provideTwitterApi(retrofit: Retrofit): TwitterApi {
         return MockTwitterApi()
     }
 
