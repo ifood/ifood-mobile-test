@@ -7,6 +7,7 @@ import com.rlino.ifoodtwitterchallenge.data.google.SentimentRepository
 import com.rlino.ifoodtwitterchallenge.data.twitter.TweetsFetchErrorHandler
 import com.rlino.ifoodtwitterchallenge.data.twitter.TwitterRepository
 import com.rlino.ifoodtwitterchallenge.defaultSchedulers
+import com.rlino.ifoodtwitterchallenge.domain.twitter.FetchTweetsUseCase
 import com.rlino.ifoodtwitterchallenge.logErrors
 import com.rlino.ifoodtwitterchallenge.model.Sentiment
 import com.rlino.ifoodtwitterchallenge.model.Tweets
@@ -16,7 +17,7 @@ import io.reactivex.Single
 import javax.inject.Inject
 
 class TimelineSearchViewModel @Inject constructor(
-        private val twitterRepository: TwitterRepository,
+        private val fetchTweetsUseCase: FetchTweetsUseCase,
         private val sentimentRepository: SentimentRepository,
         private val tweetsErrorHandler: TweetsFetchErrorHandler,
         private val sentimentErrorHandler: SentimentErrorHandler
@@ -40,9 +41,7 @@ class TimelineSearchViewModel @Inject constructor(
 
 
     fun searchTweetsForUsername(username: String) {
-        disposable.add(twitterRepository.getTweetsFromUser(username)
-                .defaultSchedulers()
-                .logErrors()
+        disposable.add(fetchTweetsUseCase(username)
                 .updateLoading()
                 .subscribe(_tweets::setValue) { t -> _snackbarMessage.value = tweetsErrorHandler.handle(t) })
     }

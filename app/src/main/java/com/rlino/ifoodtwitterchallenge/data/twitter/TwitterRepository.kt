@@ -15,4 +15,8 @@ class TwitterRepository @Inject constructor(
                 .map { Tweets(it) }
     }
 
+    fun getTwitterToken(): Single<String> {
+        return Single.just("token")
+    }
+
 }
