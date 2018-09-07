@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">TweetsSentiment</string>
+
+    <string name="analyze_tweets_sentiment">Analyze the tweets sentiment!</string>
+    <string name="type_tweeter_username_hint">Type Tweeter username to see all tweets</string>
+    <string name="see_tweets">See tweets</string>
+    <string name="no_username">Type a Tweeter username</string>
+    <string name="no_internet">No internet connection</string>
+
+    <string name="analyze">Analyze</string>
+    <string name="happy">%s Happy</string>
+    <string name="neutral">%s Neutral</string>
+    <string name="sad">%s Sad</string>
+</resources>
