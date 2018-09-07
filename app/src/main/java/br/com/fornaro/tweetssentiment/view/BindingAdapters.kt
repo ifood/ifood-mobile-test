@@ -11,4 +11,16 @@ object BindingAdapters {
     fun View.backgroundColor(color: Int) {
         background.setColorFilter(color, PorterDuff.Mode.SRC_ATOP)
     }
+
+    @JvmStatic
+    @BindingAdapter("visibleInvisible")
+    fun View.visibleInvisible(visible: Boolean) {
+        visibility = if (visible) View.VISIBLE else View.INVISIBLE
+    }
+
+    @JvmStatic
+    @BindingAdapter("visibleGone")
+    fun View.visibleGone(visible: Boolean) {
+        visibility = if (visible) View.VISIBLE else View.GONE
+    }
 }

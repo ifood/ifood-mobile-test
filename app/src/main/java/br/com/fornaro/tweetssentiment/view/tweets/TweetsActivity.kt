@@ -54,6 +54,7 @@ class TweetsActivity : AppCompatActivity(), TweetsAdapter.OnTweetListener {
 
     private val callback = object : TweetsCallback {
         override fun onNoInternetConnection() {
+            viewAdapter.notifyDataSetChanged()
             Toast.makeText(this@TweetsActivity, R.string.no_internet, Toast.LENGTH_SHORT).show()
         }
     }

@@ -11,6 +11,10 @@
         <variable
             name="tweet"
             type="br.com.fornaro.tweetssentiment.model.Tweet" />
+
+        <variable
+            name="isAnalyzing"
+            type="boolean" />
     </data>
 
     <android.support.constraint.ConstraintLayout
@@ -23,11 +27,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/analyze"
-            android:visibility="@{tweet.sentiment == Sentiment.None ? View.VISIBLE : View.INVISIBLE}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:visibleInvisible="@{tweet.sentiment == Sentiment.None &amp;&amp; !isAnalyzing}" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -37,12 +41,21 @@
             android:padding="@dimen/default_padding"
             android:text="@{tweet.getSentimentText(context)}"
             android:textSize="18sp"
-            android:visibility="@{tweet.sentiment != Sentiment.None ? View.VISIBLE : View.INVISIBLE}"
             app:backgroundColor="@{tweet.getSentimentColor(context)}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:visibleInvisible="@{tweet.sentiment != Sentiment.None}" />
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:visibleGone="@{isAnalyzing}" />
 
     </android.support.constraint.ConstraintLayout>
 </layout>
