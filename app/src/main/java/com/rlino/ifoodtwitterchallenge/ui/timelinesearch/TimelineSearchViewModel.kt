@@ -7,7 +7,7 @@ import com.rlino.ifoodtwitterchallenge.data.google.SentimentRepository
 import com.rlino.ifoodtwitterchallenge.data.twitter.TweetsFetchErrorHandler
 import com.rlino.ifoodtwitterchallenge.data.twitter.TwitterRepository
 import com.rlino.ifoodtwitterchallenge.defaultSchedulers
-import com.rlino.ifoodtwitterchallenge.log
+import com.rlino.ifoodtwitterchallenge.logErrors
 import com.rlino.ifoodtwitterchallenge.model.Sentiment
 import com.rlino.ifoodtwitterchallenge.model.Tweets
 import com.rlino.ifoodtwitterchallenge.ui.BaseViewModel
@@ -42,7 +42,7 @@ class TimelineSearchViewModel @Inject constructor(
     fun searchTweetsForUsername(username: String) {
         disposable.add(twitterRepository.getTweetsFromUser(username)
                 .defaultSchedulers()
-                .log()
+                .logErrors()
                 .updateLoading()
                 .subscribe(_tweets::setValue) { t -> _snackbarMessage.value = tweetsErrorHandler.handle(t) })
     }
@@ -50,7 +50,7 @@ class TimelineSearchViewModel @Inject constructor(
     fun analyzeTweet(text: String) {
         disposable.add(sentimentRepository.getSentimentFromText(text)
                 .defaultSchedulers()
-                .log()
+                .logErrors()
                 .updateLoading()
                 .subscribe( { s -> _tweetSentiment.value = Event(s) },
                         { t -> _snackbarMessage.value = sentimentErrorHandler.handle(t) } ))

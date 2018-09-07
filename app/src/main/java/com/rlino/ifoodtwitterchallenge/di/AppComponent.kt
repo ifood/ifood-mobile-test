@@ -1,6 +1,7 @@
 package com.rlino.ifoodtwitterchallenge.di
 
 import com.rlino.ifoodtwitterchallenge.App
+import com.rlino.ifoodtwitterchallenge.data.NetworkModule
 import com.rlino.ifoodtwitterchallenge.data.google.GoogleModule
 import com.rlino.ifoodtwitterchallenge.data.twitter.TwitterModule
 import dagger.Component
@@ -16,7 +17,8 @@ import javax.inject.Singleton
             ActivityBindingModule::class,
             ViewModelModule::class,
             GoogleModule::class,
-            TwitterModule::class
+            TwitterModule::class,
+            NetworkModule::class
         ]
 )
 interface AppComponent : AndroidInjector<App> {
