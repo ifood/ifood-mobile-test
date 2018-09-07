@@ -10,7 +10,6 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-
 class TweetsRepository {
 
     fun getTweets(username: String): LiveData<List<Tweet>>? {
@@ -41,7 +40,7 @@ class TweetsRepository {
 
                     override fun onResponse(call: Call<SentimentResponse>?, response: Response<SentimentResponse>?) {
                         if (response?.isSuccessful!!) {
-                            tweet.sentiment = Sentiment.Happy
+                            tweet.sentiment = response.body()?.getSentiment()!!
                             data.value = tweet
                         }
                     }
