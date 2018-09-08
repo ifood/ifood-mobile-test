@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
+        <import type="br.com.fornaro.tweetssentiment.extensions.DateExtensionsKt" />
 
         <variable
             name="tweet"
@@ -31,11 +34,22 @@
             android:id="@+id/analyzeLayout"
             layout="@layout/layout_analyze"
             android:layout_width="wrap_content"
-            app:isAnalyzing="@{isAnalyzing}"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            app:isAnalyzing="@{isAnalyzing}"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tweetText"
             app:tweet="@{tweet}" />
+
+        <TextView
+            android:id="@+id/dateText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@{DateExtensionsKt.getRelativeOneDayTimeSpanString(tweet.createdAt)}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="15 min" />
 
     </android.support.constraint.ConstraintLayout>
 </layout>

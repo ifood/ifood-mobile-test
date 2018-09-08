@@ -40,15 +40,15 @@ class TweetsRepository {
         return data
     }
 
-    fun getTweets(username: String): LiveData<List<Tweet>>? {
-        val data = MutableLiveData<List<Tweet>>()
+    fun getTweets(username: String): LiveData<List<TweetResponse>>? {
+        val data = MutableLiveData<List<TweetResponse>>()
 
         api.getTweets(username)
-                .enqueue(object : Callback<List<Tweet>> {
-                    override fun onFailure(call: Call<List<Tweet>>?, t: Throwable?) {
+                .enqueue(object : Callback<List<TweetResponse>> {
+                    override fun onFailure(call: Call<List<TweetResponse>>?, t: Throwable?) {
                     }
 
-                    override fun onResponse(call: Call<List<Tweet>>?, response: Response<List<Tweet>>?) {
+                    override fun onResponse(call: Call<List<TweetResponse>>?, response: Response<List<TweetResponse>>?) {
                         if (response?.isSuccessful!!) {
                             data.value = response.body()
                         }
