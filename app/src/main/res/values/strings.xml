@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">TweetsSentiment</string>
 
+    <string name="logo">Logo</string>
     <string name="analyze_tweets_sentiment">Analyze the tweets sentiment!</string>
     <string name="type_tweeter_username_hint">Type Tweeter username to see all tweets</string>
     <string name="see_tweets">See tweets</string>
