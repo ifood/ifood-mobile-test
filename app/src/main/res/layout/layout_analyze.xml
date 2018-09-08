@@ -31,7 +31,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:visibleInvisible="@{tweet.sentiment == null &amp;&amp; !isAnalyzing}" />
+            app:visibleInvisible="@{tweet.sentiment == Sentiment.None &amp;&amp; !isAnalyzing}" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -39,14 +39,14 @@
             android:background="@drawable/rounded_corner"
             android:gravity="center"
             android:padding="@dimen/default_padding"
-            android:text="@{tweet.getSentimentText(context)}"
+            android:text="@{tweet.sentiment.getSentimentText(context)}"
             android:textSize="18sp"
-            app:backgroundColor="@{tweet.getSentimentColor(context)}"
+            app:backgroundColor="@{tweet.sentiment.getSentimentColor(context)}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:visibleInvisible="@{tweet.sentiment != null}" />
+            app:visibleInvisible="@{tweet.sentiment != Sentiment.None}" />
 
         <ProgressBar
             android:layout_width="wrap_content"
