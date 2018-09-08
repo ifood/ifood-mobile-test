@@ -2,27 +2,33 @@ package br.com.fornaro.tweetssentiment.view.tweets
 
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
+import android.databinding.DataBindingUtil
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.DividerItemDecoration
 import android.widget.Toast
 import br.com.fornaro.tweetssentiment.R
 import br.com.fornaro.tweetssentiment.common.AppConstants
+import br.com.fornaro.tweetssentiment.databinding.ActivityTweetsBinding
 import br.com.fornaro.tweetssentiment.model.Tweet
 import br.com.fornaro.tweetssentiment.viewmodel.TweetsViewModel
 import kotlinx.android.synthetic.main.activity_tweets.*
+import kotlinx.android.synthetic.main.content_scrolling.*
 
 class TweetsActivity : AppCompatActivity(), TweetsAdapter.OnTweetListener {
 
+    private lateinit var binding: ActivityTweetsBinding
     private lateinit var viewModel: TweetsViewModel
     private val viewAdapter = TweetsAdapter(this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_tweets)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_tweets)
 
         val username = intent.extras?.getString(AppConstants.EXTRA_USERNAME)
                 ?: throw Exception("extra_username is needed to be put on extras")
+
+        toolbar.title = "@$username"
 
         setupRecyclerView()
         setupViewModel(username)
@@ -41,7 +47,7 @@ class TweetsActivity : AppCompatActivity(), TweetsAdapter.OnTweetListener {
         viewModel.callback = callback
 
         viewModel.getUser(username).observe(this, Observer {
-            it
+            binding.user = it
         })
 
         viewModel.getTweets(username).observe(this, Observer {

@@ -11,4 +11,6 @@
     <string name="happy">%s Happy</string>
     <string name="neutral">%s Neutral</string>
     <string name="sad">%s Sad</string>
+
+    <string name="banner">Banner</string>
 </resources>
