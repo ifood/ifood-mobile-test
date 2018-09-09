@@ -46,12 +46,17 @@ class TweetsActivity : AppCompatActivity(), TweetsAdapter.OnTweetListener {
         viewModel = ViewModelProviders.of(this).get(TweetsViewModel::class.java)
         viewModel.callback = callback
 
+        binding.userInProgress = true
         viewModel.getUser(username).observe(this, Observer {
+            binding.userInProgress = false
             binding.user = it
         })
 
+        binding.tweetsInProgress = true
         viewModel.getTweets(username).observe(this, Observer {
+            binding.tweetsInProgress = false
             if (it != null) {
+                binding.isEmpty = it.isEmpty()
                 viewAdapter.setData(it)
             }
         })

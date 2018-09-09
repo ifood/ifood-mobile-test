@@ -4,6 +4,18 @@
     <data>
 
         <variable
+            name="userInProgress"
+            type="boolean" />
+
+        <variable
+            name="tweetsInProgress"
+            type="boolean" />
+
+        <variable
+            name="isEmpty"
+            type="boolean" />
+
+        <variable
             name="user"
             type="br.com.fornaro.tweetssentiment.model.User" />
     </data>
@@ -21,7 +33,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fitsSystemWindows="true"
-            android:theme="@style/AppTheme.AppBarOverlay">
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:visibleGone="@{!userInProgress}">
 
             <android.support.design.widget.CollapsingToolbarLayout
                 android:id="@+id/toolbar_layout"
@@ -89,7 +102,17 @@
             </android.support.design.widget.CollapsingToolbarLayout>
         </android.support.design.widget.AppBarLayout>
 
-        <include layout="@layout/content_scrolling" />
+        <include
+            layout="@layout/content_scrolling"
+            app:isEmpty="@{isEmpty}"
+            app:userInProgress="@{userInProgress}"
+            app:tweetsInProgress="@{tweetsInProgress}" />
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:visibleGone="@{userInProgress}" />
 
     </android.support.design.widget.CoordinatorLayout>
 </layout>
