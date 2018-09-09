@@ -1,12 +1,13 @@
 package com.rlino.ifoodtwitterchallenge.domain.twitter
 
+import com.google.api.client.http.HttpStatusCodes
 import com.rlino.ifoodtwitterchallenge.data.twitter.TwitterRepository
 import com.rlino.ifoodtwitterchallenge.domain.SingleUseCase
 import com.rlino.ifoodtwitterchallenge.domain.invoke
 import com.rlino.ifoodtwitterchallenge.model.Tweets
+import com.rlino.ifoodtwitterchallenge.retryWhenWithLimit
 import io.reactivex.Flowable
 import io.reactivex.Single
-import io.reactivex.functions.BiFunction
 import retrofit2.HttpException
 import javax.inject.Inject
 
@@ -17,17 +18,12 @@ class FetchTweetsUseCase @Inject constructor(
 
     override fun execute(parameters: String): Single<Tweets> {
         return twitterRepository.getTweetsFromUser(parameters)
-                .retryWhen { attempts ->
-                    attempts.zipWith(Flowable.range(1, 3), BiFunction<Throwable, Int, Throwable> { t1, _ ->
-                        return@BiFunction t1
-                    }).flatMap {
-                        if(it is HttpException && (it.code() == 403 || it.code() == 401))
-                            authUseCase().toFlowable()
-                        else
-                            Flowable.error(it)
-                    }
+                .retryWhenWithLimit(3) {
+                    if(it is HttpException && it.code() == HttpStatusCodes.STATUS_CODE_UNAUTHORIZED)
+                        authUseCase().toFlowable()
+                    else
+                        Flowable.error(it)
                 }
-
     }
 
 }
