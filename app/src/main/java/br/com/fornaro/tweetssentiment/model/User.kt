@@ -6,5 +6,5 @@ data class User(
         val id: Long,
         val name: String,
         @SerializedName("profile_banner_url") val bannerUrl: String?,
-        @SerializedName("profile_image_url") val profilePictureUrl: String?
+        @SerializedName("profile_image_url") var profilePictureUrl: String?
 )

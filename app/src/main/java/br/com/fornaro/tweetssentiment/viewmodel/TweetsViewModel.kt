@@ -4,8 +4,6 @@ import android.app.Application
 import android.arch.lifecycle.AndroidViewModel
 import android.arch.lifecycle.LiveData
 import android.arch.lifecycle.Transformations
-import android.content.Context
-import br.com.fornaro.tweetssentiment.R
 import br.com.fornaro.tweetssentiment.model.Tweet
 import br.com.fornaro.tweetssentiment.model.User
 import br.com.fornaro.tweetssentiment.repository.NaturalLanguageRepository
@@ -30,7 +28,10 @@ class TweetsViewModel(application: Application) : AndroidViewModel(application) 
 
     fun getUser(username: String): LiveData<Resource<User>> {
         if (userLiveData == null) {
-            userLiveData = tweetsRepository.getUser(username)
+            userLiveData = Transformations.map(tweetsRepository.getUser(username)) {
+                it.data?.profilePictureUrl = it.data?.profilePictureUrl?.replace("_normal", "")
+                it
+            }
         }
         return userLiveData!!
     }
