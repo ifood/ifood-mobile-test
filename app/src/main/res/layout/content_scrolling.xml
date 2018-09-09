@@ -28,16 +28,7 @@
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:visibleGone="@{!userInProgress}">
-
-            <ProgressBar
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:visibleGone="@{tweetsInProgress}" />
+            app:visibleGone="@{!userInProgress &amp;&amp; !tweetsInProgress}">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -51,14 +42,14 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:visibleGone="@{!tweetsInProgress &amp;&amp; isEmpty}" />
+                app:visibleGone="@{isEmpty}" />
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/recyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layoutManager="android.support.v7.widget.LinearLayoutManager"
-                app:visibleGone="@{!tweetsInProgress &amp;&amp; !isEmpty}" />
+                app:visibleGone="@{!isEmpty}" />
 
         </android.support.constraint.ConstraintLayout>
 
