@@ -4,9 +4,12 @@ import android.app.Application
 import android.arch.lifecycle.AndroidViewModel
 import android.arch.lifecycle.LiveData
 import android.arch.lifecycle.Transformations
+import android.content.Context
+import br.com.fornaro.tweetssentiment.R
 import br.com.fornaro.tweetssentiment.model.Tweet
 import br.com.fornaro.tweetssentiment.model.User
 import br.com.fornaro.tweetssentiment.repository.NaturalLanguageRepository
+import br.com.fornaro.tweetssentiment.repository.Resource
 import br.com.fornaro.tweetssentiment.repository.TweetsRepository
 import br.com.fornaro.tweetssentiment.utils.InternetUtils
 import br.com.fornaro.tweetssentiment.view.tweets.TweetsCallback
@@ -20,12 +23,12 @@ class TweetsViewModel(application: Application) : AndroidViewModel(application) 
     }
 
     private var tweetsLiveData: LiveData<List<Tweet>>? = null
-    private var userLiveData: LiveData<User>? = null
+    private var userLiveData: LiveData<Resource<User>>? = null
     private val tweetsRepository = TweetsRepository()
     private val naturalLanguageRepository = NaturalLanguageRepository()
     var callback: TweetsCallback? = null
 
-    fun getUser(username: String): LiveData<User> {
+    fun getUser(username: String): LiveData<Resource<User>> {
         if (userLiveData == null) {
             userLiveData = tweetsRepository.getUser(username)
         }
@@ -36,7 +39,7 @@ class TweetsViewModel(application: Application) : AndroidViewModel(application) 
         if (tweetsLiveData == null) {
             tweetsLiveData = Transformations.map(tweetsRepository.getTweets(username)!!) { tweetsResponse ->
                 val tweets = mutableListOf<Tweet>()
-                tweetsResponse.forEach {
+                tweetsResponse?.forEach {
                     val createdAt = SimpleDateFormat(DATE_FORMAT, Locale.ENGLISH).parse(it.createdAt)
                     tweets.add(Tweet(it.text, createdAt))
                 }

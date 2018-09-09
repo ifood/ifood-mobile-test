@@ -22,8 +22,8 @@ class TweetsRepository {
             .build()
             .create(TweeterApi::class.java)
 
-    fun getUser(username: String): LiveData<User> {
-        val data = MutableLiveData<User>()
+    fun getUser(username: String): LiveData<Resource<User>> {
+        val data = MutableLiveData<Resource<User>>()
 
         api.getUser(username)
                 .enqueue(object : Callback<User> {
@@ -32,7 +32,9 @@ class TweetsRepository {
 
                     override fun onResponse(call: Call<User>?, response: Response<User>?) {
                         if (response?.isSuccessful!!) {
-                            data.value = response.body()
+                            data.value = Resource.success(response.body()!!)
+                        } else {
+                            data.value = Resource.error(response.body(), response.code())
                         }
                     }
                 })
@@ -40,8 +42,8 @@ class TweetsRepository {
         return data
     }
 
-    fun getTweets(username: String): LiveData<List<TweetResponse>>? {
-        val data = MutableLiveData<List<TweetResponse>>()
+    fun getTweets(username: String): LiveData<List<TweetResponse>?>? {
+        val data = MutableLiveData<List<TweetResponse>?>()
 
         api.getTweets(username)
                 .enqueue(object : Callback<List<TweetResponse>> {
@@ -51,6 +53,8 @@ class TweetsRepository {
                     override fun onResponse(call: Call<List<TweetResponse>>?, response: Response<List<TweetResponse>>?) {
                         if (response?.isSuccessful!!) {
                             data.value = response.body()
+                        } else {
+                            data.value = null
                         }
                     }
                 })

@@ -15,4 +15,7 @@
 
     <string name="banner">Banner</string>
     <string name="empty_tweet">This user doesn\'t have any tweet.</string>
+
+    <string name="general_error">Something went wrong. Please try again.</string>
+    <string name="user_not_found">User not found. Please try another one.</string>
 </resources>

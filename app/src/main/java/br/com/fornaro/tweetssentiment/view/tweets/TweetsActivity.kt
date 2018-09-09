@@ -49,7 +49,7 @@ class TweetsActivity : AppCompatActivity(), TweetsAdapter.OnTweetListener {
         binding.userInProgress = true
         viewModel.getUser(username).observe(this, Observer {
             binding.userInProgress = false
-            binding.user = it
+            binding.resource = it
         })
 
         binding.tweetsInProgress = true

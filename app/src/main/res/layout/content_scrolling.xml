@@ -16,6 +16,10 @@
         <variable
             name="isEmpty"
             type="boolean" />
+
+        <variable
+            name="resource"
+            type="br.com.fornaro.tweetssentiment.repository.Resource" />
     </data>
 
     <android.support.v4.widget.NestedScrollView
@@ -28,13 +32,13 @@
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:visibleGone="@{!userInProgress &amp;&amp; !tweetsInProgress}">
+            app:visibleGone="@{!userInProgress &amp;&amp; !tweetsInProgress &amp;&amp; resource.isSuccess()}">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
                 android:layout_marginTop="16dp"
+                android:gravity="center"
                 android:padding="@dimen/default_padding"
                 android:text="@string/empty_tweet"
                 android:textColor="@android:color/black"
