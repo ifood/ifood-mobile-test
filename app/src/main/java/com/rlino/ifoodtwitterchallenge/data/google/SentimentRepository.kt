@@ -1,6 +1,6 @@
 package com.rlino.ifoodtwitterchallenge.data.google
 
-import com.rlino.ifoodtwitterchallenge.model.Sentiment
+import com.google.api.services.language.v1.model.Sentiment
 import io.reactivex.Single
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -12,18 +12,7 @@ class SentimentRepository @Inject constructor(
 ) {
 
     fun getSentimentFromText(text: String): Single<Sentiment> {
-        return Single.create<Sentiment> { emitter ->
-
-            val score = sentimentDataSource.analyzeText(text).documentSentiment?.score ?: 0.0f
-
-            emitter.onSuccess(when (score) {
-                in -1.0f..-0.25f -> Sentiment.Negative
-                in -0.25f..0.25f -> Sentiment.Neutral
-                in 0.25f..1.0f -> Sentiment.Positive
-                else -> Sentiment.Neutral
-            })
-        }
+        return Single.fromCallable { sentimentDataSource.analyzeText(text) }
     }
-
 
 }
