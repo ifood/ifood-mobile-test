@@ -1,5 +1,5 @@
 # Tweets Sentiment
-[![CircleCI](https://circleci.com/gh/DouglasCF/tweets-sentiment/tree/development.svg?style=svg)](https://circleci.com/gh/DouglasCF/tweets-sentiment/tree/development)
+[![CircleCI](https://circleci.com/gh/DouglasCF/tweets-sentiment.svg?style=svg)](https://circleci.com/gh/DouglasCF/tweets-sentiment)
 
 This app was made to exercise my knowleges of Android development as well as develop new skills around it.
 
