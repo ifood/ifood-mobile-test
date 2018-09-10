@@ -49,7 +49,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:gravity="center"
-                android:hint="@string/type_tweeter_username_hint"
+                android:hint="@string/type_twitter_username_hint"
                 android:inputType="text"
                 app:layout_constraintTop_toBottomOf="@id/analyzeText" />
 
