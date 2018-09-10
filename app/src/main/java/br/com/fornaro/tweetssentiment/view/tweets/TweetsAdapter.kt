@@ -31,6 +31,10 @@ class TweetsAdapter(private val listener: TweetsAdapter.OnTweetListener) : Recyc
         notifyDataSetChanged()
     }
 
+    fun analyzedFinished(tweet: Tweet) {
+        notifyItemChanged(list.indexOf(tweet))
+    }
+
     class ViewHolder(private val binding: ItemTweetBinding) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(tweet: Tweet, listener: OnTweetListener) {

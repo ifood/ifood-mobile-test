@@ -83,7 +83,7 @@ class TweetsActivity : AppCompatActivity(), TweetsAdapter.OnTweetListener {
 
     override fun analyze(tweet: Tweet) {
         viewModel.analyze(tweet)?.observe(this, Observer {
-            viewAdapter.notifyDataSetChanged()
+            viewAdapter.analyzedFinished(tweet)
         })
     }
 
