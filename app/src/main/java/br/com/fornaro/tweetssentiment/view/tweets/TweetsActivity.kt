@@ -76,6 +76,7 @@ class TweetsActivity : AppCompatActivity(), TweetsAdapter.OnTweetListener {
         viewModel.getTweets(username).observe(this, Observer {
             binding.tweetsInProgress = false
             if (it != null) {
+                binding.isEmpty = it.isEmpty()
                 viewAdapter.setData(it)
             }
         })
