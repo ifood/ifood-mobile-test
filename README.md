@@ -20,3 +20,12 @@ The project was developed as follows:
 * Retrofit;
 * CircleImageView;
 * Glide.
+
+## Screenshots
+<p align="center">
+  <img src="screenshots/screen1.png" align="center" width=200>
+  <img src="screenshots/screen2.png" align="center" width=200>
+  <img src="screenshots/screen3.png" align="center" width=200>
+  <img src="screenshots/screen4.png" align="center" width=200>
+  <img src="screenshots/screen5.png" align="center" width=200>
+</p>
