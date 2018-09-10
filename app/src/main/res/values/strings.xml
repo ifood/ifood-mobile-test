@@ -18,4 +18,6 @@
 
     <string name="general_error">Something went wrong. Please try again.</string>
     <string name="user_not_found">User not found. Please try another one.</string>
+
+    <string name="select_another_user">Select another user</string>
 </resources>
