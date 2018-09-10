@@ -60,6 +60,7 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this@MainActivity, TweetsActivity::class.java)
             intent.putExtra(AppConstants.EXTRA_USERNAME, username)
             startActivity(intent)
+            finish()
         }
     }
 }
