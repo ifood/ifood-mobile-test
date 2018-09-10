@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">TweetsSentiment</string>
+
+    <string name="logo">Logo</string>
+    <string name="analyze_tweets_sentiment">Analyze the tweets sentiment!</string>
+    <string name="type_twitter_username_hint">Type Twitter username</string>
+    <string name="see_tweets">See tweets</string>
+    <string name="no_username">Type a Twitter username</string>
+    <string name="no_internet">No internet connection</string>
+
+    <string name="analyze">Analyze</string>
+    <string name="happy">%s Happy</string>
+    <string name="neutral">%s Neutral</string>
+    <string name="sad">%s Sad</string>
+
+    <string name="banner">Banner</string>
+    <string name="empty_tweet">This user doesn\'t have any tweet.</string>
+
+    <string name="general_error">Something went wrong. Please try again.</string>
+    <string name="user_not_found">User not found. Please try another one.</string>
+
+    <string name="select_another_user">Select another user</string>
+</resources>
