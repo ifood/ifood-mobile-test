@@ -8,6 +8,8 @@ apply plugin: 'io.fabric'
 
 apply plugin: 'kotlin-kapt'
 
+apply from: 'secrets.gradle'
+
 android {
     compileSdkVersion 27
     defaultConfig {
@@ -19,9 +21,9 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
         buildConfigField "String", "TWITTER_URL", "\"https://api.twitter.com/\""
-        buildConfigField 'String', "GOOGLE_API_KEY", GOOGLE_API_KEY
-        buildConfigField 'String', "TWITTER_CONSUMER_KEY", "\"\""
-        buildConfigField 'String', "TWITTER_SECRET_KEY", "\"\""
+        buildConfigField 'String', "GOOGLE_API_KEY", google_api_key
+        buildConfigField 'String', "TWITTER_CONSUMER_KEY", twitter_consumerkey
+        buildConfigField 'String', "TWITTER_SECRET_KEY", twitter_secretkey
         buildConfigField 'String', "TWITTER_API_VERSION", "\"1.1\""
 
     }
