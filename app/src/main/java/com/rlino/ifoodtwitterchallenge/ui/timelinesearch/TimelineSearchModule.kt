@@ -12,6 +12,6 @@ internal abstract class TimelineSearchModule {
     @Binds
     @IntoMap
     @ViewModelKey(TimelineSearchViewModel::class)
-    abstract fun bindSessionDetailFragmentViewModel(viewModel: TimelineSearchViewModel): ViewModel
+    abstract fun bindTimelineSearchActivityViewModel(viewModel: TimelineSearchViewModel): ViewModel
 
 }

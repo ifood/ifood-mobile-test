@@ -1,6 +1,5 @@
 package com.rlino.ifoodtwitterchallenge.domain.twitter
 
-import com.google.api.client.http.HttpStatusCodes
 import com.rlino.ifoodtwitterchallenge.data.twitter.TwitterRepository
 import com.rlino.ifoodtwitterchallenge.domain.SingleUseCase
 import com.rlino.ifoodtwitterchallenge.domain.invoke

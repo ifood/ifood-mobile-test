@@ -3,7 +3,6 @@ package com.rlino.ifoodtwitterchallenge.data.twitter
 import com.rlino.ifoodtwitterchallenge.BuildConfig
 import com.rlino.ifoodtwitterchallenge.model.Tweet
 import io.reactivex.Single
-import retrofit2.Call
 import retrofit2.http.*
 
 interface TwitterApi {

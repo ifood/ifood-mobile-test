@@ -17,7 +17,6 @@
 package com.rlino.ifoodtwitterchallenge.di
 
 import android.arch.lifecycle.ViewModelProvider
-import com.rlino.ifoodtwitterchallenge.di.ChallengeViewModelFactory
 import dagger.Binds
 import dagger.Module
 

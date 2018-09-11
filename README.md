@@ -16,3 +16,31 @@ Create an app that given an Twitter username it will list user's tweets. When I 
 * Use whatever language, tools and frameworks you feel comfortable to.
 * Briefly elaborate on your solution, architecture details, choice of patterns and frameworks.
 * Fork this repository and submit your code.
+
+
+## Language, Tools and Frameworks
+* Language: Kotlin
+* Target SDK: 27
+* Main libraries:
+    * Retrofit (with OkHttp)
+    * RxJava 2
+    * Dagger 2
+    * Architecture Components
+    * Fabric
+    
+## Architecture
+I chose to use a Clean Architecture where the flow works like this:
+
+Activity/Fragment -> ViewModel -> UseCase -> Repository -> Api Calls
+
+I only needed to implement a SingleUseCase which is a UseCase that returns a RxJava Single, by default the SingleUseCase
+runs in the `Schedulers.io()` and return in the Main Thread.
+
+UseCases are allowed to call other UseCases if needed.
+
+The communication between Activity/Fragment and ViewModel happens through LiveData properties, which tells the UI to update.
+If it is a data that should be processed only once, then the object that the LiveData holds is an Event and should be listened in the UI
+through an `EventObserver` (https://medium.com/google-developers/livedata-with-snackbar-navigation-and-other-events-the-singleliveevent-case-ac2622673150)
+
+
+ 
