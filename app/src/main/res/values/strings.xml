@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">iFood Twitter Challenge</string>
+    <string name="username">Username</string>
+    <string name="search">Search</string>
+    <string name="search_hint">Twitter\'s username</string>
+    <string name="network_failure_try_again">Check if you are connected to the internet and try again</string>
+    <string name="something_went_wrong">Something went wront, try again</string>
+    <string name="loading_view_tag">loadingviewtag</string>
+    <string name="no_results_found">No results found</string>
+    <string name="search_username_find_tweets">Search for a username to check it\'s tweets</string>
+    <string name="no_sentiment_found">Error finding sentiment</string>
+    <string name="user_not_found">User not found</string>
+    <string name="user_has_private_timeline">User has private timeline</string>
+</resources>
