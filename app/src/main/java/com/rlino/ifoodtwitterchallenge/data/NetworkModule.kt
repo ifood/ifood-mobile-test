@@ -3,6 +3,7 @@ package com.rlino.ifoodtwitterchallenge.data
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.rlino.ifoodtwitterchallenge.BuildConfig
+import com.rlino.ifoodtwitterchallenge.data.interceptor.TwitterAuthInterceptor
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
@@ -24,11 +25,12 @@ class NetworkModule {
 
     @Provides
     @Singleton
-    fun provideOkHttpClient(): OkHttpClient {
+    fun provideOkHttpClient(twitterAuthInterceptor: TwitterAuthInterceptor): OkHttpClient {
         return OkHttpClient.Builder()
                 .addInterceptor(HttpLoggingInterceptor(HttpLoggingInterceptor.Logger {
                     Timber.tag("OkHttp").d(it)
-                }))
+                }).setLevel(HttpLoggingInterceptor.Level.BASIC))
+                .addInterceptor(twitterAuthInterceptor)
                 .build()
     }
 

@@ -9,7 +9,7 @@ class TwitterModule {
 
     @Provides
     fun provideTwitterApi(retrofit: Retrofit): TwitterApi {
-        return MockTwitterApi()
+        return retrofit.create(TwitterApi::class.java)
     }
 
 }

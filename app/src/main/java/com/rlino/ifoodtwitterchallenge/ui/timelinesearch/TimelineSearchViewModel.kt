@@ -40,14 +40,14 @@ class TimelineSearchViewModel @Inject constructor(
     fun searchTweetsForUsername(username: String) {
         disposable.add(fetchTweetsUseCase(username)
                 .updateLoading()
-                .subscribe(_tweets::setValue) { t -> _snackbarMessage.value = tweetsErrorHandler.handle(t) })
+                .subscribe(_tweets::setValue) { t -> _snackbarMessage.postValue(tweetsErrorHandler.handle(t)) })
     }
 
     fun analyzeTweet(text: String) {
         disposable.add(getSentimentUseCase(text)
                 .updateLoading()
                 .subscribe( { s -> _tweetSentiment.value = Event(s) },
-                        { t -> _snackbarMessage.value = sentimentErrorHandler.handle(t) } ))
+                        { t -> _snackbarMessage.postValue(sentimentErrorHandler.handle(t)) } ))
     }
 
     private fun <T> Single<T>.updateLoading(): Single<T> = doOnSubscribe { _isLoading.value = true }

@@ -8,6 +8,7 @@ import com.rlino.ifoodtwitterchallenge.model.Tweets
 import com.rlino.ifoodtwitterchallenge.retryWhenWithLimit
 import io.reactivex.Flowable
 import io.reactivex.Single
+import io.reactivex.schedulers.Schedulers
 import retrofit2.HttpException
 import javax.inject.Inject
 
@@ -19,8 +20,8 @@ class FetchTweetsUseCase @Inject constructor(
     override fun execute(parameters: String): Single<Tweets> {
         return twitterRepository.getTweetsFromUser(parameters)
                 .retryWhenWithLimit(3) {
-                    if(it is HttpException && it.code() == HttpStatusCodes.STATUS_CODE_UNAUTHORIZED)
-                        authUseCase().toFlowable()
+                    if(it is HttpException && it.code() == 400)
+                        authUseCase().toFlowable().observeOn(Schedulers.io())
                     else
                         Flowable.error(it)
                 }

@@ -18,8 +18,12 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
-        buildConfigField "String", "TWITTER_URL", "\"https://api.twitter.com/1.1/\""
+        buildConfigField "String", "TWITTER_URL", "\"https://api.twitter.com/\""
         buildConfigField 'String', "GOOGLE_API_KEY", GOOGLE_API_KEY
+        buildConfigField 'String', "TWITTER_CONSUMER_KEY", "\"\""
+        buildConfigField 'String', "TWITTER_SECRET_KEY", "\"\""
+        buildConfigField 'String', "TWITTER_API_VERSION", "\"1.1\""
+
     }
     buildTypes {
 
