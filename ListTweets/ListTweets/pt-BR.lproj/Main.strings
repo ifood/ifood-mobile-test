@@ -1,0 +1,21 @@
+
+/* Class = "UITextField"; placeholder = "User"; ObjectID = "5vm-tD-hZE"; */
+"5vm-tD-hZE.placeholder" = "Usuário";
+
+/* Class = "UIButton"; normalTitle = "Change User"; ObjectID = "A9s-IR-RSX"; */
+"A9s-IR-RSX.normalTitle" = "Trocar usuário";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "SWy-RW-zGg"; */
+"SWy-RW-zGg.text" = "Label";
+
+/* Class = "UITabBarItem"; title = "Settings"; ObjectID = "cPa-gy-q4n"; */
+"cPa-gy-q4n.title" = "Configurações";
+
+/* Class = "UIButton"; normalTitle = "Search"; ObjectID = "gpE-df-cgF"; */
+"gpE-df-cgF.normalTitle" = "Buscar";
+
+/* Class = "UILabel"; text = "Insert the Twitter username to see the tweets"; ObjectID = "kab-H8-Ao1"; */
+"kab-H8-Ao1.text" = "Informe o usuário para buscar os tweets";
+
+/* Class = "UITabBarItem"; title = "Twitter"; ObjectID = "pkF-UW-1vL"; */
+"pkF-UW-1vL.title" = "Twitter";

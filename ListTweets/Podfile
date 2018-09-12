@@ -1,0 +1,22 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+use_frameworks!
+
+target 'ListTweets' do
+  pod 'SwiftyJSON', '~> 4.0'
+  pod 'Alamofire', '~> 4.7'
+  pod 'IQKeyboardManagerSwift'
+  pod 'TwitterKit', '<3.3.0'
+  pod 'TwitterCore', '<3.1.0'
+
+  target 'ListTweetsTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'ListTweetsUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
