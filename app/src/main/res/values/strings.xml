@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Twitter Humour</string>
+
+    <string name="welcome.title">Welcome to\nTwitter Humour!</string>
+    <string name="welcome.input_hint">Please enter a twitter username</string>
+    <string name="welcome.button">Search</string>
 </resources>
