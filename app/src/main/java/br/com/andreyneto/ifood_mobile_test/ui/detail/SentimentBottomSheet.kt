@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.FrameLayout
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import br.com.andreyneto.ifood_mobile_test.R
@@ -53,15 +54,18 @@ class SentimentBottomSheet : BottomSheetDialogFragment() {
     private fun manageTweet(tweet: TweetEntry) {
         lblTweet.text = tweet.text
         if(tweet.sentimentChecked) {
-            lblSentiment.text = when {
+            when {
                 tweet.score < -0.25 -> {
-                    "\uD83D\uDE03"
+                    lblSentiment.text = "😐"
+                    sheetBackground.setBackgroundColor(ContextCompat.getColor(this.context!!, R.color.colorSad))
                 }
                 tweet.score > 0.25 -> {
-                    "😐"
+                    lblSentiment.text = "\uD83D\uDE03"
+                    sheetBackground.setBackgroundColor(ContextCompat.getColor(this.context!!, R.color.colorHappy))
                 }
                 else -> {
-                    "😐"
+                    lblSentiment.text = "😐"
+                    sheetBackground.setBackgroundColor(ContextCompat.getColor(this.context!!, R.color.colorNeutral))
                 }
             }
         } else {

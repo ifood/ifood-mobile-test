@@ -10,7 +10,7 @@ interface TweetDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun bulkInsert(tweets: List<TweetEntry>)
 
-    @Update
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun updateTweet(tweet: TweetEntry)
 
     @Query("SELECT * FROM tweets WHERE tweetID = :tweetID")
