@@ -9,8 +9,8 @@ data class TweetEntry(@PrimaryKey(autoGenerate = true) var id: Long?,
                       @ColumnInfo(name= "tweetID") var tweetID: Long,
                       @ColumnInfo(name = "username") var username: String,
                       @ColumnInfo(name = "text") var text: String,
-                      @ColumnInfo(name = "score") var score: Double,
+                      @ColumnInfo(name = "score") var score: Float,
                       @ColumnInfo(name= "sentimentChecked") var sentimentChecked: Boolean){
     constructor(text: String, username: String, tweetID: Long) :
-            this(null,tweetID,username,text,0.0, false)
+            this(null,tweetID,username,text,0.0f, false)
 }

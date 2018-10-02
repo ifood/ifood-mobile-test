@@ -9,7 +9,7 @@ import br.com.andreyneto.ifood_mobile_test.data.database.TweetEntry
 
 class TweetAdapter(private val context: Context,
                    private var tweets: List<TweetEntry>,
-                   private val clickHandler: (TweetEntry) -> Unit):
+                   private val clickHandler: (Long) -> Unit):
         RecyclerView.Adapter<TweetViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TweetViewHolder {

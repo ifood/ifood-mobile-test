@@ -5,8 +5,12 @@ import android.content.Intent
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModelProviders
 import br.com.andreyneto.ifood_mobile_test.AppExecutors
 import br.com.andreyneto.ifood_mobile_test.data.database.TweetEntry
+import br.com.andreyneto.ifood_mobile_test.ui.main.MainActivityViewModel
+import br.com.andreyneto.ifood_mobile_test.ui.main.MainViewModelFactory
+import br.com.andreyneto.ifood_mobile_test.utilities.InjectorUtils
 import twitter4j.ResponseList
 import twitter4j.Status
 import twitter4j.TwitterException
@@ -19,19 +23,15 @@ class TweetNetworkDataSource private constructor(
 
     private val mDownloadedTweets: MutableLiveData<Array<TweetEntry>> = MutableLiveData()
 
+    val loadingTweets = MutableLiveData<Boolean>()
+
     val currentTweets: LiveData<Array<TweetEntry>>
         get() = mDownloadedTweets
 
-//    fun startFetchTweetService() {
-//        val intentToFetch = Intent(mContext, SunshineSyncIntentService::class.java)
-//        mContext.startService(intentToFetch)
-//        Log.d(LOG_TAG, "Service created")
-//    }
-
     internal fun fetchTweet(username: String) {
-
         Log.d(LOG_TAG, "Fetch weather started")
         mExecutors.networkIO().execute {
+            loadingTweets.postValue(true)
             val cb = ConfigurationBuilder()
             cb.setDebugEnabled(true)
                     .setOAuthConsumerKey("l6uCvnlUegQLb44URZgDSc68l")
@@ -52,6 +52,7 @@ class TweetNetworkDataSource private constructor(
             }catch (e: TwitterException) {
                 Log.e(LOG_TAG, e::class.java.simpleName)
             }
+            loadingTweets.postValue(false)
             mDownloadedTweets.postValue(tweets.toTypedArray())
         }
     }

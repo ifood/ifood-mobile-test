@@ -7,9 +7,9 @@ import kotlinx.android.synthetic.main.tweet_item.view.*
 
 class TweetViewHolder(itemView: View):
         RecyclerView.ViewHolder(itemView) {
-    fun bind(tweet: TweetEntry, clickListener: (TweetEntry) -> Unit) {
+    fun bind(tweet: TweetEntry, clickListener: (Long) -> Unit) {
         itemView.textView.text = tweet.text
         itemView.view.visibility = if (tweet.sentimentChecked) View.VISIBLE else View.GONE
-        itemView.setOnClickListener { clickListener(tweet)}
+        itemView.setOnClickListener { clickListener(tweet.tweetID)}
     }
 }

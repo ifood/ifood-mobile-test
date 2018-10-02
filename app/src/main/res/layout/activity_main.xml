@@ -76,9 +76,22 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
+            android:focusable="true"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:listitem="@layout/tweet_item" />
     </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/lblError"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="no tweet found for"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/colorAccent"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="@+id/editText"
+        app:layout_constraintStart_toStartOf="@+id/textView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

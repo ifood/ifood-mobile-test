@@ -24,6 +24,7 @@ import br.com.andreyneto.ifood_mobile_test.data.database.TweetDao
 import br.com.andreyneto.ifood_mobile_test.data.database.TweetDatabase
 import br.com.andreyneto.ifood_mobile_test.data.database.TweetEntry
 import br.com.andreyneto.ifood_mobile_test.data.network.TweetNetworkDataSource
+import br.com.andreyneto.ifood_mobile_test.ui.detail.SentimentBottomSheet
 import br.com.andreyneto.ifood_mobile_test.utilities.InjectorUtils
 import com.google.api.client.extensions.android.http.AndroidHttp
 import com.google.api.client.extensions.android.json.AndroidJsonFactory
@@ -54,88 +55,69 @@ class MainActivity : AppCompatActivity() {
         val factory: MainViewModelFactory = InjectorUtils().provideMainActivityViewModelFactory(this)
         mViewModel = ViewModelProviders.of(this, factory).get(MainActivityViewModel::class.java)
 
+
+        mViewModel!!.loadingTweets().observe(this, Observer {
+            showLoading(it)
+        })
+
         editText.setOnEditorActionListener { editText, _, _ ->
             editText.text.let { charSequence ->
                 hideKeyboard()
                 if (charSequence.isNotEmpty()) {
+                    mViewModel!!.loadingTweets().postValue(true)
                     mViewModel!!.getTweets(editText.text.toString()).removeObservers(this)
                     mViewModel!!.getTweets(editText.text.toString()).observe(this, Observer {
                         manageTweets(it)
                     })
-                    showLoading()
                 } else {
-                    emptyScreen()
+                    mViewModel!!.loadingTweets().postValue(false)
+                    emptyScreen(false)
                 }
             }
             true
         }
-
         setupRecycler()
     }
 
-    private fun emptyScreen() {
+    private fun emptyScreen(showMessage: Boolean) {
         cardView.visibility = View.GONE
         val layoutParams: ConstraintLayout.LayoutParams = editText.layoutParams as ConstraintLayout.LayoutParams
         layoutParams.verticalBias = 0.5f
         editText.layoutParams = layoutParams
+        lblError.visibility = if(showMessage) View.VISIBLE else View.GONE
     }
 
     private fun manageTweets(tweets: List<TweetEntry>?) {
-        cardView.visibility = View.VISIBLE
-        val layoutParams: ConstraintLayout.LayoutParams = editText.layoutParams as ConstraintLayout.LayoutParams
-        layoutParams.verticalBias = 0.0f
-        editText.layoutParams = layoutParams
-        mAdapter?.swapList(tweets!!)
-        hideLoading()
-    }
-
-    private fun getSentiment(text: String) {
-        val naturalLanguageService = CloudNaturalLanguage.Builder(
-                AndroidHttp.newCompatibleTransport(),
-                AndroidJsonFactory(),
-                null
-        ).setCloudNaturalLanguageRequestInitializer(
-                CloudNaturalLanguageRequestInitializer("AIzaSyA0iEyFW1k4q06lxJmSGszex2BXuNCbZgw")
-        ).setApplicationName("ifood-mobile-test").build()
-
-        val document = Document()
-        document.type = "PLAIN_TEXT"
-        document.content = text
-        val features = Features()
-        features.extractDocumentSentiment = true
-        val request = AnnotateTextRequest()
-        request.document = document
-        request.features = features
-        val response = naturalLanguageService.documents()
-                .annotateText(request).execute()
-        response.documentSentiment.score.let {
-            Log.e("$it - ${response.language} - $text", if (it > 0.25)"feliz" else if (it < -0.25) "triste" else "neutro")
+        tweets?.let {
+            if(it.isNotEmpty()) {
+                cardView.visibility = View.VISIBLE
+                val layoutParams: ConstraintLayout.LayoutParams = editText.layoutParams as ConstraintLayout.LayoutParams
+                layoutParams.verticalBias = 0.0f
+                editText.layoutParams = layoutParams
+                mAdapter?.swapList(it)
+            } else emptyScreen(true)
         }
     }
 
     private fun setupRecycler() {
-        mAdapter = TweetAdapter(this,  mutableListOf<TweetEntry>()) { tweet ->  clickHandler(tweet) }
+        mAdapter = TweetAdapter(this,  mutableListOf()) { tweetID ->  clickHandler(tweetID) }
         recyclerView.layoutManager =
                 LinearLayoutManager(this, RecyclerView.VERTICAL, false)
         recyclerView.adapter = this.mAdapter
     }
 
-    private fun showLoading() {
-        progressBar.visibility = View.VISIBLE
+    private fun showLoading(visible: Boolean) {
+        progressBar.visibility = if(visible) View.VISIBLE else View.GONE
     }
 
-    private fun hideLoading() {
-        progressBar.visibility = View.GONE
-    }
-
-    private fun clickHandler(tweet: TweetEntry) {
-//        val sentimentIntent = Intent(this@MainActivity, SentimentActivity::class.java)
-//        sentimentIntent.putExtra(SentimentActivity.TWEET_ID_EXTRA, tweetID)
-//        startActivity(sentimentIntent)
+    private fun clickHandler(tweetID: Long) {
+        val sentimentBottomSheet =  SentimentBottomSheet().newInstance(tweetID)
+        sentimentBottomSheet.show(supportFragmentManager, SentimentBottomSheet.TWEET_ID)
     }
 
     private fun hideKeyboard() {
         val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         imm.hideSoftInputFromWindow(editText.windowToken, 0)
+        recyclerView.requestFocus()
     }
 }
