@@ -21,13 +21,17 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    dataBinding {
+        enabled = true
+    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     // Kotlin
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
     // App compat
     implementation "com.android.support:appcompat-v7:$app_compat"
@@ -39,6 +43,13 @@ dependencies {
     implementation "com.google.dagger:dagger-android:$dagger"
     implementation "com.google.dagger:dagger-android-support:$dagger"
     kapt "com.google.dagger:dagger-android-processor:$dagger"
+
+    //databinding
+    kapt "com.android.databinding:compiler:$gradle_version"
+
+    //lifecycle
+    implementation "android.arch.lifecycle:extensions:$lifecycle"
+    kapt "android.arch.lifecycle:compiler:$lifecycle"
 
     // Test
     testImplementation "junit:junit:$junit"
