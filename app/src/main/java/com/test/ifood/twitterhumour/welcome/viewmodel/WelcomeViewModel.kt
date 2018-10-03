@@ -5,8 +5,9 @@ import android.databinding.Bindable
 import com.test.ifood.twitterhumour.BR
 import com.test.ifood.twitterhumour.base.BaseView
 import com.test.ifood.twitterhumour.base.BaseViewModel
+import com.test.ifood.twitterhumour.datasource.twitter.TwitterRepository
 
-class WelcomeViewModel(application: Application) : BaseViewModel<BaseView?>(application) {
+class WelcomeViewModel(application: Application, private val twitterRepository: TwitterRepository) : BaseViewModel<BaseView?>(application) {
 
     var userName: String = ""
         set(value) {
