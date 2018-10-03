@@ -15,6 +15,14 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        each { type ->
+            type.buildConfigField "String", 'TwitterApiKey', TwitterApiKey
+            type.buildConfigField "String", 'TwitterSecretKey', TwitterSecretKey
+            type.buildConfigField "String", 'TwitterToken', TwitterToken
+            type.buildConfigField "String", 'TwitterTokenSecret', TwitterTokenSecret
+            type.buildConfigField "String", 'GoogleNaturalLanguageKey', GoogleNaturalLanguageKey
+        }
     }
     buildTypes {
         release {
@@ -33,11 +41,11 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.0.0'
     implementation 'com.google.android.material:material:1.0.0'
+
     implementation 'androidx.constraintlayout:constraintlayout:2.0.0-alpha2'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.0-alpha4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha4'
-    implementation 'org.jetbrains.anko:anko-common:0.9'
     implementation 'com.google.api-client:google-api-client-android:1.22.0'
     implementation 'com.google.apis:google-api-services-language:v1beta2-rev6-1.22.0'
 

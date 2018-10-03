@@ -1,43 +1,21 @@
 package br.com.andreyneto.ifood_mobile_test.ui.main
 
 import android.content.Context
-import android.content.Intent
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
-import android.util.Log
 import android.view.View
 import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import br.com.andreyneto.ifood_mobile_test.AppExecutors
 import br.com.andreyneto.ifood_mobile_test.R
-import br.com.andreyneto.ifood_mobile_test.data.TweetRepository
-import br.com.andreyneto.ifood_mobile_test.data.database.TweetDao
-import br.com.andreyneto.ifood_mobile_test.data.database.TweetDatabase
 import br.com.andreyneto.ifood_mobile_test.data.database.TweetEntry
-import br.com.andreyneto.ifood_mobile_test.data.network.TweetNetworkDataSource
 import br.com.andreyneto.ifood_mobile_test.ui.detail.SentimentBottomSheet
 import br.com.andreyneto.ifood_mobile_test.utilities.InjectorUtils
-import com.google.api.client.extensions.android.http.AndroidHttp
-import com.google.api.client.extensions.android.json.AndroidJsonFactory
-import com.google.api.services.language.v1beta2.CloudNaturalLanguage
-import com.google.api.services.language.v1beta2.CloudNaturalLanguageRequestInitializer
-import org.jetbrains.anko.doAsync
-import twitter4j.TwitterFactory
-import twitter4j.conf.ConfigurationBuilder
-import com.google.api.services.language.v1beta2.model.Document
-import com.google.api.services.language.v1beta2.model.Features
-import com.google.api.services.language.v1beta2.model.AnnotateTextRequest
 import kotlinx.android.synthetic.main.activity_main.*
-import org.jetbrains.anko.toast
 
 
 class MainActivity : AppCompatActivity() {
@@ -84,7 +62,7 @@ class MainActivity : AppCompatActivity() {
         val layoutParams: ConstraintLayout.LayoutParams = editText.layoutParams as ConstraintLayout.LayoutParams
         layoutParams.verticalBias = 0.5f
         editText.layoutParams = layoutParams
-        lblError.visibility = if(showMessage) View.VISIBLE else View.GONE
+        lblError.visibility = if (showMessage && progressBar.visibility != View.VISIBLE) View.VISIBLE else View.GONE
     }
 
     private fun manageTweets(tweets: List<TweetEntry>?) {

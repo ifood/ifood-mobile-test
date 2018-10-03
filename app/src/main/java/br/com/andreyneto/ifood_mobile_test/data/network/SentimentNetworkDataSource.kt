@@ -2,14 +2,10 @@ package br.com.andreyneto.ifood_mobile_test.data.network
 
 import android.content.Context
 import android.util.Log
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import br.com.andreyneto.ifood_mobile_test.App
 import br.com.andreyneto.ifood_mobile_test.AppExecutors
-import com.google.api.client.extensions.android.http.AndroidHttp
-import com.google.api.client.extensions.android.json.AndroidJsonFactory
 import com.google.api.client.googleapis.json.GoogleJsonResponseException
-import com.google.api.services.language.v1beta2.CloudNaturalLanguage
-import com.google.api.services.language.v1beta2.CloudNaturalLanguageRequestInitializer
 import com.google.api.services.language.v1beta2.model.AnnotateTextRequest
 import com.google.api.services.language.v1beta2.model.Document
 import com.google.api.services.language.v1beta2.model.Features
@@ -32,14 +28,7 @@ class SentimentNetworkDataSource private constructor(
 
     private fun getSentiment(text: String) {
         try {
-            val naturalLanguageService = CloudNaturalLanguage.Builder(
-                    AndroidHttp.newCompatibleTransport(),
-                    AndroidJsonFactory(),
-                    null
-            ).setCloudNaturalLanguageRequestInitializer(
-                    CloudNaturalLanguageRequestInitializer("AIzaSyA0iEyFW1k4q06lxJmSGszex2BXuNCbZgw")
-            ).setApplicationName("ifood-mobile-test").build()
-
+            val naturalLanguageService = (mContext.applicationContext as App).naturalLanguageService
             val document = Document()
             document.type = "PLAIN_TEXT"
             document.content = text
@@ -48,7 +37,7 @@ class SentimentNetworkDataSource private constructor(
             val request = AnnotateTextRequest()
             request.document = document
             request.features = features
-            val response = naturalLanguageService.documents()
+            val response = naturalLanguageService!!.documents()
                     .annotateText(request).execute()
             response.documentSentiment.score.let {
                 mDownloadedSentiment.postValue(it)

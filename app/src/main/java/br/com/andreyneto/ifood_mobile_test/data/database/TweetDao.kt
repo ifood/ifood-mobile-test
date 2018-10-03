@@ -1,13 +1,15 @@
 package br.com.andreyneto.ifood_mobile_test.data.database
 
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.room.*
+import androidx.room.Dao
+import androidx.room.Insert
+import androidx.room.OnConflictStrategy
+import androidx.room.Query
 
 @Dao
 interface TweetDao {
 
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
     fun bulkInsert(tweets: List<TweetEntry>)
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
