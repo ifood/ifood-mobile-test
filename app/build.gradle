@@ -16,6 +16,11 @@ android {
 
         buildConfigField "String", "TWITTER_BASE_URL", "\"https://api.twitter.com\""
 
+        buildConfigField "String", "TWITTER_CONSUMER_API_KEY", "\"zd1WCKjtd4YXIxo3SPqYAd2vn\""
+        buildConfigField "String", "TWITTER_CONSUMER_API_SECRET_KEY", "\"ulnDYyL83oZ7KcpI1WnIOAbblBrx0EwFKHvjIWraOHWahwDWdK\""
+        buildConfigField "String", "TWITTER_ACCESS_TOKEN", "\"2248942292-riHvk4N5X6xLxV7Qg5x3oy05sNhKcUO86ajsDcX\""
+        buildConfigField "String", "TWITTER_SECRET_ACCESS_TOKEN", "\"sfB7g2fN0mTGK8bnCOlnNuOcE7ycwlngCkDctZOKSGKJy\""
+
     }
 
     buildTypes {
@@ -67,6 +72,11 @@ dependencies {
 
     // Okhttp logging interceptor
     implementation "com.squareup.okhttp3:logging-interceptor:$okhttp_logging_version"
+
+    // Okhttp OAuth Interceptor
+    implementation "oauth.signpost:signpost-core:$signpost_version"
+    implementation "se.akerfeldt:okhttp-signpost:$okhttp_signpost_version"
+
 
     // Test
     testImplementation "junit:junit:$junit_version"

@@ -37,22 +37,24 @@
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
             android:hint="@string/welcome.input_hint"
+            android:text="@={viewModel.userName}"
             app:layout_constraintBottom_toTopOf="@id/welcomeButton"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/welcomeTitle"
-            android:text="@={viewModel.userName}"/>
+            app:layout_constraintTop_toBottomOf="@id/welcomeTitle"/>
 
         <Button
             android:id="@+id/welcomeButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
+            android:enabled="@{viewModel.buttonEnabled}"
+            android:onClick="@{viewModel::onSearchClicked}"
             android:text="@string/welcome.button"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            android:enabled="@{viewModel.buttonEnabled}"/>
+            app:layout_constraintRight_toRightOf="parent"/>
 
     </android.support.constraint.ConstraintLayout>
+
 </layout>

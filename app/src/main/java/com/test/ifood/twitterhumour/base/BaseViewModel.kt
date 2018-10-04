@@ -9,7 +9,7 @@ open class BaseViewModel<V : BaseView?>(application: Application) : AndroidViewM
 
     protected var registry = PropertyChangeRegistry()
 
-    var view: V? = null
+    open var view: V? = null
         protected set
 
     override fun addOnPropertyChangedCallback(callback: Observable.OnPropertyChangedCallback) {
