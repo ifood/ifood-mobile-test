@@ -8,5 +8,4 @@
     <string name="welcome.input_hint">Please enter a twitter username</string>
     <string name="welcome.button">Search</string>
     <string name="welcome.error.no_tweets">No tweets found. Please try another username.</string>
-    <string name="welcome.error.network_issue">Please verify your internet and try again.</string>
 </resources>

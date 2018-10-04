@@ -34,17 +34,12 @@ class WelcomeActivity : BaseActivity(), WelcomeView {
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(
                         {
-                            if( it.isEmpty()) {
-                                showErrorDialog(R.string.welcome_error_no_tweets)
-                            } else {
-                                Log.d("CAIO", "SUCCESS!!")
-                            }
-                        },
-                        {
-                            showErrorDialog(R.string.welcome_error_network_issue)
+                            viewModel.updateLoadingState(false)
+                            Log.d("CAIO", "SUCCESS!!")
                         },
                         {
                             viewModel.updateLoadingState(false)
+                            showErrorDialog(R.string.welcome_error_no_tweets)
                         })
     }
 
