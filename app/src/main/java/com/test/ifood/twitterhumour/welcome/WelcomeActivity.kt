@@ -6,19 +6,16 @@ import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import com.test.ifood.twitterhumour.R
+import com.test.ifood.twitterhumour.base.BaseActivity
 import com.test.ifood.twitterhumour.databinding.ActivityWelcomeBinding
-import com.test.ifood.twitterhumour.model.Tweet
 import com.test.ifood.twitterhumour.welcome.view.WelcomeView
 import com.test.ifood.twitterhumour.welcome.viewmodel.WelcomeViewModel
 import dagger.android.AndroidInjection
-import io.reactivex.FlowableSubscriber
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
-import org.reactivestreams.Subscriber
-import org.reactivestreams.Subscription
 import javax.inject.Inject
 
-class WelcomeActivity : AppCompatActivity(), WelcomeView {
+class WelcomeActivity : BaseActivity(), WelcomeView {
 
     private lateinit var binding: ActivityWelcomeBinding
 
@@ -37,18 +34,17 @@ class WelcomeActivity : AppCompatActivity(), WelcomeView {
         viewModel.searchForTweets()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe({ showNoResultsDialog() },{ showNoResultsDialog() })
-    }
-
-    private fun showNoResultsDialog() {
-
-        val builder = AlertDialog.Builder(this)
-                .setTitle("Error")
-                .setMessage("No tweets found.")
-                .setNeutralButton("OK") {dialog, _ -> dialog.dismiss() }
-
-        builder.show()
-
+                .subscribe(
+                        {
+                            if( it.isEmpty()) {
+                                showErrorDialog(R.string.welcome_error_no_tweets)
+                            } else {
+                                Log.d("CAIO", "SUCCESS!!")
+                            }
+                        },
+                        {
+                            showErrorDialog(R.string.welcome_error_network_issue)
+                        })
     }
 
 }
