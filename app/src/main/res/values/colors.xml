@@ -6,4 +6,6 @@
     <color name="blue_light_twitter">#c0deed</color>
 
     <color name="white">#ffffff</color>
+    
+    <color name="black_transparent_50">#80000000</color>
 </resources>

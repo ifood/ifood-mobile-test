@@ -2,8 +2,6 @@ package com.test.ifood.twitterhumour.welcome
 
 import android.databinding.DataBindingUtil
 import android.os.Bundle
-import android.support.v7.app.AlertDialog
-import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import com.test.ifood.twitterhumour.R
 import com.test.ifood.twitterhumour.base.BaseActivity
@@ -44,7 +42,12 @@ class WelcomeActivity : BaseActivity(), WelcomeView {
                         },
                         {
                             showErrorDialog(R.string.welcome_error_network_issue)
+                        },
+                        {
+                            viewModel.updateLoadingState(false)
                         })
     }
+
+
 
 }
