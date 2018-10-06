@@ -7,7 +7,7 @@ import android.databinding.PropertyChangeRegistry
 
 open class BaseViewModel<V : BaseView?>(application: Application) : AndroidViewModel(application), Observable {
 
-    protected var registry = PropertyChangeRegistry()
+    var registry = PropertyChangeRegistry()
 
     open var view: V? = null
         protected set

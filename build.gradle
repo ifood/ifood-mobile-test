@@ -17,6 +17,7 @@ buildscript {
     ext.okhttp_logging_version  = '3.11.0'
     ext.signpost_version  = '1.2.1.2'
     ext.okhttp_signpost_version  = '1.1.0'
+    ext.parceler_version = '1.1.11'
 
     repositories {
         google()

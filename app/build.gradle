@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
+apply plugin: 'org.jetbrains.kotlin.android.extensions'
 
 android {
     compileSdkVersion 27
@@ -33,6 +34,10 @@ android {
     dataBinding {
         enabled = true
     }
+
+    androidExtensions {
+        experimental = true
+    }
 }
 
 dependencies {
@@ -44,6 +49,7 @@ dependencies {
     // App compat
     implementation "com.android.support:appcompat-v7:$app_compat_version"
     implementation "com.android.support.constraint:constraint-layout:$constraint_layout_version"
+    implementation "com.android.support:recyclerview-v7:$app_compat_version"
 
     // Dagger
     implementation "com.google.dagger:dagger:$dagger_version"
@@ -76,6 +82,10 @@ dependencies {
     // Okhttp OAuth Interceptor
     implementation "oauth.signpost:signpost-core:$signpost_version"
     implementation "se.akerfeldt:okhttp-signpost:$okhttp_signpost_version"
+
+    //Parceler
+    implementation "org.parceler:parceler-api:$parceler_version"
+    annotationProcessor "org.parceler:parceler:$parceler_version"
 
 
     // Test

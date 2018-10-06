@@ -15,20 +15,20 @@
         tools:context=".welcome.WelcomeActivity">
 
         <TextView
-            android:id="@+id/welcomeTitle"
+            android:id="@+id/welcome_title"
             style="@style/Welcome.Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="@string/welcome.title"
-            app:layout_constraintBottom_toTopOf="@id/welcomeUserNameInput"
+            app:layout_constraintBottom_toTopOf="@id/welcome_user_name_input"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_chainStyle="spread"/>
 
         <EditText
-            android:id="@+id/welcomeUserNameInput"
+            android:id="@+id/welcome_user_name_input"
             style="@style/Welcome.Input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -38,13 +38,13 @@
             android:layout_marginRight="16dp"
             android:hint="@string/welcome.input_hint"
             android:text="@={viewModel.userName}"
-            app:layout_constraintBottom_toTopOf="@id/welcomeButton"
+            app:layout_constraintBottom_toTopOf="@id/welcome_button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/welcomeTitle"/>
+            app:layout_constraintTop_toBottomOf="@id/welcome_title"/>
 
         <Button
-            android:id="@+id/welcomeButton"
+            android:id="@+id/welcome_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
@@ -55,20 +55,19 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"/>
 
-        <View
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/black_transparent_50"
-            android:visibility="@{viewModel.loadingVisible}"/>
+            android:elevation="3dp"
+            android:visibility="@{viewModel.loadingVisible}">
 
-        <ProgressBar
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="@{viewModel.loadingVisible}"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
+
+        </FrameLayout>
 
     </android.support.constraint.ConstraintLayout>
 
