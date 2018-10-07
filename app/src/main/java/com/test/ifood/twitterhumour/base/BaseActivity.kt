@@ -2,7 +2,6 @@ package com.test.ifood.twitterhumour.base
 
 import android.support.v4.content.ContextCompat
 import android.support.v7.app.AlertDialog
-import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
 import com.test.ifood.twitterhumour.R
 import dagger.android.support.DaggerAppCompatActivity

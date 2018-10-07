@@ -8,7 +8,6 @@ import com.test.ifood.twitterhumour.delegate.contentView
 import com.test.ifood.twitterhumour.tweetlist.tweetsoverview.TweetListActivity
 import com.test.ifood.twitterhumour.welcome.view.WelcomeView
 import com.test.ifood.twitterhumour.welcome.viewmodel.WelcomeViewModel
-import dagger.android.AndroidInjection
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject

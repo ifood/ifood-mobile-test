@@ -10,5 +10,4 @@ class App: DaggerApplication(){
         return DaggerAppComponent.builder().application(this).build()
     }
 
-
 }

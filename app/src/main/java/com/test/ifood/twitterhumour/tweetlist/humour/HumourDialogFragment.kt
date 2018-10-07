@@ -1,19 +1,17 @@
 package com.test.ifood.twitterhumour.tweetlist.humour
 
-import android.content.Context
 import android.databinding.DataBindingUtil
 import android.os.Bundle
-import android.support.v4.app.DialogFragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.test.ifood.twitterhumour.R
 import com.test.ifood.twitterhumour.databinding.DialogFragmentHumourBinding
 import com.test.ifood.twitterhumour.tweetlist.humour.viewmodel.HumourViewModel
-import dagger.android.support.AndroidSupportInjection
+import dagger.android.support.DaggerAppCompatDialogFragment
 import javax.inject.Inject
 
-class HumourDialogFragment: DialogFragment() {
+class HumourDialogFragment: DaggerAppCompatDialogFragment() {
 
     companion object {
         val TAG = HumourDialogFragment::class.java.simpleName
@@ -49,9 +47,4 @@ class HumourDialogFragment: DialogFragment() {
         return binding.root
     }
 
-    override fun onAttach(context: Context?) {
-        AndroidSupportInjection.inject(this)
-
-        super.onAttach(context)
-    }
 }

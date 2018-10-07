@@ -57,7 +57,7 @@
 
         <include
             android:id="@+id/welcome_loading"
-            layout="@layout/loading"
+            layout="@layout/component_loading"
             app:loadingVisible="@{viewModel.loadingVisible}"/>
 
     </android.support.constraint.ConstraintLayout>

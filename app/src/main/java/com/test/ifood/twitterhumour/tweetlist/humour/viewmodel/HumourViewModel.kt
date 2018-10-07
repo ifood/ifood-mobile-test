@@ -34,9 +34,9 @@ class HumourViewModel(application: Application): BaseViewModel<BaseView?>(applic
         @Bindable("sentiment")
         get() {
 
-            if(sentiment.equals("positive")) {
+            if(sentiment == "positive") {
                 return ContextCompat.getDrawable(getApplication(), R.drawable.ic_sentiment_satisfied_white_24dp)
-            } else if (sentiment.equals("negative")) {
+            } else if (sentiment == "negative") {
                 return ContextCompat.getDrawable(getApplication(), R.drawable.ic_sentiment_dissatisfied_white_24dp)
             }
 

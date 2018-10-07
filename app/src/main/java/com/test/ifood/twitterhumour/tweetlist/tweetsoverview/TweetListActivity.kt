@@ -15,7 +15,6 @@ import com.test.ifood.twitterhumour.tweetlist.humour.HumourDialogFragment
 import com.test.ifood.twitterhumour.tweetlist.tweetsoverview.adapter.TweetListAdapter
 import com.test.ifood.twitterhumour.tweetlist.tweetsoverview.view.ItemTweetListView
 import com.test.ifood.twitterhumour.tweetlist.tweetsoverview.viewmodel.TweetListViewModel
-import dagger.android.AndroidInjection
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject
@@ -81,7 +80,9 @@ class TweetListActivity: BaseActivity(), ItemTweetListView {
                 .subscribe(
                         {
                             viewModel.updateLoadingState(false)
-                            HumourDialogFragment.newInstance(it.sentiment.document.label).show(supportFragmentManager, "CAIO")
+
+                            HumourDialogFragment.newInstance(it.sentiment.document.label).
+                                    show(supportFragmentManager, HumourDialogFragment.TAG)
                         },
                         {
                             viewModel.updateLoadingState(false)
