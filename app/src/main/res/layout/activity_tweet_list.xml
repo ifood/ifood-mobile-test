@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.test.ifood.twitterhumour.tweetlist.tweetsoverview.viewmodel.TweetListViewModel"/>
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include android:id="@+id/toolbar"
+                layout="@layout/toolbar" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/tweet_list_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/item_tweet"/>
+
+        </LinearLayout>
+
+        <include
+            android:id="@+id/tweet_list_loading"
+            layout="@layout/component_loading"
+            app:loadingVisible="@{viewModel.loadingVisible}"/>
+
+    </FrameLayout>
+
+</layout>

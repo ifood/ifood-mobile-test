@@ -1,0 +1,41 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/white</item>
+        <item name="colorControlNormal">@color/white</item>
+    </style>
+    <!-- Base application theme. -->
+
+    <!-- Toolbar -->
+    <style name="Toolbar">
+        <item name="android:background">@color/blue_dark_twitter</item>
+    </style>
+
+    <!-- Welcome -->
+    <style name="Welcome">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Welcome.Title">
+        <item name="android:textSize">26sp</item>
+    </style>
+
+    <style name="Welcome.Input">
+        <item name="android:textColorHint">@color/blue_light_twitter</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <!-- Welcome -->
+
+    <!-- Tweet List -->
+    <style name="TweetList" />
+
+    <style name="TweetList.ItemBody">
+        <item name="android:textSize">16sp</item>
+    </style>
+    <!-- Tweet List -->
+
+</resources>
