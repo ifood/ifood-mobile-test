@@ -10,4 +10,5 @@
     <string name="welcome.error.no_tweets">No tweets found. Please try another username.</string>
 
     <string name="tweet_list.toolbar">Tweets</string>
+    <string name="tweet_list.error.language_processing">Unable to analyze tweet.</string>
 </resources>

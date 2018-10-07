@@ -2,6 +2,7 @@
 <resources>
     <color name="colorPrimaryDark">#0084b4</color>
 
+    <color name="blue">#0000ff</color>
     <color name="blue_dark_twitter">#00aced</color>
     <color name="blue_light_twitter">#c0deed</color>
 
@@ -9,4 +10,8 @@
 
     <color name="black">#000000</color>
     <color name="black_transparent_50">#80000000</color>
+    
+    <color name="gray">#d3d3d3</color>
+
+    <color name="green">#008000</color>
 </resources>

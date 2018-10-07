@@ -5,9 +5,13 @@ import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
 import com.test.ifood.twitterhumour.R
+import dagger.android.support.DaggerAppCompatActivity
+import io.reactivex.disposables.CompositeDisposable
 
 
-open class BaseActivity: AppCompatActivity() {
+open class BaseActivity: DaggerAppCompatActivity() {
+
+    protected val compositeDisposable = CompositeDisposable()
 
     protected fun showErrorDialog(msgId: Int) {
         val dialog = AlertDialog.Builder(this)
@@ -28,5 +32,11 @@ open class BaseActivity: AppCompatActivity() {
         setSupportActionBar(toolbar)
         supportActionBar?.title = getString(R.string.tweet_list_toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+    }
+
+    override fun onStop() {
+        super.onStop()
+
+        compositeDisposable.dispose()
     }
 }

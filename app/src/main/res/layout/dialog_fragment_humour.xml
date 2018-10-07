@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.test.ifood.twitterhumour.tweetlist.humour.viewmodel.HumourViewModel"/>
+    </data>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@{viewModel.bgColor}">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@{viewModel.emoji}"
+            tools:src="@drawable/ic_sentiment_satisfied_white_24dp"/>
+
+    </FrameLayout>
+</layout>

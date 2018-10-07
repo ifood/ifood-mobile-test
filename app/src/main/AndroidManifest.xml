@@ -23,7 +23,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".tweetlist.TweetListActivity"
+        <activity android:name=".tweetlist.tweetsoverview.TweetListActivity"
             android:screenOrientation="portrait"/>
 
     </application>

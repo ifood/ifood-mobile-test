@@ -55,19 +55,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"/>
 
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/black_transparent_50"
-            android:elevation="3dp"
-            android:visibility="@{viewModel.loadingVisible}">
-
-            <ProgressBar
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"/>
-
-        </FrameLayout>
+        <include
+            android:id="@+id/welcome_loading"
+            layout="@layout/loading"
+            app:loadingVisible="@{viewModel.loadingVisible}"/>
 
     </android.support.constraint.ConstraintLayout>
 
