@@ -1,5 +1,6 @@
 package com.study.vipoliveira.tweetanalyst.di
 
+import com.study.vipoliveira.tweetanalyst.domain.GoogleUseCases
 import com.study.vipoliveira.tweetanalyst.domain.TwitterUseCases
 import com.study.vipoliveira.tweetanalyst.domain.TwitterUseCasesImp
 import com.study.vipoliveira.tweetanalyst.domain.repositories.TwitterRepository
@@ -25,7 +26,8 @@ class TwitterModule {
 
     @Provides
     fun provideTweetViewModelFactory(twitterUseCases: TwitterUseCases,
+                                     googleUseCases: GoogleUseCases,
                                      disposable: CompositeDisposable): TweetsViewModelFactory {
-        return TweetsViewModelFactory(twitterUseCases, disposable)
+        return TweetsViewModelFactory(twitterUseCases,googleUseCases, disposable)
     }
 }

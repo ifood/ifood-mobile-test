@@ -1,6 +1,6 @@
 package com.study.vipoliveira.tweetanalyst.domain.repositories
 
-import com.study.vipoliveira.tweetanalyst.model.AnalyzeResponse
+import com.study.vipoliveira.tweetanalyst.domain.model.AnalyzeResponse
 import io.reactivex.Single
 
 interface GoogleRepository {

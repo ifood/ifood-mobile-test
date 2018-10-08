@@ -2,7 +2,7 @@ package com.study.vipoliveira.tweetanalyst.domain.repositories
 
 import android.util.Base64
 import com.study.vipoliveira.tweetanalyst.BuildConfig
-import com.study.vipoliveira.tweetanalyst.model.TweetResponse
+import com.study.vipoliveira.tweetanalyst.domain.model.TweetResponse
 import com.study.vipoliveira.tweetanalyst.domain.service.TwitterService
 import com.study.vipoliveira.tweetanalyst.store.TwitterStorePref
 import io.reactivex.Single

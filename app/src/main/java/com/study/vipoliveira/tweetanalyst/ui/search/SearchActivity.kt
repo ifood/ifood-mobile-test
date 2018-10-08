@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.study.vipoliveira.tweetanalyst.R
 import com.study.vipoliveira.tweetanalyst.ui.tweet.TweetsActivity
-import com.study.vipoliveira.tweetanalyst.utils.SEARCH
+import com.study.vipoliveira.tweetanalyst.ui.utils.SEARCH
 import kotlinx.android.synthetic.main.search_activity.*
 
 class SearchActivity: AppCompatActivity() {

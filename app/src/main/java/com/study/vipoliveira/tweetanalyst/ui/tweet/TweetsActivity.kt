@@ -8,9 +8,8 @@ import android.support.v7.widget.DividerItemDecoration
 import android.support.v7.widget.LinearLayoutManager
 import android.view.View
 import com.study.vipoliveira.tweetanalyst.R
-import com.study.vipoliveira.tweetanalyst.model.TweetResponse
-import com.study.vipoliveira.tweetanalyst.ui.viewentity.TweetsResponse
-import com.study.vipoliveira.tweetanalyst.utils.SEARCH
+import com.study.vipoliveira.tweetanalyst.domain.model.TweetResponse
+import com.study.vipoliveira.tweetanalyst.ui.utils.SEARCH
 import dagger.android.AndroidInjection
 import kotlinx.android.synthetic.main.layout_network_state.*
 import kotlinx.android.synthetic.main.tweet_activity.*
@@ -24,7 +23,9 @@ class TweetsActivity : AppCompatActivity() {
     private var viewModel: TweetsViewModel? = null
     private val tweetsList: MutableList<TweetResponse> = mutableListOf()
     private val adapter: TweetsListAdapter by lazy {
-        TweetsListAdapter(tweetsList)
+        TweetsListAdapter(tweetsList) {
+            viewModel!!.analyzeTweet(it)
+        }
     }
 
     private var searchName: String? = null
@@ -40,38 +41,80 @@ class TweetsActivity : AppCompatActivity() {
         title = searchName
         viewModel = ViewModelProviders.of(this, viewModelFactory).get(TweetsViewModel::class.java)
 
-        viewModel!!.tweetsResponse().observe(this,
-                Observer { tweetResponse -> processTweetsResponse(tweetResponse!!) })
+        setupObservers()
 
+        initAdapter()
+        viewModel!!.getTweets(searchName!!)
+    }
+
+    private fun setupObservers() {
+        viewModel!!.isLoading().observe(this, Observer {showLoader(it) })
+        viewModel!!.googleData().observe(this, Observer { processGoogleResponse(it!!) })
+        viewModel!!.tweetData().observe(this, Observer { processTweetsResponse(it!!) })
+        viewModel!!.tweetError().observe(this, Observer { processTweetsError(it!!) })
+        viewModel!!.googleError().observe(this, Observer { processGoogleError() })
+        viewModel!!.userNotFound().observe(this, Observer { userNotFound(it) })
+    }
+
+    private fun userNotFound(userNotFound: Boolean?) {
+        when(userNotFound){
+            true -> {
+                error_msg_txt.visibility = View.VISIBLE
+                error_msg_txt.text = getString(R.string.no_user)
+                showLoader(false)
+            }
+            false -> error_msg_txt.visibility = View.GONE
+
+
+        }
+    }
+
+    private fun processGoogleError() {
+    }
+
+    private fun processTweetsError(throwable: Throwable) {
+        error_msg_txt.visibility = View.VISIBLE
+        retry_button.visibility = View.VISIBLE
+        throwable.message.let { error_msg_txt.text = throwable.message }
+        retry_button.setOnClickListener { viewModel!!.getTweets(searchName!!)}
+    }
+
+    private fun noError(){
+        error_msg_txt.visibility = View.GONE
+        retry_button.visibility = View.GONE
+    }
+
+    private fun showLoader(loading: Boolean?) {
+        noError()
+        when(loading){
+            false -> loading_progress_bar.visibility = View.GONE
+            true -> loading_progress_bar.visibility = View.VISIBLE
+        }
+    }
+
+    private fun initAdapter() {
         val linearLayoutManager = LinearLayoutManager(this)
         tweet_recyclerview.layoutManager = linearLayoutManager
         tweet_recyclerview.adapter = adapter
         val dividerItemDecoration = DividerItemDecoration(tweet_recyclerview.context,
                 linearLayoutManager.orientation)
         tweet_recyclerview.addItemDecoration(dividerItemDecoration)
-        viewModel!!.getTweets(searchName!!)
     }
 
-    private fun processTweetsResponse(tweetsResponse: TweetsResponse) {
-        error_msg_txt.visibility = if (tweetsResponse.error != null) View.VISIBLE else View.GONE
-        if (tweetsResponse.error?.message != null) {
-            error_msg_txt.text = tweetsResponse.error.message
-        }
+    private fun processGoogleResponse(googleResponse: TweetResponse) {
+        showLoader(false)
+        adapter.updateItem(googleResponse)
+    }
 
-        retry_button.visibility = if (tweetsResponse.status == TweetsResponse.Status.ERROR) View.VISIBLE else View.GONE
-        loading_progress_bar.visibility = if (tweetsResponse.status == TweetsResponse.Status.LOADING) View.VISIBLE else View.GONE
-
-        if(tweetsResponse.status == TweetsResponse.Status.SUCCESS){
-            if(tweetsResponse.data!!.isEmpty()){
-                error_msg_txt.visibility = View.VISIBLE
-//                error_msg_txt.text = getString(R.string.no_pull_request)
-            } else {
-                tweetsList.clear()
-                tweetsList.addAll(tweetsResponse.data)
-                adapter.notifyDataSetChanged()
-            }
+    private fun processTweetsResponse(tweetsResponse: MutableList<TweetResponse>) {
+        noError()
+        showLoader(false)
+        if(tweetsResponse.isEmpty()){
+            error_msg_txt.visibility = View.VISIBLE
+            error_msg_txt.text = getString(R.string.no_tweets)
+        } else {
+            adapter.setTweets(tweetsResponse)
         }
-        retry_button.setOnClickListener { viewModel!!.getTweets(searchName!!)}
     }
 
     override fun onSupportNavigateUp(): Boolean {

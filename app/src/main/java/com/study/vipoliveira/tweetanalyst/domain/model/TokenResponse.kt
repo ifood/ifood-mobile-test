@@ -1,4 +1,4 @@
-package com.study.vipoliveira.tweetanalyst.model
+package com.study.vipoliveira.tweetanalyst.domain.model
 
 import com.google.gson.annotations.SerializedName
 

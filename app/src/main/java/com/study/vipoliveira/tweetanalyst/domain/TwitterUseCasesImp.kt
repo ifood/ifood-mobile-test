@@ -1,7 +1,7 @@
 package com.study.vipoliveira.tweetanalyst.domain
 
 import com.study.vipoliveira.tweetanalyst.domain.repositories.TwitterRepository
-import com.study.vipoliveira.tweetanalyst.model.TweetResponse
+import com.study.vipoliveira.tweetanalyst.domain.model.TweetResponse
 import io.reactivex.Single
 
 class TwitterUseCasesImp

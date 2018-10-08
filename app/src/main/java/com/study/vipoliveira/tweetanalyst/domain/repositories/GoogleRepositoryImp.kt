@@ -1,9 +1,9 @@
 package com.study.vipoliveira.tweetanalyst.domain.repositories
 
 import com.study.vipoliveira.tweetanalyst.domain.service.GoogleService
-import com.study.vipoliveira.tweetanalyst.model.AnalyzeRequest
-import com.study.vipoliveira.tweetanalyst.model.AnalyzeResponse
-import com.study.vipoliveira.tweetanalyst.model.Document
+import com.study.vipoliveira.tweetanalyst.domain.model.AnalyzeRequest
+import com.study.vipoliveira.tweetanalyst.domain.model.AnalyzeResponse
+import com.study.vipoliveira.tweetanalyst.domain.model.Document
 import io.reactivex.Single
 
 class GoogleRepositoryImp
