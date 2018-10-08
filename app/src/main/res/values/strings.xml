@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">TweetAnalyst</string>
+    <string name="search_button">SEARCH</string>
+    <string name="try_again_button">Retry</string>
 </resources>

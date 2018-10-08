@@ -16,6 +16,12 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        buildConfigField "String", "TWITTER_BASE_URL", '"https://api.twitter.com"'
+        buildConfigField "String", "GOOGLE_BASE_URL", '"https://language.googleapis.com"'
+        buildConfigField 'String', "GOOGLE_API_KEY", '"AIzaSyBrB7R3eogSkMiFzl-F89SZRfsqWfCwo7c"'
+        buildConfigField 'String', "TWITTER_CONSUMER_KEY", '"byA6j1o22gMIrrt6tJ6PeTLT4"'
+        buildConfigField 'String', "TWITTER_SECRET_KEY", '"M5t9mLbLSmtZkbr1APoUU5bLMkNT4iVYbYFYurBlZSqcEiZmtC"'
     }
     buildTypes {
         release {

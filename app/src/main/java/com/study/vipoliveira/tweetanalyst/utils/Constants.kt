@@ -1,3 +1,3 @@
 package com.study.vipoliveira.tweetanalyst.utils
 
-const val BASE_URL = ""
+const val SEARCH = "search"
