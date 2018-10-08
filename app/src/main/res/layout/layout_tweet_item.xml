@@ -9,7 +9,21 @@
     android:padding="8dp">
 
     <TextView
-        android:id="@+id/pull_request_title"
+        android:id="@+id/tweet_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:textSize="14sp"
+        app:fontFamily="roboto"
+        android:ellipsize="end"
+        android:maxLines="3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Lorem ipsum molestie semper feugiat magna himenaeos dictumst tempor nisi, hac in per nostra pulvinar in pretium himenaeos"
+        />
+
+    <TextView
+        android:id="@+id/tweet_analyzer"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -21,24 +35,22 @@
         android:textColor="@color/colorPrimaryDark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:text="Pull Request"
+        app:layout_constraintTop_toBottomOf="@+id/tweet_description"
+        android:text="@string/analyze_tweet"
         />
 
     <TextView
-        android:id="@+id/pull_request_description"
+        android:id="@+id/tweet_date"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
-        android:textSize="14sp"
+        android:maxLines="1"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:fontFamily="roboto"
-        android:ellipsize="end"
-        android:maxLines="2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pull_request_title"
-        tools:text="Lorem ipsum molestie semper feugiat magna himenaeos dictumst tempor nisi, hac in per nostra pulvinar in pretium himenaeos"
-        />
-
-
+        app:layout_constraintTop_toBottomOf="@+id/tweet_description"
+        tools:text="25/12/2008"/>
 
 </android.support.constraint.ConstraintLayout>

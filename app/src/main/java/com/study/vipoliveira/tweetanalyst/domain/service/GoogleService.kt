@@ -8,5 +8,5 @@ import retrofit2.http.POST
 
 interface GoogleService {
     @POST("/v1/documents:analyzeSentiment")
-    fun getAnalysis(@Body request: AnalyzeRequest): Single<AnalyzeResponse>
+    fun postAnalysis(@Body request: AnalyzeRequest): Single<AnalyzeResponse>
 }

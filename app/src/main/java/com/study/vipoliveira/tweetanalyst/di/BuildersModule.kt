@@ -6,6 +6,6 @@ import dagger.android.ContributesAndroidInjector
 @Module
 abstract class BuildersModule {
 
-    @ContributesAndroidInjector(modules = [(TwitterModule::class)])
+    @ContributesAndroidInjector(modules = [(TwitterModule::class),(GoogleModule::class)])
     abstract fun bindTweetsActivity(): TweetsActivity
 }
