@@ -61,7 +61,7 @@ class TweetsActivity : AppCompatActivity() {
             true -> {
                 error_msg_txt.visibility = View.VISIBLE
                 error_msg_txt.text = getString(R.string.no_user)
-                showLoader(false)
+                loading_progress_bar.visibility = View.GONE
             }
             false -> error_msg_txt.visibility = View.GONE
 
