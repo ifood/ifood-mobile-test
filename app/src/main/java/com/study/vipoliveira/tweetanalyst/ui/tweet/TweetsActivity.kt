@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.DividerItemDecoration
 import android.support.v7.widget.LinearLayoutManager
 import android.view.View
+import android.widget.Toast
 import com.study.vipoliveira.tweetanalyst.R
 import com.study.vipoliveira.tweetanalyst.domain.model.TweetResponse
 import com.study.vipoliveira.tweetanalyst.ui.utils.SEARCH
@@ -70,6 +71,8 @@ class TweetsActivity : AppCompatActivity() {
     }
 
     private fun processGoogleError() {
+        showLoader(false)
+        Toast.makeText(this, getString(R.string.analysis_error), Toast.LENGTH_SHORT).show()
     }
 
     private fun processTweetsError(throwable: Throwable) {
