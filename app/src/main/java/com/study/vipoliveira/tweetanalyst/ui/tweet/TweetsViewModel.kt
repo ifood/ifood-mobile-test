@@ -45,6 +45,9 @@ class TweetsViewModel(private val twitterUseCases: TwitterUseCases,
         return googleData
     }
 
+    override fun onCleared() {
+        disposable.clear()
+    }
 
     fun getTweets(userName: String){
         disposable.add(
