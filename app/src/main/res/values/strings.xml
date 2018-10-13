@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TweetAnalyst</string>
+    <string name="search_button">SEARCH</string>
+    <string name="try_again_button">Retry</string>
+    <string name="analyze_tweet"> </string>
+    <string name="no_tweets">This user has no tweets, please search another user.</string>
+    <string name="no_user">User not found, please try another user.</string>
+    <string name="search_tweets">Search for a user, and click on Tweet to discover the sentiment.</string>
+    <string name="analysis_error">We could not analyse this tweet. Please try again.</string>
+</resources>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/tweet_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:textSize="16sp"
+        app:fontFamily="roboto"
+        android:textColor="@color/primaryText"
+        android:ellipsize="end"
+        android:maxLines="3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Lorem ipsum molestie semper feugiat magna himenaeos dictumst tempor nisi, hac in per nostra pulvinar in pretium himenaeos"
+        />
+
+    <TextView
+        android:id="@+id/tweet_analyzer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="16sp"
+        app:fontFamily="roboto"
+        android:textStyle="bold"
+        android:textColor="@color/secondaryText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tweet_description"
+        android:text="@string/analyze_tweet"
+        />
+
+    <TextView
+        android:id="@+id/tweet_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="4dp"
+        android:maxLines="1"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="14sp"
+        app:fontFamily="roboto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tweet_description"
+        tools:text="25/12/2008"/>
+
+</android.support.constraint.ConstraintLayout>
