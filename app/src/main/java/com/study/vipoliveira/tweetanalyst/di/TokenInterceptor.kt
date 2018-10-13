@@ -10,7 +10,7 @@ class TokenInterceptor (
     override fun intercept(chain: Interceptor.Chain): Response {
         val originalRequest = chain.request()
 
-        if (!twitterPref.getToken().isEmpty()) {
+        if (!twitterPref.getToken().isNullOrEmpty()) {
             val twitterToken = twitterPref.getToken()
 
             val modifiedRequest = originalRequest

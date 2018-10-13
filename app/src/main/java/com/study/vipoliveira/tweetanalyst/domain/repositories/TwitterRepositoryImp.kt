@@ -14,7 +14,7 @@ constructor(private val twitterService: TwitterService, private val twitterStore
     }
 
     private fun getAccessToken(): Single<String> {
-        if (!twitterStorePref.getToken().isEmpty()) {
+        if (!twitterStorePref.getToken().isNullOrEmpty()) {
             return Single.just(twitterStorePref.getToken())
         }
 

@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import com.study.vipoliveira.tweetanalyst.R
 import com.study.vipoliveira.tweetanalyst.domain.model.TweetResponse
 import com.study.vipoliveira.tweetanalyst.ui.utils.Utils
+import com.study.vipoliveira.tweetanalyst.ui.utils.formatTimeStamp
 import kotlinx.android.synthetic.main.layout_tweet_item.view.*
 
 class TweetsListAdapter (val items : MutableList<TweetResponse>, val listener: (TweetResponse) -> Unit) : RecyclerView.Adapter<TweetsListAdapter.TweetListViewHolder>() {
@@ -42,7 +43,7 @@ class TweetsListAdapter (val items : MutableList<TweetResponse>, val listener: (
         fun bind(item: TweetResponse, listener: (TweetResponse) -> Unit) = with(itemView) {
             with(item){
                 tweet_description.text = text
-                tweet_date.text = Utils.formatTimeStamp(createdAt)
+                tweet_date.text = createdAt.formatTimeStamp()
                 sentiment?.let {tweet_analyzer.text = Utils.defineSentiment(sentiment)} ?: run {tweet_analyzer.text = resources.getString(R.string.analyze_tweet)}
                 setOnClickListener { listener(item) }
             }

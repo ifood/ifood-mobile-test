@@ -19,9 +19,9 @@ android {
 
         buildConfigField "String", "TWITTER_BASE_URL", '"https://api.twitter.com"'
         buildConfigField "String", "GOOGLE_BASE_URL", '"https://language.googleapis.com"'
-        buildConfigField 'String', "GOOGLE_API_KEY", '""'
-        buildConfigField 'String', "TWITTER_CONSUMER_KEY", '""'
-        buildConfigField 'String', "TWITTER_SECRET_KEY", '""'
+        buildConfigField 'String', "GOOGLE_API_KEY", '"YOUR_API_KEY"'
+        buildConfigField 'String', "TWITTER_CONSUMER_KEY", '"YOUR_API_KEY"'
+        buildConfigField 'String', "TWITTER_SECRET_KEY", '"YOUR_API_KEY"'
     }
     buildTypes {
         release {

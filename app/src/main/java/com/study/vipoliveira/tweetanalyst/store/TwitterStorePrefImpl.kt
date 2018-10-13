@@ -14,8 +14,8 @@ class TwitterStorePrefImpl(context: Context) : TwitterStorePref{
                 .putString(twitterOauthToken, token)
                 .apply()    }
 
-    override fun getToken(): String {
-        return sharedPref.getString(twitterOauthToken, "")!!
+    override fun getToken(): String?{
+        return sharedPref.getString(twitterOauthToken, "")
     }
 
 

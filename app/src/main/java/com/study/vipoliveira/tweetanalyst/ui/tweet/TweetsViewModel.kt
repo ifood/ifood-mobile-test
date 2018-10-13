@@ -68,7 +68,7 @@ class TweetsViewModel(private val twitterUseCases: TwitterUseCases,
                                             404 -> {userNotFound.value = true}
                                             else -> tweetError.value = error
                                         }
-                                    }
+                                    } else tweetError.value = error
                                 })
         )
     }

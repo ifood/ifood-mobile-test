@@ -21,15 +21,15 @@ class TweetsActivity : AppCompatActivity() {
     var viewModelFactory: TweetsViewModelFactory? = null
     @Inject set
 
-    private var viewModel: TweetsViewModel? = null
+    lateinit var viewModel: TweetsViewModel
     private val tweetsList: MutableList<TweetResponse> = mutableListOf()
     private val adapter: TweetsListAdapter by lazy {
         TweetsListAdapter(tweetsList) {
-            viewModel!!.analyzeTweet(it)
+            viewModel.analyzeTweet(it)
         }
     }
 
-    private var searchName: String? = null
+    lateinit var searchName: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         AndroidInjection.inject(this)
@@ -45,16 +45,16 @@ class TweetsActivity : AppCompatActivity() {
         setupObservers()
 
         initAdapter()
-        viewModel!!.getTweets(searchName!!)
+        viewModel.getTweets(searchName)
     }
 
     private fun setupObservers() {
-        viewModel!!.isLoading().observe(this, Observer {showLoader(it) })
-        viewModel!!.googleData().observe(this, Observer { processGoogleResponse(it!!) })
-        viewModel!!.tweetData().observe(this, Observer { processTweetsResponse(it!!) })
-        viewModel!!.tweetError().observe(this, Observer { processTweetsError(it!!) })
-        viewModel!!.googleError().observe(this, Observer { processGoogleError() })
-        viewModel!!.userNotFound().observe(this, Observer { userNotFound(it) })
+        viewModel.isLoading().observe(this, Observer {showLoader(it) })
+        viewModel.googleData().observe(this, Observer { processGoogleResponse(it!!) })
+        viewModel.tweetData().observe(this, Observer { processTweetsResponse(it!!) })
+        viewModel.tweetError().observe(this, Observer { processTweetsError(it!!) })
+        viewModel.googleError().observe(this, Observer { processGoogleError() })
+        viewModel.userNotFound().observe(this, Observer { userNotFound(it) })
     }
 
     private fun userNotFound(userNotFound: Boolean?) {
@@ -78,8 +78,9 @@ class TweetsActivity : AppCompatActivity() {
     private fun processTweetsError(throwable: Throwable) {
         error_msg_txt.visibility = View.VISIBLE
         retry_button.visibility = View.VISIBLE
+        loading_progress_bar.visibility = View.GONE
         throwable.message.let { error_msg_txt.text = throwable.message }
-        retry_button.setOnClickListener { viewModel!!.getTweets(searchName!!)}
+        retry_button.setOnClickListener { viewModel.getTweets(searchName)}
     }
 
     private fun noError(){
