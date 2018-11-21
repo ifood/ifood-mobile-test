@@ -29,7 +29,49 @@ dependencies {
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.0.2'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.0-alpha2'
+
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test:runner:1.1.0'
+    testImplementation 'androidx.test:core:1.0.0'
+
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+    androidTestImplementation "androidx.test.ext:junit:1.0.0"
+    androidTestImplementation 'androidx.test:runner:1.1.0'
+    androidTestImplementation 'androidx.test:rules:1.1.0'
+
+    implementation "com.google.android.material:material:1.0.0"
+
+    def lifecycle_version = "2.0.0"
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-livedata:$lifecycle_version"
+    kapt "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
+    testImplementation "androidx.arch.core:core-testing:$lifecycle_version"
+
+    def retrofit_version = "2.3.0"
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation "com.squareup.okhttp3:logging-interceptor:3.11.0"
+
+    def koin_version = "1.0.1"
+    implementation "org.koin:koin-android:$koin_version"
+    implementation "org.koin:koin-androidx-scope:$koin_version"
+    implementation "org.koin:koin-androidx-viewmodel:$koin_version"
+    testImplementation "org.koin:koin-android:$koin_version"
+    testImplementation "org.koin:koin-test:$koin_version"
+
+    def espresso_version = "3.1.0"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_version"
+    androidTestImplementation "androidx.test.espresso:espresso-intents:$espresso_version"
+    androidTestImplementation "androidx.test.espresso.idling:idling-concurrent:$espresso_version"
+    androidTestImplementation "androidx.test.espresso:espresso-idling-resource:$espresso_version"
+
+    // Others
+
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.3'
+    testImplementation "org.mockito:mockito-core:2.23.0"
+
 }
