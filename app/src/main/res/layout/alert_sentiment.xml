@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/analyzeParent"
+        android:gravity="center"
+        android:layout_gravity="center">
+
+    <TextView
+            android:textSize="50sp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:id="@+id/analyzeText"/>
+
+</LinearLayout>

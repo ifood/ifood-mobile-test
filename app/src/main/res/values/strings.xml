@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">IfoodTest</string>
+    <string name="search">For the sentiment analysis to be done, it will be necessary to inform a user to pick up their
+        respective tweets
+    </string>
+    <string name="type_username">Type username</string>
+    <string name="btnAnalyze">Analyze feeling</string>
+    <string name="loading">Loading...</string>
+    <string name="problem">Sorry we have some problem here\nYou can try again later</string>
+    <string name="invalid_username">You need write some username</string>
+</resources>
