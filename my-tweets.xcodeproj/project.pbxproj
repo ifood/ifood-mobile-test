@@ -59,7 +59,12 @@
 		D3C463B221A723EE00FC0CC8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C463B121A723EE00FC0CC8 /* User.swift */; };
 		D3C463B421A7240F00FC0CC8 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C463B321A7240F00FC0CC8 /* Tweet.swift */; };
 		D3C463B621A7242F00FC0CC8 /* Sentence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C463B521A7242F00FC0CC8 /* Sentence.swift */; };
-		D3C463B921A724B900FC0CC8 /* SentimentRM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C463B821A724B900FC0CC8 /* SentimentRM.swift */; };
+		D3C463B921A724B900FC0CC8 /* GoogleSentimentRM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C463B821A724B900FC0CC8 /* GoogleSentimentRM.swift */; };
+		D3C463BD21A72CF800FC0CC8 /* SentimentDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C463BC21A72CF800FC0CC8 /* SentimentDataSource.swift */; };
+		D3C463BF21A72DD400FC0CC8 /* TwitterDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C463BE21A72DD400FC0CC8 /* TwitterDataSource.swift */; };
+		D3C463C121A72E9F00FC0CC8 /* SentimentRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C463C021A72E9F00FC0CC8 /* SentimentRepository.swift */; };
+		D3C463C321A72F2700FC0CC8 /* SentimentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C463C221A72F2700FC0CC8 /* SentimentController.swift */; };
+		D3C463C521A730C800FC0CC8 /* UseCaseTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C463C421A730C800FC0CC8 /* UseCaseTypes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -117,7 +122,12 @@
 		D3C463B121A723EE00FC0CC8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D3C463B321A7240F00FC0CC8 /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 		D3C463B521A7242F00FC0CC8 /* Sentence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sentence.swift; sourceTree = "<group>"; };
-		D3C463B821A724B900FC0CC8 /* SentimentRM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentRM.swift; sourceTree = "<group>"; };
+		D3C463B821A724B900FC0CC8 /* GoogleSentimentRM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSentimentRM.swift; sourceTree = "<group>"; };
+		D3C463BC21A72CF800FC0CC8 /* SentimentDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentDataSource.swift; sourceTree = "<group>"; };
+		D3C463BE21A72DD400FC0CC8 /* TwitterDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterDataSource.swift; sourceTree = "<group>"; };
+		D3C463C021A72E9F00FC0CC8 /* SentimentRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentRepository.swift; sourceTree = "<group>"; };
+		D3C463C221A72F2700FC0CC8 /* SentimentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentController.swift; sourceTree = "<group>"; };
+		D3C463C421A730C800FC0CC8 /* UseCaseTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseTypes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,7 +217,6 @@
 			children = (
 				D3C4634421A7072800FC0CC8 /* Model */,
 				D3C4634321A7072500FC0CC8 /* Error */,
-				D3C4634221A7072200FC0CC8 /* Utility */,
 				D3C4634121A7072000FC0CC8 /* Controller */,
 				D3C4634021A7071900FC0CC8 /* Use Case */,
 			);
@@ -220,6 +229,8 @@
 				D3C4633F21A7060700FC0CC8 /* Utility */,
 				D3C4633E21A7060300FC0CC8 /* Repository */,
 				D3C4633D21A7060100FC0CC8 /* Remote */,
+				D3C463BC21A72CF800FC0CC8 /* SentimentDataSource.swift */,
+				D3C463BE21A72DD400FC0CC8 /* TwitterDataSource.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -244,6 +255,7 @@
 		D3C4633E21A7060300FC0CC8 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				D3C463C021A72E9F00FC0CC8 /* SentimentRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -259,6 +271,7 @@
 		D3C4634021A7071900FC0CC8 /* Use Case */ = {
 			isa = PBXGroup;
 			children = (
+				D3C463C421A730C800FC0CC8 /* UseCaseTypes.swift */,
 			);
 			path = "Use Case";
 			sourceTree = "<group>";
@@ -266,15 +279,9 @@
 		D3C4634121A7072000FC0CC8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D3C463C221A72F2700FC0CC8 /* SentimentController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		D3C4634221A7072200FC0CC8 /* Utility */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utility;
 			sourceTree = "<group>";
 		};
 		D3C4634321A7072500FC0CC8 /* Error */ = {
@@ -412,7 +419,7 @@
 		D3C463B721A7248300FC0CC8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D3C463B821A724B900FC0CC8 /* SentimentRM.swift */,
+				D3C463B821A724B900FC0CC8 /* GoogleSentimentRM.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -567,15 +574,18 @@
 				D3C463A621A7178000FC0CC8 /* TwitterProvider.swift in Sources */,
 				D3C4636021A70D9400FC0CC8 /* DisposableHolder.swift in Sources */,
 				D3C4636521A70E0400FC0CC8 /* EmptyErrorStateView.swift in Sources */,
-				D3C463B921A724B900FC0CC8 /* SentimentRM.swift in Sources */,
+				D3C463B921A724B900FC0CC8 /* GoogleSentimentRM.swift in Sources */,
 				D3C4636921A70F0100FC0CC8 /* UIView+Extensions.swift in Sources */,
 				D3C4637921A7113800FC0CC8 /* DependyInjection.swift in Sources */,
 				D3C4637721A7108A00FC0CC8 /* SceneTableViewAdapter.swift in Sources */,
 				D3C463B421A7240F00FC0CC8 /* Tweet.swift in Sources */,
+				D3C463C321A72F2700FC0CC8 /* SentimentController.swift in Sources */,
 				D3C463A821A7194C00FC0CC8 /* GoogleProvider.swift in Sources */,
+				D3C463C521A730C800FC0CC8 /* UseCaseTypes.swift in Sources */,
 				D3C4636D21A70FA900FC0CC8 /* UISearchBar+Extensions.swift in Sources */,
 				D3C4639F21A7164F00FC0CC8 /* R.generated.swift in Sources */,
 				D3C4636F21A70FCE00FC0CC8 /* SceneView.swift in Sources */,
+				D3C463C121A72E9F00FC0CC8 /* SentimentRepository.swift in Sources */,
 				D3C4636B21A70F2E00FC0CC8 /* UINavigationController+Custom.swift in Sources */,
 				D3C463A221A716F900FC0CC8 /* CachePolicyPlugin.swift in Sources */,
 				D3C463B021A722C400FC0CC8 /* RxSwift+Extensions.swift in Sources */,
@@ -585,6 +595,8 @@
 				D3C4635621A70CAE00FC0CC8 /* DomainError.swift in Sources */,
 				D3C4635C21A70D7100FC0CC8 /* Coordinator.swift in Sources */,
 				D3C4635E21A70D8400FC0CC8 /* NibLoadable.swift in Sources */,
+				D3C463BD21A72CF800FC0CC8 /* SentimentDataSource.swift in Sources */,
+				D3C463BF21A72DD400FC0CC8 /* TwitterDataSource.swift in Sources */,
 				D3C463B221A723EE00FC0CC8 /* User.swift in Sources */,
 				D3C463B621A7242F00FC0CC8 /* Sentence.swift in Sources */,
 				D3C4637321A7100700FC0CC8 /* LoadingStateDisplayer.swift in Sources */,

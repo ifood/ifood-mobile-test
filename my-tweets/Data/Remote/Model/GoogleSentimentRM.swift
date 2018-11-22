@@ -1,5 +1,5 @@
 //
-//  SentimentRM.swift
+//  GoogleSentimentRM.swift
 //  my-tweets
 //
 //  Created by Gabriel Catice on 22/11/18.
@@ -47,5 +47,11 @@ struct TextRM: Codable {
     enum CodingKeys: String, CodingKey {
         case beginOffset = "beginOffset"
         case content = "content"
+    }
+}
+
+extension GoogleSentimentRM {
+    func toSentenceDM(with sentence: String) -> Sentence {
+        return Sentence(text: sentence, score: documentSentiment?.score)
     }
 }
