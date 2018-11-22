@@ -14,12 +14,11 @@ import RxCocoa
 class EmptyErrorStateView: UIView {
     let disposebag = DisposeBag()
     
-    @IBOutlet var descriptionImage: UIImageView!
     @IBOutlet var descriptionLabel: UILabel!
     @IBOutlet var tryAgainButton: UIButton!
-    @IBOutlet var centerLayoutConstraint: NSLayoutConstraint!
     
     private var onDidTryAgainSubject: PublishSubject<Void> = PublishSubject<Void>()
+    
     var onDidTryAgain: Observable<Void> { return onDidTryAgainSubject }
     
     var message = ""
@@ -44,11 +43,9 @@ class EmptyErrorStateView: UIView {
         loadNibContent()
     }
     
-    func configure(message: String, icon: UIImage? /*= R.image.icServidor()*/, shouldHideButton: Bool = true, centerOffset: CGFloat = 0) {
+    func configure(message: String, shouldHideButton: Bool = true, centerOffset: CGFloat = 0) {
         self.message = message
         self.shouldHideButton = shouldHideButton
-        descriptionImage.image = icon
-        centerLayoutConstraint.constant = -centerOffset
         
         tryAgainButton.rx.tap.asObservable().do(onNext: { [unowned self] _ in
             self.removeFromSuperview()

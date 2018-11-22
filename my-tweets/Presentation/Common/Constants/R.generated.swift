@@ -83,12 +83,20 @@ struct R: Rswift.Validatable {
   
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 4 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 8 localization keys.
     struct localizable {
+      /// en translation: Error
+      /// 
+      /// Locales: en
+      static let generic_error_title = Rswift.StringResource(key: "generic_error_title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: GIuEde4dv1J8D7IVL3DcIo33N
       /// 
       /// Locales: en
       static let costumer_key = Rswift.StringResource(key: "costumer_key", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: OK
+      /// 
+      /// Locales: en
+      static let ok = Rswift.StringResource(key: "ok", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: P3wIJ3ycjPInBS4llox8bken43YUccfDuuI5pHQBfbg1hyOKI7
       /// 
       /// Locales: en
@@ -101,12 +109,34 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en
       static let tweets = Rswift.StringResource(key: "tweets", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Unable to connect :(. Please verify your internet connection and try again.
+      /// 
+      /// Locales: en
+      static let check_your_internet_connection = Rswift.StringResource(key: "check_your_internet_connection", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Unable to stablish communication :(. Try again later.
+      /// 
+      /// Locales: en
+      static let generic_error = Rswift.StringResource(key: "generic_error", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      
+      /// en translation: Error
+      /// 
+      /// Locales: en
+      static func generic_error_title(_: Void = ()) -> String {
+        return NSLocalizedString("generic_error_title", bundle: R.hostingBundle, comment: "")
+      }
       
       /// en translation: GIuEde4dv1J8D7IVL3DcIo33N
       /// 
       /// Locales: en
       static func costumer_key(_: Void = ()) -> String {
         return NSLocalizedString("costumer_key", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: OK
+      /// 
+      /// Locales: en
+      static func ok(_: Void = ()) -> String {
+        return NSLocalizedString("ok", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: P3wIJ3ycjPInBS4llox8bken43YUccfDuuI5pHQBfbg1hyOKI7
@@ -128,6 +158,20 @@ struct R: Rswift.Validatable {
       /// Locales: en
       static func tweets(_: Void = ()) -> String {
         return NSLocalizedString("tweets", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Unable to connect :(. Please verify your internet connection and try again.
+      /// 
+      /// Locales: en
+      static func check_your_internet_connection(_: Void = ()) -> String {
+        return NSLocalizedString("check_your_internet_connection", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Unable to stablish communication :(. Try again later.
+      /// 
+      /// Locales: en
+      static func generic_error(_: Void = ()) -> String {
+        return NSLocalizedString("generic_error", bundle: R.hostingBundle, comment: "")
       }
       
       fileprivate init() {}
