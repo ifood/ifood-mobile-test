@@ -56,6 +56,10 @@
 		D3C463AC21A71A3D00FC0CC8 /* ErrorMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C463AB21A71A3D00FC0CC8 /* ErrorMapper.swift */; };
 		D3C463AE21A7217000FC0CC8 /* ObversableType+Moya.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C463AD21A7217000FC0CC8 /* ObversableType+Moya.swift */; };
 		D3C463B021A722C400FC0CC8 /* RxSwift+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C463AF21A722C400FC0CC8 /* RxSwift+Extensions.swift */; };
+		D3C463B221A723EE00FC0CC8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C463B121A723EE00FC0CC8 /* User.swift */; };
+		D3C463B421A7240F00FC0CC8 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C463B321A7240F00FC0CC8 /* Tweet.swift */; };
+		D3C463B621A7242F00FC0CC8 /* Sentence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C463B521A7242F00FC0CC8 /* Sentence.swift */; };
+		D3C463B921A724B900FC0CC8 /* SentimentRM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C463B821A724B900FC0CC8 /* SentimentRM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,6 +114,10 @@
 		D3C463AB21A71A3D00FC0CC8 /* ErrorMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMapper.swift; sourceTree = "<group>"; };
 		D3C463AD21A7217000FC0CC8 /* ObversableType+Moya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObversableType+Moya.swift"; sourceTree = "<group>"; };
 		D3C463AF21A722C400FC0CC8 /* RxSwift+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RxSwift+Extensions.swift"; sourceTree = "<group>"; };
+		D3C463B121A723EE00FC0CC8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D3C463B321A7240F00FC0CC8 /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
+		D3C463B521A7242F00FC0CC8 /* Sentence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sentence.swift; sourceTree = "<group>"; };
+		D3C463B821A724B900FC0CC8 /* SentimentRM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentRM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +235,7 @@
 		D3C4633D21A7060100FC0CC8 /* Remote */ = {
 			isa = PBXGroup;
 			children = (
+				D3C463B721A7248300FC0CC8 /* Model */,
 				D3C463A021A716E600FC0CC8 /* Provider */,
 			);
 			path = Remote;
@@ -279,6 +288,9 @@
 		D3C4634421A7072800FC0CC8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D3C463B121A723EE00FC0CC8 /* User.swift */,
+				D3C463B321A7240F00FC0CC8 /* Tweet.swift */,
+				D3C463B521A7242F00FC0CC8 /* Sentence.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -395,6 +407,14 @@
 				D3C463A721A7194C00FC0CC8 /* GoogleProvider.swift */,
 			);
 			path = Provider;
+			sourceTree = "<group>";
+		};
+		D3C463B721A7248300FC0CC8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D3C463B821A724B900FC0CC8 /* SentimentRM.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -547,9 +567,11 @@
 				D3C463A621A7178000FC0CC8 /* TwitterProvider.swift in Sources */,
 				D3C4636021A70D9400FC0CC8 /* DisposableHolder.swift in Sources */,
 				D3C4636521A70E0400FC0CC8 /* EmptyErrorStateView.swift in Sources */,
+				D3C463B921A724B900FC0CC8 /* SentimentRM.swift in Sources */,
 				D3C4636921A70F0100FC0CC8 /* UIView+Extensions.swift in Sources */,
 				D3C4637921A7113800FC0CC8 /* DependyInjection.swift in Sources */,
 				D3C4637721A7108A00FC0CC8 /* SceneTableViewAdapter.swift in Sources */,
+				D3C463B421A7240F00FC0CC8 /* Tweet.swift in Sources */,
 				D3C463A821A7194C00FC0CC8 /* GoogleProvider.swift in Sources */,
 				D3C4636D21A70FA900FC0CC8 /* UISearchBar+Extensions.swift in Sources */,
 				D3C4639F21A7164F00FC0CC8 /* R.generated.swift in Sources */,
@@ -563,6 +585,8 @@
 				D3C4635621A70CAE00FC0CC8 /* DomainError.swift in Sources */,
 				D3C4635C21A70D7100FC0CC8 /* Coordinator.swift in Sources */,
 				D3C4635E21A70D8400FC0CC8 /* NibLoadable.swift in Sources */,
+				D3C463B221A723EE00FC0CC8 /* User.swift in Sources */,
+				D3C463B621A7242F00FC0CC8 /* Sentence.swift in Sources */,
 				D3C4637321A7100700FC0CC8 /* LoadingStateDisplayer.swift in Sources */,
 				D3C4636721A70EA200FC0CC8 /* UIView+IB.swift in Sources */,
 				D3C4632521A7040400FC0CC8 /* AppDelegate.swift in Sources */,
