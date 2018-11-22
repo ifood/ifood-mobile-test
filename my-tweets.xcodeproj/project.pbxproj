@@ -179,9 +179,9 @@
 			isa = PBXGroup;
 			children = (
 				D3C4633621A704D500FC0CC8 /* Application */,
-				D3C4633921A704ED00FC0CC8 /* Data */,
 				D3C4633821A704E500FC0CC8 /* Domain */,
 				D3C4633721A704DD00FC0CC8 /* Presentation */,
+				D3C4633921A704ED00FC0CC8 /* Store */,
 			);
 			path = "my-tweets";
 			sourceTree = "<group>";
@@ -223,7 +223,7 @@
 			path = Domain;
 			sourceTree = "<group>";
 		};
-		D3C4633921A704ED00FC0CC8 /* Data */ = {
+		D3C4633921A704ED00FC0CC8 /* Store */ = {
 			isa = PBXGroup;
 			children = (
 				D3C4633F21A7060700FC0CC8 /* Utility */,
@@ -232,7 +232,7 @@
 				D3C463BC21A72CF800FC0CC8 /* SentimentDataSource.swift */,
 				D3C463BE21A72DD400FC0CC8 /* TwitterDataSource.swift */,
 			);
-			path = Data;
+			path = Store;
 			sourceTree = "<group>";
 		};
 		D3C4633A21A7051F00FC0CC8 /* Dependency Injection */ = {
