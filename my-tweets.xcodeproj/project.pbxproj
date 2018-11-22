@@ -10,8 +10,44 @@
 		D3C4632521A7040400FC0CC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4632421A7040400FC0CC8 /* AppDelegate.swift */; };
 		D3C4632C21A7040500FC0CC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3C4632B21A7040500FC0CC8 /* Assets.xcassets */; };
 		D3C4632F21A7040500FC0CC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3C4632D21A7040500FC0CC8 /* LaunchScreen.storyboard */; };
-		D3C4633C21A7053B00FC0CC8 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = D3C4633B21A7053B00FC0CC8 /* Cartfile */; };
 		D3C4634D21A707F000FC0CC8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D3C4634F21A707F000FC0CC8 /* Localizable.strings */; };
+		D3C4635421A70BCF00FC0CC8 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = D3C4635321A70BCE00FC0CC8 /* Cartfile */; };
+		D3C4635621A70CAE00FC0CC8 /* DomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4635521A70CAE00FC0CC8 /* DomainError.swift */; };
+		D3C4635821A70D2D00FC0CC8 /* ApplicationConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4635721A70D2D00FC0CC8 /* ApplicationConfigurator.swift */; };
+		D3C4635A21A70D4D00FC0CC8 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4635921A70D4D00FC0CC8 /* ApplicationCoordinator.swift */; };
+		D3C4635C21A70D7100FC0CC8 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4635B21A70D7100FC0CC8 /* Coordinator.swift */; };
+		D3C4635E21A70D8400FC0CC8 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4635D21A70D8400FC0CC8 /* NibLoadable.swift */; };
+		D3C4636021A70D9400FC0CC8 /* DisposableHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4635F21A70D9400FC0CC8 /* DisposableHolder.swift */; };
+		D3C4636321A70DED00FC0CC8 /* EmptyErrorStateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3C4636221A70DED00FC0CC8 /* EmptyErrorStateView.xib */; };
+		D3C4636521A70E0400FC0CC8 /* EmptyErrorStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4636421A70E0400FC0CC8 /* EmptyErrorStateView.swift */; };
+		D3C4636721A70EA200FC0CC8 /* UIView+IB.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4636621A70EA200FC0CC8 /* UIView+IB.swift */; };
+		D3C4636921A70F0100FC0CC8 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4636821A70F0100FC0CC8 /* UIView+Extensions.swift */; };
+		D3C4636B21A70F2E00FC0CC8 /* UINavigationController+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4636A21A70F2D00FC0CC8 /* UINavigationController+Custom.swift */; };
+		D3C4636D21A70FA900FC0CC8 /* UISearchBar+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4636C21A70FA900FC0CC8 /* UISearchBar+Extensions.swift */; };
+		D3C4636F21A70FCE00FC0CC8 /* SceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4636E21A70FCE00FC0CC8 /* SceneView.swift */; };
+		D3C4637121A70FE800FC0CC8 /* ScenePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4637021A70FE800FC0CC8 /* ScenePresenter.swift */; };
+		D3C4637321A7100700FC0CC8 /* LoadingStateDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4637221A7100700FC0CC8 /* LoadingStateDisplayer.swift */; };
+		D3C4637521A7103A00FC0CC8 /* ErrorDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4637421A7103A00FC0CC8 /* ErrorDisplayer.swift */; };
+		D3C4637721A7108A00FC0CC8 /* SceneTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4637621A7108A00FC0CC8 /* SceneTableViewAdapter.swift */; };
+		D3C4637921A7113800FC0CC8 /* DependyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4637821A7113800FC0CC8 /* DependyInjection.swift */; };
+		D3C4638D21A7139F00FC0CC8 /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C4637C21A7139E00FC0CC8 /* Swinject.framework */; };
+		D3C4638E21A7139F00FC0CC8 /* ReactiveMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C4637D21A7139E00FC0CC8 /* ReactiveMoya.framework */; };
+		D3C4638F21A7139F00FC0CC8 /* IQKeyboardManagerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C4637E21A7139E00FC0CC8 /* IQKeyboardManagerSwift.framework */; };
+		D3C4639021A7139F00FC0CC8 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C4637F21A7139E00FC0CC8 /* Moya.framework */; };
+		D3C4639121A7139F00FC0CC8 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C4638021A7139E00FC0CC8 /* Result.framework */; };
+		D3C4639221A7139F00FC0CC8 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C4638121A7139E00FC0CC8 /* ReactiveSwift.framework */; };
+		D3C4639321A7139F00FC0CC8 /* IQKeyboardManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C4638221A7139E00FC0CC8 /* IQKeyboardManager.framework */; };
+		D3C4639421A7139F00FC0CC8 /* SwinjectAutoregistration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C4638321A7139E00FC0CC8 /* SwinjectAutoregistration.framework */; };
+		D3C4639521A7139F00FC0CC8 /* Rswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C4638421A7139F00FC0CC8 /* Rswift.framework */; };
+		D3C4639621A7139F00FC0CC8 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C4638521A7139F00FC0CC8 /* TwitterKit.framework */; };
+		D3C4639721A7139F00FC0CC8 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C4638621A7139F00FC0CC8 /* RxCocoa.framework */; };
+		D3C4639821A7139F00FC0CC8 /* RxMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C4638721A7139F00FC0CC8 /* RxMoya.framework */; };
+		D3C4639921A7139F00FC0CC8 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C4638821A7139F00FC0CC8 /* RxSwift.framework */; };
+		D3C4639A21A7139F00FC0CC8 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C4638921A7139F00FC0CC8 /* Kingfisher.framework */; };
+		D3C4639B21A7139F00FC0CC8 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C4638A21A7139F00FC0CC8 /* SnapKit.framework */; };
+		D3C4639C21A7139F00FC0CC8 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C4638B21A7139F00FC0CC8 /* Alamofire.framework */; };
+		D3C4639D21A714A500FC0CC8 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C4637B21A7139E00FC0CC8 /* TwitterCore.framework */; };
+		D3C4639F21A7164F00FC0CC8 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4639E21A7164F00FC0CC8 /* R.generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,8 +56,44 @@
 		D3C4632B21A7040500FC0CC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3C4632E21A7040500FC0CC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3C4633021A7040500FC0CC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D3C4633B21A7053B00FC0CC8 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		D3C4634E21A707F000FC0CC8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D3C4635321A70BCE00FC0CC8 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = SOURCE_ROOT; };
+		D3C4635521A70CAE00FC0CC8 /* DomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainError.swift; sourceTree = "<group>"; };
+		D3C4635721A70D2D00FC0CC8 /* ApplicationConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationConfigurator.swift; sourceTree = "<group>"; };
+		D3C4635921A70D4D00FC0CC8 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		D3C4635B21A70D7100FC0CC8 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		D3C4635D21A70D8400FC0CC8 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		D3C4635F21A70D9400FC0CC8 /* DisposableHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisposableHolder.swift; sourceTree = "<group>"; };
+		D3C4636221A70DED00FC0CC8 /* EmptyErrorStateView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyErrorStateView.xib; sourceTree = "<group>"; };
+		D3C4636421A70E0400FC0CC8 /* EmptyErrorStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyErrorStateView.swift; sourceTree = "<group>"; };
+		D3C4636621A70EA200FC0CC8 /* UIView+IB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+IB.swift"; sourceTree = "<group>"; };
+		D3C4636821A70F0100FC0CC8 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		D3C4636A21A70F2D00FC0CC8 /* UINavigationController+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Custom.swift"; sourceTree = "<group>"; };
+		D3C4636C21A70FA900FC0CC8 /* UISearchBar+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISearchBar+Extensions.swift"; sourceTree = "<group>"; };
+		D3C4636E21A70FCE00FC0CC8 /* SceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneView.swift; sourceTree = "<group>"; };
+		D3C4637021A70FE800FC0CC8 /* ScenePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenePresenter.swift; sourceTree = "<group>"; };
+		D3C4637221A7100700FC0CC8 /* LoadingStateDisplayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingStateDisplayer.swift; sourceTree = "<group>"; };
+		D3C4637421A7103A00FC0CC8 /* ErrorDisplayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorDisplayer.swift; sourceTree = "<group>"; };
+		D3C4637621A7108A00FC0CC8 /* SceneTableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneTableViewAdapter.swift; sourceTree = "<group>"; };
+		D3C4637821A7113800FC0CC8 /* DependyInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependyInjection.swift; sourceTree = "<group>"; };
+		D3C4637B21A7139E00FC0CC8 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TwitterCore.framework; path = Carthage/Build/iOS/TwitterCore.framework; sourceTree = "<group>"; };
+		D3C4637C21A7139E00FC0CC8 /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
+		D3C4637D21A7139E00FC0CC8 /* ReactiveMoya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveMoya.framework; path = Carthage/Build/iOS/ReactiveMoya.framework; sourceTree = "<group>"; };
+		D3C4637E21A7139E00FC0CC8 /* IQKeyboardManagerSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IQKeyboardManagerSwift.framework; path = Carthage/Build/iOS/IQKeyboardManagerSwift.framework; sourceTree = "<group>"; };
+		D3C4637F21A7139E00FC0CC8 /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = Carthage/Build/iOS/Moya.framework; sourceTree = "<group>"; };
+		D3C4638021A7139E00FC0CC8 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		D3C4638121A7139E00FC0CC8 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
+		D3C4638221A7139E00FC0CC8 /* IQKeyboardManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IQKeyboardManager.framework; path = Carthage/Build/iOS/IQKeyboardManager.framework; sourceTree = "<group>"; };
+		D3C4638321A7139E00FC0CC8 /* SwinjectAutoregistration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwinjectAutoregistration.framework; path = Carthage/Build/iOS/SwinjectAutoregistration.framework; sourceTree = "<group>"; };
+		D3C4638421A7139F00FC0CC8 /* Rswift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Rswift.framework; path = Carthage/Build/iOS/Rswift.framework; sourceTree = "<group>"; };
+		D3C4638521A7139F00FC0CC8 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TwitterKit.framework; path = Carthage/Build/iOS/TwitterKit.framework; sourceTree = "<group>"; };
+		D3C4638621A7139F00FC0CC8 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		D3C4638721A7139F00FC0CC8 /* RxMoya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxMoya.framework; path = Carthage/Build/iOS/RxMoya.framework; sourceTree = "<group>"; };
+		D3C4638821A7139F00FC0CC8 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		D3C4638921A7139F00FC0CC8 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		D3C4638A21A7139F00FC0CC8 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
+		D3C4638B21A7139F00FC0CC8 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		D3C4639E21A7164F00FC0CC8 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +101,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3C4639D21A714A500FC0CC8 /* TwitterCore.framework in Frameworks */,
+				D3C4638D21A7139F00FC0CC8 /* Swinject.framework in Frameworks */,
+				D3C4638E21A7139F00FC0CC8 /* ReactiveMoya.framework in Frameworks */,
+				D3C4638F21A7139F00FC0CC8 /* IQKeyboardManagerSwift.framework in Frameworks */,
+				D3C4639021A7139F00FC0CC8 /* Moya.framework in Frameworks */,
+				D3C4639121A7139F00FC0CC8 /* Result.framework in Frameworks */,
+				D3C4639221A7139F00FC0CC8 /* ReactiveSwift.framework in Frameworks */,
+				D3C4639321A7139F00FC0CC8 /* IQKeyboardManager.framework in Frameworks */,
+				D3C4639421A7139F00FC0CC8 /* SwinjectAutoregistration.framework in Frameworks */,
+				D3C4639521A7139F00FC0CC8 /* Rswift.framework in Frameworks */,
+				D3C4639621A7139F00FC0CC8 /* TwitterKit.framework in Frameworks */,
+				D3C4639721A7139F00FC0CC8 /* RxCocoa.framework in Frameworks */,
+				D3C4639821A7139F00FC0CC8 /* RxMoya.framework in Frameworks */,
+				D3C4639921A7139F00FC0CC8 /* RxSwift.framework in Frameworks */,
+				D3C4639A21A7139F00FC0CC8 /* Kingfisher.framework in Frameworks */,
+				D3C4639B21A7139F00FC0CC8 /* SnapKit.framework in Frameworks */,
+				D3C4639C21A7139F00FC0CC8 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +129,7 @@
 			children = (
 				D3C4632321A7040400FC0CC8 /* my-tweets */,
 				D3C4632221A7040400FC0CC8 /* Products */,
+				D3C4637A21A7139D00FC0CC8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,10 +157,12 @@
 			children = (
 				D3C4633A21A7051F00FC0CC8 /* Dependency Injection */,
 				D3C4632421A7040400FC0CC8 /* AppDelegate.swift */,
+				D3C4635721A70D2D00FC0CC8 /* ApplicationConfigurator.swift */,
+				D3C4635921A70D4D00FC0CC8 /* ApplicationCoordinator.swift */,
 				D3C4632B21A7040500FC0CC8 /* Assets.xcassets */,
 				D3C4633021A7040500FC0CC8 /* Info.plist */,
 				D3C4632D21A7040500FC0CC8 /* LaunchScreen.storyboard */,
-				D3C4633B21A7053B00FC0CC8 /* Cartfile */,
+				D3C4635321A70BCE00FC0CC8 /* Cartfile */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -110,6 +202,7 @@
 		D3C4633A21A7051F00FC0CC8 /* Dependency Injection */ = {
 			isa = PBXGroup;
 			children = (
+				D3C4637821A7113800FC0CC8 /* DependyInjection.swift */,
 			);
 			path = "Dependency Injection";
 			sourceTree = "<group>";
@@ -159,6 +252,7 @@
 		D3C4634321A7072500FC0CC8 /* Error */ = {
 			isa = PBXGroup;
 			children = (
+				D3C4635521A70CAE00FC0CC8 /* DomainError.swift */,
 			);
 			path = Error;
 			sourceTree = "<group>";
@@ -181,10 +275,14 @@
 		D3C4634621A7076100FC0CC8 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				D3C4636121A70DD200FC0CC8 /* Error View */,
 				D3C4634A21A707BD00FC0CC8 /* Constants */,
 				D3C4634921A7078F00FC0CC8 /* Extensions */,
 				D3C4634821A7078C00FC0CC8 /* Scene */,
 				D3C4634F21A707F000FC0CC8 /* Localizable.strings */,
+				D3C4635B21A70D7100FC0CC8 /* Coordinator.swift */,
+				D3C4635D21A70D8400FC0CC8 /* NibLoadable.swift */,
+				D3C4635F21A70D9400FC0CC8 /* DisposableHolder.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -199,6 +297,11 @@
 		D3C4634821A7078C00FC0CC8 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				D3C4636E21A70FCE00FC0CC8 /* SceneView.swift */,
+				D3C4637021A70FE800FC0CC8 /* ScenePresenter.swift */,
+				D3C4637221A7100700FC0CC8 /* LoadingStateDisplayer.swift */,
+				D3C4637421A7103A00FC0CC8 /* ErrorDisplayer.swift */,
+				D3C4637621A7108A00FC0CC8 /* SceneTableViewAdapter.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -206,6 +309,10 @@
 		D3C4634921A7078F00FC0CC8 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				D3C4636621A70EA200FC0CC8 /* UIView+IB.swift */,
+				D3C4636821A70F0100FC0CC8 /* UIView+Extensions.swift */,
+				D3C4636A21A70F2D00FC0CC8 /* UINavigationController+Custom.swift */,
+				D3C4636C21A70FA900FC0CC8 /* UISearchBar+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -213,6 +320,7 @@
 		D3C4634A21A707BD00FC0CC8 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				D3C4639E21A7164F00FC0CC8 /* R.generated.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -224,6 +332,39 @@
 			path = "Depdency Injection";
 			sourceTree = "<group>";
 		};
+		D3C4636121A70DD200FC0CC8 /* Error View */ = {
+			isa = PBXGroup;
+			children = (
+				D3C4636221A70DED00FC0CC8 /* EmptyErrorStateView.xib */,
+				D3C4636421A70E0400FC0CC8 /* EmptyErrorStateView.swift */,
+			);
+			path = "Error View";
+			sourceTree = "<group>";
+		};
+		D3C4637A21A7139D00FC0CC8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D3C4638B21A7139F00FC0CC8 /* Alamofire.framework */,
+				D3C4638221A7139E00FC0CC8 /* IQKeyboardManager.framework */,
+				D3C4637E21A7139E00FC0CC8 /* IQKeyboardManagerSwift.framework */,
+				D3C4638921A7139F00FC0CC8 /* Kingfisher.framework */,
+				D3C4637F21A7139E00FC0CC8 /* Moya.framework */,
+				D3C4637D21A7139E00FC0CC8 /* ReactiveMoya.framework */,
+				D3C4638121A7139E00FC0CC8 /* ReactiveSwift.framework */,
+				D3C4638021A7139E00FC0CC8 /* Result.framework */,
+				D3C4638421A7139F00FC0CC8 /* Rswift.framework */,
+				D3C4638621A7139F00FC0CC8 /* RxCocoa.framework */,
+				D3C4638721A7139F00FC0CC8 /* RxMoya.framework */,
+				D3C4638821A7139F00FC0CC8 /* RxSwift.framework */,
+				D3C4638A21A7139F00FC0CC8 /* SnapKit.framework */,
+				D3C4637C21A7139E00FC0CC8 /* Swinject.framework */,
+				D3C4638321A7139E00FC0CC8 /* SwinjectAutoregistration.framework */,
+				D3C4637B21A7139E00FC0CC8 /* TwitterCore.framework */,
+				D3C4638521A7139F00FC0CC8 /* TwitterKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -231,6 +372,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3C4633321A7040500FC0CC8 /* Build configuration list for PBXNativeTarget "my-tweets" */;
 			buildPhases = (
+				D3C4635221A70B0600FC0CC8 /* Run Script - Carthage */,
+				D3C4635121A70AE300FC0CC8 /* Run Script - R.swift */,
 				D3C4631D21A7040400FC0CC8 /* Sources */,
 				D3C4631E21A7040400FC0CC8 /* Frameworks */,
 				D3C4631F21A7040400FC0CC8 /* Resources */,
@@ -282,7 +425,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3C4633C21A7053B00FC0CC8 /* Cartfile in Resources */,
+				D3C4635421A70BCF00FC0CC8 /* Cartfile in Resources */,
+				D3C4636321A70DED00FC0CC8 /* EmptyErrorStateView.xib in Resources */,
 				D3C4634D21A707F000FC0CC8 /* Localizable.strings in Resources */,
 				D3C4632F21A7040500FC0CC8 /* LaunchScreen.storyboard in Resources */,
 				D3C4632C21A7040500FC0CC8 /* Assets.xcassets in Resources */,
@@ -291,12 +435,101 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D3C4635121A70AE300FC0CC8 /* Run Script - R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script - R.swift";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$SRCROOT/rswift/rswift\" \"$SRCROOT/my-tweets/Presentation/Common/Constants\"\n";
+		};
+		D3C4635221A70B0600FC0CC8 /* Run Script - Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/TwitterCore.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/TwitterKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Moya.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveMoya.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Swinject.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwinjectAutoregistration.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxMoya.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Rswift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/IQKeyboardManagerSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
+			);
+			name = "Run Script - Carthage";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/TwitterCore.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/TwitterKit.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Moya.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ReactiveMoya.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ReactiveSwift.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Result.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxCocoa.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Swinject.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SwinjectAutoregistration.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxMoya.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Rswift.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SnapKit.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/IQKeyboardManagerSwift.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Kingfisher.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D3C4631D21A7040400FC0CC8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3C4636021A70D9400FC0CC8 /* DisposableHolder.swift in Sources */,
+				D3C4636521A70E0400FC0CC8 /* EmptyErrorStateView.swift in Sources */,
+				D3C4636921A70F0100FC0CC8 /* UIView+Extensions.swift in Sources */,
+				D3C4637921A7113800FC0CC8 /* DependyInjection.swift in Sources */,
+				D3C4637721A7108A00FC0CC8 /* SceneTableViewAdapter.swift in Sources */,
+				D3C4636D21A70FA900FC0CC8 /* UISearchBar+Extensions.swift in Sources */,
+				D3C4639F21A7164F00FC0CC8 /* R.generated.swift in Sources */,
+				D3C4636F21A70FCE00FC0CC8 /* SceneView.swift in Sources */,
+				D3C4636B21A70F2E00FC0CC8 /* UINavigationController+Custom.swift in Sources */,
+				D3C4637521A7103A00FC0CC8 /* ErrorDisplayer.swift in Sources */,
+				D3C4635821A70D2D00FC0CC8 /* ApplicationConfigurator.swift in Sources */,
+				D3C4635621A70CAE00FC0CC8 /* DomainError.swift in Sources */,
+				D3C4635C21A70D7100FC0CC8 /* Coordinator.swift in Sources */,
+				D3C4635E21A70D8400FC0CC8 /* NibLoadable.swift in Sources */,
+				D3C4637321A7100700FC0CC8 /* LoadingStateDisplayer.swift in Sources */,
+				D3C4636721A70EA200FC0CC8 /* UIView+IB.swift in Sources */,
 				D3C4632521A7040400FC0CC8 /* AppDelegate.swift in Sources */,
+				D3C4635A21A70D4D00FC0CC8 /* ApplicationCoordinator.swift in Sources */,
+				D3C4637121A70FE800FC0CC8 /* ScenePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,7 +677,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B6RLX3H7J8;
-				INFOPLIST_FILE = "my-tweets/Info.plist";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/my-tweets/Application/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -462,7 +700,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B6RLX3H7J8;
-				INFOPLIST_FILE = "my-tweets/Info.plist";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/my-tweets/Application/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

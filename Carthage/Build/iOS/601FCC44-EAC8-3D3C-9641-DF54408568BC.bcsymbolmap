@@ -1,0 +1,768 @@
+BCSymbolMap Version: 2.0
+-[UIView(IQ_UIView_Hierarchy) viewContainingController]
+-[UIView(IQ_UIView_Hierarchy) topMostController]
+-[UIView(IQ_UIView_Hierarchy) parentContainerViewController]
+-[UIView(IQ_UIView_Hierarchy) superviewOfClassType:]
+-[UIView(IQ_UIView_Hierarchy) _IQcanBecomeFirstResponder]
+-[UIView(IQ_UIView_Hierarchy) responderSiblings]
+-[UIView(IQ_UIView_Hierarchy) deepResponderViews]
+___49-[UIView(IQ_UIView_Hierarchy) deepResponderViews]_block_invoke
+___copy_helper_block_
+___destroy_helper_block_
+-[UIView(IQ_UIView_Hierarchy) convertTransformToView:]
+-[UIView(IQ_UIView_Hierarchy) depth]
+-[UIView(IQ_UIView_Hierarchy) subHierarchy]
+-[UIView(IQ_UIView_Hierarchy) superHierarchy]
+-[UIView(IQ_UIView_Hierarchy) debugHierarchy]
+-[UIView(IQ_UIView_Hierarchy) textFieldSearchBar]
+-[UIView(IQ_UIView_Hierarchy) isAlertViewTextField]
+-[UIViewController(IQ_UIView_Hierarchy) parentIQContainerViewController]
+-[NSObject(IQ_Logging) _IQDescription]
+___block_descriptor_tmp
+Apple LLVM version 10.0.0 (clang-1000.11.45.5)
+/Users/gabrielcatice/ifood-mobile-test/Carthage/Checkouts/IQKeyboardManager/IQKeyboardManager/Categories/IQUIView+Hierarchy.m
+/Users/gabrielcatice/ifood-mobile-test/Carthage/Checkouts/IQKeyboardManager
+__destroy_helper_block_
+__copy_helper_block_
+__49-[UIView(IQ_UIView_Hierarchy) deepResponderViews]_block_invoke
+-[IQTextFieldViewInfoModal initWithTextFieldView:textFieldDelegate:textViewDelegate:originalReturnKey:]
+-[IQTextFieldViewInfoModal textFieldView]
+-[IQTextFieldViewInfoModal setTextFieldView:]
+-[IQTextFieldViewInfoModal textFieldDelegate]
+-[IQTextFieldViewInfoModal setTextFieldDelegate:]
+-[IQTextFieldViewInfoModal textViewDelegate]
+-[IQTextFieldViewInfoModal setTextViewDelegate:]
+-[IQTextFieldViewInfoModal originalReturnKeyType]
+-[IQTextFieldViewInfoModal setOriginalReturnKeyType:]
+-[IQTextFieldViewInfoModal .cxx_destruct]
+-[IQKeyboardReturnKeyHandler init]
+-[IQKeyboardReturnKeyHandler initWithViewController:]
+-[IQKeyboardReturnKeyHandler textFieldViewCachedInfo:]
+-[IQKeyboardReturnKeyHandler addResponderFromView:]
+-[IQKeyboardReturnKeyHandler removeResponderFromView:]
+-[IQKeyboardReturnKeyHandler removeTextFieldView:]
+-[IQKeyboardReturnKeyHandler addTextFieldView:]
+-[IQKeyboardReturnKeyHandler updateReturnKeyTypeOnTextField:]
+-[IQKeyboardReturnKeyHandler goToNextResponderOrResign:]
+-[IQKeyboardReturnKeyHandler textFieldShouldBeginEditing:]
+-[IQKeyboardReturnKeyHandler textFieldDidBeginEditing:]
+-[IQKeyboardReturnKeyHandler textFieldShouldEndEditing:]
+-[IQKeyboardReturnKeyHandler textFieldDidEndEditing:]
+-[IQKeyboardReturnKeyHandler textFieldDidEndEditing:reason:]
+-[IQKeyboardReturnKeyHandler textField:shouldChangeCharactersInRange:replacementString:]
+-[IQKeyboardReturnKeyHandler textFieldShouldClear:]
+-[IQKeyboardReturnKeyHandler textFieldShouldReturn:]
+-[IQKeyboardReturnKeyHandler textViewShouldBeginEditing:]
+-[IQKeyboardReturnKeyHandler textViewShouldEndEditing:]
+-[IQKeyboardReturnKeyHandler textViewDidBeginEditing:]
+-[IQKeyboardReturnKeyHandler textViewDidEndEditing:]
+-[IQKeyboardReturnKeyHandler textView:shouldChangeTextInRange:replacementText:]
+-[IQKeyboardReturnKeyHandler textViewDidChange:]
+-[IQKeyboardReturnKeyHandler textViewDidChangeSelection:]
+-[IQKeyboardReturnKeyHandler textView:shouldInteractWithURL:inRange:interaction:]
+-[IQKeyboardReturnKeyHandler textView:shouldInteractWithTextAttachment:inRange:interaction:]
+-[IQKeyboardReturnKeyHandler textView:shouldInteractWithURL:inRange:]
+-[IQKeyboardReturnKeyHandler textView:shouldInteractWithTextAttachment:inRange:]
+-[IQKeyboardReturnKeyHandler dealloc]
+-[IQKeyboardReturnKeyHandler lastTextFieldReturnKeyType]
+-[IQKeyboardReturnKeyHandler setLastTextFieldReturnKeyType:]
+-[IQKeyboardReturnKeyHandler delegate]
+-[IQKeyboardReturnKeyHandler setDelegate:]
+-[IQKeyboardReturnKeyHandler .cxx_destruct]
+___clang_at_available_requires_core_foundation_framework
+_OBJC_IVAR_$_IQTextFieldViewInfoModal._textFieldView
+_OBJC_IVAR_$_IQTextFieldViewInfoModal._textFieldDelegate
+_OBJC_IVAR_$_IQTextFieldViewInfoModal._textViewDelegate
+_OBJC_IVAR_$_IQTextFieldViewInfoModal._originalReturnKeyType
+_OBJC_IVAR_$_IQKeyboardReturnKeyHandler.textFieldInfoCache
+_OBJC_IVAR_$_IQKeyboardReturnKeyHandler._lastTextFieldReturnKeyType
+_OBJC_IVAR_$_IQKeyboardReturnKeyHandler._delegate
+l_OBJC_PROTOCOL_$_NSObject
+l_OBJC_LABEL_PROTOCOL_$_NSObject
+l_OBJC_PROTOCOL_$_UITextFieldDelegate
+l_OBJC_LABEL_PROTOCOL_$_UITextFieldDelegate
+l_OBJC_PROTOCOL_$_UIScrollViewDelegate
+l_OBJC_LABEL_PROTOCOL_$_UIScrollViewDelegate
+l_OBJC_PROTOCOL_$_UITextViewDelegate
+l_OBJC_LABEL_PROTOCOL_$_UITextViewDelegate
+/Users/gabrielcatice/ifood-mobile-test/Carthage/Checkouts/IQKeyboardManager/IQKeyboardManager/IQKeyboardReturnKeyHandler.m
+/Users/gabrielcatice/ifood-mobile-test/Carthage/Checkouts/IQKeyboardManager/IQKeyboardManager/IQKeyboardReturnKeyHandler.h
++[IQKeyboardManager load]
+-[IQKeyboardManager init]
+___25-[IQKeyboardManager init]_block_invoke
++[IQKeyboardManager sharedManager]
+___34+[IQKeyboardManager sharedManager]_block_invoke
+___copy_helper_block_.90
+___destroy_helper_block_.91
+-[IQKeyboardManager dealloc]
+-[IQKeyboardManager setEnable:]
+-[IQKeyboardManager privateIsEnabled]
+-[IQKeyboardManager setKeyboardDistanceFromTextField:]
+-[IQKeyboardManager setShouldResignOnTouchOutside:]
+-[IQKeyboardManager privateShouldResignOnTouchOutside]
+-[IQKeyboardManager setEnableAutoToolbar:]
+-[IQKeyboardManager privateIsEnableAutoToolbar]
+-[IQKeyboardManager keyWindow]
+-[IQKeyboardManager optimizedAdjustPosition]
+___44-[IQKeyboardManager optimizedAdjustPosition]_block_invoke
+___copy_helper_block_.164
+___destroy_helper_block_.165
+-[IQKeyboardManager adjustPosition]
+___35-[IQKeyboardManager adjustPosition]_block_invoke
+___copy_helper_block_.216
+___destroy_helper_block_.217
+___35-[IQKeyboardManager adjustPosition]_block_invoke.227
+___copy_helper_block_.228
+___destroy_helper_block_.229
+___35-[IQKeyboardManager adjustPosition]_block_invoke.241
+___copy_helper_block_.248
+___destroy_helper_block_.249
+___35-[IQKeyboardManager adjustPosition]_block_invoke.253
+___copy_helper_block_.254
+___destroy_helper_block_.255
+___35-[IQKeyboardManager adjustPosition]_block_invoke.261
+___copy_helper_block_.276
+___destroy_helper_block_.277
+___35-[IQKeyboardManager adjustPosition]_block_invoke.281
+___copy_helper_block_.292
+___destroy_helper_block_.293
+___35-[IQKeyboardManager adjustPosition]_block_invoke.297
+___copy_helper_block_.298
+___destroy_helper_block_.299
+-[IQKeyboardManager restorePosition]
+___36-[IQKeyboardManager restorePosition]_block_invoke
+___copy_helper_block_.317
+___destroy_helper_block_.318
+-[IQKeyboardManager reloadLayoutIfNeeded]
+-[IQKeyboardManager keyboardWillShow:]
+-[IQKeyboardManager keyboardDidShow:]
+-[IQKeyboardManager keyboardWillHide:]
+___38-[IQKeyboardManager keyboardWillHide:]_block_invoke
+___copy_helper_block_.353
+___destroy_helper_block_.354
+-[IQKeyboardManager keyboardDidHide:]
+-[IQKeyboardManager textFieldViewDidBeginEditing:]
+___50-[IQKeyboardManager textFieldViewDidBeginEditing:]_block_invoke
+___copy_helper_block_.368
+___destroy_helper_block_.369
+___50-[IQKeyboardManager textFieldViewDidBeginEditing:]_block_invoke.371
+___copy_helper_block_.372
+___destroy_helper_block_.373
+-[IQKeyboardManager textFieldViewDidEndEditing:]
+___48-[IQKeyboardManager textFieldViewDidEndEditing:]_block_invoke
+___copy_helper_block_.386
+___destroy_helper_block_.387
+-[IQKeyboardManager willChangeStatusBarOrientation:]
+___52-[IQKeyboardManager willChangeStatusBarOrientation:]_block_invoke
+___copy_helper_block_.389
+___destroy_helper_block_.390
+-[IQKeyboardManager tapRecognized:]
+-[IQKeyboardManager gestureRecognizer:shouldRecognizeSimultaneouslyWithGestureRecognizer:]
+-[IQKeyboardManager gestureRecognizer:shouldReceiveTouch:]
+-[IQKeyboardManager resignFirstResponder]
+-[IQKeyboardManager canGoPrevious]
+-[IQKeyboardManager canGoNext]
+-[IQKeyboardManager goPrevious]
+-[IQKeyboardManager goNext]
+-[IQKeyboardManager responderViews]
+-[IQKeyboardManager addToolbarIfRequired]
+-[IQKeyboardManager removeToolbarIfRequired]
+-[IQKeyboardManager reloadInputViews]
+-[IQKeyboardManager previousAction:]
+-[IQKeyboardManager nextAction:]
+-[IQKeyboardManager doneAction:]
+-[IQKeyboardManager registerTextFieldViewClass:didBeginEditingNotificationName:didEndEditingNotificationName:]
+-[IQKeyboardManager unregisterTextFieldViewClass:didBeginEditingNotificationName:didEndEditingNotificationName:]
+-[IQKeyboardManager registerAllNotifications]
+-[IQKeyboardManager unregisterAllNotifications]
+-[IQKeyboardManager showLog:]
+-[IQKeyboardManager isEnabled]
+-[IQKeyboardManager keyboardDistanceFromTextField]
+-[IQKeyboardManager overrideKeyboardAppearance]
+-[IQKeyboardManager setOverrideKeyboardAppearance:]
+-[IQKeyboardManager keyboardAppearance]
+-[IQKeyboardManager setKeyboardAppearance:]
+-[IQKeyboardManager isEnableAutoToolbar]
+-[IQKeyboardManager toolbarManageBehaviour]
+-[IQKeyboardManager setToolbarManageBehaviour:]
+-[IQKeyboardManager shouldToolbarUsesTextFieldTintColor]
+-[IQKeyboardManager setShouldToolbarUsesTextFieldTintColor:]
+-[IQKeyboardManager toolbarTintColor]
+-[IQKeyboardManager setToolbarTintColor:]
+-[IQKeyboardManager toolbarBarTintColor]
+-[IQKeyboardManager setToolbarBarTintColor:]
+-[IQKeyboardManager shouldShowToolbarPlaceholder]
+-[IQKeyboardManager setShouldShowToolbarPlaceholder:]
+-[IQKeyboardManager placeholderFont]
+-[IQKeyboardManager setPlaceholderFont:]
+-[IQKeyboardManager placeholderColor]
+-[IQKeyboardManager setPlaceholderColor:]
+-[IQKeyboardManager placeholderButtonColor]
+-[IQKeyboardManager setPlaceholderButtonColor:]
+-[IQKeyboardManager shouldResignOnTouchOutside]
+-[IQKeyboardManager resignFirstResponderGesture]
+-[IQKeyboardManager setResignFirstResponderGesture:]
+-[IQKeyboardManager shouldPlayInputClicks]
+-[IQKeyboardManager setShouldPlayInputClicks:]
+-[IQKeyboardManager layoutIfNeededOnUpdate]
+-[IQKeyboardManager setLayoutIfNeededOnUpdate:]
+-[IQKeyboardManager isKeyboardShowing]
+-[IQKeyboardManager movedDistance]
+-[IQKeyboardManager setMovedDistance:]
+-[IQKeyboardManager previousNextDisplayMode]
+-[IQKeyboardManager setPreviousNextDisplayMode:]
+-[IQKeyboardManager toolbarPreviousBarButtonItemImage]
+-[IQKeyboardManager setToolbarPreviousBarButtonItemImage:]
+-[IQKeyboardManager toolbarNextBarButtonItemImage]
+-[IQKeyboardManager setToolbarNextBarButtonItemImage:]
+-[IQKeyboardManager toolbarDoneBarButtonItemImage]
+-[IQKeyboardManager setToolbarDoneBarButtonItemImage:]
+-[IQKeyboardManager toolbarPreviousBarButtonItemText]
+-[IQKeyboardManager setToolbarPreviousBarButtonItemText:]
+-[IQKeyboardManager toolbarNextBarButtonItemText]
+-[IQKeyboardManager setToolbarNextBarButtonItemText:]
+-[IQKeyboardManager toolbarDoneBarButtonItemText]
+-[IQKeyboardManager setToolbarDoneBarButtonItemText:]
+-[IQKeyboardManager disabledDistanceHandlingClasses]
+-[IQKeyboardManager setDisabledDistanceHandlingClasses:]
+-[IQKeyboardManager enabledDistanceHandlingClasses]
+-[IQKeyboardManager setEnabledDistanceHandlingClasses:]
+-[IQKeyboardManager disabledToolbarClasses]
+-[IQKeyboardManager setDisabledToolbarClasses:]
+-[IQKeyboardManager enabledToolbarClasses]
+-[IQKeyboardManager setEnabledToolbarClasses:]
+-[IQKeyboardManager toolbarPreviousNextAllowedClasses]
+-[IQKeyboardManager setToolbarPreviousNextAllowedClasses:]
+-[IQKeyboardManager disabledTouchResignedClasses]
+-[IQKeyboardManager setDisabledTouchResignedClasses:]
+-[IQKeyboardManager enabledTouchResignedClasses]
+-[IQKeyboardManager setEnabledTouchResignedClasses:]
+-[IQKeyboardManager touchResignedGestureIgnoreClasses]
+-[IQKeyboardManager setTouchResignedGestureIgnoreClasses:]
+-[IQKeyboardManager enableDebugging]
+-[IQKeyboardManager setEnableDebugging:]
+-[IQKeyboardManager startingTextViewContentInsets]
+-[IQKeyboardManager setStartingTextViewContentInsets:]
+-[IQKeyboardManager startingTextViewScrollIndicatorInsets]
+-[IQKeyboardManager setStartingTextViewScrollIndicatorInsets:]
+-[IQKeyboardManager isTextViewContentInsetChanged]
+-[IQKeyboardManager setIsTextViewContentInsetChanged:]
+-[IQKeyboardManager textFieldView]
+-[IQKeyboardManager setTextFieldView:]
+-[IQKeyboardManager topViewBeginOrigin]
+-[IQKeyboardManager setTopViewBeginOrigin:]
+-[IQKeyboardManager rootViewController]
+-[IQKeyboardManager setRootViewController:]
+-[IQKeyboardManager rootViewControllerWhilePopGestureRecognizerActive]
+-[IQKeyboardManager setRootViewControllerWhilePopGestureRecognizerActive:]
+-[IQKeyboardManager topViewBeginOriginWhilePopGestureRecognizerActive]
+-[IQKeyboardManager setTopViewBeginOriginWhilePopGestureRecognizerActive:]
+-[IQKeyboardManager hasPendingAdjustRequest]
+-[IQKeyboardManager setHasPendingAdjustRequest:]
+-[IQKeyboardManager lastScrollView]
+-[IQKeyboardManager setLastScrollView:]
+-[IQKeyboardManager startingContentInsets]
+-[IQKeyboardManager setStartingContentInsets:]
+-[IQKeyboardManager startingScrollIndicatorInsets]
+-[IQKeyboardManager setStartingScrollIndicatorInsets:]
+-[IQKeyboardManager startingContentOffset]
+-[IQKeyboardManager setStartingContentOffset:]
+-[IQKeyboardManager animationDuration]
+-[IQKeyboardManager setAnimationDuration:]
+-[IQKeyboardManager animationCurve]
+-[IQKeyboardManager setAnimationCurve:]
+-[IQKeyboardManager registeredClasses]
+-[IQKeyboardManager setRegisteredClasses:]
+-[IQKeyboardManager .cxx_destruct]
+_init.onceToken
+_sharedManager.kbManager
+_sharedManager.onceToken
+___block_descriptor_tmp.92
+_OBJC_IVAR_$_IQKeyboardManager._enable
+_OBJC_IVAR_$_IQKeyboardManager._kbShowNotification
+_OBJC_IVAR_$_IQKeyboardManager._textFieldView
+_OBJC_IVAR_$_IQKeyboardManager._enabledDistanceHandlingClasses
+_OBJC_IVAR_$_IQKeyboardManager._disabledDistanceHandlingClasses
+_OBJC_IVAR_$_IQKeyboardManager._keyboardDistanceFromTextField
+_OBJC_IVAR_$_IQKeyboardManager._shouldResignOnTouchOutside
+_OBJC_IVAR_$_IQKeyboardManager._resignFirstResponderGesture
+_OBJC_IVAR_$_IQKeyboardManager._enabledTouchResignedClasses
+_OBJC_IVAR_$_IQKeyboardManager._disabledTouchResignedClasses
+_OBJC_IVAR_$_IQKeyboardManager._enableAutoToolbar
+_OBJC_IVAR_$_IQKeyboardManager._enabledToolbarClasses
+_OBJC_IVAR_$_IQKeyboardManager._disabledToolbarClasses
+_keyWindow._keyWindow
+_OBJC_IVAR_$_IQKeyboardManager._hasPendingAdjustRequest
+___block_descriptor_tmp.166
+_OBJC_IVAR_$_IQKeyboardManager._rootViewController
+_OBJC_IVAR_$_IQKeyboardManager._kbSize
+_OBJC_IVAR_$_IQKeyboardManager._lastScrollView
+_OBJC_IVAR_$_IQKeyboardManager._startingContentInsets
+_OBJC_IVAR_$_IQKeyboardManager._startingContentOffset
+_OBJC_IVAR_$_IQKeyboardManager._animationDuration
+_OBJC_IVAR_$_IQKeyboardManager._animationCurve
+___block_descriptor_tmp.218
+_OBJC_IVAR_$_IQKeyboardManager._startingScrollIndicatorInsets
+___block_descriptor_tmp.230
+___block_descriptor_tmp.250
+___block_descriptor_tmp.256
+___block_descriptor_tmp.278
+___block_descriptor_tmp.294
+_OBJC_IVAR_$_IQKeyboardManager._topViewBeginOrigin
+_OBJC_IVAR_$_IQKeyboardManager._movedDistance
+___block_descriptor_tmp.300
+___block_descriptor_tmp.319
+_OBJC_IVAR_$_IQKeyboardManager._keyboardShowing
+_OBJC_IVAR_$_IQKeyboardManager._rootViewControllerWhilePopGestureRecognizerActive
+_OBJC_IVAR_$_IQKeyboardManager._topViewBeginOriginWhilePopGestureRecognizerActive
+___block_descriptor_tmp.355
+_OBJC_IVAR_$_IQKeyboardManager._overrideKeyboardAppearance
+_OBJC_IVAR_$_IQKeyboardManager._keyboardAppearance
+___block_descriptor_tmp.370
+___block_descriptor_tmp.375
+_OBJC_IVAR_$_IQKeyboardManager._isTextViewContentInsetChanged
+___block_descriptor_tmp.388
+___block_descriptor_tmp.391
+_OBJC_IVAR_$_IQKeyboardManager._toolbarPreviousNextAllowedClasses
+_OBJC_IVAR_$_IQKeyboardManager._toolbarManageBehaviour
+_OBJC_IVAR_$_IQKeyboardManager._toolbarDoneBarButtonItemImage
+_OBJC_IVAR_$_IQKeyboardManager._toolbarDoneBarButtonItemText
+_OBJC_IVAR_$_IQKeyboardManager._shouldShowToolbarPlaceholder
+_OBJC_IVAR_$_IQKeyboardManager._toolbarPreviousBarButtonItemImage
+_OBJC_IVAR_$_IQKeyboardManager._toolbarPreviousBarButtonItemText
+_OBJC_IVAR_$_IQKeyboardManager._toolbarNextBarButtonItemImage
+_OBJC_IVAR_$_IQKeyboardManager._toolbarNextBarButtonItemText
+_OBJC_IVAR_$_IQKeyboardManager._toolbarBarTintColor
+_OBJC_IVAR_$_IQKeyboardManager._shouldToolbarUsesTextFieldTintColor
+_OBJC_IVAR_$_IQKeyboardManager._toolbarTintColor
+_OBJC_IVAR_$_IQKeyboardManager._placeholderFont
+_OBJC_IVAR_$_IQKeyboardManager._placeholderColor
+_OBJC_IVAR_$_IQKeyboardManager._placeholderButtonColor
+_OBJC_IVAR_$_IQKeyboardManager._shouldPlayInputClicks
+_OBJC_IVAR_$_IQKeyboardManager._registeredClasses
+_OBJC_IVAR_$_IQKeyboardManager._enableDebugging
+_OBJC_IVAR_$_IQKeyboardManager._layoutIfNeededOnUpdate
+_OBJC_IVAR_$_IQKeyboardManager._previousNextDisplayMode
+_OBJC_IVAR_$_IQKeyboardManager._touchResignedGestureIgnoreClasses
+_OBJC_IVAR_$_IQKeyboardManager._startingTextViewContentInsets
+_OBJC_IVAR_$_IQKeyboardManager._startingTextViewScrollIndicatorInsets
+l_OBJC_PROTOCOL_$_UIGestureRecognizerDelegate
+l_OBJC_LABEL_PROTOCOL_$_UIGestureRecognizerDelegate
+/Users/gabrielcatice/ifood-mobile-test/Carthage/Checkouts/IQKeyboardManager/IQKeyboardManager/IQKeyboardManager.m
+/Users/gabrielcatice/ifood-mobile-test/Carthage/Checkouts/IQKeyboardManager/IQKeyboardManager/IQKeyboardManager.h
+__52-[IQKeyboardManager willChangeStatusBarOrientation:]_block_invoke
+__48-[IQKeyboardManager textFieldViewDidEndEditing:]_block_invoke
+__50-[IQKeyboardManager textFieldViewDidBeginEditing:]_block_invoke.371
+__50-[IQKeyboardManager textFieldViewDidBeginEditing:]_block_invoke
+__CGPointEqualToPoint
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGGeometry.h
+__38-[IQKeyboardManager keyboardWillHide:]_block_invoke
+CGPointMake
+__CGSizeEqualToSize
+__36-[IQKeyboardManager restorePosition]_block_invoke
+__35-[IQKeyboardManager adjustPosition]_block_invoke.297
+__35-[IQKeyboardManager adjustPosition]_block_invoke.281
+__35-[IQKeyboardManager adjustPosition]_block_invoke.261
+__35-[IQKeyboardManager adjustPosition]_block_invoke.253
+__35-[IQKeyboardManager adjustPosition]_block_invoke.241
+__35-[IQKeyboardManager adjustPosition]_block_invoke.227
+__35-[IQKeyboardManager adjustPosition]_block_invoke
+__44-[IQKeyboardManager optimizedAdjustPosition]_block_invoke
+__34+[IQKeyboardManager sharedManager]_block_invoke
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/usr/include/dispatch/once.h
+__25-[IQKeyboardManager init]_block_invoke
+-[UIViewController(Additions) setIQLayoutGuideConstraint:]
+-[UIViewController(Additions) IQLayoutGuideConstraint]
+/Users/gabrielcatice/ifood-mobile-test/Carthage/Checkouts/IQKeyboardManager/IQKeyboardManager/Categories/IQUIViewController+Additions.m
+-[UIView(Additions) setKeyboardDistanceFromTextField:]
+-[UIView(Additions) keyboardDistanceFromTextField]
+-[UIView(Additions) setIgnoreSwitchingByNextPrevious:]
+-[UIView(Additions) ignoreSwitchingByNextPrevious]
+-[UIView(Additions) setShouldResignOnTouchOutsideMode:]
+-[UIView(Additions) shouldResignOnTouchOutsideMode]
+/Users/gabrielcatice/ifood-mobile-test/Carthage/Checkouts/IQKeyboardManager/IQKeyboardManager/Categories/IQUITextFieldView+Additions.m
++[IQBarButtonItem initialize]
+-[IQBarButtonItem setTintColor:]
+-[IQBarButtonItem initWithBarButtonSystemItem:target:action:]
+-[IQBarButtonItem setTarget:action:]
+-[IQBarButtonItem dealloc]
+-[IQBarButtonItem isSystemItem]
+-[IQBarButtonItem invocation]
+-[IQBarButtonItem setInvocation:]
+-[IQBarButtonItem .cxx_destruct]
+_OBJC_IVAR_$_IQBarButtonItem._isSystemItem
+_OBJC_IVAR_$_IQBarButtonItem._invocation
+/Users/gabrielcatice/ifood-mobile-test/Carthage/Checkouts/IQKeyboardManager/IQKeyboardManager/IQToolbar/IQBarButtonItem.m
+/Users/gabrielcatice/ifood-mobile-test/Carthage/Checkouts/IQKeyboardManager/IQKeyboardManager/IQToolbar/IQBarButtonItem.h
+-[NSArray(IQ_NSArray_Sort) sortedArrayByTag]
+___44-[NSArray(IQ_NSArray_Sort) sortedArrayByTag]_block_invoke
+-[NSArray(IQ_NSArray_Sort) sortedArrayByPosition]
+___49-[NSArray(IQ_NSArray_Sort) sortedArrayByPosition]_block_invoke
+___block_literal_global
+___block_descriptor_tmp.5
+___block_literal_global.6
+/Users/gabrielcatice/ifood-mobile-test/Carthage/Checkouts/IQKeyboardManager/IQKeyboardManager/Categories/IQNSArray+Sort.m
+__49-[NSArray(IQ_NSArray_Sort) sortedArrayByPosition]_block_invoke
+__44-[NSArray(IQ_NSArray_Sort) sortedArrayByTag]_block_invoke
+-[IQTextView initialize]
+-[IQTextView dealloc]
+-[IQTextView init]
+-[IQTextView awakeFromNib]
+-[IQTextView refreshPlaceholder]
+-[IQTextView setText:]
+-[IQTextView setAttributedText:]
+-[IQTextView setFont:]
+-[IQTextView setTextAlignment:]
+-[IQTextView layoutSubviews]
+-[IQTextView setPlaceholder:]
+-[IQTextView setAttributedPlaceholder:]
+-[IQTextView setPlaceholderTextColor:]
+-[IQTextView placeholderInsets]
+-[IQTextView placeholderExpectedFrame]
+-[IQTextView placeholderLabel]
+-[IQTextView delegate]
+-[IQTextView intrinsicContentSize]
+-[IQTextView placeholder]
+-[IQTextView setPlaceholderLabel:]
+-[IQTextView placeholderTextColor]
+-[IQTextView attributedPlaceholder]
+-[IQTextView .cxx_destruct]
+_OBJC_IVAR_$_IQTextView._placeholderLabel
+_OBJC_IVAR_$_IQTextView._placeholder
+_OBJC_IVAR_$_IQTextView._attributedPlaceholder
+_OBJC_IVAR_$_IQTextView._placeholderTextColor
+/Users/gabrielcatice/ifood-mobile-test/Carthage/Checkouts/IQKeyboardManager/IQKeyboardManager/IQTextView/IQTextView.m
+/Users/gabrielcatice/ifood-mobile-test/Carthage/Checkouts/IQKeyboardManager/IQKeyboardManager/IQTextView/IQTextView.h
+CGRectMake
+CGSizeMake
+UIEdgeInsetsMake
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIGeometry.h
+-[IQTitleBarButtonItem initWithTitle:]
+-[IQTitleBarButtonItem setTitleFont:]
+-[IQTitleBarButtonItem setTitle:]
+-[IQTitleBarButtonItem setTitleColor:]
+-[IQTitleBarButtonItem setSelectableTitleColor:]
+-[IQTitleBarButtonItem setInvocation:]
+-[IQTitleBarButtonItem dealloc]
+-[IQTitleBarButtonItem titleFont]
+-[IQTitleBarButtonItem titleColor]
+-[IQTitleBarButtonItem selectableTitleColor]
+-[IQTitleBarButtonItem titleView]
+-[IQTitleBarButtonItem setTitleView:]
+-[IQTitleBarButtonItem titleButton]
+-[IQTitleBarButtonItem setTitleButton:]
+-[IQTitleBarButtonItem .cxx_destruct]
+_OBJC_IVAR_$_IQTitleBarButtonItem._titleView
+_OBJC_IVAR_$_IQTitleBarButtonItem._titleButton
+_OBJC_IVAR_$_IQTitleBarButtonItem._titleFont
+_OBJC_IVAR_$_IQTitleBarButtonItem._titleColor
+_OBJC_IVAR_$_IQTitleBarButtonItem._selectableTitleColor
+/Users/gabrielcatice/ifood-mobile-test/Carthage/Checkouts/IQKeyboardManager/IQKeyboardManager/IQToolbar/IQTitleBarButtonItem.m
+/Users/gabrielcatice/ifood-mobile-test/Carthage/Checkouts/IQKeyboardManager/IQKeyboardManager/IQToolbar/IQTitleBarButtonItem.h
+-[UIScrollView(Additions) setShouldIgnoreScrollingAdjustment:]
+-[UIScrollView(Additions) shouldIgnoreScrollingAdjustment]
+-[UIScrollView(Additions) setShouldRestoreScrollViewContentOffset:]
+-[UIScrollView(Additions) shouldRestoreScrollViewContentOffset]
+/Users/gabrielcatice/ifood-mobile-test/Carthage/Checkouts/IQKeyboardManager/IQKeyboardManager/Categories/IQUIScrollView+Additions.m
+-[IQBarButtonItemConfiguration initWithBarButtonSystemItem:action:]
+-[IQBarButtonItemConfiguration initWithImage:action:]
+-[IQBarButtonItemConfiguration initWithTitle:action:]
+-[IQBarButtonItemConfiguration barButtonSystemItem]
+-[IQBarButtonItemConfiguration image]
+-[IQBarButtonItemConfiguration title]
+-[IQBarButtonItemConfiguration action]
+-[IQBarButtonItemConfiguration .cxx_destruct]
++[UIImage(IQKeyboardToolbarNextPreviousImage) keyboardPreviousiOS9Image]
++[UIImage(IQKeyboardToolbarNextPreviousImage) keyboardNextiOS9Image]
++[UIImage(IQKeyboardToolbarNextPreviousImage) keyboardPreviousiOS10Image]
++[UIImage(IQKeyboardToolbarNextPreviousImage) keyboardNextiOS10Image]
++[UIImage(IQKeyboardToolbarNextPreviousImage) keyboardPreviousImage]
++[UIImage(IQKeyboardToolbarNextPreviousImage) keyboardNextImage]
+-[UIView(IQToolbarAddition) keyboardToolbar]
+-[UIView(IQToolbarAddition) setShouldHideToolbarPlaceholder:]
+-[UIView(IQToolbarAddition) shouldHideToolbarPlaceholder]
+-[UIView(IQToolbarAddition) setToolbarPlaceholder:]
+-[UIView(IQToolbarAddition) toolbarPlaceholder]
+-[UIView(IQToolbarAddition) drawingToolbarPlaceholder]
++[UIView(IQToolbarAddition) flexibleBarButtonItem]
+-[UIView(IQToolbarAddition) addKeyboardToolbarWithTarget:titleText:rightBarButtonConfiguration:previousBarButtonConfiguration:nextBarButtonConfiguration:]
+-[UIView(IQToolbarAddition) addRightButtonOnKeyboardWithText:target:action:]
+-[UIView(IQToolbarAddition) addRightButtonOnKeyboardWithText:target:action:shouldShowPlaceholder:]
+-[UIView(IQToolbarAddition) addRightButtonOnKeyboardWithText:target:action:titleText:]
+-[UIView(IQToolbarAddition) addRightButtonOnKeyboardWithImage:target:action:]
+-[UIView(IQToolbarAddition) addRightButtonOnKeyboardWithImage:target:action:shouldShowPlaceholder:]
+-[UIView(IQToolbarAddition) addRightButtonOnKeyboardWithImage:target:action:titleText:]
+-[UIView(IQToolbarAddition) addDoneOnKeyboardWithTarget:action:]
+-[UIView(IQToolbarAddition) addDoneOnKeyboardWithTarget:action:shouldShowPlaceholder:]
+-[UIView(IQToolbarAddition) addDoneOnKeyboardWithTarget:action:titleText:]
+-[UIView(IQToolbarAddition) addLeftRightOnKeyboardWithTarget:leftButtonTitle:rightButtonTitle:leftButtonAction:rightButtonAction:]
+-[UIView(IQToolbarAddition) addLeftRightOnKeyboardWithTarget:leftButtonTitle:rightButtonTitle:leftButtonAction:rightButtonAction:shouldShowPlaceholder:]
+-[UIView(IQToolbarAddition) addLeftRightOnKeyboardWithTarget:leftButtonTitle:rightButtonTitle:leftButtonAction:rightButtonAction:titleText:]
+-[UIView(IQToolbarAddition) addCancelDoneOnKeyboardWithTarget:cancelAction:doneAction:]
+-[UIView(IQToolbarAddition) addCancelDoneOnKeyboardWithTarget:cancelAction:doneAction:shouldShowPlaceholder:]
+-[UIView(IQToolbarAddition) addCancelDoneOnKeyboardWithTarget:cancelAction:doneAction:titleText:]
+-[UIView(IQToolbarAddition) addPreviousNextDoneOnKeyboardWithTarget:previousAction:nextAction:doneAction:]
+-[UIView(IQToolbarAddition) addPreviousNextDoneOnKeyboardWithTarget:previousAction:nextAction:doneAction:shouldShowPlaceholder:]
+-[UIView(IQToolbarAddition) addPreviousNextDoneOnKeyboardWithTarget:previousAction:nextAction:doneAction:titleText:]
+-[UIView(IQToolbarAddition) addPreviousNextRightOnKeyboardWithTarget:rightButtonImage:previousAction:nextAction:rightButtonAction:]
+-[UIView(IQToolbarAddition) addPreviousNextRightOnKeyboardWithTarget:rightButtonImage:previousAction:nextAction:rightButtonAction:shouldShowPlaceholder:]
+-[UIView(IQToolbarAddition) addPreviousNextRightOnKeyboardWithTarget:rightButtonImage:previousAction:nextAction:rightButtonAction:titleText:]
+-[UIView(IQToolbarAddition) addPreviousNextRightOnKeyboardWithTarget:rightButtonTitle:previousAction:nextAction:rightButtonAction:]
+-[UIView(IQToolbarAddition) addPreviousNextRightOnKeyboardWithTarget:rightButtonTitle:previousAction:nextAction:rightButtonAction:shouldShowPlaceholder:]
+-[UIView(IQToolbarAddition) addPreviousNextRightOnKeyboardWithTarget:rightButtonTitle:previousAction:nextAction:rightButtonAction:titleText:]
+_OBJC_IVAR_$_IQBarButtonItemConfiguration._barButtonSystemItem
+_OBJC_IVAR_$_IQBarButtonItemConfiguration._action
+_OBJC_IVAR_$_IQBarButtonItemConfiguration._image
+_OBJC_IVAR_$_IQBarButtonItemConfiguration._title
+_keyboardPreviousiOS9Image.keyboardPreviousiOS9Image
+_keyboardNextiOS9Image.keyboardNextiOS9Image
+_keyboardPreviousiOS10Image.keyboardPreviousiOS10Image
+_keyboardNextiOS10Image.keyboardNextiOS10Image
+_flexibleBarButtonItem.nilButton
+/Users/gabrielcatice/ifood-mobile-test/Carthage/Checkouts/IQKeyboardManager/IQKeyboardManager/IQToolbar/IQUIView+IQKeyboardToolbar.m
+/Users/gabrielcatice/ifood-mobile-test/Carthage/Checkouts/IQKeyboardManager/IQKeyboardManager/IQToolbar/IQUIView+IQKeyboardToolbar.h
+/Users/gabrielcatice/ifood-mobile-test/Carthage/Checkouts/IQKeyboardManager/IQKeyboardManager/IQToolbar/IQPreviousNextView.m
++[IQToolbar initialize]
+-[IQToolbar initialize]
+-[IQToolbar initWithFrame:]
+-[IQToolbar initWithCoder:]
+-[IQToolbar dealloc]
+-[IQToolbar previousBarButton]
+-[IQToolbar nextBarButton]
+-[IQToolbar titleBarButton]
+-[IQToolbar doneBarButton]
+-[IQToolbar fixedSpaceBarButton]
+-[IQToolbar sizeThatFits:]
+-[IQToolbar setBarStyle:]
+-[IQToolbar setTintColor:]
+-[IQToolbar layoutSubviews]
+___27-[IQToolbar layoutSubviews]_block_invoke
+-[IQToolbar enableInputClicksWhenVisible]
+-[IQToolbar setPreviousBarButton:]
+-[IQToolbar setNextBarButton:]
+-[IQToolbar setDoneBarButton:]
+-[IQToolbar setFixedSpaceBarButton:]
+-[IQToolbar .cxx_destruct]
+_OBJC_IVAR_$_IQToolbar._previousBarButton
+_OBJC_IVAR_$_IQToolbar._nextBarButton
+_OBJC_IVAR_$_IQToolbar._titleBarButton
+_OBJC_IVAR_$_IQToolbar._doneBarButton
+_OBJC_IVAR_$_IQToolbar._fixedSpaceBarButton
+l_OBJC_PROTOCOL_$_UIInputViewAudioFeedback
+l_OBJC_LABEL_PROTOCOL_$_UIInputViewAudioFeedback
+/Users/gabrielcatice/ifood-mobile-test/Carthage/Checkouts/IQKeyboardManager/IQKeyboardManager/IQToolbar/IQToolbar.m
+/Users/gabrielcatice/ifood-mobile-test/Carthage/Checkouts/IQKeyboardManager/IQKeyboardManager/IQToolbar/IQToolbar.h
+__27-[IQToolbar layoutSubviews]_block_invoke
+/Users/gabrielcatice/Library/Caches/org.carthage.CarthageKit/DerivedData/10.1_10B61/IQKeyboardManager/v6.2.0/Build/Intermediates.noindex/ArchiveIntermediates/IQKeyboardManager/IntermediateBuildFilesPath/IQKeyboardManager.build/Release-iphoneos/IQKeyboardManager.build/DerivedSources/IQKeyboardManager_vers.c
+__ZL15__ARCLite__loadv
+__ZL30add_image_hook_autoreleasepoolPK11mach_headerl
+__ZL34__arclite_objc_autoreleasePoolPushv
+__ZL33__arclite_objc_autoreleasePoolPopPv
+__ZL19patch_lazy_pointersPK11mach_headerP7patch_tm
+__ZL42__arclite_NSArray_objectAtIndexedSubscriptP7NSArrayP13objc_selectorj
+__ZL53__arclite_NSMutableArray_setObject_atIndexedSubscriptP14NSMutableArrayP13objc_selectorP11objc_objectj
+__ZL46__arclite_NSDictionary_objectForKeyedSubscriptP12NSDictionaryP13objc_selectorP11objc_object
+__ZL47__arclite_NSOrderedSet_objectAtIndexedSubscriptP12NSOrderedSetP13objc_selectorj
+__ZL58__arclite_NSMutableOrderedSet_setObject_atIndexedSubscriptP19NSMutableOrderedSetP13objc_selectorP11objc_objectj
+__ZL58__arclite_NSMutableDictionary__setObject_forKeyedSubscriptP19NSMutableDictionaryP13objc_selectorP11objc_objectS4_
+__ZL18add_image_hook_ARCPK11mach_headerl
+__ZL36__arclite_object_setInstanceVariableP11objc_objectPKcPv
+__ZL24__arclite_object_setIvarP11objc_objectP9objc_ivarS0_
+__ZL21__arclite_object_copyP11objc_objectm
+__ZL21__arclite_objc_retainP11objc_object
+__ZL26__arclite_objc_retainBlockP11objc_object
+__ZL22__arclite_objc_releaseP11objc_object
+__ZL26__arclite_objc_autoreleaseP11objc_object
+__ZL32__arclite_objc_retainAutoreleaseP11objc_object
+__ZL37__arclite_objc_autoreleaseReturnValueP11objc_object
+__ZL43__arclite_objc_retainAutoreleaseReturnValueP11objc_object
+__ZL44__arclite_objc_retainAutoreleasedReturnValueP11objc_object
+__ZL26__arclite_objc_storeStrongPP11objc_objectS0_
+__ZL22add_image_hook_swiftV1PK11mach_headerl
+__ZL42__arclite_NSUndoManagerProxy_isKindOfClassP11objc_objectP13objc_selectorP10objc_class
+__ZL30__arclite_NSManagedObject_initP11objc_objectP13objc_selector
+__ZL41__arclite_NSManagedObject_allocWithEntityP11objc_objectP13objc_selectorS0_
+__ZL36__arclite_NSManagedObject_allocBatchP11objc_objectP13objc_selectorPS0_S0_j
+__ZL37__arclite_NSKKMS_fastIndexForKnownKeyP11objc_objectP13objc_selectorS0_
+__ZL28__arclite_NSKKMS_indexForKeyP11objc_objectP13objc_selectorS0_
+__ZL29__arclite_NSKKsD_objectForKeyP11objc_objectP13objc_selectorS0_
+__ZL35__arclite_NSKKsD_removeObjectForKeyP11objc_objectP13objc_selectorS0_
+__ZL33__arclite_NSKKsD_setObject_forKeyP11objc_objectP13objc_selectorS0_S0_
+__ZL41__arclite_NSKKsD_addEntriesFromDictionaryP11objc_objectP13objc_selectorP12NSDictionary
+__ZL28__arclite_objc_readClassPairP10objc_classPK15objc_image_info
+__ZL32__arclite_objc_allocateClassPairP10objc_classPKcm
+__ZL32__arclite_object_getIndexedIvarsP11objc_object
+__ZL23__arclite_objc_getClassPKc
+__ZL27__arclite_objc_getMetaClassPKc
+__ZL31__arclite_objc_getRequiredClassPKc
+__ZL26__arclite_objc_lookUpClassPKc
+__ZL26__arclite_objc_getProtocolPKc
+__ZL23__arclite_class_getNameP10objc_class
+__ZL26__arclite_protocol_getNameP8Protocol
+__ZL37__arclite_objc_copyClassNamesForImagePKcPj
+__ZL17transcribeMethodsP10objc_classP15glue_class_ro_t
+__ZL19transcribeProtocolsP10objc_classP15glue_class_ro_t
+__ZL20transcribePropertiesP10objc_classP15glue_class_ro_t
+__ZL14initialize_impP11objc_objectP13objc_selector
+__ZL18allocateMaybeSwiftP18glue_swift_class_tm
+__ZL22copySwiftV1MangledNamePKcb
+__ZL13demangledNamePKcb
+__ZL16scanMangledFieldRPKcS0_S1_Ri
+__ZL30arclite_uninitialized_functionv
+__ZL12cxxConstructP11objc_object
+__ZL20fixStringForCoreDataP11objc_object
+_OBJC_METACLASS_$___ARCLite__
+__ZL24OBJC_CLASS_$___ARCLite__
+__ZL31OBJC_METACLASS_RO_$___ARCLite__
+__non_lazy_classes
+__ZL27OBJC_CLASS_RO_$___ARCLite__
+__ZL11_class_name
+__ZL32OBJC_$_CLASS_METHODS___ARCLite__
+__ZL17_load_method_name
+__ZL17_load_method_type
+__ZL23NSAutoreleasePool_class
+__ZZL30add_image_hook_autoreleasepoolPK11mach_headerlE7patches
+__ZGVZL30add_image_hook_autoreleasepoolPK11mach_headerlE7patches
+l_OBJC_PROTOCOL_$___ARCLiteIndexedSubscripting__
+l_OBJC_LABEL_PROTOCOL_$___ARCLiteIndexedSubscripting__
+l_OBJC_PROTOCOL_REFERENCE_$___ARCLiteIndexedSubscripting__
+l_OBJC_PROTOCOL_$___ARCLiteKeyedSubscripting__
+l_OBJC_LABEL_PROTOCOL_$___ARCLiteKeyedSubscripting__
+l_OBJC_PROTOCOL_REFERENCE_$___ARCLiteKeyedSubscripting__
+__ZZL18add_image_hook_ARCPK11mach_headerlE7patches
+__ZGVZL18add_image_hook_ARCPK11mach_headerlE7patches
+__ZL30NSUndoManagerProxy_targetClass
+__ZL29original_NSManagedObject_init
+__ZL40original_NSManagedObject_allocWithEntity
+__ZL35original_NSManagedObject_allocBatch
+__ZL25NSMutableDictionary_class
+__ZL22NSConstantString_class
+__ZL14NSString_class
+__ZL36original_NSKKMS_fastIndexForKnownKey
+__ZL27original_NSKKMS_indexForKey
+__ZL28original_NSKKsD_objectForKey
+__ZL34original_NSKKsD_removeObjectForKey
+__ZL32original_NSKKsD_setObject_forKey
+__ZL40original_NSKKsD_addEntriesFromDictionary
+__ZZL22add_image_hook_swiftV1PK11mach_headerlE7patches
+__ZGVZL22add_image_hook_swiftV1PK11mach_headerlE7patches
+__ZL31original_objc_allocateClassPair
+__ZL31original_object_getIndexedIvars
+__ZL22original_objc_getClass
+__ZL26original_objc_getMetaClass
+__ZL30original_objc_getRequiredClass
+__ZL25original_objc_lookUpClass
+__ZL25original_objc_getProtocol
+__ZL22original_class_getName
+__ZL25original_protocol_getName
+__ZL36original_objc_copyClassNamesForImage
+__ZL12demangleLock
+__ZL9Demangled
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c++ -arch armv7 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c++11 -Wno-trigraphs -fno-exceptions -fno-rtti -fno-sanitize=vptr -mpascal-strings -Os -Wno-missing-field-initializers -Wmissing-prototypes -Wno-implicit-atomic-properties -Wno-objc-interface-ivars -Wno-arc-repeated-use-of-weak -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -Wno-c++11-extensions -D NDEBUG=1 -D OBJC_OLD_DISPATCH_PROTOTYPES=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.Internal.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -Winvalid-offsetof -miphoneos-version-min=4.3 -g -fno-threadsafe-statics -Wno-sign-conversion -Wno-infinite-recursion -Wno-move -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-range-loop-analysis -Wno-semicolon-before-method-body -fembed-bitcode=all -iquote /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/install/TempContent/Objects/arclite.build/arclite_iOS.build/arclite_iphoneos-generated-files.hmap -I /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/install/TempContent/Objects/arclite.build/arclite_iOS.build/arclite_iphoneos-own-target-headers.hmap -I /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/install/TempContent/Objects/arclite.build/arclite_iOS.build/arclite_iphoneos-all-target-headers.hmap -iquote /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/install/TempContent/Objects/arclite.build/arclite_iOS.build/arclite_iphoneos-project-headers.hmap -I /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/install/Symbols/BuiltProducts/include -I /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/install/TempContent/Objects/arclite.build/arclite_iOS.build/DerivedSources/armv7 -I /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/install/TempContent/Objects/arclite.build/arclite_iOS.build/DerivedSources -F/Library/Caches/com.apple.xbs/Binaries/arclite_iOS/install/Symbols/BuiltProducts -iframework /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.Internal.sdk/System/Library/PrivateFrameworks -Wall -Wextra -Wno-gcc-compat -Wno-error=incomplete-umbrella -Wno-error=invalid-ios-deployment-target -Wno-error=incomplete-umbrella -Wno-error=invalid-ios-deployment-target -MMD -MT dependencies -MF /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/install/TempContent/Objects/arclite.build/arclite_iOS.build/Objects-normal/armv7/arclite.d --serialize-diagnostics /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/install/TempContent/Objects/arclite.build/arclite_iOS.build/Objects-normal/armv7/arclite.dia -c /Library/Caches/com.apple.xbs/Sources/arclite_iOS/arclite-70/source/arclite.mm -o /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/install/TempContent/Objects/arclite.build/arclite_iOS.build/Objects-normal/armv7/arclite.o -mlinker-version=409.12 -march=armv7a
+/Library/Caches/com.apple.xbs/Sources/arclite_iOS/arclite-70/source/arclite.mm
+/Library/Caches/com.apple.xbs/Sources/arclite_iOS/arclite-70
+fixStringForCoreData
+cxxConstruct
+arclite_uninitialized_function
+scanMangledField
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.Internal.sdk/usr/include/_ctype.h
+__isctype
+demangledName
+copySwiftV1DemangledName
+copySwiftV1MangledName
+allocateMaybeSwift
+word_align
+isSwift
+initialize_imp
+transcribeProperties
+property_list_nth
+transcribeProtocols
+transcribeMethods
+data
+method_list_nth
+__arclite_objc_copyClassNamesForImage
+__arclite_protocol_getName
+__arclite_class_getName
+__arclite_objc_getProtocol
+__arclite_objc_lookUpClass
+__arclite_objc_getRequiredClass
+__arclite_objc_getMetaClass
+__arclite_objc_getClass
+__arclite_object_getIndexedIvars
+__arclite_objc_allocateClassPair
+metaclass
+__arclite_objc_readClassPair
+transcribeIvars
+ivar_list_nth
+max
+alignment
+ro
+fastFlags
+__arclite_NSKKsD_addEntriesFromDictionary
+__arclite_NSKKsD_setObject_forKey
+__arclite_NSKKsD_removeObjectForKey
+__arclite_NSKKsD_objectForKey
+__arclite_NSKKMS_indexForKey
+__arclite_NSKKMS_fastIndexForKnownKey
+__arclite_NSManagedObject_allocBatch
+__arclite_NSManagedObject_allocWithEntity
+__arclite_NSManagedObject_init
+__arclite_NSUndoManagerProxy_isKindOfClass
+add_image_hook_swiftV1
+patch_t<const char **(const char *, unsigned int *)>
+patch_t<const char *(Protocol *)>
+patch_t<const char *(Class)>
+patch_t<Protocol *(const char *)>
+patch_t<Class (const char *)>
+patch_t<void *(id)>
+patch_t<Class (Class, const char *, unsigned long)>
+patch_t<Class (Class, const objc_image_info *)>
+__arclite_objc_storeStrong
+__arclite_objc_release
+__arclite_objc_retain
+__arclite_objc_retainAutoreleasedReturnValue
+__arclite_objc_retainAutoreleaseReturnValue
+__arclite_objc_autoreleaseReturnValue
+__arclite_objc_retainAutorelease
+__arclite_objc_autorelease
+__arclite_objc_retainBlock
+__arclite_object_copy
+fixupCopiedReferences
+_class_getInstanceStart
+alignedInstanceStart
+__arclite_class_usesAutomaticRetainRelease
+classOrSuperClassesUseARR
+__arclite_object_setIvar
+isScannedOffset
+_ivar_getClass
+__arclite_object_setInstanceVariable
+add_image_hook_ARC
+patch_t<void (id *, id)>
+patch_t<id (id)>
+patch_t<void (id)>
+patch_t<id (id, unsigned long)>
+patch_t<void (id, objc_ivar *, id)>
+patch_t<objc_ivar *(id, const char *, void *)>
+__arclite_NSMutableDictionary__setObject_forKeyedSubscript
+__arclite_NSMutableOrderedSet_setObject_atIndexedSubscript
+__arclite_NSOrderedSet_objectAtIndexedSubscript
+__arclite_NSDictionary_objectForKeyedSubscript
+__arclite_NSMutableArray_setObject_atIndexedSubscript
+__arclite_NSArray_objectAtIndexedSubscript
+patch_lazy_pointers
+__arclite_objc_autoreleasePoolPop
+__arclite_objc_autoreleasePoolPush
+add_image_hook_autoreleasepool
+patch_t<void (void *)>
+patch_t<void *()>
+__ARCLite__load
+install_swiftV1
+replaceMethod
+install_ARC
+install_dict_nil_value
+addOrReplaceMethod
+keyedGetter
+install_subscripting
+addMethod
+indexedGetter
+install_autoreleasepool

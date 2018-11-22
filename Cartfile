@@ -1,0 +1,10 @@
+github "Moya/Moya" ~> 11.0.2
+github "ReactiveX/RxSwift" ~> 4.2
+github "Swinject/Swinject" "2.4.1"
+github "Swinject/SwinjectAutoregistration" "2.1.1"
+github "mac-cain13/R.swift.Library"
+github "hackiftekhar/IQKeyboardManager"
+github "SnapKit/SnapKit" ~> 4.0.0
+github "onevcat/Kingfisher"
+binary "https://ton.twimg.com/syndication/twitterkit/ios/TwitterKit.json"
+binary "https://ton.twimg.com/syndication/twitterkit/ios/TwitterCore.json"

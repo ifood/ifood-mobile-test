@@ -1,0 +1,11 @@
+framework module Rswift {
+  umbrella header "Rswift.h"
+
+  export *
+  module * { export * }
+}
+
+module Rswift.Swift {
+    header "Rswift-Swift.h"
+    requires objc
+}

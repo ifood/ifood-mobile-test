@@ -1,0 +1,11 @@
+framework module IQKeyboardManagerSwift {
+  umbrella header "IQKeyboardManagerSwift.h"
+
+  export *
+  module * { export * }
+}
+
+module IQKeyboardManagerSwift.Swift {
+    header "IQKeyboardManagerSwift-Swift.h"
+    requires objc
+}

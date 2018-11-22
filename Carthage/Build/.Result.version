@@ -1,0 +1,9 @@
+{
+  "commitish" : "3.2.4",
+  "iOS" : [
+    {
+      "name" : "Result",
+      "hash" : "b5186c6f20b933478a7844fa189b741f02bfbbf0790864a1a53beffca5bf2917"
+    }
+  ]
+}
