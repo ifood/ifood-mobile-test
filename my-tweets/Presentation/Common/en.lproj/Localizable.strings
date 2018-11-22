@@ -14,3 +14,4 @@
 "generic_error_title" = "Error";
 "ok" = "OK";
 "check_your_internet_connection" = "Unable to connect :(. Please verify your internet connection and try again.";
+"unexpected_error" = "Unexpected error :(. Try again.";

@@ -83,7 +83,7 @@ struct R: Rswift.Validatable {
   
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 8 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 9 localization keys.
     struct localizable {
       /// en translation: Error
       /// 
@@ -117,6 +117,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en
       static let generic_error = Rswift.StringResource(key: "generic_error", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Unexpected error :(. Try again.
+      /// 
+      /// Locales: en
+      static let unexpected_error = Rswift.StringResource(key: "unexpected_error", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       
       /// en translation: Error
       /// 
@@ -172,6 +176,13 @@ struct R: Rswift.Validatable {
       /// Locales: en
       static func generic_error(_: Void = ()) -> String {
         return NSLocalizedString("generic_error", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Unexpected error :(. Try again.
+      /// 
+      /// Locales: en
+      static func unexpected_error(_: Void = ()) -> String {
+        return NSLocalizedString("unexpected_error", bundle: R.hostingBundle, comment: "")
       }
       
       fileprivate init() {}

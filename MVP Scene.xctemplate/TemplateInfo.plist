@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>DefaultCompletionName</key>
+		<string>MVPScene</string>
+	  	
+	  	<key>Description</key>
+	  	<string>This template generates a Scene from the Presentation layer (based on a MVP architecture) of my interpretation of Uncle Bob's Clean Architecture.</string>
+	  
+	  	<key>Kind</key>
+	  	<string>Xcode.IDEKit.TextSubstitutionFileTemplateKind</string>
+	  
+	  	<key>Options</key>
+	  	<array>
+			<dict>
+				<key>Description</key>
+				<string>Scene Name</string>
+
+				<key>Identifier</key>
+				<string>sceneName</string>
+
+				<key>Name</key>
+				<string>Scene Name:</string>
+
+				<key>NotPersisted</key>
+				<true/>
+
+				<key>Required</key>
+				<true/>
+
+				<key>Type</key>
+				<string>text</string>
+			</dict>
+	    	<dict>
+				<key>Default</key>
+				<string>___VARIABLE_sceneName:identifier___</string>
+
+				<key>Identifier</key>
+				<string>productName</string>
+
+				<key>Type</key>
+				<string>static</string>
+	    	</dict>
+	    	<dict>
+				<key>Default</key>
+				<string>___VARIABLE_sceneName:identifier___ViewController</string>
+
+				<key>Description</key>
+				<string>ViewController Name</string>
+
+				<key>Identifier</key>
+				<string>viewControllerName</string>
+
+				<key>Name</key>
+				<string>ViewController Name:</string>
+
+				<key>Required</key>
+				<true/>
+
+				<key>Type</key>
+				<string>static</string>
+	    	</dict>
+	    	<dict>
+				<key>Default</key>
+				<string>___VARIABLE_sceneName:identifier___Presenter</string>
+
+				<key>Description</key>
+				<string>Presenter Name</string>
+
+				<key>Identifier</key>
+				<string>presenterName</string>
+
+				<key>Name</key>
+				<string>Presenter Name:</string>
+
+				<key>Required</key>
+				<true/>
+
+				<key>Type</key>
+				<string>static</string>
+	    	</dict>
+			<dict>
+				<key>Default</key>
+				<string>___VARIABLE_sceneName:identifier___VMs</string>
+
+				<key>Description</key>
+				<string>VMs Name</string>
+
+				<key>Identifier</key>
+				<string>vmsName</string>
+
+				<key>Name</key>
+				<string>VMs Name:</string>
+
+				<key>Required</key>
+				<true/>
+
+				<key>Type</key>
+				<string>static</string>
+	    	</dict>
+	  	</array>
+	  	
+	  	<key>Platforms</key>
+	  	<array>
+			<string>com.apple.platform.iphoneos</string>
+	  	</array>
+		
+		<key>SortOrder</key>
+		<string>1</string>
+
+	  	<key>Summary</key>
+	  	<string>This template generates a Scene from the Presentation layer (based on a MVP architecture) of my interpretation of Uncle Bob's Clean Architecture.</string>
+	</dict>
+</plist>

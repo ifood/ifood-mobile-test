@@ -54,6 +54,8 @@
 		D3C463A821A7194C00FC0CC8 /* GoogleProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C463A721A7194C00FC0CC8 /* GoogleProvider.swift */; };
 		D3C463AA21A71A0100FC0CC8 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C463A921A71A0100FC0CC8 /* ErrorHandler.swift */; };
 		D3C463AC21A71A3D00FC0CC8 /* ErrorMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C463AB21A71A3D00FC0CC8 /* ErrorMapper.swift */; };
+		D3C463AE21A7217000FC0CC8 /* ObversableType+Moya.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C463AD21A7217000FC0CC8 /* ObversableType+Moya.swift */; };
+		D3C463B021A722C400FC0CC8 /* RxSwift+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C463AF21A722C400FC0CC8 /* RxSwift+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,6 +108,8 @@
 		D3C463A721A7194C00FC0CC8 /* GoogleProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleProvider.swift; sourceTree = "<group>"; };
 		D3C463A921A71A0100FC0CC8 /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		D3C463AB21A71A3D00FC0CC8 /* ErrorMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMapper.swift; sourceTree = "<group>"; };
+		D3C463AD21A7217000FC0CC8 /* ObversableType+Moya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObversableType+Moya.swift"; sourceTree = "<group>"; };
+		D3C463AF21A722C400FC0CC8 /* RxSwift+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RxSwift+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +179,7 @@
 				D3C4633021A7040500FC0CC8 /* Info.plist */,
 				D3C4632D21A7040500FC0CC8 /* LaunchScreen.storyboard */,
 				D3C4635321A70BCE00FC0CC8 /* Cartfile */,
+				D3C463AF21A722C400FC0CC8 /* RxSwift+Extensions.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -237,6 +242,7 @@
 		D3C4633F21A7060700FC0CC8 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				D3C463AD21A7217000FC0CC8 /* ObversableType+Moya.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -537,6 +543,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3C463AE21A7217000FC0CC8 /* ObversableType+Moya.swift in Sources */,
 				D3C463A621A7178000FC0CC8 /* TwitterProvider.swift in Sources */,
 				D3C4636021A70D9400FC0CC8 /* DisposableHolder.swift in Sources */,
 				D3C4636521A70E0400FC0CC8 /* EmptyErrorStateView.swift in Sources */,
@@ -549,6 +556,7 @@
 				D3C4636F21A70FCE00FC0CC8 /* SceneView.swift in Sources */,
 				D3C4636B21A70F2E00FC0CC8 /* UINavigationController+Custom.swift in Sources */,
 				D3C463A221A716F900FC0CC8 /* CachePolicyPlugin.swift in Sources */,
+				D3C463B021A722C400FC0CC8 /* RxSwift+Extensions.swift in Sources */,
 				D3C4637521A7103A00FC0CC8 /* ErrorDisplayer.swift in Sources */,
 				D3C463A421A7172E00FC0CC8 /* MoyaEndpoint.swift in Sources */,
 				D3C4635821A70D2D00FC0CC8 /* ApplicationConfigurator.swift in Sources */,

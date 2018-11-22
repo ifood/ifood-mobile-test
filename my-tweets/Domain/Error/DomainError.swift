@@ -16,4 +16,5 @@ enum DomainError: Error {
     case badRequest(message: String?)
     case unexpected
     case notFound
+    case unauthorized
 }

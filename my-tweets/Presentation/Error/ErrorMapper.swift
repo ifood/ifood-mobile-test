@@ -9,11 +9,12 @@
 extension DomainError {
     var message: String {
         switch self {
-        case .generic: return ""
-        case .noInternetConnection: return ""
+        case .generic: return R.string.localizable.unexpected_error()
+        case .noInternetConnection: return R.string.localizable.check_your_internet_connection()
         case .badRequest(let message): return message ?? ""
-        case .unexpected: return ""
+        case .unexpected: return R.string.localizable.unexpected_error()
         case .notFound: return ""
+        case .unauthorized: return ""
         }
     }
 }
