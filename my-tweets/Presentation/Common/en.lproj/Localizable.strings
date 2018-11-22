@@ -1,1 +1,12 @@
+//
+//  Localizable.strings
+//  my-tweets
+//
+//  Created by Gabriel Catice on 22/11/18.
+//  Copyright © 2018 Gabriel Catice. All rights reserved.
+//
 
+"search" = "Search";
+"tweets" = "Tweets";
+"costumer_key" = "GIuEde4dv1J8D7IVL3DcIo33N";
+"costumerSecret" = "P3wIJ3ycjPInBS4llox8bken43YUccfDuuI5pHQBfbg1hyOKI7";

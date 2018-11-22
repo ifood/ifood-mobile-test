@@ -10,6 +10,7 @@ import Moya
 import Swinject
 import SwinjectAutoregistration
 import RxSwift
+import TwitterKit
 
 struct Scheduler {
     static let main = "MainScheduler"
@@ -29,7 +30,10 @@ func buildApplicationContainer() -> Container {
 
 enum CustomConfigurator {
     static func setup(with container: Container) {
-        container.register(MoyaProvider<ServiceProvider>.self) { _ in return MoyaProvider<ServiceProvider>(endpointClosure: MoyaEndpoint.headerClosure, plugins: [NetworkLoggerPlugin(verbose: true)]) }
+        TWTRTwitter.sharedInstance().start(withConsumerKey: R.string.localizable.costumer_key(), consumerSecret: R.string.localizable.costumerSecret())
+        let twitter = TWTRTwitter.sharedInstance()
+
+        container.register(MoyaProvider<GoogleProvider>.self) { _ in return MoyaProvider<GoogleProvider>(endpointClosure: MoyaEndpoint.headerClosure, plugins: [NetworkLoggerPlugin(verbose: true)]) }
         
         container.register(ImmediateSchedulerType.self, name: Scheduler.main) { _ -> ImmediateSchedulerType in
             MainScheduler.instance

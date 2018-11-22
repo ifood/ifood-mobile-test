@@ -48,6 +48,12 @@
 		D3C4639C21A7139F00FC0CC8 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C4638B21A7139F00FC0CC8 /* Alamofire.framework */; };
 		D3C4639D21A714A500FC0CC8 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C4637B21A7139E00FC0CC8 /* TwitterCore.framework */; };
 		D3C4639F21A7164F00FC0CC8 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4639E21A7164F00FC0CC8 /* R.generated.swift */; };
+		D3C463A221A716F900FC0CC8 /* CachePolicyPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C463A121A716F900FC0CC8 /* CachePolicyPlugin.swift */; };
+		D3C463A421A7172E00FC0CC8 /* MoyaEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C463A321A7172E00FC0CC8 /* MoyaEndpoint.swift */; };
+		D3C463A621A7178000FC0CC8 /* TwitterProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C463A521A7178000FC0CC8 /* TwitterProvider.swift */; };
+		D3C463A821A7194C00FC0CC8 /* GoogleProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C463A721A7194C00FC0CC8 /* GoogleProvider.swift */; };
+		D3C463AA21A71A0100FC0CC8 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C463A921A71A0100FC0CC8 /* ErrorHandler.swift */; };
+		D3C463AC21A71A3D00FC0CC8 /* ErrorMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C463AB21A71A3D00FC0CC8 /* ErrorMapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +100,12 @@
 		D3C4638A21A7139F00FC0CC8 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		D3C4638B21A7139F00FC0CC8 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		D3C4639E21A7164F00FC0CC8 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		D3C463A121A716F900FC0CC8 /* CachePolicyPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachePolicyPlugin.swift; sourceTree = "<group>"; };
+		D3C463A321A7172E00FC0CC8 /* MoyaEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaEndpoint.swift; sourceTree = "<group>"; };
+		D3C463A521A7178000FC0CC8 /* TwitterProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterProvider.swift; sourceTree = "<group>"; };
+		D3C463A721A7194C00FC0CC8 /* GoogleProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleProvider.swift; sourceTree = "<group>"; };
+		D3C463A921A71A0100FC0CC8 /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
+		D3C463AB21A71A3D00FC0CC8 /* ErrorMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +222,7 @@
 		D3C4633D21A7060100FC0CC8 /* Remote */ = {
 			isa = PBXGroup;
 			children = (
+				D3C463A021A716E600FC0CC8 /* Provider */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -290,6 +303,7 @@
 		D3C4634721A7076400FC0CC8 /* Error */ = {
 			isa = PBXGroup;
 			children = (
+				D3C463AB21A71A3D00FC0CC8 /* ErrorMapper.swift */,
 			);
 			path = Error;
 			sourceTree = "<group>";
@@ -301,6 +315,7 @@
 				D3C4637021A70FE800FC0CC8 /* ScenePresenter.swift */,
 				D3C4637221A7100700FC0CC8 /* LoadingStateDisplayer.swift */,
 				D3C4637421A7103A00FC0CC8 /* ErrorDisplayer.swift */,
+				D3C463A921A71A0100FC0CC8 /* ErrorHandler.swift */,
 				D3C4637621A7108A00FC0CC8 /* SceneTableViewAdapter.swift */,
 			);
 			path = Scene;
@@ -363,6 +378,17 @@
 				D3C4638521A7139F00FC0CC8 /* TwitterKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D3C463A021A716E600FC0CC8 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				D3C463A121A716F900FC0CC8 /* CachePolicyPlugin.swift */,
+				D3C463A321A7172E00FC0CC8 /* MoyaEndpoint.swift */,
+				D3C463A521A7178000FC0CC8 /* TwitterProvider.swift */,
+				D3C463A721A7194C00FC0CC8 /* GoogleProvider.swift */,
+			);
+			path = Provider;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -511,16 +537,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3C463A621A7178000FC0CC8 /* TwitterProvider.swift in Sources */,
 				D3C4636021A70D9400FC0CC8 /* DisposableHolder.swift in Sources */,
 				D3C4636521A70E0400FC0CC8 /* EmptyErrorStateView.swift in Sources */,
 				D3C4636921A70F0100FC0CC8 /* UIView+Extensions.swift in Sources */,
 				D3C4637921A7113800FC0CC8 /* DependyInjection.swift in Sources */,
 				D3C4637721A7108A00FC0CC8 /* SceneTableViewAdapter.swift in Sources */,
+				D3C463A821A7194C00FC0CC8 /* GoogleProvider.swift in Sources */,
 				D3C4636D21A70FA900FC0CC8 /* UISearchBar+Extensions.swift in Sources */,
 				D3C4639F21A7164F00FC0CC8 /* R.generated.swift in Sources */,
 				D3C4636F21A70FCE00FC0CC8 /* SceneView.swift in Sources */,
 				D3C4636B21A70F2E00FC0CC8 /* UINavigationController+Custom.swift in Sources */,
+				D3C463A221A716F900FC0CC8 /* CachePolicyPlugin.swift in Sources */,
 				D3C4637521A7103A00FC0CC8 /* ErrorDisplayer.swift in Sources */,
+				D3C463A421A7172E00FC0CC8 /* MoyaEndpoint.swift in Sources */,
 				D3C4635821A70D2D00FC0CC8 /* ApplicationConfigurator.swift in Sources */,
 				D3C4635621A70CAE00FC0CC8 /* DomainError.swift in Sources */,
 				D3C4635C21A70D7100FC0CC8 /* Coordinator.swift in Sources */,
@@ -528,6 +558,8 @@
 				D3C4637321A7100700FC0CC8 /* LoadingStateDisplayer.swift in Sources */,
 				D3C4636721A70EA200FC0CC8 /* UIView+IB.swift in Sources */,
 				D3C4632521A7040400FC0CC8 /* AppDelegate.swift in Sources */,
+				D3C463AC21A71A3D00FC0CC8 /* ErrorMapper.swift in Sources */,
+				D3C463AA21A71A0100FC0CC8 /* ErrorHandler.swift in Sources */,
 				D3C4635A21A70D4D00FC0CC8 /* ApplicationCoordinator.swift in Sources */,
 				D3C4637121A70FE800FC0CC8 /* ScenePresenter.swift in Sources */,
 			);

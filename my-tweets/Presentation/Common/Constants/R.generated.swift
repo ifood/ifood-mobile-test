@@ -83,8 +83,53 @@ struct R: Rswift.Validatable {
   
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 0 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 4 localization keys.
     struct localizable {
+      /// en translation: GIuEde4dv1J8D7IVL3DcIo33N
+      /// 
+      /// Locales: en
+      static let costumer_key = Rswift.StringResource(key: "costumer_key", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: P3wIJ3ycjPInBS4llox8bken43YUccfDuuI5pHQBfbg1hyOKI7
+      /// 
+      /// Locales: en
+      static let costumerSecret = Rswift.StringResource(key: "costumerSecret", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Search
+      /// 
+      /// Locales: en
+      static let search = Rswift.StringResource(key: "search", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Tweets
+      /// 
+      /// Locales: en
+      static let tweets = Rswift.StringResource(key: "tweets", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      
+      /// en translation: GIuEde4dv1J8D7IVL3DcIo33N
+      /// 
+      /// Locales: en
+      static func costumer_key(_: Void = ()) -> String {
+        return NSLocalizedString("costumer_key", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: P3wIJ3ycjPInBS4llox8bken43YUccfDuuI5pHQBfbg1hyOKI7
+      /// 
+      /// Locales: en
+      static func costumerSecret(_: Void = ()) -> String {
+        return NSLocalizedString("costumerSecret", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Search
+      /// 
+      /// Locales: en
+      static func search(_: Void = ()) -> String {
+        return NSLocalizedString("search", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Tweets
+      /// 
+      /// Locales: en
+      static func tweets(_: Void = ()) -> String {
+        return NSLocalizedString("tweets", bundle: R.hostingBundle, comment: "")
+      }
+      
       fileprivate init() {}
     }
     
