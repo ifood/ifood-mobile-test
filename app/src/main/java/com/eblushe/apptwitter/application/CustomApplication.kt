@@ -16,7 +16,7 @@ class CustomApplication : Application() {
 
         RouterProvider.init(this)
         StorageProvider.init(this, preferences)
-        ApiProvider.init(CONFIG_API_URL)
+        ApiProvider.initTwitterClient(CONFIG_API_URL)
 
         startKoin(this, diModule)
     }

@@ -9,11 +9,11 @@ class HomeActivity : BaseActivity<HomeViewModel>() {
     override val viewModel: HomeViewModel by viewModel()
 
     override fun onLoadUI() {
-        TODO("not implemented")
+        // TODO("not implemented")
     }
 
     override fun onLoadLiveData(viewModel: HomeViewModel) {
-        TODO("not implemented")
+        // TODO("not implemented")
     }
 
     override fun getLayoutId(): Int {

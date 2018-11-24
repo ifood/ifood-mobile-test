@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">AppTwitter</string>
+    <string name="finished">Finished</string>
+    <string name="sorry_cant_start_application">Sorry can\'t start the application.\nCheck your internet connection.
+    </string>
 </resources>

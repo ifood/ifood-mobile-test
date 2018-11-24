@@ -1,6 +1,6 @@
 package com.eblushe.apptwitter.common.providers
 
-import android.util.Log
+import okhttp3.Credentials
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.Response
@@ -11,18 +11,19 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 
 object ApiProvider {
-    lateinit var retrofit: Retrofit
+    lateinit var twitterClient: Retrofit
 
-    fun init(apiUrl: String) {
+    fun initTwitterClient(apiUrl: String) {
         val httpClient = OkHttpClient.Builder()
 
         val loggingInterceptor = HttpLoggingInterceptor()
         loggingInterceptor.level = HttpLoggingInterceptor.Level.BODY
 
-        httpClient.addInterceptor(AppInterceptor())
+        httpClient.addInterceptor(TwitterInterceptor())
         httpClient.addInterceptor(loggingInterceptor)
 
-        retrofit = Retrofit.Builder()
+
+        twitterClient = Retrofit.Builder()
             .baseUrl(apiUrl)
             .addConverterFactory(GsonConverterFactory.create())
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
@@ -31,13 +32,17 @@ object ApiProvider {
     }
 }
 
-class AppInterceptor : Interceptor {
+class TwitterInterceptor : Interceptor {
     override fun intercept(chain: Interceptor.Chain): Response {
-        Log.d("AppInterceptor -->", chain.toString())
+        val request = chain.request()
+        val builder = request.newBuilder()
+        val credentials = Credentials.basic(
+            "YkDWerYm1BnjHE39c3iNjp5yd",
+            "iUZppnzWdNyLHAvI0lBt7tYIHaldTkggshQ8xVmsXwGPcf4fTz"
+        )
 
-        val builder = chain.request().newBuilder()
-        builder.addHeader("Authorization", "bear QWERTY")
-        builder.addHeader("Content-Type", "application/json")
+        builder.addHeader("Authorization", credentials)
+        builder.addHeader("content-type", "application/json")
         return chain.proceed(builder.build())
     }
 }
