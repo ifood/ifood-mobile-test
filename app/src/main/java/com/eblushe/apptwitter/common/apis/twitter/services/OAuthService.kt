@@ -1,12 +1,14 @@
 package com.eblushe.apptwitter.common.apis.twitter.services
 
+import com.eblushe.apptwitter.common.apis.twitter.responses.TwitterOAuthToken
 import com.eblushe.apptwitter.common.providers.ApiProvider
 import com.eblushe.apptwitter.common.services.BaseService
+import io.reactivex.Single
 
-class OAuthService(val apiProvider: ApiProvider) : BaseService<OAuthEndpoint>() {
-    override val endpointType: Class<OAuthEndpoint> = OAuthEndpoint::class.java
+class OAuthService(apiProvider: ApiProvider) : BaseService<OAuthEndpoint>() {
+    override val endpoint: OAuthEndpoint = apiProvider.twitterClient.create(OAuthEndpoint::class.java)
 
-    override fun get(): OAuthEndpoint {
-        return apiProvider.twitterClient.create(endpointType)
+    fun requestToken(grantType: String) : Single<TwitterOAuthToken> {
+        return endpoint.requestToken(grantType)
     }
 }

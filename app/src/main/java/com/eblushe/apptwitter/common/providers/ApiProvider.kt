@@ -1,5 +1,7 @@
 package com.eblushe.apptwitter.common.providers
 
+import android.os.Build
+import com.eblushe.apptwitter.BuildConfig
 import okhttp3.Credentials
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
@@ -37,8 +39,8 @@ class TwitterInterceptor : Interceptor {
         val request = chain.request()
         val builder = request.newBuilder()
         val credentials = Credentials.basic(
-            "YkDWerYm1BnjHE39c3iNjp5yd",
-            "iUZppnzWdNyLHAvI0lBt7tYIHaldTkggshQ8xVmsXwGPcf4fTz"
+            BuildConfig.TWITTER_API_KEY,
+            BuildConfig.TWITTER_API_SECRET_KEY
         )
 
         builder.addHeader("Authorization", credentials)

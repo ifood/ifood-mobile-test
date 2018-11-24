@@ -9,7 +9,7 @@ import com.eblushe.apptwitter.common.providers.StorageProvider
 import io.reactivex.Single
 
 class AuthRepository(
-    private val oAuthService: OAuthService,
+    var oAuthService: OAuthService,
     apiProvider: ApiProvider,
     storageProvider: StorageProvider,
     schedulerProvider: RxProvider
@@ -28,7 +28,7 @@ class AuthRepository(
         val noCached = observable == null
         if (noCached) {
             val grantType = "client_credentials"
-            observable = oAuthService.get().postCredentials(grantType)
+            observable = oAuthService.requestToken(grantType)
                 .subscribeOn(schedulerProvider.newThread())
                 .observeOn(schedulerProvider.mainThread())
                 .map(::mapToOAuthToken)

@@ -1,3 +1,5 @@
 package com.eblushe.apptwitter.application
 
-val CONFIG_API_URL = "https://api.twitter.com/"
+import com.eblushe.apptwitter.BuildConfig
+
+val CONFIG_API_URL = BuildConfig.TWITTER_API_URL

@@ -22,6 +22,12 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    buildTypes.each {
+        it.buildConfigField 'String', 'TWITTER_API_URL', TWITTER_API_URL
+        it.buildConfigField 'String', 'TWITTER_API_KEY', TWITTER_API_KEY
+        it.buildConfigField 'String', 'TWITTER_API_SECRET_KEY', TWITTER_API_SECRET_KEY
+    }
 }
 
 dependencies {

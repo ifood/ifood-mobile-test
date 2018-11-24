@@ -36,6 +36,10 @@ val routerModule = module {
     single { RouterProvider }
 }
 
+val mockModule = module {
+    single(override = true) { SchedulerProviderMock() as RxProvider }
+}
+
 val diModule = listOf(
     routerModule,
     featuresModule,
