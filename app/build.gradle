@@ -66,6 +66,12 @@ dependencies {
     androidTestImplementation "androidx.test.espresso.idling:idling-concurrent:$espresso_version"
     androidTestImplementation "androidx.test.espresso:espresso-idling-resource:$espresso_version"
 
+    def room_version = "2.0.0"
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+    implementation "androidx.room:room-rxjava2:$room_version"
+    testImplementation "androidx.room:room-testing:$room_version"
+
     // Others
 
     implementation 'com.squareup.picasso:picasso:2.71828'

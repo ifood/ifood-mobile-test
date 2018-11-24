@@ -1,28 +1,24 @@
 package com.eblushe.apptwitter.common.di
 
-import com.eblushe.appinstagram.common.providers.ApiProvider
-import com.eblushe.apptwitter.common.providers.RouterProvider
-import com.eblushe.apptwitter.common.providers.RxProvider
-import com.eblushe.apptwitter.common.providers.SchedulerProvider
-import com.eblushe.apptwitter.common.providers.StorageProvider
+import com.eblushe.apptwitter.common.providers.*
 import com.eblushe.apptwitter.common.repositories.BaseRepository
 import com.eblushe.apptwitter.features.home.viewmodels.HomeViewModel
 import org.koin.androidx.viewmodel.ext.koin.viewModel
 import org.koin.dsl.module.module
 
-val RepositoriesModule = module {
+val repositoriesModule = module {
     single { BaseRepository(get(), get(), get()) }
 }
 
-val StorageModule = module {
+val storageModule = module {
     single { StorageProvider }
 }
 
-val ApiModule = module {
+val apiModule = module {
     single { ApiProvider }
 }
 
-val FeaturesModule = module {
+val featuresModule = module {
     viewModel { HomeViewModel() }
 }
 
@@ -36,9 +32,9 @@ val routerModule = module {
 
 val diModule = listOf(
     routerModule,
-    FeaturesModule,
-    RepositoriesModule,
-    StorageModule,
-    ApiModule,
+    featuresModule,
+    repositoriesModule,
+    storageModule,
+    apiModule,
     rxModule
 )

@@ -1,4 +1,4 @@
-package com.eblushe.appinstagram.common.providers
+package com.eblushe.apptwitter.common.providers
 
 import android.util.Log
 import okhttp3.Interceptor

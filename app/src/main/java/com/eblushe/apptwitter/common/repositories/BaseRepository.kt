@@ -1,6 +1,6 @@
 package com.eblushe.apptwitter.common.repositories
 
-import com.eblushe.appinstagram.common.providers.ApiProvider
+import com.eblushe.apptwitter.common.providers.ApiProvider
 import com.eblushe.apptwitter.common.providers.RxProvider
 import com.eblushe.apptwitter.common.providers.StorageProvider
 
