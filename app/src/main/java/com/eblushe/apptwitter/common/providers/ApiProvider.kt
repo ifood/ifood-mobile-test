@@ -1,6 +1,5 @@
 package com.eblushe.apptwitter.common.providers
 
-import android.os.Build
 import com.eblushe.apptwitter.BuildConfig
 import okhttp3.Credentials
 import okhttp3.Interceptor

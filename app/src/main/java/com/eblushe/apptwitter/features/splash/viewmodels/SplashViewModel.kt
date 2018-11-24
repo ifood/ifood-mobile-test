@@ -26,8 +26,7 @@ class SplashViewModel(
     }
 
     private fun onRequestTokenError(throwable: Throwable) {
-        throwable.printStackTrace()
-        appTokenLiveData.value = DataHolder(error = throwable as Exception)
+        appTokenLiveData.value = DataHolder(error = Exception(throwable))
     }
 
     override fun onCleared() {
