@@ -45,14 +45,21 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 1 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 2 nibs.
   struct nib {
     /// Nib `EmptyErrorStateView`.
     static let emptyErrorStateView = _R.nib._EmptyErrorStateView()
+    /// Nib `HomeViewController`.
+    static let homeViewController = _R.nib._HomeViewController()
     
     /// `UINib(name: "EmptyErrorStateView", in: bundle)`
     static func emptyErrorStateView(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.emptyErrorStateView)
+    }
+    
+    /// `UINib(name: "HomeViewController", in: bundle)`
+    static func homeViewController(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.homeViewController)
     }
     
     fileprivate init() {}
@@ -209,6 +216,17 @@ struct _R {
     struct _EmptyErrorStateView: Rswift.NibResourceType {
       let bundle = R.hostingBundle
       let name = "EmptyErrorStateView"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> UIKit.UIView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _HomeViewController: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "HomeViewController"
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> UIKit.UIView? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView

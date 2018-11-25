@@ -14,7 +14,7 @@ import RxSwift
 // Presentation Dependency Injection
 enum CoordinationConfigurator {
     static func setup(with container: Container) {
-        
+        HomeConfigurator.setup(with: container)
     }
 }
 
@@ -28,6 +28,14 @@ enum CoordinationConfigurator {
 //        }
 //    }
 //}
+
+enum HomePresenterConfigurator {
+    static func setup(with container: Container) {
+        container.register(HomePresenterProtocol.self) { resolver in
+            return HomePresenter(view: resolver.resolve(HomeViewProtocol?.self)!)
+        }
+    }
+}
 
 // DataSource Dependency Injection
 enum DataSourceConfigurator {

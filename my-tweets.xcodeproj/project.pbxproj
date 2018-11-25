@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D393800421AB518F00B13656 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D393800121AB518F00B13656 /* HomePresenter.swift */; };
+		D393800521AB518F00B13656 /* HomeVMs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D393800221AB518F00B13656 /* HomeVMs.swift */; };
+		D393800621AB518F00B13656 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D393800321AB518F00B13656 /* HomeViewController.swift */; };
+		D393800821AB51B900B13656 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D393800721AB51B900B13656 /* HomeViewController.xib */; };
+		D393800A21AB51FF00B13656 /* HomeAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D393800921AB51FF00B13656 /* HomeAdapter.swift */; };
+		D393800C21AB520C00B13656 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D393800B21AB520C00B13656 /* HomeCoordinator.swift */; };
+		D393800E21AB521B00B13656 /* HomeConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D393800D21AB521B00B13656 /* HomeConfigurator.swift */; };
+		D393801121AB52FB00B13656 /* SceneConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D393801021AB52FB00B13656 /* SceneConfigurator.swift */; };
 		D3C4632521A7040400FC0CC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4632421A7040400FC0CC8 /* AppDelegate.swift */; };
 		D3C4632C21A7040500FC0CC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3C4632B21A7040500FC0CC8 /* Assets.xcassets */; };
 		D3C4632F21A7040500FC0CC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3C4632D21A7040500FC0CC8 /* LaunchScreen.storyboard */; };
@@ -68,6 +76,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D393800121AB518F00B13656 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		D393800221AB518F00B13656 /* HomeVMs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVMs.swift; sourceTree = "<group>"; };
+		D393800321AB518F00B13656 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D393800721AB51B900B13656 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		D393800921AB51FF00B13656 /* HomeAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAdapter.swift; sourceTree = "<group>"; };
+		D393800B21AB520C00B13656 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		D393800D21AB521B00B13656 /* HomeConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeConfigurator.swift; sourceTree = "<group>"; };
+		D393801021AB52FB00B13656 /* SceneConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneConfigurator.swift; sourceTree = "<group>"; };
 		D3C4632121A7040400FC0CC8 /* my-tweets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "my-tweets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3C4632421A7040400FC0CC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3C4632B21A7040500FC0CC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -158,6 +174,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D393800021AB517E00B13656 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D393800F21AB522100B13656 /* Home */,
+				D393800B21AB520C00B13656 /* HomeCoordinator.swift */,
+				D393800D21AB521B00B13656 /* HomeConfigurator.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D393800F21AB522100B13656 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D393800921AB51FF00B13656 /* HomeAdapter.swift */,
+				D393800121AB518F00B13656 /* HomePresenter.swift */,
+				D393800221AB518F00B13656 /* HomeVMs.swift */,
+				D393800321AB518F00B13656 /* HomeViewController.swift */,
+				D393800721AB51B900B13656 /* HomeViewController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		D3C4631821A7040400FC0CC8 = {
 			isa = PBXGroup;
 			children = (
@@ -305,7 +343,8 @@
 		D3C4634521A7075E00FC0CC8 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				D3C4635021A7080800FC0CC8 /* Depdency Injection */,
+				D393800021AB517E00B13656 /* Home */,
+				D3C4635021A7080800FC0CC8 /* Dependency Injection */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -365,11 +404,12 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
-		D3C4635021A7080800FC0CC8 /* Depdency Injection */ = {
+		D3C4635021A7080800FC0CC8 /* Dependency Injection */ = {
 			isa = PBXGroup;
 			children = (
+				D393801021AB52FB00B13656 /* SceneConfigurator.swift */,
 			);
-			path = "Depdency Injection";
+			path = "Dependency Injection";
 			sourceTree = "<group>";
 		};
 		D3C4636121A70DD200FC0CC8 /* Error View */ = {
@@ -489,6 +529,7 @@
 				D3C4634D21A707F000FC0CC8 /* Localizable.strings in Resources */,
 				D3C4632F21A7040500FC0CC8 /* LaunchScreen.storyboard in Resources */,
 				D3C4632C21A7040500FC0CC8 /* Assets.xcassets in Resources */,
+				D393800821AB51B900B13656 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,14 +622,19 @@
 				D3C463B421A7240F00FC0CC8 /* Tweet.swift in Sources */,
 				D3C463C321A72F2700FC0CC8 /* SentimentController.swift in Sources */,
 				D3C463A821A7194C00FC0CC8 /* GoogleProvider.swift in Sources */,
+				D393800621AB518F00B13656 /* HomeViewController.swift in Sources */,
+				D393801121AB52FB00B13656 /* SceneConfigurator.swift in Sources */,
 				D3C463C521A730C800FC0CC8 /* UseCaseTypes.swift in Sources */,
 				D3C4636D21A70FA900FC0CC8 /* UISearchBar+Extensions.swift in Sources */,
 				D3C4639F21A7164F00FC0CC8 /* R.generated.swift in Sources */,
 				D3C4636F21A70FCE00FC0CC8 /* SceneView.swift in Sources */,
 				D3C463C121A72E9F00FC0CC8 /* SentimentRepository.swift in Sources */,
 				D3C4636B21A70F2E00FC0CC8 /* UINavigationController+Custom.swift in Sources */,
+				D393800521AB518F00B13656 /* HomeVMs.swift in Sources */,
+				D393800421AB518F00B13656 /* HomePresenter.swift in Sources */,
 				D3C463A221A716F900FC0CC8 /* CachePolicyPlugin.swift in Sources */,
 				D3C463B021A722C400FC0CC8 /* RxSwift+Extensions.swift in Sources */,
+				D393800A21AB51FF00B13656 /* HomeAdapter.swift in Sources */,
 				D3C4637521A7103A00FC0CC8 /* ErrorDisplayer.swift in Sources */,
 				D3C463A421A7172E00FC0CC8 /* MoyaEndpoint.swift in Sources */,
 				D3C4635821A70D2D00FC0CC8 /* ApplicationConfigurator.swift in Sources */,
@@ -603,7 +649,9 @@
 				D3C4636721A70EA200FC0CC8 /* UIView+IB.swift in Sources */,
 				D3C4632521A7040400FC0CC8 /* AppDelegate.swift in Sources */,
 				D3C463AC21A71A3D00FC0CC8 /* ErrorMapper.swift in Sources */,
+				D393800C21AB520C00B13656 /* HomeCoordinator.swift in Sources */,
 				D3C463AA21A71A0100FC0CC8 /* ErrorHandler.swift in Sources */,
+				D393800E21AB521B00B13656 /* HomeConfigurator.swift in Sources */,
 				D3C4635A21A70D4D00FC0CC8 /* ApplicationCoordinator.swift in Sources */,
 				D3C4637121A70FE800FC0CC8 /* ScenePresenter.swift in Sources */,
 			);
