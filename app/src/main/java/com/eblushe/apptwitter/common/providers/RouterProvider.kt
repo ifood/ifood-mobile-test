@@ -6,6 +6,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import com.eblushe.apptwitter.features.home.views.HomeActivity
+import com.eblushe.apptwitter.features.userdetails.views.UserDetailsActivity
 
 @SuppressLint("StaticFieldLeak")
 object RouterProvider {
@@ -23,6 +24,24 @@ object RouterProvider {
         bundle?.let {
             intent.putExtras(it)
         }
+
+        if (finish) {
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        }
+
+        applicationContext?.apply {
+            startActivity(intent)
+        }
+    }
+
+    fun openUserDetailsScreen(screenName: String, finish: Boolean = false) {
+        if (runningUITest) return
+
+        val bundle = Bundle()
+        bundle.putString(UserDetailsActivity.PARAMS_SCREEN_NAME, screenName)
+
+        val intent = Intent(applicationContext, UserDetailsActivity::class.java)
+            intent.putExtras(bundle)
 
         if (finish) {
             intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_CLEAR_TASK

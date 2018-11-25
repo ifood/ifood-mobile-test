@@ -9,5 +9,6 @@ class User(
     @PrimaryKey
     var id: Long? = null,
     var name: String,
-    var screenName: String
+    var screenName: String,
+    var description: String?
 )

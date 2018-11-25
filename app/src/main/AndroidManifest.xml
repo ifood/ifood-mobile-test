@@ -14,10 +14,11 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".features.home.views.HomeActivity" />
+        <activity android:name=".features.home.views.HomeActivity"/>
+        <activity android:name=".features.userdetails.views.UserDetailsActivity"/>
         <activity
                 android:name=".features.splash.views.SplashActivity"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+                android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -25,5 +26,4 @@
             </intent-filter>
         </activity>
     </application>
-
 </manifest>

@@ -42,9 +42,8 @@ open class BaseUnitTest : KoinTest {
                     single(override = true) { appDatabase }
                 })
         )
-
-        ApiProvider.initTwitterClient(CONFIG_API_URL)
         StorageProvider.init(context, preferences)
+        ApiProvider.initTwitterClient(CONFIG_API_URL)
         BDDMockito.given(preferences.edit()).willReturn(editor)
     }
 

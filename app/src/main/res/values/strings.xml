@@ -3,4 +3,11 @@
     <string name="finished">Finished</string>
     <string name="sorry_cant_start_application">Sorry can\'t start the application.\nCheck your internet connection.
     </string>
+    <string name="userName">User Name</string>
+    <string name="required_field">Required field</string>
+    <string name="generic_error">Can not request data</string>
+    <string name="retry">Retry</string>
+    <string name="user_not_found">User not found</string>
+    <string name="back">Back</string>
+    <string name="check_your_connection">Check your connection</string>
 </resources>
