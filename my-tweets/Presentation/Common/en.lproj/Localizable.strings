@@ -6,6 +6,7 @@
 //  Copyright © 2018 Gabriel Catice. All rights reserved.
 //
 
+"app_name" = "My Tweets";
 "search" = "Search";
 "tweets" = "Tweets";
 "costumer_key" = "GIuEde4dv1J8D7IVL3DcIo33N";
@@ -15,3 +16,4 @@
 "ok" = "OK";
 "check_your_internet_connection" = "Unable to connect :(. Please verify your internet connection and try again.";
 "unexpected_error" = "Unexpected error :(. Try again.";
+"home_search_bar" = "Type an @user";

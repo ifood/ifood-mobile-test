@@ -21,6 +21,12 @@ class HomeCoordinator: Coordinator, DisposableHolder {
     }
     
     func start(_ presentation: CoordinatorPresentation = .push) {
-       
+        guard let viewController = HomeViewControllerConfigurator.viewController() else { return }
+        
+        let backButton = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        viewController.navigationItem.title = R.string.localizable.app_name()
+        viewController.navigationItem.backBarButtonItem = backButton
+        
+        navigationController.pushViewController(viewController, animated: true)
     }
 }

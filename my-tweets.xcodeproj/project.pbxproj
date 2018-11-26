@@ -15,6 +15,9 @@
 		D393800C21AB520C00B13656 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D393800B21AB520C00B13656 /* HomeCoordinator.swift */; };
 		D393800E21AB521B00B13656 /* HomeConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D393800D21AB521B00B13656 /* HomeConfigurator.swift */; };
 		D393801121AB52FB00B13656 /* SceneConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D393801021AB52FB00B13656 /* SceneConfigurator.swift */; };
+		D393801321AB554700B13656 /* UIFont+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = D393801221AB554700B13656 /* UIFont+Custom.swift */; };
+		D393801721AB629600B13656 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D393801521AB629600B13656 /* HomeTableViewCell.swift */; };
+		D393801821AB629600B13656 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D393801621AB629600B13656 /* HomeTableViewCell.xib */; };
 		D3C4632521A7040400FC0CC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4632421A7040400FC0CC8 /* AppDelegate.swift */; };
 		D3C4632C21A7040500FC0CC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3C4632B21A7040500FC0CC8 /* Assets.xcassets */; };
 		D3C4632F21A7040500FC0CC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3C4632D21A7040500FC0CC8 /* LaunchScreen.storyboard */; };
@@ -84,6 +87,9 @@
 		D393800B21AB520C00B13656 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		D393800D21AB521B00B13656 /* HomeConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeConfigurator.swift; sourceTree = "<group>"; };
 		D393801021AB52FB00B13656 /* SceneConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneConfigurator.swift; sourceTree = "<group>"; };
+		D393801221AB554700B13656 /* UIFont+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Custom.swift"; sourceTree = "<group>"; };
+		D393801521AB629600B13656 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		D393801621AB629600B13656 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		D3C4632121A7040400FC0CC8 /* my-tweets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "my-tweets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3C4632421A7040400FC0CC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3C4632B21A7040500FC0CC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -187,6 +193,7 @@
 		D393800F21AB522100B13656 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				D393801421AB628700B13656 /* Cell */,
 				D393800921AB51FF00B13656 /* HomeAdapter.swift */,
 				D393800121AB518F00B13656 /* HomePresenter.swift */,
 				D393800221AB518F00B13656 /* HomeVMs.swift */,
@@ -194,6 +201,15 @@
 				D393800721AB51B900B13656 /* HomeViewController.xib */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		D393801421AB628700B13656 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D393801521AB629600B13656 /* HomeTableViewCell.swift */,
+				D393801621AB629600B13656 /* HomeTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		D3C4631821A7040400FC0CC8 = {
@@ -392,6 +408,7 @@
 				D3C4636821A70F0100FC0CC8 /* UIView+Extensions.swift */,
 				D3C4636A21A70F2D00FC0CC8 /* UINavigationController+Custom.swift */,
 				D3C4636C21A70FA900FC0CC8 /* UISearchBar+Extensions.swift */,
+				D393801221AB554700B13656 /* UIFont+Custom.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -525,6 +542,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3C4635421A70BCF00FC0CC8 /* Cartfile in Resources */,
+				D393801821AB629600B13656 /* HomeTableViewCell.xib in Resources */,
 				D3C4636321A70DED00FC0CC8 /* EmptyErrorStateView.xib in Resources */,
 				D3C4634D21A707F000FC0CC8 /* Localizable.strings in Resources */,
 				D3C4632F21A7040500FC0CC8 /* LaunchScreen.storyboard in Resources */,
@@ -578,6 +596,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/IQKeyboardManagerSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/IQKeyboardManager.framework",
 			);
 			name = "Run Script - Carthage";
 			outputFileListPaths = (
@@ -599,6 +618,7 @@
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SnapKit.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/IQKeyboardManagerSwift.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Kingfisher.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/IQKeyboardManager.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -617,9 +637,11 @@
 				D3C4636521A70E0400FC0CC8 /* EmptyErrorStateView.swift in Sources */,
 				D3C463B921A724B900FC0CC8 /* GoogleSentimentRM.swift in Sources */,
 				D3C4636921A70F0100FC0CC8 /* UIView+Extensions.swift in Sources */,
+				D393801721AB629600B13656 /* HomeTableViewCell.swift in Sources */,
 				D3C4637921A7113800FC0CC8 /* DependyInjection.swift in Sources */,
 				D3C4637721A7108A00FC0CC8 /* SceneTableViewAdapter.swift in Sources */,
 				D3C463B421A7240F00FC0CC8 /* Tweet.swift in Sources */,
+				D393801321AB554700B13656 /* UIFont+Custom.swift in Sources */,
 				D3C463C321A72F2700FC0CC8 /* SentimentController.swift in Sources */,
 				D3C463A821A7194C00FC0CC8 /* GoogleProvider.swift in Sources */,
 				D393800621AB518F00B13656 /* HomeViewController.swift in Sources */,

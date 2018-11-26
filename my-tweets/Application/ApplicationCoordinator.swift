@@ -21,20 +21,18 @@ class ApplicationCoordinator {
     }
     
     func start() {
-//        let tabBarController = CustomTabBarController()
-//        disposeBag = DisposeBag()
-//
-//        // First tab
-//        let firstNavigationController = UINavigationController()
-//        firstNavigationController.tabBarItem = UITabBarItem(title: R.string.localizable.refund().uppercased(),
-//                                                            image: R.image.icRefundOff(), selectedImage: R.image.icRefundOn())
-//        let firstCoordinator = MyRefundsConfigurator.coordinator(with: firstNavigationController)!
-//        firstCoordinator.start()
-//        children.append(firstCoordinator)
-//
-//        tabBarController.setViewControllers([firstNavigationController], animated: false)
+        let tabBarController = UITabBarController()
+        disposeBag = DisposeBag()
+
+        // First tab
+        let firstNavigationController = UINavigationController()
+        let firstCoordinator = HomeConfigurator.coordinator(with: firstNavigationController)!
+        firstCoordinator.start()
+        children.append(firstCoordinator)
+
+        tabBarController.setViewControllers([firstNavigationController], animated: false)
         
-//        self.window.rootViewController = tabBarController
+        self.window.rootViewController = tabBarController
         self.window.makeKeyAndVisible()
     }
 }

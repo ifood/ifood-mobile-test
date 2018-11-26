@@ -45,16 +45,23 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 2 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 3 nibs.
   struct nib {
     /// Nib `EmptyErrorStateView`.
     static let emptyErrorStateView = _R.nib._EmptyErrorStateView()
+    /// Nib `HomeTableViewCell`.
+    static let homeTableViewCell = _R.nib._HomeTableViewCell()
     /// Nib `HomeViewController`.
     static let homeViewController = _R.nib._HomeViewController()
     
     /// `UINib(name: "EmptyErrorStateView", in: bundle)`
     static func emptyErrorStateView(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.emptyErrorStateView)
+    }
+    
+    /// `UINib(name: "HomeTableViewCell", in: bundle)`
+    static func homeTableViewCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.homeTableViewCell)
     }
     
     /// `UINib(name: "HomeViewController", in: bundle)`
@@ -90,7 +97,7 @@ struct R: Rswift.Validatable {
   
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 9 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 11 localization keys.
     struct localizable {
       /// en translation: Error
       /// 
@@ -100,6 +107,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en
       static let costumer_key = Rswift.StringResource(key: "costumer_key", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: My Tweets
+      /// 
+      /// Locales: en
+      static let app_name = Rswift.StringResource(key: "app_name", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: OK
       /// 
       /// Locales: en
@@ -116,6 +127,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en
       static let tweets = Rswift.StringResource(key: "tweets", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Type an @user
+      /// 
+      /// Locales: en
+      static let home_search_bar = Rswift.StringResource(key: "home_search_bar", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Unable to connect :(. Please verify your internet connection and try again.
       /// 
       /// Locales: en
@@ -141,6 +156,13 @@ struct R: Rswift.Validatable {
       /// Locales: en
       static func costumer_key(_: Void = ()) -> String {
         return NSLocalizedString("costumer_key", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: My Tweets
+      /// 
+      /// Locales: en
+      static func app_name(_: Void = ()) -> String {
+        return NSLocalizedString("app_name", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: OK
@@ -169,6 +191,13 @@ struct R: Rswift.Validatable {
       /// Locales: en
       static func tweets(_: Void = ()) -> String {
         return NSLocalizedString("tweets", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Type an @user
+      /// 
+      /// Locales: en
+      static func home_search_bar(_: Void = ()) -> String {
+        return NSLocalizedString("home_search_bar", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Unable to connect :(. Please verify your internet connection and try again.
@@ -219,6 +248,17 @@ struct _R {
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> UIKit.UIView? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _HomeTableViewCell: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "HomeTableViewCell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> HomeTableViewCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? HomeTableViewCell
       }
       
       fileprivate init() {}
