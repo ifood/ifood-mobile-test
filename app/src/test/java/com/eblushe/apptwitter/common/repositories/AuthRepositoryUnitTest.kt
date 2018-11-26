@@ -26,7 +26,7 @@ class AuthRepositoryUnitTest : BaseUnitTest() {
     }
 
     @Test
-    fun requestAuthToken() {
+    fun requestAuthToken_WhenSuccess() {
         val accessToken = "QWERTY"
         val tokenType = "bearer"
         val grantType = "client_credentials"
@@ -43,6 +43,20 @@ class AuthRepositoryUnitTest : BaseUnitTest() {
             assertEquals(tokenType, oauthToken.tokenType)
         }
     }
+
+    @Test
+    fun requestAuthToken_WhenError() {
+        val grantType = "client_credentials"
+        val errorMessage = "Invalid credentials."
+
+        val responseErrorSingle = Single.error<OAuthTokenResponse>(Throwable())
+        given(oAuthService.requestToken(grantType)).willReturn(responseErrorSingle)
+
+        repository.requestAuthToken()?.doOnError { error ->
+            assertEquals(errorMessage, error.message)
+        }
+    }
+
 
     @Test
     fun requestAuthToken_WhenCacheIsActive() {
