@@ -1,6 +1,6 @@
 package com.eblushe.apptwitter.common.repositories
 
-import com.eblushe.apptwitter.common.apis.twitter.responses.TwitterOAuthToken
+import com.eblushe.apptwitter.common.apis.twitter.responses.OAuthTokenResponse
 import com.eblushe.apptwitter.common.apis.twitter.services.OAuthService
 import com.eblushe.apptwitter.common.models.OAuthToken
 import com.eblushe.apptwitter.common.tests.BaseUnitTest
@@ -30,7 +30,7 @@ class AuthRepositoryUnitTest : BaseUnitTest() {
         val accessToken = "QWERTY"
         val tokenType = "bearer"
         val grantType = "client_credentials"
-        val twitterToken = TwitterOAuthToken()
+        val twitterToken = OAuthTokenResponse()
 
         twitterToken.accessToken = accessToken
         twitterToken.tokenType = tokenType

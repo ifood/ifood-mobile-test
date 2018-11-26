@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName
 
 
 
-class TwitterOAuthToken {
+class OAuthTokenResponse {
 
     var authorization : String = ""; get() = "$tokenType $accessToken"
 

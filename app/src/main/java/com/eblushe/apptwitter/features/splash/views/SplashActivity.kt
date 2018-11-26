@@ -27,7 +27,7 @@ class SplashActivity : BaseActivity<SplashViewModel>() {
     override fun onResume() {
         super.onResume()
 
-        if (needRetryRequestToken) {
+        if (needRetryRequestToken) { // TODO: refatorar, jogar logica para viewmodel FINISED
             viewModel.requestToken()
         }
     }
