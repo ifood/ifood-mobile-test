@@ -1,8 +1,13 @@
 package com.eblushe.apptwitter.common.models
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity
 class Tweet(
-    var id: Long? = null,
+    @PrimaryKey var id: Long? = null,
     var text: String? = null,
-    var created_at: String? = null,
-    var user: User? = null
+    var createdAt: String? = null,
+    var userId: Long? = null,
+    var userName: String? = null
 )

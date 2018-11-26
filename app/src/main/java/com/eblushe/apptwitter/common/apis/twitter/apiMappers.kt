@@ -16,23 +16,7 @@ fun mapToTweet(tweetResponse: TweetResponse) : Tweet {
         tweetResponse.id,
         tweetResponse.text,
         tweetResponse.createdAt,
-        tweetResponse.user?.let { mapToUser(it) }
-    )
-}
-
-fun mapToUser(userResponse: UserResponse) : User? {
-    if (userResponse.name.isNullOrBlank()) {
-        return null
-    }
-
-    if (userResponse.screenName.isNullOrBlank()) {
-        return null
-    }
-
-    return User(
-        userResponse.id,
-        userResponse.name!!,
-        userResponse.screenName!!,
-        userResponse.description
+        tweetResponse.user?.id,
+        tweetResponse.user?.name
     )
 }
