@@ -52,7 +52,7 @@ class UserDetailsActivity : BaseActivity<UserDetailsViewModel>() {
             DataHolder.State.LOADING -> { showLoading(progressBar) }
             DataHolder.State.LOADED, DataHolder.State.FINISHED -> { onTweetsLoaded(holder) }
             DataHolder.State.ERROR -> { onTweetsError(holder.error!!) }
-            else -> { onGenericError() }
+            DataHolder.State.EMPTY, DataHolder.State.RELOADING -> {}
         }
     }
 
@@ -67,30 +67,36 @@ class UserDetailsActivity : BaseActivity<UserDetailsViewModel>() {
         val cause = exception.cause
 
         when (cause) {
-            is HttpException -> {
-                when (cause.code()) {
-                    404 -> {
-                        showSnackBar(rootContainer, R.string.user_not_found, R.string.back) {
-                              onBackPressed()
-                        }
-                    }
-                    else -> onGenericError()
-                }
+            is HttpException -> handleHttpExceptions(exception)
+            else -> handleCommonExceptions(exception)
+        }
+    }
+
+    private fun handleHttpExceptions(exception: Exception) {
+        hideLoading(progressBar)
+        val cause = exception.cause as HttpException
+
+        when (cause.code()) {
+            404 -> {
+                showSnackBar(rootContainer, R.string.user_not_found, R.string.back) { onBackPressed() }
             }
+            else -> handleCommonExceptions(exception)
+        }
+    }
+
+    private fun handleCommonExceptions(exception: Exception) {
+        hideLoading(progressBar)
+        val cause = exception.cause
+        when (cause) {
             is UnknownHostException -> {
                 showSnackBar(rootContainer, R.string.check_your_connection, R.string.retry) {
                     screenName?.let { name -> viewModel.requestTweetsFromScreenName(name)}
                 }
             }
-            else -> onGenericError()
-        }
-    }
-
-    private fun onGenericError() {
-        hideLoading(progressBar)
-        showSnackBar(rootContainer, R.string.generic_error, R.string.retry) {
-            screenName?.let { name ->
-                viewModel.requestTweetsFromScreenName(name)
+            else -> {
+                showSnackBar(rootContainer, R.string.generic_error, R.string.retry) {
+                    screenName?.let { name -> viewModel.requestTweetsFromScreenName(name) }
+                }
             }
         }
     }

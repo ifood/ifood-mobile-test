@@ -5,7 +5,7 @@
     </string>
     <string name="userName">User Name</string>
     <string name="required_field">Required field</string>
-    <string name="generic_error">Can not request data</string>
+    <string name="generic_error">Please try again.</string>
     <string name="retry">Retry</string>
     <string name="user_not_found">User not found</string>
     <string name="back">Back</string>
