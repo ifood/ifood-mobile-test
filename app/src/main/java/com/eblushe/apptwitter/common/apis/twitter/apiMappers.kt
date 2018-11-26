@@ -15,7 +15,7 @@ fun mapToTweet(tweetResponse: TweetResponse) : Tweet {
     return Tweet(
         tweetResponse.id,
         tweetResponse.text,
-        tweetResponse.created_at,
+        tweetResponse.createdAt,
         tweetResponse.user?.let { mapToUser(it) }
     )
 }
