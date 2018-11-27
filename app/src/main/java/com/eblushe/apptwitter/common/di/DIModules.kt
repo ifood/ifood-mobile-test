@@ -16,11 +16,13 @@ import org.koin.dsl.module.module
 val repositoriesModule = module {
     single { BaseRepository(get(), get(), get()) }
     single { AuthRepository(get(), get(), get(), get()) }
-    single { StatusesRepository(get(), get(), get(), get()) }
+    single { StatusesRepository(get(), get(), get(), get(), get()) }
 }
 
 val storageModule = module {
     single { StorageProvider }
+    single { StorageProvider.getDb().userDao() }
+    single { StorageProvider.getDb().tweetDao() }
 }
 
 val apiModule = module {

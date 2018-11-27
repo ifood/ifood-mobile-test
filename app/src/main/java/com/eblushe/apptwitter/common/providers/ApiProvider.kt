@@ -38,7 +38,7 @@ object ApiProvider {
                 )
             }
 
-            builder.addHeader("Authorization", authType)
+            builder.addHeader("Authorization", authType!!)
             builder.addHeader("content-type", "application/json")
             chain.proceed(builder.build())
         }

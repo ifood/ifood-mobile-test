@@ -1,11 +1,9 @@
 package com.eblushe.apptwitter.common.apis.twitter
 
-import com.eblushe.apptwitter.common.apis.twitter.responses.TweetResponse
 import com.eblushe.apptwitter.common.apis.twitter.responses.OAuthTokenResponse
-import com.eblushe.apptwitter.common.apis.twitter.responses.UserResponse
+import com.eblushe.apptwitter.common.apis.twitter.responses.TweetResponse
 import com.eblushe.apptwitter.common.models.OAuthToken
 import com.eblushe.apptwitter.common.models.Tweet
-import com.eblushe.apptwitter.common.models.User
 
 fun mapToOAuthToken(OAuthTokenResponse: OAuthTokenResponse) : OAuthToken {
     return OAuthToken(OAuthTokenResponse.accessToken, OAuthTokenResponse.tokenType)
@@ -14,9 +12,10 @@ fun mapToOAuthToken(OAuthTokenResponse: OAuthTokenResponse) : OAuthToken {
 fun mapToTweet(tweetResponse: TweetResponse) : Tweet {
     return Tweet(
         tweetResponse.id,
+        tweetResponse.idStr,
         tweetResponse.text,
         tweetResponse.createdAt,
         tweetResponse.user?.id,
-        tweetResponse.user?.name
+        tweetResponse.user?.screenName?.toLowerCase()
     )
 }
