@@ -30,6 +30,7 @@ public struct TwitterDataSource {
     func request(target: TwitterProvider, client: TWTRAPIClient) -> RxSwift.PrimitiveSequence<RxSwift.SingleTrait, Response> {
         var clientError: NSError?
         var networkResponse: Response?
+        var domainError: Error?
         
         var request = client.urlRequest(withMethod: target.method.rawValue,
                                         urlString: target.endpoint,
@@ -38,10 +39,18 @@ public struct TwitterDataSource {
         request.timeoutInterval = 15
         
         client.sendTwitterRequest(request) { (response, data, connectionError) -> Void in
+            if connectionError != nil {
+                domainError = connectionError
+                return
+            }
             networkResponse = Response(statusCode: 200, data: data!, request: nil, response: nil)
         }
-        
-        return Single.just(networkResponse!) //Remove force unwrap
+        if domainError != nil {
+            return Single.error(DomainError.generic)
+        } else {
+            guard let response = networkResponse else { return Single.error(DomainError.generic)}
+            return Single.just(response)
+        }
     }
     
     func getApiClient() -> Single<TWTRAPIClient> {
