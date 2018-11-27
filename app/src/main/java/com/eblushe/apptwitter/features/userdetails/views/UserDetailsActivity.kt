@@ -11,9 +11,7 @@ import com.eblushe.apptwitter.features.userdetails.adapters.TweetAdapter
 import com.eblushe.apptwitter.features.userdetails.viewmodels.UserDetailsViewModel
 import kotlinx.android.synthetic.main.activity_user_details.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
-import retrofit2.HttpException
 import java.net.UnknownHostException
-import kotlin.Exception
 
 class UserDetailsActivity : BaseActivity<UserDetailsViewModel>() {
     override val viewModel: UserDetailsViewModel by viewModel()
@@ -50,9 +48,11 @@ class UserDetailsActivity : BaseActivity<UserDetailsViewModel>() {
     private fun observeTweets(holder: DataHolder<List<Tweet>>) {
         when(holder.state) {
             DataHolder.State.LOADING -> { showLoading(progressBar) }
-            DataHolder.State.LOADED, DataHolder.State.FINISHED -> { onTweetsLoaded(holder) }
+            DataHolder.State.LOADED,
+            DataHolder.State.EMPTY,
+            DataHolder.State.FINISHED -> { onTweetsLoaded(holder) }
             DataHolder.State.ERROR -> { onTweetsError(holder.error!!) }
-            DataHolder.State.EMPTY, DataHolder.State.RELOADING -> {}
+            DataHolder.State.RELOADING -> {}
         }
     }
 
@@ -63,28 +63,6 @@ class UserDetailsActivity : BaseActivity<UserDetailsViewModel>() {
     }
 
     private fun onTweetsError(exception: Exception) {
-        hideLoading(progressBar)
-        val cause = exception.cause
-
-        when (cause) {
-            is HttpException -> handleHttpExceptions(exception)
-            else -> handleCommonExceptions(exception)
-        }
-    }
-
-    private fun handleHttpExceptions(exception: Exception) {
-        hideLoading(progressBar)
-        val cause = exception.cause as HttpException
-
-        when (cause.code()) {
-            404 -> {
-                showSnackBar(rootContainer, R.string.user_not_found, R.string.back) { onBackPressed() }
-            }
-            else -> handleCommonExceptions(exception)
-        }
-    }
-
-    private fun handleCommonExceptions(exception: Exception) {
         hideLoading(progressBar)
         val cause = exception.cause
         when (cause) {

@@ -28,7 +28,11 @@ class UserDetailsViewModel(
     }
 
     private fun onRequestTweetsFromScreenNameSuccess(tweets: List<Tweet>) {
-        tweetsLiveData.value = DataHolder(tweets, DataHolder.State.LOADED)
+        if (tweets.isEmpty()) {
+            tweetsLiveData.value = DataHolder(tweets, DataHolder.State.EMPTY)
+        } else {
+            tweetsLiveData.value = DataHolder(tweets, DataHolder.State.LOADED)
+        }
     }
 
     private fun onRequestTweetsFromScreenNameError(throwable: Throwable) {
