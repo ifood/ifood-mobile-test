@@ -4,6 +4,8 @@ import android.content.Context
 import android.content.SharedPreferences
 import com.eblushe.apptwitter.application.CONFIG_API_URL
 import com.eblushe.apptwitter.common.databases.AppDatabase
+import com.eblushe.apptwitter.common.databases.dao.TweetDAO
+import com.eblushe.apptwitter.common.databases.dao.UserDAO
 import com.eblushe.apptwitter.common.di.diModule
 import com.eblushe.apptwitter.common.di.mockModule
 import com.eblushe.apptwitter.common.providers.ApiProvider
@@ -31,9 +33,25 @@ open class BaseUnitTest : KoinTest {
     @Mock
     lateinit var appDatabase : AppDatabase
 
+    @Mock
+    lateinit var tweetDAO: TweetDAO
+
+    @Mock
+    lateinit var userDAO: UserDAO
+
     @Before
     fun beforeTest() {
         MockitoAnnotations.initMocks(this)
+
+        BDDMockito.given(appDatabase.tweetDao()).willReturn(tweetDAO)
+        BDDMockito.given(appDatabase.userDao()).willReturn(userDAO)
+        BDDMockito.given(preferences.edit()).willReturn(editor)
+
+        StorageProvider.init(context, preferences)
+        StorageProvider.database = appDatabase
+
+        ApiProvider.initTwitterClient(CONFIG_API_URL)
+
         StandAloneContext.startKoin(diModule)
         StandAloneContext.loadKoinModules(
             listOf(
@@ -42,9 +60,6 @@ open class BaseUnitTest : KoinTest {
                     single(override = true) { appDatabase }
                 })
         )
-        StorageProvider.init(context, preferences)
-        ApiProvider.initTwitterClient(CONFIG_API_URL)
-        BDDMockito.given(preferences.edit()).willReturn(editor)
     }
 
     @After
