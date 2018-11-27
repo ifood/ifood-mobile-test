@@ -8,10 +8,9 @@
 
 import Moya
 
-enum TwitterProvider {
+public enum TwitterProvider {
     case searchUsers(term: String)
-    case timeline(userId: String)
-    case friends(userId: String)
+    case timeline(screenName: String)
 }
 
 extension TwitterProvider {
@@ -29,14 +28,12 @@ extension TwitterProvider {
             return "/1.1/users/search.json"
         case .timeline:
             return "/1.1/statuses/user_timeline.json"
-        case .friends:
-            return "/1.1/friends/list.json"
         }
     }
     
     var method: Moya.Method {
         switch self {
-            case .friends, .searchUsers, .timeline: return .get
+            case .searchUsers, .timeline: return .get
         }
     }
     
@@ -45,9 +42,7 @@ extension TwitterProvider {
         case let .searchUsers(term):
             return ["q" : term]
         case let .timeline(userId):
-            return ["user_id" : userId]
-        case let .friends(userId):
-            return ["user_id" : userId]
+            return ["screen_name" : userId]
         }
     }
 }
