@@ -19,3 +19,15 @@ struct TweetRM: Codable {
         case createdDate = "created_at"
     }
 }
+
+extension TweetRM {
+    func toDomainModel() -> Tweet {
+        return Tweet(id: id, sentence: Sentence(text: sentence, score: nil), createdDate: createdDate)
+    }
+}
+
+extension Array where Element == TweetRM {
+    func toDomainModel() -> [Tweet] {
+        return map {$0.toDomainModel() }
+    }
+}

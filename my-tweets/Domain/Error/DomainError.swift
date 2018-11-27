@@ -17,4 +17,5 @@ enum DomainError: Error {
     case unexpected
     case notFound
     case unauthorized
+    case missingRequest
 }

@@ -41,7 +41,7 @@ public struct TwitterDataSource {
             networkResponse = Response(statusCode: 200, data: data!, request: nil, response: nil)
         }
         
-        return Single.just(networkResponse!)
+        return Single.just(networkResponse!) //Remove force unwrap
     }
     
     func getApiClient() -> Single<TWTRAPIClient> {

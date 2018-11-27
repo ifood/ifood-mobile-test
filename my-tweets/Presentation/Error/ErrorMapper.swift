@@ -15,6 +15,7 @@ extension DomainError {
         case .unexpected: return R.string.localizable.unexpected_error()
         case .notFound: return ""
         case .unauthorized: return ""
+        case .missingRequest: return ""
         }
     }
 }

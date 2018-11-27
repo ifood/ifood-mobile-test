@@ -20,7 +20,7 @@ extension RxSwift.PrimitiveSequence where Trait == RxSwift.SingleTrait, Element 
             return entity
         }
     }
-    //    swiftlint:disable:next cyclomatic_complexity
+    
     func mapDomainError() -> PrimitiveSequence<SingleTrait, Response> {
         return catchError({ err in
             if let error = err as? MoyaError {
