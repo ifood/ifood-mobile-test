@@ -5,11 +5,11 @@ import androidx.lifecycle.ViewModel
 import com.eblushe.apptwitter.common.models.DataHolder
 import com.eblushe.apptwitter.common.models.Tweet
 import com.eblushe.apptwitter.common.providers.RxProvider
-import com.eblushe.apptwitter.common.repositories.StatusesRepository
+import com.eblushe.apptwitter.common.repositories.TweetRepository
 
 class UserDetailsViewModel(
     var tweetsLiveData: MutableLiveData<DataHolder<List<Tweet>>> = MutableLiveData(),
-    val statusesRepository: StatusesRepository,
+    val tweetRepository: TweetRepository,
     val rxProvider: RxProvider) : ViewModel() {
 
     fun requestTweetsFromScreenName(screenName: String) {
@@ -18,7 +18,7 @@ class UserDetailsViewModel(
         }
 
         tweetsLiveData.value = DataHolder(state = DataHolder.State.LOADING)
-        val disposable = statusesRepository.getUserTimeLine(screenName)
+        val disposable = tweetRepository.getUserTimeLine(screenName)
             .subscribe(
                 ::onRequestTweetsFromScreenNameSuccess,
                 ::onRequestTweetsFromScreenNameError

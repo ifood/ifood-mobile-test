@@ -15,9 +15,9 @@ import org.mockito.Mock
 import org.mockito.Mockito
 import org.mockito.Mockito.times
 
-class StatusesRepositoryTest : BaseUnitTest()  {
+class TweetRepositoryTest : BaseUnitTest()  {
 
-    private lateinit var repository: StatusesRepository
+    private lateinit var repository: TweetRepository
     private val tweetScreenName = "screen_name"
 
     @Mock

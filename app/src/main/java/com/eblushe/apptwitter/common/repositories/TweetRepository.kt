@@ -10,7 +10,7 @@ import com.eblushe.apptwitter.common.providers.StorageProvider
 import io.reactivex.Observable
 import io.reactivex.Single
 
-class StatusesRepository(
+class TweetRepository(
     var statusesService: StatusesService,
     var tweetDAO: TweetDAO,
     apiProvider: ApiProvider,
