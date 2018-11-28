@@ -18,3 +18,5 @@
 "unexpected_error" = "Unexpected error :(. Try again.";
 "home_search_bar" = "Type an @user";
 "not_found"= "Nothing to show :(";
+"main_scheduler" = "MainScheduler";
+"background_scheduler" = "BackgroundScheduler";

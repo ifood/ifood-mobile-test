@@ -13,8 +13,8 @@ import RxSwift
 import TwitterKit
 
 struct Scheduler {
-    static let main = "MainScheduler"
-    static let background = "BackgroundScheduler"
+    static let main = R.string.localizable.main_scheduler()
+    static let background = R.string.localizable.background_scheduler()
 }
 
 func buildApplicationContainer() -> Container {

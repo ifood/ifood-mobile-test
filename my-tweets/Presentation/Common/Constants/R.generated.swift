@@ -97,12 +97,20 @@ struct R: Rswift.Validatable {
   
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 12 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 14 localization keys.
     struct localizable {
+      /// en translation: BackgroundScheduler
+      /// 
+      /// Locales: en
+      static let background_scheduler = Rswift.StringResource(key: "background_scheduler", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Error
       /// 
       /// Locales: en
       static let generic_error_title = Rswift.StringResource(key: "generic_error_title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: MainScheduler
+      /// 
+      /// Locales: en
+      static let main_scheduler = Rswift.StringResource(key: "main_scheduler", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: My Tweets
       /// 
       /// Locales: en
@@ -148,11 +156,25 @@ struct R: Rswift.Validatable {
       /// Locales: en
       static let costumerSecret = Rswift.StringResource(key: "costumerSecret", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       
+      /// en translation: BackgroundScheduler
+      /// 
+      /// Locales: en
+      static func background_scheduler(_: Void = ()) -> String {
+        return NSLocalizedString("background_scheduler", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// en translation: Error
       /// 
       /// Locales: en
       static func generic_error_title(_: Void = ()) -> String {
         return NSLocalizedString("generic_error_title", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: MainScheduler
+      /// 
+      /// Locales: en
+      static func main_scheduler(_: Void = ()) -> String {
+        return NSLocalizedString("main_scheduler", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: My Tweets
