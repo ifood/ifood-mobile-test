@@ -43,7 +43,7 @@ extension GoogleProvider: TargetType {
             return .requestCompositeParameters(
                 bodyParameters: [ "document": [ "type": "PLAIN_TEXT", "content": "\(text)"], "encodingType": "UTF8" ],
                 bodyEncoding: JSONEncoding.default,
-                urlParameters: ["key": "AIzaSyCMSoodvaZrcKCms0U4r61egJUcG2a1sgs"])
+                urlParameters: ["key": "AIzaSyCnmWDd8gOVblaUyh1KH_7W47PNea5lC8k"])
         }
     }
     

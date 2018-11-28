@@ -33,7 +33,6 @@ class HomeAdapter: NSObject, SceneTableViewAdapter {
     
     func setData(_ data: [HomeVMs.Tweet]) {
         self.dataSource = data
-        tableView.backgroundView?.isHidden =  data.isEmpty ? false : true
         self.tableView.reloadData()
     }
 }

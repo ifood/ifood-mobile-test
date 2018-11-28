@@ -22,15 +22,12 @@ public struct TwitterDataSource {
     func getUserTimeline(provider: TwitterProvider) -> Single<[TweetRM]> {
         return self.getApiClient().flatMap({ client in
             return self.request(target: provider, client: client)
-                .mapDomainError()
-                .mapDecodableEntity()
         })
     }
     
-    func request(target: TwitterProvider, client: TWTRAPIClient) -> RxSwift.PrimitiveSequence<RxSwift.SingleTrait, Response> {
+    func request(target: TwitterProvider, client: TWTRAPIClient) -> Single<[TweetRM]> {
         var clientError: NSError?
-        var networkResponse: Response?
-        var domainError: Error?
+        var parsedData = [TweetRM]()
         
         var request = client.urlRequest(withMethod: target.method.rawValue,
                                         urlString: target.endpoint,
@@ -38,22 +35,21 @@ public struct TwitterDataSource {
                                         error: &clientError)
         request.timeoutInterval = 15
         
-        client.sendTwitterRequest(request) { (response, data, connectionError) -> Void in
-            if connectionError != nil {
-                domainError = connectionError
-                return
+        return Single<[TweetRM]>.create(subscribe: { (observer) -> Disposable in
+            client.sendTwitterRequest(request) { (response, data, connectionError) -> Void in
+                do {
+                    if let error = connectionError {
+                        observer(.error(error))
+                    }
+                    parsedData = try JSONDecoder().decode([TweetRM].self, from: data!)
+                    observer(.success(parsedData))
+                } catch {
+                    observer(.error(error))
+                }
             }
-            let json = try? JSONSerialization.jsonObject(with: data!, options: [])
             
-            networkResponse = Response(statusCode: 200, data: data!, request: nil, response: nil)
-        }
-        
-        if domainError != nil {
-            return Single.error(DomainError.generic)
-        } else {
-            guard let response = networkResponse else { return Single.error(DomainError.generic)}
-            return Single.just(response)
-        }
+            return Disposables.create()
+        })
     }
     
     func getApiClient() -> Single<TWTRAPIClient> {
