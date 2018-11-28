@@ -26,7 +26,7 @@ class HomeViewController: SceneViewController {
     
     let searchController = UISearchController(searchResultsController: nil)
     @IBOutlet var contentTableView: UITableView!
-
+    
     
     //sourcery:begin: data
     //sourcery:end
@@ -39,10 +39,9 @@ class HomeViewController: SceneViewController {
         setupObservables()
     }
     func setupLayout() {
-        searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = R.string.localizable.home_search_bar()
-        searchController.searchBar.setSearchFieldBackground(color: UIColor(red: 245.0 / 255.0, green: 245.0 / 255.0, blue: 245.0 / 255.0, alpha: 1))
+        searchController.searchBar.setSearchFieldBackground(color: .neutralGray)
         navigationItem.searchController = searchController
         contentTableView.sectionHeaderHeight = 0.1
         definesPresentationContext = true
@@ -52,10 +51,12 @@ class HomeViewController: SceneViewController {
         onTryAgain.bind { [unowned self] _ in
             self.presenter.getUserTimeline(username: self.searchController.searchBar.text ?? "")
             }.disposed(by: disposeBag)
-    }
-    
-    func filterContentForSearchText(_ searchText: String, scope: String = "All") {
-        self.presenter.getUserTimeline(username: searchText)
+        
+        searchController.searchBar.rx.searchButtonClicked.map { [unowned self] in self.searchController.searchBar.text ?? ""} .bind { [unowned self] text in
+            guard !text.isEmpty else { return }
+            self.emptyErrorViewContainer.subviews.first?.removeFromSuperview()
+            self.presenter.getUserTimeline(username: text)
+            }.disposed(by: disposeBag)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -69,11 +70,5 @@ class HomeViewController: SceneViewController {
 extension HomeViewController: HomeViewProtocol {
     func displayUserTimeline(viewModel: [HomeVMs.Tweet]) {
         adapter.setData(viewModel)
-    }
-}
-
-extension HomeViewController: UISearchResultsUpdating {
-    func updateSearchResults(for searchController: UISearchController) {
-        self.filterContentForSearchText(searchController.searchBar.text!)
     }
 }
