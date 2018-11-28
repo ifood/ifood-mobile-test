@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/rootContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        tools:context=".features.home.views.HomeActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/userNameTextInputLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.00999999"
+            app:layout_constraintEnd_toStartOf="@+id/searchImageView"
+            android:layout_marginEnd="8dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/userNameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:hint="@string/userName"
+                android:ems="10"
+                android:imeOptions="actionDone"
+                android:maxLines="1"
+                android:lines="1"
+                android:singleLine="true"
+                android:importantForAutofill="noExcludeDescendants"
+        />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/search_black_18dp"
+            android:layout_marginEnd="8dp"
+            android:id="@+id/searchImageView"
+            app:layout_constraintTop_toTopOf="@+id/userNameTextInputLayout"
+            android:contentDescription="Search"
+            app:layout_constraintBottom_toBottomOf="@+id/userNameTextInputLayout"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

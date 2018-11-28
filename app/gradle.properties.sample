@@ -1,0 +1,6 @@
+# App variables
+GOOGLE_API_URL="https://language.googleapis.com"
+GOOGLE_API_KEY=""
+TWITTER_API_URL="https://api.twitter.com/"
+TWITTER_API_KEY=""
+TWITTER_API_SECRET_KEY=""
