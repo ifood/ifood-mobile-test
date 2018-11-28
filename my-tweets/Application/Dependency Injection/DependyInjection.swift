@@ -18,21 +18,10 @@ enum CoordinationConfigurator {
     }
 }
 
-//enum GenericPresenterConfigurator {
-//    static func setup(with container: Container) {
-//        container.register(AddressSearchPresenterProtocol.self) { resolver in
-//            return AddressSearchPresenter(view: resolver.resolve(AddressSearchViewProtocol?.self)!,
-//                                          searchCep: resolver.resolve(SearchCep.self)!,
-//                                          getFederationUnits: resolver.resolve(GetFederationUnits.self)!,
-//                                          validateField: resolver.resolve(ValidateField.self)!)
-//        }
-//    }
-//}
-
 enum HomePresenterConfigurator {
     static func setup(with container: Container) {
         container.register(HomePresenterProtocol.self) { resolver in
-            return HomePresenter(view: resolver.resolve(HomeViewProtocol?.self)!)
+            return HomePresenter(view: resolver.resolve(HomeViewProtocol?.self)!, getTimeline: resolver.resolve(GetUserTimeline.self)!)
         }
     }
 }
@@ -40,34 +29,26 @@ enum HomePresenterConfigurator {
 // DataSource Dependency Injection
 enum DataSourceConfigurator {
     static func setup(with container: Container) {
-        
-        // DataSource
-        //        container.autoregister(AddressRemoteDataSource.self, initializer: AddressRemoteDataSource.init)
+        container.autoregister(TwitterDataSource.self, initializer: TwitterDataSource.init)
+        container.autoregister(SentimentDataSource.self, initializer: SentimentDataSource.init)
     }
 }
 
 // Repository Dependency Injection
 public enum RepositoryConfigurator {
     public static func setup(with container: Container) {
-        //        container.autoregister(AddressController.self, initializer: AddressRepository.init)
-    }
-}
-
-// Controller Dependency Injection
-public enum DeviceControllerConfigurator {
-    public static func setup(with container: Container) {
-        //        container.autoregister(BiometricAuthController.self, initializer: BiometricAuthDeviceController.init)
+        container.autoregister(UserController.self, initializer: UserRepository.init)
+        container.autoregister(SentimentController.self, initializer: SentimentRepository.init)
     }
 }
 
 // Use Case Dependency Injection
 public enum UseCaseConfigurator {
     public static func setup(with container: Container) {
-        //        container.register(CheckUserIsLoggedIn.self, factory: {
-        //            CheckUserIsLoggedIn(controller: $0.resolve(AuthController.self)!,
-        //                                executorScheduler: $0.resolve(ImmediateSchedulerType.self, name: Scheduler.background)!,
-        //                                postExecutionScheduler: $0.resolve(ImmediateSchedulerType.self, name: Scheduler.main)!)
-        //        })
-        
+        container.register(GetUserTimeline.self, factory: {
+            GetUserTimeline(executorScheduler: $0.resolve(ImmediateSchedulerType.self, name: Scheduler.background)!, postExecutionScheduler: $0.resolve(ImmediateSchedulerType.self, name: Scheduler.main)!, controller: $0.resolve(UserController.self)!,
+                            sentimentController: $0.resolve(SentimentController.self)!)
+            
+        })
     }
 }

@@ -23,7 +23,6 @@ func buildApplicationContainer() -> Container {
     DataSourceConfigurator.setup(with: container)
     UseCaseConfigurator.setup(with: container)
     RepositoryConfigurator.setup(with: container)
-    DeviceControllerConfigurator.setup(with: container)
     CoordinationConfigurator.setup(with: container)
     return container
 }

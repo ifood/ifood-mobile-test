@@ -20,11 +20,18 @@ public struct GetUserTimeline {
     let postExecutionScheduler: ImmediateSchedulerType
     
     let controller: UserController
+    let sentimentController: SentimentController
 }
 
 extension GetUserTimeline: SingleUseCase {
     func execute(request: Request?) -> Single<[Tweet]> {
         guard let screenName = request?.screenName else { return Single.error(DomainError.missingRequest)}
-        return self.controller.getTimeline(screenName: screenName)
+        return self.controller.getTimeline(screenName: screenName).flatMap { (tweets) in
+            return Observable.from(tweets).flatMap { (tweet) in
+                self.sentimentController.analyzeSentiment(text: tweet.sentence?.text ?? "").map {
+                    Tweet(id: tweet.id, sentence: $0, createdDate: tweet.createdDate, user: tweet.user)
+                }
+                }.toArray().asSingle()
+        }
     }
 }

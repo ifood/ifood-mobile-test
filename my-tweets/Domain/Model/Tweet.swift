@@ -12,10 +12,12 @@ public struct Tweet {
     public let id: String
     public let sentence: Sentence?
     public let createdDate: String?
+    public let user: User
     
-    public init(id: String, sentence: Sentence?, createdDate: String?) {
+    public init(id: String, sentence: Sentence?, createdDate: String?, user: User) {
         self.id = id
         self.sentence = sentence
         self.createdDate = createdDate
+        self.user = user
     }
 }

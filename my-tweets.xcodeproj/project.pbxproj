@@ -22,8 +22,8 @@
 		D393801C21ADC96100B13656 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D393801B21ADC96100B13656 /* UserController.swift */; };
 		D393801E21ADC99E00B13656 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D393801D21ADC99E00B13656 /* UserRepository.swift */; };
 		D393802021ADCCEC00B13656 /* GetUserTimeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = D393801F21ADCCEC00B13656 /* GetUserTimeline.swift */; };
-		D393802221ADD0DF00B13656 /* AnalyzeSentiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D393802121ADD0DF00B13656 /* AnalyzeSentiment.swift */; };
 		D39D18AC21AEAFAB003DB4E9 /* UserRM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39D18AB21AEAFAB003DB4E9 /* UserRM.swift */; };
+		D39D18AE21AEB1D3003DB4E9 /* UIColor+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39D18AD21AEB1D3003DB4E9 /* UIColor+Custom.swift */; };
 		D3C4632521A7040400FC0CC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4632421A7040400FC0CC8 /* AppDelegate.swift */; };
 		D3C4632C21A7040500FC0CC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3C4632B21A7040500FC0CC8 /* Assets.xcassets */; };
 		D3C4632F21A7040500FC0CC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3C4632D21A7040500FC0CC8 /* LaunchScreen.storyboard */; };
@@ -100,8 +100,8 @@
 		D393801B21ADC96100B13656 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		D393801D21ADC99E00B13656 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		D393801F21ADCCEC00B13656 /* GetUserTimeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserTimeline.swift; sourceTree = "<group>"; };
-		D393802121ADD0DF00B13656 /* AnalyzeSentiment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzeSentiment.swift; sourceTree = "<group>"; };
 		D39D18AB21AEAFAB003DB4E9 /* UserRM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRM.swift; sourceTree = "<group>"; };
+		D39D18AD21AEB1D3003DB4E9 /* UIColor+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Custom.swift"; sourceTree = "<group>"; };
 		D3C4632121A7040400FC0CC8 /* my-tweets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "my-tweets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3C4632421A7040400FC0CC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3C4632B21A7040500FC0CC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -340,7 +340,6 @@
 			children = (
 				D3C463C421A730C800FC0CC8 /* UseCaseTypes.swift */,
 				D393801F21ADCCEC00B13656 /* GetUserTimeline.swift */,
-				D393802121ADD0DF00B13656 /* AnalyzeSentiment.swift */,
 			);
 			path = "Use Case";
 			sourceTree = "<group>";
@@ -425,6 +424,7 @@
 				D3C4636A21A70F2D00FC0CC8 /* UINavigationController+Custom.swift */,
 				D3C4636C21A70FA900FC0CC8 /* UISearchBar+Extensions.swift */,
 				D393801221AB554700B13656 /* UIFont+Custom.swift */,
+				D39D18AD21AEB1D3003DB4E9 /* UIColor+Custom.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -655,6 +655,7 @@
 				D3C4636521A70E0400FC0CC8 /* EmptyErrorStateView.swift in Sources */,
 				D3C463B921A724B900FC0CC8 /* GoogleSentimentRM.swift in Sources */,
 				D3C4636921A70F0100FC0CC8 /* UIView+Extensions.swift in Sources */,
+				D39D18AE21AEB1D3003DB4E9 /* UIColor+Custom.swift in Sources */,
 				D393801721AB629600B13656 /* HomeTableViewCell.swift in Sources */,
 				D3C4637921A7113800FC0CC8 /* DependyInjection.swift in Sources */,
 				D393801C21ADC96100B13656 /* UserController.swift in Sources */,
@@ -695,7 +696,6 @@
 				D393801A21ADB8E100B13656 /* TweetRM.swift in Sources */,
 				D393800C21AB520C00B13656 /* HomeCoordinator.swift in Sources */,
 				D3C463AA21A71A0100FC0CC8 /* ErrorHandler.swift in Sources */,
-				D393802221ADD0DF00B13656 /* AnalyzeSentiment.swift in Sources */,
 				D393800E21AB521B00B13656 /* HomeConfigurator.swift in Sources */,
 				D3C4635A21A70D4D00FC0CC8 /* ApplicationCoordinator.swift in Sources */,
 				D3C4637121A70FE800FC0CC8 /* ScenePresenter.swift in Sources */,

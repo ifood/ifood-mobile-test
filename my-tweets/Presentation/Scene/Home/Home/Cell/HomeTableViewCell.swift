@@ -40,11 +40,11 @@ class HomeTableViewCell: UITableViewCell, DisposableHolder {
     }
     
     func configure(viewModel: HomeVMs.Tweet) {
-        userImage.kf.setImage(with: URL(string: viewModel.userImage))
-        nameLabel.text = viewModel.name
-        usernameLabel.text = viewModel.username
-        tweetLabel.text = viewModel.text
-        humorView.backgroundColor = viewModel.happinesColor
-        emojiHumourLabel.text = viewModel.emoji
+        userImage.kf.setImage(with: URL(string: viewModel.user.userImage))
+        nameLabel.text = viewModel.user.name
+        usernameLabel.text = viewModel.user.username
+        tweetLabel.text = viewModel.text?.text
+        humorView.backgroundColor = viewModel.text?.happinesColor
+        emojiHumourLabel.text = viewModel.text?.emoji
     }
 }

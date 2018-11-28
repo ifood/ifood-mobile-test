@@ -10,7 +10,7 @@ import Foundation
 import RxSwift
 
 protocol HomePresenterProtocol {
-    // func getSomething(request: GenericModels.Something.Request)
+    func getUserTimeline(username: String)
 }
 
 struct HomePresenter: ScenePresenter {
@@ -19,16 +19,18 @@ struct HomePresenter: ScenePresenter {
     let disposeBag: DisposeBag = DisposeBag()
     weak var view: HomeViewProtocol?
 
-    //let getSomethingUC: GetSomething
+    let getTimeline: GetUserTimeline
 }
 
 extension HomePresenter: HomePresenterProtocol {
-    /*
-     func getSomething(request: GenericModels.Something.Request) {
-     someUseCase.execute()
-     .toSomething()
-     .bind(onNext: self.viewController.displaySomething)
-     .disposed(by: disposeBag)
-     }
-     */
+    func getUserTimeline(username: String) {
+        self.view?.startLoading()
+        getTimeline.execute(request: GetUserTimeline.Request(screenName: username)).subscribe(onSuccess: { (tweets) in
+            self.view?.stopLoading()
+            self.view?.displayUserTimeline(viewModel: tweets.toViewModel())
+        }, onError: { error in
+            self.view?.stopLoading()
+            self.handleGenericError(error: error, isBlocking: true)
+        }).disposed(by: disposeBag)
+    }
 }

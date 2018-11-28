@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 
 protocol HomeViewProtocol: AnyObject, SceneView {
-    //  func displaySomething(viewModel: GenericModels.ViewModel)
+    func displayUserTimeline(viewModel: [HomeVMs.Tweet])
 }
 
 class HomeViewController: SceneViewController {
@@ -50,12 +50,12 @@ class HomeViewController: SceneViewController {
     
     func setupObservables() {
         onTryAgain.bind { [unowned self] _ in
-//            self.presenter.getSpecialties(request: SpecialtyVMs.Specialties.Request(procedureType: self.procedureType))
+            self.presenter.getUserTimeline(username: self.searchController.searchBar.text ?? "")
             }.disposed(by: disposeBag)
     }
     
     func filterContentForSearchText(_ searchText: String, scope: String = "All") {
-        
+        self.presenter.getUserTimeline(username: searchText)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -67,7 +67,9 @@ class HomeViewController: SceneViewController {
 }
 
 extension HomeViewController: HomeViewProtocol {
-
+    func displayUserTimeline(viewModel: [HomeVMs.Tweet]) {
+        adapter.setData(viewModel)
+    }
 }
 
 extension HomeViewController: UISearchResultsUpdating {

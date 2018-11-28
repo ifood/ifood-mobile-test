@@ -13,7 +13,6 @@ import RxCocoa
 class HomeAdapter: NSObject, SceneTableViewAdapter {
     var disposeBag = DisposeBag()
     var dataSource: [HomeVMs.Tweet] = []
-    var selectedId: String?
     var tableView: UITableView
     
     private var onTryAgainSubject: PublishSubject<Void> = PublishSubject<Void>()
@@ -32,9 +31,8 @@ class HomeAdapter: NSObject, SceneTableViewAdapter {
         self.tableView.delegate = self
     }
     
-    func setData(_ data: [HomeVMs.Tweet], selectedId: String?) {
+    func setData(_ data: [HomeVMs.Tweet]) {
         self.dataSource = data
-        self.selectedId = selectedId
         tableView.backgroundView?.isHidden =  data.isEmpty ? false : true
         self.tableView.reloadData()
     }
@@ -46,15 +44,14 @@ extension HomeAdapter {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return dataSource.count
-        return 5
+        return dataSource.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.reuseIdentifier) as? HomeTableViewCell else {
             return UITableViewCell()
         }
-        
+        cell.configure(viewModel: dataSource[indexPath.row])
         return cell
     }
     

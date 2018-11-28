@@ -24,7 +24,7 @@ struct TweetRM: Codable {
 
 extension TweetRM {
     func toDomainModel() -> Tweet {
-        return Tweet(id: id, sentence: Sentence(text: sentence, score: nil), createdDate: createdDate)
+        return Tweet(id: id, sentence: Sentence(text: sentence, score: nil), createdDate: createdDate, user: user.toDomainModel())
     }
 }
 
