@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D301B7F421AF11A4001BEE3A /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D301B7F321AF11A4001BEE3A /* String+Extensions.swift */; };
 		D393800421AB518F00B13656 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D393800121AB518F00B13656 /* HomePresenter.swift */; };
 		D393800521AB518F00B13656 /* HomeVMs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D393800221AB518F00B13656 /* HomeVMs.swift */; };
 		D393800621AB518F00B13656 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D393800321AB518F00B13656 /* HomeViewController.swift */; };
@@ -49,11 +50,9 @@
 		D3C4637921A7113800FC0CC8 /* DependyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4637821A7113800FC0CC8 /* DependyInjection.swift */; };
 		D3C4638D21A7139F00FC0CC8 /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C4637C21A7139E00FC0CC8 /* Swinject.framework */; };
 		D3C4638E21A7139F00FC0CC8 /* ReactiveMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C4637D21A7139E00FC0CC8 /* ReactiveMoya.framework */; };
-		D3C4638F21A7139F00FC0CC8 /* IQKeyboardManagerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C4637E21A7139E00FC0CC8 /* IQKeyboardManagerSwift.framework */; };
 		D3C4639021A7139F00FC0CC8 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C4637F21A7139E00FC0CC8 /* Moya.framework */; };
 		D3C4639121A7139F00FC0CC8 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C4638021A7139E00FC0CC8 /* Result.framework */; };
 		D3C4639221A7139F00FC0CC8 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C4638121A7139E00FC0CC8 /* ReactiveSwift.framework */; };
-		D3C4639321A7139F00FC0CC8 /* IQKeyboardManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C4638221A7139E00FC0CC8 /* IQKeyboardManager.framework */; };
 		D3C4639421A7139F00FC0CC8 /* SwinjectAutoregistration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C4638321A7139E00FC0CC8 /* SwinjectAutoregistration.framework */; };
 		D3C4639521A7139F00FC0CC8 /* Rswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C4638421A7139F00FC0CC8 /* Rswift.framework */; };
 		D3C4639621A7139F00FC0CC8 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C4638521A7139F00FC0CC8 /* TwitterKit.framework */; };
@@ -85,6 +84,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D301B7F321AF11A4001BEE3A /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		D393800121AB518F00B13656 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		D393800221AB518F00B13656 /* HomeVMs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVMs.swift; sourceTree = "<group>"; };
 		D393800321AB518F00B13656 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -172,11 +172,9 @@
 				D3C4639D21A714A500FC0CC8 /* TwitterCore.framework in Frameworks */,
 				D3C4638D21A7139F00FC0CC8 /* Swinject.framework in Frameworks */,
 				D3C4638E21A7139F00FC0CC8 /* ReactiveMoya.framework in Frameworks */,
-				D3C4638F21A7139F00FC0CC8 /* IQKeyboardManagerSwift.framework in Frameworks */,
 				D3C4639021A7139F00FC0CC8 /* Moya.framework in Frameworks */,
 				D3C4639121A7139F00FC0CC8 /* Result.framework in Frameworks */,
 				D3C4639221A7139F00FC0CC8 /* ReactiveSwift.framework in Frameworks */,
-				D3C4639321A7139F00FC0CC8 /* IQKeyboardManager.framework in Frameworks */,
 				D3C4639421A7139F00FC0CC8 /* SwinjectAutoregistration.framework in Frameworks */,
 				D3C4639521A7139F00FC0CC8 /* Rswift.framework in Frameworks */,
 				D3C4639621A7139F00FC0CC8 /* TwitterKit.framework in Frameworks */,
@@ -425,6 +423,7 @@
 				D3C4636C21A70FA900FC0CC8 /* UISearchBar+Extensions.swift */,
 				D393801221AB554700B13656 /* UIFont+Custom.swift */,
 				D39D18AD21AEB1D3003DB4E9 /* UIColor+Custom.swift */,
+				D301B7F321AF11A4001BEE3A /* String+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -612,9 +611,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxMoya.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Rswift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/IQKeyboardManagerSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/IQKeyboardManager.framework",
 			);
 			name = "Run Script - Carthage";
 			outputFileListPaths = (
@@ -634,9 +631,7 @@
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxMoya.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Rswift.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SnapKit.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/IQKeyboardManagerSwift.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Kingfisher.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/IQKeyboardManager.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -689,6 +684,7 @@
 				D3C463BF21A72DD400FC0CC8 /* TwitterDataSource.swift in Sources */,
 				D3C463B221A723EE00FC0CC8 /* User.swift in Sources */,
 				D3C463B621A7242F00FC0CC8 /* Sentence.swift in Sources */,
+				D301B7F421AF11A4001BEE3A /* String+Extensions.swift in Sources */,
 				D3C4637321A7100700FC0CC8 /* LoadingStateDisplayer.swift in Sources */,
 				D3C4636721A70EA200FC0CC8 /* UIView+IB.swift in Sources */,
 				D3C4632521A7040400FC0CC8 /* AppDelegate.swift in Sources */,

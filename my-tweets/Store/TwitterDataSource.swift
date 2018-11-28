@@ -38,13 +38,14 @@ public struct TwitterDataSource {
         return Single<[TweetRM]>.create(subscribe: { (observer) -> Disposable in
             client.sendTwitterRequest(request) { (response, data, connectionError) -> Void in
                 do {
-                    if let error = connectionError {
-                        observer(.error(error))
+                    if connectionError != nil {
+                        observer(.error(DomainError.generic))
+                        return
                     }
                     parsedData = try JSONDecoder().decode([TweetRM].self, from: data!)
                     observer(.success(parsedData))
                 } catch {
-                    observer(.error(error))
+                    observer(.error(DomainError.generic))
                 }
             }
             

@@ -9,7 +9,6 @@
 import UIKit
 import Swinject
 import SwinjectAutoregistration
-import IQKeyboardManagerSwift
 import TwitterKit
 
 @UIApplicationMain
@@ -27,13 +26,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         coordinator = ApplicationCoordinator(window: newWindow)
         coordinator.start()
-        
-        IQKeyboardManager.shared.enable = true
-        IQKeyboardManager.shared.enableAutoToolbar = true
-        IQKeyboardManager.shared.shouldShowToolbarPlaceholder = true
-        IQKeyboardManager.shared.toolbarManageBehaviour = .byTag
-        IQKeyboardManager.shared.keyboardDistanceFromTextField = 30.0
-    
         
         return true
     }

@@ -11,20 +11,10 @@ import Kingfisher
 import RxSwift
 import RxCocoa
 
-class HomeTableViewCell: UITableViewCell, DisposableHolder {
-    var disposeBag: DisposeBag = DisposeBag()
+class HomeTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        let contentViewTap = UITapGestureRecognizer()
-        contentView.addGestureRecognizer(contentViewTap)
-        
-        contentViewTap.rx.event.asObservable().map({ _ in ()})
-            .do(onNext: { [unowned self] _ in
-                self.humorView.linearFadeIn(withDuration: 3)
-                self.humorView.linearFadeOut(withDuration: 1.5)
-            }).subscribe().disposed(by: disposeBag)
     }
     
     @IBOutlet var userImage: UIImageView!
@@ -32,6 +22,7 @@ class HomeTableViewCell: UITableViewCell, DisposableHolder {
     @IBOutlet var usernameLabel: UILabel!
     @IBOutlet var tweetLabel: UILabel!
     
+    @IBOutlet var dateLabel: UILabel!
     @IBOutlet var humorView: UIView!
     @IBOutlet var emojiHumourLabel: UILabel!
     
@@ -42,9 +33,10 @@ class HomeTableViewCell: UITableViewCell, DisposableHolder {
     func configure(viewModel: HomeVMs.Tweet) {
         userImage.kf.setImage(with: URL(string: viewModel.user.userImage))
         nameLabel.text = viewModel.user.name
-        usernameLabel.text = viewModel.user.username
+        usernameLabel.text = "@" + viewModel.user.username
         tweetLabel.text = viewModel.text?.text
         humorView.backgroundColor = viewModel.text?.happinesColor
         emojiHumourLabel.text = viewModel.text?.emoji
+        dateLabel.text = viewModel.date.formattedDate
     }
 }

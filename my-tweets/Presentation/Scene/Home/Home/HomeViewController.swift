@@ -16,7 +16,6 @@ protocol HomeViewProtocol: AnyObject, SceneView {
 
 class HomeViewController: SceneViewController {
     var presenter: HomePresenterProtocol!
-
     var adapter: HomeAdapter!
     var userTweets: [HomeVMs.Tweet] = []
     
@@ -26,6 +25,10 @@ class HomeViewController: SceneViewController {
     let searchController = UISearchController(searchResultsController: nil)
     @IBOutlet var contentTableView: UITableView!
     
+    var emptyErrorViewContainer: UIView {
+        return contentTableView.backgroundView ?? view
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         adapter = HomeAdapter(tableView: contentTableView)
@@ -34,6 +37,11 @@ class HomeViewController: SceneViewController {
         setupObservables()
     }
     func setupLayout() {
+        contentTableView.backgroundView = UIView()
+        searchController.searchBar.delegate = self
+        searchController.searchBar.keyboardType = .emailAddress
+        searchController.searchBar.autocapitalizationType = .none
+        searchController.searchBar.autocorrectionType = .no
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = R.string.localizable.home_search_bar()
         searchController.searchBar.setSearchFieldBackground(color: UIColor.gray.withAlphaComponent(0.05))
@@ -65,5 +73,14 @@ class HomeViewController: SceneViewController {
 extension HomeViewController: HomeViewProtocol {
     func displayUserTimeline(viewModel: [HomeVMs.Tweet]) {
         adapter.setData(viewModel)
+    }
+}
+
+extension HomeViewController: UISearchBarDelegate {
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.text = ""
+        searchBar.showsCancelButton = false
+        self.emptyErrorViewContainer.subviews.first?.removeFromSuperview()
+        adapter.setData([])
     }
 }

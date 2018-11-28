@@ -17,3 +17,4 @@
 "check_your_internet_connection" = "Unable to connect :(. Please verify your internet connection and try again.";
 "unexpected_error" = "Unexpected error :(. Try again.";
 "home_search_bar" = "Type an @user";
+"not_found"= "Nothing to show :(";

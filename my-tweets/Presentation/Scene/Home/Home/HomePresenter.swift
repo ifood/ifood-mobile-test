@@ -15,22 +15,28 @@ protocol HomePresenterProtocol {
 
 struct HomePresenter: ScenePresenter {
     var sceneView: SceneView? { return view }
-
+    
     let disposeBag: DisposeBag = DisposeBag()
     weak var view: HomeViewProtocol?
-
+    
     let getTimeline: GetUserTimeline
 }
 
 extension HomePresenter: HomePresenterProtocol {
     func getUserTimeline(username: String) {
         self.view?.startLoading()
-        getTimeline.execute(request: GetUserTimeline.Request(screenName: username)).subscribe(onSuccess: { (tweets) in
+        var results = [Tweet]()
+        getTimeline.execute(request: GetUserTimeline.Request(screenName: username.alphanumeric)).subscribe(onSuccess: { (tweets) in
             self.view?.stopLoading()
-            self.view?.displayUserTimeline(viewModel: tweets.toViewModel())
+            results = tweets
+            self.view?.displayUserTimeline(viewModel: results.toViewModel())
         }, onError: { error in
             self.view?.stopLoading()
-            self.handleGenericError(error: error, isBlocking: true)
+            if results.isEmpty {
+                self.view?.displayNoResultsError(message: R.string.localizable.not_found())
+            } else {
+                self.handleGenericError(error: error, isBlocking: true)
+            }
         }).disposed(by: disposeBag)
     }
 }
