@@ -12,11 +12,13 @@ struct TweetRM: Codable {
     public let id: String
     public let sentence: String?
     public let createdDate: String?
+    public let user: UserRM
     
     enum CodingKeys: String, CodingKey {
         case id = "id_str"
         case sentence = "text"
         case createdDate = "created_at"
+        case user = "user"
     }
 }
 

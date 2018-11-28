@@ -23,6 +23,7 @@
 		D393801E21ADC99E00B13656 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D393801D21ADC99E00B13656 /* UserRepository.swift */; };
 		D393802021ADCCEC00B13656 /* GetUserTimeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = D393801F21ADCCEC00B13656 /* GetUserTimeline.swift */; };
 		D393802221ADD0DF00B13656 /* AnalyzeSentiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D393802121ADD0DF00B13656 /* AnalyzeSentiment.swift */; };
+		D39D18AC21AEAFAB003DB4E9 /* UserRM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39D18AB21AEAFAB003DB4E9 /* UserRM.swift */; };
 		D3C4632521A7040400FC0CC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4632421A7040400FC0CC8 /* AppDelegate.swift */; };
 		D3C4632C21A7040500FC0CC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3C4632B21A7040500FC0CC8 /* Assets.xcassets */; };
 		D3C4632F21A7040500FC0CC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3C4632D21A7040500FC0CC8 /* LaunchScreen.storyboard */; };
@@ -100,6 +101,7 @@
 		D393801D21ADC99E00B13656 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		D393801F21ADCCEC00B13656 /* GetUserTimeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserTimeline.swift; sourceTree = "<group>"; };
 		D393802121ADD0DF00B13656 /* AnalyzeSentiment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzeSentiment.swift; sourceTree = "<group>"; };
+		D39D18AB21AEAFAB003DB4E9 /* UserRM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRM.swift; sourceTree = "<group>"; };
 		D3C4632121A7040400FC0CC8 /* my-tweets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "my-tweets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3C4632421A7040400FC0CC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3C4632B21A7040500FC0CC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -490,6 +492,7 @@
 		D3C463B721A7248300FC0CC8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D39D18AB21AEAFAB003DB4E9 /* UserRM.swift */,
 				D3C463B821A724B900FC0CC8 /* GoogleSentimentRM.swift */,
 				D393801921ADB8E100B13656 /* TweetRM.swift */,
 			);
@@ -696,6 +699,7 @@
 				D393800E21AB521B00B13656 /* HomeConfigurator.swift in Sources */,
 				D3C4635A21A70D4D00FC0CC8 /* ApplicationCoordinator.swift in Sources */,
 				D3C4637121A70FE800FC0CC8 /* ScenePresenter.swift in Sources */,
+				D39D18AC21AEAFAB003DB4E9 /* UserRM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
