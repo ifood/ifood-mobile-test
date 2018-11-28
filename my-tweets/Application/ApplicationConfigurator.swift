@@ -31,6 +31,10 @@ enum CustomConfigurator {
     static func setup(with container: Container) {
         TWTRTwitter.sharedInstance().start(withConsumerKey: R.string.localizable.costumer_key(), consumerSecret: R.string.localizable.costumerSecret())
         let twitter = TWTRTwitter.sharedInstance()
+        
+        container.register(TwitterDataSource.self) { _ in
+            TwitterDataSource(provider: twitter)
+        }
 
         container.register(MoyaProvider<GoogleProvider>.self) { _ in return MoyaProvider<GoogleProvider>(endpointClosure: MoyaEndpoint.headerClosure, plugins: [NetworkLoggerPlugin(verbose: true)]) }
         

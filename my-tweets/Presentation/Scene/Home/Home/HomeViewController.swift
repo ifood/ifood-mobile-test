@@ -15,9 +15,8 @@ protocol HomeViewProtocol: AnyObject, SceneView {
 }
 
 class HomeViewController: SceneViewController {
-    //sourcery:begin: inject
     var presenter: HomePresenterProtocol!
-    //sourcery:end
+
     var adapter: HomeAdapter!
     var userTweets: [HomeVMs.Tweet] = []
     
@@ -26,10 +25,6 @@ class HomeViewController: SceneViewController {
     
     let searchController = UISearchController(searchResultsController: nil)
     @IBOutlet var contentTableView: UITableView!
-    
-    
-    //sourcery:begin: data
-    //sourcery:end
     
     override func viewDidLoad() {
         super.viewDidLoad()
