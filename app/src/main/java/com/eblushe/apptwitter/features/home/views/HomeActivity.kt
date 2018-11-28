@@ -43,6 +43,6 @@ class HomeActivity : BaseActivity<HomeViewModel>() {
             userNameTextInputLayout.error = getString(R.string.required_field)
             return
         }
-        RouterProvider.openUserDetailsScreen(screenName)
+        RouterProvider.openUserDetailsScreen(this, screenName)
     }
 }

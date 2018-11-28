@@ -12,6 +12,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object ApiProvider {
     lateinit var twitterClient: Retrofit
+    lateinit var googleClient: Retrofit
 
     fun initTwitterClient(apiUrl: String) {
         var oAuthToken: OAuthToken? = loadOAuthToken()
@@ -62,5 +63,21 @@ object ApiProvider {
         }
 
         return oAuthToken
+    }
+
+
+    fun initGoogleClient(apiUrl: String) {
+        val httpClient = OkHttpClient.Builder()
+        val loggingInterceptor = HttpLoggingInterceptor()
+        loggingInterceptor.level = HttpLoggingInterceptor.Level.BODY
+
+        httpClient.addInterceptor(loggingInterceptor)
+        googleClient = Retrofit.Builder()
+            .baseUrl(apiUrl)
+            .addConverterFactory(GsonConverterFactory.create())
+            .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+            .client(httpClient.build())
+            .build()
+
     }
 }

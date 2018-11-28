@@ -1,5 +1,6 @@
 package com.eblushe.apptwitter.common.di
 
+import com.eblushe.apptwitter.common.apis.twitter.services.AnalyzeSentimenService
 import com.eblushe.apptwitter.common.apis.twitter.services.OAuthService
 import com.eblushe.apptwitter.common.apis.twitter.services.StatusesService
 import com.eblushe.apptwitter.common.providers.*
@@ -15,7 +16,7 @@ import org.koin.dsl.module.module
 val repositoriesModule = module {
     single { BaseRepository(get(), get(), get()) }
     single { AuthRepository(get(), get(), get(), get()) }
-    single { TweetRepository(get(), get(), get(), get(), get()) }
+    single { TweetRepository(get(), get(), get(), get(), get(), get()) }
 }
 
 val storageModule = module {
@@ -28,6 +29,7 @@ val apiModule = module {
     single { ApiProvider }
     single { OAuthService(get()) }
     single { StatusesService(get()) }
+    single { AnalyzeSentimenService(get()) }
 }
 
 val featuresModule = module {

@@ -1,6 +1,7 @@
 package com.eblushe.apptwitter.common.providers
 
 import android.annotation.SuppressLint
+import android.app.Activity
 import android.app.Application
 import android.content.Context
 import android.content.Intent
@@ -17,7 +18,7 @@ object RouterProvider {
         applicationContext = application.applicationContext
     }
 
-    fun openHomeScreen(bundle: Bundle? = null, finish: Boolean = false) {
+    fun openHomeScreen(activity: Activity?, bundle: Bundle? = null, finish: Boolean = false) {
         if (runningUITest) return
 
         val intent = Intent(applicationContext, HomeActivity::class.java)
@@ -29,12 +30,12 @@ object RouterProvider {
             intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_CLEAR_TASK
         }
 
-        applicationContext?.apply {
+        activity?.apply {
             startActivity(intent)
         }
     }
 
-    fun openUserDetailsScreen(screenName: String, finish: Boolean = false) {
+    fun openUserDetailsScreen(activity: Activity?, screenName: String, finish: Boolean = false) {
         if (runningUITest) return
 
         val bundle = Bundle()
@@ -47,7 +48,7 @@ object RouterProvider {
             intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_CLEAR_TASK
         }
 
-        applicationContext?.apply {
+        activity?.apply {
             startActivity(intent)
         }
     }

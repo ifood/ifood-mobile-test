@@ -3,13 +3,16 @@ package com.eblushe.apptwitter.features.userdetails.adapters
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
+import androidx.emoji.text.EmojiCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.eblushe.apptwitter.R
 import com.eblushe.apptwitter.common.models.Tweet
+import kotlinx.android.synthetic.main.activity_splash.view.*
 import kotlinx.android.synthetic.main.adapter_user_tweet.view.*
 
 class TweetAdapter(var items: List<Tweet>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
-    var onItemClick: (tweet: Tweet) -> Unit = {}
+    var onItemClick: (tweet: Tweet, position: Int) -> Unit = {_, _ -> }
 
     private val VIEW_TYPE_DATE = 1
     private val VIEW_TYPE_EMPTY = 2
@@ -24,10 +27,19 @@ class TweetAdapter(var items: List<Tweet>) : RecyclerView.Adapter<RecyclerView.V
         if (items.isEmpty()) return
 
         val item = items[position]
-        holder.itemView.textTextView.text = item.text
-        holder.itemView.setOnClickListener {
-            onItemClick(item)
+        holder.itemView.textTextView.text = EmojiCompat.get().process("${item.text}")//item.text
+        holder.itemView.setOnClickListener { onItemClick(item, position) }
+        holder.itemView.let {view ->
+            val context = view.context
+            val colorId = when (item.felling) {
+                Tweet.Feeling.POSITIVE -> android.R.color.holo_blue_light
+                Tweet.Feeling.NEGATIVE -> android.R.color.holo_red_light
+                Tweet.Feeling.NEUTRON -> android.R.color.darker_gray
+                else -> android.R.color.white
+             }
+            view.setBackgroundColor(ContextCompat.getColor(context, colorId))
         }
+
     }
 
     override fun getItemCount(): Int {

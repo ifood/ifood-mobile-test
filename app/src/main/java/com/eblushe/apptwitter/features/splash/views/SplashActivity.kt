@@ -57,7 +57,7 @@ class SplashActivity : BaseActivity<SplashViewModel>() {
         hideLoading(progressBar)
         holder.state = DataHolder.State.FINISHED
         uiMessageTextView.text = getString(R.string.finished)
-        RouterProvider.openHomeScreen(finish = true)
+        RouterProvider.openHomeScreen(this, finish = true)
     }
 
     private fun onAppTokenError() {

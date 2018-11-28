@@ -2,7 +2,7 @@ package com.eblushe.apptwitter.common.tests
 
 import android.content.Context
 import android.content.SharedPreferences
-import com.eblushe.apptwitter.application.CONFIG_API_URL
+import com.eblushe.apptwitter.BuildConfig
 import com.eblushe.apptwitter.common.databases.AppDatabase
 import com.eblushe.apptwitter.common.databases.dao.TweetDAO
 import com.eblushe.apptwitter.common.databases.dao.UserDAO
@@ -50,7 +50,8 @@ open class BaseUnitTest : KoinTest {
         StorageProvider.init(context, preferences)
         StorageProvider.database = appDatabase
 
-        ApiProvider.initTwitterClient(CONFIG_API_URL)
+        ApiProvider.initTwitterClient(BuildConfig.TWITTER_API_URL)
+        ApiProvider.initGoogleClient(BuildConfig.GOOGLE_API_URL)
 
         StandAloneContext.startKoin(diModule)
         StandAloneContext.loadKoinModules(

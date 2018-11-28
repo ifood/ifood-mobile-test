@@ -42,12 +42,12 @@
     <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="?android:attr/actionModeWebSearchDrawable"
             app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/search_black_18dp"
             android:layout_marginEnd="8dp"
             android:id="@+id/searchImageView"
             app:layout_constraintTop_toTopOf="@+id/userNameTextInputLayout"
-            android:contentDescription="fbgbfbfgb"
+            android:contentDescription="Search"
             app:layout_constraintBottom_toBottomOf="@+id/userNameTextInputLayout"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

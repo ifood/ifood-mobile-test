@@ -1,6 +1,7 @@
 package com.eblushe.apptwitter.common.repositories
 
 import com.eblushe.apptwitter.common.apis.twitter.mapToTweet
+import com.eblushe.apptwitter.common.apis.twitter.services.AnalyzeSentimenService
 import com.eblushe.apptwitter.common.apis.twitter.services.StatusesService
 import com.eblushe.apptwitter.common.databases.dao.TweetDAO
 import com.eblushe.apptwitter.common.models.Tweet
@@ -12,6 +13,7 @@ import io.reactivex.Single
 
 class TweetRepository(
     var statusesService: StatusesService,
+    var analyzeSentimenService: AnalyzeSentimenService,
     var tweetDAO: TweetDAO,
     apiProvider: ApiProvider,
     storageProvider: StorageProvider,
@@ -40,6 +42,20 @@ class TweetRepository(
             .onErrorResumeNext { Single.just(emptyList()) }
             .map { items ->
                 items.map(::mapToTweet)
+            }
+    }
+
+    fun getTweetFeeling(tweet: Tweet) : Single<Tweet.Feeling> {
+        return analyzeSentimenService.postFeeling(tweet.text!!)
+            .subscribeOn(schedulerProvider.newThread())
+            .observeOn(schedulerProvider.mainThread())
+            .map { item ->
+                    val score = item.DocumentSentimentResponse?.score!!
+                when {
+                    score > 0.6 -> Tweet.Feeling.POSITIVE
+                    score <= 0.6 && score > 0 -> Tweet.Feeling.NEGATIVE
+                    else -> Tweet.Feeling.NEUTRON
+                }
             }
     }
 }

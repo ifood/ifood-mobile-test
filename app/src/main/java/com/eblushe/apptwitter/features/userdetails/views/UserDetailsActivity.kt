@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.eblushe.apptwitter.R
+import com.eblushe.apptwitter.common.extensions.toast
 import com.eblushe.apptwitter.common.models.DataHolder
 import com.eblushe.apptwitter.common.models.Tweet
 import com.eblushe.apptwitter.common.views.BaseActivity
@@ -43,6 +44,13 @@ class UserDetailsActivity : BaseActivity<UserDetailsViewModel>() {
 
     override fun onLoadLiveData(viewModel: UserDetailsViewModel) {
         viewModel.tweetsLiveData.observe(this, Observer(::observeTweets))
+        viewModel.tweetsChangedLiveData.observe(this, Observer { tweets ->
+            tweets.forEach { (position, tweet) ->
+                tweetsRecyclerView.adapter?.notifyItemChanged(position, tweet)
+            }
+            tweets.clear()
+           }
+        )
     }
 
     private fun observeTweets(holder: DataHolder<List<Tweet>>) {
@@ -80,7 +88,20 @@ class UserDetailsActivity : BaseActivity<UserDetailsViewModel>() {
     }
 
     private fun onLoadRecyclerView(tweets: List<Tweet>) {
-        val adapter = TweetAdapter(tweets)
+        var adapter = tweetsRecyclerView.adapter
+
+        if (adapter == null) {
+            adapter = TweetAdapter(tweets)
+            adapter.onItemClick = { tweet, position ->
+                toast(getString(R.string.analyzing))
+                viewModel.requestTweetFeeling(tweet, position)
+            }
+        }
+
+        if (adapter is TweetAdapter) {
+            adapter.items = tweets
+        }
+
         tweetsRecyclerView.layoutManager = LinearLayoutManager(this)
         tweetsRecyclerView.adapter = adapter
     }

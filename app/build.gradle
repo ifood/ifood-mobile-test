@@ -24,6 +24,8 @@ android {
     }
 
     buildTypes.each {
+        it.buildConfigField 'String', 'GOOGLE_API_URL', GOOGLE_API_URL
+        it.buildConfigField 'String', 'GOOGLE_API_KEY', GOOGLE_API_KEY
         it.buildConfigField 'String', 'TWITTER_API_URL', TWITTER_API_URL
         it.buildConfigField 'String', 'TWITTER_API_KEY', TWITTER_API_KEY
         it.buildConfigField 'String', 'TWITTER_API_SECRET_KEY', TWITTER_API_SECRET_KEY
@@ -78,6 +80,10 @@ dependencies {
     testImplementation "androidx.room:room-testing:$room_version"
 
     // Others
+
+    implementation "com.android.support:support-emoji:28.0.0"
+    implementation "com.android.support:support-emoji-bundled:28.0.0"
+    implementation "com.android.support:support-emoji-appcompat:28.0.0"
 
     implementation 'com.squareup.picasso:picasso:2.71828'
     implementation 'com.google.code.gson:gson:2.8.5'
