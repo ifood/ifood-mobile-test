@@ -29,7 +29,8 @@ enum HomePresenterConfigurator {
 // DataSource Dependency Injection
 enum DataSourceConfigurator {
     static func setup(with container: Container) {
-        container.autoregister(TwitterDataSource.self, initializer: TwitterDataSource.init)
+        
+//        container.autoregister(TwitterDataSource.self, initializer: TwitterDataSource.init)
         container.autoregister(SentimentDataSource.self, initializer: SentimentDataSource.init)
     }
 }

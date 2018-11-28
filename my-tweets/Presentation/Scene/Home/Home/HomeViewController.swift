@@ -36,7 +36,7 @@ class HomeViewController: SceneViewController {
     func setupLayout() {
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = R.string.localizable.home_search_bar()
-        searchController.searchBar.setSearchFieldBackground(color: .neutralGray)
+        searchController.searchBar.setSearchFieldBackground(color: UIColor.gray.withAlphaComponent(0.05))
         navigationItem.searchController = searchController
         contentTableView.sectionHeaderHeight = 0.1
         definesPresentationContext = true

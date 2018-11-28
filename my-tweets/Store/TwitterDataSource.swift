@@ -43,8 +43,11 @@ public struct TwitterDataSource {
                 domainError = connectionError
                 return
             }
+            let json = try? JSONSerialization.jsonObject(with: data!, options: [])
+            
             networkResponse = Response(statusCode: 200, data: data!, request: nil, response: nil)
         }
+        
         if domainError != nil {
             return Single.error(DomainError.generic)
         } else {

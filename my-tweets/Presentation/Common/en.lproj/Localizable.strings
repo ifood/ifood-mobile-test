@@ -9,8 +9,8 @@
 "app_name" = "My Tweets";
 "search" = "Search";
 "tweets" = "Tweets";
-"costumer_key" = "GIuEde4dv1J8D7IVL3DcIo33N";
-"costumerSecret" = "P3wIJ3ycjPInBS4llox8bken43YUccfDuuI5pHQBfbg1hyOKI7";
+"costumer_key" = "QMSIq7IjziOA63HasyU5JU5HV";
+"costumerSecret" = "sQcOdMQRMOlz2vOXLmUkBVLfm1vAdEnb6ltV1HEDBpFboaV4gs";
 "generic_error" = "Unable to stablish communication :(. Try again later.";
 "generic_error_title" = "Error";
 "ok" = "OK";

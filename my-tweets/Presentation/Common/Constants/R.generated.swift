@@ -103,10 +103,6 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en
       static let generic_error_title = Rswift.StringResource(key: "generic_error_title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
-      /// en translation: GIuEde4dv1J8D7IVL3DcIo33N
-      /// 
-      /// Locales: en
-      static let costumer_key = Rswift.StringResource(key: "costumer_key", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: My Tweets
       /// 
       /// Locales: en
@@ -115,10 +111,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en
       static let ok = Rswift.StringResource(key: "ok", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
-      /// en translation: P3wIJ3ycjPInBS4llox8bken43YUccfDuuI5pHQBfbg1hyOKI7
+      /// en translation: QMSIq7IjziOA63HasyU5JU5HV
       /// 
       /// Locales: en
-      static let costumerSecret = Rswift.StringResource(key: "costumerSecret", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      static let costumer_key = Rswift.StringResource(key: "costumer_key", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Search
       /// 
       /// Locales: en
@@ -143,19 +139,16 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en
       static let unexpected_error = Rswift.StringResource(key: "unexpected_error", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: sQcOdMQRMOlz2vOXLmUkBVLfm1vAdEnb6ltV1HEDBpFboaV4gs
+      /// 
+      /// Locales: en
+      static let costumerSecret = Rswift.StringResource(key: "costumerSecret", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       
       /// en translation: Error
       /// 
       /// Locales: en
       static func generic_error_title(_: Void = ()) -> String {
         return NSLocalizedString("generic_error_title", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// en translation: GIuEde4dv1J8D7IVL3DcIo33N
-      /// 
-      /// Locales: en
-      static func costumer_key(_: Void = ()) -> String {
-        return NSLocalizedString("costumer_key", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: My Tweets
@@ -172,11 +165,11 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("ok", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: P3wIJ3ycjPInBS4llox8bken43YUccfDuuI5pHQBfbg1hyOKI7
+      /// en translation: QMSIq7IjziOA63HasyU5JU5HV
       /// 
       /// Locales: en
-      static func costumerSecret(_: Void = ()) -> String {
-        return NSLocalizedString("costumerSecret", bundle: R.hostingBundle, comment: "")
+      static func costumer_key(_: Void = ()) -> String {
+        return NSLocalizedString("costumer_key", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Search
@@ -219,6 +212,13 @@ struct R: Rswift.Validatable {
       /// Locales: en
       static func unexpected_error(_: Void = ()) -> String {
         return NSLocalizedString("unexpected_error", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: sQcOdMQRMOlz2vOXLmUkBVLfm1vAdEnb6ltV1HEDBpFboaV4gs
+      /// 
+      /// Locales: en
+      static func costumerSecret(_: Void = ()) -> String {
+        return NSLocalizedString("costumerSecret", bundle: R.hostingBundle, comment: "")
       }
       
       fileprivate init() {}
