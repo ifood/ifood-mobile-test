@@ -16,3 +16,27 @@ Create an app that given an Twitter username it will list user's tweets. When I 
 * Use whatever language, tools and frameworks you feel comfortable to.
 * Briefly elaborate on your solution, architecture details, choice of patterns and frameworks.
 * Fork this repository and submit your code.
+
+
+## Bibliotecas usadas
+- koin (DI)
+- RxJava
+- Room
+- Viewmodel
+- Livedata
+- Constraintlayout
+- Retrofit2
+- support-emoji
+- picasso
+- mockito
+
+
+## Estrutura:
+- MVVM com Single source of truth
+- Features por packages e common
+
+## Setup
+IMPORTANTE
+- Para o app poder buildar, é necessário criar um aquivo app/gradle.properties
+- Usar gradle.properties.sample como referencia.
+- Adicionar APIKEY do Google e do TWITTER.
