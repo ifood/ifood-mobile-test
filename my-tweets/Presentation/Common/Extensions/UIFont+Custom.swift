@@ -20,4 +20,3 @@ extension UIFont {
         return UIFont(name: type.rawValue, size: size) ?? UIFont.systemFont(ofSize: size)
     }
 }
-
