@@ -32,6 +32,8 @@ class HomeTableViewCell: UITableViewCell {
     
     func configure(viewModel: HomeVMs.Tweet) {
         userImage.kf.setImage(with: URL(string: viewModel.user.userImage))
+        userImage.kf.indicatorType = .activity
+        userImage.contentMode = .scaleAspectFit
         nameLabel.text = viewModel.user.name
         usernameLabel.text = "@" + viewModel.user.username
         tweetLabel.text = viewModel.text?.text

@@ -64,7 +64,7 @@
                             <constraint firstItem="Nfk-w6-KQi" firstAttribute="centerX" secondItem="3Gj-L0-2qJ" secondAttribute="centerX" id="QIm-LN-d1Z"/>
                         </constraints>
                     </view>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bpe-xJ-G1q">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bpe-xJ-G1q">
                         <rect key="frame" x="16" y="16" width="60" height="60"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="60" id="btk-SK-5k3"/>
