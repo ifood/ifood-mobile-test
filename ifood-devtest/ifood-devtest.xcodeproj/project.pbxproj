@@ -19,6 +19,12 @@
 		58A0CBA521AEE69100B19087 /* TimeLineModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A0CB9F21AEE69100B19087 /* TimeLineModels.swift */; };
 		58A0CBA621AEE69100B19087 /* TimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A0CBA021AEE69100B19087 /* TimeLineViewController.swift */; };
 		58A0CBA721AEE69100B19087 /* TimeLineInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A0CBA121AEE69100B19087 /* TimeLineInteractor.swift */; };
+		58F33FD821B0565F009200C0 /* TweetSentimentAnalysisPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F33FD221B0565F009200C0 /* TweetSentimentAnalysisPresenter.swift */; };
+		58F33FD921B0565F009200C0 /* TweetSentimentAnalysisWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F33FD321B0565F009200C0 /* TweetSentimentAnalysisWorker.swift */; };
+		58F33FDA21B0565F009200C0 /* TweetSentimentAnalysisRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F33FD421B0565F009200C0 /* TweetSentimentAnalysisRouter.swift */; };
+		58F33FDB21B0565F009200C0 /* TweetSentimentAnalysisModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F33FD521B0565F009200C0 /* TweetSentimentAnalysisModels.swift */; };
+		58F33FDC21B0565F009200C0 /* TweetSentimentAnalysisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F33FD621B0565F009200C0 /* TweetSentimentAnalysisViewController.swift */; };
+		58F33FDD21B0565F009200C0 /* TweetSentimentAnalysisInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F33FD721B0565F009200C0 /* TweetSentimentAnalysisInteractor.swift */; };
 		9F7C5C2AC0C81377DEDF47F9 /* Pods_ifood_devtestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BB51F8D719C97BD7C705AF7 /* Pods_ifood_devtestUITests.framework */; };
 		A08AE66EE14A839F03EA6FA6 /* Pods_ifood_devtest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C63114E7B24FA27372C10170 /* Pods_ifood_devtest.framework */; };
 /* End PBXBuildFile section */
@@ -60,6 +66,12 @@
 		58A0CB9F21AEE69100B19087 /* TimeLineModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineModels.swift; sourceTree = "<group>"; };
 		58A0CBA021AEE69100B19087 /* TimeLineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineViewController.swift; sourceTree = "<group>"; };
 		58A0CBA121AEE69100B19087 /* TimeLineInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineInteractor.swift; sourceTree = "<group>"; };
+		58F33FD221B0565F009200C0 /* TweetSentimentAnalysisPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetSentimentAnalysisPresenter.swift; sourceTree = "<group>"; };
+		58F33FD321B0565F009200C0 /* TweetSentimentAnalysisWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetSentimentAnalysisWorker.swift; sourceTree = "<group>"; };
+		58F33FD421B0565F009200C0 /* TweetSentimentAnalysisRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetSentimentAnalysisRouter.swift; sourceTree = "<group>"; };
+		58F33FD521B0565F009200C0 /* TweetSentimentAnalysisModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetSentimentAnalysisModels.swift; sourceTree = "<group>"; };
+		58F33FD621B0565F009200C0 /* TweetSentimentAnalysisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetSentimentAnalysisViewController.swift; sourceTree = "<group>"; };
+		58F33FD721B0565F009200C0 /* TweetSentimentAnalysisInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetSentimentAnalysisInteractor.swift; sourceTree = "<group>"; };
 		8FCFB158ADD4E83C4FE8E995 /* Pods-ifood-devtestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ifood-devtestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ifood-devtestTests/Pods-ifood-devtestTests.release.xcconfig"; sourceTree = "<group>"; };
 		97E47C8AB75D7FBC650FF92D /* Pods-ifood-devtestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ifood-devtestUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ifood-devtestUITests/Pods-ifood-devtestUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A92BBACABA6299F86E5BE560 /* Pods-ifood-devtest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ifood-devtest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ifood-devtest/Pods-ifood-devtest.debug.xcconfig"; sourceTree = "<group>"; };
@@ -165,6 +177,7 @@
 		58A0CB9A21AEE62800B19087 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				58F33FD121B0560B009200C0 /* TweetSentimentAnalysis */,
 				58A0CB9B21AEE66D00B19087 /* Timeline */,
 			);
 			path = Scenes;
@@ -181,6 +194,19 @@
 				58A0CBA121AEE69100B19087 /* TimeLineInteractor.swift */,
 			);
 			path = Timeline;
+			sourceTree = "<group>";
+		};
+		58F33FD121B0560B009200C0 /* TweetSentimentAnalysis */ = {
+			isa = PBXGroup;
+			children = (
+				58F33FD221B0565F009200C0 /* TweetSentimentAnalysisPresenter.swift */,
+				58F33FD321B0565F009200C0 /* TweetSentimentAnalysisWorker.swift */,
+				58F33FD421B0565F009200C0 /* TweetSentimentAnalysisRouter.swift */,
+				58F33FD521B0565F009200C0 /* TweetSentimentAnalysisModels.swift */,
+				58F33FD621B0565F009200C0 /* TweetSentimentAnalysisViewController.swift */,
+				58F33FD721B0565F009200C0 /* TweetSentimentAnalysisInteractor.swift */,
+			);
+			path = TweetSentimentAnalysis;
 			sourceTree = "<group>";
 		};
 		E723834C1D9D64C52ACAC72D /* Frameworks */ = {
@@ -427,12 +453,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58F33FDC21B0565F009200C0 /* TweetSentimentAnalysisViewController.swift in Sources */,
 				58A0CBA321AEE69100B19087 /* TimeLineWorker.swift in Sources */,
+				58F33FDD21B0565F009200C0 /* TweetSentimentAnalysisInteractor.swift in Sources */,
 				58A0CBA621AEE69100B19087 /* TimeLineViewController.swift in Sources */,
 				58A0CBA221AEE69100B19087 /* TimeLinePresenter.swift in Sources */,
+				58F33FD921B0565F009200C0 /* TweetSentimentAnalysisWorker.swift in Sources */,
 				5851AFDA21AC5608004031AE /* AppDelegate.swift in Sources */,
+				58F33FD821B0565F009200C0 /* TweetSentimentAnalysisPresenter.swift in Sources */,
+				58F33FDA21B0565F009200C0 /* TweetSentimentAnalysisRouter.swift in Sources */,
 				58A0CBA721AEE69100B19087 /* TimeLineInteractor.swift in Sources */,
 				58A0CBA521AEE69100B19087 /* TimeLineModels.swift in Sources */,
+				58F33FDB21B0565F009200C0 /* TweetSentimentAnalysisModels.swift in Sources */,
 				58A0CBA421AEE69100B19087 /* TimeLineRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
