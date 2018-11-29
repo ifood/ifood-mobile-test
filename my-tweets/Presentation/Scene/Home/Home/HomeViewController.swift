@@ -55,6 +55,10 @@ class HomeViewController: SceneViewController {
             self.presenter.getUserTimeline(username: self.searchController.searchBar.text ?? "")
             }.disposed(by: disposeBag)
         
+        adapter.onTryAgain.bind { [unowned self] in
+            self.presenter.getUserTimeline(username: self.searchController.searchBar.text ?? "")
+            }.disposed(by: disposeBag)
+        
         searchController.searchBar.rx.searchButtonClicked.map { [unowned self] in self.searchController.searchBar.text ?? ""} .bind { [unowned self] text in
             guard !text.isEmpty else { return }
             self.emptyErrorViewContainer.subviews.first?.removeFromSuperview()

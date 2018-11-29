@@ -9,8 +9,12 @@
 import Foundation
 
 extension String {
-    var alphanumeric: String {
-        return self.components(separatedBy: CharacterSet.alphanumerics.inverted).joined().lowercased()
+    var username: String {
+        if self.hasPrefix("@") {
+            return String(dropFirst())
+        } else {
+            return self
+        }
     }
     
     var formattedDate: String {

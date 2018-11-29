@@ -26,15 +26,21 @@ extension HomePresenter: HomePresenterProtocol {
     func getUserTimeline(username: String) {
         self.view?.startLoading()
         var results = [Tweet]()
-        getTimeline.execute(request: GetUserTimeline.Request(screenName: username.alphanumeric)).subscribe(onSuccess: { (tweets) in
+        getTimeline.execute(request: GetUserTimeline.Request(screenName: username.username)).subscribe(onSuccess: { (tweets) in
             self.view?.stopLoading()
             results = tweets
-            self.view?.displayUserTimeline(viewModel: results.toViewModel())
-        }, onError: { error in
-            self.view?.stopLoading()
             if results.isEmpty {
                 self.view?.displayNoResultsError(message: R.string.localizable.not_found())
             } else {
+                self.view?.displayUserTimeline(viewModel: results.toViewModel())
+            }
+        }, onError: { error in
+            self.view?.stopLoading()
+            if results.isEmpty {
+                self.view?.displayUserTimeline(viewModel: [])
+                self.view?.displayNoResultsError(message: R.string.localizable.not_found())
+            } else {
+                self.view?.displayUserTimeline(viewModel: [])
                 self.handleGenericError(error: error, isBlocking: true)
             }
         }).disposed(by: disposeBag)
