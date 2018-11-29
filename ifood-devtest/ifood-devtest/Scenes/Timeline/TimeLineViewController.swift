@@ -23,12 +23,31 @@ class TimeLineViewController: TWTRTimelineViewController, TimeLineDisplayLogic {
     
     private lazy var searchController: UISearchController = {
         let searchController = UISearchController(searchResultsController: nil)
+        
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.hidesNavigationBarDuringPresentation = false
         searchController.searchBar.placeholder = "e.g. 'neiltyson'"
         searchController.searchBar.text = "neiltyson"
+        
+        if let textfield = searchController.searchBar.value(forKey: "searchField") as? UITextField {
+            textfield.textColor = .blue
+            if let backgroundview = textfield.subviews.first {
+                
+                // Background color
+                backgroundview.backgroundColor = UIColor.white
+                
+                // Rounded corner
+                backgroundview.layer.cornerRadius = 10;
+                backgroundview.clipsToBounds = true;
+            }
+        }
+
+        searchController.searchBar.tintColor = .white
+        searchController.searchBar.barTintColor = .white
+        
         return searchController
+        
     }()
    
     // MARK: Setup
@@ -52,8 +71,9 @@ class TimeLineViewController: TWTRTimelineViewController, TimeLineDisplayLogic {
     }
     
     private func setupUI() {
+        navigationController?.navigationBar.barTintColor = UIColor(red: 0.0, green: 172.0/255.0, blue: 237.0/255.0, alpha: 1)
         navigationItem.searchController = searchController
-        navigationItem.hidesSearchBarWhenScrolling = true
+        navigationItem.hidesSearchBarWhenScrolling = false
         definesPresentationContext = true
     }
     
