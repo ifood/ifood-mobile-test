@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1CA277CEB6D595F37129C109 /* Pods_ifood_devtestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 005337A1B7C25C99372A6A8D /* Pods_ifood_devtestTests.framework */; };
 		5851AFDA21AC5608004031AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5851AFD921AC5608004031AE /* AppDelegate.swift */; };
-		5851AFDC21AC5608004031AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5851AFDB21AC5608004031AE /* ViewController.swift */; };
 		5851AFE121AC5609004031AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5851AFE021AC5609004031AE /* Assets.xcassets */; };
 		5851AFE421AC5609004031AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5851AFE221AC5609004031AE /* LaunchScreen.storyboard */; };
 		5851AFEF21AC5609004031AE /* ifood_devtestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5851AFEE21AC5609004031AE /* ifood_devtestTests.swift */; };
@@ -46,7 +45,6 @@
 		0BB51F8D719C97BD7C705AF7 /* Pods_ifood_devtestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ifood_devtestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5851AFD621AC5608004031AE /* ifood-devtest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ifood-devtest.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5851AFD921AC5608004031AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5851AFDB21AC5608004031AE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5851AFE021AC5609004031AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5851AFE321AC5609004031AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5851AFE521AC5609004031AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -139,7 +137,6 @@
 			children = (
 				58A0CB9A21AEE62800B19087 /* Scenes */,
 				5851AFD921AC5608004031AE /* AppDelegate.swift */,
-				5851AFDB21AC5608004031AE /* ViewController.swift */,
 				5851AFE021AC5609004031AE /* Assets.xcassets */,
 				5851AFE221AC5609004031AE /* LaunchScreen.storyboard */,
 				5851AFE521AC5609004031AE /* Info.plist */,
@@ -429,7 +426,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				58A0CBA321AEE69100B19087 /* TimeLineWorker.swift in Sources */,
-				5851AFDC21AC5608004031AE /* ViewController.swift in Sources */,
 				58A0CBA621AEE69100B19087 /* TimeLineViewController.swift in Sources */,
 				58A0CBA221AEE69100B19087 /* TimeLinePresenter.swift in Sources */,
 				5851AFDA21AC5608004031AE /* AppDelegate.swift in Sources */,
