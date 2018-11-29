@@ -15,19 +15,7 @@ import TwitterKit
 
 enum TimeLine {
     // MARK: Use cases
-  
-    enum Something {
-        
-        struct Request {
-        }
-        
-        struct Response {
-        }
-        
-        struct ViewModel {
-        }
-    }
-    
+      
     enum Tweets {
         
         struct Request {

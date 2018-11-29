@@ -13,7 +13,6 @@
 import UIKit
 
 protocol TimeLinePresentationLogic {
-    func presentSomething(response: TimeLine.Something.Response)
     func presentFetchedTweets(response: TimeLine.Tweets.Response)
     func presentFetchTweetsFailure()
 }
@@ -21,13 +20,8 @@ protocol TimeLinePresentationLogic {
 class TimeLinePresenter: TimeLinePresentationLogic {
     weak var viewController: TimeLineDisplayLogic?
   
-    // MARK: Do something
+    // MARK: Presentation
   
-    func presentSomething(response: TimeLine.Something.Response) {
-        let viewModel = TimeLine.Something.ViewModel()
-        viewController?.displaySomething(viewModel: viewModel)
-    }
-    
     func presentFetchedTweets(response: TimeLine.Tweets.Response) {
         let viewModel = TimeLine.Tweets.ViewModel(fetchedTweets: response.tweetsDataSource)
         viewController?.displayTweets(viewModel: viewModel)

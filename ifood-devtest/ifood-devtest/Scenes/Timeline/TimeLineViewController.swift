@@ -14,7 +14,6 @@ import UIKit
 import TwitterKit
 
 protocol TimeLineDisplayLogic: class {
-    func displaySomething(viewModel: TimeLine.Something.ViewModel)
     func displayTweets(viewModel: TimeLine.Tweets.ViewModel)
 }
 
@@ -86,23 +85,13 @@ class TimeLineViewController: TWTRTimelineViewController, TimeLineDisplayLogic {
         let request = TimeLine.Tweets.Request(user: "neiltyson")
         interactor?.fetchUserTweets(request: request)
     }
-  
-    //@IBOutlet weak var nameTextField: UITextField!
-  
-    func doSomething() {
-        let request = TimeLine.Something.Request()
-        interactor?.doSomething(request: request)
-    }
-  
-    func displaySomething(viewModel: TimeLine.Something.ViewModel) {
-        //nameTextField.text = viewModel.name
-    }
+    
+    // MARK: Display methods
     
     func displayTweets(viewModel: TimeLine.Tweets.ViewModel) {
         dataSource = viewModel.fetchedTweets
     }
 }
-
 
 
 extension TimeLineViewController: TWTRTweetViewDelegate {

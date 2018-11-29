@@ -20,10 +20,6 @@ class TimeLineWorker {
       service = TWTRAPIClient()
     }
     
-    func doSomeWork() {
-    }
-    
-    
     func fetchUserTweets(request: TimeLine.Tweets.Request,
                          success: @escaping (TWTRTimelineDataSource) -> (),
                          failure: @escaping () -> ()?){

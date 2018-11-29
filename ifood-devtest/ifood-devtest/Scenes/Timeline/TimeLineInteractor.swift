@@ -14,7 +14,6 @@ import UIKit
 import TwitterKit
 
 protocol TimeLineBusinessLogic {
-    func doSomething(request: TimeLine.Something.Request)
     func fetchUserTweets(request: TimeLine.Tweets.Request)
 }
 
@@ -31,14 +30,7 @@ class TimeLineInteractor: TimeLineBusinessLogic, TimeLineDataStore {
     }
     
     //var name: String = ""
-  
-    func doSomething(request: TimeLine.Something.Request) {
-        worker?.doSomeWork()
-    
-        let response = TimeLine.Something.Response()
-        presenter?.presentSomething(response: response)
-    }
-    
+      
     func fetchUserTweets(request: TimeLine.Tweets.Request) {
         
         let success = { [weak self] (dataSource: TWTRTimelineDataSource) in
