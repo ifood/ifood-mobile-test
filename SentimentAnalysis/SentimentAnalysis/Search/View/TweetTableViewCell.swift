@@ -31,6 +31,6 @@ class TweetTableViewCell: UITableViewCell, NibReusable {
         userNameLabel.text = tweet.user.name
         screenNameLabel.text = "@\(tweet.user.screenName)"
         tweetTextView.text = tweet.text
-        createdAtLabel.text = DateFormatter.twitterDateFormat.string(from: tweet.createdAt)
+        createdAtLabel.text = DateFormatter.twitterShortDateFormat.string(from: tweet.createdAt)
     }
 }

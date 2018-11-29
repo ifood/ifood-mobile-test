@@ -49,7 +49,8 @@ class AuthViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToSearch" {
             let auth = sender as! AuthModel
-            let searchVC = segue.destination as! SearchViewController
+            let navigationC = segue.destination as! UINavigationController
+            let searchVC = navigationC.topViewController as! SearchViewController
             searchVC.authModel = auth
         }
     }
