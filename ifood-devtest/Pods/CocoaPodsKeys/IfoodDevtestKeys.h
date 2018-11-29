@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (readonly) NSString *twitterConsumerKey;
 @property (readonly) NSString *twitterConsumerSecret;
+@property (readonly) NSString *googleCloudNLP;
 
 @end
 

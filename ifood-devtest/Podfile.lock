@@ -1,15 +1,26 @@
 PODS:
+  - Alamofire (4.8.0)
   - Keys (1.0.1)
+  - Moya (12.0.1):
+    - Moya/Core (= 12.0.1)
+  - Moya/Core (12.0.1):
+    - Alamofire (~> 4.1)
+    - Result (~> 4.0)
+  - Result (4.0.0)
   - TwitterCore (3.1.0)
   - TwitterKit (3.3.0):
     - TwitterCore (>= 3.1.0)
 
 DEPENDENCIES:
   - Keys (from `Pods/CocoaPodsKeys`)
+  - Moya (~> 12.0)
   - TwitterKit
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Moya
+    - Result
     - TwitterCore
     - TwitterKit
 
@@ -18,10 +29,13 @@ EXTERNAL SOURCES:
     :path: Pods/CocoaPodsKeys
 
 SPEC CHECKSUMS:
+  Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
   Keys: a576f4c9c1c641ca913a959a9c62ed3f215a8de9
+  Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
+  Result: 7645bb3f50c2ce726dd0ff2fa7b6f42bbe6c3713
   TwitterCore: 644d59e75abccb26cf0a9050d2c4dea0e5412241
   TwitterKit: a2e60ddcedbf54091eac6f27685ca7a87681e1d7
 
-PODFILE CHECKSUM: e8218397e76b7c541e4a9445d91ae22d4a933a9d
+PODFILE CHECKSUM: 70bfb87a73e0c182f9940ad69c87896fe6424b71
 
 COCOAPODS: 1.5.3

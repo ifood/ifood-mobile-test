@@ -147,11 +147,9 @@
 		5851AFD821AC5608004031AE /* ifood-devtest */ = {
 			isa = PBXGroup;
 			children = (
-				58A0CB9A21AEE62800B19087 /* Scenes */,
-				5851AFD921AC5608004031AE /* AppDelegate.swift */,
-				5851AFE021AC5609004031AE /* Assets.xcassets */,
-				5851AFE221AC5609004031AE /* LaunchScreen.storyboard */,
 				5851AFE521AC5609004031AE /* Info.plist */,
+				58E02BF021B0979600669581 /* Resources */,
+				58A0CB9A21AEE62800B19087 /* Scenes */,
 			);
 			path = "ifood-devtest";
 			sourceTree = "<group>";
@@ -194,6 +192,16 @@
 				58A0CBA121AEE69100B19087 /* TimeLineInteractor.swift */,
 			);
 			path = Timeline;
+			sourceTree = "<group>";
+		};
+		58E02BF021B0979600669581 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5851AFD921AC5608004031AE /* AppDelegate.swift */,
+				5851AFE021AC5609004031AE /* Assets.xcassets */,
+				5851AFE221AC5609004031AE /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		58F33FD121B0560B009200C0 /* TweetSentimentAnalysis */ = {
@@ -375,13 +383,19 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ifood-devtest/Pods-ifood-devtest-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Keys/Keys.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
 				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Keys.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
 			);
