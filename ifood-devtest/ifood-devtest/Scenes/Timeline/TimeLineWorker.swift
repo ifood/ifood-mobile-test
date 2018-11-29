@@ -11,8 +11,37 @@
 //
 
 import UIKit
+import TwitterKit
 
 class TimeLineWorker {
+    var service: TWTRAPIClient!
+    
+    init() {
+      service = TWTRAPIClient()
+    }
+    
     func doSomeWork() {
+    }
+    
+    
+    func fetchUserTweets(request: TimeLine.Tweets.Request,
+                         success: @escaping (TWTRTimelineDataSource) -> (),
+                         failure: @escaping () -> ()?){
+        
+        var dataSource: TWTRUserTimelineDataSource? = nil
+
+        dataSource =   TWTRUserTimelineDataSource(screenName: request.user,
+                                                  userID: nil,
+                                                  apiClient: service,
+                                                  maxTweetsPerRequest: 20,
+                                                  includeReplies: false,
+                                                  includeRetweets: false)
+        
+        if dataSource != nil {
+            success(dataSource!)
+        } else {
+            failure()
+        }
+      
     }
 }

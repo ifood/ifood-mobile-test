@@ -11,27 +11,27 @@
 //
 
 import UIKit
+import TwitterKit
 
 protocol TimeLineDisplayLogic: class {
     func displaySomething(viewModel: TimeLine.Something.ViewModel)
+    func displayTweets(viewModel: TimeLine.Tweets.ViewModel)
 }
 
-class TimeLineViewController: UIViewController, TimeLineDisplayLogic {
+class TimeLineViewController: TWTRTimelineViewController, TimeLineDisplayLogic {
     var interactor: TimeLineBusinessLogic?
     var router: (NSObjectProtocol & TimeLineRoutingLogic & TimeLineDataPassing)?
-
-    // MARK: Object lifecycle
-  
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        setup()
-    }
-  
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setup()
-    }
-  
+    
+    private lazy var searchController: UISearchController = {
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.searchBar.placeholder = "e.g. 'neiltyson'"
+        searchController.searchBar.text = "neiltyson"
+        return searchController
+    }()
+   
     // MARK: Setup
   
     private func setup() {
@@ -46,7 +46,18 @@ class TimeLineViewController: UIViewController, TimeLineDisplayLogic {
         router.viewController = viewController
         router.dataStore = interactor
     }
-  
+    
+    private func setupTwitterKitDelegates() {
+        self.tweetViewDelegate = self
+        self.timelineDelegate = self
+    }
+    
+    private func setupUI() {
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = true
+        definesPresentationContext = true
+    }
+    
     // MARK: Routing
   
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -62,10 +73,19 @@ class TimeLineViewController: UIViewController, TimeLineDisplayLogic {
   
     override func viewDidLoad() {
         super.viewDidLoad()
-        doSomething()
+
+        setup()
+        setupTwitterKitDelegates()
+        setupUI()
+        fetchTweets()
     }
   
-    // MARK: Do something
+    // MARK: Fetch data
+    
+    private func fetchTweets() {
+        let request = TimeLine.Tweets.Request(user: "neiltyson")
+        interactor?.fetchUserTweets(request: request)
+    }
   
     //@IBOutlet weak var nameTextField: UITextField!
   
@@ -77,4 +97,28 @@ class TimeLineViewController: UIViewController, TimeLineDisplayLogic {
     func displaySomething(viewModel: TimeLine.Something.ViewModel) {
         //nameTextField.text = viewModel.name
     }
+    
+    func displayTweets(viewModel: TimeLine.Tweets.ViewModel) {
+        dataSource = viewModel.fetchedTweets
+    }
+}
+
+
+
+extension TimeLineViewController: TWTRTweetViewDelegate {
+    func tweetView(_ tweetView: TWTRTweetView, didTap tweet: TWTRTweet) {
+        debugPrint("tweet click")
+    }
+}
+
+extension TimeLineViewController: TWTRTimelineDelegate {
+    
+}
+
+extension TimeLineViewController : UISearchResultsUpdating {
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        
+    }
+    
 }

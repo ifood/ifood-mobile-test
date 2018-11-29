@@ -11,6 +11,7 @@
 //
 
 import UIKit
+import TwitterKit
 
 enum TimeLine {
     // MARK: Use cases
@@ -26,4 +27,20 @@ enum TimeLine {
         struct ViewModel {
         }
     }
+    
+    enum Tweets {
+        
+        struct Request {
+            var user: String
+        }
+        
+        struct Response {
+            var tweetsDataSource: TWTRTimelineDataSource
+        }
+        
+        struct ViewModel {
+            var fetchedTweets: TWTRTimelineDataSource
+        }
+    }
+    
 }

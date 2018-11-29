@@ -19,12 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         TWTRTwitter.sharedInstance().start(withConsumerKey: "PfpzUTdi1M8yR0CxHwP48ZK8r", consumerSecret: "W1u0JPrIZjS6ZHTX5vL0xXkhBxcqZqgnquV4ZTGefdyuWxn38Q")
         
-        
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.makeKeyAndVisible()
-        self.window?.rootViewController = UINavigationController(rootViewController: ViewController())
+        self.window?.rootViewController = UINavigationController(rootViewController: TimeLineViewController(nibName: nil, bundle: nil))
 
-        
         return true
     }
 
