@@ -14,6 +14,16 @@
 		</dict>
 		<dict>
 			<key>FooterText</key>
+			<string>MIT LICENSE Found in the repo</string>
+			<key>License</key>
+			<string>MIT</string>
+			<key>Title</key>
+			<string>Keys</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
 			<string>Copyright Twitter, Inc. All Rights Reserved. Use of this software is subject to the terms and conditions of the Twitter Kit Agreement located at https://dev.twitter.com/overview/terms/twitterkit and the Developer Agreement located at https://dev.twitter.com/overview/terms/agreement. OSS: https://github.com/twitter/twitter-kit-ios/blob/master/OS_LICENSES.md</string>
 			<key>License</key>
 			<string>Commercial</string>

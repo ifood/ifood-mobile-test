@@ -102,7 +102,7 @@ class TimeLineViewController: TWTRTimelineViewController, TimeLineDisplayLogic {
     // MARK: Fetch data
     
     private func fetchTweets() {
-        let request = TimeLine.Tweets.Request(user: "neiltyson")
+        let request = TimeLine.Tweets.Request(user: searchController.searchBar.text ?? "neiltyson")
         interactor?.fetchUserTweets(request: request)
     }
     

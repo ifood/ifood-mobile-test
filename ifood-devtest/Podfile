@@ -1,12 +1,19 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+ platform :ios, '11.4'
 
 target 'ifood-devtest' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
-  pod 'TwitterKit'
+  
+  plugin 'cocoapods-keys', {
+      :project => "ifood-devtest",
+      :keys => [
+      "TwitterConsumerKey",
+      "TwitterConsumerSecret"
+  ]}
+  
   # Pods for ifood-devtest
-
+  pod 'TwitterKit'
   target 'ifood-devtestTests' do
     inherit! :search_paths
     # Pods for testing
