@@ -124,6 +124,7 @@
 		2B08B4BE21AD3A28006F6593 /* SentimentAnalysis */ = {
 			isa = PBXGroup;
 			children = (
+				2BE5FA1721AF77ED007DAC2A /* Sentiment */,
 				2BE5F9FD21AE37A9007DAC2A /* Auth */,
 				2BE5F9FA21AE2B54007DAC2A /* Common */,
 				2BE5F9F521AE2A36007DAC2A /* Extensions */,
@@ -217,6 +218,13 @@
 				2BE5FA1421AF61C5007DAC2A /* TweetTableViewCell.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		2BE5FA1721AF77ED007DAC2A /* Sentiment */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sentiment;
 			sourceTree = "<group>";
 		};
 		7918154B01D2D8754CCB8C7E /* Frameworks */ = {

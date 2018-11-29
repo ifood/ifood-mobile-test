@@ -61,14 +61,24 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Yv-nJ-dCM" userLabel="Separator">
+                        <rect key="frame" x="16" y="188.5" width="304" height="1"/>
+                        <color key="backgroundColor" red="0.8784313725490196" green="0.8784313725490196" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="Wzu-TE-VKt"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="9nb-Fp-NKN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="2EB-fv-HR4"/>
+                    <constraint firstItem="5Yv-nJ-dCM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="9tu-qa-jHv"/>
                     <constraint firstItem="evZ-xI-16D" firstAttribute="leading" secondItem="vyj-2D-asi" secondAttribute="leading" id="AFE-fU-0EN"/>
                     <constraint firstItem="vyj-2D-asi" firstAttribute="leading" secondItem="9nb-Fp-NKN" secondAttribute="trailing" constant="8" id="Fmx-jL-BAv"/>
                     <constraint firstAttribute="trailing" secondItem="vyj-2D-asi" secondAttribute="trailing" constant="8" id="P6z-cP-EwY"/>
+                    <constraint firstAttribute="bottom" secondItem="5Yv-nJ-dCM" secondAttribute="bottom" id="QQw-GO-Y78"/>
                     <constraint firstItem="9nb-Fp-NKN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="WZt-xU-HLN"/>
                     <constraint firstItem="vyj-2D-asi" firstAttribute="top" secondItem="9nb-Fp-NKN" secondAttribute="top" id="Zag-Ns-DxC"/>
+                    <constraint firstAttribute="trailing" secondItem="5Yv-nJ-dCM" secondAttribute="trailing" id="epy-eO-NGn"/>
                     <constraint firstItem="evZ-xI-16D" firstAttribute="top" secondItem="vyj-2D-asi" secondAttribute="bottom" constant="8" id="ful-QT-unk"/>
                     <constraint firstAttribute="trailing" secondItem="evZ-xI-16D" secondAttribute="trailing" constant="8" id="osN-QI-zB0"/>
                     <constraint firstAttribute="bottom" secondItem="evZ-xI-16D" secondAttribute="bottom" constant="15" id="q9G-Vn-klV"/>
@@ -76,6 +86,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="createdAtLabel" destination="tV1-jj-B6o" id="hhc-vF-h3e"/>
                 <outlet property="screenNameLabel" destination="3GK-ZN-wCH" id="UpW-XI-p6U"/>
                 <outlet property="tweetTextView" destination="evZ-xI-16D" id="77e-Dn-vHV"/>
                 <outlet property="userImageView" destination="9nb-Fp-NKN" id="Hn0-Xq-pIo"/>

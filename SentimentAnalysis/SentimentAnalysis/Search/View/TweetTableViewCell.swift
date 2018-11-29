@@ -15,6 +15,7 @@ class TweetTableViewCell: UITableViewCell, NibReusable {
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var screenNameLabel: UILabel!
     @IBOutlet weak var tweetTextView: UILabel!
+    @IBOutlet weak var createdAtLabel: UILabel!
     
     override func prepareForReuse() {
         super.prepareForReuse()
@@ -28,7 +29,8 @@ class TweetTableViewCell: UITableViewCell, NibReusable {
     func render(_ tweet: Tweet) {
         userImageView.download(tweet.user.image)
         userNameLabel.text = tweet.user.name
-        screenNameLabel.text = tweet.user.screenName
+        screenNameLabel.text = "@\(tweet.user.screenName)"
         tweetTextView.text = tweet.text
+        createdAtLabel.text = DateFormatter.twitterDateFormat.string(from: tweet.createdAt)
     }
 }

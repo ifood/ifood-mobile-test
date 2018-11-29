@@ -15,6 +15,8 @@ class SearchViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    let searchController = UISearchController(searchResultsController: nil)
+    var pendingRequestWorkItem: DispatchWorkItem?
     
     var provider: MoyaProvider<TwitterAPI>!
     var authModel: AuthModel! {
@@ -46,9 +48,7 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        search(with: "johnsundell") { [weak self] (result) in
-            self?.tweets = result.value ?? []
-        }
+        setupSearch()
     }
 }
 
@@ -68,6 +68,50 @@ extension SearchViewController {
     }
 }
 
+// MARK: Search
+extension SearchViewController {
+    
+    func setupSearch() {
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search users"
+        navigationItem.searchController = searchController
+        navigationItem.title = "Sentiment Analysis"
+        navigationItem.hidesSearchBarWhenScrolling = false
+        definesPresentationContext = true
+    }
+}
+
+// MARK: UISearchResultsUpdating
+extension SearchViewController: UISearchResultsUpdating {
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        print(searchController.searchBar.text ?? "Empty")
+        
+        guard let searchText = searchController.searchBar.text else {
+            return
+        }
+        
+        pendingRequestWorkItem?.cancel()
+        tweets.removeAll()
+
+        let requestWorkItem = DispatchWorkItem { [weak self] in
+            self?.search(with: searchText) { [weak self] result in
+                self?.tweets = result.value ?? []
+            }
+        }
+        
+        pendingRequestWorkItem = requestWorkItem
+        DispatchQueue
+            .main
+            .asyncAfter(
+                deadline: .now() + .milliseconds(3000),
+                execute: requestWorkItem
+        )
+        
+    }
+}
+
 // MARK: TableView
 extension SearchViewController {
     
@@ -80,7 +124,7 @@ extension SearchViewController {
     }
 }
 
-// MARK: TableView
+// MARK: UITableViewDataSource
 extension SearchViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -95,7 +139,7 @@ extension SearchViewController: UITableViewDataSource {
     }
 }
 
-// MARK: TableView
+// MARK: UITableViewDelegate
 extension SearchViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
