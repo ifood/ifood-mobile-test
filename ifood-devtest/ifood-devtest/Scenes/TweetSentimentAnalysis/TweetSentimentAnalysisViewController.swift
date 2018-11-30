@@ -14,6 +14,7 @@ import UIKit
 
 protocol TweetSentimentAnalysisDisplayLogic: class {
     func displaySomething(viewModel: TweetSentimentAnalysis.Something.ViewModel)
+    func displayAnalyzedSentiment(viewModel: TweetSentimentAnalysis.SentimentAnalyzed.ViewModel)
 }
 
 class TweetSentimentAnalysisViewController: UIViewController, TweetSentimentAnalysisDisplayLogic {
@@ -76,5 +77,9 @@ class TweetSentimentAnalysisViewController: UIViewController, TweetSentimentAnal
   
     func displaySomething(viewModel: TweetSentimentAnalysis.Something.ViewModel) {
         //nameTextField.text = viewModel.name
+    }
+    
+    func displayAnalyzedSentiment(viewModel: TweetSentimentAnalysis.SentimentAnalyzed.ViewModel) {
+        
     }
 }

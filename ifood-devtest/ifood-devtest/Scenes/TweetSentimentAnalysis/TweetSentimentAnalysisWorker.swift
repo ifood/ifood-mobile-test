@@ -12,7 +12,33 @@
 
 import UIKit
 
+protocol TweetSentimentAnalysisService {
+    func requestSentimentAnalysisTweet(tweet: String,
+                                        success: @escaping (Sentiment) -> (),
+                                        failure: @escaping (Error) -> ())
+
+}
+
+
 class TweetSentimentAnalysisWorker {
+    var service: TweetSentimentAnalysisService!
+    
+    init(service: TweetSentimentAnalysisService) {
+        self.service = service
+    }
+    
     func doSomeWork() {
     }
+    
+    func requestSentimentAnalysisTweet(request: TweetSentimentAnalysis.SentimentAnalyzed.Request,
+                                       success: @escaping (Sentiment) -> (),
+                                       failure: @escaping (Error) -> () = {_ in }) {
+        
+        service.requestSentimentAnalysisTweet(tweet: request.tweet, success: { (sentiment) in
+            success(sentiment)
+        }){ (error) in
+            failure(error)
+        }
+    }
+    
 }

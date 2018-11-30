@@ -25,4 +25,19 @@ enum TweetSentimentAnalysis {
         struct ViewModel {
         }
     }
+    
+    enum SentimentAnalyzed {
+        struct Request {
+           let tweet: String
+        }
+        
+        struct Response {
+            let sentimentAnalysis: Sentiment
+        }
+        
+        struct ViewModel {
+            let sentimentAnalyzed: Sentiment
+        }
+    }
+
 }

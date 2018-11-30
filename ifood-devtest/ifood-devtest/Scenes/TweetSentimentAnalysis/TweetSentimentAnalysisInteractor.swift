@@ -14,6 +14,7 @@ import UIKit
 
 protocol TweetSentimentAnalysisBusinessLogic {
     func doSomething(request: TweetSentimentAnalysis.Something.Request)
+    func requestSentimentAnalysis(request: TweetSentimentAnalysis.SentimentAnalyzed.Request)
 }
 
 protocol TweetSentimentAnalysisDataStore {
@@ -25,14 +26,30 @@ class TweetSentimentAnalysisInteractor: TweetSentimentAnalysisBusinessLogic, Twe
     var worker: TweetSentimentAnalysisWorker?
     //var name: String = ""
   
+    init() {
+        worker = TweetSentimentAnalysisWorker(service: SentimentAnalysisRestApi())
+    }
+    
     // MARK: Do something
   
-    func doSomething(request: TweetSentimentAnalysis.Something.Request)
-  {
-    worker = TweetSentimentAnalysisWorker()
-    worker?.doSomeWork()
+    func doSomething(request: TweetSentimentAnalysis.Something.Request) {
+        worker?.doSomeWork()
     
-    let response = TweetSentimentAnalysis.Something.Response()
-    presenter?.presentSomething(response: response)
-  }
+        let response = TweetSentimentAnalysis.Something.Response()
+        presenter?.presentSomething(response: response)
+    }
+    
+    func requestSentimentAnalysis(request: TweetSentimentAnalysis.SentimentAnalyzed.Request) {
+        
+        let success = { [weak self] (sentiment: Sentiment) in
+            let response = TweetSentimentAnalysis.SentimentAnalyzed.Response(sentimentAnalysis: sentiment)
+            self?.presenter?.presentAnalyzedSentiment(response: response)
+        }
+        
+        let failure = { [weak self] (error: Error) in
+            
+        }
+        
+        worker?.requestSentimentAnalysisTweet(request: request, success: success, failure: failure)
+    }
 }

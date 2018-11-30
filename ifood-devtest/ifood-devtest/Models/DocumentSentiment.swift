@@ -31,9 +31,9 @@ extension Sentiment: Decodable {
         documentSentiment = try? container.decode(DocumentSentiment.self, forKey: .documentSentiment)
     }
     
-    public static func requestSentimentTweet(tweet: String,
-                                             success: @escaping (Sentiment) -> Void,
-                                             failure: @escaping (Error) -> Void = {_ in }) {
+    public static func requestSentimentAnalysisTweet(tweet: String,
+                                                     success: @escaping (Sentiment) -> Void,
+                                                     failure: @escaping (Error) -> Void = {_ in }) {
         
         NetworkManager.provider.request(.text(text: tweet)) { result in
             switch result {

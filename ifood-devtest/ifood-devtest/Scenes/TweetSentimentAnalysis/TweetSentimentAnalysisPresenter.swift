@@ -14,6 +14,8 @@ import UIKit
 
 protocol TweetSentimentAnalysisPresentationLogic {
     func presentSomething(response: TweetSentimentAnalysis.Something.Response)
+    func presentAnalyzedSentiment(response: TweetSentimentAnalysis.SentimentAnalyzed.Response)
+    func presentAnalyzedSentimentError()
 }
 
 class TweetSentimentAnalysisPresenter: TweetSentimentAnalysisPresentationLogic {
@@ -24,5 +26,14 @@ class TweetSentimentAnalysisPresenter: TweetSentimentAnalysisPresentationLogic {
     func presentSomething(response: TweetSentimentAnalysis.Something.Response) {
         let viewModel = TweetSentimentAnalysis.Something.ViewModel()
         viewController?.displaySomething(viewModel: viewModel)
+    }
+    
+    func presentAnalyzedSentiment(response: TweetSentimentAnalysis.SentimentAnalyzed.Response) {
+        let viewModel = TweetSentimentAnalysis.SentimentAnalyzed.ViewModel(sentimentAnalyzed: response.sentimentAnalysis)
+        viewController?.displayAnalyzedSentiment(viewModel: viewModel)
+    }
+    
+    func presentAnalyzedSentimentError() {
+        
     }
 }
