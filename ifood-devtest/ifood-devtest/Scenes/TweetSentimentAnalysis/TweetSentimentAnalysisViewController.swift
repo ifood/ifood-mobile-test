@@ -13,7 +13,6 @@
 import UIKit
 
 protocol TweetSentimentAnalysisDisplayLogic: class {
-    func displaySomething(viewModel: TweetSentimentAnalysis.Something.ViewModel)
     func displayAnalyzedSentiment(viewModel: TweetSentimentAnalysis.SentimentAnalyzed.ViewModel)
 }
 
@@ -63,22 +62,11 @@ class TweetSentimentAnalysisViewController: UIViewController, TweetSentimentAnal
   
     override func viewDidLoad() {
         super.viewDidLoad()
-        doSomething()
+    
     }
   
     // MARK: Do something
   
-    //@IBOutlet weak var nameTextField: UITextField!
-  
-    func doSomething() {
-        let request = TweetSentimentAnalysis.Something.Request()
-        interactor?.doSomething(request: request)
-    }
-  
-    func displaySomething(viewModel: TweetSentimentAnalysis.Something.ViewModel) {
-        //nameTextField.text = viewModel.name
-    }
-    
     func displayAnalyzedSentiment(viewModel: TweetSentimentAnalysis.SentimentAnalyzed.ViewModel) {
         
     }

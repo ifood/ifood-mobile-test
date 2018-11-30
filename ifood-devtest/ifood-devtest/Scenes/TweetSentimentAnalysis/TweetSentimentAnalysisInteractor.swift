@@ -13,7 +13,6 @@
 import UIKit
 
 protocol TweetSentimentAnalysisBusinessLogic {
-    func doSomething(request: TweetSentimentAnalysis.Something.Request)
     func requestSentimentAnalysis(request: TweetSentimentAnalysis.SentimentAnalyzed.Request)
 }
 
@@ -29,16 +28,7 @@ class TweetSentimentAnalysisInteractor: TweetSentimentAnalysisBusinessLogic, Twe
     init() {
         worker = TweetSentimentAnalysisWorker(service: SentimentAnalysisRestApi())
     }
-    
-    // MARK: Do something
   
-    func doSomething(request: TweetSentimentAnalysis.Something.Request) {
-        worker?.doSomeWork()
-    
-        let response = TweetSentimentAnalysis.Something.Response()
-        presenter?.presentSomething(response: response)
-    }
-    
     func requestSentimentAnalysis(request: TweetSentimentAnalysis.SentimentAnalyzed.Request) {
         
         let success = { [weak self] (sentiment: Sentiment) in

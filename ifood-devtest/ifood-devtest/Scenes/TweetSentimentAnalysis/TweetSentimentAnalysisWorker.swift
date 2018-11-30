@@ -27,9 +27,6 @@ class TweetSentimentAnalysisWorker {
         self.service = service
     }
     
-    func doSomeWork() {
-    }
-    
     func requestSentimentAnalysisTweet(request: TweetSentimentAnalysis.SentimentAnalyzed.Request,
                                        success: @escaping (Sentiment) -> (),
                                        failure: @escaping (Error) -> () = {_ in }) {

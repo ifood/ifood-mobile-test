@@ -15,17 +15,6 @@ import UIKit
 enum TweetSentimentAnalysis {
     // MARK: Use cases
   
-    enum Something {
-        struct Request {
-        }
-        
-        struct Response {
-        }
-    
-        struct ViewModel {
-        }
-    }
-    
     enum SentimentAnalyzed {
         struct Request {
            let tweet: String
