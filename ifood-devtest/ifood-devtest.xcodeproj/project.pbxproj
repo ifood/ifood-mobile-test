@@ -19,6 +19,8 @@
 		58A0CBA521AEE69100B19087 /* TimeLineModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A0CB9F21AEE69100B19087 /* TimeLineModels.swift */; };
 		58A0CBA621AEE69100B19087 /* TimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A0CBA021AEE69100B19087 /* TimeLineViewController.swift */; };
 		58A0CBA721AEE69100B19087 /* TimeLineInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A0CBA121AEE69100B19087 /* TimeLineInteractor.swift */; };
+		58E02BF621B0991900669581 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E02BF521B0991900669581 /* NetworkManager.swift */; };
+		58E02BF921B0B02500669581 /* RestApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E02BF821B0B02500669581 /* RestApi.swift */; };
 		58F33FD821B0565F009200C0 /* TweetSentimentAnalysisPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F33FD221B0565F009200C0 /* TweetSentimentAnalysisPresenter.swift */; };
 		58F33FD921B0565F009200C0 /* TweetSentimentAnalysisWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F33FD321B0565F009200C0 /* TweetSentimentAnalysisWorker.swift */; };
 		58F33FDA21B0565F009200C0 /* TweetSentimentAnalysisRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F33FD421B0565F009200C0 /* TweetSentimentAnalysisRouter.swift */; };
@@ -66,6 +68,8 @@
 		58A0CB9F21AEE69100B19087 /* TimeLineModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineModels.swift; sourceTree = "<group>"; };
 		58A0CBA021AEE69100B19087 /* TimeLineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineViewController.swift; sourceTree = "<group>"; };
 		58A0CBA121AEE69100B19087 /* TimeLineInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineInteractor.swift; sourceTree = "<group>"; };
+		58E02BF521B0991900669581 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		58E02BF821B0B02500669581 /* RestApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestApi.swift; sourceTree = "<group>"; };
 		58F33FD221B0565F009200C0 /* TweetSentimentAnalysisPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetSentimentAnalysisPresenter.swift; sourceTree = "<group>"; };
 		58F33FD321B0565F009200C0 /* TweetSentimentAnalysisWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetSentimentAnalysisWorker.swift; sourceTree = "<group>"; };
 		58F33FD421B0565F009200C0 /* TweetSentimentAnalysisRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetSentimentAnalysisRouter.swift; sourceTree = "<group>"; };
@@ -147,9 +151,10 @@
 		5851AFD821AC5608004031AE /* ifood-devtest */ = {
 			isa = PBXGroup;
 			children = (
-				5851AFE521AC5609004031AE /* Info.plist */,
-				58E02BF021B0979600669581 /* Resources */,
+				58E02BF121B0986000669581 /* Services */,
 				58A0CB9A21AEE62800B19087 /* Scenes */,
+				58E02BF021B0979600669581 /* Resources */,
+				5851AFE521AC5609004031AE /* Info.plist */,
 			);
 			path = "ifood-devtest";
 			sourceTree = "<group>";
@@ -175,8 +180,8 @@
 		58A0CB9A21AEE62800B19087 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				58F33FD121B0560B009200C0 /* TweetSentimentAnalysis */,
 				58A0CB9B21AEE66D00B19087 /* Timeline */,
+				58F33FD121B0560B009200C0 /* TweetSentimentAnalysis */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -202,6 +207,23 @@
 				5851AFE221AC5609004031AE /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		58E02BF121B0986000669581 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				58E02BF721B0AFCC00669581 /* SentimentAnalysis */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		58E02BF721B0AFCC00669581 /* SentimentAnalysis */ = {
+			isa = PBXGroup;
+			children = (
+				58E02BF521B0991900669581 /* NetworkManager.swift */,
+				58E02BF821B0B02500669581 /* RestApi.swift */,
+			);
+			path = SentimentAnalysis;
 			sourceTree = "<group>";
 		};
 		58F33FD121B0560B009200C0 /* TweetSentimentAnalysis */ = {
@@ -472,11 +494,13 @@
 				58F33FDD21B0565F009200C0 /* TweetSentimentAnalysisInteractor.swift in Sources */,
 				58A0CBA621AEE69100B19087 /* TimeLineViewController.swift in Sources */,
 				58A0CBA221AEE69100B19087 /* TimeLinePresenter.swift in Sources */,
+				58E02BF921B0B02500669581 /* RestApi.swift in Sources */,
 				58F33FD921B0565F009200C0 /* TweetSentimentAnalysisWorker.swift in Sources */,
 				5851AFDA21AC5608004031AE /* AppDelegate.swift in Sources */,
 				58F33FD821B0565F009200C0 /* TweetSentimentAnalysisPresenter.swift in Sources */,
 				58F33FDA21B0565F009200C0 /* TweetSentimentAnalysisRouter.swift in Sources */,
 				58A0CBA721AEE69100B19087 /* TimeLineInteractor.swift in Sources */,
+				58E02BF621B0991900669581 /* NetworkManager.swift in Sources */,
 				58A0CBA521AEE69100B19087 /* TimeLineModels.swift in Sources */,
 				58F33FDB21B0565F009200C0 /* TweetSentimentAnalysisModels.swift in Sources */,
 				58A0CBA421AEE69100B19087 /* TimeLineRouter.swift in Sources */,
