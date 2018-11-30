@@ -17,6 +17,8 @@
 		25DF94D621B1FB5000852ED2 /* GoogleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DF94D521B1FB5000852ED2 /* GoogleService.swift */; };
 		25DF94D821B1FC1700852ED2 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DF94D721B1FC1700852ED2 /* NetworkService.swift */; };
 		25DF94DA21B1FCB200852ED2 /* AlamofireWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DF94D921B1FCB200852ED2 /* AlamofireWrapper.swift */; };
+		25DF94DD21B1FD2900852ED2 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DF94DC21B1FD2900852ED2 /* LottieView.swift */; };
+		25DF94E021B1FD5F00852ED2 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DF94DF21B1FD5F00852ED2 /* Configuration.swift */; };
 		74E0EE37F72DE7123BBF9BB5 /* Pods_ifood_mobile_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 175D71158959B5DACCDA8E52 /* Pods_ifood_mobile_test.framework */; };
 		C1F6A856956C2A8AC0D3EF57 /* Pods_ifood_mobile_testTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D304DC1229383E815214A3 /* Pods_ifood_mobile_testTests.framework */; };
 /* End PBXBuildFile section */
@@ -51,6 +53,8 @@
 		25DF94D521B1FB5000852ED2 /* GoogleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleService.swift; sourceTree = "<group>"; };
 		25DF94D721B1FC1700852ED2 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		25DF94D921B1FCB200852ED2 /* AlamofireWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireWrapper.swift; sourceTree = "<group>"; };
+		25DF94DC21B1FD2900852ED2 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		25DF94DF21B1FD5F00852ED2 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		3D6C7641DB9621C1EAF10605 /* Pods-ifood-mobile-test.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ifood-mobile-test.staging.xcconfig"; path = "Pods/Target Support Files/Pods-ifood-mobile-test/Pods-ifood-mobile-test.staging.xcconfig"; sourceTree = "<group>"; };
 		3F0C156F9F2C42D291DBFD37 /* Pods-ifood-mobile-testTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ifood-mobile-testTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ifood-mobile-testTests/Pods-ifood-mobile-testTests.debug.xcconfig"; sourceTree = "<group>"; };
 		521238EF3EF2D591FAD3586E /* Pods-ifood-mobile-testTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ifood-mobile-testTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ifood-mobile-testTests/Pods-ifood-mobile-testTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -103,6 +107,8 @@
 			isa = PBXGroup;
 			children = (
 				25DF94D221B1FAD000852ED2 /* Services */,
+				25DF94DB21B1FD1000852ED2 /* Common */,
+				25DF94DE21B1FD4D00852ED2 /* Configuration */,
 				25DF94CA21B1F1DB00852ED2 /* SupportingFiles */,
 				252D0ACB21B1EF3A0069B37D /* AppDelegate.swift */,
 				252D0ACD21B1EF3A0069B37D /* ViewController.swift */,
@@ -150,6 +156,22 @@
 				25DF94D921B1FCB200852ED2 /* AlamofireWrapper.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		25DF94DB21B1FD1000852ED2 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				25DF94DC21B1FD2900852ED2 /* LottieView.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		25DF94DE21B1FD4D00852ED2 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				25DF94DF21B1FD5F00852ED2 /* Configuration.swift */,
+			);
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 		3B8BC49FECBCAA6FB94DFCB3 /* Pods */ = {
@@ -341,7 +363,9 @@
 				25DF94D621B1FB5000852ED2 /* GoogleService.swift in Sources */,
 				25DF94DA21B1FCB200852ED2 /* AlamofireWrapper.swift in Sources */,
 				252D0ACE21B1EF3A0069B37D /* ViewController.swift in Sources */,
+				25DF94DD21B1FD2900852ED2 /* LottieView.swift in Sources */,
 				252D0ACC21B1EF3A0069B37D /* AppDelegate.swift in Sources */,
+				25DF94E021B1FD5F00852ED2 /* Configuration.swift in Sources */,
 				25DF94D421B1FB0F00852ED2 /* RestService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
