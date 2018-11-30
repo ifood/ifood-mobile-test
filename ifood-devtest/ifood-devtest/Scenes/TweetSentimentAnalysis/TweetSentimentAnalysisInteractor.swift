@@ -14,6 +14,7 @@ import UIKit
 
 protocol TweetSentimentAnalysisBusinessLogic {
     func requestSentimentAnalysis(request: TweetSentimentAnalysis.SentimentAnalyzed.Request)
+    func requestSentimentAnalysis()
 }
 
 protocol TweetSentimentAnalysisDataStore {
@@ -28,7 +29,12 @@ class TweetSentimentAnalysisInteractor: TweetSentimentAnalysisBusinessLogic, Twe
     init() {
         worker = TweetSentimentAnalysisWorker(service: SentimentAnalysisRestApi())
     }
-  
+    
+    func requestSentimentAnalysis() {
+        let request = TweetSentimentAnalysis.SentimentAnalyzed.Request(tweet: tweet)
+        requestSentimentAnalysis(request: request)
+    }
+    
     func requestSentimentAnalysis(request: TweetSentimentAnalysis.SentimentAnalyzed.Request) {
         
         let success = { [weak self] (sentiment: Sentiment) in

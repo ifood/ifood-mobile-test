@@ -15,6 +15,7 @@ import TwitterKit
 
 protocol TimeLineBusinessLogic {
     func fetchUserTweets(request: TimeLine.Tweets.Request)
+    func AnalyzeTweet(request: TimeLine.Tweet.Request)
 }
 
 protocol TimeLineDataStore {
@@ -44,5 +45,10 @@ class TimeLineInteractor: TimeLineBusinessLogic, TimeLineDataStore {
         }
         
         worker?.fetchUserTweets(request: request, success: success, failure: failure)
+    }
+    
+    func AnalyzeTweet(request: TimeLine.Tweet.Request) {
+        tweet = request.tweet
+        presenter?.presentTweetSentimentAnalysis()
     }
 }

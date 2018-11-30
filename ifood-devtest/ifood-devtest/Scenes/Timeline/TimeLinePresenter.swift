@@ -15,6 +15,7 @@ import UIKit
 protocol TimeLinePresentationLogic {
     func presentFetchedTweets(response: TimeLine.Tweets.Response)
     func presentFetchTweetsFailure()
+    func presentTweetSentimentAnalysis()
 }
 
 class TimeLinePresenter: TimeLinePresentationLogic {
@@ -29,5 +30,9 @@ class TimeLinePresenter: TimeLinePresentationLogic {
     
     func presentFetchTweetsFailure() {
         
+    }
+    
+    func presentTweetSentimentAnalysis() {
+        viewController?.displayTweetAnalysis()
     }
 }

@@ -15,6 +15,7 @@ import TwitterKit
 
 protocol TimeLineDisplayLogic: class {
     func displayTweets(viewModel: TimeLine.Tweets.ViewModel)
+    func displayTweetAnalysis()
 }
 
 class TimeLineViewController: TWTRTimelineViewController, TimeLineDisplayLogic {
@@ -111,35 +112,47 @@ class TimeLineViewController: TWTRTimelineViewController, TimeLineDisplayLogic {
     func displayTweets(viewModel: TimeLine.Tweets.ViewModel) {
         dataSource = viewModel.fetchedTweets
     }
+    
+    func displayTweetAnalysis() {
+        router?.routeToSentimentAnalysis()
+    }
 }
 
 
 extension TimeLineViewController: TWTRTweetViewDelegate {
     
     func tweetView(tweetView: TWTRTweetView, didSelectTweet tweet: TWTRTweet) {
-        router?.routeToSentimentAnalysis()
+        let request = TimeLine.Tweet.Request(tweet: tweet.text)
+        interactor?.AnalyzeTweet(request: request)
     }
     
     func tweetView(_ tweetView: TWTRTweetView, didTap url: URL) {
-        router?.routeToSentimentAnalysis()
+        let request = TimeLine.Tweet.Request(tweet: tweetView.tweet.text)
+        interactor?.AnalyzeTweet(request: request)
     }
     
     func tweetView(_ tweetView: TWTRTweetView, didTap tweet: TWTRTweet) {
-        router?.routeToSentimentAnalysis()
+        let request = TimeLine.Tweet.Request(tweet: tweetView.tweet.text)
+        interactor?.AnalyzeTweet(request: request)
+
     }
     
     func tweetView(_ tweetView: TWTRTweetView, didTap image: UIImage, with imageURL: URL) {
-        router?.routeToSentimentAnalysis()
+        let request = TimeLine.Tweet.Request(tweet: tweetView.tweet.text)
+        interactor?.AnalyzeTweet(request: request)
+
     }
     
     func tweetView(_ tweetView: TWTRTweetView, didTapVideoWith videoURL: URL) {
-        router?.routeToSentimentAnalysis()
+        let request = TimeLine.Tweet.Request(tweet: tweetView.tweet.text)
+        interactor?.AnalyzeTweet(request: request)
+
     }
     
     func tweetView(_ tweetView: TWTRTweetView, didTapProfileImageFor user: TWTRUser) {
-        router?.routeToSentimentAnalysis()
+        let request = TimeLine.Tweet.Request(tweet: tweetView.tweet.text)
+        interactor?.AnalyzeTweet(request: request)
     }
-    
 }
 
 extension TimeLineViewController: TWTRTimelineDelegate {

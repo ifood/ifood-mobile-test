@@ -31,4 +31,18 @@ enum TimeLine {
         }
     }
     
+    enum Tweet {
+        struct Request {
+            var tweet: String
+        }
+        
+        struct Reponse {
+            var tweet: String
+        }
+        
+        struct ViewModel {
+            var tweet: String
+        }
+    }
+    
 }

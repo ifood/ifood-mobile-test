@@ -62,10 +62,16 @@ class TweetSentimentAnalysisViewController: UIViewController, TweetSentimentAnal
   
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        requestSentimentAnalysis()
     }
-  
-    // MARK: Do something
+    
+    // MARK: Requests
+    
+    private func requestSentimentAnalysis() {
+        interactor?.requestSentimentAnalysis()
+    }
+    
+    // MARK: Display methods
   
     func displayAnalyzedSentiment(viewModel: TweetSentimentAnalysis.SentimentAnalyzed.ViewModel) {
         
