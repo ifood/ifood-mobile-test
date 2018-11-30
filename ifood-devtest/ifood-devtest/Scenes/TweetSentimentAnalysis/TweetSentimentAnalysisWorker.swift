@@ -12,18 +12,10 @@
 
 import UIKit
 
-protocol TweetSentimentAnalysisService {
-    func requestSentimentAnalysisTweet(tweet: String,
-                                        success: @escaping (Sentiment) -> (),
-                                        failure: @escaping (Error) -> ())
-
-}
-
-
 class TweetSentimentAnalysisWorker {
-    var service: TweetSentimentAnalysisService!
+    var service: SentimentAnalysisService!
     
-    init(service: TweetSentimentAnalysisService) {
+    init(service: SentimentAnalysisService) {
         self.service = service
     }
     

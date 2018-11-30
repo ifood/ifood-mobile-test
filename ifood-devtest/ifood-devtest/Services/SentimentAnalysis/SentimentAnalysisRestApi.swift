@@ -1,5 +1,5 @@
 //
-//  TweetSentimentAnalysisRestApi.swift
+//  SentimentAnalysisRestApi.swift
 //  ifood-devtest
 //
 //  Created by Rafael Zilião on 30/11/18.
@@ -8,7 +8,14 @@
 
 import Foundation
 
-class SentimentAnalysisRestApi: TweetSentimentAnalysisService {
+protocol SentimentAnalysisService {
+    func requestSentimentAnalysisTweet(tweet: String,
+                                       success: @escaping (Sentiment) -> (),
+                                       failure: @escaping (Error) -> ())
+    
+}
+
+class SentimentAnalysisRestApi: SentimentAnalysisService {
     
     func requestSentimentAnalysisTweet(tweet: String,
                                        success: @escaping (Sentiment) -> (),
