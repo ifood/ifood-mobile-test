@@ -17,13 +17,13 @@ protocol TweetSentimentAnalysisBusinessLogic {
 }
 
 protocol TweetSentimentAnalysisDataStore {
-    //var name: String { get set }
+    var tweet: String { get set }
 }
 
 class TweetSentimentAnalysisInteractor: TweetSentimentAnalysisBusinessLogic, TweetSentimentAnalysisDataStore {
     var presenter: TweetSentimentAnalysisPresentationLogic?
     var worker: TweetSentimentAnalysisWorker?
-    //var name: String = ""
+    var tweet: String = ""
   
     init() {
         worker = TweetSentimentAnalysisWorker(service: SentimentAnalysisRestApi())

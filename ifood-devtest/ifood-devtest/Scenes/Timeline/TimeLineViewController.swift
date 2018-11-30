@@ -117,21 +117,27 @@ class TimeLineViewController: TWTRTimelineViewController, TimeLineDisplayLogic {
 extension TimeLineViewController: TWTRTweetViewDelegate {
     
     func tweetView(tweetView: TWTRTweetView, didSelectTweet tweet: TWTRTweet) {
+        router?.routeToSentimentAnalysis()
     }
     
     func tweetView(_ tweetView: TWTRTweetView, didTap url: URL) {
+        router?.routeToSentimentAnalysis()
     }
     
     func tweetView(_ tweetView: TWTRTweetView, didTap tweet: TWTRTweet) {
+        router?.routeToSentimentAnalysis()
     }
     
     func tweetView(_ tweetView: TWTRTweetView, didTap image: UIImage, with imageURL: URL) {
+        router?.routeToSentimentAnalysis()
     }
     
     func tweetView(_ tweetView: TWTRTweetView, didTapVideoWith videoURL: URL) {
+        router?.routeToSentimentAnalysis()
     }
     
     func tweetView(_ tweetView: TWTRTweetView, didTapProfileImageFor user: TWTRUser) {
+        router?.routeToSentimentAnalysis()
     }
     
 }

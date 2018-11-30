@@ -13,7 +13,7 @@
 import UIKit
 
 @objc protocol TimeLineRoutingLogic {
-    //func routeToSomewhere(segue: UIStoryboardSegue?)
+    func routeToSentimentAnalysis()
 }
 
 protocol TimeLineDataPassing {
@@ -26,29 +26,22 @@ class TimeLineRouter: NSObject, TimeLineRoutingLogic, TimeLineDataPassing {
   
     // MARK: Routing
   
-//  func routeToSomewhere(segue: UIStoryboardSegue?) {
-//        if let segue = segue {
-//            let destinationVC = segue.destination as! SomewhereViewController
-//            var destinationDS = destinationVC.router!.dataStore!
-//            passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-//        } else {
-//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//            let destinationVC = storyboard.instantiateViewController(withIdentifier: "SomewhereViewController") as! SomewhereViewController
-//            var destinationDS = destinationVC.router!.dataStore!
-//            passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-//            navigateToSomewhere(source: viewController!, destination: destinationVC)
-//        }
-//    }
+    func routeToSentimentAnalysis() {
+        let destinationVC = TweetSentimentAnalysisViewController()
+        var destinationDS = destinationVC.router!.dataStore!
+        passDataToSentimentAnalysis(source: dataStore!, destination: &destinationDS)
+        navigateToSentimentAnalysis(source: viewController!, destination: destinationVC)
+    }
 
-  // MARK: Navigation
+    // MARK: Navigation
   
-//    func navigateToSomewhere(source: TimeLineViewController, destination: SomewhereViewController) {
-//        source.show(destination, sender: nil)
-//    }
+    func navigateToSentimentAnalysis(source: TimeLineViewController, destination: TweetSentimentAnalysisViewController) {
+        source.show(destination, sender: nil)
+    }
   
-  // MARK: Passing data
+    // MARK: Passing data
   
-//    func passDataToSomewhere(source: TimeLineDataStore, destination: inout SomewhereDataStore) {
-//        destination.name = source.name
-//    }
+    func passDataToSentimentAnalysis(source: TimeLineDataStore, destination: inout TweetSentimentAnalysisDataStore) {
+        destination.tweet = source.tweet
+    }
 }

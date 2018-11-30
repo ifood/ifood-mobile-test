@@ -18,12 +18,13 @@ protocol TimeLineBusinessLogic {
 }
 
 protocol TimeLineDataStore {
-    //var name: String { get set }
+    var tweet: String { get set }
 }
 
 class TimeLineInteractor: TimeLineBusinessLogic, TimeLineDataStore {
     var presenter: TimeLinePresentationLogic?
     var worker: TimeLineWorker?
+    var tweet: String = ""
     
     init() {
         worker = TimeLineWorker()
