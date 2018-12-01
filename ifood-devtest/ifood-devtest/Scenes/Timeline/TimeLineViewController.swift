@@ -73,7 +73,11 @@ class TimeLineViewController: TWTRTimelineViewController, TimeLineDisplayLogic {
     }
     
     private func setupUI() {
+        title = "Twitter Sentiment Analysis"
         navigationController?.navigationBar.barTintColor = .twitterLogoBlue
+        navigationController?.navigationBar.tintColor = .white
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
         definesPresentationContext = true

@@ -78,10 +78,8 @@ class TweetSentimentAnalysisViewController: UIViewController, TweetSentimentAnal
   
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         view.backgroundColor = .white
         view.addSubview(tweetAnalyzedTextView)
-        
         setupLayout()
         requestSentimentAnalysis()
     }
