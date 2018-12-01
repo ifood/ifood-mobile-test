@@ -65,13 +65,14 @@ class TimelineViewController: TWTRTimelineViewController, TimelineDisplayLogic {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tweetViewDelegate = self
         fetchTimeline()
     }
 
     // MARK: Fetch Data
     
     func fetchTimeline() {
-        let request = Timeline.FetchTimeline.Request(screenName: "twitterdev")
+        let request = Timeline.FetchTimeline.Request(screenName: "o_antagonista")
         interactor?.fetchTwitterUserTimeline(request: request)
     }
 
@@ -84,4 +85,14 @@ class TimelineViewController: TWTRTimelineViewController, TimelineDisplayLogic {
     func displayError(viewModel: Timeline.Error.ViewModel) {
         
     }
+}
+
+extension TimelineViewController: TWTRTweetViewDelegate {
+
+    func tweetView(tweetView: TWTRTweetView, didSelectTweet tweet: TWTRTweet) {
+    }
+    
+    func tweetView(_ tweetView: TWTRTweetView, didTap tweet: TWTRTweet) {
+    }
+    
 }
