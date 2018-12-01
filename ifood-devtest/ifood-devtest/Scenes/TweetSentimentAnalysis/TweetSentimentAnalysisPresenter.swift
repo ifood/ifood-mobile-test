@@ -42,8 +42,7 @@ protocol TweetSentimentAnalysisPresentationLogic {
 
 class TweetSentimentAnalysisPresenter: TweetSentimentAnalysisPresentationLogic {
     weak var viewController: TweetSentimentAnalysisDisplayLogic?
-  
-    // MARK: Presentation
+
     private func analyzedSentiment(score: Double) -> (emoji: String, text: String, color: UIColor){
         if score < 0.0{
             return SentimentAnalyzed.sad.typeOftweet
@@ -53,6 +52,8 @@ class TweetSentimentAnalysisPresenter: TweetSentimentAnalysisPresentationLogic {
             return SentimentAnalyzed.neutral.typeOftweet
         }
     }
+
+    // MARK: Presentation
 
     func presentAnalyzedSentiment(response: TweetSentimentAnalysis.SentimentAnalyzed.Response) {
         
@@ -75,7 +76,7 @@ class TweetSentimentAnalysisPresenter: TweetSentimentAnalysisPresentationLogic {
         // emoji
         let formattedText = NSMutableAttributedString(string: analyzedSentiment(score: score).emoji,
                                                       attributes: emojiAttributes)
-       // result of analysis
+       // result of text analysis
         formattedText.append(NSMutableAttributedString(string: "\n\n\n\(analyzedSentiment(score: score).text)",
                                                        attributes: typeOfTweetAttributes))
         
