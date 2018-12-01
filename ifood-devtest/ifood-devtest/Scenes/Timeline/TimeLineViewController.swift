@@ -72,7 +72,7 @@ class TimeLineViewController: TWTRTimelineViewController, TimeLineDisplayLogic {
     }
     
     private func setupUI() {
-        navigationController?.navigationBar.barTintColor = UIColor(red: 0.0, green: 172.0/255.0, blue: 237.0/255.0, alpha: 1)
+        navigationController?.navigationBar.barTintColor = .twitterLogoBlue
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
         definesPresentationContext = true
@@ -117,7 +117,6 @@ class TimeLineViewController: TWTRTimelineViewController, TimeLineDisplayLogic {
         router?.routeToSentimentAnalysis()
     }
 }
-
 
 extension TimeLineViewController: TWTRTweetViewDelegate {
     
