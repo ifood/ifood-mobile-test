@@ -14,6 +14,7 @@ import UIKit
 
 protocol TweetSentimentAnalysisDisplayLogic: class {
     func displayAnalyzedSentiment(viewModel: TweetSentimentAnalysis.SentimentAnalyzed.ViewModel)
+    func displaySentimentAnalysisError(viewModel: TweetSentimentAnalysis.Error.ViewModel)
 }
 
 class TweetSentimentAnalysisViewController: UIViewController, TweetSentimentAnalysisDisplayLogic {
@@ -95,5 +96,11 @@ class TweetSentimentAnalysisViewController: UIViewController, TweetSentimentAnal
     func displayAnalyzedSentiment(viewModel: TweetSentimentAnalysis.SentimentAnalyzed.ViewModel) {
         tweetAnalyzedTextView.attributedText = viewModel.sentimentAnalyzed.0
         view.backgroundColor = viewModel.sentimentAnalyzed.1
+    }
+    
+    func displaySentimentAnalysisError(viewModel: TweetSentimentAnalysis.Error.ViewModel) {
+        let alert = UIAlertController(title: "Warning", message: "Failure on analyze tweet sentiment", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
 }

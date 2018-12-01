@@ -29,5 +29,15 @@ enum TweetSentimentAnalysis {
             let sentimentAnalyzed: (formattedText: NSMutableAttributedString, backgroundColor: UIColor)
         }
     }
+    
+    enum Error {
+        struct Response {
+            let message: String
+        }
+        
+        struct ViewModel {
+            let message: String
+        }
+    }
 
 }

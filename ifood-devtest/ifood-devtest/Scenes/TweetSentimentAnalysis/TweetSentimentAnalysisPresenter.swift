@@ -37,7 +37,7 @@ extension SentimentAnalyzed {
 
 protocol TweetSentimentAnalysisPresentationLogic {
     func presentAnalyzedSentiment(response: TweetSentimentAnalysis.SentimentAnalyzed.Response)
-    func presentAnalyzedSentimentError()
+    func presentAnalyzedSentimentError(response: TweetSentimentAnalysis.Error.Response)
 }
 
 class TweetSentimentAnalysisPresenter: TweetSentimentAnalysisPresentationLogic {
@@ -90,8 +90,9 @@ class TweetSentimentAnalysisPresenter: TweetSentimentAnalysisPresentationLogic {
         viewController?.displayAnalyzedSentiment(viewModel: viewModel)
     }
     
-    func presentAnalyzedSentimentError() {
-        
+    func presentAnalyzedSentimentError(response: TweetSentimentAnalysis.Error.Response) {
+        let viewModel = TweetSentimentAnalysis.Error.ViewModel(message: response.message)
+        viewController?.displaySentimentAnalysisError(viewModel: viewModel)
     }
 }
 

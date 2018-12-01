@@ -16,6 +16,7 @@ import TwitterKit
 protocol TimeLineDisplayLogic: class {
     func displayTweets(viewModel: TimeLine.Tweets.ViewModel)
     func displayTweetAnalysis()
+    func displayFetchTweetsErrorMessage()
 }
 
 class TimeLineViewController: TWTRTimelineViewController, TimeLineDisplayLogic {
@@ -120,6 +121,12 @@ class TimeLineViewController: TWTRTimelineViewController, TimeLineDisplayLogic {
     
     func displayTweetAnalysis() {
         router?.routeToSentimentAnalysis()
+    }
+    
+    func displayFetchTweetsErrorMessage() {
+        let alert = UIAlertController(title: "Warning", message: "Failure on fetching user time line", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
 }
 

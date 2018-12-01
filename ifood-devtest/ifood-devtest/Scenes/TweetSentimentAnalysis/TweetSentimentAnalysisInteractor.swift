@@ -44,7 +44,8 @@ class TweetSentimentAnalysisInteractor: TweetSentimentAnalysisBusinessLogic, Twe
         }
         
         let failure = { [weak self] (error: Error) in
-            
+            let response = TweetSentimentAnalysis.Error.Response(message: error.localizedDescription)
+            self?.presenter?.presentAnalyzedSentimentError(response: response)
         }
         
         worker?.requestSentimentAnalysisTweet(request: request, success: success, failure: failure)

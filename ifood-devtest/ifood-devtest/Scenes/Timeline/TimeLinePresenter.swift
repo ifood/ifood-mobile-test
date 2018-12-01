@@ -29,7 +29,7 @@ class TimeLinePresenter: TimeLinePresentationLogic {
     }
     
     func presentFetchTweetsFailure() {
-        
+        viewController?.displayFetchTweetsErrorMessage()
     }
     
     func presentTweetSentimentAnalysis() {
