@@ -65,17 +65,36 @@ class TimelineViewController: TWTRTimelineViewController, TimelineDisplayLogic {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tweetViewDelegate = self
-        fetchTimeline()
+        setupLayout()
+        fetchTimeline(username: "twitterdev")
     }
 
+    // MARK: Layout
+    
+    func setupLayout() {
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationItem.searchController = self.createSearchBar()
+        self.navigationItem.hidesSearchBarWhenScrolling = false
+        self.tweetViewDelegate = self
+    }
+    
     // MARK: Fetch Data
     
-    func fetchTimeline() {
-        let request = Timeline.FetchTimeline.Request(screenName: "o_antagonista")
+    func fetchTimeline(username: String) {
+        let request = Timeline.FetchTimeline.Request(screenName: username)
         interactor?.fetchTwitterUserTimeline(request: request)
     }
 
+    // MARK: Search Bar
+    
+    func createSearchBar() -> UISearchController {
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.delegate = self
+        searchController.searchBar.placeholder = "Enter username"
+        return searchController
+    }
+    
     // MARK: Display
     
     func displayTwitterUserTimeline(viewModel: Timeline.FetchTimeline.ViewModel) {
@@ -95,4 +114,14 @@ extension TimelineViewController: TWTRTweetViewDelegate {
     func tweetView(_ tweetView: TWTRTweetView, didTap tweet: TWTRTweet) {
     }
     
+}
+
+extension TimelineViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        if let keyword = searchBar.text {
+            searchBar.text = nil
+            searchBar.resignFirstResponder()
+            self.fetchTimeline(username: keyword.lowercased())
+        }
+    }
 }
