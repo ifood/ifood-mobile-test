@@ -22,6 +22,7 @@ enum TweetSentimentAnalysis {
         
         struct Response {
             let sentimentAnalysis: Sentiment
+            let tweet: String
         }
         
         struct ViewModel {

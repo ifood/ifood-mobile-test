@@ -38,7 +38,8 @@ class TweetSentimentAnalysisInteractor: TweetSentimentAnalysisBusinessLogic, Twe
     func requestSentimentAnalysis(request: TweetSentimentAnalysis.SentimentAnalyzed.Request) {
         
         let success = { [weak self] (sentiment: Sentiment) in
-            let response = TweetSentimentAnalysis.SentimentAnalyzed.Response(sentimentAnalysis: sentiment)
+            let response = TweetSentimentAnalysis.SentimentAnalyzed.Response(sentimentAnalysis: sentiment,
+                                                                             tweet: (self?.tweet)!)
             self?.presenter?.presentAnalyzedSentiment(response: response)
         }
         

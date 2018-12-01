@@ -34,15 +34,15 @@ class TweetSentimentAnalysisPresenter: TweetSentimentAnalysisPresentationLogic {
         
         if score > 0.0 {
             emojiFace = "😃"
-            typeOfTweet = "This is happy tweet"
+            typeOfTweet = "This is a happy tweet"
             viewBackGroundColor = .yellow
         } else if score < 0.0 {
             emojiFace = "😔"
-            typeOfTweet = "This is sad tweet"
+            typeOfTweet = "This is a sad tweet"
             viewBackGroundColor = .twitterVerifiedBlue
         } else {
             emojiFace = "😐"
-            typeOfTweet = "This is neutral tweet"
+            typeOfTweet = "This is a neutral tweet"
             viewBackGroundColor = .gray
         }
 
@@ -54,9 +54,14 @@ class TweetSentimentAnalysisPresenter: TweetSentimentAnalysisPresentationLogic {
         
         let typeOfTweetAttributes = [NSAttributedStringKey.font : UIFont.boldSystemFont(ofSize: 20),
                                      NSAttributedStringKey.paragraphStyle: textAlignment]
+        
+        let tweetAttributes = [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 12),
+                                     NSAttributedStringKey.paragraphStyle: textAlignment]
+
 
         let formattedText = NSMutableAttributedString(string: emojiFace, attributes: emojiAttributes)
         formattedText.append(NSMutableAttributedString(string: "\n\n\n\(typeOfTweet)", attributes: typeOfTweetAttributes))
+        formattedText.append(NSMutableAttributedString(string: "\n\n\(response.tweet)", attributes: tweetAttributes))
         
         let viewModel = TweetSentimentAnalysis.SentimentAnalyzed.ViewModel(sentimentAnalyzed: formattedText, viewBackgroundColor: viewBackGroundColor)
         
