@@ -8,11 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		252D0ACC21B1EF3A0069B37D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252D0ACB21B1EF3A0069B37D /* AppDelegate.swift */; };
-		252D0ACE21B1EF3A0069B37D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252D0ACD21B1EF3A0069B37D /* ViewController.swift */; };
 		252D0AD121B1EF3A0069B37D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 252D0ACF21B1EF3A0069B37D /* Main.storyboard */; };
 		252D0AD321B1EF3C0069B37D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 252D0AD221B1EF3C0069B37D /* Assets.xcassets */; };
 		252D0AD621B1EF3C0069B37D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 252D0AD421B1EF3C0069B37D /* LaunchScreen.storyboard */; };
 		252D0AE121B1EF3C0069B37D /* ifood_mobile_testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252D0AE021B1EF3C0069B37D /* ifood_mobile_testTests.swift */; };
+		252D29EA21B2B23D00AD0F3F /* TimelinePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252D29E421B2B23D00AD0F3F /* TimelinePresenter.swift */; };
+		252D29EB21B2B23D00AD0F3F /* TimelineWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252D29E521B2B23D00AD0F3F /* TimelineWorker.swift */; };
+		252D29EC21B2B23D00AD0F3F /* TimelineRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252D29E621B2B23D00AD0F3F /* TimelineRouter.swift */; };
+		252D29ED21B2B23D00AD0F3F /* TimelineModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252D29E721B2B23D00AD0F3F /* TimelineModels.swift */; };
+		252D29EE21B2B23D00AD0F3F /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252D29E821B2B23D00AD0F3F /* TimelineViewController.swift */; };
+		252D29EF21B2B23D00AD0F3F /* TimelineInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252D29E921B2B23D00AD0F3F /* TimelineInteractor.swift */; };
+		252D29F121B2BD0B00AD0F3F /* TwitterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252D29F021B2BD0B00AD0F3F /* TwitterService.swift */; };
 		25DF94D421B1FB0F00852ED2 /* RestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DF94D321B1FB0F00852ED2 /* RestService.swift */; };
 		25DF94D621B1FB5000852ED2 /* GoogleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DF94D521B1FB5000852ED2 /* GoogleService.swift */; };
 		25DF94D821B1FC1700852ED2 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DF94D721B1FC1700852ED2 /* NetworkService.swift */; };
@@ -38,7 +44,6 @@
 		1B744D7B6855B59C5ADABE6C /* Pods-ifood-mobile-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ifood-mobile-test.release.xcconfig"; path = "Pods/Target Support Files/Pods-ifood-mobile-test/Pods-ifood-mobile-test.release.xcconfig"; sourceTree = "<group>"; };
 		252D0AC821B1EF3A0069B37D /* ifood-mobile-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ifood-mobile-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		252D0ACB21B1EF3A0069B37D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		252D0ACD21B1EF3A0069B37D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		252D0AD021B1EF3A0069B37D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		252D0AD221B1EF3C0069B37D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		252D0AD521B1EF3C0069B37D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -46,6 +51,13 @@
 		252D0ADC21B1EF3C0069B37D /* ifood-mobile-testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ifood-mobile-testTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		252D0AE021B1EF3C0069B37D /* ifood_mobile_testTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ifood_mobile_testTests.swift; sourceTree = "<group>"; };
 		252D0AE221B1EF3C0069B37D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		252D29E421B2B23D00AD0F3F /* TimelinePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelinePresenter.swift; sourceTree = "<group>"; };
+		252D29E521B2B23D00AD0F3F /* TimelineWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineWorker.swift; sourceTree = "<group>"; };
+		252D29E621B2B23D00AD0F3F /* TimelineRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineRouter.swift; sourceTree = "<group>"; };
+		252D29E721B2B23D00AD0F3F /* TimelineModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineModels.swift; sourceTree = "<group>"; };
+		252D29E821B2B23D00AD0F3F /* TimelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
+		252D29E921B2B23D00AD0F3F /* TimelineInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineInteractor.swift; sourceTree = "<group>"; };
+		252D29F021B2BD0B00AD0F3F /* TwitterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterService.swift; sourceTree = "<group>"; };
 		25DF94CC21B1F23F00852ED2 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		25DF94CD21B1F25000852ED2 /* Staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
 		25DF94CE21B1F25D00852ED2 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
@@ -106,12 +118,12 @@
 		252D0ACA21B1EF3A0069B37D /* ifood-mobile-test */ = {
 			isa = PBXGroup;
 			children = (
+				252D29E221B2B21000AD0F3F /* Scenes */,
 				25DF94D221B1FAD000852ED2 /* Services */,
 				25DF94DB21B1FD1000852ED2 /* Common */,
 				25DF94DE21B1FD4D00852ED2 /* Configuration */,
 				25DF94CA21B1F1DB00852ED2 /* SupportingFiles */,
 				252D0ACB21B1EF3A0069B37D /* AppDelegate.swift */,
-				252D0ACD21B1EF3A0069B37D /* ViewController.swift */,
 				252D0ACF21B1EF3A0069B37D /* Main.storyboard */,
 				252D0AD221B1EF3C0069B37D /* Assets.xcassets */,
 				252D0AD421B1EF3C0069B37D /* LaunchScreen.storyboard */,
@@ -127,6 +139,27 @@
 				252D0AE221B1EF3C0069B37D /* Info.plist */,
 			);
 			path = "ifood-mobile-testTests";
+			sourceTree = "<group>";
+		};
+		252D29E221B2B21000AD0F3F /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				252D29E321B2B21D00AD0F3F /* Timeline */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		252D29E321B2B21D00AD0F3F /* Timeline */ = {
+			isa = PBXGroup;
+			children = (
+				252D29E421B2B23D00AD0F3F /* TimelinePresenter.swift */,
+				252D29E521B2B23D00AD0F3F /* TimelineWorker.swift */,
+				252D29E621B2B23D00AD0F3F /* TimelineRouter.swift */,
+				252D29E721B2B23D00AD0F3F /* TimelineModels.swift */,
+				252D29E821B2B23D00AD0F3F /* TimelineViewController.swift */,
+				252D29E921B2B23D00AD0F3F /* TimelineInteractor.swift */,
+			);
+			path = Timeline;
 			sourceTree = "<group>";
 		};
 		25DF94CA21B1F1DB00852ED2 /* SupportingFiles */ = {
@@ -154,6 +187,7 @@
 				25DF94D521B1FB5000852ED2 /* GoogleService.swift */,
 				25DF94D721B1FC1700852ED2 /* NetworkService.swift */,
 				25DF94D921B1FCB200852ED2 /* AlamofireWrapper.swift */,
+				252D29F021B2BD0B00AD0F3F /* TwitterService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -208,6 +242,7 @@
 				252D0AC521B1EF3A0069B37D /* Frameworks */,
 				252D0AC621B1EF3A0069B37D /* Resources */,
 				91F9AE996DC354F20860E68B /* [CP] Embed Pods Frameworks */,
+				56A3E7EA0FFCA3250771E019 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -314,6 +349,26 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		56A3E7EA0FFCA3250771E019 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ifood-mobile-test/Pods-ifood-mobile-test-resources.sh",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterShareExtensionUIResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterShareExtensionUIResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ifood-mobile-test/Pods-ifood-mobile-test-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5F98B0C63608F83FB3AEA79D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -340,11 +395,15 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ifood-mobile-test/Pods-ifood-mobile-test-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
 				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,12 +419,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				25DF94D821B1FC1700852ED2 /* NetworkService.swift in Sources */,
+				252D29F121B2BD0B00AD0F3F /* TwitterService.swift in Sources */,
+				252D29EC21B2B23D00AD0F3F /* TimelineRouter.swift in Sources */,
 				25DF94D621B1FB5000852ED2 /* GoogleService.swift in Sources */,
 				25DF94DA21B1FCB200852ED2 /* AlamofireWrapper.swift in Sources */,
-				252D0ACE21B1EF3A0069B37D /* ViewController.swift in Sources */,
+				252D29EF21B2B23D00AD0F3F /* TimelineInteractor.swift in Sources */,
 				25DF94DD21B1FD2900852ED2 /* LottieView.swift in Sources */,
 				252D0ACC21B1EF3A0069B37D /* AppDelegate.swift in Sources */,
+				252D29EA21B2B23D00AD0F3F /* TimelinePresenter.swift in Sources */,
 				25DF94E021B1FD5F00852ED2 /* Configuration.swift in Sources */,
+				252D29EE21B2B23D00AD0F3F /* TimelineViewController.swift in Sources */,
+				252D29EB21B2B23D00AD0F3F /* TimelineWorker.swift in Sources */,
+				252D29ED21B2B23D00AD0F3F /* TimelineModels.swift in Sources */,
 				25DF94D421B1FB0F00852ED2 /* RestService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

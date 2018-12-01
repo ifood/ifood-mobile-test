@@ -8,6 +8,7 @@ target 'ifood-mobile-test' do
   # Pods for ifood-mobile-test
   pod 'Alamofire'
   pod 'lottie-ios'
+  pod 'TwitterKit'
 
   target 'ifood-mobile-testTests' do
     inherit! :search_paths

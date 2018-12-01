@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol DataService {
+protocol GoogleService {
     func requestSentimentAnalysis(text: String,
                                   completion: @escaping (String?, NSError?) -> ())
 }

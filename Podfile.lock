@@ -1,20 +1,28 @@
 PODS:
   - Alamofire (4.7.2)
   - lottie-ios (2.5.0)
+  - TwitterCore (3.1.0)
+  - TwitterKit (3.3.0):
+    - TwitterCore (>= 3.1.0)
 
 DEPENDENCIES:
   - Alamofire
   - lottie-ios
+  - TwitterKit
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - lottie-ios
+    - TwitterCore
+    - TwitterKit
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   lottie-ios: d699fdee68d7b63e721d949388b015fef1aaa4ac
+  TwitterCore: 644d59e75abccb26cf0a9050d2c4dea0e5412241
+  TwitterKit: a2e60ddcedbf54091eac6f27685ca7a87681e1d7
 
-PODFILE CHECKSUM: 6d06a1a48827f7d51305fc5108f39daf66c15ae3
+PODFILE CHECKSUM: 35c175d430c20780ac2e7f0ca23e444d3edb2fa0
 
 COCOAPODS: 1.5.0

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class NetworkService: DataService {
+class NetworkService: GoogleService {
     
     private var service: RestService!
     
