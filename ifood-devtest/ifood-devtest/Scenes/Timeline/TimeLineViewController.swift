@@ -21,6 +21,7 @@ protocol TimeLineDisplayLogic: class {
 class TimeLineViewController: TWTRTimelineViewController, TimeLineDisplayLogic {
     var interactor: TimeLineBusinessLogic?
     var router: (NSObjectProtocol & TimeLineRoutingLogic & TimeLineDataPassing)?
+    var lastTimelineSearched = ""
     
     private lazy var searchController: UISearchController = {
         let searchController = UISearchController(searchResultsController: nil)
@@ -161,7 +162,17 @@ extension TimeLineViewController: TWTRTimelineDelegate {
 extension TimeLineViewController : UISearchResultsUpdating {
     
     func updateSearchResults(for searchController: UISearchController) {
+        guard let text = searchController.searchBar.text, text.count > 0, text != lastTimelineSearched else {
+            return
+        }
         
+        lastTimelineSearched = ""
+        
+        delay(seconds: 0.5) {
+            let request = TimeLine.Tweets.Request(user: text)
+            self.interactor?.fetchUserTweets(request: request)
+        }
+
     }
     
 }

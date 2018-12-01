@@ -24,6 +24,7 @@
 		58E02BFC21B0C48800669581 /* DocumentSentiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E02BFB21B0C48800669581 /* DocumentSentiment.swift */; };
 		58E02BFE21B147FA00669581 /* SentimentAnalysisRestApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E02BFD21B147FA00669581 /* SentimentAnalysisRestApi.swift */; };
 		58E02C0121B2F38800669581 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E02C0021B2F38800669581 /* UIColor.swift */; };
+		58E02C0521B32DD700669581 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E02C0421B32DD700669581 /* Utils.swift */; };
 		58F33FD821B0565F009200C0 /* TweetSentimentAnalysisPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F33FD221B0565F009200C0 /* TweetSentimentAnalysisPresenter.swift */; };
 		58F33FD921B0565F009200C0 /* TweetSentimentAnalysisWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F33FD321B0565F009200C0 /* TweetSentimentAnalysisWorker.swift */; };
 		58F33FDA21B0565F009200C0 /* TweetSentimentAnalysisRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F33FD421B0565F009200C0 /* TweetSentimentAnalysisRouter.swift */; };
@@ -76,6 +77,7 @@
 		58E02BFB21B0C48800669581 /* DocumentSentiment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentSentiment.swift; sourceTree = "<group>"; };
 		58E02BFD21B147FA00669581 /* SentimentAnalysisRestApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentAnalysisRestApi.swift; sourceTree = "<group>"; };
 		58E02C0021B2F38800669581 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		58E02C0421B32DD700669581 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		58F33FD221B0565F009200C0 /* TweetSentimentAnalysisPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetSentimentAnalysisPresenter.swift; sourceTree = "<group>"; };
 		58F33FD321B0565F009200C0 /* TweetSentimentAnalysisWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetSentimentAnalysisWorker.swift; sourceTree = "<group>"; };
 		58F33FD421B0565F009200C0 /* TweetSentimentAnalysisRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetSentimentAnalysisRouter.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 		5851AFD821AC5608004031AE /* ifood-devtest */ = {
 			isa = PBXGroup;
 			children = (
+				58E02C0321B32DBD00669581 /* Common */,
 				58E02BFF21B1DC5900669581 /* Extensions */,
 				58E02BFA21B0C44D00669581 /* Models */,
 				58E02BF121B0986000669581 /* Services */,
@@ -249,6 +252,14 @@
 				58E02C0021B2F38800669581 /* UIColor.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		58E02C0321B32DBD00669581 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				58E02C0421B32DD700669581 /* Utils.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		58F33FD121B0560B009200C0 /* TweetSentimentAnalysis */ = {
@@ -531,6 +542,7 @@
 				58E02BF621B0991900669581 /* NetworkManager.swift in Sources */,
 				58A0CBA521AEE69100B19087 /* TimeLineModels.swift in Sources */,
 				58F33FDB21B0565F009200C0 /* TweetSentimentAnalysisModels.swift in Sources */,
+				58E02C0521B32DD700669581 /* Utils.swift in Sources */,
 				58A0CBA421AEE69100B19087 /* TimeLineRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
