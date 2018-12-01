@@ -8,10 +8,9 @@
 
 import Foundation
 import Moya
-import Keys
 
 public final class NetworkManager {
-    static let apiKey = IfoodDevtestKeys().googleCloudNLP
+    static let apiKey = KeyManager.shared.googleCloudNLP
     static let shared = NetworkManager()
     static let provider = MoyaProvider<SentimentAnalysisApi>(plugins: [NetworkLoggerPlugin(verbose: true)])
     

@@ -8,7 +8,6 @@
 
 import UIKit
 import TwitterKit
-import Keys
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,8 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        let  keys = IfoodDevtestKeys()
-        TWTRTwitter.sharedInstance().start(withConsumerKey: keys.twitterConsumerKey, consumerSecret: keys.twitterConsumerSecret)
+        TWTRTwitter.sharedInstance().start(withConsumerKey: KeyManager.shared.twitterConsumerKey,
+                                           consumerSecret: KeyManager.shared.twitterConsumerSecret)
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.makeKeyAndVisible()
