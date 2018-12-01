@@ -8,7 +8,7 @@
 
 import Foundation
 
-class NetworkService: GoogleService {
+class NetworkService: DataService {
     
     private var service: RestService!
     
@@ -17,7 +17,7 @@ class NetworkService: GoogleService {
     }
     
     func requestSentimentAnalysis(text: String,
-                                  completion: @escaping (String?, NSError?) -> ()) {
+                                  completion: @escaping (AnalyzedSentiment?, NSError?) -> ()) {
         
         let failure = { (error: NSError) in
             completion(nil, error)
@@ -30,22 +30,25 @@ class NetworkService: GoogleService {
             }
             
             do {
-//                let reviewsResponse = try JSONDecoder().decode(ReviewsResponse.self, from: data)
-//                completion(reviewsResponse.data, nil)
+                let analyzedSentiment = try JSONDecoder().decode(AnalyzedSentiment.self, from: data)
+                completion(analyzedSentiment, nil)
             }
             catch {
                 completion(nil, NSError(domain: "Error", code: 999, userInfo: ["message" : "Invalid payload format"]))
             }
         }
         
-        var parameters: [String: Any] = [
-            "field1": "",
-            "field2": ""
+        let parameters: [String: Any] = [
+            "document": [
+                "type": "PLAIN_TEXT",
+                "content": text
+            ],
+            "encodingType": "UTF8"
         ]
         
-        self.service.get("/analysis",
+        self.service.get("https://language.googleapis.com/v1/documents:analyzeSentiment?key=AIzaSyDnrjzs20I2q68ufSfcgsBKrMur8Iegbmo",
                          parameters: parameters,
-                         encoding: .queryString,
+                         encoding: .json,
                          headers: service.defaultHeader(),
                          success: success,
                          failure: failure)

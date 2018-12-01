@@ -112,6 +112,7 @@ extension TimelineViewController: TWTRTweetViewDelegate {
     }
     
     func tweetView(_ tweetView: TWTRTweetView, didTap tweet: TWTRTweet) {
+        self.router?.routeToResult(segue: nil)
     }
     
 }

@@ -12,49 +12,46 @@
 
 import UIKit
 
-@objc protocol TimelineRoutingLogic
-{
-  //func routeToSomewhere(segue: UIStoryboardSegue?)
+@objc protocol TimelineRoutingLogic {
+    func routeToResult(segue: UIStoryboardSegue?)
 }
 
-protocol TimelineDataPassing
-{
-  var dataStore: TimelineDataStore? { get }
+protocol TimelineDataPassing {
+    var dataStore: TimelineDataStore? { get }
 }
 
-class TimelineRouter: NSObject, TimelineRoutingLogic, TimelineDataPassing
-{
-  weak var viewController: TimelineViewController?
-  var dataStore: TimelineDataStore?
-  
-  // MARK: Routing
-  
-  //func routeToSomewhere(segue: UIStoryboardSegue?)
-  //{
-  //  if let segue = segue {
-  //    let destinationVC = segue.destination as! SomewhereViewController
-  //    var destinationDS = destinationVC.router!.dataStore!
-  //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-  //  } else {
-  //    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-  //    let destinationVC = storyboard.instantiateViewController(withIdentifier: "SomewhereViewController") as! SomewhereViewController
-  //    var destinationDS = destinationVC.router!.dataStore!
-  //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-  //    navigateToSomewhere(source: viewController!, destination: destinationVC)
-  //  }
-  //}
+class TimelineRouter: NSObject, TimelineRoutingLogic, TimelineDataPassing {
+    
+    weak var viewController: TimelineViewController?
+    var dataStore: TimelineDataStore?
 
-  // MARK: Navigation
-  
-  //func navigateToSomewhere(source: TimelineViewController, destination: SomewhereViewController)
-  //{
-  //  source.show(destination, sender: nil)
-  //}
-  
-  // MARK: Passing data
-  
-  //func passDataToSomewhere(source: TimelineDataStore, destination: inout SomewhereDataStore)
-  //{
-  //  destination.name = source.name
-  //}
+    // MARK: Routing
+
+    func routeToResult(segue: UIStoryboardSegue?) {
+        if let segue = segue {
+            let destinationVC = segue.destination as! ResultViewController
+            var destinationDS = destinationVC.router!.dataStore!
+            passDataToResult(source: dataStore!, destination: &destinationDS)
+        }
+        else {
+            let destinationVC = ResultViewController(nibName: nil, bundle: nil)
+            var destinationDS = destinationVC.router!.dataStore!
+            passDataToResult(source: dataStore!, destination: &destinationDS)
+            navigateToResult(source: viewController!, destination: destinationVC)
+        }
+    }
+
+    // MARK: Navigation
+
+    func navigateToResult(source: TimelineViewController, destination: ResultViewController) {
+        destination.modalTransitionStyle = .crossDissolve
+        destination.modalPresentationStyle = .overCurrentContext
+        source.present(destination, animated: true, completion: nil)
+    }
+
+    // MARK: Passing data
+
+    func passDataToResult(source: TimelineDataStore, destination: inout ResultDataStore) {
+        //destination.name = source.name
+    }
 }

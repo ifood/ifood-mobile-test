@@ -1,5 +1,5 @@
 //
-//  GoogleService.swift
+//  DataService.swift
 //  ifood-mobile-test
 //
 //  Created by Marcio Garcia on 30/11/18.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol GoogleService {
+protocol DataService {
     func requestSentimentAnalysis(text: String,
-                                  completion: @escaping (String?, NSError?) -> ())
+                                  completion: @escaping (AnalyzedSentiment?, NSError?) -> ())
 }

@@ -108,9 +108,8 @@ class AlamofireWrapper: SessionManager, RestService {
     
     func defaultHeader() -> HTTPHeaders? {
         
-        let encondedKey = Data(self.apiKey.utf8).base64EncodedString()
         let defaultHeader: HTTPHeaders = [
-            "Authorization"  : "Basic \(encondedKey)",
+            //"Authorization"  : "Basic \(encondedKey)",
             "Content-Type" : "application/json"
         ]
         
