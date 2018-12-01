@@ -99,8 +99,10 @@ class TweetSentimentAnalysisViewController: UIViewController, TweetSentimentAnal
     }
     
     func displaySentimentAnalysisError(viewModel: TweetSentimentAnalysis.Error.ViewModel) {
-        let alert = UIAlertController(title: "Warning", message: "Failure on analyze tweet sentiment", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        let alert = UIAlertController(title: NSLocalizedString("WARNING", comment: ""),
+                                      message: NSLocalizedString("ERROR_ANALYZE_TWEET_SENTIMENT", comment: ""),
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
     }
 }

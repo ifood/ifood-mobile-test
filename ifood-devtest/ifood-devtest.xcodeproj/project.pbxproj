@@ -26,6 +26,7 @@
 		58E02C0121B2F38800669581 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E02C0021B2F38800669581 /* UIColor.swift */; };
 		58E02C0521B32DD700669581 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E02C0421B32DD700669581 /* Utils.swift */; };
 		58E02C0721B331C400669581 /* KeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E02C0621B331C400669581 /* KeyManager.swift */; };
+		58E02C0C21B3474B00669581 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 58E02C0B21B3474B00669581 /* Localizable.strings */; };
 		58F33FD821B0565F009200C0 /* TweetSentimentAnalysisPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F33FD221B0565F009200C0 /* TweetSentimentAnalysisPresenter.swift */; };
 		58F33FD921B0565F009200C0 /* TweetSentimentAnalysisWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F33FD321B0565F009200C0 /* TweetSentimentAnalysisWorker.swift */; };
 		58F33FDA21B0565F009200C0 /* TweetSentimentAnalysisRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F33FD421B0565F009200C0 /* TweetSentimentAnalysisRouter.swift */; };
@@ -80,6 +81,7 @@
 		58E02C0021B2F38800669581 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		58E02C0421B32DD700669581 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		58E02C0621B331C400669581 /* KeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyManager.swift; sourceTree = "<group>"; };
+		58E02C0B21B3474B00669581 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		58F33FD221B0565F009200C0 /* TweetSentimentAnalysisPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetSentimentAnalysisPresenter.swift; sourceTree = "<group>"; };
 		58F33FD321B0565F009200C0 /* TweetSentimentAnalysisWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetSentimentAnalysisWorker.swift; sourceTree = "<group>"; };
 		58F33FD421B0565F009200C0 /* TweetSentimentAnalysisRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetSentimentAnalysisRouter.swift; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 				5851AFD921AC5608004031AE /* AppDelegate.swift */,
 				5851AFE021AC5609004031AE /* Assets.xcassets */,
 				5851AFE221AC5609004031AE /* LaunchScreen.storyboard */,
+				58E02C0B21B3474B00669581 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5851AFE421AC5609004031AE /* LaunchScreen.storyboard in Resources */,
+				58E02C0C21B3474B00669581 /* Localizable.strings in Resources */,
 				5851AFE121AC5609004031AE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

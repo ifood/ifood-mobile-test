@@ -24,11 +24,11 @@ extension SentimentAnalyzed {
     var typeOftweet: (emoji: String, text: String, color: UIColor) {
         switch self {
         case .sad:
-            return (emoji: "😔", text: "This is a sad tweet", color: .twitterVerifiedBlue)
+            return (emoji: "😔", text: NSLocalizedString("SAD_TWEET_MESSAGE", comment: ""), color: .twitterVerifiedBlue)
         case .happy:
-            return (emoji: "😃", text: "This is a happy tweet", color: .yellow)
+            return (emoji: "😃", text: NSLocalizedString("HAPPY_TWEET_MESSAGE", comment: ""), color: .yellow)
         case .neutral:
-            return (emoji: "😐", text: "This is a neutral tweet", color: .gray)
+            return (emoji: "😐", text: NSLocalizedString("NEUTRAL_TWEET_MESSAGE", comment: ""), color: .gray)
             
         }
     }

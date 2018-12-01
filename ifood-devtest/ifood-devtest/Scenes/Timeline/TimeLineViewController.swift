@@ -23,6 +23,7 @@ class TimeLineViewController: TWTRTimelineViewController, TimeLineDisplayLogic {
     var interactor: TimeLineBusinessLogic?
     var router: (NSObjectProtocol & TimeLineRoutingLogic & TimeLineDataPassing)?
     var lastTimelineSearched = ""
+    var defaultUser = "neiltyson"
     
     private lazy var searchController: UISearchController = {
         let searchController = UISearchController(searchResultsController: nil)
@@ -30,8 +31,8 @@ class TimeLineViewController: TWTRTimelineViewController, TimeLineDisplayLogic {
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.hidesNavigationBarDuringPresentation = false
-        searchController.searchBar.placeholder = "e.g. 'neiltyson'"
-        searchController.searchBar.text = "neiltyson"
+        searchController.searchBar.placeholder = NSLocalizedString("SEARCH_PLACE_HOLDER", comment: "")
+        searchController.searchBar.text = defaultUser
         
         if let textfield = searchController.searchBar.value(forKey: "searchField") as? UITextField {
             textfield.textColor = .blue
@@ -74,7 +75,7 @@ class TimeLineViewController: TWTRTimelineViewController, TimeLineDisplayLogic {
     }
     
     private func setupUI() {
-        title = "Twitter Sentiment Analysis"
+        title = NSLocalizedString("APPLICATION_TITLE", comment: "")
         navigationController?.navigationBar.barTintColor = .twitterLogoBlue
         navigationController?.navigationBar.tintColor = .white
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
@@ -109,7 +110,7 @@ class TimeLineViewController: TWTRTimelineViewController, TimeLineDisplayLogic {
     // MARK: Fetch data
     
     private func fetchTweets() {
-        let request = TimeLine.Tweets.Request(user: searchController.searchBar.text ?? "neiltyson")
+        let request = TimeLine.Tweets.Request(user: searchController.searchBar.text ?? defaultUser)
         interactor?.fetchUserTweets(request: request)
     }
     
@@ -124,8 +125,8 @@ class TimeLineViewController: TWTRTimelineViewController, TimeLineDisplayLogic {
     }
     
     func displayFetchTweetsErrorMessage() {
-        let alert = UIAlertController(title: "Warning", message: "Failure on fetching user time line", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        let alert = UIAlertController(title: NSLocalizedString("WARNING", comment: ""), message: NSLocalizedString("ERROR_MESSAGE_FETCH_TIME_LINE", comment: ""), preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
     }
 }

@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  ifood-devtest
+
+  Created by Rafael Zilião on 01/12/18.
+  Copyright © 2018 Rafael Zilião. All rights reserved.
+*/
+
+
+'APPLICATION_TITLE' = 'Twitter Sentiment Analysis';
+'SEARCH_PLACE_HOLDER' = 'Enter with Twitter username';
+'ERROR_MESSAGE_FETCH_TIME_LINE' = 'Failure on fetching user time line';
+'OK' = 'OK';
+'SAD_TWEET_MESSAGE' = 'This is a sad tweet';
+'HAPPY_TWEET_MESSAGE' = 'This is a happy tweet';
+'NEUTRAL_TWEET_MESSAGE' = 'This is a neutral tweet';
+'ERROR_ANALYZE_TWEET_SENTIMENT' = 'Failure on analyze tweet sentiment';
