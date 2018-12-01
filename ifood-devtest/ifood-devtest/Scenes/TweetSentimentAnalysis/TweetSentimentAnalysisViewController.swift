@@ -20,6 +20,15 @@ class TweetSentimentAnalysisViewController: UIViewController, TweetSentimentAnal
     var interactor: TweetSentimentAnalysisBusinessLogic?
     var router: (NSObjectProtocol & TweetSentimentAnalysisRoutingLogic & TweetSentimentAnalysisDataPassing)?
 
+    private let tweetAnalyzedTextView: UITextView = {
+        let textView = UITextView()
+        textView.isEditable = false
+        textView.isScrollEnabled = false
+        textView.translatesAutoresizingMaskIntoConstraints = false
+        textView.backgroundColor = .clear
+        return textView
+    }()
+    
     // MARK: Object lifecycle
   
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -46,6 +55,13 @@ class TweetSentimentAnalysisViewController: UIViewController, TweetSentimentAnal
         router.viewController = viewController
         router.dataStore = interactor
     }
+    
+    private func setupLayout() {
+        tweetAnalyzedTextView.topAnchor.constraint(equalTo: view.topAnchor, constant: 150).isActive = true
+        tweetAnalyzedTextView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24).isActive = true
+        tweetAnalyzedTextView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -24).isActive = true
+        tweetAnalyzedTextView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
+    }
   
     // MARK: Routing
   
@@ -62,6 +78,11 @@ class TweetSentimentAnalysisViewController: UIViewController, TweetSentimentAnal
   
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        view.backgroundColor = .white
+        view.addSubview(tweetAnalyzedTextView)
+        
+        setupLayout()
         requestSentimentAnalysis()
     }
     
@@ -74,6 +95,7 @@ class TweetSentimentAnalysisViewController: UIViewController, TweetSentimentAnal
     // MARK: Display methods
   
     func displayAnalyzedSentiment(viewModel: TweetSentimentAnalysis.SentimentAnalyzed.ViewModel) {
-        
+        tweetAnalyzedTextView.attributedText = viewModel.sentimentAnalyzed
+        view.backgroundColor = viewModel.viewBackgroundColor
     }
 }
