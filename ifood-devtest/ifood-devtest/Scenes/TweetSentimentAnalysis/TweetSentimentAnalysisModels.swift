@@ -26,8 +26,7 @@ enum TweetSentimentAnalysis {
         }
         
         struct ViewModel {
-            let sentimentAnalyzed: NSMutableAttributedString
-            let viewBackgroundColor: UIColor
+            let sentimentAnalyzed: (formattedText: NSMutableAttributedString, backgroundColor: UIColor)
         }
     }
 

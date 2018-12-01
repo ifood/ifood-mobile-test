@@ -95,7 +95,7 @@ class TweetSentimentAnalysisViewController: UIViewController, TweetSentimentAnal
     // MARK: Display methods
   
     func displayAnalyzedSentiment(viewModel: TweetSentimentAnalysis.SentimentAnalyzed.ViewModel) {
-        tweetAnalyzedTextView.attributedText = viewModel.sentimentAnalyzed
-        view.backgroundColor = viewModel.viewBackgroundColor
+        tweetAnalyzedTextView.attributedText = viewModel.sentimentAnalyzed.0
+        view.backgroundColor = viewModel.sentimentAnalyzed.1
     }
 }
