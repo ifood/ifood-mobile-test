@@ -70,11 +70,56 @@
                     <navigationItem key="navigationItem" id="3Dn-SO-L3M"/>
                     <connections>
                         <outlet property="tableView" destination="zgQ-Cd-Z2g" id="vXN-DE-FUh"/>
+                        <segue destination="tCi-hH-l9h" kind="show" identifier="goToSentiment" id="ulO-ui-15g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1i1-YX-HBF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2719.1999999999998" y="790.25487256371821"/>
+        </scene>
+        <!--Sentiment View Controller-->
+        <scene sceneID="BNL-2v-4dQ">
+            <objects>
+                <viewController storyboardIdentifier="SentimentViewController" id="tCi-hH-l9h" customClass="SentimentViewController" customModule="SentimentAnalysis" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oBi-aB-nTE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Vg3-rx-Dec">
+                                <rect key="frame" x="50" y="330" width="275" height="71"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="content" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fwp-tu-eC4">
+                                        <rect key="frame" x="108" y="0.0" width="59" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyI-09-fl8">
+                                        <rect key="frame" x="113.5" y="50.5" width="48" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TjS-ev-NQe" firstAttribute="trailing" secondItem="Vg3-rx-Dec" secondAttribute="trailing" constant="50" id="5dd-nI-zPp"/>
+                            <constraint firstItem="Vg3-rx-Dec" firstAttribute="centerX" secondItem="TjS-ev-NQe" secondAttribute="centerX" id="gBd-0e-yJX"/>
+                            <constraint firstItem="Vg3-rx-Dec" firstAttribute="leading" secondItem="TjS-ev-NQe" secondAttribute="leading" constant="50" id="r6r-0h-9GL"/>
+                            <constraint firstItem="Vg3-rx-Dec" firstAttribute="centerY" secondItem="TjS-ev-NQe" secondAttribute="centerY" id="x73-d3-SMv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TjS-ev-NQe"/>
+                    </view>
+                    <connections>
+                        <outlet property="content" destination="Fwp-tu-eC4" id="Uee-Ws-GnX"/>
+                        <outlet property="result" destination="qyI-09-fl8" id="tvx-1p-c4c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5h4-dV-ogX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3567" y="791"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ccE-pi-JX9">

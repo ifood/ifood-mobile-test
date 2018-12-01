@@ -144,6 +144,14 @@ extension SearchViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Item selected at IndexPath \(indexPath)")
+        
+        let sentimentVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SentimentViewController") as! SentimentViewController
+        
+        sentimentVC.tweet = tweets[indexPath.row]
+        
+        let navigationVC = UINavigationController(rootViewController: sentimentVC)
+        
+        present(navigationVC, animated: true, completion: nil)
     }
 }
 

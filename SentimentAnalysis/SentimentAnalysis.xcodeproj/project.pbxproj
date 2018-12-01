@@ -14,6 +14,7 @@
 		2B08B4CA21AD3A2B006F6593 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B08B4C821AD3A2B006F6593 /* LaunchScreen.storyboard */; };
 		2B08B4D521AD3A2B006F6593 /* SentimentAnalysisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B08B4D421AD3A2B006F6593 /* SentimentAnalysisTests.swift */; };
 		2B638AE321AE23F0000DCA37 /* TwitterAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B638AE221AE23F0000DCA37 /* TwitterAPI.swift */; };
+		2B7BAB5321B2EC76004AE351 /* SentimentAnalyzerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7BAB5221B2EC76004AE351 /* SentimentAnalyzerResponse.swift */; };
 		2BE5F9F221AE25CA007DAC2A /* TwitterAPIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5F9F121AE25CA007DAC2A /* TwitterAPIConfig.swift */; };
 		2BE5F9F721AE2A44007DAC2A /* String+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5F9F621AE2A44007DAC2A /* String+Base64.swift */; };
 		2BE5F9FF21AE37B3007DAC2A /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5F9FE21AE37B3007DAC2A /* AuthModel.swift */; };
@@ -25,6 +26,11 @@
 		2BE5FA1121AF5F73007DAC2A /* UIImageView+DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5FA1021AF5F73007DAC2A /* UIImageView+DownloadImage.swift */; };
 		2BE5FA1521AF61C5007DAC2A /* TweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5FA1321AF61C5007DAC2A /* TweetTableViewCell.swift */; };
 		2BE5FA1621AF61C5007DAC2A /* TweetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BE5FA1421AF61C5007DAC2A /* TweetTableViewCell.xib */; };
+		2BE5FA1A21B2DE6A007DAC2A /* SentimentAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5FA1921B2DE6A007DAC2A /* SentimentAPI.swift */; };
+		2BE5FA1C21B2DE81007DAC2A /* SentimentAPIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5FA1B21B2DE81007DAC2A /* SentimentAPIConfig.swift */; };
+		2BE5FA1E21B2E14C007DAC2A /* SentimentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5FA1D21B2E14C007DAC2A /* SentimentViewController.swift */; };
+		2BE5FA2021B2E1D4007DAC2A /* SentimentAuthPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5FA1F21B2E1D4007DAC2A /* SentimentAuthPlugin.swift */; };
+		2BE5FA2321B2E5A8007DAC2A /* Sentiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5FA2221B2E5A8007DAC2A /* Sentiment.swift */; };
 		AEFAE7761E869FFABA5C3B8B /* Pods_SentimentAnalysisTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3FC6F1DAF0460096BFD2BF0 /* Pods_SentimentAnalysisTests.framework */; };
 		E8607A255C0826B300B3E75D /* Pods_SentimentAnalysis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18717B4359BD8D5886601C01 /* Pods_SentimentAnalysis.framework */; };
 /* End PBXBuildFile section */
@@ -53,6 +59,7 @@
 		2B08B4D421AD3A2B006F6593 /* SentimentAnalysisTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentAnalysisTests.swift; sourceTree = "<group>"; };
 		2B08B4D621AD3A2B006F6593 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B638AE221AE23F0000DCA37 /* TwitterAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterAPI.swift; sourceTree = "<group>"; };
+		2B7BAB5221B2EC76004AE351 /* SentimentAnalyzerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentAnalyzerResponse.swift; sourceTree = "<group>"; };
 		2BE5F9F121AE25CA007DAC2A /* TwitterAPIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterAPIConfig.swift; sourceTree = "<group>"; };
 		2BE5F9F621AE2A44007DAC2A /* String+Base64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Base64.swift"; sourceTree = "<group>"; };
 		2BE5F9FE21AE37B3007DAC2A /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
@@ -64,6 +71,11 @@
 		2BE5FA1021AF5F73007DAC2A /* UIImageView+DownloadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+DownloadImage.swift"; sourceTree = "<group>"; };
 		2BE5FA1321AF61C5007DAC2A /* TweetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetTableViewCell.swift; sourceTree = "<group>"; };
 		2BE5FA1421AF61C5007DAC2A /* TweetTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TweetTableViewCell.xib; sourceTree = "<group>"; };
+		2BE5FA1921B2DE6A007DAC2A /* SentimentAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SentimentAPI.swift; path = SentimentAnalysis/Sentiment/SentimentAPI.swift; sourceTree = SOURCE_ROOT; };
+		2BE5FA1B21B2DE81007DAC2A /* SentimentAPIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentAPIConfig.swift; sourceTree = "<group>"; };
+		2BE5FA1D21B2E14C007DAC2A /* SentimentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentViewController.swift; sourceTree = "<group>"; };
+		2BE5FA1F21B2E1D4007DAC2A /* SentimentAuthPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentAuthPlugin.swift; sourceTree = "<group>"; };
+		2BE5FA2221B2E5A8007DAC2A /* Sentiment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sentiment.swift; sourceTree = "<group>"; };
 		5A16E418A1C8F242666218D5 /* Pods-SentimentAnalysis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SentimentAnalysis.release.xcconfig"; path = "Pods/Target Support Files/Pods-SentimentAnalysis/Pods-SentimentAnalysis.release.xcconfig"; sourceTree = "<group>"; };
 		72B1138003E9313C6D8D8F32 /* Pods-SentimentAnalysisTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SentimentAnalysisTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SentimentAnalysisTests/Pods-SentimentAnalysisTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B3FC6F1DAF0460096BFD2BF0 /* Pods_SentimentAnalysisTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SentimentAnalysisTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,11 +136,11 @@
 		2B08B4BE21AD3A28006F6593 /* SentimentAnalysis */ = {
 			isa = PBXGroup;
 			children = (
-				2BE5FA1721AF77ED007DAC2A /* Sentiment */,
 				2BE5F9FD21AE37A9007DAC2A /* Auth */,
 				2BE5F9FA21AE2B54007DAC2A /* Common */,
 				2BE5F9F521AE2A36007DAC2A /* Extensions */,
 				2BE5F9EF21AE25A1007DAC2A /* Search */,
+				2BE5FA1721AF77ED007DAC2A /* Sentiment */,
 				2B08B4BF21AD3A28006F6593 /* AppDelegate.swift */,
 				2B08B4C321AD3A28006F6593 /* Main.storyboard */,
 				2B08B4C621AD3A2B006F6593 /* Assets.xcassets */,
@@ -223,8 +235,30 @@
 		2BE5FA1721AF77ED007DAC2A /* Sentiment */ = {
 			isa = PBXGroup;
 			children = (
+				2BE5FA2121B2E59C007DAC2A /* Model */,
+				2BE5FA1821B2DE5A007DAC2A /* Networking */,
+				2BE5FA1D21B2E14C007DAC2A /* SentimentViewController.swift */,
 			);
 			path = Sentiment;
+			sourceTree = "<group>";
+		};
+		2BE5FA1821B2DE5A007DAC2A /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				2BE5FA1921B2DE6A007DAC2A /* SentimentAPI.swift */,
+				2BE5FA1B21B2DE81007DAC2A /* SentimentAPIConfig.swift */,
+				2BE5FA1F21B2E1D4007DAC2A /* SentimentAuthPlugin.swift */,
+				2B7BAB5221B2EC76004AE351 /* SentimentAnalyzerResponse.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		2BE5FA2121B2E59C007DAC2A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2BE5FA2221B2E5A8007DAC2A /* Sentiment.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		7918154B01D2D8754CCB8C7E /* Frameworks */ = {
@@ -410,14 +444,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BE5F9F221AE25CA007DAC2A /* TwitterAPIConfig.swift in Sources */,
+				2BE5FA1A21B2DE6A007DAC2A /* SentimentAPI.swift in Sources */,
 				2BE5FA0C21AF57C6007DAC2A /* DateFormatter+TwitterDateFormat.swift in Sources */,
 				2BE5F9F721AE2A44007DAC2A /* String+Base64.swift in Sources */,
+				2BE5FA2321B2E5A8007DAC2A /* Sentiment.swift in Sources */,
 				2B08B4C221AD3A28006F6593 /* SearchViewController.swift in Sources */,
+				2B7BAB5321B2EC76004AE351 /* SentimentAnalyzerResponse.swift in Sources */,
 				2BE5FA0A21AF57A2007DAC2A /* Tweet.swift in Sources */,
 				2BE5F9FF21AE37B3007DAC2A /* AuthModel.swift in Sources */,
 				2BE5FA0821AF5790007DAC2A /* User.swift in Sources */,
 				2B638AE321AE23F0000DCA37 /* TwitterAPI.swift in Sources */,
+				2BE5FA1E21B2E14C007DAC2A /* SentimentViewController.swift in Sources */,
 				2BE5FA0121AE3806007DAC2A /* AuthViewController.swift in Sources */,
+				2BE5FA1C21B2DE81007DAC2A /* SentimentAPIConfig.swift in Sources */,
+				2BE5FA2021B2E1D4007DAC2A /* SentimentAuthPlugin.swift in Sources */,
 				2B08B4C021AD3A28006F6593 /* AppDelegate.swift in Sources */,
 				2BE5FA1121AF5F73007DAC2A /* UIImageView+DownloadImage.swift in Sources */,
 				2BE5FA1521AF61C5007DAC2A /* TweetTableViewCell.swift in Sources */,
