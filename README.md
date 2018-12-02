@@ -26,6 +26,9 @@ An iOS app that analyse a tweet sentiment.
 3. Enter with keys following the [**.sec**](https://github.com/rafaelhziliao/ifood-mobile-test/blob/master/.sec) document order
 4. Run project 🚀
 
+`PS:` In case occurs that error: `CocoaPods could not find compatible versions for pod "Moya"` run `pod repo update
+` then run `pod install` again
+
 ## Architecture
 
 This App conforms to [**VIP** (Clean Swift Architecture)](https://hackernoon.com/introducing-clean-swift-architecture-vip-770a639ad7bf)
