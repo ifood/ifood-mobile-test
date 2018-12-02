@@ -24,7 +24,19 @@ class ResultPresenter: ResultPresentationLogic {
     // MARK: Do something
 
     func presentSentiment(response: Result.AnalyzeSentiment.Response) {
-        let viewModel = Result.AnalyzeSentiment.ViewModel(score: response.analyzedSentiment.documentSentiment.score)
+        
+        var tweetSentiment: Result.TweetSentiment!
+        
+        let score = response.analyzedSentiment.documentSentiment.score
+        if score > 0.0 {
+            tweetSentiment = Result.TweetSentiment(emojiFace: .happy, viewBackGroundColor: .yellow)
+        } else if score < 0.0 {
+            tweetSentiment = Result.TweetSentiment(emojiFace: .sad, viewBackGroundColor: .blue)
+        } else {
+            tweetSentiment = Result.TweetSentiment(emojiFace: .neutral, viewBackGroundColor: .gray)
+        }
+        
+        let viewModel = Result.AnalyzeSentiment.ViewModel(tweetSentiment: tweetSentiment)
         viewController?.displaySentiment(viewModel: viewModel)
     }
     

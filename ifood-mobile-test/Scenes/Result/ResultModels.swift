@@ -24,10 +24,21 @@ enum Result {
             var analyzedSentiment: AnalyzedSentiment
         }
         struct ViewModel {
-            var score: Double
+            var tweetSentiment: TweetSentiment
         }
     }
     
+    enum Face: String {
+        case sad = "😔"
+        case neutral = "😐"
+        case happy = "😃"
+    }
+    
+    struct TweetSentiment {
+        var emojiFace: Face
+        var viewBackGroundColor: UIColor
+    }
+
     enum Error {
         struct Request {
         }

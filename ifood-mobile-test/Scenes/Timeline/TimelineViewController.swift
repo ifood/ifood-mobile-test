@@ -129,6 +129,7 @@ extension TimelineViewController: UISearchBarDelegate {
         if let keyword = searchBar.text {
             searchBar.text = nil
             searchBar.resignFirstResponder()
+            self.navigationItem.searchController?.isActive = false
             self.fetchTimeline(username: keyword.lowercased())
         }
     }

@@ -90,14 +90,14 @@ class ResultViewController: UIViewController, ResultDisplayLogic {
         view.addGestureRecognizer(tap)
     }
     
-    func createContainerView() {
+    func createContainerView(withBackground color: UIColor) -> UIView {
         let containerView = UIView(frame: CGRect(origin: CGPoint.zero,
                                                  size: CGSize(width: view.bounds.width * 0.8, height: view.bounds.height * 0.3)))
         containerView.center = view.center
-        containerView.backgroundColor = .white
+        containerView.backgroundColor = color
         containerView.layer.cornerRadius = 5.0
         containerView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(containerView)
+        return containerView
     }
     
     // MARK: Actions
@@ -115,7 +115,15 @@ class ResultViewController: UIViewController, ResultDisplayLogic {
     // MARK: Display
 
     func displaySentiment(viewModel: Result.AnalyzeSentiment.ViewModel) {
-        createContainerView()
+        let containerView = createContainerView(withBackground: viewModel.tweetSentiment.viewBackGroundColor)
+        view.addSubview(containerView)
+        
+        let label = UILabel()
+        label.text = viewModel.tweetSentiment.emojiFace.rawValue
+        label.font = UIFont(name: "AppleColorEmoji", size: 70.0)
+        label.sizeToFit()
+        label.center = containerView.center
+        view.addSubview(label)
     }
     
     func displayError(viewModel: Result.Error.ViewModel) {
@@ -127,24 +135,3 @@ class ResultViewController: UIViewController, ResultDisplayLogic {
     }
 }
 
-//enum Face: String{
-//    case sad = "😔"
-//    case neutral = "😐"
-//    case happy = "😃"
-//}
-//
-//struct Sentiment {
-//    var emojiFace: Face
-//    var typeOfTweet: String
-//    var viewBackGroundColor: UIColor
-//}
-//
-//func handleScore(score: Double) -> Sentiment {
-//    if score > 0.0 {
-//        return Sentiment(emojiFace: .happy, typeOfTweet: "This is happy tweet", viewBackGroundColor: .yellow)
-//    } else if score < 0.0 {
-//        return Sentiment(emojiFace: .sad, typeOfTweet: "This is sad tweet", viewBackGroundColor: .blue)
-//    } else {
-//        return Sentiment(emojiFace: .neutral, typeOfTweet: "This is neutral tweet", viewBackGroundColor: .gray)
-//    }
-//}

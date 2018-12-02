@@ -220,17 +220,9 @@ class AlamofireWrapper: SessionManager, RestService {
                  success: @escaping (Data?) -> (),
                  failure: @escaping (NSError) -> () ) {
         
-        var updatedParemeters: Parameters? = parameters
-        if updatedParemeters == nil {
-            updatedParemeters = ["api_key": self.apiKey]
-        }
-        else {
-            updatedParemeters!["api_key"] = self.apiKey
-        }
-        
         self.request(self.serviceUrl(url),
                      method: method,
-                     parameters: updatedParemeters,
+                     parameters: parameters,
                      encoding: encoding,
                      headers: headers).validate().response(completionHandler: { (response) in
                         
