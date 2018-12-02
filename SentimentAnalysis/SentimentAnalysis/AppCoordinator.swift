@@ -8,35 +8,7 @@
 
 import Foundation
 import UIKit
-import Keychain
 import RevealingSplashView
-
-protocol AuthTokenStore {
-    func save(auth: Auth)
-    func retrieve() -> Auth?
-    
-    func hasToken() -> Bool
-}
-
-extension AuthTokenStore {
-    func hasToken() -> Bool {
-        return retrieve() != nil
-    }
-}
-
-struct KeychainTokenStore: AuthTokenStore {
-    func save(auth: Auth) {
-        Keychain.set(password: auth.token, account: "twitter", service: "api")
-    }
-    
-    func retrieve() -> Auth? {
-        guard let token = Keychain.get(account: "twitter", service: "api") else {
-            return nil
-        }
-        
-        return Auth(token: token)
-    }
-}
 
 protocol Coordinator {
     func start()
@@ -45,38 +17,35 @@ protocol Coordinator {
 class AppCoordinator: Coordinator {
     
     let window: UIWindow
-    let tokenStore: AuthTokenStore = KeychainTokenStore()
+    let tokenStore: AuthTokenStore
     let splashView = RevealingSplashView.makeSplash()
     
     let rootViewController = UIViewController()
     
     var authViewController: AuthViewController?
     
-    init(window: UIWindow) {
+    init(window: UIWindow, tokenStore: AuthTokenStore = KeychainTokenStore()) {
         self.window = window
         self.window.rootViewController = rootViewController
+        self.tokenStore = tokenStore
     }
     
     func start() {
         startSplash()
-//        if tokenStore.hasToken() {
-//
-//        } else {
-//
-//        }
+        if tokenStore.hasToken() {
+            startSearch(with: tokenStore.retrieve()!)
+        } else {
+            startAuth()
+        }
     }
     
     func startSplash() {
         window.addSubview(splashView)
         splashView.startAnimation()
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
-            self.startAuth()
-        }
     }
     
     func removeSplash() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
             self.splashView.heartAttack = true
         }
     }
@@ -113,6 +82,7 @@ extension AppCoordinator: AuthViewModelDelegate {
     }
     
     func authenticateDidComplete(_ auth: Auth) {
+        tokenStore.save(auth: auth)
         startSearch(with: auth)
     }
 }
@@ -121,10 +91,13 @@ extension AppCoordinator: SearchViewModelDelegate {
     
     func didStartProcessTweet(with tweet: Tweet) {
         
-        let sentimentVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SentimentViewController") as! SentimentViewController
+        let repository = SentimentRepository()
+        let viewModel = SentimentViewModel(
+            tweet: tweet,
+            repository: repository
+        )
         
-        sentimentVC.tweet = tweet
-        
+        let sentimentVC = SentimentViewController(viewModel: viewModel)
         let navigationVC = UINavigationController(rootViewController: sentimentVC)
         
         rootViewController.present(navigationVC, animated: true, completion: nil)

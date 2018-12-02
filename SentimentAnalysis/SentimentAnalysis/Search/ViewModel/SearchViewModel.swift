@@ -38,6 +38,7 @@ class SearchViewModel {
                 self?.dataSource.value = tweets
                 self?.searchState.value = .load(tweets)
             case .failure(let error):
+                self?.dataSource.value = []
                 self?.searchState.value = .error(error)
             }
         }

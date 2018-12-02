@@ -1,14 +1,23 @@
 //
-//  ErrorView.swift
+//  EmptyView.swift
+//  SentimentAnalysis
+//
+//  Created by Thales Frigo on 02/12/18.
+//  Copyright © 2018 Thales Frigo. All rights reserved.
+//
+
+import Foundation
+//
+//  EmptyView.swift
 //  tecnonutri
 //
-//  Created by Thales Frigo on 29/05/18.
+//  Created by Thales Frigo on 26/06/2018.
 //  Copyright © 2018 Grupo Minha Vida. All rights reserved.
 //
 
 import UIKit
 
-class ErrorView: UIView {
+class EmptyView: UIView {
     
     let container: UIStackView = {
         let stackView = UIStackView()
@@ -21,16 +30,15 @@ class ErrorView: UIView {
     }()
     
     let image: UIImageView = {
-        let imageView = UIImageView(image: UIImage(named: "ic_error"))
+        let imageView = UIImageView(image: UIImage(named: ""))
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.contentMode = .scaleAspectFit
         return imageView
     }()
     
     let title: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Verifique sua conexão!"
+        label.text = "EMPTY_TITLE"
         label.font = UIFont(name: "Avenir-Heavy", size: 20)
         label.textAlignment = .center
         label.numberOfLines = 0
@@ -40,29 +48,21 @@ class ErrorView: UIView {
     let subtitle: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Sua internet parece demorar para chegar ao nosso servidor."
+        label.text = "EMPTY_MESSAGE"
         label.font = UIFont(name: "Avenir-Book", size: 16)
         label.textAlignment = .center
         label.numberOfLines = 0
         return label
     }()
     
-    let reloadButton: ShadowBorderButtonView = {
+    let ctaButton: ShadowBorderButtonView = {
         let buttonView = ShadowBorderButtonView()
         buttonView.translatesAutoresizingMaskIntoConstraints = false
-        buttonView.button.setTitle("Tentar novamente", for: .normal)
+        buttonView.button.setTitle("TAP_TO_START", for: .normal)
         buttonView.button.setBackgroundColor(.blue, for: .normal)
         buttonView.button.titleLabel?.font = UIFont(name: "Avenir-Heavy", size: 12)
         buttonView.button.setTitleColor(.white, for: .normal)
         return buttonView
-    }()
-    
-    let loader: UIActivityIndicatorView = {
-        let loader = UIActivityIndicatorView(style: .white)
-        loader.translatesAutoresizingMaskIntoConstraints = false
-        loader.hidesWhenStopped = true
-        loader.isHidden = true
-        return loader
     }()
     
     override init(frame: CGRect = .zero) {
@@ -75,72 +75,45 @@ class ErrorView: UIView {
     }
 }
 
-extension ErrorView {
-    
-    func startAnimating(){
-        //        button.setTitle(nil, for: .normal)
-        reloadButton.shadow.isHidden = true
-        loader.isHidden = false
-        loader.startAnimating()
-    }
-    
-    func resetButtonState(){
-        reloadButton.shadow.isHidden = false
-        loader.isHidden = true
-        loader.stopAnimating()
-    }
-}
-
-extension ErrorView: ViewConfiguration {
+extension EmptyView: ViewConfiguration {
     
     func buildViewHierarchy() {
         addSubview(container)
         container.addArrangedSubview(image)
         container.addArrangedSubview(title)
         container.addArrangedSubview(subtitle)
-        container.addArrangedSubview(reloadButton)
-        reloadButton.addSubview(loader)
+        container.addArrangedSubview(ctaButton)
     }
     
     func setupConstraints() {
         container
-            .centerXAnchor(equalTo: centerXAnchor)
             .centerYAnchor(equalTo: centerYAnchor)
+            .centerXAnchor(equalTo: centerXAnchor)
             .widthAnchor(equalTo: widthAnchor)
         
         image
             .widthAnchor(equalTo: 100)
             .heightAnchor(equalTo: 100)
         
-        reloadButton
+        ctaButton
             .widthAnchor(equalTo: 145)
             .heightAnchor(equalTo: 37)
-        
-        loader
-            .centerYAnchor(equalTo: reloadButton.centerYAnchor)
-            .centerXAnchor(equalTo: reloadButton.centerXAnchor)
     }
     
     func configureViews() {
-
+        
     }
 }
 
-class ErrorViewController: ViewConfigurationController<ErrorView> {
+class EmptyViewController: ViewConfigurationController<EmptyView> {
     
-    var reloadHandler: (ErrorViewController?) -> Void = { _ in } {
-        didSet {
-            contentView.resetButtonState()
-        }
-    }
+    var tapHandler: (() -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         contentView.backgroundColor = .white
-        
-        contentView.reloadButton.handler = { [weak self] in
-            self?.contentView.startAnimating()
-            self?.reloadHandler(self)
+        contentView.ctaButton.handler = { [weak self] in
+            self?.tapHandler?()
         }
     }
 }

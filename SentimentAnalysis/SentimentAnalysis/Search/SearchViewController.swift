@@ -12,6 +12,8 @@ class SearchViewController: UIViewController, ErrorDisplayer, Loadable {
 
     @IBOutlet weak var tableView: UITableView!
     
+    let emptyVC = EmptyViewController()
+    
     let searchController = UISearchController(searchResultsController: nil)
     var pendingRequestWorkItem: DispatchWorkItem?
     
@@ -35,21 +37,27 @@ class SearchViewController: UIViewController, ErrorDisplayer, Loadable {
     
     func setupObservers() {
         viewModel.searchState.onUpdate = { [weak self] state in
-            self?.stopAnimating()
-            switch state {
-            case .loading:
-               self?.startLoading()
-                break
-            case .load:
-                self?.tableView.reloadData()
-                break
-            case .empty:
-                self?.tableView.reloadData()
-                break
-            case .error(let error):
-                self?.show(error)
-                break
+            DispatchQueue.main.async {
+                guard let vc = self else { return }
+                
+                vc.stopAnimating()
+                switch state {
+                case .loading:
+                    vc.startLoading()
+                case .error(let error):
+                    vc.searchController.searchBar.isUserInteractionEnabled = false
+                    vc.show(error, then: {
+                        vc.searchController.searchBar.text = ""
+                        vc.searchController.searchBar.isUserInteractionEnabled = true
+                    })
+                default:
+                    return
+                }
             }
+        }
+        
+        viewModel.dataSource.onUpdate = { [weak self] _ in
+            self?.tableView.reloadData()
         }
     }
 }
@@ -62,9 +70,9 @@ extension SearchViewController {
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Search users"
         navigationItem.searchController = searchController
+        navigationItem.largeTitleDisplayMode = .always
         navigationItem.title = "Sentiment Analysis"
         navigationItem.hidesSearchBarWhenScrolling = false
-        navigationItem.largeTitleDisplayMode = .always
         definesPresentationContext = true
     }
 }
@@ -104,9 +112,15 @@ extension SearchViewController {
     func setupTableView() {
         tableView.register(cellType: TweetTableViewCell.self)
         tableView.dataSource = self
+        tableView.prefetchDataSource = self
         tableView.delegate = self
         tableView.estimatedRowHeight = 60
         tableView.rowHeight = UITableView.automaticDimension
+
+        emptyVC.tapHandler = { [weak self] in
+            self?.searchController.searchBar.becomeFirstResponder()
+        }
+        add(emptyVC)
     }
 }
 
@@ -114,7 +128,13 @@ extension SearchViewController {
 extension SearchViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.numberOfItems
+        let rows = viewModel.numberOfItems
+        if rows > 0 {
+            emptyVC.remove()
+        } else {
+            add(emptyVC)
+        }
+        return rows
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -122,6 +142,16 @@ extension SearchViewController: UITableViewDataSource {
         let tweet = viewModel.item(at: indexPath.row)
         cell.render(tweet)
         return cell
+    }
+}
+
+extension SearchViewController: UITableViewDataSourcePrefetching {
+    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+        print(indexPaths)
+    }
+    
+    func tableView(_ tableView: UITableView, cancelPrefetchingForRowsAt indexPaths: [IndexPath]) {
+        print(indexPaths)
     }
 }
 

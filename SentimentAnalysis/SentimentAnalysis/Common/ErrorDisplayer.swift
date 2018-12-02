@@ -17,6 +17,7 @@ protocol ErrorDisplayer {
 extension ErrorDisplayer where Self: UIViewController {
     func show(_ error: Error, then reloadHandler: @escaping ReloadHandler) {
         let errorVC = ErrorViewController()
+        errorVC.render(error)
         errorVC.reloadHandler = { (errorVC) in
             errorVC?.remove()
             reloadHandler()

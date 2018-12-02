@@ -16,11 +16,11 @@ enum Emotion {
     var color: UIColor {
         switch self {
         case .happy:
-            return .green
+            return .materialGreen
         case .neutral:
-            return .yellow
+            return .materialYellow
         case .sad:
-            return .red
+            return .materialRed
         }
     }
     
@@ -53,23 +53,3 @@ struct Sentiment: Codable {
         }
     }
 }
-
-//{
-//    "documentSentiment": {
-//        "magnitude": 0.4,
-//        "score": -0.4
-//    },
-//    "language": "en",
-//    "sentences": [
-//    {
-//    "text": {
-//    "content": "@Lascorbe @bontoJR @swiftalps @icanzilb Wish I could've been there - same as Luis, was impossible for me this year… https://t.co/unmFebDHJn",
-//    "beginOffset": 0
-//    },
-//    "sentiment": {
-//    "magnitude": 0.4,
-//    "score": -0.4
-//    }
-//    }
-//    ]
-//}

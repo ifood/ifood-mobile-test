@@ -6,7 +6,7 @@
 //  Copyright © 2018 Grupo Minha Vida. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol ViewConfiguration {
     func buildViewHierarchy()

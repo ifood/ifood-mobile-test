@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		2B08B4C021AD3A28006F6593 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B08B4BF21AD3A28006F6593 /* AppDelegate.swift */; };
 		2B08B4C221AD3A28006F6593 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B08B4C121AD3A28006F6593 /* SearchViewController.swift */; };
-		2B08B4C521AD3A28006F6593 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B08B4C321AD3A28006F6593 /* Main.storyboard */; };
 		2B08B4C721AD3A2B006F6593 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B08B4C621AD3A2B006F6593 /* Assets.xcassets */; };
 		2B08B4CA21AD3A2B006F6593 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B08B4C821AD3A2B006F6593 /* LaunchScreen.storyboard */; };
 		2B08B4D521AD3A2B006F6593 /* SentimentAnalysisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B08B4D421AD3A2B006F6593 /* SentimentAnalysisTests.swift */; };
@@ -50,6 +49,12 @@
 		2BE87BA721B3781100489BC9 /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87BA621B3781100489BC9 /* Loadable.swift */; };
 		2BE87BA921B37BBB00489BC9 /* Optional+NilOrEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87BA821B37BBB00489BC9 /* Optional+NilOrEmpty.swift */; };
 		2BE87BAC21B37DB500489BC9 /* SearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87BAB21B37DB500489BC9 /* SearchRepository.swift */; };
+		2BE87BAE21B38DEF00489BC9 /* EmptyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87BAD21B38DEF00489BC9 /* EmptyViewController.swift */; };
+		2BE87BB121B395C300489BC9 /* SentimentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87BB021B395C300489BC9 /* SentimentViewModel.swift */; };
+		2BE87BB421B3976D00489BC9 /* SentimentRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87BB321B3976D00489BC9 /* SentimentRepository.swift */; };
+		2BE87BB821B398A900489BC9 /* SentimentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BE87BB621B398A900489BC9 /* SentimentViewController.xib */; };
+		2BE87BBB21B3A26400489BC9 /* UIColor+Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87BBA21B3A26400489BC9 /* UIColor+Palette.swift */; };
+		2BE87BBD21B3A41500489BC9 /* Keychain+AuthTokenStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87BBC21B3A41500489BC9 /* Keychain+AuthTokenStore.swift */; };
 		AEFAE7761E869FFABA5C3B8B /* Pods_SentimentAnalysisTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3FC6F1DAF0460096BFD2BF0 /* Pods_SentimentAnalysisTests.framework */; };
 		E8607A255C0826B300B3E75D /* Pods_SentimentAnalysis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18717B4359BD8D5886601C01 /* Pods_SentimentAnalysis.framework */; };
 /* End PBXBuildFile section */
@@ -70,7 +75,6 @@
 		2B08B4BC21AD3A28006F6593 /* SentimentAnalysis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SentimentAnalysis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B08B4BF21AD3A28006F6593 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B08B4C121AD3A28006F6593 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		2B08B4C421AD3A28006F6593 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2B08B4C621AD3A2B006F6593 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B08B4C921AD3A2B006F6593 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B08B4CB21AD3A2B006F6593 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -114,6 +118,12 @@
 		2BE87BA621B3781100489BC9 /* Loadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
 		2BE87BA821B37BBB00489BC9 /* Optional+NilOrEmpty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+NilOrEmpty.swift"; sourceTree = "<group>"; };
 		2BE87BAB21B37DB500489BC9 /* SearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepository.swift; sourceTree = "<group>"; };
+		2BE87BAD21B38DEF00489BC9 /* EmptyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyViewController.swift; sourceTree = "<group>"; };
+		2BE87BB021B395C300489BC9 /* SentimentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentViewModel.swift; sourceTree = "<group>"; };
+		2BE87BB321B3976D00489BC9 /* SentimentRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentRepository.swift; sourceTree = "<group>"; };
+		2BE87BB621B398A900489BC9 /* SentimentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SentimentViewController.xib; sourceTree = "<group>"; };
+		2BE87BBA21B3A26400489BC9 /* UIColor+Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Palette.swift"; sourceTree = "<group>"; };
+		2BE87BBC21B3A41500489BC9 /* Keychain+AuthTokenStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keychain+AuthTokenStore.swift"; sourceTree = "<group>"; };
 		5A16E418A1C8F242666218D5 /* Pods-SentimentAnalysis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SentimentAnalysis.release.xcconfig"; path = "Pods/Target Support Files/Pods-SentimentAnalysis/Pods-SentimentAnalysis.release.xcconfig"; sourceTree = "<group>"; };
 		72B1138003E9313C6D8D8F32 /* Pods-SentimentAnalysisTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SentimentAnalysisTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SentimentAnalysisTests/Pods-SentimentAnalysisTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B3FC6F1DAF0460096BFD2BF0 /* Pods_SentimentAnalysisTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SentimentAnalysisTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -180,7 +190,6 @@
 				2BE5F9EF21AE25A1007DAC2A /* Search */,
 				2BE5FA1721AF77ED007DAC2A /* Sentiment */,
 				2B08B4BF21AD3A28006F6593 /* AppDelegate.swift */,
-				2B08B4C321AD3A28006F6593 /* Main.storyboard */,
 				2B08B4C621AD3A2B006F6593 /* Assets.xcassets */,
 				2B08B4C821AD3A2B006F6593 /* LaunchScreen.storyboard */,
 				2B08B4CB21AD3A2B006F6593 /* Info.plist */,
@@ -229,13 +238,13 @@
 				2BE5FA0B21AF57C6007DAC2A /* DateFormatter+TwitterDateFormat.swift */,
 				2BE5FA1021AF5F73007DAC2A /* UIImageView+DownloadImage.swift */,
 				2BE87B8321B3323900489BC9 /* RevealingSplashView+Launch.swift */,
-				2BE87B8521B333A400489BC9 /* ErrorViewController.swift */,
-				2BE87B8621B333A400489BC9 /* ShadowBorderButtonView.swift */,
 				2BE87B8821B333A500489BC9 /* UIButton+BackgroundColor.swift */,
 				2BE87B8A21B333A500489BC9 /* UIView+Anchors.swift */,
 				2BE87B8721B333A400489BC9 /* UIViewController+ChildController.swift */,
 				2BE87B8921B333A500489BC9 /* ViewConfiguration.swift */,
 				2BE87BA821B37BBB00489BC9 /* Optional+NilOrEmpty.swift */,
+				2BE87BBA21B3A26400489BC9 /* UIColor+Palette.swift */,
+				2BE87BBC21B3A41500489BC9 /* Keychain+AuthTokenStore.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -272,9 +281,12 @@
 		2BE5FA1721AF77ED007DAC2A /* Sentiment */ = {
 			isa = PBXGroup;
 			children = (
+				2BE87BB221B3975100489BC9 /* Repository */,
+				2BE87BAF21B395B700489BC9 /* ViewModel */,
 				2BE5FA2121B2E59C007DAC2A /* Model */,
 				2BE5FA1821B2DE5A007DAC2A /* Networking */,
 				2BE5FA1D21B2E14C007DAC2A /* SentimentViewController.swift */,
+				2BE87BB621B398A900489BC9 /* SentimentViewController.xib */,
 			);
 			path = Sentiment;
 			sourceTree = "<group>";
@@ -306,6 +318,9 @@
 				2BE87B9621B33D1900489BC9 /* SplashViewController.swift */,
 				2BE87B9821B3405500489BC9 /* ViewModelState.swift */,
 				2BE87BA621B3781100489BC9 /* Loadable.swift */,
+				2BE87B8621B333A400489BC9 /* ShadowBorderButtonView.swift */,
+				2BE87B8521B333A400489BC9 /* ErrorViewController.swift */,
+				2BE87BAD21B38DEF00489BC9 /* EmptyViewController.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -346,6 +361,22 @@
 			isa = PBXGroup;
 			children = (
 				2BE87BAB21B37DB500489BC9 /* SearchRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		2BE87BAF21B395B700489BC9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2BE87BB021B395C300489BC9 /* SentimentViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2BE87BB221B3975100489BC9 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				2BE87BB321B3976D00489BC9 /* SentimentRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -445,8 +476,8 @@
 			files = (
 				2B08B4CA21AD3A2B006F6593 /* LaunchScreen.storyboard in Resources */,
 				2B08B4C721AD3A2B006F6593 /* Assets.xcassets in Resources */,
-				2B08B4C521AD3A28006F6593 /* Main.storyboard in Resources */,
 				2BE87B9D21B3429200489BC9 /* SearchViewController.xib in Resources */,
+				2BE87BB821B398A900489BC9 /* SentimentViewController.xib in Resources */,
 				2BE5FA1621AF61C5007DAC2A /* TweetTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -552,6 +583,8 @@
 				2BE5F9F221AE25CA007DAC2A /* TwitterAPIConfig.swift in Sources */,
 				2BE5FA1A21B2DE6A007DAC2A /* SentimentAPI.swift in Sources */,
 				2BE5FA0C21AF57C6007DAC2A /* DateFormatter+TwitterDateFormat.swift in Sources */,
+				2BE87BB421B3976D00489BC9 /* SentimentRepository.swift in Sources */,
+				2BE87BBD21B3A41500489BC9 /* Keychain+AuthTokenStore.swift in Sources */,
 				2BE87B9721B33D1900489BC9 /* SplashViewController.swift in Sources */,
 				2BE5F9F721AE2A44007DAC2A /* String+Base64.swift in Sources */,
 				2BE87BAC21B37DB500489BC9 /* SearchRepository.swift in Sources */,
@@ -565,6 +598,7 @@
 				2B638AE321AE23F0000DCA37 /* TwitterAPI.swift in Sources */,
 				2BE5FA1E21B2E14C007DAC2A /* SentimentViewController.swift in Sources */,
 				2BE5FA0121AE3806007DAC2A /* AuthViewController.swift in Sources */,
+				2BE87BAE21B38DEF00489BC9 /* EmptyViewController.swift in Sources */,
 				2BE87B8421B3323900489BC9 /* RevealingSplashView+Launch.swift in Sources */,
 				2BE5FA1C21B2DE81007DAC2A /* SentimentAPIConfig.swift in Sources */,
 				2BE5FA2021B2E1D4007DAC2A /* SentimentAuthPlugin.swift in Sources */,
@@ -572,9 +606,11 @@
 				2B08B4C021AD3A28006F6593 /* AppDelegate.swift in Sources */,
 				2BE87BA921B37BBB00489BC9 /* Optional+NilOrEmpty.swift in Sources */,
 				2BE87B8C21B333A500489BC9 /* ShadowBorderButtonView.swift in Sources */,
+				2BE87BB121B395C300489BC9 /* SentimentViewModel.swift in Sources */,
 				2BE5FA1121AF5F73007DAC2A /* UIImageView+DownloadImage.swift in Sources */,
 				2BE5FA1521AF61C5007DAC2A /* TweetTableViewCell.swift in Sources */,
 				2BE87B8B21B333A500489BC9 /* ErrorViewController.swift in Sources */,
+				2BE87BBB21B3A26400489BC9 /* UIColor+Palette.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -597,14 +633,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2B08B4C321AD3A28006F6593 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2B08B4C421AD3A28006F6593 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2B08B4C821AD3A2B006F6593 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
