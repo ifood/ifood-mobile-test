@@ -103,6 +103,14 @@ class ResultViewController: UIViewController, ResultDisplayLogic {
         return containerView
     }
     
+    func createEmojiView(emoji: String) -> UILabel {
+        let label = UILabel()
+        label.text = emoji
+        label.font = UIFont(name: "AppleColorEmoji", size: 90.0)
+        label.sizeToFit()
+        return label
+    }
+    
     // MARK: Actions
     
     @objc func tapHandler(_ gesture: UITapGestureRecognizer) {
@@ -123,10 +131,7 @@ class ResultViewController: UIViewController, ResultDisplayLogic {
         let containerView = createContainerView(withBackground: viewModel.tweetSentiment.viewBackGroundColor)
         view.addSubview(containerView)
         
-        let label = UILabel()
-        label.text = viewModel.tweetSentiment.emojiFace.rawValue
-        label.font = UIFont(name: "AppleColorEmoji", size: 70.0)
-        label.sizeToFit()
+        let label = createEmojiView(emoji: viewModel.tweetSentiment.emojiFace.rawValue)
         label.center = containerView.center
         view.addSubview(label)
         
