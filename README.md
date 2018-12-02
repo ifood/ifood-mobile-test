@@ -1,3 +1,39 @@
+# Tweet sentiment analysis (ifood-mobile-test)
+
+
+An iOS app that analyse a tweet sentiment.
+
+---
+
+## Screenshots
+
+ <p align="center">
+  <img src=".github/feed.png" align="center" width=170>
+  <img src=".github/neutral.png" align="center" width=170>
+  <img src=".github/sad.png" align="center" width=170>
+  <img src=".github/happy.png" align="center" width=170>
+</p>
+
+## Requirements
+
+1. Xcode 9.4.1
+2. Swift 4.1
+3. Cocoapods version `1.5.3`
+4. [**Cocoapods-keys**](https://github.com/orta/cocoapods-keys)
+
+## To run
+1. Clone this repository
+2. Run `pod install`
+3. Run project 🚀
+
+## Architecture
+
+This App conforms to [**VIP** (Clean Swift Architecture)](https://hackernoon.com/introducing-clean-swift-architecture-vip-770a639ad7bf)
+
+<p align="center">
+  <img src=".github/VIP.png" align="center">
+</p>
+
 # ifood-mobile-test
 Create an app that given an Twitter username it will list user's tweets. When I tap one of the tweets the app will visualy indicate if it's a happy, neutral or sad tweet.
 
