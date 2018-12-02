@@ -98,7 +98,7 @@ class ResultViewController: UIViewController, ResultDisplayLogic {
                                                  size: CGSize(width: view.bounds.width * 0.8, height: view.bounds.height * 0.3)))
         containerView.center = view.center
         containerView.backgroundColor = color
-        containerView.layer.cornerRadius = 5.0
+        containerView.layer.cornerRadius = 8.0
         containerView.translatesAutoresizingMaskIntoConstraints = false
         return containerView
     }
@@ -130,11 +130,11 @@ class ResultViewController: UIViewController, ResultDisplayLogic {
         label.center = containerView.center
         view.addSubview(label)
         
-        containerView.transform = CGAffineTransform(scaleX: 0, y: 0)
-        label.transform = CGAffineTransform(scaleX: 0, y: 0)
-        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 1.0, options: .curveEaseOut, animations: {
-            containerView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
-            label.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        containerView.center.y = view.bounds.height + containerView.bounds.height
+        label.center = containerView.center
+        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 1.0, options: .curveEaseOut, animations: { [unowned self] in
+            containerView.center.y = self.view.center.y
+            label.center = containerView.center
         })
     }
     
