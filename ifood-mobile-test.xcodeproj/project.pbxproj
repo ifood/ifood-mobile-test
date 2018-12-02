@@ -19,8 +19,16 @@
 		252D29EE21B2B23D00AD0F3F /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252D29E821B2B23D00AD0F3F /* TimelineViewController.swift */; };
 		252D29EF21B2B23D00AD0F3F /* TimelineInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252D29E921B2B23D00AD0F3F /* TimelineInteractor.swift */; };
 		252D29F121B2BD0B00AD0F3F /* TwitterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252D29F021B2BD0B00AD0F3F /* TwitterService.swift */; };
+		252D29F921B2FAA900AD0F3F /* ResultPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252D29F321B2FAA900AD0F3F /* ResultPresenter.swift */; };
+		252D29FA21B2FAA900AD0F3F /* ResultWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252D29F421B2FAA900AD0F3F /* ResultWorker.swift */; };
+		252D29FB21B2FAA900AD0F3F /* ResultRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252D29F521B2FAA900AD0F3F /* ResultRouter.swift */; };
+		252D29FC21B2FAA900AD0F3F /* ResultModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252D29F621B2FAA900AD0F3F /* ResultModels.swift */; };
+		252D29FD21B2FAA900AD0F3F /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252D29F721B2FAA900AD0F3F /* ResultViewController.swift */; };
+		252D29FE21B2FAA900AD0F3F /* ResultInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252D29F821B2FAA900AD0F3F /* ResultInteractor.swift */; };
+		252D2A0121B3063900AD0F3F /* AnalyzedSentiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252D2A0021B3063900AD0F3F /* AnalyzedSentiment.swift */; };
+		252D2A0321B3836F00AD0F3F /* pulse.json in Resources */ = {isa = PBXBuildFile; fileRef = 252D2A0221B3836F00AD0F3F /* pulse.json */; };
 		25DF94D421B1FB0F00852ED2 /* RestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DF94D321B1FB0F00852ED2 /* RestService.swift */; };
-		25DF94D621B1FB5000852ED2 /* GoogleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DF94D521B1FB5000852ED2 /* GoogleService.swift */; };
+		25DF94D621B1FB5000852ED2 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DF94D521B1FB5000852ED2 /* DataService.swift */; };
 		25DF94D821B1FC1700852ED2 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DF94D721B1FC1700852ED2 /* NetworkService.swift */; };
 		25DF94DA21B1FCB200852ED2 /* AlamofireWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DF94D921B1FCB200852ED2 /* AlamofireWrapper.swift */; };
 		25DF94DD21B1FD2900852ED2 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DF94DC21B1FD2900852ED2 /* LottieView.swift */; };
@@ -58,11 +66,19 @@
 		252D29E821B2B23D00AD0F3F /* TimelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
 		252D29E921B2B23D00AD0F3F /* TimelineInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineInteractor.swift; sourceTree = "<group>"; };
 		252D29F021B2BD0B00AD0F3F /* TwitterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterService.swift; sourceTree = "<group>"; };
+		252D29F321B2FAA900AD0F3F /* ResultPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultPresenter.swift; sourceTree = "<group>"; };
+		252D29F421B2FAA900AD0F3F /* ResultWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultWorker.swift; sourceTree = "<group>"; };
+		252D29F521B2FAA900AD0F3F /* ResultRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultRouter.swift; sourceTree = "<group>"; };
+		252D29F621B2FAA900AD0F3F /* ResultModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultModels.swift; sourceTree = "<group>"; };
+		252D29F721B2FAA900AD0F3F /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		252D29F821B2FAA900AD0F3F /* ResultInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultInteractor.swift; sourceTree = "<group>"; };
+		252D2A0021B3063900AD0F3F /* AnalyzedSentiment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzedSentiment.swift; sourceTree = "<group>"; };
+		252D2A0221B3836F00AD0F3F /* pulse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pulse.json; sourceTree = "<group>"; };
 		25DF94CC21B1F23F00852ED2 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		25DF94CD21B1F25000852ED2 /* Staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
 		25DF94CE21B1F25D00852ED2 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		25DF94D321B1FB0F00852ED2 /* RestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestService.swift; sourceTree = "<group>"; };
-		25DF94D521B1FB5000852ED2 /* GoogleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleService.swift; sourceTree = "<group>"; };
+		25DF94D521B1FB5000852ED2 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		25DF94D721B1FC1700852ED2 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		25DF94D921B1FCB200852ED2 /* AlamofireWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireWrapper.swift; sourceTree = "<group>"; };
 		25DF94DC21B1FD2900852ED2 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
@@ -118,6 +134,7 @@
 		252D0ACA21B1EF3A0069B37D /* ifood-mobile-test */ = {
 			isa = PBXGroup;
 			children = (
+				252D29FF21B305FF00AD0F3F /* Models */,
 				252D29E221B2B21000AD0F3F /* Scenes */,
 				25DF94D221B1FAD000852ED2 /* Services */,
 				25DF94DB21B1FD1000852ED2 /* Common */,
@@ -145,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				252D29E321B2B21D00AD0F3F /* Timeline */,
+				252D29F221B2FA7600AD0F3F /* Result */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -162,6 +180,27 @@
 			path = Timeline;
 			sourceTree = "<group>";
 		};
+		252D29F221B2FA7600AD0F3F /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				252D29F321B2FAA900AD0F3F /* ResultPresenter.swift */,
+				252D29F421B2FAA900AD0F3F /* ResultWorker.swift */,
+				252D29F521B2FAA900AD0F3F /* ResultRouter.swift */,
+				252D29F621B2FAA900AD0F3F /* ResultModels.swift */,
+				252D29F721B2FAA900AD0F3F /* ResultViewController.swift */,
+				252D29F821B2FAA900AD0F3F /* ResultInteractor.swift */,
+			);
+			path = Result;
+			sourceTree = "<group>";
+		};
+		252D29FF21B305FF00AD0F3F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				252D2A0021B3063900AD0F3F /* AnalyzedSentiment.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		25DF94CA21B1F1DB00852ED2 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +215,7 @@
 		25DF94CB21B1F1F900852ED2 /* Lottie */ = {
 			isa = PBXGroup;
 			children = (
+				252D2A0221B3836F00AD0F3F /* pulse.json */,
 			);
 			path = Lottie;
 			sourceTree = "<group>";
@@ -184,7 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				25DF94D321B1FB0F00852ED2 /* RestService.swift */,
-				25DF94D521B1FB5000852ED2 /* GoogleService.swift */,
+				25DF94D521B1FB5000852ED2 /* DataService.swift */,
 				25DF94D721B1FC1700852ED2 /* NetworkService.swift */,
 				25DF94D921B1FCB200852ED2 /* AlamofireWrapper.swift */,
 				252D29F021B2BD0B00AD0F3F /* TwitterService.swift */,
@@ -318,6 +358,7 @@
 				252D0AD621B1EF3C0069B37D /* LaunchScreen.storyboard in Resources */,
 				252D0AD321B1EF3C0069B37D /* Assets.xcassets in Resources */,
 				252D0AD121B1EF3A0069B37D /* Main.storyboard in Resources */,
+				252D2A0321B3836F00AD0F3F /* pulse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,19 +460,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				25DF94D821B1FC1700852ED2 /* NetworkService.swift in Sources */,
+				252D29FD21B2FAA900AD0F3F /* ResultViewController.swift in Sources */,
 				252D29F121B2BD0B00AD0F3F /* TwitterService.swift in Sources */,
 				252D29EC21B2B23D00AD0F3F /* TimelineRouter.swift in Sources */,
-				25DF94D621B1FB5000852ED2 /* GoogleService.swift in Sources */,
+				25DF94D621B1FB5000852ED2 /* DataService.swift in Sources */,
 				25DF94DA21B1FCB200852ED2 /* AlamofireWrapper.swift in Sources */,
 				252D29EF21B2B23D00AD0F3F /* TimelineInteractor.swift in Sources */,
+				252D29FA21B2FAA900AD0F3F /* ResultWorker.swift in Sources */,
 				25DF94DD21B1FD2900852ED2 /* LottieView.swift in Sources */,
 				252D0ACC21B1EF3A0069B37D /* AppDelegate.swift in Sources */,
 				252D29EA21B2B23D00AD0F3F /* TimelinePresenter.swift in Sources */,
+				252D29FC21B2FAA900AD0F3F /* ResultModels.swift in Sources */,
 				25DF94E021B1FD5F00852ED2 /* Configuration.swift in Sources */,
 				252D29EE21B2B23D00AD0F3F /* TimelineViewController.swift in Sources */,
+				252D2A0121B3063900AD0F3F /* AnalyzedSentiment.swift in Sources */,
+				252D29F921B2FAA900AD0F3F /* ResultPresenter.swift in Sources */,
+				252D29FE21B2FAA900AD0F3F /* ResultInteractor.swift in Sources */,
 				252D29EB21B2B23D00AD0F3F /* TimelineWorker.swift in Sources */,
 				252D29ED21B2B23D00AD0F3F /* TimelineModels.swift in Sources */,
 				25DF94D421B1FB0F00852ED2 /* RestService.swift in Sources */,
+				252D29FB21B2FAA900AD0F3F /* ResultRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

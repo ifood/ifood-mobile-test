@@ -14,26 +14,37 @@ import UIKit
 
 protocol TimelineBusinessLogic {
     func fetchTwitterUserTimeline(request: Timeline.FetchTimeline.Request)
+    func storeTweetText(text: String)
 }
 
 protocol TimelineDataStore {
-    var twitterText: String { get set }
+    var tweetText: String { get set }
 }
 
 class TimelineInteractor: TimelineBusinessLogic, TimelineDataStore {
     
     var presenter: TimelinePresentationLogic?
     var worker: TimelineWorker?
-    var twitterText: String = ""
+    var tweetText: String = ""
 
     // MARK: Do something
 
     func fetchTwitterUserTimeline(request: Timeline.FetchTimeline.Request) {
         worker = TimelineWorker()
         if let twitterResponse = worker?.requestTwitterUserTimeline(screenName: request.screenName) {
-            let response = Timeline.FetchTimeline.Response(twitterResponse: twitterResponse)
-            presenter?.presentTwitterUserTimeline(response: response)
+            if twitterResponse.userTimelineDataSource == nil {
+                let response = Timeline.Error.Response(code: 999, message: "Tweets not found")
+                presenter?.presentError(response: response)
+            }
+            else {
+                let response = Timeline.FetchTimeline.Response(twitterResponse: twitterResponse)
+                presenter?.presentTwitterUserTimeline(response: response)
+            }
         }
+    }
+    
+    func storeTweetText(text: String) {
+        tweetText = text
     }
     
 }

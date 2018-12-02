@@ -102,16 +102,24 @@ class TimelineViewController: TWTRTimelineViewController, TimelineDisplayLogic {
     }
     
     func displayError(viewModel: Timeline.Error.ViewModel) {
-        
+        let label = UILabel(frame: CGRect(origin: CGPoint.zero, size: CGSize(width: 10, height: 10)))
+        label.text = viewModel.message
+        label.sizeToFit()
+        label.center = self.tableView.center
+        self.tableView.backgroundView = label
     }
 }
 
 extension TimelineViewController: TWTRTweetViewDelegate {
 
     func tweetView(tweetView: TWTRTweetView, didSelectTweet tweet: TWTRTweet) {
+        self.interactor?.storeTweetText(text: tweet.text)
+        self.router?.routeToResult(segue: nil)
     }
     
     func tweetView(_ tweetView: TWTRTweetView, didTap tweet: TWTRTweet) {
+        self.interactor?.storeTweetText(text: tweet.text)
+        self.router?.routeToResult(segue: nil)
     }
     
 }
@@ -121,6 +129,7 @@ extension TimelineViewController: UISearchBarDelegate {
         if let keyword = searchBar.text {
             searchBar.text = nil
             searchBar.resignFirstResponder()
+            self.navigationItem.searchController?.isActive = false
             self.fetchTimeline(username: keyword.lowercased())
         }
     }
