@@ -71,7 +71,6 @@ class TimeLineViewController: TWTRTimelineViewController, TimeLineDisplayLogic {
     
     private func setupTwitterKitDelegates() {
         self.tweetViewDelegate = self
-        self.timelineDelegate = self
     }
     
     private func setupUI() {
@@ -134,41 +133,28 @@ class TimeLineViewController: TWTRTimelineViewController, TimeLineDisplayLogic {
 extension TimeLineViewController: TWTRTweetViewDelegate {
     
     func tweetView(tweetView: TWTRTweetView, didSelectTweet tweet: TWTRTweet) {
-        let request = TimeLine.Tweet.Request(tweet: tweet.text)
-        interactor?.AnalyzeTweet(request: request)
+        interactor?.AnalyzeTweet(request: TimeLine.Tweet.Request(tweet: tweet.text))
     }
     
     func tweetView(_ tweetView: TWTRTweetView, didTap url: URL) {
-        let request = TimeLine.Tweet.Request(tweet: tweetView.tweet.text)
-        interactor?.AnalyzeTweet(request: request)
+        interactor?.AnalyzeTweet(request: TimeLine.Tweet.Request(tweet: tweetView.tweet.text))
     }
     
     func tweetView(_ tweetView: TWTRTweetView, didTap tweet: TWTRTweet) {
-        let request = TimeLine.Tweet.Request(tweet: tweetView.tweet.text)
-        interactor?.AnalyzeTweet(request: request)
-
+        interactor?.AnalyzeTweet(request: TimeLine.Tweet.Request(tweet: tweet.text))
     }
     
     func tweetView(_ tweetView: TWTRTweetView, didTap image: UIImage, with imageURL: URL) {
-        let request = TimeLine.Tweet.Request(tweet: tweetView.tweet.text)
-        interactor?.AnalyzeTweet(request: request)
-
+        interactor?.AnalyzeTweet(request: TimeLine.Tweet.Request(tweet: tweetView.tweet.text))
     }
     
     func tweetView(_ tweetView: TWTRTweetView, didTapVideoWith videoURL: URL) {
-        let request = TimeLine.Tweet.Request(tweet: tweetView.tweet.text)
-        interactor?.AnalyzeTweet(request: request)
-
+        interactor?.AnalyzeTweet(request: TimeLine.Tweet.Request(tweet: tweetView.tweet.text))
     }
     
     func tweetView(_ tweetView: TWTRTweetView, didTapProfileImageFor user: TWTRUser) {
-        let request = TimeLine.Tweet.Request(tweet: tweetView.tweet.text)
-        interactor?.AnalyzeTweet(request: request)
+        interactor?.AnalyzeTweet(request: TimeLine.Tweet.Request(tweet: tweetView.tweet.text))
     }
-}
-
-extension TimeLineViewController: TWTRTimelineDelegate {
-    
 }
 
 extension TimeLineViewController : UISearchBarDelegate {
