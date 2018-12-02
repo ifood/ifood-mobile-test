@@ -1,0 +1,27 @@
+{
+  "name": "Keychain",
+  "version": "0.2",
+  "summary": "Micro framework for Keychain access.",
+  "homepage": "https://github.com/tink-ab/Keychain.swift",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Lukas Lipka": "lukaslipka@gmail.com"
+  },
+  "social_media_url": "https://twitter.com/tink",
+  "platforms": {
+    "ios": "8.0",
+    "osx": "10.9",
+    "watchos": "2.0",
+    "tvos": "9.0"
+  },
+  "swift_version": "4.0",
+  "source": {
+    "git": "github.com/tink-ab/Keychain.swift.git",
+    "tag": "0.2"
+  },
+  "source_files": "Sources/**/*",
+  "frameworks": "Foundation"
+}

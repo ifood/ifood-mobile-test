@@ -17,6 +17,9 @@ target 'SentimentAnalysis' do
   pod 'Moya', '~> 12.0'
   pod 'Kingfisher', '~> 4.0'
   pod 'Reusable'
+  pod 'NVActivityIndicatorView'
+  pod 'Keychain', git: 'https://github.com/tink-ab/Keychain'
+  pod 'RevealingSplashView'
 
   target 'SentimentAnalysisTests' do
     inherit! :search_paths

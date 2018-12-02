@@ -7,37 +7,18 @@
 //
 
 import UIKit
-import Moya
-import Result
-import Reusable
 
-class SearchViewController: UIViewController {
+class SearchViewController: UIViewController, ErrorDisplayer, Loadable {
 
     @IBOutlet weak var tableView: UITableView!
     
     let searchController = UISearchController(searchResultsController: nil)
     var pendingRequestWorkItem: DispatchWorkItem?
     
-    var provider: MoyaProvider<TwitterAPI>!
-    var authModel: AuthModel! {
-        didSet {
-            let tuple: (String) = (authModel.token)
-            let accessTokenPlugin = AccessTokenPlugin { () -> String in
-                return tuple
-            }
-            
-            provider = MoyaProvider<TwitterAPI>(plugins: [accessTokenPlugin])
-        }
-    }
+    var viewModel: SearchViewModel!
     
-    var tweets = [Tweet]() {
-        didSet {
-            self.tableView.reloadData()
-        }
-    }
-    
-    init(authModel: AuthModel) {
-        self.authModel = authModel
+    init(viewModel: SearchViewModel) {
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -49,20 +30,25 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
         setupTableView()
         setupSearch()
+        setupObservers()
     }
-}
-
-// MARK: Request
-extension SearchViewController {
-    typealias Handler = (Result<[Tweet], AnyError>) -> Void
     
-    func search(with username: String, then handler: @escaping Handler) {
-        provider.request(.search(username: username)) { (result) in
-            do {
-                let tweets = try result.dematerialize().map([Tweet].self)
-                handler(.success(tweets))
-            } catch {
-                handler(.failure(AnyError(error)))
+    func setupObservers() {
+        viewModel.searchState.onUpdate = { [weak self] state in
+            self?.stopAnimating()
+            switch state {
+            case .loading:
+               self?.startLoading()
+                break
+            case .load:
+                self?.tableView.reloadData()
+                break
+            case .empty:
+                self?.tableView.reloadData()
+                break
+            case .error(let error):
+                self?.show(error)
+                break
             }
         }
     }
@@ -78,6 +64,7 @@ extension SearchViewController {
         navigationItem.searchController = searchController
         navigationItem.title = "Sentiment Analysis"
         navigationItem.hidesSearchBarWhenScrolling = false
+        navigationItem.largeTitleDisplayMode = .always
         definesPresentationContext = true
     }
 }
@@ -88,24 +75,23 @@ extension SearchViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         print(searchController.searchBar.text ?? "Empty")
         
-        guard let searchText = searchController.searchBar.text else {
+        guard !searchController.searchBar.text.isNilOrEmpty else {
             return
         }
         
+        let searchText = searchController.searchBar.text!
+        
         pendingRequestWorkItem?.cancel()
-        tweets.removeAll()
 
         let requestWorkItem = DispatchWorkItem { [weak self] in
-            self?.search(with: searchText) { [weak self] result in
-                self?.tweets = result.value ?? []
-            }
+            self?.viewModel.search(with: searchText)
         }
         
         pendingRequestWorkItem = requestWorkItem
         DispatchQueue
             .main
             .asyncAfter(
-                deadline: .now() + .milliseconds(3000),
+                deadline: .now() + .milliseconds(500),
                 execute: requestWorkItem
         )
         
@@ -128,12 +114,12 @@ extension SearchViewController {
 extension SearchViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tweets.count
+        return viewModel.numberOfItems
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(for: indexPath) as TweetTableViewCell
-        let tweet = tweets[indexPath.row]
+        let tweet = viewModel.item(at: indexPath.row)
         cell.render(tweet)
         return cell
     }
@@ -143,15 +129,7 @@ extension SearchViewController: UITableViewDataSource {
 extension SearchViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Item selected at IndexPath \(indexPath)")
-        
-        let sentimentVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SentimentViewController") as! SentimentViewController
-        
-        sentimentVC.tweet = tweets[indexPath.row]
-        
-        let navigationVC = UINavigationController(rootViewController: sentimentVC)
-        
-        present(navigationVC, animated: true, completion: nil)
+        viewModel.process(with: indexPath.row)
     }
 }
 

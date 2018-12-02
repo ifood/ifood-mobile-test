@@ -8,8 +8,12 @@
 
 import Foundation
 
-struct AuthModel: Codable {
+struct Auth: Codable {
     let token: String
+    
+    init(token: String) {
+        self.token = token
+    }
     
     enum CodingKeys: String, CodingKey {
         case token = "access_token"

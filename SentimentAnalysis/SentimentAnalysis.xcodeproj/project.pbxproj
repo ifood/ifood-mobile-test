@@ -15,9 +15,10 @@
 		2B08B4D521AD3A2B006F6593 /* SentimentAnalysisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B08B4D421AD3A2B006F6593 /* SentimentAnalysisTests.swift */; };
 		2B638AE321AE23F0000DCA37 /* TwitterAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B638AE221AE23F0000DCA37 /* TwitterAPI.swift */; };
 		2B7BAB5321B2EC76004AE351 /* SentimentAnalyzerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7BAB5221B2EC76004AE351 /* SentimentAnalyzerResponse.swift */; };
+		2B7BAB5B21B3254B004AE351 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7BAB5A21B3254B004AE351 /* AppCoordinator.swift */; };
 		2BE5F9F221AE25CA007DAC2A /* TwitterAPIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5F9F121AE25CA007DAC2A /* TwitterAPIConfig.swift */; };
 		2BE5F9F721AE2A44007DAC2A /* String+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5F9F621AE2A44007DAC2A /* String+Base64.swift */; };
-		2BE5F9FF21AE37B3007DAC2A /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5F9FE21AE37B3007DAC2A /* AuthModel.swift */; };
+		2BE5F9FF21AE37B3007DAC2A /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5F9FE21AE37B3007DAC2A /* Auth.swift */; };
 		2BE5FA0121AE3806007DAC2A /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5FA0021AE3806007DAC2A /* AuthViewController.swift */; };
 		2BE5FA0321AE8FA8007DAC2A /* TwitterAPISearch.json in Resources */ = {isa = PBXBuildFile; fileRef = 2BE5FA0221AE8FA8007DAC2A /* TwitterAPISearch.json */; };
 		2BE5FA0821AF5790007DAC2A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5FA0721AF5790007DAC2A /* User.swift */; };
@@ -31,6 +32,24 @@
 		2BE5FA1E21B2E14C007DAC2A /* SentimentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5FA1D21B2E14C007DAC2A /* SentimentViewController.swift */; };
 		2BE5FA2021B2E1D4007DAC2A /* SentimentAuthPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5FA1F21B2E1D4007DAC2A /* SentimentAuthPlugin.swift */; };
 		2BE5FA2321B2E5A8007DAC2A /* Sentiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5FA2221B2E5A8007DAC2A /* Sentiment.swift */; };
+		2BE87B8221B3278F00489BC9 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87B8121B3278F00489BC9 /* AuthViewModel.swift */; };
+		2BE87B8421B3323900489BC9 /* RevealingSplashView+Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87B8321B3323900489BC9 /* RevealingSplashView+Launch.swift */; };
+		2BE87B8B21B333A500489BC9 /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87B8521B333A400489BC9 /* ErrorViewController.swift */; };
+		2BE87B8C21B333A500489BC9 /* ShadowBorderButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87B8621B333A400489BC9 /* ShadowBorderButtonView.swift */; };
+		2BE87B8D21B333A500489BC9 /* UIViewController+ChildController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87B8721B333A400489BC9 /* UIViewController+ChildController.swift */; };
+		2BE87B8E21B333A500489BC9 /* UIButton+BackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87B8821B333A500489BC9 /* UIButton+BackgroundColor.swift */; };
+		2BE87B8F21B333A500489BC9 /* ViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87B8921B333A500489BC9 /* ViewConfiguration.swift */; };
+		2BE87B9021B333A500489BC9 /* UIView+Anchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87B8A21B333A500489BC9 /* UIView+Anchors.swift */; };
+		2BE87B9321B3368900489BC9 /* Variable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87B9221B3368900489BC9 /* Variable.swift */; };
+		2BE87B9521B3379000489BC9 /* ErrorDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87B9421B3379000489BC9 /* ErrorDisplayer.swift */; };
+		2BE87B9721B33D1900489BC9 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87B9621B33D1900489BC9 /* SplashViewController.swift */; };
+		2BE87B9921B3405500489BC9 /* ViewModelState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87B9821B3405500489BC9 /* ViewModelState.swift */; };
+		2BE87B9D21B3429200489BC9 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BE87B9B21B3429200489BC9 /* SearchViewController.xib */; };
+		2BE87BA021B36CEB00489BC9 /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87B9F21B36CEB00489BC9 /* AuthRepository.swift */; };
+		2BE87BA521B36D6D00489BC9 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87BA421B36D6D00489BC9 /* SearchViewModel.swift */; };
+		2BE87BA721B3781100489BC9 /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87BA621B3781100489BC9 /* Loadable.swift */; };
+		2BE87BA921B37BBB00489BC9 /* Optional+NilOrEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87BA821B37BBB00489BC9 /* Optional+NilOrEmpty.swift */; };
+		2BE87BAC21B37DB500489BC9 /* SearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87BAB21B37DB500489BC9 /* SearchRepository.swift */; };
 		AEFAE7761E869FFABA5C3B8B /* Pods_SentimentAnalysisTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3FC6F1DAF0460096BFD2BF0 /* Pods_SentimentAnalysisTests.framework */; };
 		E8607A255C0826B300B3E75D /* Pods_SentimentAnalysis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18717B4359BD8D5886601C01 /* Pods_SentimentAnalysis.framework */; };
 /* End PBXBuildFile section */
@@ -60,9 +79,10 @@
 		2B08B4D621AD3A2B006F6593 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B638AE221AE23F0000DCA37 /* TwitterAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterAPI.swift; sourceTree = "<group>"; };
 		2B7BAB5221B2EC76004AE351 /* SentimentAnalyzerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentAnalyzerResponse.swift; sourceTree = "<group>"; };
+		2B7BAB5A21B3254B004AE351 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		2BE5F9F121AE25CA007DAC2A /* TwitterAPIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterAPIConfig.swift; sourceTree = "<group>"; };
 		2BE5F9F621AE2A44007DAC2A /* String+Base64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Base64.swift"; sourceTree = "<group>"; };
-		2BE5F9FE21AE37B3007DAC2A /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
+		2BE5F9FE21AE37B3007DAC2A /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		2BE5FA0021AE3806007DAC2A /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		2BE5FA0221AE8FA8007DAC2A /* TwitterAPISearch.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TwitterAPISearch.json; sourceTree = "<group>"; };
 		2BE5FA0721AF5790007DAC2A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -76,6 +96,24 @@
 		2BE5FA1D21B2E14C007DAC2A /* SentimentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentViewController.swift; sourceTree = "<group>"; };
 		2BE5FA1F21B2E1D4007DAC2A /* SentimentAuthPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentAuthPlugin.swift; sourceTree = "<group>"; };
 		2BE5FA2221B2E5A8007DAC2A /* Sentiment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sentiment.swift; sourceTree = "<group>"; };
+		2BE87B8121B3278F00489BC9 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		2BE87B8321B3323900489BC9 /* RevealingSplashView+Launch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RevealingSplashView+Launch.swift"; sourceTree = "<group>"; };
+		2BE87B8521B333A400489BC9 /* ErrorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
+		2BE87B8621B333A400489BC9 /* ShadowBorderButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowBorderButtonView.swift; sourceTree = "<group>"; };
+		2BE87B8721B333A400489BC9 /* UIViewController+ChildController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+ChildController.swift"; sourceTree = "<group>"; };
+		2BE87B8821B333A500489BC9 /* UIButton+BackgroundColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+BackgroundColor.swift"; sourceTree = "<group>"; };
+		2BE87B8921B333A500489BC9 /* ViewConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewConfiguration.swift; sourceTree = "<group>"; };
+		2BE87B8A21B333A500489BC9 /* UIView+Anchors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Anchors.swift"; sourceTree = "<group>"; };
+		2BE87B9221B3368900489BC9 /* Variable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variable.swift; sourceTree = "<group>"; };
+		2BE87B9421B3379000489BC9 /* ErrorDisplayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorDisplayer.swift; sourceTree = "<group>"; };
+		2BE87B9621B33D1900489BC9 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		2BE87B9821B3405500489BC9 /* ViewModelState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelState.swift; sourceTree = "<group>"; };
+		2BE87B9B21B3429200489BC9 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		2BE87B9F21B36CEB00489BC9 /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
+		2BE87BA421B36D6D00489BC9 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		2BE87BA621B3781100489BC9 /* Loadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
+		2BE87BA821B37BBB00489BC9 /* Optional+NilOrEmpty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+NilOrEmpty.swift"; sourceTree = "<group>"; };
+		2BE87BAB21B37DB500489BC9 /* SearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepository.swift; sourceTree = "<group>"; };
 		5A16E418A1C8F242666218D5 /* Pods-SentimentAnalysis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SentimentAnalysis.release.xcconfig"; path = "Pods/Target Support Files/Pods-SentimentAnalysis/Pods-SentimentAnalysis.release.xcconfig"; sourceTree = "<group>"; };
 		72B1138003E9313C6D8D8F32 /* Pods-SentimentAnalysisTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SentimentAnalysisTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SentimentAnalysisTests/Pods-SentimentAnalysisTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B3FC6F1DAF0460096BFD2BF0 /* Pods_SentimentAnalysisTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SentimentAnalysisTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,9 +174,9 @@
 		2B08B4BE21AD3A28006F6593 /* SentimentAnalysis */ = {
 			isa = PBXGroup;
 			children = (
-				2BE5F9FD21AE37A9007DAC2A /* Auth */,
-				2BE5F9FA21AE2B54007DAC2A /* Common */,
+				2BE87B9121B3367F00489BC9 /* Common */,
 				2BE5F9F521AE2A36007DAC2A /* Extensions */,
+				2BE5F9FD21AE37A9007DAC2A /* Auth */,
 				2BE5F9EF21AE25A1007DAC2A /* Search */,
 				2BE5FA1721AF77ED007DAC2A /* Sentiment */,
 				2B08B4BF21AD3A28006F6593 /* AppDelegate.swift */,
@@ -146,6 +184,7 @@
 				2B08B4C621AD3A2B006F6593 /* Assets.xcassets */,
 				2B08B4C821AD3A2B006F6593 /* LaunchScreen.storyboard */,
 				2B08B4CB21AD3A2B006F6593 /* Info.plist */,
+				2B7BAB5A21B3254B004AE351 /* AppCoordinator.swift */,
 			);
 			path = SentimentAnalysis;
 			sourceTree = "<group>";
@@ -163,11 +202,13 @@
 		2BE5F9EF21AE25A1007DAC2A /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				2BE87BAA21B37DA200489BC9 /* Repository */,
+				2BE87BA321B36D6200489BC9 /* ViewModel */,
 				2BE5FA1221AF61AB007DAC2A /* View */,
-				2BE5FA0D21AF5E01007DAC2A /* ViewModel */,
 				2BE5FA0621AF577E007DAC2A /* Model */,
 				2BE5F9F021AE25AB007DAC2A /* Networking */,
 				2B08B4C121AD3A28006F6593 /* SearchViewController.swift */,
+				2BE87B9B21B3429200489BC9 /* SearchViewController.xib */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -187,22 +228,25 @@
 				2BE5F9F621AE2A44007DAC2A /* String+Base64.swift */,
 				2BE5FA0B21AF57C6007DAC2A /* DateFormatter+TwitterDateFormat.swift */,
 				2BE5FA1021AF5F73007DAC2A /* UIImageView+DownloadImage.swift */,
+				2BE87B8321B3323900489BC9 /* RevealingSplashView+Launch.swift */,
+				2BE87B8521B333A400489BC9 /* ErrorViewController.swift */,
+				2BE87B8621B333A400489BC9 /* ShadowBorderButtonView.swift */,
+				2BE87B8821B333A500489BC9 /* UIButton+BackgroundColor.swift */,
+				2BE87B8A21B333A500489BC9 /* UIView+Anchors.swift */,
+				2BE87B8721B333A400489BC9 /* UIViewController+ChildController.swift */,
+				2BE87B8921B333A500489BC9 /* ViewConfiguration.swift */,
+				2BE87BA821B37BBB00489BC9 /* Optional+NilOrEmpty.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		2BE5F9FA21AE2B54007DAC2A /* Common */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Common;
 			sourceTree = "<group>";
 		};
 		2BE5F9FD21AE37A9007DAC2A /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				2BE5F9FE21AE37B3007DAC2A /* AuthModel.swift */,
 				2BE5FA0021AE3806007DAC2A /* AuthViewController.swift */,
+				2BE87BA221B36D1C00489BC9 /* ViewModel */,
+				2BE87BA121B36D1300489BC9 /* Model */,
+				2BE87B9E21B36CC500489BC9 /* Repository */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -214,13 +258,6 @@
 				2BE5FA0921AF57A2007DAC2A /* Tweet.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		2BE5FA0D21AF5E01007DAC2A /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		2BE5FA1221AF61AB007DAC2A /* View */ = {
@@ -259,6 +296,58 @@
 				2BE5FA2221B2E5A8007DAC2A /* Sentiment.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		2BE87B9121B3367F00489BC9 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				2BE87B9221B3368900489BC9 /* Variable.swift */,
+				2BE87B9421B3379000489BC9 /* ErrorDisplayer.swift */,
+				2BE87B9621B33D1900489BC9 /* SplashViewController.swift */,
+				2BE87B9821B3405500489BC9 /* ViewModelState.swift */,
+				2BE87BA621B3781100489BC9 /* Loadable.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		2BE87B9E21B36CC500489BC9 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				2BE87B9F21B36CEB00489BC9 /* AuthRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		2BE87BA121B36D1300489BC9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2BE5F9FE21AE37B3007DAC2A /* Auth.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2BE87BA221B36D1C00489BC9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2BE87B8121B3278F00489BC9 /* AuthViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2BE87BA321B36D6200489BC9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2BE87BA421B36D6D00489BC9 /* SearchViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2BE87BAA21B37DA200489BC9 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				2BE87BAB21B37DB500489BC9 /* SearchRepository.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 		7918154B01D2D8754CCB8C7E /* Frameworks */ = {
@@ -357,6 +446,7 @@
 				2B08B4CA21AD3A2B006F6593 /* LaunchScreen.storyboard in Resources */,
 				2B08B4C721AD3A2B006F6593 /* Assets.xcassets in Resources */,
 				2B08B4C521AD3A28006F6593 /* Main.storyboard in Resources */,
+				2BE87B9D21B3429200489BC9 /* SearchViewController.xib in Resources */,
 				2BE5FA1621AF61C5007DAC2A /* TweetTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,20 +488,26 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SentimentAnalysis/Pods-SentimentAnalysis-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Keychain/Keychain.framework",
 				"${BUILT_PRODUCTS_DIR}/Keys/Keys.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/Reusable/Reusable.framework",
+				"${BUILT_PRODUCTS_DIR}/RevealingSplashView/RevealingSplashView.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Keychain.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Keys.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reusable.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealingSplashView.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -443,24 +539,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BE87BA521B36D6D00489BC9 /* SearchViewModel.swift in Sources */,
+				2BE87B8E21B333A500489BC9 /* UIButton+BackgroundColor.swift in Sources */,
+				2BE87BA021B36CEB00489BC9 /* AuthRepository.swift in Sources */,
+				2BE87B8221B3278F00489BC9 /* AuthViewModel.swift in Sources */,
+				2BE87B9521B3379000489BC9 /* ErrorDisplayer.swift in Sources */,
+				2BE87B9921B3405500489BC9 /* ViewModelState.swift in Sources */,
+				2BE87B8D21B333A500489BC9 /* UIViewController+ChildController.swift in Sources */,
+				2BE87B8F21B333A500489BC9 /* ViewConfiguration.swift in Sources */,
+				2BE87B9021B333A500489BC9 /* UIView+Anchors.swift in Sources */,
+				2BE87BA721B3781100489BC9 /* Loadable.swift in Sources */,
 				2BE5F9F221AE25CA007DAC2A /* TwitterAPIConfig.swift in Sources */,
 				2BE5FA1A21B2DE6A007DAC2A /* SentimentAPI.swift in Sources */,
 				2BE5FA0C21AF57C6007DAC2A /* DateFormatter+TwitterDateFormat.swift in Sources */,
+				2BE87B9721B33D1900489BC9 /* SplashViewController.swift in Sources */,
 				2BE5F9F721AE2A44007DAC2A /* String+Base64.swift in Sources */,
+				2BE87BAC21B37DB500489BC9 /* SearchRepository.swift in Sources */,
 				2BE5FA2321B2E5A8007DAC2A /* Sentiment.swift in Sources */,
 				2B08B4C221AD3A28006F6593 /* SearchViewController.swift in Sources */,
 				2B7BAB5321B2EC76004AE351 /* SentimentAnalyzerResponse.swift in Sources */,
 				2BE5FA0A21AF57A2007DAC2A /* Tweet.swift in Sources */,
-				2BE5F9FF21AE37B3007DAC2A /* AuthModel.swift in Sources */,
+				2BE5F9FF21AE37B3007DAC2A /* Auth.swift in Sources */,
 				2BE5FA0821AF5790007DAC2A /* User.swift in Sources */,
+				2BE87B9321B3368900489BC9 /* Variable.swift in Sources */,
 				2B638AE321AE23F0000DCA37 /* TwitterAPI.swift in Sources */,
 				2BE5FA1E21B2E14C007DAC2A /* SentimentViewController.swift in Sources */,
 				2BE5FA0121AE3806007DAC2A /* AuthViewController.swift in Sources */,
+				2BE87B8421B3323900489BC9 /* RevealingSplashView+Launch.swift in Sources */,
 				2BE5FA1C21B2DE81007DAC2A /* SentimentAPIConfig.swift in Sources */,
 				2BE5FA2021B2E1D4007DAC2A /* SentimentAuthPlugin.swift in Sources */,
+				2B7BAB5B21B3254B004AE351 /* AppCoordinator.swift in Sources */,
 				2B08B4C021AD3A28006F6593 /* AppDelegate.swift in Sources */,
+				2BE87BA921B37BBB00489BC9 /* Optional+NilOrEmpty.swift in Sources */,
+				2BE87B8C21B333A500489BC9 /* ShadowBorderButtonView.swift in Sources */,
 				2BE5FA1121AF5F73007DAC2A /* UIImageView+DownloadImage.swift in Sources */,
 				2BE5FA1521AF61C5007DAC2A /* TweetTableViewCell.swift in Sources */,
+				2BE87B8B21B333A500489BC9 /* ErrorViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

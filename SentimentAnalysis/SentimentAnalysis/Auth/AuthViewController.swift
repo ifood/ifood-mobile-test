@@ -7,51 +7,33 @@
 //
 
 import UIKit
-import Moya
 
-//protocol AuthViewControllerDelegate: class {
-//    func authViewController(didReceive accessToken: AuthModel)
-//    func authViewController(didReceive error: Error)
-//}
+class AuthViewController: UIViewController, ErrorDisplayer {
 
-class AuthViewController: UIViewController {
+    var viewModel: AuthViewModel!
     
-    let provider = MoyaProvider<TwitterAPI>(
-        plugins: [
-            AccessTokenPlugin { TwitterAPIConfig.makeBasicAuthToken() }
-        ]
-    )
+    init(viewModel: AuthViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        provider.request(.auth) { [weak self] (result) in
-            switch result {
-            case .success(let response):
-                let data = response.data
-                
-                do {
-                    let auth = try JSONDecoder().decode(AuthModel.self, from: data)
-                    self?.goToSearch(with: auth)
-                } catch {
-                    print(error)
+        registerObserver()
+        viewModel.authenticate()
+    }
+    
+    func registerObserver() {
+        viewModel.authState.onUpdate = { [weak self] state in
+            if case .error(let error) = state {
+                self?.show(error) {
+                    self?.viewModel.authenticate()
                 }
-            case .failure(let error):
-                print(error)
             }
-        }
-    }
-    
-    func goToSearch(with authModel: AuthModel) {
-        self.performSegue(withIdentifier: "goToSearch", sender: authModel)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goToSearch" {
-            let auth = sender as! AuthModel
-            let navigationC = segue.destination as! UINavigationController
-            let searchVC = navigationC.topViewController as! SearchViewController
-            searchVC.authModel = auth
         }
     }
 }
