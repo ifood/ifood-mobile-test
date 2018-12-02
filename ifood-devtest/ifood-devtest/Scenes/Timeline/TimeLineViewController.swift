@@ -28,9 +28,9 @@ class TimeLineViewController: TWTRTimelineViewController, TimeLineDisplayLogic {
     private lazy var searchController: UISearchController = {
         let searchController = UISearchController(searchResultsController: nil)
         
-        searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.hidesNavigationBarDuringPresentation = false
+        searchController.searchBar.delegate = self
         searchController.searchBar.placeholder = NSLocalizedString("SEARCH_PLACE_HOLDER", comment: "")
         searchController.searchBar.text = defaultUser
         
@@ -171,20 +171,18 @@ extension TimeLineViewController: TWTRTimelineDelegate {
     
 }
 
-extension TimeLineViewController : UISearchResultsUpdating {
+extension TimeLineViewController : UISearchBarDelegate {
     
-    func updateSearchResults(for searchController: UISearchController) {
-        guard let text = searchController.searchBar.text, text.count > 0, text != lastTimelineSearched else {
-            return
-        }
-        
-        lastTimelineSearched = ""
-        
-        delay(seconds: 0.5) {
-            let request = TimeLine.Tweets.Request(user: text)
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        if let user = searchBar.text {
+            searchBar.text = nil
+            searchBar.resignFirstResponder()
+            navigationItem.searchController?.isActive = false
+            let request = TimeLine.Tweets.Request(user: user)
             self.interactor?.fetchUserTweets(request: request)
         }
-
     }
     
 }
+
+
