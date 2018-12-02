@@ -50,7 +50,8 @@ class ResultInteractor: ResultBusinessLogic, ResultDataStore {
             }
             else {
                 guard let sentiment = analyzedSentiment else {
-                    let response = Result.Error.Response(code: 999, message: "Cannot evaluate the tweet's mood")
+                    let response = Result.Error.Response(code: 999,
+                                                         message: NSLocalizedString("Cannot evaluate the tweet's mood", comment: ""))
                     self?.presenter?.presentError(response: response)
                     return
                 }

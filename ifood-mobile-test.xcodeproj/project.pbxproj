@@ -27,6 +27,7 @@
 		252D29FE21B2FAA900AD0F3F /* ResultInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252D29F821B2FAA900AD0F3F /* ResultInteractor.swift */; };
 		252D2A0121B3063900AD0F3F /* AnalyzedSentiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252D2A0021B3063900AD0F3F /* AnalyzedSentiment.swift */; };
 		252D2A0321B3836F00AD0F3F /* pulse.json in Resources */ = {isa = PBXBuildFile; fileRef = 252D2A0221B3836F00AD0F3F /* pulse.json */; };
+		25ACBA9D21B4350C00B6693A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 25ACBA9C21B4350C00B6693A /* Localizable.strings */; };
 		25DF94D421B1FB0F00852ED2 /* RestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DF94D321B1FB0F00852ED2 /* RestService.swift */; };
 		25DF94D621B1FB5000852ED2 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DF94D521B1FB5000852ED2 /* DataService.swift */; };
 		25DF94D821B1FC1700852ED2 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DF94D721B1FC1700852ED2 /* NetworkService.swift */; };
@@ -74,6 +75,7 @@
 		252D29F821B2FAA900AD0F3F /* ResultInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultInteractor.swift; sourceTree = "<group>"; };
 		252D2A0021B3063900AD0F3F /* AnalyzedSentiment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzedSentiment.swift; sourceTree = "<group>"; };
 		252D2A0221B3836F00AD0F3F /* pulse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pulse.json; sourceTree = "<group>"; };
+		25ACBA9C21B4350C00B6693A /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		25DF94CC21B1F23F00852ED2 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		25DF94CD21B1F25000852ED2 /* Staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
 		25DF94CE21B1F25D00852ED2 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				252D0AD221B1EF3C0069B37D /* Assets.xcassets */,
 				252D0AD421B1EF3C0069B37D /* LaunchScreen.storyboard */,
 				252D0AD721B1EF3C0069B37D /* Info.plist */,
+				25ACBA9C21B4350C00B6693A /* Localizable.strings */,
 			);
 			path = "ifood-mobile-test";
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25ACBA9D21B4350C00B6693A /* Localizable.strings in Resources */,
 				252D0AD621B1EF3C0069B37D /* LaunchScreen.storyboard in Resources */,
 				252D0AD321B1EF3C0069B37D /* Assets.xcassets in Resources */,
 				252D0AD121B1EF3A0069B37D /* Main.storyboard in Resources */,

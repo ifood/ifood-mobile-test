@@ -186,8 +186,8 @@ class ResultViewController: UIViewController, ResultDisplayLogic {
     
     func displayError(viewModel: Result.Error.ViewModel) {
         self.lottieView.stopAnimating()
-        let alert = UIAlertController(title: "Ops!", message: viewModel.message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { [weak self] (action) in
+        let alert = UIAlertController(title: NSLocalizedString("Ops!", comment: ""), message: viewModel.message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Ok", comment: ""), style: .default, handler: { [weak self] (action) in
             self?.router?.routeToParent()
         }))
         self.present(alert, animated: true, completion: nil)

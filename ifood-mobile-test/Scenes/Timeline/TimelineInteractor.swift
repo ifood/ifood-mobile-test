@@ -33,7 +33,7 @@ class TimelineInteractor: TimelineBusinessLogic, TimelineDataStore {
         worker = TimelineWorker()
         if let twitterResponse = worker?.requestTwitterUserTimeline(screenName: request.screenName) {
             if twitterResponse.userTimelineDataSource == nil {
-                let response = Timeline.Error.Response(code: 999, message: "Tweets not found")
+                let response = Timeline.Error.Response(code: 999, message: NSLocalizedString("Tweets not found", comment: ""))
                 presenter?.presentError(response: response)
             }
             else {

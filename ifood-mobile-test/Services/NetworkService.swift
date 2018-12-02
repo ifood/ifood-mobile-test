@@ -34,7 +34,9 @@ class NetworkService: DataService {
                 completion(analyzedSentiment, nil)
             }
             catch {
-                completion(nil, NSError(domain: "Error", code: 999, userInfo: ["message" : "Invalid payload format"]))
+                completion(nil, NSError(domain: "Error",
+                                        code: 999,
+                                        userInfo: ["message" : NSLocalizedString("Invalid payload format", comment: "")]))
             }
         }
         

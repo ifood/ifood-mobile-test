@@ -91,7 +91,7 @@ class TimelineViewController: TWTRTimelineViewController, TimelineDisplayLogic {
         let searchController = UISearchController(searchResultsController: nil)
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.delegate = self
-        searchController.searchBar.placeholder = "Enter username"
+        searchController.searchBar.placeholder = NSLocalizedString("Enter username", comment: "")
         return searchController
     }
     
