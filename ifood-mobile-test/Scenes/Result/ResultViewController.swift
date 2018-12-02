@@ -70,6 +70,8 @@ class ResultViewController: UIViewController, ResultDisplayLogic {
         }
     }
 
+    let lottieView = LottieView(lottieName: "pulse", size: CGSize(width: 200, height: 200))
+    
     // MARK: View lifecycle
 
     override func viewDidLoad() {
@@ -82,6 +84,7 @@ class ResultViewController: UIViewController, ResultDisplayLogic {
     
     func setupLayout() {
         view.backgroundColor = UIColor(white: 0, alpha: 0.4)
+        self.view.addSubview(self.lottieView)
         setupTapGestureRecognizer()
     }
     
@@ -109,12 +112,14 @@ class ResultViewController: UIViewController, ResultDisplayLogic {
     // MARK: Handle Data
 
     func analyzeSentiment() {
+        self.lottieView.startAnimating()
         interactor?.analyzeSentiment()
     }
     
     // MARK: Display
 
     func displaySentiment(viewModel: Result.AnalyzeSentiment.ViewModel) {
+        self.lottieView.stopAnimating()
         let containerView = createContainerView(withBackground: viewModel.tweetSentiment.viewBackGroundColor)
         view.addSubview(containerView)
         
@@ -127,6 +132,7 @@ class ResultViewController: UIViewController, ResultDisplayLogic {
     }
     
     func displayError(viewModel: Result.Error.ViewModel) {
+        self.lottieView.stopAnimating()
         let alert = UIAlertController(title: "Ops!", message: viewModel.message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { [weak self] (action) in
             self?.router?.routeToParent()
