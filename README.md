@@ -48,6 +48,8 @@ This App conforms to [**VIP** (Clean Swift Architecture)](https://hackernoon.com
 * [ ] Add UI tests
 * [ ] Add stage and production enviroments
 
+## Use Case
+```
 # ifood-mobile-test
 Create an app that given an Twitter username it will list user's tweets. When I tap one of the tweets the app will visualy indicate if it's a happy, neutral or sad tweet.
 
@@ -66,3 +68,4 @@ Create an app that given an Twitter username it will list user's tweets. When I 
 * Use whatever language, tools and frameworks you feel comfortable to.
 * Briefly elaborate on your solution, architecture details, choice of patterns and frameworks.
 * Fork this repository and submit your code.
+```
