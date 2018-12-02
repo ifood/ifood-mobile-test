@@ -68,10 +68,12 @@ class TweetSentimentAnalysisViewController: UIViewController, TweetSentimentAnal
     }
     
     private func setupLayout() {
-        tweetAnalyzedTextView.topAnchor.constraint(equalTo: view.topAnchor, constant: 150).isActive = true
-        tweetAnalyzedTextView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24).isActive = true
-        tweetAnalyzedTextView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -24).isActive = true
-        tweetAnalyzedTextView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
+        NSLayoutConstraint.activate([
+            tweetAnalyzedTextView.topAnchor.constraint(equalTo: view.topAnchor, constant: 150),
+            tweetAnalyzedTextView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24),
+            tweetAnalyzedTextView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -24),
+            tweetAnalyzedTextView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
+        ])
     }
   
     // MARK: Routing
