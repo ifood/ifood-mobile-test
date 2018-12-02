@@ -11,6 +11,7 @@
 //
 
 import UIKit
+import Lottie
 
 protocol TweetSentimentAnalysisDisplayLogic: class {
     func displayAnalyzedSentiment(viewModel: TweetSentimentAnalysis.SentimentAnalyzed.ViewModel)
@@ -28,6 +29,15 @@ class TweetSentimentAnalysisViewController: UIViewController, TweetSentimentAnal
         textView.translatesAutoresizingMaskIntoConstraints = false
         textView.backgroundColor = .clear
         return textView
+    }()
+    
+    private let animationView: LOTAnimationView = {
+        let animationView = LOTAnimationView(name: "material_loading")
+        animationView.translatesAutoresizingMaskIntoConstraints = false
+        animationView.loopAnimation = true
+        animationView.animationSpeed = 1.2
+        animationView.tag = 1000
+        return animationView
     }()
     
     // MARK: Object lifecycle
@@ -88,21 +98,40 @@ class TweetSentimentAnalysisViewController: UIViewController, TweetSentimentAnal
     // MARK: Requests
     
     private func requestSentimentAnalysis() {
+        showLoadAnimation()
         interactor?.requestSentimentAnalysis()
     }
     
     // MARK: Display methods
   
     func displayAnalyzedSentiment(viewModel: TweetSentimentAnalysis.SentimentAnalyzed.ViewModel) {
-        tweetAnalyzedTextView.attributedText = viewModel.sentimentAnalyzed.0
-        view.backgroundColor = viewModel.sentimentAnalyzed.1
+        hideLoadAnimation()
+        tweetAnalyzedTextView.attributedText = viewModel.sentimentAnalyzed.formattedText
+        view.backgroundColor = viewModel.sentimentAnalyzed.backgroundColor
     }
     
     func displaySentimentAnalysisError(viewModel: TweetSentimentAnalysis.Error.ViewModel) {
+        hideLoadAnimation()
         let alert = UIAlertController(title: NSLocalizedString("WARNING", comment: ""),
                                       message: NSLocalizedString("ERROR_ANALYZE_TWEET_SENTIMENT", comment: ""),
                                       preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
+    }
+    
+    // MARK: Load Animation
+    
+    private func showLoadAnimation() {
+        animationView.play()
+        view.addSubview(animationView)
+        animationView.topAnchor.constraint(equalTo: view.topAnchor, constant: 150).isActive = true
+        animationView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24).isActive = true
+        animationView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -24).isActive = true
+        animationView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+    }
+    
+    private func hideLoadAnimation() {
+        guard let animationView = view.viewWithTag(1000) else { return }
+        animationView.removeFromSuperview()
     }
 }
