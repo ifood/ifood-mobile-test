@@ -129,6 +129,13 @@ class ResultViewController: UIViewController, ResultDisplayLogic {
         label.sizeToFit()
         label.center = containerView.center
         view.addSubview(label)
+        
+        containerView.transform = CGAffineTransform(scaleX: 0, y: 0)
+        label.transform = CGAffineTransform(scaleX: 0, y: 0)
+        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 1.0, options: .curveEaseOut, animations: {
+            containerView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+            label.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        })
     }
     
     func displayError(viewModel: Result.Error.ViewModel) {

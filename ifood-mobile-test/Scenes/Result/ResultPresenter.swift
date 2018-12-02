@@ -17,6 +17,12 @@ protocol ResultPresentationLogic {
     func presentError(response: Result.Error.Response)
 }
 
+extension UIColor {
+    static let happyYellow = UIColor(red: 1, green: 1, blue: 102/255.0, alpha: 1.0)
+    static let neutralGray = UIColor(red: 217/255.0, green: 220/255.0, blue: 214/255.0, alpha: 1.0)
+    static let sadBlue = UIColor(red: 58/255.0, green: 124/255.0, blue: 165/255.0, alpha: 1.0)
+}
+
 class ResultPresenter: ResultPresentationLogic {
     
     weak var viewController: ResultDisplayLogic?
@@ -29,11 +35,11 @@ class ResultPresenter: ResultPresentationLogic {
         
         let score = response.analyzedSentiment.documentSentiment.score
         if score > 0.0 {
-            tweetSentiment = Result.TweetSentiment(emojiFace: .happy, viewBackGroundColor: .yellow)
+            tweetSentiment = Result.TweetSentiment(emojiFace: .happy, viewBackGroundColor: UIColor.happyYellow)
         } else if score < 0.0 {
-            tweetSentiment = Result.TweetSentiment(emojiFace: .sad, viewBackGroundColor: .blue)
+            tweetSentiment = Result.TweetSentiment(emojiFace: .sad, viewBackGroundColor: UIColor.sadBlue)
         } else {
-            tweetSentiment = Result.TweetSentiment(emojiFace: .neutral, viewBackGroundColor: .gray)
+            tweetSentiment = Result.TweetSentiment(emojiFace: .neutral, viewBackGroundColor: UIColor.neutralGray)
         }
         
         let viewModel = Result.AnalyzeSentiment.ViewModel(tweetSentiment: tweetSentiment)
