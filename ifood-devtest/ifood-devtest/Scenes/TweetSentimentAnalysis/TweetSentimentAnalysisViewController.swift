@@ -22,7 +22,7 @@ class TweetSentimentAnalysisViewController: UIViewController, TweetSentimentAnal
     var interactor: TweetSentimentAnalysisBusinessLogic?
     var router: (NSObjectProtocol & TweetSentimentAnalysisRoutingLogic & TweetSentimentAnalysisDataPassing)?
 
-    private let tweetAnalyzedTextView: UITextView = {
+    private lazy var tweetAnalyzedTextView: UITextView = {
         let textView = UITextView()
         textView.isEditable = false
         textView.isScrollEnabled = false
@@ -31,7 +31,7 @@ class TweetSentimentAnalysisViewController: UIViewController, TweetSentimentAnal
         return textView
     }()
     
-    private let animationView: LOTAnimationView = {
+    private lazy var animationView: LOTAnimationView = {
         let animationView = LOTAnimationView(name: "material_loading")
         animationView.translatesAutoresizingMaskIntoConstraints = false
         animationView.loopAnimation = true
@@ -117,7 +117,10 @@ class TweetSentimentAnalysisViewController: UIViewController, TweetSentimentAnal
         let alert = UIAlertController(title: NSLocalizedString("WARNING", comment: ""),
                                       message: NSLocalizedString("ERROR_ANALYZE_TWEET_SENTIMENT", comment: ""),
                                       preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .default, handler: nil))
+        
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: ""),
+                                      style: .default, handler: nil))
+        
         present(alert, animated: true, completion: nil)
     }
     
