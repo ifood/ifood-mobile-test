@@ -23,6 +23,7 @@ import UIKit
 
 protocol ResultDisplayLogic: class {
     func displaySentiment(viewModel: Result.AnalyzeSentiment.ViewModel)
+    func displayError(viewModel: Result.Error.ViewModel)
 }
 
 class ResultViewController: UIViewController, ResultDisplayLogic {
@@ -82,7 +83,6 @@ class ResultViewController: UIViewController, ResultDisplayLogic {
     func setupLayout() {
         view.backgroundColor = UIColor(white: 0, alpha: 0.4)
         setupTapGestureRecognizer()
-        createContainerView()
     }
     
     func setupTapGestureRecognizer() {
@@ -103,19 +103,27 @@ class ResultViewController: UIViewController, ResultDisplayLogic {
     // MARK: Actions
     
     @objc func tapHandler(_ gesture: UITapGestureRecognizer) {
-        router?.routeToParent(segue: nil)
+        router?.routeToParent()
     }
     
     // MARK: Handle Data
 
     func analyzeSentiment() {
-        interactor?.analyzeSentiment(request: Result.AnalyzeSentiment.Request(text: ""))
+        interactor?.analyzeSentiment()
     }
     
     // MARK: Display
 
     func displaySentiment(viewModel: Result.AnalyzeSentiment.ViewModel) {
-        //nameTextField.text = viewModel.name
+        createContainerView()
+    }
+    
+    func displayError(viewModel: Result.Error.ViewModel) {
+        let alert = UIAlertController(title: "Ops!", message: viewModel.message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { [weak self] (action) in
+            self?.router?.routeToParent()
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
 }
 

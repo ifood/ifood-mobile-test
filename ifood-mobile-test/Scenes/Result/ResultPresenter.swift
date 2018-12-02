@@ -14,6 +14,7 @@ import UIKit
 
 protocol ResultPresentationLogic {
     func presentSentiment(response: Result.AnalyzeSentiment.Response)
+    func presentError(response: Result.Error.Response)
 }
 
 class ResultPresenter: ResultPresentationLogic {
@@ -25,5 +26,10 @@ class ResultPresenter: ResultPresentationLogic {
     func presentSentiment(response: Result.AnalyzeSentiment.Response) {
         let viewModel = Result.AnalyzeSentiment.ViewModel(score: response.analyzedSentiment.documentSentiment.score)
         viewController?.displaySentiment(viewModel: viewModel)
+    }
+    
+    func presentError(response: Result.Error.Response) {
+        let viewModel = Result.Error.ViewModel(code: response.code, message: response.message)
+        viewController?.displayError(viewModel: viewModel)
     }
 }

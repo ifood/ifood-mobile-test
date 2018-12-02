@@ -13,7 +13,7 @@
 import UIKit
 
 @objc protocol ResultRoutingLogic {
-    func routeToParent(segue: UIStoryboardSegue?)
+    func routeToParent()
 }
 
 protocol ResultDataPassing {
@@ -27,13 +27,13 @@ class ResultRouter: NSObject, ResultRoutingLogic, ResultDataPassing {
 
     // MARK: Routing
 
-    func routeToParent(segue: UIStoryboardSegue?) {
+    func routeToParent() {
         navigateToParent(source: viewController!)
     }
 
     // MARK: Navigation
 
-    func navigateToSomewhere(source: ResultViewController) {
+    func navigateToParent(source: ResultViewController) {
         source.dismiss(animated: true, completion: nil)
     }
 

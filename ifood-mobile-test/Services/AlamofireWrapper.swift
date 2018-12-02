@@ -280,11 +280,13 @@ class AlamofireWrapper: SessionManager, RestService {
                                     do {
                                         if  let json = try JSONSerialization.jsonObject(with: data, options: []) as? NSDictionary {
                                             
-                                            if let message = json["message"] as? NSArray {
-                                                let userInfo = ["message": message]
-                                                let error = NSError(domain: "Error", code: alamofireResponse.statusCode, userInfo: userInfo)
-                                                DispatchQueue.main.async {
-                                                    failure(error)
+                                            if let error = json["error"] as? [String: Any] {
+                                                if let message = error["message"] as? String {
+                                                    let userInfo = ["message": message]
+                                                    let error = NSError(domain: "Error", code: alamofireResponse.statusCode, userInfo: userInfo)
+                                                    DispatchQueue.main.async {
+                                                        failure(error)
+                                                    }
                                                 }
                                             }
                                             return

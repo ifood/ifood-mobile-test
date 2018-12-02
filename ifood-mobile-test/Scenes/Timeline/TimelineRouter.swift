@@ -52,6 +52,6 @@ class TimelineRouter: NSObject, TimelineRoutingLogic, TimelineDataPassing {
     // MARK: Passing data
 
     func passDataToResult(source: TimelineDataStore, destination: inout ResultDataStore) {
-        //destination.name = source.name
+        destination.tweetText = source.tweetText
     }
 }

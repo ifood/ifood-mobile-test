@@ -46,12 +46,12 @@ class NetworkService: DataService {
             "encodingType": "UTF8"
         ]
         
-        self.service.get("https://language.googleapis.com/v1/documents:analyzeSentiment?key=AIzaSyDnrjzs20I2q68ufSfcgsBKrMur8Iegbmo",
-                         parameters: parameters,
-                         encoding: .json,
-                         headers: service.defaultHeader(),
-                         success: success,
-                         failure: failure)
+        self.service.post("https://language.googleapis.com/v1/documents:analyzeSentiment?key=AIzaSyDnrjzs20I2q68ufSfcgsBKrMur8Iegbmo",
+                          parameters: parameters,
+                          encoding: .json,
+                          headers: service.defaultHeader(),
+                          success: success,
+                          failure: failure)
     }
     
 }

@@ -13,16 +13,18 @@
 import UIKit
 
 protocol ResultBusinessLogic {
-    func analyzeSentiment(request: Result.AnalyzeSentiment.Request)
+    func analyzeSentiment()
 }
 
 protocol ResultDataStore {
+    var tweetText: String { get set }
 }
 
 class ResultInteractor: ResultBusinessLogic, ResultDataStore {
   
     var presenter: ResultPresentationLogic?
     var worker: ResultWorker?
+    var tweetText: String = ""
     
     init(configuration: Configuration) {
         
@@ -38,14 +40,23 @@ class ResultInteractor: ResultBusinessLogic, ResultDataStore {
     
     // MARK: Do something
 
-    func analyzeSentiment(request: Result.AnalyzeSentiment.Request) {
+    func analyzeSentiment() {
         
-        worker?.requestSentimentAnalysis(text: request.text, completion: { [weak self] (analyzedSentiment, error) in
-            guard let sentiment = analyzedSentiment else {
-                return
+        worker?.requestSentimentAnalysis(text: tweetText, completion: { [weak self] (analyzedSentiment, error) in
+            
+            if let _error = error, let message = _error.userInfo["message"] as? String {
+                let response = Result.Error.Response(code: _error.code, message: message)
+                self?.presenter?.presentError(response: response)
             }
-            let response = Result.AnalyzeSentiment.Response(analyzedSentiment: sentiment)
-            self?.presenter?.presentSentiment(response: response)
+            else {
+                guard let sentiment = analyzedSentiment else {
+                    let response = Result.Error.Response(code: 999, message: "Cannot evaluate the tweet's mood")
+                    self?.presenter?.presentError(response: response)
+                    return
+                }
+                let response = Result.AnalyzeSentiment.Response(analyzedSentiment: sentiment)
+                self?.presenter?.presentSentiment(response: response)
+            }
         })
     }
 }
