@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (4.8.0)
   - Keys (1.0.1)
+  - lottie-ios (2.5.2)
   - Moya (12.0.1):
     - Moya/Core (= 12.0.1)
   - Moya/Core (12.0.1):
@@ -13,12 +14,14 @@ PODS:
 
 DEPENDENCIES:
   - Keys (from `Pods/CocoaPodsKeys`)
+  - lottie-ios
   - Moya (~> 12.0)
   - TwitterKit
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - lottie-ios
     - Moya
     - Result
     - TwitterCore
@@ -31,11 +34,12 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
   Keys: a576f4c9c1c641ca913a959a9c62ed3f215a8de9
+  lottie-ios: 3fef45d3fabe63e3c7c2eb603dd64ddfffc73062
   Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
   Result: 7645bb3f50c2ce726dd0ff2fa7b6f42bbe6c3713
   TwitterCore: 644d59e75abccb26cf0a9050d2c4dea0e5412241
   TwitterKit: a2e60ddcedbf54091eac6f27685ca7a87681e1d7
 
-PODFILE CHECKSUM: 70bfb87a73e0c182f9940ad69c87896fe6424b71
+PODFILE CHECKSUM: 947e3e6dfd4c293567cbff6dc2d757120e76f464
 
 COCOAPODS: 1.5.3
