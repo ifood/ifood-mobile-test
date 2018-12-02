@@ -23,7 +23,8 @@ An iOS app that analyse a tweet sentiment.
 ## To run
 1. Clone this repository
 2. Run `pod install`
-3. Run project 🚀
+3. Enter with keys following the [**.sec**](https://github.com/rafaelhziliao/ifood-mobile-test/blob/master/.sec) document order
+4. Run project 🚀
 
 ## Architecture
 
