@@ -71,6 +71,9 @@ class ResultViewController: UIViewController, ResultDisplayLogic {
     }
 
     let lottieView = LottieView(lottieName: "pulse", size: CGSize(width: 200, height: 200))
+    var containerView: UIView?
+    var emojiLabel: UILabel?
+    var tweetSentiment: Result.TweetSentiment!
     
     // MARK: View lifecycle
 
@@ -93,10 +96,8 @@ class ResultViewController: UIViewController, ResultDisplayLogic {
         view.addGestureRecognizer(tap)
     }
     
-    func createContainerView(withBackground color: UIColor) -> UIView {
-        let containerView = UIView(frame: CGRect(origin: CGPoint.zero,
-                                                 size: CGSize(width: view.bounds.width * 0.8, height: view.bounds.height * 0.3)))
-        containerView.center = view.center
+    func createContainerView(withBackground color: UIColor, size: CGSize) -> UIView {
+        let containerView = UIView(frame: CGRect(origin: CGPoint.zero, size: size))
         containerView.backgroundColor = color
         containerView.layer.cornerRadius = 8.0
         containerView.translatesAutoresizingMaskIntoConstraints = false
@@ -109,6 +110,54 @@ class ResultViewController: UIViewController, ResultDisplayLogic {
         label.font = UIFont(name: "AppleColorEmoji", size: 90.0)
         label.sizeToFit()
         return label
+    }
+    
+    func createTweetSentimentView(tweetSentiment: Result.TweetSentiment, size: CGSize) {
+        containerView = createContainerView(withBackground: tweetSentiment.viewBackGroundColor, size: size)
+        containerView?.center = view.center
+        view.addSubview(containerView!)
+        
+        self.tweetSentiment = tweetSentiment
+        
+        emojiLabel = createEmojiView(emoji: tweetSentiment.emojiFace.rawValue)
+        emojiLabel!.center = containerView!.center
+        view.addSubview(emojiLabel!)
+        
+        containerView!.center.y = view.bounds.height + containerView!.bounds.height
+        emojiLabel!.center = containerView!.center
+        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 1.0, options: .curveEaseOut, animations: { [unowned self] in
+            self.containerView?.center.y = self.view.center.y
+            self.emojiLabel?.center = self.containerView!.center
+        })
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        
+        let scaledSize: CGSize = self.scaleViewSize(size: size)
+        
+        DispatchQueue.main.async {
+            if self.containerView != nil {
+                self.containerView?.removeFromSuperview()
+                self.emojiLabel?.removeFromSuperview()
+                self.createTweetSentimentView(tweetSentiment: self.tweetSentiment, size: scaledSize)
+            }
+        }
+        
+    }
+    
+    func scaleViewSize(size: CGSize) -> CGSize {
+        
+        var scaledSize: CGSize = CGSize.zero
+        
+        if UIDevice.current.orientation.isLandscape {
+            scaledSize = CGSize(width: size.width * 0.5, height: size.height * 0.8)
+        }
+        else {
+            scaledSize = CGSize(width: size.width * 0.8, height: size.height * 0.3)
+        }
+        
+        return scaledSize
     }
     
     // MARK: Actions
@@ -127,20 +176,12 @@ class ResultViewController: UIViewController, ResultDisplayLogic {
     // MARK: Display
 
     func displaySentiment(viewModel: Result.AnalyzeSentiment.ViewModel) {
+        
         self.lottieView.stopAnimating()
-        let containerView = createContainerView(withBackground: viewModel.tweetSentiment.viewBackGroundColor)
-        view.addSubview(containerView)
         
-        let label = createEmojiView(emoji: viewModel.tweetSentiment.emojiFace.rawValue)
-        label.center = containerView.center
-        view.addSubview(label)
+        let scaledSize: CGSize = self.scaleViewSize(size: view.bounds.size)
         
-        containerView.center.y = view.bounds.height + containerView.bounds.height
-        label.center = containerView.center
-        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 1.0, options: .curveEaseOut, animations: { [unowned self] in
-            containerView.center.y = self.view.center.y
-            label.center = containerView.center
-        })
+        createTweetSentimentView(tweetSentiment: viewModel.tweetSentiment, size: scaledSize)
     }
     
     func displayError(viewModel: Result.Error.ViewModel) {
