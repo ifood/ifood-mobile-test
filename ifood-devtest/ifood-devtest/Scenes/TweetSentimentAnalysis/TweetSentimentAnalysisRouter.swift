@@ -13,7 +13,7 @@
 import UIKit
 
 @objc protocol TweetSentimentAnalysisRoutingLogic {
-    //func routeToSomewhere(segue: UIStoryboardSegue?)
+    func routeToTimeLine()
 }
 
 protocol TweetSentimentAnalysisDataPassing {
@@ -26,29 +26,14 @@ class TweetSentimentAnalysisRouter: NSObject, TweetSentimentAnalysisRoutingLogic
   
     // MARK: Routing
   
-//    func routeToSomewhere(segue: UIStoryboardSegue?) {
-//        if let segue = segue {
-//            let destinationVC = segue.destination as! SomewhereViewController
-//            var destinationDS = destinationVC.router!.dataStore!
-//            passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-//        } else {
-//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//            let destinationVC = storyboard.instantiateViewController(withIdentifier: "SomewhereViewController") as! SomewhereViewController
-//            var destinationDS = destinationVC.router!.dataStore!
-//            passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-//            navigateToSomewhere(source: viewController!, destination: destinationVC)
-//        }
-//    }
+    func routeToTimeLine() {
+        self.navigateToTimeLine(source: viewController!)
+    }
 
     // MARK: Navigation
   
-//    func navigateToSomewhere(source: TweetSentimentAnalysisViewController, destination: SomewhereViewController) {
-//        source.show(destination, sender: nil)
-//    }
+    func navigateToTimeLine(source: TweetSentimentAnalysisViewController) {
+        source.navigationController?.popViewController(animated: true)
+    }
   
-    // MARK: Passing data
-  
-//    func passDataToSomewhere(source: TweetSentimentAnalysisDataStore, destination: inout SomewhereDataStore) {
-//        destination.name = source.name
-//    }
 }

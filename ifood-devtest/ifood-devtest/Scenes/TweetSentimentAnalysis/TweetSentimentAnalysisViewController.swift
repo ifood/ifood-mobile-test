@@ -119,7 +119,9 @@ class TweetSentimentAnalysisViewController: UIViewController, TweetSentimentAnal
                                       preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: ""),
-                                      style: .default, handler: nil))
+                                      style: .default, handler: { [weak self] (action) in
+            self?.router?.routeToTimeLine()
+        }))
         
         present(alert, animated: true, completion: nil)
     }

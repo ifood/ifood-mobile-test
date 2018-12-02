@@ -36,7 +36,7 @@ class TimeLineRouter: NSObject, TimeLineRoutingLogic, TimeLineDataPassing {
     // MARK: Navigation
   
     func navigateToSentimentAnalysis(source: TimeLineViewController, destination: TweetSentimentAnalysisViewController) {
-        source.show(destination, sender: nil)
+        source.navigationController?.pushViewController(destination, animated: true)
     }
   
     // MARK: Passing data
