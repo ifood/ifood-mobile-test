@@ -11,7 +11,7 @@ import XCTest
 
 class SentimentViewModelTests: XCTestCase {
     
-    func testSentimentSuccess() {
+    func testSentimentWithSuccess() {
         let repository = MockSentimentRepository(isSuccess: true)
         let viewModel = SentimentViewModel(tweet: TweetFactory.makeTweet(), repository: repository)
         
@@ -34,7 +34,7 @@ class SentimentViewModelTests: XCTestCase {
         waitForExpectations(timeout: Timeout.value, handler: nil)
     }
     
-    func testSentimentFailure() {
+    func testSentimentWithFailure() {
         let repository = MockSentimentRepository(isSuccess: false)
         let viewModel = SentimentViewModel(tweet: TweetFactory.makeTweet(), repository: repository)
         

@@ -11,7 +11,7 @@ import XCTest
 
 class AuthViewModelTests: XCTestCase {
 
-    func testAuthSuccess() {
+    func testAuthWithSuccess() {
         // Given
         let repository = MockAuthRepository(isSuccess: true)
         let viewModel = AuthViewModel(repository: repository)
@@ -26,7 +26,7 @@ class AuthViewModelTests: XCTestCase {
         XCTAssertFalse(delegate.hasError)
     }
 
-    func testAuthFailure() {
+    func testAuthWithFailure() {
         // Given
         let repository = MockAuthRepository(isSuccess: false)
         let viewModel = AuthViewModel(repository: repository)

@@ -68,6 +68,8 @@
 		2BE87BE821B4EFD900489BC9 /* TweetFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87BE721B4EFD900489BC9 /* TweetFactory.swift */; };
 		2BE87BEA21B53D6500489BC9 /* SentimentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87BE921B53D6500489BC9 /* SentimentTests.swift */; };
 		2BE87BEC21B54ABC00489BC9 /* FloatingPoint+RadiansAndDegrees.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87BEB21B54ABC00489BC9 /* FloatingPoint+RadiansAndDegrees.swift */; };
+		2BE87BEF21B54BE200489BC9 /* SearchViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87BEE21B54BE200489BC9 /* SearchViewModelTests.swift */; };
+		2BE87BF121B54C0F00489BC9 /* MockSearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87BF021B54C0F00489BC9 /* MockSearchRepository.swift */; };
 		AEFAE7761E869FFABA5C3B8B /* Pods_SentimentAnalysisTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3FC6F1DAF0460096BFD2BF0 /* Pods_SentimentAnalysisTests.framework */; };
 		E8607A255C0826B300B3E75D /* Pods_SentimentAnalysis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18717B4359BD8D5886601C01 /* Pods_SentimentAnalysis.framework */; };
 /* End PBXBuildFile section */
@@ -150,6 +152,8 @@
 		2BE87BE721B4EFD900489BC9 /* TweetFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetFactory.swift; sourceTree = "<group>"; };
 		2BE87BE921B53D6500489BC9 /* SentimentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentTests.swift; sourceTree = "<group>"; };
 		2BE87BEB21B54ABC00489BC9 /* FloatingPoint+RadiansAndDegrees.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FloatingPoint+RadiansAndDegrees.swift"; sourceTree = "<group>"; };
+		2BE87BEE21B54BE200489BC9 /* SearchViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModelTests.swift; sourceTree = "<group>"; };
+		2BE87BF021B54C0F00489BC9 /* MockSearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchRepository.swift; sourceTree = "<group>"; };
 		5A16E418A1C8F242666218D5 /* Pods-SentimentAnalysis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SentimentAnalysis.release.xcconfig"; path = "Pods/Target Support Files/Pods-SentimentAnalysis/Pods-SentimentAnalysis.release.xcconfig"; sourceTree = "<group>"; };
 		72B1138003E9313C6D8D8F32 /* Pods-SentimentAnalysisTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SentimentAnalysisTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SentimentAnalysisTests/Pods-SentimentAnalysisTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B3FC6F1DAF0460096BFD2BF0 /* Pods_SentimentAnalysisTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SentimentAnalysisTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -227,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				2B08B4D421AD3A2B006F6593 /* SentimentAnalysisTests.swift */,
+				2BE87BED21B54BCE00489BC9 /* Search */,
 				2BE87BE021B4EE6200489BC9 /* Sentiment */,
 				2BE87BCC21B4E40C00489BC9 /* Auth */,
 				2B08B4D621AD3A2B006F6593 /* Info.plist */,
@@ -466,6 +471,15 @@
 				2BE87BE921B53D6500489BC9 /* SentimentTests.swift */,
 			);
 			path = Sentiment;
+			sourceTree = "<group>";
+		};
+		2BE87BED21B54BCE00489BC9 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				2BE87BEE21B54BE200489BC9 /* SearchViewModelTests.swift */,
+				2BE87BF021B54C0F00489BC9 /* MockSearchRepository.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 		7918154B01D2D8754CCB8C7E /* Frameworks */ = {
@@ -714,8 +728,10 @@
 				2BE87BE221B4EE8600489BC9 /* SentimentViewModelTests.swift in Sources */,
 				2BE87BD321B4E53E00489BC9 /* MockAuthRepository.swift in Sources */,
 				2BE87BD521B4EAC000489BC9 /* AuthFactory.swift in Sources */,
+				2BE87BEF21B54BE200489BC9 /* SearchViewModelTests.swift in Sources */,
 				2B08B4D521AD3A2B006F6593 /* SentimentAnalysisTests.swift in Sources */,
 				2BE87BE421B4EEB100489BC9 /* MockSentimentRepository.swift in Sources */,
+				2BE87BF121B54C0F00489BC9 /* MockSearchRepository.swift in Sources */,
 				2BE87BE821B4EFD900489BC9 /* TweetFactory.swift in Sources */,
 				2BE87BE621B4EF1B00489BC9 /* SentimentFactory.swift in Sources */,
 				2BE87BEA21B53D6500489BC9 /* SentimentTests.swift in Sources */,

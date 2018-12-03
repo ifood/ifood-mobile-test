@@ -49,3 +49,9 @@ struct Tweet: Codable {
         }
     }
 }
+
+extension Tweet: Equatable {
+    static func == (lhs: Tweet, rhs: Tweet) -> Bool {
+        return lhs.id == rhs.id
+    }
+}

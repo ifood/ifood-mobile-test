@@ -58,9 +58,17 @@ class SearchViewModel {
             }
         }
     }
+    
+    func shouldLoadMore() -> Bool {
+        return !loadingState.value
+            && hasMoreData.value
+            && maxId.value != nil
+            && !searchInput.value.isEmpty
+            && dataSource.value.count > 0
+    }
 
     func loadMore() {
-        guard !loadingState.value, hasMoreData.value, maxId.value != nil else {
+        guard shouldLoadMore() else {
             return
         }
         
