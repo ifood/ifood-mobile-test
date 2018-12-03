@@ -1,0 +1,65 @@
+PODS:
+  - Alamofire (4.8.0)
+  - Keychain (0.2)
+  - Keys (1.0.1)
+  - Kingfisher (4.10.1)
+  - Moya (12.0.1):
+    - Moya/Core (= 12.0.1)
+  - Moya/Core (12.0.1):
+    - Alamofire (~> 4.1)
+    - Result (~> 4.0)
+  - NVActivityIndicatorView (4.4.0):
+    - NVActivityIndicatorView/Presenter (= 4.4.0)
+  - NVActivityIndicatorView/Presenter (4.4.0)
+  - Result (4.0.0)
+  - Reusable (4.0.4):
+    - Reusable/Storyboard (= 4.0.4)
+    - Reusable/View (= 4.0.4)
+  - Reusable/Storyboard (4.0.4)
+  - Reusable/View (4.0.4)
+  - RevealingSplashView (0.6.0)
+
+DEPENDENCIES:
+  - Keychain (from `https://github.com/tink-ab/Keychain`)
+  - Keys (from `Pods/CocoaPodsKeys`)
+  - Kingfisher (~> 4.0)
+  - Moya (~> 12.0)
+  - NVActivityIndicatorView
+  - Reusable
+  - RevealingSplashView
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Kingfisher
+    - Moya
+    - NVActivityIndicatorView
+    - Result
+    - Reusable
+    - RevealingSplashView
+
+EXTERNAL SOURCES:
+  Keychain:
+    :git: https://github.com/tink-ab/Keychain
+  Keys:
+    :path: Pods/CocoaPodsKeys
+
+CHECKOUT OPTIONS:
+  Keychain:
+    :commit: 38a6ea5815a9567bab805422c3210c3d22280ea6
+    :git: https://github.com/tink-ab/Keychain
+
+SPEC CHECKSUMS:
+  Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
+  Keychain: f12ed352ec8c9d767e99ef5f3802049cb5cda5bb
+  Keys: a576f4c9c1c641ca913a959a9c62ed3f215a8de9
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
+  NVActivityIndicatorView: ec7440a57af2450319d3a4181cca7da6fc127064
+  Result: 7645bb3f50c2ce726dd0ff2fa7b6f42bbe6c3713
+  Reusable: 7fc772097df3e5fc86f59d8a7af9708e49b5ff55
+  RevealingSplashView: 40c5a770894459736acdc95655eeba0dd30ce91c
+
+PODFILE CHECKSUM: 16e9cf6f83819b4a9a3d037a7f16ef5d00260a49
+
+COCOAPODS: 1.5.3
