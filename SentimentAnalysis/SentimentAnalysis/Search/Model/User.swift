@@ -14,6 +14,12 @@ struct User: Codable {
     let screenName: String
     let image: URL
     
+    init(name: String, screenName: String, image: URL) {
+        self.name = name
+        self.screenName = screenName
+        self.image = image
+    }
+    
     enum CodingKeys: String, CodingKey {
         case name
         case screenName = "screen_name"

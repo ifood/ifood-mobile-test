@@ -14,6 +14,12 @@ struct Tweet: Codable {
     let text: String
     let user: User
     
+    init(createdAt: Date, text: String, user: User) {
+        self.createdAt = createdAt
+        self.text = text
+        self.user = user
+    }
+    
     enum CodingKeys: String, CodingKey {
         case createdAt = "created_at"
         case text

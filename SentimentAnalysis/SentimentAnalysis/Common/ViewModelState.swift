@@ -14,3 +14,14 @@ enum ViewModelState<Data, Error> {
     case empty
     case error(Error)
 }
+
+extension ViewModelState: Equatable {
+    static func == (lhs: ViewModelState<Data, Error>, rhs: ViewModelState<Data, Error>) -> Bool {
+        switch (lhs, rhs) {
+        case (.loading, .loading), (.empty, .empty):
+            return true
+        default:
+            return false
+        }
+    }
+}
