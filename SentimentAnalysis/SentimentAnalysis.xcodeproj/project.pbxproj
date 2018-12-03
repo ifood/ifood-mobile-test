@@ -67,6 +67,7 @@
 		2BE87BE621B4EF1B00489BC9 /* SentimentFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87BE521B4EF1B00489BC9 /* SentimentFactory.swift */; };
 		2BE87BE821B4EFD900489BC9 /* TweetFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87BE721B4EFD900489BC9 /* TweetFactory.swift */; };
 		2BE87BEA21B53D6500489BC9 /* SentimentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87BE921B53D6500489BC9 /* SentimentTests.swift */; };
+		2BE87BEC21B54ABC00489BC9 /* FloatingPoint+RadiansAndDegrees.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87BEB21B54ABC00489BC9 /* FloatingPoint+RadiansAndDegrees.swift */; };
 		AEFAE7761E869FFABA5C3B8B /* Pods_SentimentAnalysisTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3FC6F1DAF0460096BFD2BF0 /* Pods_SentimentAnalysisTests.framework */; };
 		E8607A255C0826B300B3E75D /* Pods_SentimentAnalysis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18717B4359BD8D5886601C01 /* Pods_SentimentAnalysis.framework */; };
 /* End PBXBuildFile section */
@@ -148,6 +149,7 @@
 		2BE87BE521B4EF1B00489BC9 /* SentimentFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentFactory.swift; sourceTree = "<group>"; };
 		2BE87BE721B4EFD900489BC9 /* TweetFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetFactory.swift; sourceTree = "<group>"; };
 		2BE87BE921B53D6500489BC9 /* SentimentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentTests.swift; sourceTree = "<group>"; };
+		2BE87BEB21B54ABC00489BC9 /* FloatingPoint+RadiansAndDegrees.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FloatingPoint+RadiansAndDegrees.swift"; sourceTree = "<group>"; };
 		5A16E418A1C8F242666218D5 /* Pods-SentimentAnalysis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SentimentAnalysis.release.xcconfig"; path = "Pods/Target Support Files/Pods-SentimentAnalysis/Pods-SentimentAnalysis.release.xcconfig"; sourceTree = "<group>"; };
 		72B1138003E9313C6D8D8F32 /* Pods-SentimentAnalysisTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SentimentAnalysisTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SentimentAnalysisTests/Pods-SentimentAnalysisTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B3FC6F1DAF0460096BFD2BF0 /* Pods_SentimentAnalysisTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SentimentAnalysisTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -270,6 +272,7 @@
 				2BE87BBA21B3A26400489BC9 /* UIColor+Palette.swift */,
 				2BE87BBC21B3A41500489BC9 /* Keychain+AuthTokenStore.swift */,
 				2BE87BC021B46AD000489BC9 /* UINavigationController+StatusBarStyle.swift */,
+				2BE87BEB21B54ABC00489BC9 /* FloatingPoint+RadiansAndDegrees.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -676,6 +679,7 @@
 				2BE5FA2321B2E5A8007DAC2A /* Sentiment.swift in Sources */,
 				2B08B4C221AD3A28006F6593 /* SearchViewController.swift in Sources */,
 				2B7BAB5321B2EC76004AE351 /* SentimentAnalyzerResponse.swift in Sources */,
+				2BE87BEC21B54ABC00489BC9 /* FloatingPoint+RadiansAndDegrees.swift in Sources */,
 				2BE5FA0A21AF57A2007DAC2A /* Tweet.swift in Sources */,
 				2BE5F9FF21AE37B3007DAC2A /* Auth.swift in Sources */,
 				2BE5FA0821AF5790007DAC2A /* User.swift in Sources */,

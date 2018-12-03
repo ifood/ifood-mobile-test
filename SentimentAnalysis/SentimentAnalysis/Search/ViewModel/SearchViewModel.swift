@@ -35,6 +35,7 @@ class SearchViewModel {
     func search(with username: String) {
         searchInput.value = username
         searchState.value = .loading
+        maxId.value = nil
         repository.search(with: username, maxId: maxId.value) { [weak self] (result) in
             switch result {
             case .success(let tweets):
