@@ -1,0 +1,2461 @@
+[
+    {
+        "created_at": "Tue Nov 27 14:51:15 +0000 2018",
+        "id": 1067430657335296006,
+        "id_str": "1067430657335296006",
+        "text": "A jam-packed episode of @stacktracepod this week 🎉\n\n📡 Remote app configs\n🛠 Under the hood of my recent iPad Pro pro… https://t.co/CF2CvdlwWI",
+        "truncated": true,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [
+                {
+                    "screen_name": "stacktracepod",
+                    "name": "Stacktrace Podcast",
+                    "id": 972546618363916289,
+                    "id_str": "972546618363916289",
+                    "indices": [
+                        24,
+                        38
+                    ]
+                }
+            ],
+            "urls": [
+                {
+                    "url": "https://t.co/CF2CvdlwWI",
+                    "expanded_url": "https://twitter.com/i/web/status/1067430657335296006",
+                    "display_url": "twitter.com/i/web/status/1…",
+                    "indices": [
+                        117,
+                        140
+                    ]
+                }
+            ]
+        },
+        "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 253500322,
+            "id_str": "253500322",
+            "name": "John Sundell",
+            "screen_name": "johnsundell",
+            "location": "Krakow, Poland",
+            "description": "I post weekly tips, articles & podcasts about Swift development. Creator of @swiftbysundell, co-host of @stacktracepod & iOS/game dev 👨‍💻",
+            "url": "https://t.co/AU4A5eplWw",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "https://t.co/AU4A5eplWw",
+                            "expanded_url": "http://www.swiftbysundell.com",
+                            "display_url": "swiftbysundell.com",
+                            "indices": [
+                                0,
+                                23
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 17006,
+            "friends_count": 378,
+            "listed_count": 359,
+            "created_at": "Thu Feb 17 11:07:48 +0000 2011",
+            "favourites_count": 15246,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": false,
+            "verified": false,
+            "statuses_count": 9077,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "000000",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/855170244469542915/qdlnkTq-_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/855170244469542915/qdlnkTq-_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/253500322/1539506873",
+            "profile_link_color": "FE4F2C",
+            "profile_sidebar_border_color": "000000",
+            "profile_sidebar_fill_color": "000000",
+            "profile_text_color": "000000",
+            "profile_use_background_image": false,
+            "has_extended_profile": true,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 15,
+        "favorite_count": 70,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "en"
+    },
+    {
+        "created_at": "Tue Nov 27 13:45:52 +0000 2018",
+        "id": 1067414205060587520,
+        "id_str": "1067414205060587520",
+        "text": "RT @javilorbada: Alright! After months of hard work, I’m extremely excited to let you know that, https://t.co/BHEi4CsB8n is live! A showcas…",
+        "truncated": false,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [
+                {
+                    "screen_name": "javilorbada",
+                    "name": "Javi Lorbada",
+                    "id": 312533802,
+                    "id_str": "312533802",
+                    "indices": [
+                        3,
+                        15
+                    ]
+                }
+            ],
+            "urls": [
+                {
+                    "url": "https://t.co/BHEi4CsB8n",
+                    "expanded_url": "http://javilorbada.com",
+                    "display_url": "javilorbada.com",
+                    "indices": [
+                        97,
+                        120
+                    ]
+                }
+            ]
+        },
+        "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 253500322,
+            "id_str": "253500322",
+            "name": "John Sundell",
+            "screen_name": "johnsundell",
+            "location": "Krakow, Poland",
+            "description": "I post weekly tips, articles & podcasts about Swift development. Creator of @swiftbysundell, co-host of @stacktracepod & iOS/game dev 👨‍💻",
+            "url": "https://t.co/AU4A5eplWw",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "https://t.co/AU4A5eplWw",
+                            "expanded_url": "http://www.swiftbysundell.com",
+                            "display_url": "swiftbysundell.com",
+                            "indices": [
+                                0,
+                                23
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 17006,
+            "friends_count": 378,
+            "listed_count": 359,
+            "created_at": "Thu Feb 17 11:07:48 +0000 2011",
+            "favourites_count": 15246,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": false,
+            "verified": false,
+            "statuses_count": 9077,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "000000",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/855170244469542915/qdlnkTq-_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/855170244469542915/qdlnkTq-_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/253500322/1539506873",
+            "profile_link_color": "FE4F2C",
+            "profile_sidebar_border_color": "000000",
+            "profile_sidebar_fill_color": "000000",
+            "profile_text_color": "000000",
+            "profile_use_background_image": false,
+            "has_extended_profile": true,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "retweeted_status": {
+            "created_at": "Tue Nov 27 13:31:05 +0000 2018",
+            "id": 1067410483056181248,
+            "id_str": "1067410483056181248",
+            "text": "Alright! After months of hard work, I’m extremely excited to let you know that, https://t.co/BHEi4CsB8n is live! A… https://t.co/AMJO6vBMq9",
+            "truncated": true,
+            "entities": {
+                "hashtags": [],
+                "symbols": [],
+                "user_mentions": [],
+                "urls": [
+                    {
+                        "url": "https://t.co/BHEi4CsB8n",
+                        "expanded_url": "http://javilorbada.com",
+                        "display_url": "javilorbada.com",
+                        "indices": [
+                            80,
+                            103
+                        ]
+                    },
+                    {
+                        "url": "https://t.co/AMJO6vBMq9",
+                        "expanded_url": "https://twitter.com/i/web/status/1067410483056181248",
+                        "display_url": "twitter.com/i/web/status/1…",
+                        "indices": [
+                            116,
+                            139
+                        ]
+                    }
+                ]
+            },
+            "source": "<a href=\"https://tapbots.com/software/tweetbot/mac\" rel=\"nofollow\">Tweetbot for Mac</a>",
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": null,
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "user": {
+                "id": 312533802,
+                "id_str": "312533802",
+                "name": "Javi Lorbada",
+                "screen_name": "javilorbada",
+                "location": "Madrid, Spain",
+                "description": "▸Travel Photographer & iOS Dev    ▸Mistake Maker.   ▸World Explorer.  ▸Adventurous Traveler.",
+                "url": "https://t.co/eyVEmFST68",
+                "entities": {
+                    "url": {
+                        "urls": [
+                            {
+                                "url": "https://t.co/eyVEmFST68",
+                                "expanded_url": "https://javilorbada.com/",
+                                "display_url": "javilorbada.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ]
+                            }
+                        ]
+                    },
+                    "description": {
+                        "urls": []
+                    }
+                },
+                "protected": false,
+                "followers_count": 403,
+                "friends_count": 437,
+                "listed_count": 43,
+                "created_at": "Tue Jun 07 08:25:40 +0000 2011",
+                "favourites_count": 976,
+                "utc_offset": null,
+                "time_zone": null,
+                "geo_enabled": true,
+                "verified": false,
+                "statuses_count": 6023,
+                "lang": "en",
+                "contributors_enabled": false,
+                "is_translator": false,
+                "is_translation_enabled": false,
+                "profile_background_color": "1A1B16",
+                "profile_background_image_url": "http://abs.twimg.com/images/themes/theme14/bg.gif",
+                "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme14/bg.gif",
+                "profile_background_tile": false,
+                "profile_image_url": "http://pbs.twimg.com/profile_images/690514943024709632/GsmAhgST_normal.jpg",
+                "profile_image_url_https": "https://pbs.twimg.com/profile_images/690514943024709632/GsmAhgST_normal.jpg",
+                "profile_banner_url": "https://pbs.twimg.com/profile_banners/312533802/1543325173",
+                "profile_link_color": "918E7A",
+                "profile_sidebar_border_color": "181A1E",
+                "profile_sidebar_fill_color": "292923",
+                "profile_text_color": "666666",
+                "profile_use_background_image": true,
+                "has_extended_profile": false,
+                "default_profile": false,
+                "default_profile_image": false,
+                "following": null,
+                "follow_request_sent": null,
+                "notifications": null,
+                "translator_type": "none"
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": {
+                "id": "012075e355aac161",
+                "url": "https://api.twitter.com/1.1/geo/id/012075e355aac161.json",
+                "place_type": "neighborhood",
+                "name": "Imperial",
+                "full_name": "Imperial, Madrid",
+                "country_code": "ES",
+                "country": "Espanha",
+                "contained_within": [],
+                "bounding_box": {
+                    "type": "Polygon",
+                    "coordinates": [
+                        [
+                            [
+                                -3.7237964,
+                                40.3993761
+                            ],
+                            [
+                                -3.7113818,
+                                40.3993761
+                            ],
+                            [
+                                -3.7113818,
+                                40.4140825
+                            ],
+                            [
+                                -3.7237964,
+                                40.4140825
+                            ]
+                        ]
+                    ]
+                },
+                "attributes": {}
+            },
+            "contributors": null,
+            "is_quote_status": false,
+            "retweet_count": 6,
+            "favorite_count": 23,
+            "favorited": false,
+            "retweeted": false,
+            "possibly_sensitive": false,
+            "lang": "en"
+        },
+        "is_quote_status": false,
+        "retweet_count": 6,
+        "favorite_count": 0,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "en"
+    },
+    {
+        "created_at": "Tue Nov 27 13:45:48 +0000 2018",
+        "id": 1067414186861441025,
+        "id_str": "1067414186861441025",
+        "text": "@javilorbada Wow, truly stunning photos! 😍 And the site looks amazing too - great work and congrats on launching! 🎉… https://t.co/bTlYocRNsc",
+        "truncated": true,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [
+                {
+                    "screen_name": "javilorbada",
+                    "name": "Javi Lorbada",
+                    "id": 312533802,
+                    "id_str": "312533802",
+                    "indices": [
+                        0,
+                        12
+                    ]
+                }
+            ],
+            "urls": [
+                {
+                    "url": "https://t.co/bTlYocRNsc",
+                    "expanded_url": "https://twitter.com/i/web/status/1067414186861441025",
+                    "display_url": "twitter.com/i/web/status/1…",
+                    "indices": [
+                        117,
+                        140
+                    ]
+                }
+            ]
+        },
+        "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+        "in_reply_to_status_id": 1067411457745305600,
+        "in_reply_to_status_id_str": "1067411457745305600",
+        "in_reply_to_user_id": 312533802,
+        "in_reply_to_user_id_str": "312533802",
+        "in_reply_to_screen_name": "javilorbada",
+        "user": {
+            "id": 253500322,
+            "id_str": "253500322",
+            "name": "John Sundell",
+            "screen_name": "johnsundell",
+            "location": "Krakow, Poland",
+            "description": "I post weekly tips, articles & podcasts about Swift development. Creator of @swiftbysundell, co-host of @stacktracepod & iOS/game dev 👨‍💻",
+            "url": "https://t.co/AU4A5eplWw",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "https://t.co/AU4A5eplWw",
+                            "expanded_url": "http://www.swiftbysundell.com",
+                            "display_url": "swiftbysundell.com",
+                            "indices": [
+                                0,
+                                23
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 17006,
+            "friends_count": 378,
+            "listed_count": 359,
+            "created_at": "Thu Feb 17 11:07:48 +0000 2011",
+            "favourites_count": 15246,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": false,
+            "verified": false,
+            "statuses_count": 9077,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "000000",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/855170244469542915/qdlnkTq-_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/855170244469542915/qdlnkTq-_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/253500322/1539506873",
+            "profile_link_color": "FE4F2C",
+            "profile_sidebar_border_color": "000000",
+            "profile_sidebar_fill_color": "000000",
+            "profile_text_color": "000000",
+            "profile_use_background_image": false,
+            "has_extended_profile": true,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 0,
+        "favorite_count": 1,
+        "favorited": false,
+        "retweeted": false,
+        "lang": "en"
+    },
+    {
+        "created_at": "Tue Nov 27 11:11:24 +0000 2018",
+        "id": 1067375331588362240,
+        "id_str": "1067375331588362240",
+        "text": "@wlisac @swiftbysundell Totally 👍 Glad you liked the post 🙂",
+        "truncated": false,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [
+                {
+                    "screen_name": "wlisac",
+                    "name": "Will Lisac",
+                    "id": 14233856,
+                    "id_str": "14233856",
+                    "indices": [
+                        0,
+                        7
+                    ]
+                },
+                {
+                    "screen_name": "swiftbysundell",
+                    "name": "Swift by Sundell",
+                    "id": 887333849478434816,
+                    "id_str": "887333849478434816",
+                    "indices": [
+                        8,
+                        23
+                    ]
+                }
+            ],
+            "urls": []
+        },
+        "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+        "in_reply_to_status_id": 1067320795074977792,
+        "in_reply_to_status_id_str": "1067320795074977792",
+        "in_reply_to_user_id": 14233856,
+        "in_reply_to_user_id_str": "14233856",
+        "in_reply_to_screen_name": "wlisac",
+        "user": {
+            "id": 253500322,
+            "id_str": "253500322",
+            "name": "John Sundell",
+            "screen_name": "johnsundell",
+            "location": "Krakow, Poland",
+            "description": "I post weekly tips, articles & podcasts about Swift development. Creator of @swiftbysundell, co-host of @stacktracepod & iOS/game dev 👨‍💻",
+            "url": "https://t.co/AU4A5eplWw",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "https://t.co/AU4A5eplWw",
+                            "expanded_url": "http://www.swiftbysundell.com",
+                            "display_url": "swiftbysundell.com",
+                            "indices": [
+                                0,
+                                23
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 17006,
+            "friends_count": 378,
+            "listed_count": 359,
+            "created_at": "Thu Feb 17 11:07:48 +0000 2011",
+            "favourites_count": 15246,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": false,
+            "verified": false,
+            "statuses_count": 9077,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "000000",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/855170244469542915/qdlnkTq-_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/855170244469542915/qdlnkTq-_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/253500322/1539506873",
+            "profile_link_color": "FE4F2C",
+            "profile_sidebar_border_color": "000000",
+            "profile_sidebar_fill_color": "000000",
+            "profile_text_color": "000000",
+            "profile_use_background_image": false,
+            "has_extended_profile": true,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 0,
+        "favorite_count": 2,
+        "favorited": false,
+        "retweeted": false,
+        "lang": "en"
+    },
+    {
+        "created_at": "Tue Nov 27 10:22:57 +0000 2018",
+        "id": 1067363138608275456,
+        "id_str": "1067363138608275456",
+        "text": "@lordcodes @swiftbysundell Yes, exactly 👍 The date is the original publish date. I'm working on a new implementatio… https://t.co/lCTy6v3Ndx",
+        "truncated": true,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [
+                {
+                    "screen_name": "lordcodes",
+                    "name": "Andrew Lord",
+                    "id": 2788135822,
+                    "id_str": "2788135822",
+                    "indices": [
+                        0,
+                        10
+                    ]
+                },
+                {
+                    "screen_name": "swiftbysundell",
+                    "name": "Swift by Sundell",
+                    "id": 887333849478434816,
+                    "id_str": "887333849478434816",
+                    "indices": [
+                        11,
+                        26
+                    ]
+                }
+            ],
+            "urls": [
+                {
+                    "url": "https://t.co/lCTy6v3Ndx",
+                    "expanded_url": "https://twitter.com/i/web/status/1067363138608275456",
+                    "display_url": "twitter.com/i/web/status/1…",
+                    "indices": [
+                        117,
+                        140
+                    ]
+                }
+            ]
+        },
+        "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+        "in_reply_to_status_id": 1067361684275281920,
+        "in_reply_to_status_id_str": "1067361684275281920",
+        "in_reply_to_user_id": 2788135822,
+        "in_reply_to_user_id_str": "2788135822",
+        "in_reply_to_screen_name": "lordcodes",
+        "user": {
+            "id": 253500322,
+            "id_str": "253500322",
+            "name": "John Sundell",
+            "screen_name": "johnsundell",
+            "location": "Krakow, Poland",
+            "description": "I post weekly tips, articles & podcasts about Swift development. Creator of @swiftbysundell, co-host of @stacktracepod & iOS/game dev 👨‍💻",
+            "url": "https://t.co/AU4A5eplWw",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "https://t.co/AU4A5eplWw",
+                            "expanded_url": "http://www.swiftbysundell.com",
+                            "display_url": "swiftbysundell.com",
+                            "indices": [
+                                0,
+                                23
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 17006,
+            "friends_count": 378,
+            "listed_count": 359,
+            "created_at": "Thu Feb 17 11:07:48 +0000 2011",
+            "favourites_count": 15246,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": false,
+            "verified": false,
+            "statuses_count": 9077,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "000000",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/855170244469542915/qdlnkTq-_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/855170244469542915/qdlnkTq-_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/253500322/1539506873",
+            "profile_link_color": "FE4F2C",
+            "profile_sidebar_border_color": "000000",
+            "profile_sidebar_fill_color": "000000",
+            "profile_text_color": "000000",
+            "profile_use_background_image": false,
+            "has_extended_profile": true,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 0,
+        "favorite_count": 1,
+        "favorited": false,
+        "retweeted": false,
+        "lang": "en"
+    },
+    {
+        "created_at": "Tue Nov 27 09:50:30 +0000 2018",
+        "id": 1067354973338591232,
+        "id_str": "1067354973338591232",
+        "text": "@matt_815 @saeed_taheri You should submit a question about it for the next episode of @swiftbysundell 😉",
+        "truncated": false,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [
+                {
+                    "screen_name": "matt_815",
+                    "name": "Matt",
+                    "id": 565617229,
+                    "id_str": "565617229",
+                    "indices": [
+                        0,
+                        9
+                    ]
+                },
+                {
+                    "screen_name": "saeed_taheri",
+                    "name": "Saeed Taheri 🇮🇷",
+                    "id": 188781195,
+                    "id_str": "188781195",
+                    "indices": [
+                        10,
+                        23
+                    ]
+                },
+                {
+                    "screen_name": "swiftbysundell",
+                    "name": "Swift by Sundell",
+                    "id": 887333849478434816,
+                    "id_str": "887333849478434816",
+                    "indices": [
+                        86,
+                        101
+                    ]
+                }
+            ],
+            "urls": []
+        },
+        "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+        "in_reply_to_status_id": 1066690238645501954,
+        "in_reply_to_status_id_str": "1066690238645501954",
+        "in_reply_to_user_id": 565617229,
+        "in_reply_to_user_id_str": "565617229",
+        "in_reply_to_screen_name": "matt_815",
+        "user": {
+            "id": 253500322,
+            "id_str": "253500322",
+            "name": "John Sundell",
+            "screen_name": "johnsundell",
+            "location": "Krakow, Poland",
+            "description": "I post weekly tips, articles & podcasts about Swift development. Creator of @swiftbysundell, co-host of @stacktracepod & iOS/game dev 👨‍💻",
+            "url": "https://t.co/AU4A5eplWw",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "https://t.co/AU4A5eplWw",
+                            "expanded_url": "http://www.swiftbysundell.com",
+                            "display_url": "swiftbysundell.com",
+                            "indices": [
+                                0,
+                                23
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 17006,
+            "friends_count": 378,
+            "listed_count": 359,
+            "created_at": "Thu Feb 17 11:07:48 +0000 2011",
+            "favourites_count": 15246,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": false,
+            "verified": false,
+            "statuses_count": 9077,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "000000",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/855170244469542915/qdlnkTq-_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/855170244469542915/qdlnkTq-_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/253500322/1539506873",
+            "profile_link_color": "FE4F2C",
+            "profile_sidebar_border_color": "000000",
+            "profile_sidebar_fill_color": "000000",
+            "profile_text_color": "000000",
+            "profile_use_background_image": false,
+            "has_extended_profile": true,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 0,
+        "favorite_count": 2,
+        "favorited": false,
+        "retweeted": false,
+        "lang": "en"
+    },
+    {
+        "created_at": "Tue Nov 27 09:49:45 +0000 2018",
+        "id": 1067354781952417792,
+        "id_str": "1067354781952417792",
+        "text": "@suprie https://t.co/rsKmyJChBD",
+        "truncated": false,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [
+                {
+                    "screen_name": "suprie",
+                    "name": "숩",
+                    "id": 11327202,
+                    "id_str": "11327202",
+                    "indices": [
+                        0,
+                        7
+                    ]
+                }
+            ],
+            "urls": [
+                {
+                    "url": "https://t.co/rsKmyJChBD",
+                    "expanded_url": "https://github.com/johnsundell/marathon",
+                    "display_url": "github.com/johnsundell/ma…",
+                    "indices": [
+                        8,
+                        31
+                    ]
+                }
+            ]
+        },
+        "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+        "in_reply_to_status_id": 1066691641744846849,
+        "in_reply_to_status_id_str": "1066691641744846849",
+        "in_reply_to_user_id": 11327202,
+        "in_reply_to_user_id_str": "11327202",
+        "in_reply_to_screen_name": "suprie",
+        "user": {
+            "id": 253500322,
+            "id_str": "253500322",
+            "name": "John Sundell",
+            "screen_name": "johnsundell",
+            "location": "Krakow, Poland",
+            "description": "I post weekly tips, articles & podcasts about Swift development. Creator of @swiftbysundell, co-host of @stacktracepod & iOS/game dev 👨‍💻",
+            "url": "https://t.co/AU4A5eplWw",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "https://t.co/AU4A5eplWw",
+                            "expanded_url": "http://www.swiftbysundell.com",
+                            "display_url": "swiftbysundell.com",
+                            "indices": [
+                                0,
+                                23
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 17006,
+            "friends_count": 378,
+            "listed_count": 359,
+            "created_at": "Thu Feb 17 11:07:48 +0000 2011",
+            "favourites_count": 15246,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": false,
+            "verified": false,
+            "statuses_count": 9077,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "000000",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/855170244469542915/qdlnkTq-_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/855170244469542915/qdlnkTq-_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/253500322/1539506873",
+            "profile_link_color": "FE4F2C",
+            "profile_sidebar_border_color": "000000",
+            "profile_sidebar_fill_color": "000000",
+            "profile_text_color": "000000",
+            "profile_use_background_image": false,
+            "has_extended_profile": true,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 0,
+        "favorite_count": 0,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "und"
+    },
+    {
+        "created_at": "Tue Nov 27 09:49:13 +0000 2018",
+        "id": 1067354647105597441,
+        "id_str": "1067354647105597441",
+        "text": "@eduardolomb Under the hood, flatMap unwraps the optional and calls the passed closure only if the value isn't nil 🙂",
+        "truncated": false,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [
+                {
+                    "screen_name": "eduardolomb",
+                    "name": "EduardoLomb 🛩️🎹",
+                    "id": 17636311,
+                    "id_str": "17636311",
+                    "indices": [
+                        0,
+                        12
+                    ]
+                }
+            ],
+            "urls": []
+        },
+        "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+        "in_reply_to_status_id": 1066850831285317632,
+        "in_reply_to_status_id_str": "1066850831285317632",
+        "in_reply_to_user_id": 17636311,
+        "in_reply_to_user_id_str": "17636311",
+        "in_reply_to_screen_name": "eduardolomb",
+        "user": {
+            "id": 253500322,
+            "id_str": "253500322",
+            "name": "John Sundell",
+            "screen_name": "johnsundell",
+            "location": "Krakow, Poland",
+            "description": "I post weekly tips, articles & podcasts about Swift development. Creator of @swiftbysundell, co-host of @stacktracepod & iOS/game dev 👨‍💻",
+            "url": "https://t.co/AU4A5eplWw",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "https://t.co/AU4A5eplWw",
+                            "expanded_url": "http://www.swiftbysundell.com",
+                            "display_url": "swiftbysundell.com",
+                            "indices": [
+                                0,
+                                23
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 17006,
+            "friends_count": 378,
+            "listed_count": 359,
+            "created_at": "Thu Feb 17 11:07:48 +0000 2011",
+            "favourites_count": 15246,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": false,
+            "verified": false,
+            "statuses_count": 9077,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "000000",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/855170244469542915/qdlnkTq-_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/855170244469542915/qdlnkTq-_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/253500322/1539506873",
+            "profile_link_color": "FE4F2C",
+            "profile_sidebar_border_color": "000000",
+            "profile_sidebar_fill_color": "000000",
+            "profile_text_color": "000000",
+            "profile_use_background_image": false,
+            "has_extended_profile": true,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 0,
+        "favorite_count": 1,
+        "favorited": false,
+        "retweeted": false,
+        "lang": "en"
+    },
+    {
+        "created_at": "Tue Nov 27 09:48:21 +0000 2018",
+        "id": 1067354430713065472,
+        "id_str": "1067354430713065472",
+        "text": "@rjbritt071 @swiftbysundell Yeah, constant maintenance is extremely important 👍 No matter how good an initial desig… https://t.co/mn7wVSLphD",
+        "truncated": true,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [
+                {
+                    "screen_name": "rjbritt071",
+                    "name": "Ryan Britt",
+                    "id": 343607644,
+                    "id_str": "343607644",
+                    "indices": [
+                        0,
+                        11
+                    ]
+                },
+                {
+                    "screen_name": "swiftbysundell",
+                    "name": "Swift by Sundell",
+                    "id": 887333849478434816,
+                    "id_str": "887333849478434816",
+                    "indices": [
+                        12,
+                        27
+                    ]
+                }
+            ],
+            "urls": [
+                {
+                    "url": "https://t.co/mn7wVSLphD",
+                    "expanded_url": "https://twitter.com/i/web/status/1067354430713065472",
+                    "display_url": "twitter.com/i/web/status/1…",
+                    "indices": [
+                        117,
+                        140
+                    ]
+                }
+            ]
+        },
+        "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+        "in_reply_to_status_id": 1067056124308918272,
+        "in_reply_to_status_id_str": "1067056124308918272",
+        "in_reply_to_user_id": 343607644,
+        "in_reply_to_user_id_str": "343607644",
+        "in_reply_to_screen_name": "rjbritt071",
+        "user": {
+            "id": 253500322,
+            "id_str": "253500322",
+            "name": "John Sundell",
+            "screen_name": "johnsundell",
+            "location": "Krakow, Poland",
+            "description": "I post weekly tips, articles & podcasts about Swift development. Creator of @swiftbysundell, co-host of @stacktracepod & iOS/game dev 👨‍💻",
+            "url": "https://t.co/AU4A5eplWw",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "https://t.co/AU4A5eplWw",
+                            "expanded_url": "http://www.swiftbysundell.com",
+                            "display_url": "swiftbysundell.com",
+                            "indices": [
+                                0,
+                                23
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 17006,
+            "friends_count": 378,
+            "listed_count": 359,
+            "created_at": "Thu Feb 17 11:07:48 +0000 2011",
+            "favourites_count": 15246,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": false,
+            "verified": false,
+            "statuses_count": 9077,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "000000",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/855170244469542915/qdlnkTq-_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/855170244469542915/qdlnkTq-_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/253500322/1539506873",
+            "profile_link_color": "FE4F2C",
+            "profile_sidebar_border_color": "000000",
+            "profile_sidebar_fill_color": "000000",
+            "profile_text_color": "000000",
+            "profile_use_background_image": false,
+            "has_extended_profile": true,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 0,
+        "favorite_count": 0,
+        "favorited": false,
+        "retweeted": false,
+        "lang": "en"
+    },
+    {
+        "created_at": "Tue Nov 27 09:47:17 +0000 2018",
+        "id": 1067354161862320128,
+        "id_str": "1067354161862320128",
+        "text": "@ErasylJasuzakov One option is to add a different child VC depending on whether the user is logged in or out. That… https://t.co/Kx4cEb5lEZ",
+        "truncated": true,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [
+                {
+                    "screen_name": "ErasylJasuzakov",
+                    "name": "Yera Zhas",
+                    "id": 355329359,
+                    "id_str": "355329359",
+                    "indices": [
+                        0,
+                        16
+                    ]
+                }
+            ],
+            "urls": [
+                {
+                    "url": "https://t.co/Kx4cEb5lEZ",
+                    "expanded_url": "https://twitter.com/i/web/status/1067354161862320128",
+                    "display_url": "twitter.com/i/web/status/1…",
+                    "indices": [
+                        116,
+                        139
+                    ]
+                }
+            ]
+        },
+        "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+        "in_reply_to_status_id": 1067081787657064450,
+        "in_reply_to_status_id_str": "1067081787657064450",
+        "in_reply_to_user_id": 355329359,
+        "in_reply_to_user_id_str": "355329359",
+        "in_reply_to_screen_name": "ErasylJasuzakov",
+        "user": {
+            "id": 253500322,
+            "id_str": "253500322",
+            "name": "John Sundell",
+            "screen_name": "johnsundell",
+            "location": "Krakow, Poland",
+            "description": "I post weekly tips, articles & podcasts about Swift development. Creator of @swiftbysundell, co-host of @stacktracepod & iOS/game dev 👨‍💻",
+            "url": "https://t.co/AU4A5eplWw",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "https://t.co/AU4A5eplWw",
+                            "expanded_url": "http://www.swiftbysundell.com",
+                            "display_url": "swiftbysundell.com",
+                            "indices": [
+                                0,
+                                23
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 17006,
+            "friends_count": 378,
+            "listed_count": 359,
+            "created_at": "Thu Feb 17 11:07:48 +0000 2011",
+            "favourites_count": 15246,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": false,
+            "verified": false,
+            "statuses_count": 9077,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "000000",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/855170244469542915/qdlnkTq-_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/855170244469542915/qdlnkTq-_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/253500322/1539506873",
+            "profile_link_color": "FE4F2C",
+            "profile_sidebar_border_color": "000000",
+            "profile_sidebar_fill_color": "000000",
+            "profile_text_color": "000000",
+            "profile_use_background_image": false,
+            "has_extended_profile": true,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 0,
+        "favorite_count": 0,
+        "favorited": false,
+        "retweeted": false,
+        "lang": "en"
+    },
+    {
+        "created_at": "Tue Nov 27 09:44:23 +0000 2018",
+        "id": 1067353431424344064,
+        "id_str": "1067353431424344064",
+        "text": "@lordcodes @swiftbysundell Yeah, my goal is for all of my articles to always be up to date, and I constantly update… https://t.co/8esOeeSV6B",
+        "truncated": true,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [
+                {
+                    "screen_name": "lordcodes",
+                    "name": "Andrew Lord",
+                    "id": 2788135822,
+                    "id_str": "2788135822",
+                    "indices": [
+                        0,
+                        10
+                    ]
+                },
+                {
+                    "screen_name": "swiftbysundell",
+                    "name": "Swift by Sundell",
+                    "id": 887333849478434816,
+                    "id_str": "887333849478434816",
+                    "indices": [
+                        11,
+                        26
+                    ]
+                }
+            ],
+            "urls": [
+                {
+                    "url": "https://t.co/8esOeeSV6B",
+                    "expanded_url": "https://twitter.com/i/web/status/1067353431424344064",
+                    "display_url": "twitter.com/i/web/status/1…",
+                    "indices": [
+                        117,
+                        140
+                    ]
+                }
+            ]
+        },
+        "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+        "in_reply_to_status_id": 1067156636022771730,
+        "in_reply_to_status_id_str": "1067156636022771730",
+        "in_reply_to_user_id": 2788135822,
+        "in_reply_to_user_id_str": "2788135822",
+        "in_reply_to_screen_name": "lordcodes",
+        "user": {
+            "id": 253500322,
+            "id_str": "253500322",
+            "name": "John Sundell",
+            "screen_name": "johnsundell",
+            "location": "Krakow, Poland",
+            "description": "I post weekly tips, articles & podcasts about Swift development. Creator of @swiftbysundell, co-host of @stacktracepod & iOS/game dev 👨‍💻",
+            "url": "https://t.co/AU4A5eplWw",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "https://t.co/AU4A5eplWw",
+                            "expanded_url": "http://www.swiftbysundell.com",
+                            "display_url": "swiftbysundell.com",
+                            "indices": [
+                                0,
+                                23
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 17006,
+            "friends_count": 378,
+            "listed_count": 359,
+            "created_at": "Thu Feb 17 11:07:48 +0000 2011",
+            "favourites_count": 15246,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": false,
+            "verified": false,
+            "statuses_count": 9077,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "000000",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/855170244469542915/qdlnkTq-_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/855170244469542915/qdlnkTq-_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/253500322/1539506873",
+            "profile_link_color": "FE4F2C",
+            "profile_sidebar_border_color": "000000",
+            "profile_sidebar_fill_color": "000000",
+            "profile_text_color": "000000",
+            "profile_use_background_image": false,
+            "has_extended_profile": true,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 0,
+        "favorite_count": 0,
+        "favorited": false,
+        "retweeted": false,
+        "lang": "en"
+    },
+    {
+        "created_at": "Tue Nov 27 09:42:33 +0000 2018",
+        "id": 1067352969488855040,
+        "id_str": "1067352969488855040",
+        "text": "@luiseduardoglez That's great to hear 🙂 I think it's important to remember that programming is a creative endeavor,… https://t.co/fFm1IBpLdj",
+        "truncated": true,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [
+                {
+                    "screen_name": "luiseduardoglez",
+                    "name": "Luis E. González",
+                    "id": 37334671,
+                    "id_str": "37334671",
+                    "indices": [
+                        0,
+                        16
+                    ]
+                }
+            ],
+            "urls": [
+                {
+                    "url": "https://t.co/fFm1IBpLdj",
+                    "expanded_url": "https://twitter.com/i/web/status/1067352969488855040",
+                    "display_url": "twitter.com/i/web/status/1…",
+                    "indices": [
+                        117,
+                        140
+                    ]
+                }
+            ]
+        },
+        "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+        "in_reply_to_status_id": 1067178412341686272,
+        "in_reply_to_status_id_str": "1067178412341686272",
+        "in_reply_to_user_id": 37334671,
+        "in_reply_to_user_id_str": "37334671",
+        "in_reply_to_screen_name": "luiseduardoglez",
+        "user": {
+            "id": 253500322,
+            "id_str": "253500322",
+            "name": "John Sundell",
+            "screen_name": "johnsundell",
+            "location": "Krakow, Poland",
+            "description": "I post weekly tips, articles & podcasts about Swift development. Creator of @swiftbysundell, co-host of @stacktracepod & iOS/game dev 👨‍💻",
+            "url": "https://t.co/AU4A5eplWw",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "https://t.co/AU4A5eplWw",
+                            "expanded_url": "http://www.swiftbysundell.com",
+                            "display_url": "swiftbysundell.com",
+                            "indices": [
+                                0,
+                                23
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 17006,
+            "friends_count": 378,
+            "listed_count": 359,
+            "created_at": "Thu Feb 17 11:07:48 +0000 2011",
+            "favourites_count": 15246,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": false,
+            "verified": false,
+            "statuses_count": 9077,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "000000",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/855170244469542915/qdlnkTq-_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/855170244469542915/qdlnkTq-_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/253500322/1539506873",
+            "profile_link_color": "FE4F2C",
+            "profile_sidebar_border_color": "000000",
+            "profile_sidebar_fill_color": "000000",
+            "profile_text_color": "000000",
+            "profile_use_background_image": false,
+            "has_extended_profile": true,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 0,
+        "favorite_count": 0,
+        "favorited": false,
+        "retweeted": false,
+        "lang": "en"
+    },
+    {
+        "created_at": "Tue Nov 27 09:40:23 +0000 2018",
+        "id": 1067352427664416770,
+        "id_str": "1067352427664416770",
+        "text": "@matt_sven Yep 👍",
+        "truncated": false,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [
+                {
+                    "screen_name": "matt_sven",
+                    "name": "Matt",
+                    "id": 1588840938,
+                    "id_str": "1588840938",
+                    "indices": [
+                        0,
+                        10
+                    ]
+                }
+            ],
+            "urls": []
+        },
+        "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+        "in_reply_to_status_id": 1067183585998729216,
+        "in_reply_to_status_id_str": "1067183585998729216",
+        "in_reply_to_user_id": 1588840938,
+        "in_reply_to_user_id_str": "1588840938",
+        "in_reply_to_screen_name": "matt_sven",
+        "user": {
+            "id": 253500322,
+            "id_str": "253500322",
+            "name": "John Sundell",
+            "screen_name": "johnsundell",
+            "location": "Krakow, Poland",
+            "description": "I post weekly tips, articles & podcasts about Swift development. Creator of @swiftbysundell, co-host of @stacktracepod & iOS/game dev 👨‍💻",
+            "url": "https://t.co/AU4A5eplWw",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "https://t.co/AU4A5eplWw",
+                            "expanded_url": "http://www.swiftbysundell.com",
+                            "display_url": "swiftbysundell.com",
+                            "indices": [
+                                0,
+                                23
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 17006,
+            "friends_count": 378,
+            "listed_count": 359,
+            "created_at": "Thu Feb 17 11:07:48 +0000 2011",
+            "favourites_count": 15246,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": false,
+            "verified": false,
+            "statuses_count": 9077,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "000000",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/855170244469542915/qdlnkTq-_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/855170244469542915/qdlnkTq-_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/253500322/1539506873",
+            "profile_link_color": "FE4F2C",
+            "profile_sidebar_border_color": "000000",
+            "profile_sidebar_fill_color": "000000",
+            "profile_text_color": "000000",
+            "profile_use_background_image": false,
+            "has_extended_profile": true,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 0,
+        "favorite_count": 0,
+        "favorited": false,
+        "retweeted": false,
+        "lang": "und"
+    },
+    {
+        "created_at": "Tue Nov 27 09:38:56 +0000 2018",
+        "id": 1067352063254937601,
+        "id_str": "1067352063254937601",
+        "text": "@Austin_Astorga Yes, it's in the works! 👍 You'll also be able to see how I do a complete networking implementation… https://t.co/Fjpg64eMgh",
+        "truncated": true,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [
+                {
+                    "screen_name": "Austin_Astorga",
+                    "name": "AAAstorga",
+                    "id": 2861780116,
+                    "id_str": "2861780116",
+                    "indices": [
+                        0,
+                        15
+                    ]
+                }
+            ],
+            "urls": [
+                {
+                    "url": "https://t.co/Fjpg64eMgh",
+                    "expanded_url": "https://twitter.com/i/web/status/1067352063254937601",
+                    "display_url": "twitter.com/i/web/status/1…",
+                    "indices": [
+                        116,
+                        139
+                    ]
+                }
+            ]
+        },
+        "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+        "in_reply_to_status_id": 1067283700977676288,
+        "in_reply_to_status_id_str": "1067283700977676288",
+        "in_reply_to_user_id": 2861780116,
+        "in_reply_to_user_id_str": "2861780116",
+        "in_reply_to_screen_name": "Austin_Astorga",
+        "user": {
+            "id": 253500322,
+            "id_str": "253500322",
+            "name": "John Sundell",
+            "screen_name": "johnsundell",
+            "location": "Krakow, Poland",
+            "description": "I post weekly tips, articles & podcasts about Swift development. Creator of @swiftbysundell, co-host of @stacktracepod & iOS/game dev 👨‍💻",
+            "url": "https://t.co/AU4A5eplWw",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "https://t.co/AU4A5eplWw",
+                            "expanded_url": "http://www.swiftbysundell.com",
+                            "display_url": "swiftbysundell.com",
+                            "indices": [
+                                0,
+                                23
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 17006,
+            "friends_count": 378,
+            "listed_count": 359,
+            "created_at": "Thu Feb 17 11:07:48 +0000 2011",
+            "favourites_count": 15246,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": false,
+            "verified": false,
+            "statuses_count": 9077,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "000000",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/855170244469542915/qdlnkTq-_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/855170244469542915/qdlnkTq-_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/253500322/1539506873",
+            "profile_link_color": "FE4F2C",
+            "profile_sidebar_border_color": "000000",
+            "profile_sidebar_fill_color": "000000",
+            "profile_text_color": "000000",
+            "profile_use_background_image": false,
+            "has_extended_profile": true,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": true,
+        "quoted_status_id": 1066369080406487041,
+        "quoted_status_id_str": "1066369080406487041",
+        "quoted_status": {
+            "created_at": "Sat Nov 24 16:32:55 +0000 2018",
+            "id": 1066369080406487041,
+            "id_str": "1066369080406487041",
+            "text": "I very often get asked to show the techniques from my articles within a real app. So I'm working on exactly that -… https://t.co/eJodplixjJ",
+            "truncated": true,
+            "entities": {
+                "hashtags": [],
+                "symbols": [],
+                "user_mentions": [],
+                "urls": [
+                    {
+                        "url": "https://t.co/eJodplixjJ",
+                        "expanded_url": "https://twitter.com/i/web/status/1066369080406487041",
+                        "display_url": "twitter.com/i/web/status/1…",
+                        "indices": [
+                            116,
+                            139
+                        ]
+                    }
+                ]
+            },
+            "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": null,
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "user": {
+                "id": 253500322,
+                "id_str": "253500322",
+                "name": "John Sundell",
+                "screen_name": "johnsundell",
+                "location": "Krakow, Poland",
+                "description": "I post weekly tips, articles & podcasts about Swift development. Creator of @swiftbysundell, co-host of @stacktracepod & iOS/game dev 👨‍💻",
+                "url": "https://t.co/AU4A5eplWw",
+                "entities": {
+                    "url": {
+                        "urls": [
+                            {
+                                "url": "https://t.co/AU4A5eplWw",
+                                "expanded_url": "http://www.swiftbysundell.com",
+                                "display_url": "swiftbysundell.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ]
+                            }
+                        ]
+                    },
+                    "description": {
+                        "urls": []
+                    }
+                },
+                "protected": false,
+                "followers_count": 17006,
+                "friends_count": 378,
+                "listed_count": 359,
+                "created_at": "Thu Feb 17 11:07:48 +0000 2011",
+                "favourites_count": 15246,
+                "utc_offset": null,
+                "time_zone": null,
+                "geo_enabled": false,
+                "verified": false,
+                "statuses_count": 9077,
+                "lang": "en",
+                "contributors_enabled": false,
+                "is_translator": false,
+                "is_translation_enabled": false,
+                "profile_background_color": "000000",
+                "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+                "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+                "profile_background_tile": false,
+                "profile_image_url": "http://pbs.twimg.com/profile_images/855170244469542915/qdlnkTq-_normal.jpg",
+                "profile_image_url_https": "https://pbs.twimg.com/profile_images/855170244469542915/qdlnkTq-_normal.jpg",
+                "profile_banner_url": "https://pbs.twimg.com/profile_banners/253500322/1539506873",
+                "profile_link_color": "FE4F2C",
+                "profile_sidebar_border_color": "000000",
+                "profile_sidebar_fill_color": "000000",
+                "profile_text_color": "000000",
+                "profile_use_background_image": false,
+                "has_extended_profile": true,
+                "default_profile": false,
+                "default_profile_image": false,
+                "following": null,
+                "follow_request_sent": null,
+                "notifications": null,
+                "translator_type": "none"
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "is_quote_status": false,
+            "retweet_count": 68,
+            "favorite_count": 746,
+            "favorited": false,
+            "retweeted": false,
+            "possibly_sensitive": false,
+            "lang": "en"
+        },
+        "retweet_count": 0,
+        "favorite_count": 1,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "en"
+    },
+    {
+        "created_at": "Tue Nov 27 09:38:00 +0000 2018",
+        "id": 1067351826129928196,
+        "id_str": "1067351826129928196",
+        "text": "@SanjuNaik14 Not in terms of safety 🙂",
+        "truncated": false,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [
+                {
+                    "screen_name": "SanjuNaik14",
+                    "name": "Sanju Naik",
+                    "id": 897564589,
+                    "id_str": "897564589",
+                    "indices": [
+                        0,
+                        12
+                    ]
+                }
+            ],
+            "urls": []
+        },
+        "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+        "in_reply_to_status_id": 1067287390253916161,
+        "in_reply_to_status_id_str": "1067287390253916161",
+        "in_reply_to_user_id": 897564589,
+        "in_reply_to_user_id_str": "897564589",
+        "in_reply_to_screen_name": "SanjuNaik14",
+        "user": {
+            "id": 253500322,
+            "id_str": "253500322",
+            "name": "John Sundell",
+            "screen_name": "johnsundell",
+            "location": "Krakow, Poland",
+            "description": "I post weekly tips, articles & podcasts about Swift development. Creator of @swiftbysundell, co-host of @stacktracepod & iOS/game dev 👨‍💻",
+            "url": "https://t.co/AU4A5eplWw",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "https://t.co/AU4A5eplWw",
+                            "expanded_url": "http://www.swiftbysundell.com",
+                            "display_url": "swiftbysundell.com",
+                            "indices": [
+                                0,
+                                23
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 17006,
+            "friends_count": 378,
+            "listed_count": 359,
+            "created_at": "Thu Feb 17 11:07:48 +0000 2011",
+            "favourites_count": 15246,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": false,
+            "verified": false,
+            "statuses_count": 9077,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "000000",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/855170244469542915/qdlnkTq-_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/855170244469542915/qdlnkTq-_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/253500322/1539506873",
+            "profile_link_color": "FE4F2C",
+            "profile_sidebar_border_color": "000000",
+            "profile_sidebar_fill_color": "000000",
+            "profile_text_color": "000000",
+            "profile_use_background_image": false,
+            "has_extended_profile": true,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 0,
+        "favorite_count": 1,
+        "favorited": false,
+        "retweeted": false,
+        "lang": "en"
+    },
+    {
+        "created_at": "Tue Nov 27 09:37:02 +0000 2018",
+        "id": 1067351581790806018,
+        "id_str": "1067351581790806018",
+        "text": "@imlukeyd Great to hear 😀",
+        "truncated": false,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [
+                {
+                    "screen_name": "imlukeyd",
+                    "name": "Luke Davis",
+                    "id": 192241144,
+                    "id_str": "192241144",
+                    "indices": [
+                        0,
+                        9
+                    ]
+                }
+            ],
+            "urls": []
+        },
+        "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+        "in_reply_to_status_id": 1067290596879020032,
+        "in_reply_to_status_id_str": "1067290596879020032",
+        "in_reply_to_user_id": 192241144,
+        "in_reply_to_user_id_str": "192241144",
+        "in_reply_to_screen_name": "imlukeyd",
+        "user": {
+            "id": 253500322,
+            "id_str": "253500322",
+            "name": "John Sundell",
+            "screen_name": "johnsundell",
+            "location": "Krakow, Poland",
+            "description": "I post weekly tips, articles & podcasts about Swift development. Creator of @swiftbysundell, co-host of @stacktracepod & iOS/game dev 👨‍💻",
+            "url": "https://t.co/AU4A5eplWw",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "https://t.co/AU4A5eplWw",
+                            "expanded_url": "http://www.swiftbysundell.com",
+                            "display_url": "swiftbysundell.com",
+                            "indices": [
+                                0,
+                                23
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 17006,
+            "friends_count": 378,
+            "listed_count": 359,
+            "created_at": "Thu Feb 17 11:07:48 +0000 2011",
+            "favourites_count": 15246,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": false,
+            "verified": false,
+            "statuses_count": 9077,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "000000",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/855170244469542915/qdlnkTq-_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/855170244469542915/qdlnkTq-_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/253500322/1539506873",
+            "profile_link_color": "FE4F2C",
+            "profile_sidebar_border_color": "000000",
+            "profile_sidebar_fill_color": "000000",
+            "profile_text_color": "000000",
+            "profile_use_background_image": false,
+            "has_extended_profile": true,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 0,
+        "favorite_count": 0,
+        "favorited": false,
+        "retweeted": false,
+        "lang": "en"
+    },
+    {
+        "created_at": "Tue Nov 27 09:36:45 +0000 2018",
+        "id": 1067351513083928576,
+        "id_str": "1067351513083928576",
+        "text": "@hassankhll Hmm, how so? Once a new version of Swift is released you simply go through your dependencies and pin ne… https://t.co/jog3398LsF",
+        "truncated": true,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [
+                {
+                    "screen_name": "hassankhll",
+                    "name": "Muhammad Hassan",
+                    "id": 2889971131,
+                    "id_str": "2889971131",
+                    "indices": [
+                        0,
+                        11
+                    ]
+                }
+            ],
+            "urls": [
+                {
+                    "url": "https://t.co/jog3398LsF",
+                    "expanded_url": "https://twitter.com/i/web/status/1067351513083928576",
+                    "display_url": "twitter.com/i/web/status/1…",
+                    "indices": [
+                        117,
+                        140
+                    ]
+                }
+            ]
+        },
+        "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+        "in_reply_to_status_id": 1067321529313226757,
+        "in_reply_to_status_id_str": "1067321529313226757",
+        "in_reply_to_user_id": 2889971131,
+        "in_reply_to_user_id_str": "2889971131",
+        "in_reply_to_screen_name": "hassankhll",
+        "user": {
+            "id": 253500322,
+            "id_str": "253500322",
+            "name": "John Sundell",
+            "screen_name": "johnsundell",
+            "location": "Krakow, Poland",
+            "description": "I post weekly tips, articles & podcasts about Swift development. Creator of @swiftbysundell, co-host of @stacktracepod & iOS/game dev 👨‍💻",
+            "url": "https://t.co/AU4A5eplWw",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "https://t.co/AU4A5eplWw",
+                            "expanded_url": "http://www.swiftbysundell.com",
+                            "display_url": "swiftbysundell.com",
+                            "indices": [
+                                0,
+                                23
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 17006,
+            "friends_count": 378,
+            "listed_count": 359,
+            "created_at": "Thu Feb 17 11:07:48 +0000 2011",
+            "favourites_count": 15246,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": false,
+            "verified": false,
+            "statuses_count": 9077,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "000000",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/855170244469542915/qdlnkTq-_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/855170244469542915/qdlnkTq-_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/253500322/1539506873",
+            "profile_link_color": "FE4F2C",
+            "profile_sidebar_border_color": "000000",
+            "profile_sidebar_fill_color": "000000",
+            "profile_text_color": "000000",
+            "profile_use_background_image": false,
+            "has_extended_profile": true,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 0,
+        "favorite_count": 0,
+        "favorited": false,
+        "retweeted": false,
+        "lang": "en"
+    },
+    {
+        "created_at": "Mon Nov 26 22:13:19 +0000 2018",
+        "id": 1067179519264636929,
+        "id_str": "1067179519264636929",
+        "text": "@satefan @_inside I personally never want to have so many dependencies that reviewing them becomes an issue. At tha… https://t.co/PqjhnsKK0o",
+        "truncated": true,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [
+                {
+                    "screen_name": "satefan",
+                    "name": "Stefan Arentz ☕️",
+                    "id": 18742884,
+                    "id_str": "18742884",
+                    "indices": [
+                        0,
+                        8
+                    ]
+                },
+                {
+                    "screen_name": "_inside",
+                    "name": "Guilherme Rambo",
+                    "id": 8307912,
+                    "id_str": "8307912",
+                    "indices": [
+                        9,
+                        17
+                    ]
+                }
+            ],
+            "urls": [
+                {
+                    "url": "https://t.co/PqjhnsKK0o",
+                    "expanded_url": "https://twitter.com/i/web/status/1067179519264636929",
+                    "display_url": "twitter.com/i/web/status/1…",
+                    "indices": [
+                        117,
+                        140
+                    ]
+                }
+            ]
+        },
+        "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+        "in_reply_to_status_id": 1067178253117341696,
+        "in_reply_to_status_id_str": "1067178253117341696",
+        "in_reply_to_user_id": 18742884,
+        "in_reply_to_user_id_str": "18742884",
+        "in_reply_to_screen_name": "satefan",
+        "user": {
+            "id": 253500322,
+            "id_str": "253500322",
+            "name": "John Sundell",
+            "screen_name": "johnsundell",
+            "location": "Krakow, Poland",
+            "description": "I post weekly tips, articles & podcasts about Swift development. Creator of @swiftbysundell, co-host of @stacktracepod & iOS/game dev 👨‍💻",
+            "url": "https://t.co/AU4A5eplWw",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "https://t.co/AU4A5eplWw",
+                            "expanded_url": "http://www.swiftbysundell.com",
+                            "display_url": "swiftbysundell.com",
+                            "indices": [
+                                0,
+                                23
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 17006,
+            "friends_count": 378,
+            "listed_count": 359,
+            "created_at": "Thu Feb 17 11:07:48 +0000 2011",
+            "favourites_count": 15246,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": false,
+            "verified": false,
+            "statuses_count": 9077,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "000000",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/855170244469542915/qdlnkTq-_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/855170244469542915/qdlnkTq-_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/253500322/1539506873",
+            "profile_link_color": "FE4F2C",
+            "profile_sidebar_border_color": "000000",
+            "profile_sidebar_fill_color": "000000",
+            "profile_text_color": "000000",
+            "profile_use_background_image": false,
+            "has_extended_profile": true,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 0,
+        "favorite_count": 8,
+        "favorited": false,
+        "retweeted": false,
+        "lang": "en"
+    },
+    {
+        "created_at": "Mon Nov 26 21:55:22 +0000 2018",
+        "id": 1067175001424568327,
+        "id_str": "1067175001424568327",
+        "text": "Some quick tips for using 3rd party libraries in a safer way:\n\n🕵️‍♂️ Thoroughly vet all dependencies, don't just po… https://t.co/aNppjfW6Yw",
+        "truncated": true,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": [
+                {
+                    "url": "https://t.co/aNppjfW6Yw",
+                    "expanded_url": "https://twitter.com/i/web/status/1067175001424568327",
+                    "display_url": "twitter.com/i/web/status/1…",
+                    "indices": [
+                        117,
+                        140
+                    ]
+                }
+            ]
+        },
+        "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 253500322,
+            "id_str": "253500322",
+            "name": "John Sundell",
+            "screen_name": "johnsundell",
+            "location": "Krakow, Poland",
+            "description": "I post weekly tips, articles & podcasts about Swift development. Creator of @swiftbysundell, co-host of @stacktracepod & iOS/game dev 👨‍💻",
+            "url": "https://t.co/AU4A5eplWw",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "https://t.co/AU4A5eplWw",
+                            "expanded_url": "http://www.swiftbysundell.com",
+                            "display_url": "swiftbysundell.com",
+                            "indices": [
+                                0,
+                                23
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 17006,
+            "friends_count": 378,
+            "listed_count": 359,
+            "created_at": "Thu Feb 17 11:07:48 +0000 2011",
+            "favourites_count": 15246,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": false,
+            "verified": false,
+            "statuses_count": 9077,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "000000",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/855170244469542915/qdlnkTq-_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/855170244469542915/qdlnkTq-_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/253500322/1539506873",
+            "profile_link_color": "FE4F2C",
+            "profile_sidebar_border_color": "000000",
+            "profile_sidebar_fill_color": "000000",
+            "profile_text_color": "000000",
+            "profile_use_background_image": false,
+            "has_extended_profile": true,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 66,
+        "favorite_count": 291,
+        "favorited": false,
+        "retweeted": false,
+        "lang": "en"
+    },
+    {
+        "created_at": "Mon Nov 26 21:07:56 +0000 2018",
+        "id": 1067163067245563904,
+        "id_str": "1067163067245563904",
+        "text": "@abuzeidhamed Thanks, glad you liked it 🙂",
+        "truncated": false,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [
+                {
+                    "screen_name": "abuzeidhamed",
+                    "name": "abuzeid",
+                    "id": 2220477505,
+                    "id_str": "2220477505",
+                    "indices": [
+                        0,
+                        13
+                    ]
+                }
+            ],
+            "urls": []
+        },
+        "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+        "in_reply_to_status_id": 1067122680984416256,
+        "in_reply_to_status_id_str": "1067122680984416256",
+        "in_reply_to_user_id": 2220477505,
+        "in_reply_to_user_id_str": "2220477505",
+        "in_reply_to_screen_name": "abuzeidhamed",
+        "user": {
+            "id": 253500322,
+            "id_str": "253500322",
+            "name": "John Sundell",
+            "screen_name": "johnsundell",
+            "location": "Krakow, Poland",
+            "description": "I post weekly tips, articles & podcasts about Swift development. Creator of @swiftbysundell, co-host of @stacktracepod & iOS/game dev 👨‍💻",
+            "url": "https://t.co/AU4A5eplWw",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "https://t.co/AU4A5eplWw",
+                            "expanded_url": "http://www.swiftbysundell.com",
+                            "display_url": "swiftbysundell.com",
+                            "indices": [
+                                0,
+                                23
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 17006,
+            "friends_count": 378,
+            "listed_count": 359,
+            "created_at": "Thu Feb 17 11:07:48 +0000 2011",
+            "favourites_count": 15246,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": false,
+            "verified": false,
+            "statuses_count": 9077,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "000000",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/855170244469542915/qdlnkTq-_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/855170244469542915/qdlnkTq-_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/253500322/1539506873",
+            "profile_link_color": "FE4F2C",
+            "profile_sidebar_border_color": "000000",
+            "profile_sidebar_fill_color": "000000",
+            "profile_text_color": "000000",
+            "profile_use_background_image": false,
+            "has_extended_profile": true,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 0,
+        "favorite_count": 0,
+        "favorited": false,
+        "retweeted": false,
+        "lang": "en"
+    }
+]

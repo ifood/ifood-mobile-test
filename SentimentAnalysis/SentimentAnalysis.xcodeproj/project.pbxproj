@@ -1,0 +1,1002 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2B08B4C021AD3A28006F6593 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B08B4BF21AD3A28006F6593 /* AppDelegate.swift */; };
+		2B08B4C221AD3A28006F6593 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B08B4C121AD3A28006F6593 /* SearchViewController.swift */; };
+		2B08B4C721AD3A2B006F6593 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B08B4C621AD3A2B006F6593 /* Assets.xcassets */; };
+		2B08B4CA21AD3A2B006F6593 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B08B4C821AD3A2B006F6593 /* LaunchScreen.storyboard */; };
+		2B08B4D521AD3A2B006F6593 /* SentimentAnalysisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B08B4D421AD3A2B006F6593 /* SentimentAnalysisTests.swift */; };
+		2B638AE321AE23F0000DCA37 /* TwitterAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B638AE221AE23F0000DCA37 /* TwitterAPI.swift */; };
+		2B7BAB5321B2EC76004AE351 /* SentimentAnalyzerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7BAB5221B2EC76004AE351 /* SentimentAnalyzerResponse.swift */; };
+		2B7BAB5B21B3254B004AE351 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7BAB5A21B3254B004AE351 /* AppCoordinator.swift */; };
+		2BE5F9F221AE25CA007DAC2A /* TwitterAPIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5F9F121AE25CA007DAC2A /* TwitterAPIConfig.swift */; };
+		2BE5F9F721AE2A44007DAC2A /* String+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5F9F621AE2A44007DAC2A /* String+Base64.swift */; };
+		2BE5F9FF21AE37B3007DAC2A /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5F9FE21AE37B3007DAC2A /* Auth.swift */; };
+		2BE5FA0121AE3806007DAC2A /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5FA0021AE3806007DAC2A /* AuthViewController.swift */; };
+		2BE5FA0321AE8FA8007DAC2A /* TwitterAPISearch.json in Resources */ = {isa = PBXBuildFile; fileRef = 2BE5FA0221AE8FA8007DAC2A /* TwitterAPISearch.json */; };
+		2BE5FA0821AF5790007DAC2A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5FA0721AF5790007DAC2A /* User.swift */; };
+		2BE5FA0A21AF57A2007DAC2A /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5FA0921AF57A2007DAC2A /* Tweet.swift */; };
+		2BE5FA0C21AF57C6007DAC2A /* DateFormatter+TwitterDateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5FA0B21AF57C6007DAC2A /* DateFormatter+TwitterDateFormat.swift */; };
+		2BE5FA1121AF5F73007DAC2A /* UIImageView+DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5FA1021AF5F73007DAC2A /* UIImageView+DownloadImage.swift */; };
+		2BE5FA1521AF61C5007DAC2A /* TweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5FA1321AF61C5007DAC2A /* TweetTableViewCell.swift */; };
+		2BE5FA1621AF61C5007DAC2A /* TweetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BE5FA1421AF61C5007DAC2A /* TweetTableViewCell.xib */; };
+		2BE5FA1A21B2DE6A007DAC2A /* SentimentAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5FA1921B2DE6A007DAC2A /* SentimentAPI.swift */; };
+		2BE5FA1C21B2DE81007DAC2A /* SentimentAPIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5FA1B21B2DE81007DAC2A /* SentimentAPIConfig.swift */; };
+		2BE5FA1E21B2E14C007DAC2A /* SentimentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5FA1D21B2E14C007DAC2A /* SentimentViewController.swift */; };
+		2BE5FA2021B2E1D4007DAC2A /* SentimentAuthPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5FA1F21B2E1D4007DAC2A /* SentimentAuthPlugin.swift */; };
+		2BE5FA2321B2E5A8007DAC2A /* Sentiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5FA2221B2E5A8007DAC2A /* Sentiment.swift */; };
+		2BE87B8221B3278F00489BC9 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87B8121B3278F00489BC9 /* AuthViewModel.swift */; };
+		2BE87B8421B3323900489BC9 /* RevealingSplashView+Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87B8321B3323900489BC9 /* RevealingSplashView+Launch.swift */; };
+		2BE87B8B21B333A500489BC9 /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87B8521B333A400489BC9 /* ErrorViewController.swift */; };
+		2BE87B8C21B333A500489BC9 /* ShadowBorderButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87B8621B333A400489BC9 /* ShadowBorderButtonView.swift */; };
+		2BE87B8D21B333A500489BC9 /* UIViewController+ChildController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87B8721B333A400489BC9 /* UIViewController+ChildController.swift */; };
+		2BE87B8E21B333A500489BC9 /* UIButton+BackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87B8821B333A500489BC9 /* UIButton+BackgroundColor.swift */; };
+		2BE87B8F21B333A500489BC9 /* ViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87B8921B333A500489BC9 /* ViewConfiguration.swift */; };
+		2BE87B9021B333A500489BC9 /* UIView+Anchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87B8A21B333A500489BC9 /* UIView+Anchors.swift */; };
+		2BE87B9321B3368900489BC9 /* Variable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87B9221B3368900489BC9 /* Variable.swift */; };
+		2BE87B9521B3379000489BC9 /* ErrorDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87B9421B3379000489BC9 /* ErrorDisplayer.swift */; };
+		2BE87B9921B3405500489BC9 /* ViewModelState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87B9821B3405500489BC9 /* ViewModelState.swift */; };
+		2BE87B9D21B3429200489BC9 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BE87B9B21B3429200489BC9 /* SearchViewController.xib */; };
+		2BE87BA021B36CEB00489BC9 /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87B9F21B36CEB00489BC9 /* AuthRepository.swift */; };
+		2BE87BA521B36D6D00489BC9 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87BA421B36D6D00489BC9 /* SearchViewModel.swift */; };
+		2BE87BA721B3781100489BC9 /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87BA621B3781100489BC9 /* Loadable.swift */; };
+		2BE87BA921B37BBB00489BC9 /* Optional+NilOrEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87BA821B37BBB00489BC9 /* Optional+NilOrEmpty.swift */; };
+		2BE87BAC21B37DB500489BC9 /* SearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87BAB21B37DB500489BC9 /* SearchRepository.swift */; };
+		2BE87BAE21B38DEF00489BC9 /* EmptyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87BAD21B38DEF00489BC9 /* EmptyViewController.swift */; };
+		2BE87BB121B395C300489BC9 /* SentimentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87BB021B395C300489BC9 /* SentimentViewModel.swift */; };
+		2BE87BB421B3976D00489BC9 /* SentimentRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87BB321B3976D00489BC9 /* SentimentRepository.swift */; };
+		2BE87BB821B398A900489BC9 /* SentimentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BE87BB621B398A900489BC9 /* SentimentViewController.xib */; };
+		2BE87BBB21B3A26400489BC9 /* UIColor+Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87BBA21B3A26400489BC9 /* UIColor+Palette.swift */; };
+		2BE87BBD21B3A41500489BC9 /* Keychain+AuthTokenStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87BBC21B3A41500489BC9 /* Keychain+AuthTokenStore.swift */; };
+		2BE87BBF21B469B200489BC9 /* ApperanceProxyHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87BBE21B469B200489BC9 /* ApperanceProxyHelper.swift */; };
+		2BE87BC121B46AD000489BC9 /* UINavigationController+StatusBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87BC021B46AD000489BC9 /* UINavigationController+StatusBarStyle.swift */; };
+		2BE87BC521B473A500489BC9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2BE87BC721B473A500489BC9 /* Localizable.strings */; };
+		2BE87BC921B4CAA200489BC9 /* Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87BC821B4CAA200489BC9 /* Localized.swift */; };
+		2BE87BCB21B4CDF700489BC9 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87BCA21B4CDF700489BC9 /* RootViewController.swift */; };
+		2BE87BD121B4E4FE00489BC9 /* AuthViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87BD021B4E4FE00489BC9 /* AuthViewModelTests.swift */; };
+		2BE87BD321B4E53E00489BC9 /* MockAuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87BD221B4E53E00489BC9 /* MockAuthRepository.swift */; };
+		2BE87BD521B4EAC000489BC9 /* AuthFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87BD421B4EAC000489BC9 /* AuthFactory.swift */; };
+		2BE87BE221B4EE8600489BC9 /* SentimentViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87BE121B4EE8600489BC9 /* SentimentViewModelTests.swift */; };
+		2BE87BE421B4EEB100489BC9 /* MockSentimentRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87BE321B4EEB100489BC9 /* MockSentimentRepository.swift */; };
+		2BE87BE621B4EF1B00489BC9 /* SentimentFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87BE521B4EF1B00489BC9 /* SentimentFactory.swift */; };
+		2BE87BE821B4EFD900489BC9 /* TweetFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87BE721B4EFD900489BC9 /* TweetFactory.swift */; };
+		2BE87BEA21B53D6500489BC9 /* SentimentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87BE921B53D6500489BC9 /* SentimentTests.swift */; };
+		2BE87BEC21B54ABC00489BC9 /* FloatingPoint+RadiansAndDegrees.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87BEB21B54ABC00489BC9 /* FloatingPoint+RadiansAndDegrees.swift */; };
+		2BE87BEF21B54BE200489BC9 /* SearchViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87BEE21B54BE200489BC9 /* SearchViewModelTests.swift */; };
+		2BE87BF121B54C0F00489BC9 /* MockSearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87BF021B54C0F00489BC9 /* MockSearchRepository.swift */; };
+		AEFAE7761E869FFABA5C3B8B /* Pods_SentimentAnalysisTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3FC6F1DAF0460096BFD2BF0 /* Pods_SentimentAnalysisTests.framework */; };
+		E8607A255C0826B300B3E75D /* Pods_SentimentAnalysis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18717B4359BD8D5886601C01 /* Pods_SentimentAnalysis.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2B08B4D121AD3A2B006F6593 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B08B4B421AD3A28006F6593 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B08B4BB21AD3A28006F6593;
+			remoteInfo = SentimentAnalysis;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		008D5583EA6330492F384BED /* Pods-SentimentAnalysis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SentimentAnalysis.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SentimentAnalysis/Pods-SentimentAnalysis.debug.xcconfig"; sourceTree = "<group>"; };
+		18717B4359BD8D5886601C01 /* Pods_SentimentAnalysis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SentimentAnalysis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B08B4BC21AD3A28006F6593 /* SentimentAnalysis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SentimentAnalysis.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B08B4BF21AD3A28006F6593 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2B08B4C121AD3A28006F6593 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		2B08B4C621AD3A2B006F6593 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2B08B4C921AD3A2B006F6593 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2B08B4CB21AD3A2B006F6593 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B08B4D021AD3A2B006F6593 /* SentimentAnalysisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SentimentAnalysisTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B08B4D421AD3A2B006F6593 /* SentimentAnalysisTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentAnalysisTests.swift; sourceTree = "<group>"; };
+		2B08B4D621AD3A2B006F6593 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B638AE221AE23F0000DCA37 /* TwitterAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterAPI.swift; sourceTree = "<group>"; };
+		2B7BAB5221B2EC76004AE351 /* SentimentAnalyzerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentAnalyzerResponse.swift; sourceTree = "<group>"; };
+		2B7BAB5A21B3254B004AE351 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		2BE5F9F121AE25CA007DAC2A /* TwitterAPIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterAPIConfig.swift; sourceTree = "<group>"; };
+		2BE5F9F621AE2A44007DAC2A /* String+Base64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Base64.swift"; sourceTree = "<group>"; };
+		2BE5F9FE21AE37B3007DAC2A /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		2BE5FA0021AE3806007DAC2A /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		2BE5FA0221AE8FA8007DAC2A /* TwitterAPISearch.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TwitterAPISearch.json; sourceTree = "<group>"; };
+		2BE5FA0721AF5790007DAC2A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2BE5FA0921AF57A2007DAC2A /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
+		2BE5FA0B21AF57C6007DAC2A /* DateFormatter+TwitterDateFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+TwitterDateFormat.swift"; sourceTree = "<group>"; };
+		2BE5FA1021AF5F73007DAC2A /* UIImageView+DownloadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+DownloadImage.swift"; sourceTree = "<group>"; };
+		2BE5FA1321AF61C5007DAC2A /* TweetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetTableViewCell.swift; sourceTree = "<group>"; };
+		2BE5FA1421AF61C5007DAC2A /* TweetTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TweetTableViewCell.xib; sourceTree = "<group>"; };
+		2BE5FA1921B2DE6A007DAC2A /* SentimentAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SentimentAPI.swift; path = SentimentAnalysis/Sentiment/SentimentAPI.swift; sourceTree = SOURCE_ROOT; };
+		2BE5FA1B21B2DE81007DAC2A /* SentimentAPIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentAPIConfig.swift; sourceTree = "<group>"; };
+		2BE5FA1D21B2E14C007DAC2A /* SentimentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentViewController.swift; sourceTree = "<group>"; };
+		2BE5FA1F21B2E1D4007DAC2A /* SentimentAuthPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentAuthPlugin.swift; sourceTree = "<group>"; };
+		2BE5FA2221B2E5A8007DAC2A /* Sentiment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sentiment.swift; sourceTree = "<group>"; };
+		2BE87B8121B3278F00489BC9 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		2BE87B8321B3323900489BC9 /* RevealingSplashView+Launch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RevealingSplashView+Launch.swift"; sourceTree = "<group>"; };
+		2BE87B8521B333A400489BC9 /* ErrorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
+		2BE87B8621B333A400489BC9 /* ShadowBorderButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowBorderButtonView.swift; sourceTree = "<group>"; };
+		2BE87B8721B333A400489BC9 /* UIViewController+ChildController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+ChildController.swift"; sourceTree = "<group>"; };
+		2BE87B8821B333A500489BC9 /* UIButton+BackgroundColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+BackgroundColor.swift"; sourceTree = "<group>"; };
+		2BE87B8921B333A500489BC9 /* ViewConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewConfiguration.swift; sourceTree = "<group>"; };
+		2BE87B8A21B333A500489BC9 /* UIView+Anchors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Anchors.swift"; sourceTree = "<group>"; };
+		2BE87B9221B3368900489BC9 /* Variable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variable.swift; sourceTree = "<group>"; };
+		2BE87B9421B3379000489BC9 /* ErrorDisplayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorDisplayer.swift; sourceTree = "<group>"; };
+		2BE87B9821B3405500489BC9 /* ViewModelState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelState.swift; sourceTree = "<group>"; };
+		2BE87B9B21B3429200489BC9 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		2BE87B9F21B36CEB00489BC9 /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
+		2BE87BA421B36D6D00489BC9 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		2BE87BA621B3781100489BC9 /* Loadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
+		2BE87BA821B37BBB00489BC9 /* Optional+NilOrEmpty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+NilOrEmpty.swift"; sourceTree = "<group>"; };
+		2BE87BAB21B37DB500489BC9 /* SearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepository.swift; sourceTree = "<group>"; };
+		2BE87BAD21B38DEF00489BC9 /* EmptyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyViewController.swift; sourceTree = "<group>"; };
+		2BE87BB021B395C300489BC9 /* SentimentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentViewModel.swift; sourceTree = "<group>"; };
+		2BE87BB321B3976D00489BC9 /* SentimentRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentRepository.swift; sourceTree = "<group>"; };
+		2BE87BB621B398A900489BC9 /* SentimentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SentimentViewController.xib; sourceTree = "<group>"; };
+		2BE87BBA21B3A26400489BC9 /* UIColor+Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Palette.swift"; sourceTree = "<group>"; };
+		2BE87BBC21B3A41500489BC9 /* Keychain+AuthTokenStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keychain+AuthTokenStore.swift"; sourceTree = "<group>"; };
+		2BE87BBE21B469B200489BC9 /* ApperanceProxyHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApperanceProxyHelper.swift; sourceTree = "<group>"; };
+		2BE87BC021B46AD000489BC9 /* UINavigationController+StatusBarStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+StatusBarStyle.swift"; sourceTree = "<group>"; };
+		2BE87BC621B473A500489BC9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2BE87BC821B4CAA200489BC9 /* Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localized.swift; sourceTree = "<group>"; };
+		2BE87BCA21B4CDF700489BC9 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RootViewController.swift; path = Pods/RootViewController.swift; sourceTree = SOURCE_ROOT; };
+		2BE87BD021B4E4FE00489BC9 /* AuthViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModelTests.swift; sourceTree = "<group>"; };
+		2BE87BD221B4E53E00489BC9 /* MockAuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthRepository.swift; sourceTree = "<group>"; };
+		2BE87BD421B4EAC000489BC9 /* AuthFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthFactory.swift; sourceTree = "<group>"; };
+		2BE87BE121B4EE8600489BC9 /* SentimentViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentViewModelTests.swift; sourceTree = "<group>"; };
+		2BE87BE321B4EEB100489BC9 /* MockSentimentRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSentimentRepository.swift; sourceTree = "<group>"; };
+		2BE87BE521B4EF1B00489BC9 /* SentimentFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentFactory.swift; sourceTree = "<group>"; };
+		2BE87BE721B4EFD900489BC9 /* TweetFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetFactory.swift; sourceTree = "<group>"; };
+		2BE87BE921B53D6500489BC9 /* SentimentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentTests.swift; sourceTree = "<group>"; };
+		2BE87BEB21B54ABC00489BC9 /* FloatingPoint+RadiansAndDegrees.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FloatingPoint+RadiansAndDegrees.swift"; sourceTree = "<group>"; };
+		2BE87BEE21B54BE200489BC9 /* SearchViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModelTests.swift; sourceTree = "<group>"; };
+		2BE87BF021B54C0F00489BC9 /* MockSearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchRepository.swift; sourceTree = "<group>"; };
+		5A16E418A1C8F242666218D5 /* Pods-SentimentAnalysis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SentimentAnalysis.release.xcconfig"; path = "Pods/Target Support Files/Pods-SentimentAnalysis/Pods-SentimentAnalysis.release.xcconfig"; sourceTree = "<group>"; };
+		72B1138003E9313C6D8D8F32 /* Pods-SentimentAnalysisTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SentimentAnalysisTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SentimentAnalysisTests/Pods-SentimentAnalysisTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B3FC6F1DAF0460096BFD2BF0 /* Pods_SentimentAnalysisTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SentimentAnalysisTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2C4155739009BCD4EB44091 /* Pods-SentimentAnalysisTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SentimentAnalysisTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SentimentAnalysisTests/Pods-SentimentAnalysisTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2B08B4B921AD3A28006F6593 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8607A255C0826B300B3E75D /* Pods_SentimentAnalysis.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B08B4CD21AD3A2B006F6593 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEFAE7761E869FFABA5C3B8B /* Pods_SentimentAnalysisTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1D3BDE2ABB7125FB99B7C126 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				008D5583EA6330492F384BED /* Pods-SentimentAnalysis.debug.xcconfig */,
+				5A16E418A1C8F242666218D5 /* Pods-SentimentAnalysis.release.xcconfig */,
+				72B1138003E9313C6D8D8F32 /* Pods-SentimentAnalysisTests.debug.xcconfig */,
+				F2C4155739009BCD4EB44091 /* Pods-SentimentAnalysisTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		2B08B4B321AD3A28006F6593 = {
+			isa = PBXGroup;
+			children = (
+				2B08B4BE21AD3A28006F6593 /* SentimentAnalysis */,
+				2B08B4D321AD3A2B006F6593 /* SentimentAnalysisTests */,
+				2B08B4BD21AD3A28006F6593 /* Products */,
+				1D3BDE2ABB7125FB99B7C126 /* Pods */,
+				7918154B01D2D8754CCB8C7E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2B08B4BD21AD3A28006F6593 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2B08B4BC21AD3A28006F6593 /* SentimentAnalysis.app */,
+				2B08B4D021AD3A2B006F6593 /* SentimentAnalysisTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2B08B4BE21AD3A28006F6593 /* SentimentAnalysis */ = {
+			isa = PBXGroup;
+			children = (
+				2B08B4BF21AD3A28006F6593 /* AppDelegate.swift */,
+				2B7BAB5A21B3254B004AE351 /* AppCoordinator.swift */,
+				2BE87BCA21B4CDF700489BC9 /* RootViewController.swift */,
+				2BE87BC221B472D300489BC9 /* Resources */,
+				2BE87B9121B3367F00489BC9 /* Common */,
+				2BE5F9F521AE2A36007DAC2A /* Extensions */,
+				2BE5F9FD21AE37A9007DAC2A /* Auth */,
+				2BE5F9EF21AE25A1007DAC2A /* Search */,
+				2BE5FA1721AF77ED007DAC2A /* Sentiment */,
+			);
+			path = SentimentAnalysis;
+			sourceTree = "<group>";
+		};
+		2B08B4D321AD3A2B006F6593 /* SentimentAnalysisTests */ = {
+			isa = PBXGroup;
+			children = (
+				2B08B4D421AD3A2B006F6593 /* SentimentAnalysisTests.swift */,
+				2BE87BED21B54BCE00489BC9 /* Search */,
+				2BE87BE021B4EE6200489BC9 /* Sentiment */,
+				2BE87BCC21B4E40C00489BC9 /* Auth */,
+				2B08B4D621AD3A2B006F6593 /* Info.plist */,
+				2BE5FA0221AE8FA8007DAC2A /* TwitterAPISearch.json */,
+			);
+			path = SentimentAnalysisTests;
+			sourceTree = "<group>";
+		};
+		2BE5F9EF21AE25A1007DAC2A /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				2BE5FA1221AF61AB007DAC2A /* View */,
+				2BE87BCE21B4E42A00489BC9 /* ViewController */,
+				2BE87BA321B36D6200489BC9 /* ViewModel */,
+				2BE5FA0621AF577E007DAC2A /* Model */,
+				2BE87BAA21B37DA200489BC9 /* Repository */,
+				2BE5F9F021AE25AB007DAC2A /* Networking */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		2BE5F9F021AE25AB007DAC2A /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				2B638AE221AE23F0000DCA37 /* TwitterAPI.swift */,
+				2BE5F9F121AE25CA007DAC2A /* TwitterAPIConfig.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		2BE5F9F521AE2A36007DAC2A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2BE5F9F621AE2A44007DAC2A /* String+Base64.swift */,
+				2BE5FA0B21AF57C6007DAC2A /* DateFormatter+TwitterDateFormat.swift */,
+				2BE5FA1021AF5F73007DAC2A /* UIImageView+DownloadImage.swift */,
+				2BE87B8321B3323900489BC9 /* RevealingSplashView+Launch.swift */,
+				2BE87B8821B333A500489BC9 /* UIButton+BackgroundColor.swift */,
+				2BE87B8A21B333A500489BC9 /* UIView+Anchors.swift */,
+				2BE87B8721B333A400489BC9 /* UIViewController+ChildController.swift */,
+				2BE87B8921B333A500489BC9 /* ViewConfiguration.swift */,
+				2BE87BA821B37BBB00489BC9 /* Optional+NilOrEmpty.swift */,
+				2BE87BBA21B3A26400489BC9 /* UIColor+Palette.swift */,
+				2BE87BBC21B3A41500489BC9 /* Keychain+AuthTokenStore.swift */,
+				2BE87BC021B46AD000489BC9 /* UINavigationController+StatusBarStyle.swift */,
+				2BE87BEB21B54ABC00489BC9 /* FloatingPoint+RadiansAndDegrees.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2BE5F9FD21AE37A9007DAC2A /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				2BE87BCD21B4E41C00489BC9 /* ViewController */,
+				2BE87BA221B36D1C00489BC9 /* ViewModel */,
+				2BE87BA121B36D1300489BC9 /* Model */,
+				2BE87B9E21B36CC500489BC9 /* Repository */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		2BE5FA0621AF577E007DAC2A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2BE5FA0721AF5790007DAC2A /* User.swift */,
+				2BE5FA0921AF57A2007DAC2A /* Tweet.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2BE5FA1221AF61AB007DAC2A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2BE5FA1321AF61C5007DAC2A /* TweetTableViewCell.swift */,
+				2BE5FA1421AF61C5007DAC2A /* TweetTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2BE5FA1721AF77ED007DAC2A /* Sentiment */ = {
+			isa = PBXGroup;
+			children = (
+				2BE87BCF21B4E47500489BC9 /* ViewController */,
+				2BE87BAF21B395B700489BC9 /* ViewModel */,
+				2BE5FA2121B2E59C007DAC2A /* Model */,
+				2BE87BB221B3975100489BC9 /* Repository */,
+				2BE5FA1821B2DE5A007DAC2A /* Networking */,
+			);
+			path = Sentiment;
+			sourceTree = "<group>";
+		};
+		2BE5FA1821B2DE5A007DAC2A /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				2BE5FA1921B2DE6A007DAC2A /* SentimentAPI.swift */,
+				2BE5FA1B21B2DE81007DAC2A /* SentimentAPIConfig.swift */,
+				2BE5FA1F21B2E1D4007DAC2A /* SentimentAuthPlugin.swift */,
+				2B7BAB5221B2EC76004AE351 /* SentimentAnalyzerResponse.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		2BE5FA2121B2E59C007DAC2A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2BE5FA2221B2E5A8007DAC2A /* Sentiment.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2BE87B9121B3367F00489BC9 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				2BE87B9221B3368900489BC9 /* Variable.swift */,
+				2BE87B9421B3379000489BC9 /* ErrorDisplayer.swift */,
+				2BE87B9821B3405500489BC9 /* ViewModelState.swift */,
+				2BE87BA621B3781100489BC9 /* Loadable.swift */,
+				2BE87B8621B333A400489BC9 /* ShadowBorderButtonView.swift */,
+				2BE87B8521B333A400489BC9 /* ErrorViewController.swift */,
+				2BE87BAD21B38DEF00489BC9 /* EmptyViewController.swift */,
+				2BE87BBE21B469B200489BC9 /* ApperanceProxyHelper.swift */,
+				2BE87BC821B4CAA200489BC9 /* Localized.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		2BE87B9E21B36CC500489BC9 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				2BE87B9F21B36CEB00489BC9 /* AuthRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		2BE87BA121B36D1300489BC9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2BE5F9FE21AE37B3007DAC2A /* Auth.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2BE87BA221B36D1C00489BC9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2BE87B8121B3278F00489BC9 /* AuthViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2BE87BA321B36D6200489BC9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2BE87BA421B36D6D00489BC9 /* SearchViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2BE87BAA21B37DA200489BC9 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				2BE87BAB21B37DB500489BC9 /* SearchRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		2BE87BAF21B395B700489BC9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2BE87BB021B395C300489BC9 /* SentimentViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2BE87BB221B3975100489BC9 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				2BE87BB321B3976D00489BC9 /* SentimentRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		2BE87BC221B472D300489BC9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2B08B4C621AD3A2B006F6593 /* Assets.xcassets */,
+				2BE87BC721B473A500489BC9 /* Localizable.strings */,
+				2B08B4C821AD3A2B006F6593 /* LaunchScreen.storyboard */,
+				2B08B4CB21AD3A2B006F6593 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2BE87BCC21B4E40C00489BC9 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				2BE87BD021B4E4FE00489BC9 /* AuthViewModelTests.swift */,
+				2BE87BD221B4E53E00489BC9 /* MockAuthRepository.swift */,
+				2BE87BD421B4EAC000489BC9 /* AuthFactory.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		2BE87BCD21B4E41C00489BC9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2BE5FA0021AE3806007DAC2A /* AuthViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2BE87BCE21B4E42A00489BC9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2BE87B9B21B3429200489BC9 /* SearchViewController.xib */,
+				2B08B4C121AD3A28006F6593 /* SearchViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2BE87BCF21B4E47500489BC9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2BE5FA1D21B2E14C007DAC2A /* SentimentViewController.swift */,
+				2BE87BB621B398A900489BC9 /* SentimentViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2BE87BE021B4EE6200489BC9 /* Sentiment */ = {
+			isa = PBXGroup;
+			children = (
+				2BE87BE121B4EE8600489BC9 /* SentimentViewModelTests.swift */,
+				2BE87BE321B4EEB100489BC9 /* MockSentimentRepository.swift */,
+				2BE87BE521B4EF1B00489BC9 /* SentimentFactory.swift */,
+				2BE87BE721B4EFD900489BC9 /* TweetFactory.swift */,
+				2BE87BE921B53D6500489BC9 /* SentimentTests.swift */,
+			);
+			path = Sentiment;
+			sourceTree = "<group>";
+		};
+		2BE87BED21B54BCE00489BC9 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				2BE87BEE21B54BE200489BC9 /* SearchViewModelTests.swift */,
+				2BE87BF021B54C0F00489BC9 /* MockSearchRepository.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		7918154B01D2D8754CCB8C7E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18717B4359BD8D5886601C01 /* Pods_SentimentAnalysis.framework */,
+				B3FC6F1DAF0460096BFD2BF0 /* Pods_SentimentAnalysisTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2B08B4BB21AD3A28006F6593 /* SentimentAnalysis */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B08B4D921AD3A2B006F6593 /* Build configuration list for PBXNativeTarget "SentimentAnalysis" */;
+			buildPhases = (
+				175FB2411AC3D7855A181E4D /* [CP] Check Pods Manifest.lock */,
+				2B08B4B821AD3A28006F6593 /* Sources */,
+				2B08B4B921AD3A28006F6593 /* Frameworks */,
+				2B08B4BA21AD3A28006F6593 /* Resources */,
+				18FA76C6B3B634BBFBD8024C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SentimentAnalysis;
+			productName = SentimentAnalysis;
+			productReference = 2B08B4BC21AD3A28006F6593 /* SentimentAnalysis.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2B08B4CF21AD3A2B006F6593 /* SentimentAnalysisTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B08B4DC21AD3A2B006F6593 /* Build configuration list for PBXNativeTarget "SentimentAnalysisTests" */;
+			buildPhases = (
+				2085896C531683E285200477 /* [CP] Check Pods Manifest.lock */,
+				2B08B4CC21AD3A2B006F6593 /* Sources */,
+				2B08B4CD21AD3A2B006F6593 /* Frameworks */,
+				2B08B4CE21AD3A2B006F6593 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B08B4D221AD3A2B006F6593 /* PBXTargetDependency */,
+			);
+			name = SentimentAnalysisTests;
+			productName = SentimentAnalysisTests;
+			productReference = 2B08B4D021AD3A2B006F6593 /* SentimentAnalysisTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2B08B4B421AD3A28006F6593 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Thales Frigo";
+				TargetAttributes = {
+					2B08B4BB21AD3A28006F6593 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					2B08B4CF21AD3A2B006F6593 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 2B08B4BB21AD3A28006F6593;
+					};
+				};
+			};
+			buildConfigurationList = 2B08B4B721AD3A28006F6593 /* Build configuration list for PBXProject "SentimentAnalysis" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2B08B4B321AD3A28006F6593;
+			productRefGroup = 2B08B4BD21AD3A28006F6593 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2B08B4BB21AD3A28006F6593 /* SentimentAnalysis */,
+				2B08B4CF21AD3A2B006F6593 /* SentimentAnalysisTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2B08B4BA21AD3A28006F6593 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B08B4CA21AD3A2B006F6593 /* LaunchScreen.storyboard in Resources */,
+				2BE87BC521B473A500489BC9 /* Localizable.strings in Resources */,
+				2B08B4C721AD3A2B006F6593 /* Assets.xcassets in Resources */,
+				2BE87B9D21B3429200489BC9 /* SearchViewController.xib in Resources */,
+				2BE87BB821B398A900489BC9 /* SentimentViewController.xib in Resources */,
+				2BE5FA1621AF61C5007DAC2A /* TweetTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B08B4CE21AD3A2B006F6593 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BE5FA0321AE8FA8007DAC2A /* TwitterAPISearch.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		175FB2411AC3D7855A181E4D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SentimentAnalysis-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		18FA76C6B3B634BBFBD8024C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SentimentAnalysis/Pods-SentimentAnalysis-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Keychain/Keychain.framework",
+				"${BUILT_PRODUCTS_DIR}/Keys/Keys.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/Reusable/Reusable.framework",
+				"${BUILT_PRODUCTS_DIR}/RevealingSplashView/RevealingSplashView.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Keychain.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Keys.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reusable.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealingSplashView.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SentimentAnalysis/Pods-SentimentAnalysis-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2085896C531683E285200477 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SentimentAnalysisTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2B08B4B821AD3A28006F6593 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BE87BA521B36D6D00489BC9 /* SearchViewModel.swift in Sources */,
+				2BE87B8E21B333A500489BC9 /* UIButton+BackgroundColor.swift in Sources */,
+				2BE87BA021B36CEB00489BC9 /* AuthRepository.swift in Sources */,
+				2BE87B8221B3278F00489BC9 /* AuthViewModel.swift in Sources */,
+				2BE87B9521B3379000489BC9 /* ErrorDisplayer.swift in Sources */,
+				2BE87B9921B3405500489BC9 /* ViewModelState.swift in Sources */,
+				2BE87B8D21B333A500489BC9 /* UIViewController+ChildController.swift in Sources */,
+				2BE87B8F21B333A500489BC9 /* ViewConfiguration.swift in Sources */,
+				2BE87B9021B333A500489BC9 /* UIView+Anchors.swift in Sources */,
+				2BE87BA721B3781100489BC9 /* Loadable.swift in Sources */,
+				2BE5F9F221AE25CA007DAC2A /* TwitterAPIConfig.swift in Sources */,
+				2BE5FA1A21B2DE6A007DAC2A /* SentimentAPI.swift in Sources */,
+				2BE5FA0C21AF57C6007DAC2A /* DateFormatter+TwitterDateFormat.swift in Sources */,
+				2BE87BB421B3976D00489BC9 /* SentimentRepository.swift in Sources */,
+				2BE87BCB21B4CDF700489BC9 /* RootViewController.swift in Sources */,
+				2BE87BBD21B3A41500489BC9 /* Keychain+AuthTokenStore.swift in Sources */,
+				2BE5F9F721AE2A44007DAC2A /* String+Base64.swift in Sources */,
+				2BE87BAC21B37DB500489BC9 /* SearchRepository.swift in Sources */,
+				2BE5FA2321B2E5A8007DAC2A /* Sentiment.swift in Sources */,
+				2B08B4C221AD3A28006F6593 /* SearchViewController.swift in Sources */,
+				2B7BAB5321B2EC76004AE351 /* SentimentAnalyzerResponse.swift in Sources */,
+				2BE87BEC21B54ABC00489BC9 /* FloatingPoint+RadiansAndDegrees.swift in Sources */,
+				2BE5FA0A21AF57A2007DAC2A /* Tweet.swift in Sources */,
+				2BE5F9FF21AE37B3007DAC2A /* Auth.swift in Sources */,
+				2BE5FA0821AF5790007DAC2A /* User.swift in Sources */,
+				2BE87B9321B3368900489BC9 /* Variable.swift in Sources */,
+				2BE87BC121B46AD000489BC9 /* UINavigationController+StatusBarStyle.swift in Sources */,
+				2B638AE321AE23F0000DCA37 /* TwitterAPI.swift in Sources */,
+				2BE5FA1E21B2E14C007DAC2A /* SentimentViewController.swift in Sources */,
+				2BE5FA0121AE3806007DAC2A /* AuthViewController.swift in Sources */,
+				2BE87BAE21B38DEF00489BC9 /* EmptyViewController.swift in Sources */,
+				2BE87B8421B3323900489BC9 /* RevealingSplashView+Launch.swift in Sources */,
+				2BE87BC921B4CAA200489BC9 /* Localized.swift in Sources */,
+				2BE5FA1C21B2DE81007DAC2A /* SentimentAPIConfig.swift in Sources */,
+				2BE5FA2021B2E1D4007DAC2A /* SentimentAuthPlugin.swift in Sources */,
+				2B7BAB5B21B3254B004AE351 /* AppCoordinator.swift in Sources */,
+				2B08B4C021AD3A28006F6593 /* AppDelegate.swift in Sources */,
+				2BE87BBF21B469B200489BC9 /* ApperanceProxyHelper.swift in Sources */,
+				2BE87BA921B37BBB00489BC9 /* Optional+NilOrEmpty.swift in Sources */,
+				2BE87B8C21B333A500489BC9 /* ShadowBorderButtonView.swift in Sources */,
+				2BE87BB121B395C300489BC9 /* SentimentViewModel.swift in Sources */,
+				2BE5FA1121AF5F73007DAC2A /* UIImageView+DownloadImage.swift in Sources */,
+				2BE5FA1521AF61C5007DAC2A /* TweetTableViewCell.swift in Sources */,
+				2BE87B8B21B333A500489BC9 /* ErrorViewController.swift in Sources */,
+				2BE87BBB21B3A26400489BC9 /* UIColor+Palette.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B08B4CC21AD3A2B006F6593 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BE87BD121B4E4FE00489BC9 /* AuthViewModelTests.swift in Sources */,
+				2BE87BE221B4EE8600489BC9 /* SentimentViewModelTests.swift in Sources */,
+				2BE87BD321B4E53E00489BC9 /* MockAuthRepository.swift in Sources */,
+				2BE87BD521B4EAC000489BC9 /* AuthFactory.swift in Sources */,
+				2BE87BEF21B54BE200489BC9 /* SearchViewModelTests.swift in Sources */,
+				2B08B4D521AD3A2B006F6593 /* SentimentAnalysisTests.swift in Sources */,
+				2BE87BE421B4EEB100489BC9 /* MockSentimentRepository.swift in Sources */,
+				2BE87BF121B54C0F00489BC9 /* MockSearchRepository.swift in Sources */,
+				2BE87BE821B4EFD900489BC9 /* TweetFactory.swift in Sources */,
+				2BE87BE621B4EF1B00489BC9 /* SentimentFactory.swift in Sources */,
+				2BE87BEA21B53D6500489BC9 /* SentimentTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2B08B4D221AD3A2B006F6593 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B08B4BB21AD3A28006F6593 /* SentimentAnalysis */;
+			targetProxy = 2B08B4D121AD3A2B006F6593 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2B08B4C821AD3A2B006F6593 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B08B4C921AD3A2B006F6593 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		2BE87BC721B473A500489BC9 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BE87BC621B473A500489BC9 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2B08B4D721AD3A2B006F6593 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2B08B4D821AD3A2B006F6593 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2B08B4DA21AD3A2B006F6593 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 008D5583EA6330492F384BED /* Pods-SentimentAnalysis.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/SentimentAnalysis/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.thalesfrigo.sentimentify.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2B08B4DB21AD3A2B006F6593 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A16E418A1C8F242666218D5 /* Pods-SentimentAnalysis.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/SentimentAnalysis/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.thalesfrigo.sentimentify.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2B08B4DD21AD3A2B006F6593 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72B1138003E9313C6D8D8F32 /* Pods-SentimentAnalysisTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SentimentAnalysisTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.thalesfrigo.SentimentAnalysisTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SentimentAnalysis.app/SentimentAnalysis";
+			};
+			name = Debug;
+		};
+		2B08B4DE21AD3A2B006F6593 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2C4155739009BCD4EB44091 /* Pods-SentimentAnalysisTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SentimentAnalysisTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.thalesfrigo.SentimentAnalysisTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SentimentAnalysis.app/SentimentAnalysis";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2B08B4B721AD3A28006F6593 /* Build configuration list for PBXProject "SentimentAnalysis" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B08B4D721AD3A2B006F6593 /* Debug */,
+				2B08B4D821AD3A2B006F6593 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B08B4D921AD3A2B006F6593 /* Build configuration list for PBXNativeTarget "SentimentAnalysis" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B08B4DA21AD3A2B006F6593 /* Debug */,
+				2B08B4DB21AD3A2B006F6593 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B08B4DC21AD3A2B006F6593 /* Build configuration list for PBXNativeTarget "SentimentAnalysisTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B08B4DD21AD3A2B006F6593 /* Debug */,
+				2B08B4DE21AD3A2B006F6593 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2B08B4B421AD3A28006F6593 /* Project object */;
+}
