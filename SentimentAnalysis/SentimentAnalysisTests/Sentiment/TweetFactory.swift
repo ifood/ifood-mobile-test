@@ -12,6 +12,7 @@ import Foundation
 struct TweetFactory {
     static func makeTweet() -> Tweet {
         return Tweet(
+            id: 1069344318882832385,
             createdAt: Date(),
             text: "Don’t do it max you seen what happen to Connor when he had him ring side 🤦🏽‍♂️ 😬 but I guess you fighting in Canada",
             user: User(

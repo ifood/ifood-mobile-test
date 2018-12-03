@@ -10,17 +10,20 @@ import Foundation
 
 struct Tweet: Codable {
     
+    let id: Int64
     let createdAt: Date
     let text: String
     let user: User
     
-    init(createdAt: Date, text: String, user: User) {
+    init(id: Int64, createdAt: Date, text: String, user: User) {
+        self.id = id
         self.createdAt = createdAt
         self.text = text
         self.user = user
     }
     
     enum CodingKeys: String, CodingKey {
+        case id
         case createdAt = "created_at"
         case text
         case user
@@ -28,7 +31,8 @@ struct Tweet: Codable {
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        
+
+        id = try container.decode(Int64.self, forKey: .id)
         text = try container.decode(String.self, forKey: .text)
         user = try container.decode(User.self, forKey: .user)
         

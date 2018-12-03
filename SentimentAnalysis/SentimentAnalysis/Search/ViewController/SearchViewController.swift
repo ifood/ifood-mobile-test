@@ -130,7 +130,6 @@ extension SearchViewController {
     func setupTableView() {
         tableView.register(cellType: TweetTableViewCell.self)
         tableView.dataSource = self
-//        tableView.prefetchDataSource = self
         tableView.delegate = self
         tableView.estimatedRowHeight = 60
         tableView.rowHeight = UITableView.automaticDimension
@@ -165,6 +164,14 @@ extension SearchViewController: UITableViewDataSource {
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         searchController.searchBar.resignFirstResponder()
     }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offset: CGFloat = 200
+        let bottomEdge = scrollView.contentOffset.y + scrollView.frame.size.height;
+        if (bottomEdge + offset >= scrollView.contentSize.height) {
+            viewModel.loadMore()
+        }
+    }
 }
 
 // MARK: UITableViewDelegate
@@ -175,6 +182,7 @@ extension SearchViewController: UITableViewDelegate {
     }
 }
 
+// MARK: UISearchBarDelegate
 extension SearchViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {

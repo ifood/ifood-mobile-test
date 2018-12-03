@@ -11,7 +11,7 @@ import Moya
 
 enum TwitterAPI {
     case auth
-    case search(username: String)
+    case search(username: String, maxId: Int64?)
 }
 
 extension TwitterAPI: TargetType {
@@ -42,8 +42,12 @@ extension TwitterAPI: TargetType {
         switch self {
         case .auth:
             return ["grant_type": "client_credentials"]
-        case .search(let username):
-            return ["screen_name": username]
+        case .search(let username, let maxId):
+            var parameters: [String: Any] = ["screen_name": username, "count": 10]
+            if let maxId = maxId {
+                parameters["max_id"] = maxId
+            }
+            return parameters
         }
     }
     

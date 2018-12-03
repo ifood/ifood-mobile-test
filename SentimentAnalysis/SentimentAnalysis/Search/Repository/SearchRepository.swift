@@ -13,7 +13,7 @@ import Moya
 protocol SearchRepositoryType {
     typealias Handler = (Result<[Tweet], AnyError>) -> Void
     
-    func search(with username: String, then handler: @escaping Handler)
+    func search(with username: String, maxId: Int64?, then handler: @escaping Handler)
 }
 
 enum SearchRepositoryError: LocalizedError {
@@ -67,8 +67,8 @@ struct SearchRepository: SearchRepositoryType {
         )
     }
     
-    func search(with username: String, then handler: @escaping Handler) {
-        provider.request(.search(username: username)) { (result) in
+    func search(with username: String, maxId: Int64?, then handler: @escaping Handler) {
+        provider.request(.search(username: username, maxId: maxId)) { (result) in
             do {
                 let tweets = try result.dematerialize().map([Tweet].self)
                 handler(.success(tweets))
