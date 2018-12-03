@@ -13,7 +13,7 @@ class SentimentViewModel {
     let tweet: Tweet
     let repository: SentimentRepositoryType
     
-    let state = Variable<ViewModelState<Sentiment>>(.empty)
+    let state = Variable<ViewModelState<Sentiment, Error>>(.empty)
     
     init(tweet: Tweet, repository: SentimentRepositoryType) {
         self.tweet = tweet

@@ -16,12 +16,12 @@ class ErrorView: UIView {
         stackView.axis = .vertical
         stackView.alignment = .center
         stackView.distribution = .fill
-        stackView.spacing = 16
+        stackView.spacing = 20
         return stackView
     }()
     
     let image: UIImageView = {
-        let imageView = UIImageView(image: UIImage(named: ""))
+        let imageView = UIImageView(image: UIImage(named: "sad"))
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFit
         return imageView
@@ -30,7 +30,7 @@ class ErrorView: UIView {
     let title: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Verifique sua conexão!"
+        label.text = Localized(key: "ERROR_TITLE")
         label.font = UIFont(name: "Avenir-Heavy", size: 20)
         label.textAlignment = .center
         label.numberOfLines = 0
@@ -40,7 +40,7 @@ class ErrorView: UIView {
     let subtitle: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Sua internet parece demorar para chegar ao nosso servidor."
+        label.text = Localized(key: "ERROR_MESSAGE")
         label.font = UIFont(name: "Avenir-Book", size: 16)
         label.textAlignment = .center
         label.numberOfLines = 0
@@ -50,8 +50,8 @@ class ErrorView: UIView {
     let reloadButton: ShadowBorderButtonView = {
         let buttonView = ShadowBorderButtonView()
         buttonView.translatesAutoresizingMaskIntoConstraints = false
-        buttonView.button.setTitle("Tentar novamente", for: .normal)
-        buttonView.button.setBackgroundColor(.blue, for: .normal)
+        buttonView.button.setTitle(Localized(key: "ERROR_CTA"), for: .normal)
+        buttonView.button.setBackgroundColor(.primary, for: .normal)
         buttonView.button.titleLabel?.font = UIFont(name: "Avenir-Heavy", size: 12)
         buttonView.button.setTitleColor(.white, for: .normal)
         return buttonView
@@ -106,11 +106,11 @@ extension ErrorView: ViewConfiguration {
         container
             .centerXAnchor(equalTo: centerXAnchor)
             .centerYAnchor(equalTo: centerYAnchor)
-            .widthAnchor(equalTo: widthAnchor)
+            .widthAnchor(equalTo: widthAnchor, constant: -16)
         
         image
-            .widthAnchor(equalTo: 100)
-            .heightAnchor(equalTo: 100)
+            .widthAnchor(equalTo: 120)
+            .heightAnchor(equalTo: 120)
         
         reloadButton
             .widthAnchor(equalTo: 145)

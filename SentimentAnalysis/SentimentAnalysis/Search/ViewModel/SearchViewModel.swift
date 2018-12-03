@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Result
 
 protocol SearchViewModelDelegate: AnyObject {
     func didStartProcessTweet(with tweet: Tweet)
@@ -14,12 +15,16 @@ protocol SearchViewModelDelegate: AnyObject {
 
 class SearchViewModel {
     
+    weak var delegate: SearchViewModelDelegate?
+    
     let repository: SearchRepositoryType
     
-    var dataSource: Variable<[Tweet]> = Variable([])
-    var searchState: Variable<ViewModelState<[Tweet]>> = Variable(.empty)
+    var searchState: Variable<ViewModelState<[Tweet], AnyError>> = Variable(.empty)
     
-    weak var delegate: SearchViewModelDelegate?
+    var dataSource: Variable<[Tweet]> = Variable([])
+    
+    
+    
     
     init(repository: SearchRepositoryType) {
         self.repository = repository
@@ -32,7 +37,7 @@ class SearchViewModel {
             case .success(let tweets):
                 guard tweets.count > 0 else {
                     self?.dataSource.value = []
-                    self?.searchState.value = .empty
+                    self?.searchState.value = .error(AnyError(SearchRepositoryError.userHasNoData))
                     return
                 }
                 self?.dataSource.value = tweets
@@ -42,6 +47,20 @@ class SearchViewModel {
                 self?.searchState.value = .error(error)
             }
         }
+    }
+    
+    func reset() {
+        searchState.value = .empty
+        dataSource.value = []
+    }
+    
+    func shouldChangeText(with text: String) -> Bool {
+        var allowedCharacters = CharacterSet.alphanumerics
+        allowedCharacters.insert(charactersIn: "_")
+        allowedCharacters.insert(charactersIn: "\n")
+        
+        let characterSet = CharacterSet(charactersIn: text)
+        return allowedCharacters.isSuperset(of: characterSet)
     }
     
     var numberOfItems: Int {

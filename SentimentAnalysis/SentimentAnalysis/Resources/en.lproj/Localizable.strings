@@ -1,0 +1,24 @@
+/* 
+  Localizable.strings
+  SentimentAnalysis
+
+  Created by Thales Frigo on 02/12/18.
+  Copyright © 2018 Thales Frigo. All rights reserved.
+*/
+
+SEARCH_TITLE = "Sentiment Analysis";
+SEARCH_BAR_PLACEHOLDER = "Search users";
+SEARCH_USER_NOT_FOUND = "No users found with this username.";
+SEARCH_USER_HAS_NO_DATA = "This user has not tweeted yet. Come on, give him an incentive :)";
+SEARCH_COULD_NOT_FETCH_DATA = "Could not bring any data from the server.";
+ERROR_TITLE = "Ouch!";
+ERROR_MESSAGE = "An error has occurred.";
+ERROR_CTA = "Try again";
+EMPTY_TITLE = "Welcome to Sentimentify";
+EMPTY_MESSAGE = "Are you ready to analyze the feelings of your friends' tweets? Just type his username and select a tweet!";
+TAP_TO_START = "Let's go!";
+SEARCH_FAILURE_REASON = "Ouch!";
+SEARCH_RECOVERY_SUGGESTION = "Search again";
+SENTIMENT_TITLE_PROCESSING = "Processing";
+SENTIMENT_TITLE_DONE = "Done";
+SENTIMENT_TITLE_ERROR = "Error";

@@ -16,11 +16,11 @@ enum Emotion {
     var color: UIColor {
         switch self {
         case .happy:
-            return .materialGreen
-        case .neutral:
             return .materialYellow
+        case .neutral:
+            return .materialGray
         case .sad:
-            return .materialRed
+            return .materialBlue
         }
     }
     

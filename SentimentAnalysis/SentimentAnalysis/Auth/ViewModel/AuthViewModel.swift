@@ -17,7 +17,7 @@ class AuthViewModel {
     
     let repository: AuthRepositoryType
     
-    let authState: Variable<ViewModelState<Auth>> = Variable(.empty)
+    let authState: Variable<ViewModelState<Auth, Error>> = Variable(.empty)
 
     weak var delegate: AuthViewModelDelegate?
     

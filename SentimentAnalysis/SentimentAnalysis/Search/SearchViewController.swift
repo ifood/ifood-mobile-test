@@ -44,12 +44,23 @@ class SearchViewController: UIViewController, ErrorDisplayer, Loadable {
                 switch state {
                 case .loading:
                     vc.startLoading()
-                case .error(let error):
-                    vc.searchController.searchBar.isUserInteractionEnabled = false
-                    vc.show(error, then: {
-                        vc.searchController.searchBar.text = ""
-                        vc.searchController.searchBar.isUserInteractionEnabled = true
-                    })
+                case .empty:
+                    vc.emptyVC.reset()
+                case .error(let anyError):
+                    
+                    switch anyError.error {
+                    case let error as SearchRepositoryError:
+                        vc.emptyVC.render(error)
+                        break
+
+                    default:
+                        vc.searchController.searchBar.isUserInteractionEnabled = false
+                        vc.show(anyError.error, then: { [weak vc] in
+                            vc?.searchController.searchBar.text = ""
+                            vc?.searchController.searchBar.isUserInteractionEnabled = true
+                        })
+                    }
+                    
                 default:
                     return
                 }
@@ -60,6 +71,10 @@ class SearchViewController: UIViewController, ErrorDisplayer, Loadable {
             self?.tableView.reloadData()
         }
     }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 }
 
 // MARK: Search
@@ -68,10 +83,11 @@ extension SearchViewController {
     func setupSearch() {
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search users"
+        searchController.searchBar.placeholder = Localized(key: "SEARCH_BAR_PLACEHOLDER")
+        searchController.searchBar.delegate = self
         navigationItem.searchController = searchController
         navigationItem.largeTitleDisplayMode = .always
-        navigationItem.title = "Sentiment Analysis"
+        navigationItem.title = Localized(key: "SEARCH_TITLE")
         navigationItem.hidesSearchBarWhenScrolling = false
         definesPresentationContext = true
     }
@@ -81,16 +97,16 @@ extension SearchViewController {
 extension SearchViewController: UISearchResultsUpdating {
     
     func updateSearchResults(for searchController: UISearchController) {
-        print(searchController.searchBar.text ?? "Empty")
+        
+        pendingRequestWorkItem?.cancel()
         
         guard !searchController.searchBar.text.isNilOrEmpty else {
+            viewModel.reset()
             return
         }
         
         let searchText = searchController.searchBar.text!
         
-        pendingRequestWorkItem?.cancel()
-
         let requestWorkItem = DispatchWorkItem { [weak self] in
             self?.viewModel.search(with: searchText)
         }
@@ -99,7 +115,7 @@ extension SearchViewController: UISearchResultsUpdating {
         DispatchQueue
             .main
             .asyncAfter(
-                deadline: .now() + .milliseconds(500),
+                deadline: .now() + .milliseconds(750),
                 execute: requestWorkItem
         )
         
@@ -112,7 +128,7 @@ extension SearchViewController {
     func setupTableView() {
         tableView.register(cellType: TweetTableViewCell.self)
         tableView.dataSource = self
-        tableView.prefetchDataSource = self
+//        tableView.prefetchDataSource = self
         tableView.delegate = self
         tableView.estimatedRowHeight = 60
         tableView.rowHeight = UITableView.automaticDimension
@@ -143,15 +159,9 @@ extension SearchViewController: UITableViewDataSource {
         cell.render(tweet)
         return cell
     }
-}
-
-extension SearchViewController: UITableViewDataSourcePrefetching {
-    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
-        print(indexPaths)
-    }
     
-    func tableView(_ tableView: UITableView, cancelPrefetchingForRowsAt indexPaths: [IndexPath]) {
-        print(indexPaths)
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        searchController.searchBar.resignFirstResponder()
     }
 }
 
@@ -163,3 +173,13 @@ extension SearchViewController: UITableViewDelegate {
     }
 }
 
+extension SearchViewController: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        return viewModel.shouldChangeText(with: text)
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
+}

@@ -16,6 +16,42 @@ protocol SearchRepositoryType {
     func search(with username: String, then handler: @escaping Handler)
 }
 
+enum SearchRepositoryError: LocalizedError {
+    case userNotFound
+    case userHasNoData
+    case couldNotFetchData
+    
+    var failureReason: String? {
+        return Localized(key: "SEARCH_FAILURE_REASON")
+    }
+    
+    var recoverySuggestion: String? {
+        return Localized(key: "SEARCH_RECOVERY_SUGGESTION")
+    }
+    
+    var errorDescription: String? {
+        switch self {
+        case .userNotFound:
+            return Localized(key: "SEARCH_USER_NOT_FOUND")
+        case .userHasNoData:
+            return Localized(key: "SEARCH_USER_HAS_NO_DATA")
+        case .couldNotFetchData:
+            return Localized(key: "SEARCH_COULD_NOT_FETCH_DATA")
+        }
+    }
+    
+    var imageName: String {
+        switch self {
+        case .userNotFound:
+            return "not_found"
+        case .userHasNoData:
+            return "neutral"
+        case .couldNotFetchData:
+            return "sad"
+        }
+    }
+}
+
 struct SearchRepository: SearchRepositoryType {
     typealias Handler = SearchRepositoryType.Handler
     
@@ -36,6 +72,12 @@ struct SearchRepository: SearchRepositoryType {
             do {
                 let tweets = try result.dematerialize().map([Tweet].self)
                 handler(.success(tweets))
+            } catch let error as MoyaError {
+                if error.response?.statusCode == 404 {
+                    handler(.failure(AnyError(SearchRepositoryError.userNotFound)))
+                } else {
+                    handler(.failure(AnyError(SearchRepositoryError.couldNotFetchData)))
+                }
             } catch {
                 handler(.failure(AnyError(error)))
             }

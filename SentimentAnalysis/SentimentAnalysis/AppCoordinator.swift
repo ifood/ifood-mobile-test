@@ -20,13 +20,14 @@ class AppCoordinator: Coordinator {
     let tokenStore: AuthTokenStore
     let splashView = RevealingSplashView.makeSplash()
     
-    let rootViewController = UIViewController()
+    let rootViewController = RootViewController()
     
     var authViewController: AuthViewController?
     
     init(window: UIWindow, tokenStore: AuthTokenStore = KeychainTokenStore()) {
         self.window = window
         self.window.rootViewController = rootViewController
+        ApperanceProxyHelper.make()
         self.tokenStore = tokenStore
     }
     
@@ -68,7 +69,10 @@ class AppCoordinator: Coordinator {
         let searchVC = SearchViewController(viewModel: viewModel)
         
         let navigationC = UINavigationController(rootViewController: searchVC)
+        navigationC.navigationBar.prefersLargeTitles = true
         navigationC.navigationItem.largeTitleDisplayMode = .always
+        navigationC.navigationBar.tintColor = .white
+        
         rootViewController.add(navigationC)
         
         removeSplash()

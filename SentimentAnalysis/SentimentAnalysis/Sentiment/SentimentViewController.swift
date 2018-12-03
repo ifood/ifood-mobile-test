@@ -47,16 +47,16 @@ class SentimentViewController: UIViewController, ErrorDisplayer, Loadable {
                 vc.stopLoading()
                 switch state {
                 case .loading:
-                    vc.title = "Processing"
+                    vc.title = Localized(key: "SENTIMENT_TITLE_PROCESSING")
                     vc.startLoading()
                 case .load(let sentiment):
-                    vc.title = "Done"
+                    vc.title = Localized(key: "SENTIMENT_TITLE_DONE")
                     let emotion = sentiment.emotion
                     vc.result.text = emotion.emoji
                     vc.view.backgroundColor = emotion.color
                     vc.animateSentiment()
                 case .error(let error):
-                    vc.title = "Error"
+                    vc.title = Localized(key: "SENTIMENT_TITLE_ERROR")
                     vc.show(error) {
                         vc.viewModel.analyzeDocument()
                     }
@@ -95,6 +95,10 @@ class SentimentViewController: UIViewController, ErrorDisplayer, Loadable {
     
     @objc func close(){
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
 }
 

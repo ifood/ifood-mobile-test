@@ -41,7 +41,6 @@
 		2BE87B9021B333A500489BC9 /* UIView+Anchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87B8A21B333A500489BC9 /* UIView+Anchors.swift */; };
 		2BE87B9321B3368900489BC9 /* Variable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87B9221B3368900489BC9 /* Variable.swift */; };
 		2BE87B9521B3379000489BC9 /* ErrorDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87B9421B3379000489BC9 /* ErrorDisplayer.swift */; };
-		2BE87B9721B33D1900489BC9 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87B9621B33D1900489BC9 /* SplashViewController.swift */; };
 		2BE87B9921B3405500489BC9 /* ViewModelState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87B9821B3405500489BC9 /* ViewModelState.swift */; };
 		2BE87B9D21B3429200489BC9 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BE87B9B21B3429200489BC9 /* SearchViewController.xib */; };
 		2BE87BA021B36CEB00489BC9 /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87B9F21B36CEB00489BC9 /* AuthRepository.swift */; };
@@ -55,6 +54,11 @@
 		2BE87BB821B398A900489BC9 /* SentimentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BE87BB621B398A900489BC9 /* SentimentViewController.xib */; };
 		2BE87BBB21B3A26400489BC9 /* UIColor+Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87BBA21B3A26400489BC9 /* UIColor+Palette.swift */; };
 		2BE87BBD21B3A41500489BC9 /* Keychain+AuthTokenStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87BBC21B3A41500489BC9 /* Keychain+AuthTokenStore.swift */; };
+		2BE87BBF21B469B200489BC9 /* ApperanceProxyHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87BBE21B469B200489BC9 /* ApperanceProxyHelper.swift */; };
+		2BE87BC121B46AD000489BC9 /* UINavigationController+StatusBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87BC021B46AD000489BC9 /* UINavigationController+StatusBarStyle.swift */; };
+		2BE87BC521B473A500489BC9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2BE87BC721B473A500489BC9 /* Localizable.strings */; };
+		2BE87BC921B4CAA200489BC9 /* Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87BC821B4CAA200489BC9 /* Localized.swift */; };
+		2BE87BCB21B4CDF700489BC9 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE87BCA21B4CDF700489BC9 /* RootViewController.swift */; };
 		AEFAE7761E869FFABA5C3B8B /* Pods_SentimentAnalysisTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3FC6F1DAF0460096BFD2BF0 /* Pods_SentimentAnalysisTests.framework */; };
 		E8607A255C0826B300B3E75D /* Pods_SentimentAnalysis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18717B4359BD8D5886601C01 /* Pods_SentimentAnalysis.framework */; };
 /* End PBXBuildFile section */
@@ -110,7 +114,6 @@
 		2BE87B8A21B333A500489BC9 /* UIView+Anchors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Anchors.swift"; sourceTree = "<group>"; };
 		2BE87B9221B3368900489BC9 /* Variable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variable.swift; sourceTree = "<group>"; };
 		2BE87B9421B3379000489BC9 /* ErrorDisplayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorDisplayer.swift; sourceTree = "<group>"; };
-		2BE87B9621B33D1900489BC9 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		2BE87B9821B3405500489BC9 /* ViewModelState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelState.swift; sourceTree = "<group>"; };
 		2BE87B9B21B3429200489BC9 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		2BE87B9F21B36CEB00489BC9 /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
@@ -124,6 +127,11 @@
 		2BE87BB621B398A900489BC9 /* SentimentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SentimentViewController.xib; sourceTree = "<group>"; };
 		2BE87BBA21B3A26400489BC9 /* UIColor+Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Palette.swift"; sourceTree = "<group>"; };
 		2BE87BBC21B3A41500489BC9 /* Keychain+AuthTokenStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keychain+AuthTokenStore.swift"; sourceTree = "<group>"; };
+		2BE87BBE21B469B200489BC9 /* ApperanceProxyHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApperanceProxyHelper.swift; sourceTree = "<group>"; };
+		2BE87BC021B46AD000489BC9 /* UINavigationController+StatusBarStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+StatusBarStyle.swift"; sourceTree = "<group>"; };
+		2BE87BC621B473A500489BC9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2BE87BC821B4CAA200489BC9 /* Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localized.swift; sourceTree = "<group>"; };
+		2BE87BCA21B4CDF700489BC9 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RootViewController.swift; path = Pods/RootViewController.swift; sourceTree = SOURCE_ROOT; };
 		5A16E418A1C8F242666218D5 /* Pods-SentimentAnalysis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SentimentAnalysis.release.xcconfig"; path = "Pods/Target Support Files/Pods-SentimentAnalysis/Pods-SentimentAnalysis.release.xcconfig"; sourceTree = "<group>"; };
 		72B1138003E9313C6D8D8F32 /* Pods-SentimentAnalysisTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SentimentAnalysisTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SentimentAnalysisTests/Pods-SentimentAnalysisTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B3FC6F1DAF0460096BFD2BF0 /* Pods_SentimentAnalysisTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SentimentAnalysisTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -184,16 +192,18 @@
 		2B08B4BE21AD3A28006F6593 /* SentimentAnalysis */ = {
 			isa = PBXGroup;
 			children = (
+				2BE87BC221B472D300489BC9 /* Resources */,
 				2BE87B9121B3367F00489BC9 /* Common */,
 				2BE5F9F521AE2A36007DAC2A /* Extensions */,
 				2BE5F9FD21AE37A9007DAC2A /* Auth */,
 				2BE5F9EF21AE25A1007DAC2A /* Search */,
 				2BE5FA1721AF77ED007DAC2A /* Sentiment */,
 				2B08B4BF21AD3A28006F6593 /* AppDelegate.swift */,
+				2B7BAB5A21B3254B004AE351 /* AppCoordinator.swift */,
+				2BE87BCA21B4CDF700489BC9 /* RootViewController.swift */,
 				2B08B4C621AD3A2B006F6593 /* Assets.xcassets */,
 				2B08B4C821AD3A2B006F6593 /* LaunchScreen.storyboard */,
 				2B08B4CB21AD3A2B006F6593 /* Info.plist */,
-				2B7BAB5A21B3254B004AE351 /* AppCoordinator.swift */,
 			);
 			path = SentimentAnalysis;
 			sourceTree = "<group>";
@@ -245,6 +255,7 @@
 				2BE87BA821B37BBB00489BC9 /* Optional+NilOrEmpty.swift */,
 				2BE87BBA21B3A26400489BC9 /* UIColor+Palette.swift */,
 				2BE87BBC21B3A41500489BC9 /* Keychain+AuthTokenStore.swift */,
+				2BE87BC021B46AD000489BC9 /* UINavigationController+StatusBarStyle.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -315,12 +326,13 @@
 			children = (
 				2BE87B9221B3368900489BC9 /* Variable.swift */,
 				2BE87B9421B3379000489BC9 /* ErrorDisplayer.swift */,
-				2BE87B9621B33D1900489BC9 /* SplashViewController.swift */,
 				2BE87B9821B3405500489BC9 /* ViewModelState.swift */,
 				2BE87BA621B3781100489BC9 /* Loadable.swift */,
 				2BE87B8621B333A400489BC9 /* ShadowBorderButtonView.swift */,
 				2BE87B8521B333A400489BC9 /* ErrorViewController.swift */,
 				2BE87BAD21B38DEF00489BC9 /* EmptyViewController.swift */,
+				2BE87BBE21B469B200489BC9 /* ApperanceProxyHelper.swift */,
+				2BE87BC821B4CAA200489BC9 /* Localized.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -379,6 +391,14 @@
 				2BE87BB321B3976D00489BC9 /* SentimentRepository.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		2BE87BC221B472D300489BC9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2BE87BC721B473A500489BC9 /* Localizable.strings */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		7918154B01D2D8754CCB8C7E /* Frameworks */ = {
@@ -475,6 +495,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B08B4CA21AD3A2B006F6593 /* LaunchScreen.storyboard in Resources */,
+				2BE87BC521B473A500489BC9 /* Localizable.strings in Resources */,
 				2B08B4C721AD3A2B006F6593 /* Assets.xcassets in Resources */,
 				2BE87B9D21B3429200489BC9 /* SearchViewController.xib in Resources */,
 				2BE87BB821B398A900489BC9 /* SentimentViewController.xib in Resources */,
@@ -584,8 +605,8 @@
 				2BE5FA1A21B2DE6A007DAC2A /* SentimentAPI.swift in Sources */,
 				2BE5FA0C21AF57C6007DAC2A /* DateFormatter+TwitterDateFormat.swift in Sources */,
 				2BE87BB421B3976D00489BC9 /* SentimentRepository.swift in Sources */,
+				2BE87BCB21B4CDF700489BC9 /* RootViewController.swift in Sources */,
 				2BE87BBD21B3A41500489BC9 /* Keychain+AuthTokenStore.swift in Sources */,
-				2BE87B9721B33D1900489BC9 /* SplashViewController.swift in Sources */,
 				2BE5F9F721AE2A44007DAC2A /* String+Base64.swift in Sources */,
 				2BE87BAC21B37DB500489BC9 /* SearchRepository.swift in Sources */,
 				2BE5FA2321B2E5A8007DAC2A /* Sentiment.swift in Sources */,
@@ -595,15 +616,18 @@
 				2BE5F9FF21AE37B3007DAC2A /* Auth.swift in Sources */,
 				2BE5FA0821AF5790007DAC2A /* User.swift in Sources */,
 				2BE87B9321B3368900489BC9 /* Variable.swift in Sources */,
+				2BE87BC121B46AD000489BC9 /* UINavigationController+StatusBarStyle.swift in Sources */,
 				2B638AE321AE23F0000DCA37 /* TwitterAPI.swift in Sources */,
 				2BE5FA1E21B2E14C007DAC2A /* SentimentViewController.swift in Sources */,
 				2BE5FA0121AE3806007DAC2A /* AuthViewController.swift in Sources */,
 				2BE87BAE21B38DEF00489BC9 /* EmptyViewController.swift in Sources */,
 				2BE87B8421B3323900489BC9 /* RevealingSplashView+Launch.swift in Sources */,
+				2BE87BC921B4CAA200489BC9 /* Localized.swift in Sources */,
 				2BE5FA1C21B2DE81007DAC2A /* SentimentAPIConfig.swift in Sources */,
 				2BE5FA2021B2E1D4007DAC2A /* SentimentAuthPlugin.swift in Sources */,
 				2B7BAB5B21B3254B004AE351 /* AppCoordinator.swift in Sources */,
 				2B08B4C021AD3A28006F6593 /* AppDelegate.swift in Sources */,
+				2BE87BBF21B469B200489BC9 /* ApperanceProxyHelper.swift in Sources */,
 				2BE87BA921B37BBB00489BC9 /* Optional+NilOrEmpty.swift in Sources */,
 				2BE87B8C21B333A500489BC9 /* ShadowBorderButtonView.swift in Sources */,
 				2BE87BB121B395C300489BC9 /* SentimentViewModel.swift in Sources */,
@@ -639,6 +663,14 @@
 				2B08B4C921AD3A2B006F6593 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		2BE87BC721B473A500489BC9 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BE87BC621B473A500489BC9 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -766,15 +798,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 424GJ8UFRE;
 				INFOPLIST_FILE = SentimentAnalysis/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.thalesfrigo.sentimentanalysis.app;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.tentowin.customer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "TTW - Development";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -786,15 +818,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 424GJ8UFRE;
 				INFOPLIST_FILE = SentimentAnalysis/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.thalesfrigo.sentimentanalysis.app;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.tentowin.customer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "TTW - Development";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -1,18 +1,9 @@
 //
-//  EmptyView.swift
+//  EmptyViewController.swift
 //  SentimentAnalysis
 //
 //  Created by Thales Frigo on 02/12/18.
 //  Copyright © 2018 Thales Frigo. All rights reserved.
-//
-
-import Foundation
-//
-//  EmptyView.swift
-//  tecnonutri
-//
-//  Created by Thales Frigo on 26/06/2018.
-//  Copyright © 2018 Grupo Minha Vida. All rights reserved.
 //
 
 import UIKit
@@ -25,12 +16,12 @@ class EmptyView: UIView {
         stackView.axis = .vertical
         stackView.alignment = .center
         stackView.distribution = .fill
-        stackView.spacing = 16
+        stackView.spacing = 20
         return stackView
     }()
     
     let image: UIImageView = {
-        let imageView = UIImageView(image: UIImage(named: ""))
+        let imageView = UIImageView(image: UIImage(named: "search"))
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -38,7 +29,7 @@ class EmptyView: UIView {
     let title: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "EMPTY_TITLE"
+        label.text = Localized(key: "EMPTY_TITLE")
         label.font = UIFont(name: "Avenir-Heavy", size: 20)
         label.textAlignment = .center
         label.numberOfLines = 0
@@ -48,7 +39,7 @@ class EmptyView: UIView {
     let subtitle: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "EMPTY_MESSAGE"
+        label.text = Localized(key: "EMPTY_MESSAGE")
         label.font = UIFont(name: "Avenir-Book", size: 16)
         label.textAlignment = .center
         label.numberOfLines = 0
@@ -58,8 +49,8 @@ class EmptyView: UIView {
     let ctaButton: ShadowBorderButtonView = {
         let buttonView = ShadowBorderButtonView()
         buttonView.translatesAutoresizingMaskIntoConstraints = false
-        buttonView.button.setTitle("TAP_TO_START", for: .normal)
-        buttonView.button.setBackgroundColor(.blue, for: .normal)
+        buttonView.button.setTitle(Localized(key: "TAP_TO_START"), for: .normal)
+        buttonView.button.setBackgroundColor(.primary, for: .normal)
         buttonView.button.titleLabel?.font = UIFont(name: "Avenir-Heavy", size: 12)
         buttonView.button.setTitleColor(.white, for: .normal)
         return buttonView
@@ -89,11 +80,11 @@ extension EmptyView: ViewConfiguration {
         container
             .centerYAnchor(equalTo: centerYAnchor)
             .centerXAnchor(equalTo: centerXAnchor)
-            .widthAnchor(equalTo: widthAnchor)
+            .widthAnchor(equalTo: widthAnchor, constant: -16)
         
         image
-            .widthAnchor(equalTo: 100)
-            .heightAnchor(equalTo: 100)
+            .widthAnchor(equalTo: 120)
+            .heightAnchor(equalTo: 120)
         
         ctaButton
             .widthAnchor(equalTo: 145)
@@ -115,5 +106,19 @@ class EmptyViewController: ViewConfigurationController<EmptyView> {
         contentView.ctaButton.handler = { [weak self] in
             self?.tapHandler?()
         }
+    }
+    
+    func reset() {
+        contentView.image.image = UIImage(named: "search")
+        contentView.title.text = Localized(key: "EMPTY_TITLE")
+        contentView.subtitle.text = Localized(key: "EMPTY_MESSAGE")
+        contentView.ctaButton.button.setTitle(Localized(key: "TAP_TO_START"), for: .normal)
+    }
+    
+    func render( _ error: SearchRepositoryError) {
+        contentView.image.image = UIImage(named: error.imageName)
+        contentView.title.text = error.failureReason
+        contentView.subtitle.text = error.errorDescription
+        contentView.ctaButton.button.setTitle(error.recoverySuggestion, for: .normal)
     }
 }

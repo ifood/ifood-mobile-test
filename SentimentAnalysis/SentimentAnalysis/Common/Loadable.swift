@@ -20,7 +20,7 @@ extension Loadable where Self: UIViewController {
         startAnimating(
             CGSize(width: 50, height: 50),
             type: .circleStrokeSpin,
-            color: .red,
+            color: .primary,
             displayTimeThreshold: 3,
             minimumDisplayTime: 3,
             backgroundColor: UIColor.white.withAlphaComponent(0.8)

@@ -8,9 +8,9 @@
 
 import Foundation
 
-enum ViewModelState<Data> {
-    case empty
-    case load(Data)
+enum ViewModelState<Data, Error> {
     case loading
+    case load(Data)
+    case empty
     case error(Error)
 }
