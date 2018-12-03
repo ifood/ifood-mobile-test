@@ -43,9 +43,9 @@ enum SearchRepositoryError: LocalizedError {
     var imageName: String {
         switch self {
         case .userNotFound:
-            return "not_found"
-        case .userHasNoData:
             return "neutral"
+        case .userHasNoData:
+            return "not_found"
         case .couldNotFetchData:
             return "sad"
         }

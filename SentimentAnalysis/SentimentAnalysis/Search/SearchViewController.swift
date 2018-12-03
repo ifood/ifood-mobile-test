@@ -37,9 +37,9 @@ class SearchViewController: UIViewController, ErrorDisplayer, Loadable {
     
     func setupObservers() {
         viewModel.searchState.onUpdate = { [weak self] state in
+            guard let vc = self else { return }
+            
             DispatchQueue.main.async {
-                guard let vc = self else { return }
-                
                 vc.stopAnimating()
                 switch state {
                 case .loading:
@@ -68,7 +68,9 @@ class SearchViewController: UIViewController, ErrorDisplayer, Loadable {
         }
         
         viewModel.dataSource.onUpdate = { [weak self] _ in
-            self?.tableView.reloadData()
+            DispatchQueue.main.async { [weak self] in
+                self?.tableView.reloadData()
+            }
         }
     }
     

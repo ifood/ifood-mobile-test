@@ -34,7 +34,6 @@ class SentimentViewController: UIViewController, ErrorDisplayer, Loadable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNavigationItem()
         tweetText.text = viewModel.tweet.text
         userName.text = viewModel.tweet.user.name
         screenName.text = "@\(viewModel.tweet.user.screenName)"
@@ -42,8 +41,9 @@ class SentimentViewController: UIViewController, ErrorDisplayer, Loadable {
         userImage.download(viewModel.tweet.user.image)
         
         viewModel.state.onUpdate = { [weak self] state in
+            guard let vc = self else { return }
+            
             DispatchQueue.main.async {
-                guard let vc = self else { return }
                 vc.stopLoading()
                 switch state {
                 case .loading:
@@ -82,19 +82,6 @@ class SentimentViewController: UIViewController, ErrorDisplayer, Loadable {
         contentView.layer.shadowRadius = 50
         contentView.layer.shadowOpacity = 1
         contentView.backgroundColor = .white
-    }
-    
-    func setupNavigationItem() {
-        navigationItem.leftBarButtonItem =
-            UIBarButtonItem(
-                barButtonSystemItem: .stop,
-                target: self,
-                action: #selector(SentimentViewController.close)
-        )
-    }
-    
-    @objc func close(){
-        self.dismiss(animated: true, completion: nil)
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

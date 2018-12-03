@@ -23,6 +23,7 @@ class AppCoordinator: Coordinator {
     let rootViewController = RootViewController()
     
     var authViewController: AuthViewController?
+    var searchViewController: SearchViewController?
     
     init(window: UIWindow, tokenStore: AuthTokenStore = KeychainTokenStore()) {
         self.window = window
@@ -66,9 +67,9 @@ class AppCoordinator: Coordinator {
         let repository = SearchRepository(with: auth)
         let viewModel = SearchViewModel(repository: repository)
         viewModel.delegate = self
-        let searchVC = SearchViewController(viewModel: viewModel)
+        searchViewController = SearchViewController(viewModel: viewModel)
         
-        let navigationC = UINavigationController(rootViewController: searchVC)
+        let navigationC = UINavigationController(rootViewController: searchViewController!)
         navigationC.navigationBar.prefersLargeTitles = true
         navigationC.navigationItem.largeTitleDisplayMode = .always
         navigationC.navigationBar.tintColor = .white
@@ -102,8 +103,10 @@ extension AppCoordinator: SearchViewModelDelegate {
         )
         
         let sentimentVC = SentimentViewController(viewModel: viewModel)
-        let navigationVC = UINavigationController(rootViewController: sentimentVC)
+        searchViewController?.navigationController?.pushViewController(sentimentVC, animated: true)
         
-        rootViewController.present(navigationVC, animated: true, completion: nil)
+//        let navigationVC = UINavigationController(rootViewController: sentimentVC)
+//
+//        rootViewController.present(navigationVC, animated: true, completion: nil)
     }
 }
