@@ -38,8 +38,11 @@ class TimelineViewController: TWTRTimelineViewController, TimelineDisplayLogic {
     // MARK: Setup
 
     private func setup() {
+        
+        let configuration = Configuration()
+        
         let viewController = self
-        let interactor = TimelineInteractor()
+        let interactor = TimelineInteractor(environment: configuration.environment)
         let presenter = TimelinePresenter()
         let router = TimelineRouter()
         viewController.interactor = interactor

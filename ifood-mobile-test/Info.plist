@@ -2,6 +2,16 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>ApiKey</key>
+	<string>$(IF_API_KEY)</string>
+	<key>ApiProtocol</key>
+	<string>$(IF_API_PROTOCOL)</string>
+	<key>ApiSecret</key>
+	<string>$(IF_API_SECRET)</string>
+	<key>AppVersion</key>
+	<string>$(IF_APP_VERSION)</string>
+	<key>BaseUrl</key>
+	<string>$(IF_BASE_URL)</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -36,16 +46,6 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>BaseUrl</key>
-	<string>$(IF_BASE_URL)</string>
-	<key>ApiProtocol</key>
-	<string>$(IF_API_PROTOCOL)</string>
-	<key>ApiKey</key>
-	<string>$(IF_API_KEY)</string>
-	<key>ApiSecret</key>
-	<string>$(IF_API_SECRET)</string>
-	<key>AppVersion</key>
-	<string>$(IF_APP_VERSION)</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

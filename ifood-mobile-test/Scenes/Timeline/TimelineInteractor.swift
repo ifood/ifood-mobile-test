@@ -25,22 +25,27 @@ class TimelineInteractor: TimelineBusinessLogic, TimelineDataStore {
     
     var presenter: TimelinePresentationLogic?
     var worker: TimelineWorker?
+    var environment: EnvironmentType
     var tweetText: String = ""
 
+    init(environment: EnvironmentType) {
+        self.environment = environment
+    }
+    
     // MARK: Do something
 
     func fetchTwitterUserTimeline(request: Timeline.FetchTimeline.Request) {
-        worker = TimelineWorker()
-        if let twitterResponse = worker?.requestTwitterUserTimeline(screenName: request.screenName) {
+        worker = TimelineWorker(environment: self.environment)
+        worker?.requestTwitterUserTimeline(screenName: request.screenName, completionHandler: { [weak self] (twitterResponse) in
             if twitterResponse.userTimelineDataSource == nil {
                 let response = Timeline.Error.Response(code: 999, message: NSLocalizedString("Tweets not found", comment: ""))
-                presenter?.presentError(response: response)
+                self?.presenter?.presentError(response: response)
             }
             else {
                 let response = Timeline.FetchTimeline.Response(twitterResponse: twitterResponse)
-                presenter?.presentTwitterUserTimeline(response: response)
+                self?.presenter?.presentTwitterUserTimeline(response: response)
             }
-        }
+        })
     }
     
     func storeTweetText(text: String) {

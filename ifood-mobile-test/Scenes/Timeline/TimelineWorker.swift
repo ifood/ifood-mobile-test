@@ -13,10 +13,17 @@
 import UIKit
 
 class TimelineWorker {
-  
-    func requestTwitterUserTimeline(screenName: String) -> TwitterResponse {
-        let twitter = TwitterService()
-        let twitterResponse = twitter.requestUserTimeline(screenName: screenName)
-        return twitterResponse
+
+    private var environment: EnvironmentType
+    
+    init(environment: EnvironmentType) {
+        self.environment = environment
+    }
+    
+    func requestTwitterUserTimeline(screenName: String, completionHandler: @escaping (TwitterResponse) -> ()) {
+        let twitter = TwitterService(environment: self.environment)
+        twitter.requestUserTimeline(screenName: screenName) { (twitterResponse) in
+            completionHandler(twitterResponse)
+        }
     }
 }

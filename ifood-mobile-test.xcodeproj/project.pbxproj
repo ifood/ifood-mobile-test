@@ -27,6 +27,12 @@
 		252D29FE21B2FAA900AD0F3F /* ResultInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252D29F821B2FAA900AD0F3F /* ResultInteractor.swift */; };
 		252D2A0121B3063900AD0F3F /* AnalyzedSentiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252D2A0021B3063900AD0F3F /* AnalyzedSentiment.swift */; };
 		252D2A0321B3836F00AD0F3F /* pulse.json in Resources */ = {isa = PBXBuildFile; fileRef = 252D2A0221B3836F00AD0F3F /* pulse.json */; };
+		252FD16021B6DA2D00AD1F10 /* KeychainWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252FD15F21B6DA2D00AD1F10 /* KeychainWorker.swift */; };
+		252FD16521B6DFC700AD1F10 /* GoogleService-Info-release.plist in Resources */ = {isa = PBXBuildFile; fileRef = 252FD16421B6DFC700AD1F10 /* GoogleService-Info-release.plist */; };
+		252FD16721B6E03E00AD1F10 /* FirebaseWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252FD16621B6E03E00AD1F10 /* FirebaseWorker.swift */; };
+		252FD16921B6E20500AD1F10 /* GoogleService-Info-debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = 252FD16821B6E20500AD1F10 /* GoogleService-Info-debug.plist */; };
+		252FD16B21B6E25600AD1F10 /* GoogleService-Info-staging.plist in Resources */ = {isa = PBXBuildFile; fileRef = 252FD16A21B6E25500AD1F10 /* GoogleService-Info-staging.plist */; };
+		252FD16F21B7046D00AD1F10 /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252FD16E21B7046D00AD1F10 /* AsyncOperation.swift */; };
 		25ACBA9D21B4350C00B6693A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 25ACBA9C21B4350C00B6693A /* Localizable.strings */; };
 		25DF94D421B1FB0F00852ED2 /* RestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DF94D321B1FB0F00852ED2 /* RestService.swift */; };
 		25DF94D621B1FB5000852ED2 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DF94D521B1FB5000852ED2 /* DataService.swift */; };
@@ -75,6 +81,12 @@
 		252D29F821B2FAA900AD0F3F /* ResultInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultInteractor.swift; sourceTree = "<group>"; };
 		252D2A0021B3063900AD0F3F /* AnalyzedSentiment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzedSentiment.swift; sourceTree = "<group>"; };
 		252D2A0221B3836F00AD0F3F /* pulse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pulse.json; sourceTree = "<group>"; };
+		252FD15F21B6DA2D00AD1F10 /* KeychainWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainWorker.swift; sourceTree = "<group>"; };
+		252FD16421B6DFC700AD1F10 /* GoogleService-Info-release.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-release.plist"; sourceTree = "<group>"; };
+		252FD16621B6E03E00AD1F10 /* FirebaseWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseWorker.swift; sourceTree = "<group>"; };
+		252FD16821B6E20500AD1F10 /* GoogleService-Info-debug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-debug.plist"; sourceTree = "<group>"; };
+		252FD16A21B6E25500AD1F10 /* GoogleService-Info-staging.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-staging.plist"; sourceTree = "<group>"; };
+		252FD16E21B7046D00AD1F10 /* AsyncOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AsyncOperation.swift; path = "ifood-mobile-test/Common/AsyncOperation.swift"; sourceTree = SOURCE_ROOT; };
 		25ACBA9C21B4350C00B6693A /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		25DF94CC21B1F23F00852ED2 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		25DF94CD21B1F25000852ED2 /* Staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
@@ -136,6 +148,7 @@
 		252D0ACA21B1EF3A0069B37D /* ifood-mobile-test */ = {
 			isa = PBXGroup;
 			children = (
+				252FD16D21B703C500AD1F10 /* Operations */,
 				252D29FF21B305FF00AD0F3F /* Models */,
 				252D29E221B2B21000AD0F3F /* Scenes */,
 				25DF94D221B1FAD000852ED2 /* Services */,
@@ -148,6 +161,9 @@
 				252D0AD421B1EF3C0069B37D /* LaunchScreen.storyboard */,
 				252D0AD721B1EF3C0069B37D /* Info.plist */,
 				25ACBA9C21B4350C00B6693A /* Localizable.strings */,
+				252FD16A21B6E25500AD1F10 /* GoogleService-Info-staging.plist */,
+				252FD16821B6E20500AD1F10 /* GoogleService-Info-debug.plist */,
+				252FD16421B6DFC700AD1F10 /* GoogleService-Info-release.plist */,
 			);
 			path = "ifood-mobile-test";
 			sourceTree = "<group>";
@@ -204,9 +220,25 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		252FD16321B6DFB800AD1F10 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		252FD16D21B703C500AD1F10 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				252FD16E21B7046D00AD1F10 /* AsyncOperation.swift */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
 		25DF94CA21B1F1DB00852ED2 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				252FD16321B6DFB800AD1F10 /* Firebase */,
 				25DF94CB21B1F1F900852ED2 /* Lottie */,
 				25DF94CC21B1F23F00852ED2 /* Release.xcconfig */,
 				25DF94CD21B1F25000852ED2 /* Staging.xcconfig */,
@@ -239,6 +271,8 @@
 			isa = PBXGroup;
 			children = (
 				25DF94DC21B1FD2900852ED2 /* LottieView.swift */,
+				252FD15F21B6DA2D00AD1F10 /* KeychainWorker.swift */,
+				252FD16621B6E03E00AD1F10 /* FirebaseWorker.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -360,8 +394,11 @@
 			files = (
 				25ACBA9D21B4350C00B6693A /* Localizable.strings in Resources */,
 				252D0AD621B1EF3C0069B37D /* LaunchScreen.storyboard in Resources */,
+				252FD16521B6DFC700AD1F10 /* GoogleService-Info-release.plist in Resources */,
 				252D0AD321B1EF3C0069B37D /* Assets.xcassets in Resources */,
+				252FD16921B6E20500AD1F10 /* GoogleService-Info-debug.plist in Resources */,
 				252D0AD121B1EF3A0069B37D /* Main.storyboard in Resources */,
+				252FD16B21B6E25600AD1F10 /* GoogleService-Info-staging.plist in Resources */,
 				252D2A0321B3836F00AD0F3F /* pulse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -440,16 +477,24 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ifood-mobile-test/Pods-ifood-mobile-test-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
 				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
 				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -464,6 +509,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				25DF94D821B1FC1700852ED2 /* NetworkService.swift in Sources */,
+				252FD16021B6DA2D00AD1F10 /* KeychainWorker.swift in Sources */,
 				252D29FD21B2FAA900AD0F3F /* ResultViewController.swift in Sources */,
 				252D29F121B2BD0B00AD0F3F /* TwitterService.swift in Sources */,
 				252D29EC21B2B23D00AD0F3F /* TimelineRouter.swift in Sources */,
@@ -476,6 +522,7 @@
 				252D29EA21B2B23D00AD0F3F /* TimelinePresenter.swift in Sources */,
 				252D29FC21B2FAA900AD0F3F /* ResultModels.swift in Sources */,
 				25DF94E021B1FD5F00852ED2 /* Configuration.swift in Sources */,
+				252FD16721B6E03E00AD1F10 /* FirebaseWorker.swift in Sources */,
 				252D29EE21B2B23D00AD0F3F /* TimelineViewController.swift in Sources */,
 				252D2A0121B3063900AD0F3F /* AnalyzedSentiment.swift in Sources */,
 				252D29F921B2FAA900AD0F3F /* ResultPresenter.swift in Sources */,
@@ -483,6 +530,7 @@
 				252D29EB21B2B23D00AD0F3F /* TimelineWorker.swift in Sources */,
 				252D29ED21B2B23D00AD0F3F /* TimelineModels.swift in Sources */,
 				25DF94D421B1FB0F00852ED2 /* RestService.swift in Sources */,
+				252FD16F21B7046D00AD1F10 /* AsyncOperation.swift in Sources */,
 				252D29FB21B2FAA900AD0F3F /* ResultRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
