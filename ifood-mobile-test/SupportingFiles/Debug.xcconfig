@@ -15,6 +15,6 @@ IF_APP_BUNDLE_ID = com.oxltech.ifood-mobile-test.debug
 IF_APP_ICON = AppIconDebug
 IF_ENVIRONMENT = debug
 IF_API_PROTOCOL = https
-IF_BASE_URL = googleapis
+IF_BASE_URL = language.googleapis.com
 IF_API_KEY = key
 IF_API_SECRET = key

@@ -28,8 +28,15 @@ class ResultInteractor: ResultBusinessLogic, ResultDataStore {
     
     init(configuration: Configuration) {
         
+        let baseUrlString = "\(configuration.value(for: .apiProtocol))://\(configuration.value(for: .baseUrl))"
+        let baseUrl = URL(string: baseUrlString)
+        
+        guard let _baseUrl = baseUrl else {
+            return
+        }
+        
         let restService = AlamofireWrapper(environment: configuration.environment,
-                                           baseUrl: configuration.value(for: .baseUrl),
+                                           baseUrl: _baseUrl.absoluteString,
                                            apiKey: configuration.value(for: .apiKey),
                                            appVersion: configuration.value(for: .appVersion))
         

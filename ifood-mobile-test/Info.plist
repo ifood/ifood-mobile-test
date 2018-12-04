@@ -37,7 +37,7 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>BaseUrl</key>
-	<string>$(IF_APP_BASE_URL)</string>
+	<string>$(IF_BASE_URL)</string>
 	<key>ApiProtocol</key>
 	<string>$(IF_API_PROTOCOL)</string>
 	<key>ApiKey</key>
