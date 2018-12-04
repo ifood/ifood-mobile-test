@@ -21,7 +21,7 @@ class TimelineWorker {
     }
     
     func requestTwitterUserTimeline(screenName: String, completionHandler: @escaping (TwitterResponse) -> ()) {
-        let twitter = TwitterService(environment: self.environment)
+        let twitter = TwitterService(configuration: Configuration())
         twitter.requestUserTimeline(screenName: screenName) { (twitterResponse) in
             completionHandler(twitterResponse)
         }

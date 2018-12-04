@@ -68,6 +68,7 @@ class TimelineViewController: TWTRTimelineViewController, TimelineDisplayLogic {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.definesPresentationContext = true
         setupLayout()
         fetchTimeline(username: "twitterdev")
     }

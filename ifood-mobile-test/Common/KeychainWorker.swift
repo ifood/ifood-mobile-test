@@ -17,10 +17,14 @@ class KeychainWorker {
     }
     
     func set(key: String, value: String) {
-        keychain[key] = "01234567-89ab-cdef-0123-456789abcdef"
+        keychain[key] = value
     }
     
     func get(key: String) -> String? {
         return keychain[key]
+    }
+    
+    func remove(key: String) {
+        try? keychain.remove(key)
     }
 }

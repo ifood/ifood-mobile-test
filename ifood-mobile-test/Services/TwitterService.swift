@@ -9,6 +9,12 @@
 import Foundation
 import TwitterKit
 
+enum Keys: String {
+    case apiKey = "api_key"
+    case apiSecret = "api_secret"
+    
+}
+
 class TwitterResponse {
     var userTimelineDataSource: TWTRUserTimelineDataSource!
 }
@@ -21,13 +27,16 @@ class TwitterService {
     private var apiRequestsCompletionOperation: ApiRequestsCompletionOperation?
     private var operationQueue: OperationQueue?
     
-    init(environment: EnvironmentType) {
+    init(configuration: Configuration) {
         
         var apiKey: String = ""
         var apiSecret: String = ""
         
-        let keychain = KeychainWorker(service: "com.oxltech.ifood-mobile-test")
-        if let key = keychain.get(key: "api-key"), let secret = keychain.get(key: "api-secret") {
+        let keychain = KeychainWorker(service: configuration.value(for: .bundleId))
+        if let key = keychain.get(key: Keys.apiKey.rawValue), let secret = keychain.get(key: Keys.apiSecret.rawValue) {
+            //keychain.remove(key: Keys.apiKey.rawValue)
+            //keychain.remove(key: Keys.apiSecret.rawValue)
+            print("************* Keys != nil")
             apiKey = key
             apiSecret = secret
             
@@ -35,8 +44,8 @@ class TwitterService {
             self.client = TWTRAPIClient()
         }
         else {
-            
-            let remoteConfig = RemoteConfigWorker(environment: environment)
+            print("************* Keys == nil")
+            let remoteConfig = RemoteConfigWorker()
             
             apiKeyRequestOperation = ApiKeyRequestOperation(remoteConfig: remoteConfig)
             apiSecretRequestOperation = ApiSecretRequestOperation(remoteConfig: remoteConfig)
@@ -83,6 +92,7 @@ class TwitterService {
             let dataSource = TWTRUserTimelineDataSource(screenName: screenName, apiClient: client)
             let response = TwitterResponse()
             response.userTimelineDataSource = dataSource
+            completionHandler(response)
         }
     }
     
@@ -168,9 +178,16 @@ class ApiRequestsCompletionOperation: AsyncOperation {
         let apiKeyRequestOperation = self.dependencies[0] as? ApiKeyRequestOperation
         let apiSecretRequestOperation = self.dependencies[1] as? ApiSecretRequestOperation
         
-        TWTRTwitter.sharedInstance().start(withConsumerKey: apiKeyRequestOperation!.apiKey,
-                                           consumerSecret: apiSecretRequestOperation!.apiSecret)
+        let apiKey = apiKeyRequestOperation!.apiKey
+        let apiSecret = apiSecretRequestOperation!.apiSecret
+        
+        TWTRTwitter.sharedInstance().start(withConsumerKey: apiKey, consumerSecret: apiSecret)
         self.client = TWTRAPIClient()
+        
+        let configuration = Configuration()
+        let keychain = KeychainWorker(service: configuration.value(for: .bundleId))
+        keychain.set(key: Keys.apiKey.rawValue, value: apiKey)
+        keychain.set(key: Keys.apiSecret.rawValue, value: apiSecret)
         
         print("************* self.completionOperation self.client: \(self.client)")
         self.finish()

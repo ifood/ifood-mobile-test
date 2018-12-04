@@ -43,7 +43,7 @@ class RemoteConfigWorker {
     
     var remoteConfig: RemoteConfig
     
-    init(environment: EnvironmentType) {
+    init() {
         self.remoteConfig = FirebaseWorker.shared.remoteConfig()
     }
     
