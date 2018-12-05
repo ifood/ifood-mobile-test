@@ -9,6 +9,9 @@ target 'ifood-mobile-test' do
   pod 'Alamofire'
   pod 'lottie-ios'
   pod 'TwitterKit'
+  pod 'KeychainAccess'
+  pod 'Firebase/Core'
+  pod 'Firebase/RemoteConfig'
 
   target 'ifood-mobile-testTests' do
     inherit! :search_paths

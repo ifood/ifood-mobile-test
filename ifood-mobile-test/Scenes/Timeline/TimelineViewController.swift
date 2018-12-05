@@ -38,8 +38,11 @@ class TimelineViewController: TWTRTimelineViewController, TimelineDisplayLogic {
     // MARK: Setup
 
     private func setup() {
+        
+        let configuration = Configuration()
+        
         let viewController = self
-        let interactor = TimelineInteractor()
+        let interactor = TimelineInteractor(configuration: configuration)
         let presenter = TimelinePresenter()
         let router = TimelineRouter()
         viewController.interactor = interactor
@@ -65,6 +68,7 @@ class TimelineViewController: TWTRTimelineViewController, TimelineDisplayLogic {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.definesPresentationContext = true
         setupLayout()
         fetchTimeline(username: "twitterdev")
     }
@@ -72,10 +76,10 @@ class TimelineViewController: TWTRTimelineViewController, TimelineDisplayLogic {
     // MARK: Layout
     
     func setupLayout() {
-        self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.navigationItem.searchController = self.createSearchBar()
-        self.navigationItem.hidesSearchBarWhenScrolling = false
-        self.tweetViewDelegate = self
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.searchController = self.createSearchBar()
+        navigationItem.hidesSearchBarWhenScrolling = false
+        tweetViewDelegate = self
     }
     
     // MARK: Fetch Data
@@ -102,11 +106,9 @@ class TimelineViewController: TWTRTimelineViewController, TimelineDisplayLogic {
     }
     
     func displayError(viewModel: Timeline.Error.ViewModel) {
-        let label = UILabel(frame: CGRect(origin: CGPoint.zero, size: CGSize(width: 10, height: 10)))
-        label.text = viewModel.message
-        label.sizeToFit()
-        label.center = self.tableView.center
-        self.tableView.backgroundView = label
+        let alert = UIAlertController(title: NSLocalizedString("Ops!", comment: ""), message: viewModel.message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Ok", comment: ""), style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }
 

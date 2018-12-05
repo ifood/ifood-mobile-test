@@ -9,15 +9,6 @@
 //  you can apply clean architecture to your iOS and Mac projects,
 //  see http://clean-swift.com
 //
-//AIzaSyDnrjzs20I2q68ufSfcgsBKrMur8Iegbmo
-//https://language.googleapis.com/v1/documents:analyzeSentiment?key=AIzaSyAA2hddhiijl5Kb7HuMM8fmzLpOJTBguF4
-//{
-//"document": {
-//    "type": "PLAIN_TEXT",
-//    "content": "I'm very sad today"
-//},
-//"encodingType": "UTF8"
-//}
 
 import UIKit
 
@@ -100,7 +91,6 @@ class ResultViewController: UIViewController, ResultDisplayLogic {
         let containerView = UIView(frame: CGRect(origin: CGPoint.zero, size: size))
         containerView.backgroundColor = color
         containerView.layer.cornerRadius = 8.0
-        containerView.translatesAutoresizingMaskIntoConstraints = false
         return containerView
     }
     
@@ -125,7 +115,7 @@ class ResultViewController: UIViewController, ResultDisplayLogic {
         
         containerView!.center.y = view.bounds.height + containerView!.bounds.height
         emojiLabel!.center = containerView!.center
-        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 1.0, options: .curveEaseOut, animations: { [unowned self] in
+        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 5.0, options: .curveEaseOut, animations: { [unowned self] in
             self.containerView?.center.y = self.view.center.y
             self.emojiLabel?.center = self.containerView!.center
         })

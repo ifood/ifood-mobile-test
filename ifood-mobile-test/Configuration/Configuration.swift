@@ -10,6 +10,7 @@ import Foundation
 
 public enum PlistKey: String {
     case environment    = "Environment"
+    case bundleId       = "CFBundleIdentifier"
     case baseUrl        = "BaseUrl"
     case apiProtocol    = "ApiProtocol"
     case apiKey         = "ApiKey"

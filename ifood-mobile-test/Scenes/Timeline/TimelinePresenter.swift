@@ -10,8 +10,6 @@
 //  see http://clean-swift.com
 //
 
-import UIKit
-
 protocol TimelinePresentationLogic {
     func presentTwitterUserTimeline(response: Timeline.FetchTimeline.Response)
     func presentError(response: Timeline.Error.Response)
@@ -29,6 +27,7 @@ class TimelinePresenter: TimelinePresentationLogic {
     }
     
     func presentError(response: Timeline.Error.Response) {
-        
+        let viewModel = Timeline.Error.ViewModel(code: response.code, message: response.message)
+        viewController?.displayError(viewModel: viewModel)
     }
 }

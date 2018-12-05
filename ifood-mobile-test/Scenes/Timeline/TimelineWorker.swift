@@ -10,13 +10,18 @@
 //  see http://clean-swift.com
 //
 
-import UIKit
-
 class TimelineWorker {
-  
-    func requestTwitterUserTimeline(screenName: String) -> TwitterResponse {
-        let twitter = TwitterService()
-        let twitterResponse = twitter.requestUserTimeline(screenName: screenName)
-        return twitterResponse
+
+    private var configuration: Configuration
+    
+    init(configuration: Configuration) {
+        self.configuration = configuration
+    }
+    
+    func requestTwitterUserTimeline(screenName: String, completionHandler: @escaping (TwitterResponse) -> ()) {
+        let twitter = TwitterService(configuration: configuration)
+        twitter.requestUserTimeline(screenName: screenName) { (twitterResponse) in
+            completionHandler(twitterResponse)
+        }
     }
 }
