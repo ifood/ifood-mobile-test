@@ -34,9 +34,6 @@ class TwitterService {
         
         let keychain = KeychainWorker(service: configuration.value(for: .bundleId))
         if let key = keychain.get(key: Keys.apiKey.rawValue), let secret = keychain.get(key: Keys.apiSecret.rawValue) {
-            //keychain.remove(key: Keys.apiKey.rawValue)
-            //keychain.remove(key: Keys.apiSecret.rawValue)
-            print("************* Keys != nil")
             apiKey = key
             apiSecret = secret
             
@@ -44,7 +41,6 @@ class TwitterService {
             self.client = TWTRAPIClient()
         }
         else {
-            print("************* Keys == nil")
             let remoteConfig = RemoteConfigWorker()
             
             apiKeyRequestOperation = ApiKeyRequestOperation(remoteConfig: remoteConfig)
@@ -67,19 +63,14 @@ class TwitterService {
     public func requestUserTimeline(screenName: String, completionHandler: @escaping (TwitterResponse)->()) {
         
         if self.client == nil {
-            print("************* self.client == nil")
             guard let _completionOperation = self.apiRequestsCompletionOperation else {
-                print("************* self.completionOperation == nil")
                 return
             }
-            print("************* self.completionOperation executing: \(self.apiRequestsCompletionOperation?.isExecuting)")
-            print("************* self.completionOperation finished: \(self.apiRequestsCompletionOperation?.isFinished)")
             let timelineRequestOperation = TimelineRequestOperation(screenName: screenName, client: nil)
             timelineRequestOperation.addDependency(_completionOperation)
             operationQueue?.addOperation(timelineRequestOperation)
             
             let timelineCompletionOperation = BlockOperation {
-                print("************* timelineCompletion: \(timelineRequestOperation.response.debugDescription)")
                 completionHandler(timelineRequestOperation.response!)
             }
             timelineCompletionOperation.addDependency(timelineRequestOperation)
@@ -88,7 +79,6 @@ class TwitterService {
             
         }
         else {
-            print("************* self.client != nil")
             let dataSource = TWTRUserTimelineDataSource(screenName: screenName, apiClient: client)
             let response = TwitterResponse()
             response.userTimelineDataSource = dataSource
@@ -120,11 +110,9 @@ class ApiKeyRequestOperation: AsyncOperation {
             
             guard let _key = value else {
                 self.finish()
-                print("************* Error")
                 return
             }
             self.apiKey = _key
-            print("************* api_key: \(_key)")
             self.finish()
         }
         
@@ -152,12 +140,10 @@ class ApiSecretRequestOperation: AsyncOperation {
             }
             
             guard let _secret = value else {
-                print("************* Error")
                 self.finish()
                 return
             }
             self.apiSecret = _secret
-            print("************* api_secret: \(_secret)")
             self.finish()
         }
         
@@ -168,9 +154,7 @@ class ApiRequestsCompletionOperation: AsyncOperation {
     var client: TWTRAPIClient?
     
     override func execute() {
-        print("************* self.completionOperation execute")
         guard self.isCancelled == false else {
-            print("************* self.completionOperation cancelled")
             self.finish()
             return
         }
@@ -189,7 +173,6 @@ class ApiRequestsCompletionOperation: AsyncOperation {
         keychain.set(key: Keys.apiKey.rawValue, value: apiKey)
         keychain.set(key: Keys.apiSecret.rawValue, value: apiSecret)
         
-        print("************* self.completionOperation self.client: \(self.client)")
         self.finish()
     }
 }
@@ -206,7 +189,6 @@ class TimelineRequestOperation: AsyncOperation {
     }
     
     override func execute() {
-        print("************* self.completionOperation execute")
         guard self.isCancelled == false else {
             self.finish()
             return
@@ -214,7 +196,7 @@ class TimelineRequestOperation: AsyncOperation {
         
         let completionOperation = self.dependencies.first as? ApiRequestsCompletionOperation
         let dataSource = TWTRUserTimelineDataSource(screenName: screenName, apiClient: completionOperation!.client!)
-        print("************* datasource: \(dataSource.debugDescription)")
+        
         guard self.isCancelled == false else {
             self.finish()
             return
