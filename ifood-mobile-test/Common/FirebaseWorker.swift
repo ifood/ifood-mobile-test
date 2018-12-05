@@ -39,20 +39,3 @@ class FirebaseWorker {
     }
 }
 
-class RemoteConfigWorker {
-    
-    var remoteConfig: RemoteConfig
-    
-    init() {
-        self.remoteConfig = FirebaseWorker.shared.remoteConfig()
-    }
-    
-    public func getString(_ key: String, completion: @escaping (_ value: String?) -> ()) {
-        self.remoteConfig.fetch(withExpirationDuration: 0) { (status, error) in
-            if status != RemoteConfigFetchStatus.failure {
-                self.remoteConfig.activateFetched()
-                completion(self.remoteConfig[key].stringValue)
-            }
-        }
-    }
-}

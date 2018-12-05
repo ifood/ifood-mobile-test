@@ -7,9 +7,9 @@
 */
 
 
+"Ops!" = "Ops!";
+"Ok" = "Ok";
 "Invalid payload format" = "Invalid payload format";
 "Enter username" = "Enter username";
 "Tweets not found" = "Tweets not found";
-"Ops!" = "Ops!";
-"Ok" = "Ok";
 "Cannot evaluate the tweet's mood" = "Cannot evaluate the tweet's mood";

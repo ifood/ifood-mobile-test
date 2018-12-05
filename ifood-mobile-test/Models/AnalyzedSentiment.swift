@@ -34,33 +34,3 @@ struct Sentiment: Decodable {
     var score: Double
 }
 
-//func jsonObject() {
-//
-//    do {
-//        let analyzeSentiment = try JSONDecoder().decode(AnalyzeSentiment.self, from: data)
-//    }
-//    catch {
-//        print("Error")
-//    }
-//
-//}
-
-//{
-//    "documentSentiment": {
-//        "magnitude": 0.4,
-//        "score": -0.4
-//    },
-//    "language": "en",
-//    "sentences": [
-//        {
-//            "text": {
-//                "content": "I'm very sad today",
-//                "beginOffset": 0
-//            },
-//            "sentiment": {
-//                "magnitude": 0.4,
-//                "score": -0.4
-//            }
-//        }
-//    ]
-//}
