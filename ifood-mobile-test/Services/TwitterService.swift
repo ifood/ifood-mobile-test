@@ -9,12 +9,6 @@
 import Foundation
 import TwitterKit
 
-enum Keys: String {
-    case apiKey = "api_key"
-    case apiSecret = "api_secret"
-    
-}
-
 class TwitterResponse {
     var userTimelineDataSource: TWTRUserTimelineDataSource!
 }

@@ -8,6 +8,12 @@
 
 import KeychainAccess
 
+enum Keys: String {
+    case apiKey = "api_key"
+    case apiSecret = "api_secret"
+    case gcKey = "gc_key"
+}
+
 class KeychainWorker {
     
     var keychain: Keychain
