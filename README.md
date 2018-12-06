@@ -40,6 +40,10 @@ Instead, VIP follows a unidirectional approach, where the ViewController talks t
 
 The VIP or "Clean Swift" has more components than just ViewControllers, Interactors, and Presenters, for example, Data Models, Routers and Workers.
 
+<p align="center">
+  <img src=".github/vip.png" align="center" width=600>
+</p>
+
 
 # Requirements
 Create an app that given an Twitter username it will list user's tweets. When I tap one of the tweets the app will visualy indicate if it's a happy, neutral or sad tweet.
