@@ -14,6 +14,7 @@ import UIKit
 
 @objc protocol ResultRoutingLogic {
     func routeToParent()
+    func routeToError(code: Int, message: String)
 }
 
 protocol ResultDataPassing {
@@ -31,6 +32,14 @@ class ResultRouter: NSObject, ResultRoutingLogic, ResultDataPassing {
         navigateToParent(source: viewController!)
     }
 
+    func routeToError(code: Int, message: String) {
+        let alert = UIAlertController(title: NSLocalizedString("Ops!", comment: ""), message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Ok", comment: ""), style: .default, handler: { [weak self] (action) in
+            self?.routeToParent()
+        }))
+        viewController?.present(alert, animated: true, completion: nil)
+    }
+    
     // MARK: Navigation
 
     func navigateToParent(source: ResultViewController) {
