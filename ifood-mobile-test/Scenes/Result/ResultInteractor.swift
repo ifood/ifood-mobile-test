@@ -26,10 +26,6 @@ class ResultInteractor: ResultBusinessLogic, ResultDataStore {
     var worker: ResultWorker?
     var tweetText: String = ""
     
-    let operationQueue = OperationQueue()
-    var gcKeyOperation: GCApiKeyRequestOperation?
-    var gcRequestOperation: BlockOperation?
-    
     init(configuration: Configuration) {
         
         let baseUrlString = "\(configuration.value(for: .apiProtocol))://\(configuration.value(for: .baseUrl))"
@@ -46,37 +42,13 @@ class ResultInteractor: ResultBusinessLogic, ResultDataStore {
         
         let networkService = NetworkService(restService: restService)
         
-        let keychain = KeychainWorker(service: configuration.value(for: .bundleId))
-        if let key = keychain.get(key: Keys.gcKey.rawValue) {
-            self.worker = ResultWorker(dataService: networkService, apiKey: key)
-        }
-        else {
-            let remoteConfig = RemoteConfigWorker()
-            gcKeyOperation = GCApiKeyRequestOperation(remoteConfig: remoteConfig)
-            gcKeyOperation?.completionBlock = { [weak self] in
-                self?.worker = ResultWorker(dataService: networkService, apiKey: (self?.gcKeyOperation?.apiKey)!)
-            }
-            operationQueue.addOperation(gcKeyOperation!)
-        }
+        self.worker = ResultWorker(dataService: networkService)
     }
     
     // MARK: Do something
 
     func analyzeSentiment() {
-        if self.worker != nil {
-            self.requestSentimentAnalysis()
-        }
-        else {
-            gcRequestOperation = BlockOperation { [weak self] in
-                self?.requestSentimentAnalysis()
-            }
-            gcRequestOperation?.addDependency(self.gcKeyOperation!)
-            self.operationQueue.addOperation(gcRequestOperation!)
-        }
-    }
-    
-    func requestSentimentAnalysis() {
-       self.worker?.requestSentimentAnalysis(text: self.tweetText, completion: { [weak self] (analyzedSentiment, error) in
+        self.worker?.requestSentimentAnalysis(text: self.tweetText, completion: { [weak self] (analyzedSentiment, error) in
             
             if let _error = error, let message = _error.userInfo["message"] as? String {
                 let response = Result.Error.Response(code: _error.code, message: message)
@@ -94,42 +66,8 @@ class ResultInteractor: ResultBusinessLogic, ResultDataStore {
             }
         })
     }
+    
 }
 
-class GCApiKeyRequestOperation: AsyncOperation {
-    var remoteConfig: RemoteConfigWorker
-    var apiKey: String = ""
-    
-    init(remoteConfig: RemoteConfigWorker) {
-        self.remoteConfig = remoteConfig
-    }
-    
-    override func execute() {
-        guard self.isCancelled == false else {
-            self.finish()
-            return
-        }
-        
-        remoteConfig.getString("gc_key") { (value) in
-            guard self.isCancelled == false else {
-                self.finish()
-                return
-            }
-            
-            guard let _key = value else {
-                self.finish()
-                return
-            }
 
-            self.apiKey = _key
-            
-            let configuration = Configuration()
-            let keychain = KeychainWorker(service: configuration.value(for: .bundleId))
-            keychain.set(key: Keys.gcKey.rawValue, value: _key)
-            
-            self.finish()
-        }
-        
-    }
-}
 

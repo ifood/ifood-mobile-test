@@ -15,11 +15,9 @@ import UIKit
 class ResultWorker {
     
     var dataService: DataService
-    var apiKey: String
     
-    init(dataService: DataService, apiKey: String) {
+    init(dataService: DataService) {
         self.dataService = dataService
-        self.apiKey = apiKey
     }
     
     func requestSentimentAnalysis(text: String, completion: @escaping (AnalyzedSentiment?, NSError?) -> ()) {
