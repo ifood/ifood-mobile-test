@@ -66,4 +66,6 @@ Create an app that given an Twitter username it will list user's tweets. When I 
 
 # Problems
 * Use of TwitterKit. Difficult in handling errors.
+* Error Handling: When you enter a username that has private tweets, the TwitterKit returns Unauthorized. It is not possible to handle this error.
+
 
