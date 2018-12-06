@@ -106,9 +106,7 @@ class TimelineViewController: TWTRTimelineViewController, TimelineDisplayLogic {
     }
     
     func displayError(viewModel: Timeline.Error.ViewModel) {
-        let alert = UIAlertController(title: NSLocalizedString("Ops!", comment: ""), message: viewModel.message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: NSLocalizedString("Ok", comment: ""), style: .default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+        router?.routeToError(code: viewModel.code, message: viewModel.message)
     }
 }
 

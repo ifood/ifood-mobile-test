@@ -14,6 +14,7 @@ import UIKit
 
 @objc protocol TimelineRoutingLogic {
     func routeToResult(segue: UIStoryboardSegue?)
+    func routeToError(code: Int, message: String)
 }
 
 protocol TimelineDataPassing {
@@ -41,6 +42,12 @@ class TimelineRouter: NSObject, TimelineRoutingLogic, TimelineDataPassing {
         }
     }
 
+    func routeToError(code: Int, message: String) {
+        let alert = UIAlertController(title: NSLocalizedString("Ops!", comment: ""), message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Ok", comment: ""), style: .default, handler: nil))
+        viewController?.present(alert, animated: true, completion: nil)
+    }
+    
     // MARK: Navigation
 
     func navigateToResult(source: TimelineViewController, destination: ResultViewController) {

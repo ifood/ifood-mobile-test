@@ -34,9 +34,9 @@ class ResultPresenter: ResultPresentationLogic {
         var tweetSentiment: Result.TweetSentiment!
         
         let score = response.analyzedSentiment.documentSentiment.score
-        if score > 0.0 {
+        if score > 0.34 {
             tweetSentiment = Result.TweetSentiment(emojiFace: .happy, viewBackGroundColor: UIColor.happyYellow)
-        } else if score < 0.0 {
+        } else if score < -0.34 {
             tweetSentiment = Result.TweetSentiment(emojiFace: .sad, viewBackGroundColor: UIColor.sadBlue)
         } else {
             tweetSentiment = Result.TweetSentiment(emojiFace: .neutral, viewBackGroundColor: UIColor.neutralGray)
