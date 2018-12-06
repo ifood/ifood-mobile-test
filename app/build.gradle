@@ -20,6 +20,14 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    applicationVariants.all { variant ->
+        variant.buildConfigField "String", "GOOGLE_API_URL", "\"https://language.googleapis.com\""
+        variant.buildConfigField "String", "GOOGLE_API_KEY", "\"${System.getenv("GOOGLE_API_KEY")}\""
+        variant.buildConfigField "String", "TWITTER_API_URL", "\"https://api.twitter.com/\""
+        variant.buildConfigField "String", "TWITTER_API_KEY", "\"${System.getenv("TWITTER_API_KEY")}\""
+        variant.buildConfigField "String", "TWITTER_API_SECRET_KEY", "\"${System.getenv("TWITTER_API_SECRET_KEY")}\""
+    }
 }
 
 configurations.all {
@@ -43,7 +51,7 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-extensions:$lifecycleExtensionsVersion"
 
     implementation "org.koin:koin-android:${koinVersion}"
-    implementation "org.koin:koin-android-viewmodel:${koinVersion}"
+    implementation "org.koin:koin-androidx-viewmodel:${koinVersion}"
 
     implementation "com.github.bumptech.glide:glide:${glideVersion}"
     kapt "com.github.bumptech.glide:compiler:${glideVersion}"
