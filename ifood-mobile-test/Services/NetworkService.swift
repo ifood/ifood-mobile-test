@@ -66,9 +66,11 @@ class NetworkService: DataService {
             ],
             "encodingType": "UTF8"
         ]
-        //AIzaSyDnrjzs20I2q68ufSfcgsBKrMur8Iegbmo
+        
+        let urlPath = "/v1/documents:analyzeSentiment?key="
+        
         if let apiKey = self.apiKey {
-            self.service.post("/v1/documents:analyzeSentiment?key=\(apiKey)",
+            self.service.post("\(urlPath)\(apiKey)",
                               parameters: parameters,
                               encoding: .json,
                               headers: service.defaultHeader(),
@@ -80,7 +82,7 @@ class NetworkService: DataService {
                 guard let apiKey = self?.gcKeyOperation?.apiKey else {
                     return
                 }
-                self?.service.post("/v1/documents:analyzeSentiment?key=\(apiKey)",
+                self?.service.post("\(urlPath)\(apiKey)",
                                   parameters: parameters,
                                   encoding: .json,
                                   headers: self?.service.defaultHeader(),

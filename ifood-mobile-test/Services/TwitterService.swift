@@ -56,7 +56,7 @@ class TwitterService {
     
     public func requestUserTimeline(screenName: String, completionHandler: @escaping (TwitterResponse)->()) {
         
-        if self.client == nil {
+        guard let client = self.client else {
             guard let _completionOperation = self.apiRequestsCompletionOperation else {
                 return
             }
@@ -70,14 +70,14 @@ class TwitterService {
             timelineCompletionOperation.addDependency(timelineRequestOperation)
             operationQueue?.addOperation(timelineCompletionOperation)
             
-            
+            return
         }
-        else {
-            let dataSource = TWTRUserTimelineDataSource(screenName: screenName, apiClient: client)
-            let response = TwitterResponse()
-            response.userTimelineDataSource = dataSource
-            completionHandler(response)
-        }
+        
+        let dataSource = TWTRUserTimelineDataSource(screenName: screenName, apiClient: client)
+        let response = TwitterResponse()
+        response.userTimelineDataSource = dataSource
+        completionHandler(response)
+        
     }
     
 }
