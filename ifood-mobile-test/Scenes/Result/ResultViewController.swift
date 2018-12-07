@@ -127,8 +127,8 @@ class ResultViewController: UIViewController, ResultDisplayLogic {
         let scaledSize: CGSize = self.scaleViewSize(size: size)
         
         DispatchQueue.main.async {
-            if self.containerView != nil {
-                self.containerView?.removeFromSuperview()
+            if let containerView = self.containerView {
+                containerView.removeFromSuperview()
                 self.emojiLabel?.removeFromSuperview()
                 self.createTweetSentimentView(tweetSentiment: self.tweetSentiment, size: scaledSize)
             }
