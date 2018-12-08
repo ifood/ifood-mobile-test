@@ -1,0 +1,6 @@
+framework module Pods_ifood_mobile_test {
+  umbrella header "Pods-ifood-mobile-test-umbrella.h"
+
+  export *
+  module * { export * }
+}

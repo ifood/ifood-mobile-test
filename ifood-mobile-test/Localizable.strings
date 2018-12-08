@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  ifood-mobile-test
+
+  Created by Marcio Garcia on 02/12/18.
+  Copyright © 2018 oxltech.com. All rights reserved.
+*/
+
+
+"Ops!" = "Ops!";
+"Ok" = "Ok";
+"Invalid payload format" = "Invalid payload format";
+"Enter username" = "Enter username";
+"Tweets not found" = "Tweets not found";
+"Cannot evaluate the tweet's mood" = "Cannot evaluate the tweet's mood";
