@@ -19,7 +19,7 @@ ext {
     recyclerViewVersion = '1.0.0'
     materialComponentsVersion = '1.0.0'
     lifecycleExtensionsVersion = '2.0.0'
-    glideVersion = '4.7.1'
+    glideVersion = '4.8.0'
     koinVersion = '1.0.2'
     liveDataAdapterVersion = '1.1.2'
     archVersion = '1.1.1'
