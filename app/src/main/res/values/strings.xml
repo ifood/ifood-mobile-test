@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">TweetSense</string>
+	<string name="app_name">TweetSense</string>
+	<string name="app_logo">App logo</string>
 </resources>
