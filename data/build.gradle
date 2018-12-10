@@ -22,5 +22,10 @@ dependencies {
     implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
     implementation "com.github.leonardoxh:retrofit2-livedata-adapter:$liveDataAdapterVersion"
 
+    implementation("com.google.apis:google-api-services-language:v1-rev386-$googleApiClientVersion") {
+        exclude module: 'httpclient'
+        exclude module: 'jsr305'
+    }
+
     testImplementation "junit:junit:$jUnitVersion"
 }

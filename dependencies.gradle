@@ -26,6 +26,7 @@ ext {
     retrofitVersion = '2.5.0'
     gsonVersion = '2.8.5'
     liveDataAdapterVersion = '1.1.2'
+    googleApiClientVersion = '1.22.0'
 
     // Testing
     jUnitVersion = '4.12'
