@@ -1,0 +1,11 @@
+<resources>
+	<string name="app_name">TweetSense</string>
+	<string name="user_photo">User Photo</string>
+	<string name="positive_sentiment_tweet_clicked">Positive Sentiment Tweet Clicked</string>
+	<string name="negative_sentiment_tweet_clicked">Negative Sentiment Tweet Clicked</string>
+	<string name="neutral_sentiment_tweet_clicked">Neutral Sentiment Tweet Clicked</string>
+	<string name="enter_a_twitter_nickname">Enter a Twitter Nickname</string>
+	<string name="the_nickname_cant_be_empty">The nickname can\'t be empty</string>
+	<string name="send">Send</string>
+	<string name="app_logo">App logo</string>
+</resources>

@@ -1,0 +1,33 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply from: '../dependencies.gradle'
+
+android {
+    compileSdkVersion androidCompileSdkVersion
+
+    defaultConfig {
+        minSdkVersion androidMinSdkVersion
+        targetSdkVersion androidTargetSdkVersion
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$androidXCoreVersion"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$androidXCoreVersion"
+    implementation "com.google.code.gson:gson:$gsonVersion"
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    implementation "com.github.leonardoxh:retrofit2-livedata-adapter:$liveDataAdapterVersion"
+
+    implementation("com.google.apis:google-api-services-language:v1-rev386-$googleApiClientVersion") {
+        exclude module: 'httpclient'
+        exclude module: 'jsr305'
+    }
+
+    testImplementation "junit:junit:$jUnitVersion"
+}
