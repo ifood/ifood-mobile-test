@@ -15,6 +15,9 @@ import com.shrpereira.tweetsense.data.remote.timeline.TwitterDataSource
 import com.shrpereira.tweetsense.data.remote.timeline.TwitterDataSourceImpl
 import com.shrpereira.tweetsense.domain.authentication.AuthenticationUseCase
 import com.shrpereira.tweetsense.domain.authentication.AuthenticationUseCaseImpl
+import com.shrpereira.tweetsense.domain.mapper.TwitterMapper
+import com.shrpereira.tweetsense.domain.timeline.TwitterTimelineUseCase
+import com.shrpereira.tweetsense.domain.timeline.TwitterTimelineUseCaseImpl
 import org.koin.android.ext.koin.androidContext
 import org.koin.androidx.viewmodel.ext.koin.viewModel
 import org.koin.dsl.module.module
@@ -25,7 +28,9 @@ val uiModule = module(override = true) {
 }
 
 val domainModule = module(override = true) {
+	single { TwitterMapper() }
 
+	factory { TwitterTimelineUseCaseImpl(get(), get()) as TwitterTimelineUseCase }
 	factory { AuthenticationUseCaseImpl(get(), get(), get()) as AuthenticationUseCase }
 }
 
