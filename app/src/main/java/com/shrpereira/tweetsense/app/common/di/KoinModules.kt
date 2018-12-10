@@ -9,6 +9,8 @@ import com.shrpereira.tweetsense.data.remote.authentication.GoogleAuthDataSource
 import com.shrpereira.tweetsense.data.remote.authentication.GoogleAuthDataSourceImpl
 import com.shrpereira.tweetsense.data.remote.authentication.TwitterAuthDataSource
 import com.shrpereira.tweetsense.data.remote.authentication.TwitterAuthDataSourceImpl
+import com.shrpereira.tweetsense.data.remote.sentiment.GoogleDataSource
+import com.shrpereira.tweetsense.data.remote.sentiment.GoogleDataSourceImpl
 import com.shrpereira.tweetsense.data.remote.timeline.TwitterDataSource
 import com.shrpereira.tweetsense.data.remote.timeline.TwitterDataSourceImpl
 import com.shrpereira.tweetsense.domain.authentication.AuthenticationUseCase
@@ -50,5 +52,6 @@ val dataModule = module(override = true) {
 	factory { TwitterAuthDataSourceImpl(get("TwitterRetrofitBuilder")) as TwitterAuthDataSource }
 	factory { GoogleAuthDataSourceImpl(androidContext(), get()) as GoogleAuthDataSource }
 	factory { TwitterDataSourceImpl(get("TwitterRetrofitBuilder")) as TwitterDataSource }
+	factory { GoogleDataSourceImpl(get("GoogleRetrofitBuilder")) as GoogleDataSource }
 	single { AccessTokenDataSourceImpl(androidContext()) as AccessTokenDataSource }
 }
