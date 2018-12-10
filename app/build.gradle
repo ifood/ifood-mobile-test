@@ -5,60 +5,60 @@ apply plugin: 'kotlin-kapt'
 apply from: '../dependencies.gradle'
 
 android {
-    compileSdkVersion androidCompileSdkVersion
-    defaultConfig {
-        minSdkVersion androidMinSdkVersion
-        targetSdkVersion androidTargetSdkVersion
+	compileSdkVersion androidCompileSdkVersion
+	defaultConfig {
+		minSdkVersion androidMinSdkVersion
+		targetSdkVersion androidTargetSdkVersion
 
-        applicationId "com.shrpereira.tweetsense.app"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-    }
+		applicationId "com.shrpereira.tweetsense.app"
+		testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+	}
 
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
-    }
+	buildTypes {
+		release {
+			minifyEnabled false
+			proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+		}
+	}
 
-    applicationVariants.all { variant ->
-        variant.buildConfigField "String", "GOOGLE_API_URL", "\"https://language.googleapis.com\""
-        variant.buildConfigField "String", "TWITTER_API_URL", "\"https://api.twitter.com/\""
-        variant.buildConfigField "String", "TWITTER_API_KEY", "\"${System.getenv("TWITTER_API_KEY")}\""
-        variant.buildConfigField "String", "TWITTER_API_SECRET_KEY", "\"${System.getenv("TWITTER_API_SECRET_KEY")}\""
-    }
+	applicationVariants.all { variant ->
+		variant.buildConfigField "String", "GOOGLE_API_URL", "\"https://language.googleapis.com\""
+		variant.buildConfigField "String", "TWITTER_API_URL", "\"https://api.twitter.com/\""
+		variant.buildConfigField "String", "TWITTER_API_KEY", "\"${System.getenv("TWITTER_API_KEY")}\""
+		variant.buildConfigField "String", "TWITTER_API_SECRET_KEY", "\"${System.getenv("TWITTER_API_SECRET_KEY")}\""
+	}
 }
 
 configurations.all {
-    resolutionStrategy.force "androidx.core:core:$androidXCoreVersion"
-    resolutionStrategy.force "androidx.vectordrawable:vectordrawable:$androidXCoreVersion"
-    resolutionStrategy.force "android.arch.core:runtime:$archVersion"
-    resolutionStrategy.force "android.arch.lifecycle:livedata-core:$archVersion"
+	resolutionStrategy.force "androidx.core:core:$androidXCoreVersion"
+	resolutionStrategy.force "androidx.vectordrawable:vectordrawable:$androidXCoreVersion"
+	resolutionStrategy.force "android.arch.core:runtime:$archVersion"
+	resolutionStrategy.force "android.arch.lifecycle:livedata-core:$archVersion"
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+	implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation project(':domain')
-    implementation project(':data')
+	implementation project(':domain')
+	implementation project(':data')
 
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
-    implementation "androidx.appcompat:appcompat:${appCompatVersion}"
-    implementation "androidx.constraintlayout:constraintlayout:${constraintLayoutVersion}"
-    implementation "androidx.recyclerview:recyclerview:${recyclerViewVersion}"
-    implementation "com.google.android.material:material:${materialComponentsVersion}"
-    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycleExtensionsVersion"
+	implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
 	implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$androidXCoreVersion"
 	implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$androidXCoreVersion"
+	implementation "androidx.appcompat:appcompat:$appCompatVersion"
+	implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"
+	implementation "androidx.recyclerview:recyclerview:$recyclerViewVersion"
+	implementation "com.google.android.material:material:$materialComponentsVersion"
+	implementation "androidx.lifecycle:lifecycle-extensions:$lifecycleExtensionsVersion"
 
-    implementation "org.koin:koin-android:${koinVersion}"
-    implementation "org.koin:koin-androidx-viewmodel:${koinVersion}"
+	implementation "org.koin:koin-android:$koinVersion"
+	implementation "org.koin:koin-androidx-viewmodel:$koinVersion"
 
 	implementation "com.github.bumptech.glide:glide:$glideVersion"
 	kapt "androidx.annotation:annotation:$androidXCoreVersion"
 	kapt "com.github.bumptech.glide:compiler:$glideVersion"
 
-    testImplementation "junit:junit:${jUnitVersion}"
-    androidTestImplementation "androidx.test:runner:${testRunnerVersion}"
-    androidTestImplementation "androidx.test.espresso:espresso-core:${espressoVersion}"
+	testImplementation "junit:junit:${jUnitVersion}"
+	androidTestImplementation "androidx.test:runner:$testRunnerVersion"
+	androidTestImplementation "androidx.test.espresso:espresso-core:$espressoVersion"
 }

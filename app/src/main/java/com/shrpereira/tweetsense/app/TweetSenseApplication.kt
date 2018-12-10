@@ -10,11 +10,12 @@ import org.koin.android.ext.android.startKoin
 
 class TweetSenseApplication : Application() {
 
-    private val modulesList = listOf(uiModule, domainModule, dataModule)
+	private val modulesList = listOf(uiModule, domainModule, dataModule)
 
-    override fun onCreate() {
-        super.onCreate()
+	override fun onCreate() {
+		super.onCreate()
 
-        startKoin(this, modulesList)
-    }
+		// Starting dependency injection
+		startKoin(this, modulesList)
+	}
 }
