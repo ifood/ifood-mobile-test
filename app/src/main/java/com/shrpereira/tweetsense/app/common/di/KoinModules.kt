@@ -1,6 +1,7 @@
 package com.shrpereira.tweetsense.app.common.di
 
 import com.shrpereira.tweetsense.app.BuildConfig
+import com.shrpereira.tweetsense.app.ui.main.MainViewModel
 import com.shrpereira.tweetsense.app.ui.splash.SplashViewModel
 import com.shrpereira.tweetsense.data.cache.authentication.AccessTokenDataSource
 import com.shrpereira.tweetsense.data.cache.authentication.AccessTokenDataSourceImpl
@@ -26,8 +27,8 @@ import org.koin.androidx.viewmodel.ext.koin.viewModel
 import org.koin.dsl.module.module
 
 val uiModule = module(override = true) {
-
 	viewModel { SplashViewModel(get()) }
+	viewModel { MainViewModel(get(), get()) }
 }
 
 val domainModule = module(override = true) {

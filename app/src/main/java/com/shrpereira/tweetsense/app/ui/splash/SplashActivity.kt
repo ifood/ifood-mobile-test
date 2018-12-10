@@ -23,8 +23,6 @@ class SplashActivity : BaseActivity() {
 	override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)
 		setContentView(R.layout.activity_splash)
-
-		Log.d(TAG, "Activity started")
 	}
 
 	override fun onResume() {
