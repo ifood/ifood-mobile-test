@@ -23,7 +23,6 @@ android {
 
     applicationVariants.all { variant ->
         variant.buildConfigField "String", "GOOGLE_API_URL", "\"https://language.googleapis.com\""
-        variant.buildConfigField "String", "GOOGLE_API_KEY", "\"${System.getenv("GOOGLE_API_KEY")}\""
         variant.buildConfigField "String", "TWITTER_API_URL", "\"https://api.twitter.com/\""
         variant.buildConfigField "String", "TWITTER_API_KEY", "\"${System.getenv("TWITTER_API_KEY")}\""
         variant.buildConfigField "String", "TWITTER_API_SECRET_KEY", "\"${System.getenv("TWITTER_API_SECRET_KEY")}\""
