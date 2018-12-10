@@ -49,6 +49,8 @@ dependencies {
     implementation "androidx.recyclerview:recyclerview:${recyclerViewVersion}"
     implementation "com.google.android.material:material:${materialComponentsVersion}"
     implementation "androidx.lifecycle:lifecycle-extensions:$lifecycleExtensionsVersion"
+	implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$androidXCoreVersion"
+	implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$androidXCoreVersion"
 
     implementation "org.koin:koin-android:${koinVersion}"
     implementation "org.koin:koin-androidx-viewmodel:${koinVersion}"
