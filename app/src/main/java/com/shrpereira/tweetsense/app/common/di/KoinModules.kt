@@ -4,6 +4,10 @@ import com.shrpereira.tweetsense.app.BuildConfig
 import com.shrpereira.tweetsense.data.cache.authentication.AccessTokenDataSource
 import com.shrpereira.tweetsense.data.cache.authentication.AccessTokenDataSourceImpl
 import com.shrpereira.tweetsense.data.remote.RetrofitBuilder
+import com.shrpereira.tweetsense.data.remote.authentication.GoogleAuthDataSource
+import com.shrpereira.tweetsense.data.remote.authentication.GoogleAuthDataSourceImpl
+import com.shrpereira.tweetsense.data.remote.authentication.TwitterAuthDataSource
+import com.shrpereira.tweetsense.data.remote.authentication.TwitterAuthDataSourceImpl
 import org.koin.android.ext.koin.androidContext
 import org.koin.dsl.module.module
 
@@ -35,5 +39,7 @@ val dataModule = module(override = true) {
 		)
 	}
 
+	factory { TwitterAuthDataSourceImpl(get("TwitterRetrofitBuilder")) as TwitterAuthDataSource }
+	factory { GoogleAuthDataSourceImpl(androidContext(), get()) as GoogleAuthDataSource }
 	single { AccessTokenDataSourceImpl(androidContext()) as AccessTokenDataSource }
 }
