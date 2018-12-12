@@ -1,4 +1,4 @@
-package com.example.tweeterreview
+package com.example.tweetanalyzer
 
 import androidx.test.InstrumentationRegistry
 import androidx.test.runner.AndroidJUnit4

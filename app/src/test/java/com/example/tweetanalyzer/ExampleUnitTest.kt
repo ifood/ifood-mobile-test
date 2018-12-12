@@ -1,4 +1,4 @@
-package com.example.tweeterreview
+package com.example.tweetanalyzer
 
 import org.junit.Test
 
