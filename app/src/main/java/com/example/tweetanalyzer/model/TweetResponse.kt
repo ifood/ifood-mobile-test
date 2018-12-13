@@ -1,4 +1,4 @@
-package com.example.tweetanalyzer.data
+package com.example.tweetanalyzer.model
 
 import com.google.gson.annotations.SerializedName
 

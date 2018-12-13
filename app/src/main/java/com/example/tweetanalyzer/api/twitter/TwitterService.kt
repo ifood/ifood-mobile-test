@@ -1,6 +1,6 @@
 package com.example.tweetanalyzer.api.twitter
 
-import com.example.tweetanalyzer.data.TweetResponse
+import com.example.tweetanalyzer.model.TweetResponse
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query

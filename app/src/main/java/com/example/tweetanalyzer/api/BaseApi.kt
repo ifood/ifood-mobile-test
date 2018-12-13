@@ -11,11 +11,12 @@ import java.util.concurrent.TimeUnit
 
 open class BaseApi {
 
-    fun build(url: String, interceptor: Interceptor): Retrofit {
+    fun build(url: String, interceptor: Interceptor? = null): Retrofit {
         val builder = OkHttpClient.Builder()
 
-        builder.addInterceptor(interceptor)
-                .connectTimeout(30, TimeUnit.SECONDS)
+        interceptor?.let { builder.addInterceptor(it) }
+
+        builder.connectTimeout(30, TimeUnit.SECONDS)
                 .readTimeout(30, TimeUnit.SECONDS)
 
 

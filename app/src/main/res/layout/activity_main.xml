@@ -6,14 +6,11 @@
     android:layout_height="match_parent"
     tools:context="com.example.tweetanalyzer.view.MainActivity">
 
-    <TextView
-        android:id="@+id/tweets"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerTweets"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginTop="16dp"
         android:text="Hello World!"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
