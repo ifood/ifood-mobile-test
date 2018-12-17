@@ -1,4 +1,4 @@
-package com.example.tweetanalyzer.view
+package com.example.tweetanalyzer.view.main
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -26,7 +26,7 @@ class TweetsAdapter(context: Context, private val onItemClick: (tweetText:String
         viewHolder.render(tweets[position], onItemClick)
     }
 
-    fun updateTweets(tweetList: MutableList<Tweet>){
+    fun updateTweets(tweetList: List<Tweet>){
         this.tweets.clear()
         this.tweets.addAll(tweetList)
         notifyDataSetChanged()

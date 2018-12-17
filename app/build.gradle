@@ -4,6 +4,8 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'kotlin-kapt'
+
 android {
     compileSdkVersion 28
     defaultConfig {
@@ -23,6 +25,10 @@ android {
     compileOptions {
         sourceCompatibility 1.8
         targetCompatibility 1.8
+    }
+
+    kapt {
+        generateStubs = true
     }
 }
 
@@ -55,5 +61,12 @@ dependencies {
     implementation ('com.twitter.sdk.android:twitter:3.3.0@aar') {
         transitive = true
     }
+
+    //dagger2
+    implementation 'com.google.dagger:dagger:2.16'
+    kapt 'com.google.dagger:dagger-compiler:2.15'
+
+    // ViewModel and LiveData
+    implementation "androidx.lifecycle:lifecycle-extensions:2.0.0"
 
 }
