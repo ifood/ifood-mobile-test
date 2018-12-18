@@ -2,10 +2,16 @@ package com.example.tweetanalyzer.di.module
 
 import android.app.Application
 import android.content.Context
+import android.content.SharedPreferences
 import com.example.tweetanalyzer.TweetAnalyzerApplication
 import com.example.tweetanalyzer.api.google.GoogleCNLApi
 import com.example.tweetanalyzer.api.twitter.TwitterApi
+import com.example.tweetanalyzer.api.twitter.TwitterInterceptor
 import com.example.tweetanalyzer.di.qualifier.ApplicationContext
+import com.example.tweetanalyzer.repository.google.GoogleRepository
+import com.example.tweetanalyzer.repository.google.GoogleRepositoryImpl
+import com.example.tweetanalyzer.repository.twitter.TwitterRepository
+import com.example.tweetanalyzer.repository.twitter.TwitterRepositoryImpl
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
@@ -22,16 +28,32 @@ class ApplicationModule(private val application: TweetAnalyzerApplication) {
     @Provides
     fun provideApplication(): Application = application
 
+    @Provides
+    @Singleton
+    fun provideSharedPreferences(): SharedPreferences {
+        return application.getSharedPreferences("app", Context.MODE_PRIVATE)
+    }
+
     /*START PROVIDES SERVICES */
     @Provides
     @Singleton
-    fun provideTwitterApi(): TwitterApi {
-        return TwitterApi()
+    fun provideTwitterApi(twitterInterceptor: TwitterInterceptor): TwitterApi = TwitterApi(twitterInterceptor)
+
+    @Provides
+    @Singleton
+    fun provideGoogleCNLApi(): GoogleCNLApi = GoogleCNLApi()
+
+
+    /*START PROVIDES REPOSITORY */
+    @Provides
+    @Singleton
+    fun provideTwitterRepository(twitterRepositoryImpl: TwitterRepositoryImpl) : TwitterRepository{
+        return twitterRepositoryImpl
     }
 
     @Provides
     @Singleton
-    fun provideGoogleCNLApi(): GoogleCNLApi {
-        return GoogleCNLApi()
+    fun provideGoogleRepository(googleRepositoryImpl: GoogleRepositoryImpl) : GoogleRepository{
+        return googleRepositoryImpl
     }
 }

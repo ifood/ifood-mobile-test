@@ -1,4 +1,4 @@
-package com.example.tweetanalyzer.repository
+package com.example.tweetanalyzer.repository.google
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -10,9 +10,9 @@ import retrofit2.Callback
 import retrofit2.Response
 import javax.inject.Inject
 
-class GoogleRepository @Inject constructor(private val googleApi: GoogleCNLApi) {
+class GoogleRepositoryImpl @Inject constructor(private val googleApi: GoogleCNLApi) : GoogleRepository {
 
-    fun getSentimentFromText(tweetText: String) : LiveData<Sentiment>{
+    override fun getSentimentFromText(tweetText: String) : LiveData<Sentiment>{
 
         val result = MutableLiveData<Sentiment>()
 

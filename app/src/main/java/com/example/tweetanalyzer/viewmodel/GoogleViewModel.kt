@@ -4,8 +4,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
-import com.example.tweetanalyzer.repository.GoogleRepository
 import com.example.tweetanalyzer.model.Sentiment
+import com.example.tweetanalyzer.repository.google.GoogleRepository
 
 class GoogleViewModel(private val googleRepository: GoogleRepository) : ViewModel() {
 

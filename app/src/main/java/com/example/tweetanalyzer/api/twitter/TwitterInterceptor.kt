@@ -1,16 +1,16 @@
 package com.example.tweetanalyzer.api.twitter
 
+import android.util.Base64
+import com.example.tweetanalyzer.util.TwitterTokenPreferences
 import okhttp3.Interceptor
 import okhttp3.Request
 import okhttp3.Response
-import se.akerfeldt.okhttp.signpost.OkHttpOAuthConsumer
+import javax.inject.Inject
 
-class TwitterInterceptor : Interceptor {
+class TwitterInterceptor @Inject constructor(val twitterTokenPreferences: TwitterTokenPreferences) : Interceptor {
 
-    private val apiKey = "IXKu6GIessR9Y5Ll53oe3rBHf"
-    private val apiSecretKey = "gTgqiL3xmZH9JOw94mfYMXTGSShQ02eErJHE89aMFChYiiwV5M"
-    private val accessToken = "1072640124171759618-Wt7PvqwnbYjB71OrqTVidhjv5gHC3F"
-    private val accessTokenSecret = "2wf6GPS7uSKFVHgXzUrpnymSQIol0nd2qwl2LZYVPT8Ty"
+    private val apiKey = ""
+    private val apiSecretKey = ""
 
     override fun intercept(chain: Interceptor.Chain): Response {
         val original = chain.request()
@@ -19,11 +19,24 @@ class TwitterInterceptor : Interceptor {
     }
 
     private fun createRequest(original: Request): Request {
+        val apiAuth = Base64.encodeToString("$apiKey:$apiSecretKey".toByteArray(), Base64.NO_WRAP)
+        val token = twitterTokenPreferences.getToken()
+        val builder = original.newBuilder()
 
-        val consumer = OkHttpOAuthConsumer(apiKey, apiSecretKey)
-        consumer.setTokenWithSecret(accessToken, accessTokenSecret)
+        if (token.isNotEmpty()){
+            addHeader(builder, "Authorization", "Bearer $token")
+        }else {
+            addHeader(builder, "Authorization", "Basic $apiAuth")
 
-        return consumer.sign(original).unwrap() as Request
+        }
+
+        return builder.build()
+    }
+
+    private fun addHeader(builder: Request.Builder?, key: String, value: String?) {
+        if (value != null) {
+            builder?.addHeader(key, value)
+        }
     }
 
 }

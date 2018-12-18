@@ -1,10 +1,9 @@
 package com.example.tweetanalyzer.viewmodel
 
 import androidx.lifecycle.ViewModel
-
 import androidx.lifecycle.ViewModelProvider
-import com.example.tweetanalyzer.repository.GoogleRepository
-import com.example.tweetanalyzer.repository.TwitterRepository
+import com.example.tweetanalyzer.repository.google.GoogleRepository
+import com.example.tweetanalyzer.repository.twitter.TwitterRepository
 import javax.inject.Inject
 
 class CustomViewModelFactory

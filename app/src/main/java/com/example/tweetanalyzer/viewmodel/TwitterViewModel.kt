@@ -4,8 +4,9 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
-import com.example.tweetanalyzer.repository.TwitterRepository
+import com.example.tweetanalyzer.model.TokenResponse
 import com.example.tweetanalyzer.model.Tweet
+import com.example.tweetanalyzer.repository.twitter.TwitterRepository
 
 class TwitterViewModel(private val twitterRepository: TwitterRepository) : ViewModel() {
 
@@ -16,5 +17,7 @@ class TwitterViewModel(private val twitterRepository: TwitterRepository) : ViewM
     fun searchTweetsByUserName(userName: String) {
         this.searchTweetsInput.value = userName
     }
+
+    fun getTwitterToken(): LiveData<TokenResponse> = twitterRepository.getToken()
 
 }

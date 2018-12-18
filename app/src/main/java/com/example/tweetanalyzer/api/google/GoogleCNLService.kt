@@ -10,6 +10,6 @@ import retrofit2.http.Query
 interface GoogleCNLService {
 
     @POST("/v1beta2/documents:analyzeSentiment")
-    fun sendTextToSentimentAnalises(@Body sentimentRequest: SentimentRequest, @Query("key") key: String): Call<SentimentResponse>
+    fun sendTextForSentimentAnalysis(@Body sentimentRequest: SentimentRequest, @Query("key") key: String): Call<SentimentResponse>
 
 }

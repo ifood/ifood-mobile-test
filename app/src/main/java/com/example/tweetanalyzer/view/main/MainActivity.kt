@@ -8,6 +8,7 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.tweetanalyzer.R
 import com.example.tweetanalyzer.TweetAnalyzerApplication
+import com.example.tweetanalyzer.util.TwitterTokenPreferences
 import com.example.tweetanalyzer.viewmodel.CustomViewModelFactory
 import com.example.tweetanalyzer.viewmodel.GoogleViewModel
 import com.example.tweetanalyzer.viewmodel.TwitterViewModel
@@ -17,6 +18,9 @@ import javax.inject.Inject
 class MainActivity : AppCompatActivity() {
 
     private lateinit var adapter: TweetsAdapter
+
+    @Inject
+    lateinit var twitterTokenPreferences: TwitterTokenPreferences
 
     @Inject
     lateinit var customViewModelFactory: CustomViewModelFactory
@@ -47,6 +51,7 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this@MainActivity, sentiment.score.toString(), Toast.LENGTH_SHORT).show()
         })
 
+        verifyToken()
 
         buttonFindTweets.setOnClickListener {
             val userName = inputUserName.text.toString()
@@ -56,5 +61,13 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+    }
+
+    private fun verifyToken(){
+        if(twitterTokenPreferences.getToken().isEmpty()){
+            twitterViewModel.getTwitterToken().observe(this, Observer {token->
+                twitterTokenPreferences.updateToken(token.accessToken)
+            })
+        }
     }
 }

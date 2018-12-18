@@ -51,8 +51,6 @@ dependencies {
 
     //OkHttp
     implementation 'com.squareup.okhttp3:logging-interceptor:3.11.0'
-    implementation 'se.akerfeldt:okhttp-signpost:1.1.0'
-    implementation 'oauth.signpost:signpost-core:1.2.1.2'
 
     //Picasso
     implementation 'com.squareup.picasso:picasso:2.71828'
