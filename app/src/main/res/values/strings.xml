@@ -1,6 +1,13 @@
 <resources>
     <string name="app_name">Tweet Analyzer</string>
-    <string name="enter_with_user_name">Enter with the user name</string>
+    <string name="enter_with_user_name">Enter the username</string>
     <string name="find">Find</string>
-    <string name="ok">ok</string>
+    <string name="ok">OK</string>
+    <string name="error_no_internet_connection">No internet connection</string>
+    <string name="error_default">Something went wrong</string>
+    <string name="error_not_found">No results found</string>
+    <string name="error_not_authorized">Not authorized</string>
+    <string name="error_empty_field">The username field is empty</string>
+    <string name="empty_list">No Tweet found</string>
+
 </resources>

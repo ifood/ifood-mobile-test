@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backgroundGray"
+    android:id="@+id/rootLayout"
     tools:context="com.example.tweetanalyzer.view.main.MainActivity">
 
 
@@ -57,7 +58,7 @@
 
     </androidx.cardview.widget.CardView>
 
-    <androidx.recyclerview.widget.RecyclerView
+    <com.cooltechworks.views.shimmer.ShimmerRecyclerView
         android:id="@+id/recyclerTweets"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -66,7 +67,22 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView2" />
 
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/textEmpityList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/empty_list"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/recyclerTweets" />
+
     <include
+        android:visibility="gone"
         layout="@layout/layout_show_sentiment"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

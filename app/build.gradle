@@ -70,4 +70,10 @@ dependencies {
     //card view
     implementation "androidx.cardview:cardview:1.0.0"
 
+    //shimmer recyclerview
+    implementation 'com.github.sharish:ShimmerRecyclerView:v1.3'
+
+    //snackbar
+    implementation 'com.android.support:design:28.0.0'
+
 }

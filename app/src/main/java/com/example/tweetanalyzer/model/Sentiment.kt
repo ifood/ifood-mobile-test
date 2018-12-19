@@ -4,7 +4,8 @@ import androidx.annotation.ColorRes
 import com.example.tweetanalyzer.R
 
 class Sentiment(
-        val score: Double
+        val score: Double,
+        var tweetText: String = ""
 ){
 
     fun toText():String{

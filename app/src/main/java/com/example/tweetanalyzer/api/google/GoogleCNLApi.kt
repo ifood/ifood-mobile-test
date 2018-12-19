@@ -14,7 +14,7 @@ class GoogleCNLApi : BaseApi() {
 
     fun sendTextToSentimentAnalize(text: String): Call<SentimentResponse> {
         val sentimentRequest = SentimentRequest(Document(text))
-        val key = ""
+        val key = "AIzaSyAtYNy6fLOgxPOqGNUzdjg35poAp_WAUSs"
         return api.sendTextForSentimentAnalysis(sentimentRequest, key)
     }
 

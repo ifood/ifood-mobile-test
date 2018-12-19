@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
+import com.example.tweetanalyzer.util.Resource
 import com.example.tweetanalyzer.model.Sentiment
 import com.example.tweetanalyzer.repository.google.GoogleRepository
 
@@ -11,7 +12,7 @@ class GoogleViewModel(private val googleRepository: GoogleRepository) : ViewMode
 
     private val searchTweetsInput = MutableLiveData<String>()
 
-    val sentimentResult: LiveData<Sentiment> = Transformations.switchMap(searchTweetsInput) { tweetText -> googleRepository.getSentimentFromText(tweetText) }
+    val sentimentResult: LiveData<Resource<Sentiment>> = Transformations.switchMap(searchTweetsInput) { tweetText -> googleRepository.getSentimentFromText(tweetText) }
 
     fun analyzeTweet(tweetText: String) {
         this.searchTweetsInput.value = tweetText
