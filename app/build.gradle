@@ -62,9 +62,12 @@ dependencies {
 
     //dagger2
     implementation 'com.google.dagger:dagger:2.16'
-    kapt 'com.google.dagger:dagger-compiler:2.15'
+    kapt 'com.google.dagger:dagger-compiler:2.16'
 
     // ViewModel and LiveData
     implementation "androidx.lifecycle:lifecycle-extensions:2.0.0"
+
+    //card view
+    implementation "androidx.cardview:cardview:1.0.0"
 
 }

@@ -1,18 +1,23 @@
 package com.example.tweetanalyzer.view.main
 
+import android.content.res.ColorStateList
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.tweetanalyzer.R
 import com.example.tweetanalyzer.TweetAnalyzerApplication
+import com.example.tweetanalyzer.model.Sentiment
 import com.example.tweetanalyzer.util.TwitterTokenPreferences
 import com.example.tweetanalyzer.viewmodel.CustomViewModelFactory
 import com.example.tweetanalyzer.viewmodel.GoogleViewModel
 import com.example.tweetanalyzer.viewmodel.TwitterViewModel
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.layout_show_sentiment.*
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
@@ -48,10 +53,12 @@ class MainActivity : AppCompatActivity() {
         })
 
         googleViewModel.sentimentResult.observe(this, Observer { sentiment ->
-            Toast.makeText(this@MainActivity, sentiment.score.toString(), Toast.LENGTH_SHORT).show()
+            showSentimentPopUp(sentiment.score.toString(), sentiment)
         })
 
         verifyToken()
+
+        rootSentimentLayout.visibility = View.GONE
 
         buttonFindTweets.setOnClickListener {
             val userName = inputUserName.text.toString()
@@ -61,6 +68,24 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        buttonSentimentCard.setOnClickListener {
+            hideSentimentPopUp()
+        }
+
+        //sendMessageProgressBar.indeterminateDrawable.setColorFilter(ContextCompat.getColor(context!!, R.color.white), PorterDuff.Mode.SRC_IN)
+    }
+
+    private fun showSentimentPopUp(tweet: String, sentiment: Sentiment){
+        rootSentimentLayout.visibility = View.VISIBLE
+        tweetSentimentCard.visibility = View.VISIBLE
+        layoutSentimentCard.background = ContextCompat.getDrawable(this, sentiment.toColor())
+        textSentiment.text = sentiment.toText()
+        textSentimentTweet.text = tweet
+    }
+
+    private fun hideSentimentPopUp(){
+        tweetSentimentCard.visibility = View.GONE
+        rootSentimentLayout.visibility = View.GONE
     }
 
     private fun verifyToken(){
