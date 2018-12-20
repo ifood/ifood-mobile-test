@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#29B6F6</color>
+    <color name="colorPrimaryDark">#2A92F0</color>
+    <color name="colorAccent">#26C6DA</color>
+
+    <color name="backgroundGray">#E7E7E7</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="black_background_tr">#b3000000</color>
+
+    <color name="happYellow">#FFEB3B</color>
+    <color name="neutralGrey">#ADADAD</color>
+    <color name="sadBlue">#2196F3</color>
+
+</resources>
