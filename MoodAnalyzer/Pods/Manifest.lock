@@ -1,0 +1,16 @@
+PODS:
+  - JNKeychain (0.1.4)
+
+DEPENDENCIES:
+  - JNKeychain
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - JNKeychain
+
+SPEC CHECKSUMS:
+  JNKeychain: fb6cc9ec95959ba46cd95d0ee6f7a05e41da9f42
+
+PODFILE CHECKSUM: 90a6bf5515811f5330980b9ea81e19220eafe80c
+
+COCOAPODS: 1.5.3
