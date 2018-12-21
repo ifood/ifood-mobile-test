@@ -29,6 +29,7 @@ class UsernameViewController: UIViewController {
             self.moodAnalyzerLabel.layer.shadowRadius = 6.0
             self.moodAnalyzerLabel.font = FontUtils.getScaledFont(forFont: "Montserrat-Bold", textStyle: .largeTitle)
             self.moodAnalyzerLabel.textColor = .white
+            self.moodAnalyzerLabel.adjustsFontForContentSizeCategory = true
         }
     }
     @IBOutlet weak var decorativeView: UIView! {
@@ -46,6 +47,7 @@ class UsernameViewController: UIViewController {
             self.usernameTextField.tintColor = .cornflowerBlue
             self.usernameTextField.autocorrectionType = .no
             self.usernameTextField.autocapitalizationType = .none
+            self.usernameTextField.adjustsFontForContentSizeCategory = true
         }
     }
     @IBOutlet weak var analyzeButton: UIButton! {

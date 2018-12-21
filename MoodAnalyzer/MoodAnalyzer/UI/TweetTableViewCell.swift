@@ -33,17 +33,18 @@ class TweetTableViewCell: UITableViewCell {
             self.tweetTextLabel.lineBreakMode = .byWordWrapping
             self.tweetTextLabel.numberOfLines = 0
             self.tweetTextLabel.font = UIFont.preferredFont(forTextStyle: .headline)
+            self.tweetTextLabel.adjustsFontForContentSizeCategory = true
         }
     }
     @IBOutlet weak var dateLabel: UILabel! {
         didSet {
             self.dateLabel.textColor = .bilobaFlowerPink
             self.dateLabel.font = FontUtils.getScaledFont(forFont: "Montserrat-Bold", textStyle: .footnote)
+            self.dateLabel.adjustsFontForContentSizeCategory = true
         }
     }
     @IBOutlet weak var moodLabel: UILabel! {
         didSet {
-            
         }
     }
     

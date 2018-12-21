@@ -43,6 +43,7 @@ class TweetsViewController: UIViewController {
         didSet {
             self.nameLabel.textColor = .downriverBlue
             self.nameLabel.font = FontUtils.getScaledFont(forFont: "Montserrat-Medium", textStyle: .headline)
+            self.nameLabel.adjustsFontForContentSizeCategory = true
         }
     }
     @IBOutlet weak var bioLabel: UILabel! {
@@ -50,6 +51,7 @@ class TweetsViewController: UIViewController {
             self.bioLabel.textColor = UIColor.charcoalGray.withAlphaComponent(0.7)
             self.bioLabel.font = UIFont.preferredFont(forTextStyle: .caption1)
             self.bioLabel.numberOfLines = 0
+            self.bioLabel.adjustsFontForContentSizeCategory = true
         }
     }
     @IBOutlet weak var tweetsTableView: UITableView! {
