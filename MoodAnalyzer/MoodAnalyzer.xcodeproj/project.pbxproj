@@ -205,8 +205,10 @@
 		3407EA8B21CA9A5000878640 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				3407EA8C21CA9A6200878640 /* TweetTableViewCell.swift */,
-				3407EA8D21CA9A6200878640 /* TweetTableViewCell.xib */,
+				34F03FD021C46B9000B9E262 /* Assets.xcassets */,
+				3407EA9821CACA6900878640 /* Fonts */,
+				3425836D21CC788C001D1910 /* Storyboards */,
+				3425836C21CC787C001D1910 /* UITableViewCells */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -219,6 +221,10 @@
 				3425835721CAD551001D1910 /* DateUtils.swift */,
 				3425835B21CAE036001D1910 /* ImageViewExtension.swift */,
 				3425835D21CAE5D2001D1910 /* CALayerExtension.swift */,
+				3425835F21CB0112001D1910 /* SentimentalySwift */,
+				34F03FF821C46BB400B9E262 /* Constants.swift */,
+				34F03FFB21C46DD100B9E262 /* APIManager.swift */,
+				34E60B7421C4A33400CBBC99 /* StringExtension.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -265,6 +271,44 @@
 			path = SentimentalySwift;
 			sourceTree = "<group>";
 		};
+		3425836A21CC7850001D1910 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3425836B21CC7863001D1910 /* Username */,
+				3407EA7A21C9537100878640 /* Tweets */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3425836B21CC7863001D1910 /* Username */ = {
+			isa = PBXGroup;
+			children = (
+				34F03FC821C46B8E00B9E262 /* UsernameViewController.swift */,
+				3425836421CB1F7D001D1910 /* UsernameViewController+Layout.swift */,
+				3425835921CAD75C001D1910 /* UsernameViewController+Keyboard.swift */,
+				3407EA8721CA5DF900878640 /* UsernameViewModel.swift */,
+			);
+			path = Username;
+			sourceTree = "<group>";
+		};
+		3425836C21CC787C001D1910 /* UITableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				3407EA8C21CA9A6200878640 /* TweetTableViewCell.swift */,
+				3407EA8D21CA9A6200878640 /* TweetTableViewCell.xib */,
+			);
+			path = UITableViewCells;
+			sourceTree = "<group>";
+		};
+		3425836D21CC788C001D1910 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				34F03FCA21C46B8E00B9E262 /* Main.storyboard */,
+				34F03FD221C46B9000B9E262 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		34F03FBA21C46B8E00B9E262 = {
 			isa = PBXGroup;
 			children = (
@@ -290,23 +334,13 @@
 		34F03FC521C46B8E00B9E262 /* MoodAnalyzer */ = {
 			isa = PBXGroup;
 			children = (
-				3425835F21CB0112001D1910 /* SentimentalySwift */,
-				3407EA9821CACA6900878640 /* Fonts */,
+				3425836A21CC7850001D1910 /* ViewControllers */,
 				3407EA9021CA9D0300878640 /* Util */,
 				3407EA8B21CA9A5000878640 /* UI */,
-				3407EA7A21C9537100878640 /* Tweets */,
 				3407EA7721C69F0C00878640 /* Models */,
-				34F03FF721C46B9F00B9E262 /* Utils */,
 				34F03FC621C46B8E00B9E262 /* AppDelegate.swift */,
-				34F03FC821C46B8E00B9E262 /* UsernameViewController.swift */,
-				3425836421CB1F7D001D1910 /* UsernameViewController+Layout.swift */,
-				3425835921CAD75C001D1910 /* UsernameViewController+Keyboard.swift */,
-				34F03FCA21C46B8E00B9E262 /* Main.storyboard */,
-				34F03FD021C46B9000B9E262 /* Assets.xcassets */,
-				34F03FD221C46B9000B9E262 /* LaunchScreen.storyboard */,
 				34F03FD521C46B9000B9E262 /* Info.plist */,
 				34F03FCD21C46B8E00B9E262 /* MoodAnalyzer.xcdatamodeld */,
-				3407EA8721CA5DF900878640 /* UsernameViewModel.swift */,
 			);
 			path = MoodAnalyzer;
 			sourceTree = "<group>";
@@ -327,16 +361,6 @@
 				34F03FEB21C46B9000B9E262 /* Info.plist */,
 			);
 			path = MoodAnalyzerUITests;
-			sourceTree = "<group>";
-		};
-		34F03FF721C46B9F00B9E262 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				34F03FF821C46BB400B9E262 /* Constants.swift */,
-				34F03FFB21C46DD100B9E262 /* APIManager.swift */,
-				34E60B7421C4A33400CBBC99 /* StringExtension.swift */,
-			);
-			path = Utils;
 			sourceTree = "<group>";
 		};
 		CE9CC0AEE5B280FEAFB46F21 /* Frameworks */ = {
