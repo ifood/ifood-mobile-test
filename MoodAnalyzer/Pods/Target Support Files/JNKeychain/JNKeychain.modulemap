@@ -1,0 +1,6 @@
+framework module JNKeychain {
+  umbrella header "JNKeychain-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,993 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3407EA7921C69F6B00878640 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3407EA7821C69F6B00878640 /* Tweet.swift */; };
+		3407EA8521C9542900878640 /* TweetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3407EA8321C9542900878640 /* TweetsViewController.swift */; };
+		3407EA8621C9542900878640 /* TweetsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3407EA8421C9542900878640 /* TweetsViewController.xib */; };
+		3407EA8821CA5DF900878640 /* UsernameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3407EA8721CA5DF900878640 /* UsernameViewModel.swift */; };
+		3407EA8A21CA911800878640 /* TweetsViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3407EA8921CA911800878640 /* TweetsViewController+TableView.swift */; };
+		3407EA8E21CA9A6200878640 /* TweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3407EA8C21CA9A6200878640 /* TweetTableViewCell.swift */; };
+		3407EA8F21CA9A6200878640 /* TweetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3407EA8D21CA9A6200878640 /* TweetTableViewCell.xib */; };
+		3407EA9221CA9D0F00878640 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3407EA9121CA9D0F00878640 /* ColorExtension.swift */; };
+		3407EA9721CAAE7300878640 /* TweetsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3407EA9621CAAE7300878640 /* TweetsViewModel.swift */; };
+		3407EA9A21CACB1800878640 /* FontUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3407EA9921CACB1800878640 /* FontUtils.swift */; };
+		3407EAAE21CACB5400878640 /* Montserrat-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3407EA9C21CACB5400878640 /* Montserrat-LightItalic.ttf */; };
+		3407EAAF21CACB5400878640 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3407EA9D21CACB5400878640 /* Montserrat-Medium.ttf */; };
+		3407EAB021CACB5400878640 /* Montserrat-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3407EA9E21CACB5400878640 /* Montserrat-BoldItalic.ttf */; };
+		3407EAB121CACB5400878640 /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3407EA9F21CACB5400878640 /* Montserrat-Light.ttf */; };
+		3407EAB221CACB5400878640 /* Montserrat-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3407EAA021CACB5400878640 /* Montserrat-ThinItalic.ttf */; };
+		3407EAB321CACB5400878640 /* Montserrat-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3407EAA121CACB5400878640 /* Montserrat-ExtraLight.ttf */; };
+		3407EAB421CACB5400878640 /* Montserrat-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3407EAA221CACB5400878640 /* Montserrat-Thin.ttf */; };
+		3407EAB521CACB5400878640 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3407EAA321CACB5400878640 /* Montserrat-Bold.ttf */; };
+		3407EAB621CACB5400878640 /* Montserrat-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3407EAA421CACB5400878640 /* Montserrat-MediumItalic.ttf */; };
+		3407EAB721CACB5400878640 /* Montserrat-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3407EAA521CACB5400878640 /* Montserrat-BlackItalic.ttf */; };
+		3407EAB821CACB5400878640 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3407EAA621CACB5400878640 /* Montserrat-SemiBold.ttf */; };
+		3407EAB921CACB5400878640 /* Montserrat-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3407EAA721CACB5400878640 /* Montserrat-ExtraLightItalic.ttf */; };
+		3407EABA21CACB5400878640 /* Montserrat-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3407EAA821CACB5400878640 /* Montserrat-ExtraBold.ttf */; };
+		3407EABB21CACB5400878640 /* Montserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3407EAA921CACB5400878640 /* Montserrat-Black.ttf */; };
+		3407EABC21CACB5400878640 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3407EAAA21CACB5400878640 /* Montserrat-Regular.ttf */; };
+		3407EABD21CACB5400878640 /* Montserrat-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3407EAAB21CACB5400878640 /* Montserrat-Italic.ttf */; };
+		3407EABE21CACB5400878640 /* Montserrat-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3407EAAC21CACB5400878640 /* Montserrat-SemiBoldItalic.ttf */; };
+		3407EABF21CACB5400878640 /* Montserrat-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3407EAAD21CACB5400878640 /* Montserrat-ExtraBoldItalic.ttf */; };
+		3425835821CAD551001D1910 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3425835721CAD551001D1910 /* DateUtils.swift */; };
+		3425835A21CAD75C001D1910 /* UsernameViewController+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3425835921CAD75C001D1910 /* UsernameViewController+Keyboard.swift */; };
+		3425835C21CAE036001D1910 /* ImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3425835B21CAE036001D1910 /* ImageViewExtension.swift */; };
+		3425835E21CAE5D2001D1910 /* CALayerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3425835D21CAE5D2001D1910 /* CALayerExtension.swift */; };
+		3425836121CB0121001D1910 /* SentimentalySwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3425836021CB0121001D1910 /* SentimentalySwift.swift */; };
+		3425836321CB076A001D1910 /* AFINN.json in Resources */ = {isa = PBXBuildFile; fileRef = 3425836221CB076A001D1910 /* AFINN.json */; };
+		3425836521CB1F7D001D1910 /* UsernameViewController+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3425836421CB1F7D001D1910 /* UsernameViewController+Layout.swift */; };
+		3425836921CC6339001D1910 /* TweetsViewController+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3425836821CC6339001D1910 /* TweetsViewController+Animation.swift */; };
+		34E60B7521C4A33400CBBC99 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E60B7421C4A33400CBBC99 /* StringExtension.swift */; };
+		34F03FC721C46B8E00B9E262 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F03FC621C46B8E00B9E262 /* AppDelegate.swift */; };
+		34F03FC921C46B8E00B9E262 /* UsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F03FC821C46B8E00B9E262 /* UsernameViewController.swift */; };
+		34F03FCC21C46B8E00B9E262 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34F03FCA21C46B8E00B9E262 /* Main.storyboard */; };
+		34F03FCF21C46B8E00B9E262 /* MoodAnalyzer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 34F03FCD21C46B8E00B9E262 /* MoodAnalyzer.xcdatamodeld */; };
+		34F03FD121C46B9000B9E262 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34F03FD021C46B9000B9E262 /* Assets.xcassets */; };
+		34F03FD421C46B9000B9E262 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34F03FD221C46B9000B9E262 /* LaunchScreen.storyboard */; };
+		34F03FDF21C46B9000B9E262 /* MoodAnalyzerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F03FDE21C46B9000B9E262 /* MoodAnalyzerTests.swift */; };
+		34F03FEA21C46B9000B9E262 /* MoodAnalyzerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F03FE921C46B9000B9E262 /* MoodAnalyzerUITests.swift */; };
+		34F03FF921C46BB400B9E262 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F03FF821C46BB400B9E262 /* Constants.swift */; };
+		34F03FFC21C46DD100B9E262 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F03FFB21C46DD100B9E262 /* APIManager.swift */; };
+		576597C90A4A055398CF6CAC /* Pods_MoodAnalyzerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2AAB07A471A8577CCC29C32 /* Pods_MoodAnalyzerUITests.framework */; };
+		945C6A20665FDCDBE3FDF120 /* Pods_MoodAnalyzer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2207C16B738D158105E4018 /* Pods_MoodAnalyzer.framework */; };
+		ED3093A66ADC199BCD83075C /* Pods_MoodAnalyzerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B78C8DBE479A70A367B5B1CF /* Pods_MoodAnalyzerTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		34F03FDB21C46B9000B9E262 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34F03FBB21C46B8E00B9E262 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 34F03FC221C46B8E00B9E262;
+			remoteInfo = MoodAnalyzer;
+		};
+		34F03FE621C46B9000B9E262 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34F03FBB21C46B8E00B9E262 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 34F03FC221C46B8E00B9E262;
+			remoteInfo = MoodAnalyzer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		28D8F8B16D4BB2CD542B5CC2 /* Pods-MoodAnalyzerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoodAnalyzerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MoodAnalyzerTests/Pods-MoodAnalyzerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3407EA7821C69F6B00878640 /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
+		3407EA8321C9542900878640 /* TweetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetsViewController.swift; sourceTree = "<group>"; };
+		3407EA8421C9542900878640 /* TweetsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TweetsViewController.xib; sourceTree = "<group>"; };
+		3407EA8721CA5DF900878640 /* UsernameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameViewModel.swift; sourceTree = "<group>"; };
+		3407EA8921CA911800878640 /* TweetsViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TweetsViewController+TableView.swift"; sourceTree = "<group>"; };
+		3407EA8C21CA9A6200878640 /* TweetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetTableViewCell.swift; sourceTree = "<group>"; };
+		3407EA8D21CA9A6200878640 /* TweetTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TweetTableViewCell.xib; sourceTree = "<group>"; };
+		3407EA9121CA9D0F00878640 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		3407EA9621CAAE7300878640 /* TweetsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetsViewModel.swift; sourceTree = "<group>"; };
+		3407EA9921CACB1800878640 /* FontUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontUtils.swift; sourceTree = "<group>"; };
+		3407EA9C21CACB5400878640 /* Montserrat-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-LightItalic.ttf"; sourceTree = "<group>"; };
+		3407EA9D21CACB5400878640 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		3407EA9E21CACB5400878640 /* Montserrat-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-BoldItalic.ttf"; sourceTree = "<group>"; };
+		3407EA9F21CACB5400878640 /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
+		3407EAA021CACB5400878640 /* Montserrat-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ThinItalic.ttf"; sourceTree = "<group>"; };
+		3407EAA121CACB5400878640 /* Montserrat-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraLight.ttf"; sourceTree = "<group>"; };
+		3407EAA221CACB5400878640 /* Montserrat-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Thin.ttf"; sourceTree = "<group>"; };
+		3407EAA321CACB5400878640 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		3407EAA421CACB5400878640 /* Montserrat-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-MediumItalic.ttf"; sourceTree = "<group>"; };
+		3407EAA521CACB5400878640 /* Montserrat-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-BlackItalic.ttf"; sourceTree = "<group>"; };
+		3407EAA621CACB5400878640 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		3407EAA721CACB5400878640 /* Montserrat-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		3407EAA821CACB5400878640 /* Montserrat-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.ttf"; sourceTree = "<group>"; };
+		3407EAA921CACB5400878640 /* Montserrat-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.ttf"; sourceTree = "<group>"; };
+		3407EAAA21CACB5400878640 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		3407EAAB21CACB5400878640 /* Montserrat-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Italic.ttf"; sourceTree = "<group>"; };
+		3407EAAC21CACB5400878640 /* Montserrat-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		3407EAAD21CACB5400878640 /* Montserrat-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		3425835721CAD551001D1910 /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
+		3425835921CAD75C001D1910 /* UsernameViewController+Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UsernameViewController+Keyboard.swift"; sourceTree = "<group>"; };
+		3425835B21CAE036001D1910 /* ImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewExtension.swift; sourceTree = "<group>"; };
+		3425835D21CAE5D2001D1910 /* CALayerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayerExtension.swift; sourceTree = "<group>"; };
+		3425836021CB0121001D1910 /* SentimentalySwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentalySwift.swift; sourceTree = "<group>"; };
+		3425836221CB076A001D1910 /* AFINN.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AFINN.json; sourceTree = "<group>"; };
+		3425836421CB1F7D001D1910 /* UsernameViewController+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UsernameViewController+Layout.swift"; sourceTree = "<group>"; };
+		3425836821CC6339001D1910 /* TweetsViewController+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TweetsViewController+Animation.swift"; sourceTree = "<group>"; };
+		34E60B7421C4A33400CBBC99 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		34F03FC321C46B8E00B9E262 /* MoodAnalyzer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoodAnalyzer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		34F03FC621C46B8E00B9E262 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		34F03FC821C46B8E00B9E262 /* UsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameViewController.swift; sourceTree = "<group>"; };
+		34F03FCB21C46B8E00B9E262 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		34F03FCE21C46B8E00B9E262 /* MoodAnalyzer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MoodAnalyzer.xcdatamodel; sourceTree = "<group>"; };
+		34F03FD021C46B9000B9E262 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		34F03FD321C46B9000B9E262 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		34F03FD521C46B9000B9E262 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34F03FDA21C46B9000B9E262 /* MoodAnalyzerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoodAnalyzerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		34F03FDE21C46B9000B9E262 /* MoodAnalyzerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodAnalyzerTests.swift; sourceTree = "<group>"; };
+		34F03FE021C46B9000B9E262 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34F03FE521C46B9000B9E262 /* MoodAnalyzerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoodAnalyzerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		34F03FE921C46B9000B9E262 /* MoodAnalyzerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodAnalyzerUITests.swift; sourceTree = "<group>"; };
+		34F03FEB21C46B9000B9E262 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34F03FF821C46BB400B9E262 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		34F03FFB21C46DD100B9E262 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		6BD82CDBE3F8B88B80A4ED7B /* Pods-MoodAnalyzerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoodAnalyzerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MoodAnalyzerUITests/Pods-MoodAnalyzerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6E2965A7527BB12D69534EB2 /* Pods-MoodAnalyzer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoodAnalyzer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MoodAnalyzer/Pods-MoodAnalyzer.debug.xcconfig"; sourceTree = "<group>"; };
+		77921156C879E25966332EB4 /* Pods-MoodAnalyzerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoodAnalyzerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MoodAnalyzerTests/Pods-MoodAnalyzerTests.release.xcconfig"; sourceTree = "<group>"; };
+		7B5C614C267B5E09200E69EC /* Pods-MoodAnalyzerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoodAnalyzerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MoodAnalyzerUITests/Pods-MoodAnalyzerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		85C1C9F0F3745E0237774EF0 /* Pods-MoodAnalyzer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoodAnalyzer.release.xcconfig"; path = "Pods/Target Support Files/Pods-MoodAnalyzer/Pods-MoodAnalyzer.release.xcconfig"; sourceTree = "<group>"; };
+		A2AAB07A471A8577CCC29C32 /* Pods_MoodAnalyzerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoodAnalyzerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B78C8DBE479A70A367B5B1CF /* Pods_MoodAnalyzerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoodAnalyzerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2207C16B738D158105E4018 /* Pods_MoodAnalyzer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoodAnalyzer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		34F03FC021C46B8E00B9E262 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				945C6A20665FDCDBE3FDF120 /* Pods_MoodAnalyzer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34F03FD721C46B9000B9E262 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED3093A66ADC199BCD83075C /* Pods_MoodAnalyzerTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34F03FE221C46B9000B9E262 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				576597C90A4A055398CF6CAC /* Pods_MoodAnalyzerUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2FAD541199514F33A1ED03E1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6E2965A7527BB12D69534EB2 /* Pods-MoodAnalyzer.debug.xcconfig */,
+				85C1C9F0F3745E0237774EF0 /* Pods-MoodAnalyzer.release.xcconfig */,
+				28D8F8B16D4BB2CD542B5CC2 /* Pods-MoodAnalyzerTests.debug.xcconfig */,
+				77921156C879E25966332EB4 /* Pods-MoodAnalyzerTests.release.xcconfig */,
+				7B5C614C267B5E09200E69EC /* Pods-MoodAnalyzerUITests.debug.xcconfig */,
+				6BD82CDBE3F8B88B80A4ED7B /* Pods-MoodAnalyzerUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3407EA7721C69F0C00878640 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3407EA7821C69F6B00878640 /* Tweet.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3407EA7A21C9537100878640 /* Tweets */ = {
+			isa = PBXGroup;
+			children = (
+				3407EA8321C9542900878640 /* TweetsViewController.swift */,
+				3425836821CC6339001D1910 /* TweetsViewController+Animation.swift */,
+				3407EA8921CA911800878640 /* TweetsViewController+TableView.swift */,
+				3407EA8421C9542900878640 /* TweetsViewController.xib */,
+				3407EA9621CAAE7300878640 /* TweetsViewModel.swift */,
+			);
+			path = Tweets;
+			sourceTree = "<group>";
+		};
+		3407EA8B21CA9A5000878640 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				34F03FD021C46B9000B9E262 /* Assets.xcassets */,
+				3407EA9821CACA6900878640 /* Fonts */,
+				3425836D21CC788C001D1910 /* Storyboards */,
+				3425836C21CC787C001D1910 /* UITableViewCells */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		3407EA9021CA9D0300878640 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				3407EA9121CA9D0F00878640 /* ColorExtension.swift */,
+				3407EA9921CACB1800878640 /* FontUtils.swift */,
+				3425835721CAD551001D1910 /* DateUtils.swift */,
+				3425835B21CAE036001D1910 /* ImageViewExtension.swift */,
+				3425835D21CAE5D2001D1910 /* CALayerExtension.swift */,
+				3425835F21CB0112001D1910 /* SentimentalySwift */,
+				34F03FF821C46BB400B9E262 /* Constants.swift */,
+				34F03FFB21C46DD100B9E262 /* APIManager.swift */,
+				34E60B7421C4A33400CBBC99 /* StringExtension.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		3407EA9821CACA6900878640 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				3407EA9B21CACB5400878640 /* Monteserrat */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		3407EA9B21CACB5400878640 /* Monteserrat */ = {
+			isa = PBXGroup;
+			children = (
+				3407EA9C21CACB5400878640 /* Montserrat-LightItalic.ttf */,
+				3407EA9D21CACB5400878640 /* Montserrat-Medium.ttf */,
+				3407EA9E21CACB5400878640 /* Montserrat-BoldItalic.ttf */,
+				3407EA9F21CACB5400878640 /* Montserrat-Light.ttf */,
+				3407EAA021CACB5400878640 /* Montserrat-ThinItalic.ttf */,
+				3407EAA121CACB5400878640 /* Montserrat-ExtraLight.ttf */,
+				3407EAA221CACB5400878640 /* Montserrat-Thin.ttf */,
+				3407EAA321CACB5400878640 /* Montserrat-Bold.ttf */,
+				3407EAA421CACB5400878640 /* Montserrat-MediumItalic.ttf */,
+				3407EAA521CACB5400878640 /* Montserrat-BlackItalic.ttf */,
+				3407EAA621CACB5400878640 /* Montserrat-SemiBold.ttf */,
+				3407EAA721CACB5400878640 /* Montserrat-ExtraLightItalic.ttf */,
+				3407EAA821CACB5400878640 /* Montserrat-ExtraBold.ttf */,
+				3407EAA921CACB5400878640 /* Montserrat-Black.ttf */,
+				3407EAAA21CACB5400878640 /* Montserrat-Regular.ttf */,
+				3407EAAB21CACB5400878640 /* Montserrat-Italic.ttf */,
+				3407EAAC21CACB5400878640 /* Montserrat-SemiBoldItalic.ttf */,
+				3407EAAD21CACB5400878640 /* Montserrat-ExtraBoldItalic.ttf */,
+			);
+			path = Monteserrat;
+			sourceTree = "<group>";
+		};
+		3425835F21CB0112001D1910 /* SentimentalySwift */ = {
+			isa = PBXGroup;
+			children = (
+				3425836221CB076A001D1910 /* AFINN.json */,
+				3425836021CB0121001D1910 /* SentimentalySwift.swift */,
+			);
+			path = SentimentalySwift;
+			sourceTree = "<group>";
+		};
+		3425836A21CC7850001D1910 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3425836B21CC7863001D1910 /* Username */,
+				3407EA7A21C9537100878640 /* Tweets */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3425836B21CC7863001D1910 /* Username */ = {
+			isa = PBXGroup;
+			children = (
+				34F03FC821C46B8E00B9E262 /* UsernameViewController.swift */,
+				3425836421CB1F7D001D1910 /* UsernameViewController+Layout.swift */,
+				3425835921CAD75C001D1910 /* UsernameViewController+Keyboard.swift */,
+				3407EA8721CA5DF900878640 /* UsernameViewModel.swift */,
+			);
+			path = Username;
+			sourceTree = "<group>";
+		};
+		3425836C21CC787C001D1910 /* UITableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				3407EA8C21CA9A6200878640 /* TweetTableViewCell.swift */,
+				3407EA8D21CA9A6200878640 /* TweetTableViewCell.xib */,
+			);
+			path = UITableViewCells;
+			sourceTree = "<group>";
+		};
+		3425836D21CC788C001D1910 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				34F03FCA21C46B8E00B9E262 /* Main.storyboard */,
+				34F03FD221C46B9000B9E262 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		34F03FBA21C46B8E00B9E262 = {
+			isa = PBXGroup;
+			children = (
+				34F03FC521C46B8E00B9E262 /* MoodAnalyzer */,
+				34F03FDD21C46B9000B9E262 /* MoodAnalyzerTests */,
+				34F03FE821C46B9000B9E262 /* MoodAnalyzerUITests */,
+				34F03FC421C46B8E00B9E262 /* Products */,
+				2FAD541199514F33A1ED03E1 /* Pods */,
+				CE9CC0AEE5B280FEAFB46F21 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		34F03FC421C46B8E00B9E262 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				34F03FC321C46B8E00B9E262 /* MoodAnalyzer.app */,
+				34F03FDA21C46B9000B9E262 /* MoodAnalyzerTests.xctest */,
+				34F03FE521C46B9000B9E262 /* MoodAnalyzerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		34F03FC521C46B8E00B9E262 /* MoodAnalyzer */ = {
+			isa = PBXGroup;
+			children = (
+				3425836A21CC7850001D1910 /* ViewControllers */,
+				3407EA9021CA9D0300878640 /* Util */,
+				3407EA8B21CA9A5000878640 /* UI */,
+				3407EA7721C69F0C00878640 /* Models */,
+				34F03FC621C46B8E00B9E262 /* AppDelegate.swift */,
+				34F03FD521C46B9000B9E262 /* Info.plist */,
+				34F03FCD21C46B8E00B9E262 /* MoodAnalyzer.xcdatamodeld */,
+			);
+			path = MoodAnalyzer;
+			sourceTree = "<group>";
+		};
+		34F03FDD21C46B9000B9E262 /* MoodAnalyzerTests */ = {
+			isa = PBXGroup;
+			children = (
+				34F03FDE21C46B9000B9E262 /* MoodAnalyzerTests.swift */,
+				34F03FE021C46B9000B9E262 /* Info.plist */,
+			);
+			path = MoodAnalyzerTests;
+			sourceTree = "<group>";
+		};
+		34F03FE821C46B9000B9E262 /* MoodAnalyzerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				34F03FE921C46B9000B9E262 /* MoodAnalyzerUITests.swift */,
+				34F03FEB21C46B9000B9E262 /* Info.plist */,
+			);
+			path = MoodAnalyzerUITests;
+			sourceTree = "<group>";
+		};
+		CE9CC0AEE5B280FEAFB46F21 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C2207C16B738D158105E4018 /* Pods_MoodAnalyzer.framework */,
+				B78C8DBE479A70A367B5B1CF /* Pods_MoodAnalyzerTests.framework */,
+				A2AAB07A471A8577CCC29C32 /* Pods_MoodAnalyzerUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		34F03FC221C46B8E00B9E262 /* MoodAnalyzer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34F03FEE21C46B9000B9E262 /* Build configuration list for PBXNativeTarget "MoodAnalyzer" */;
+			buildPhases = (
+				96D8E011576DE4917878A2F0 /* [CP] Check Pods Manifest.lock */,
+				34F03FBF21C46B8E00B9E262 /* Sources */,
+				34F03FC021C46B8E00B9E262 /* Frameworks */,
+				34F03FC121C46B8E00B9E262 /* Resources */,
+				169E560697AE05847A894188 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MoodAnalyzer;
+			productName = MoodAnalyzer;
+			productReference = 34F03FC321C46B8E00B9E262 /* MoodAnalyzer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		34F03FD921C46B9000B9E262 /* MoodAnalyzerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34F03FF121C46B9000B9E262 /* Build configuration list for PBXNativeTarget "MoodAnalyzerTests" */;
+			buildPhases = (
+				E64BBF58AF25871C1DD2AF94 /* [CP] Check Pods Manifest.lock */,
+				34F03FD621C46B9000B9E262 /* Sources */,
+				34F03FD721C46B9000B9E262 /* Frameworks */,
+				34F03FD821C46B9000B9E262 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				34F03FDC21C46B9000B9E262 /* PBXTargetDependency */,
+			);
+			name = MoodAnalyzerTests;
+			productName = MoodAnalyzerTests;
+			productReference = 34F03FDA21C46B9000B9E262 /* MoodAnalyzerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		34F03FE421C46B9000B9E262 /* MoodAnalyzerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34F03FF421C46B9000B9E262 /* Build configuration list for PBXNativeTarget "MoodAnalyzerUITests" */;
+			buildPhases = (
+				5FC45127F4F4AB97F4E770BF /* [CP] Check Pods Manifest.lock */,
+				34F03FE121C46B9000B9E262 /* Sources */,
+				34F03FE221C46B9000B9E262 /* Frameworks */,
+				34F03FE321C46B9000B9E262 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				34F03FE721C46B9000B9E262 /* PBXTargetDependency */,
+			);
+			name = MoodAnalyzerUITests;
+			productName = MoodAnalyzerUITests;
+			productReference = 34F03FE521C46B9000B9E262 /* MoodAnalyzerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		34F03FBB21C46B8E00B9E262 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Carlos Henrique Salvador";
+				TargetAttributes = {
+					34F03FC221C46B8E00B9E262 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					34F03FD921C46B9000B9E262 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 34F03FC221C46B8E00B9E262;
+					};
+					34F03FE421C46B9000B9E262 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 34F03FC221C46B8E00B9E262;
+					};
+				};
+			};
+			buildConfigurationList = 34F03FBE21C46B8E00B9E262 /* Build configuration list for PBXProject "MoodAnalyzer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 34F03FBA21C46B8E00B9E262;
+			productRefGroup = 34F03FC421C46B8E00B9E262 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				34F03FC221C46B8E00B9E262 /* MoodAnalyzer */,
+				34F03FD921C46B9000B9E262 /* MoodAnalyzerTests */,
+				34F03FE421C46B9000B9E262 /* MoodAnalyzerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		34F03FC121C46B8E00B9E262 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3407EAB021CACB5400878640 /* Montserrat-BoldItalic.ttf in Resources */,
+				3407EA8F21CA9A6200878640 /* TweetTableViewCell.xib in Resources */,
+				3407EAB621CACB5400878640 /* Montserrat-MediumItalic.ttf in Resources */,
+				3407EAB721CACB5400878640 /* Montserrat-BlackItalic.ttf in Resources */,
+				3407EA8621C9542900878640 /* TweetsViewController.xib in Resources */,
+				3407EAB121CACB5400878640 /* Montserrat-Light.ttf in Resources */,
+				3425836321CB076A001D1910 /* AFINN.json in Resources */,
+				3407EABD21CACB5400878640 /* Montserrat-Italic.ttf in Resources */,
+				3407EABF21CACB5400878640 /* Montserrat-ExtraBoldItalic.ttf in Resources */,
+				3407EAB521CACB5400878640 /* Montserrat-Bold.ttf in Resources */,
+				3407EABA21CACB5400878640 /* Montserrat-ExtraBold.ttf in Resources */,
+				3407EABC21CACB5400878640 /* Montserrat-Regular.ttf in Resources */,
+				3407EAB221CACB5400878640 /* Montserrat-ThinItalic.ttf in Resources */,
+				3407EAAE21CACB5400878640 /* Montserrat-LightItalic.ttf in Resources */,
+				3407EABE21CACB5400878640 /* Montserrat-SemiBoldItalic.ttf in Resources */,
+				3407EAB321CACB5400878640 /* Montserrat-ExtraLight.ttf in Resources */,
+				3407EAAF21CACB5400878640 /* Montserrat-Medium.ttf in Resources */,
+				3407EABB21CACB5400878640 /* Montserrat-Black.ttf in Resources */,
+				34F03FD421C46B9000B9E262 /* LaunchScreen.storyboard in Resources */,
+				34F03FD121C46B9000B9E262 /* Assets.xcassets in Resources */,
+				3407EAB421CACB5400878640 /* Montserrat-Thin.ttf in Resources */,
+				3407EAB921CACB5400878640 /* Montserrat-ExtraLightItalic.ttf in Resources */,
+				3407EAB821CACB5400878640 /* Montserrat-SemiBold.ttf in Resources */,
+				34F03FCC21C46B8E00B9E262 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34F03FD821C46B9000B9E262 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34F03FE321C46B9000B9E262 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		169E560697AE05847A894188 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MoodAnalyzer/Pods-MoodAnalyzer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/JNKeychain/JNKeychain.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JNKeychain.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MoodAnalyzer/Pods-MoodAnalyzer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5FC45127F4F4AB97F4E770BF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MoodAnalyzerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96D8E011576DE4917878A2F0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MoodAnalyzer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E64BBF58AF25871C1DD2AF94 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MoodAnalyzerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		34F03FBF21C46B8E00B9E262 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3407EA8521C9542900878640 /* TweetsViewController.swift in Sources */,
+				3407EA8821CA5DF900878640 /* UsernameViewModel.swift in Sources */,
+				3407EA8A21CA911800878640 /* TweetsViewController+TableView.swift in Sources */,
+				3407EA9221CA9D0F00878640 /* ColorExtension.swift in Sources */,
+				34F03FC921C46B8E00B9E262 /* UsernameViewController.swift in Sources */,
+				34F03FC721C46B8E00B9E262 /* AppDelegate.swift in Sources */,
+				34E60B7521C4A33400CBBC99 /* StringExtension.swift in Sources */,
+				3425835821CAD551001D1910 /* DateUtils.swift in Sources */,
+				3407EA8E21CA9A6200878640 /* TweetTableViewCell.swift in Sources */,
+				3407EA9A21CACB1800878640 /* FontUtils.swift in Sources */,
+				3407EA7921C69F6B00878640 /* Tweet.swift in Sources */,
+				3425835A21CAD75C001D1910 /* UsernameViewController+Keyboard.swift in Sources */,
+				34F03FFC21C46DD100B9E262 /* APIManager.swift in Sources */,
+				3425835C21CAE036001D1910 /* ImageViewExtension.swift in Sources */,
+				34F03FCF21C46B8E00B9E262 /* MoodAnalyzer.xcdatamodeld in Sources */,
+				3425835E21CAE5D2001D1910 /* CALayerExtension.swift in Sources */,
+				3407EA9721CAAE7300878640 /* TweetsViewModel.swift in Sources */,
+				3425836921CC6339001D1910 /* TweetsViewController+Animation.swift in Sources */,
+				3425836121CB0121001D1910 /* SentimentalySwift.swift in Sources */,
+				3425836521CB1F7D001D1910 /* UsernameViewController+Layout.swift in Sources */,
+				34F03FF921C46BB400B9E262 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34F03FD621C46B9000B9E262 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34F03FDF21C46B9000B9E262 /* MoodAnalyzerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34F03FE121C46B9000B9E262 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34F03FEA21C46B9000B9E262 /* MoodAnalyzerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		34F03FDC21C46B9000B9E262 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 34F03FC221C46B8E00B9E262 /* MoodAnalyzer */;
+			targetProxy = 34F03FDB21C46B9000B9E262 /* PBXContainerItemProxy */;
+		};
+		34F03FE721C46B9000B9E262 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 34F03FC221C46B8E00B9E262 /* MoodAnalyzer */;
+			targetProxy = 34F03FE621C46B9000B9E262 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		34F03FCA21C46B8E00B9E262 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				34F03FCB21C46B8E00B9E262 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		34F03FD221C46B9000B9E262 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				34F03FD321C46B9000B9E262 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		34F03FEC21C46B9000B9E262 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		34F03FED21C46B9000B9E262 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		34F03FEF21C46B9000B9E262 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E2965A7527BB12D69534EB2 /* Pods-MoodAnalyzer.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 744TR3CQ96;
+				INFOPLIST_FILE = MoodAnalyzer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CarlosSalvador.MoodAnalyzer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		34F03FF021C46B9000B9E262 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85C1C9F0F3745E0237774EF0 /* Pods-MoodAnalyzer.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 744TR3CQ96;
+				INFOPLIST_FILE = MoodAnalyzer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CarlosSalvador.MoodAnalyzer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		34F03FF221C46B9000B9E262 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28D8F8B16D4BB2CD542B5CC2 /* Pods-MoodAnalyzerTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 744TR3CQ96;
+				INFOPLIST_FILE = MoodAnalyzerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CarlosSalvador.MoodAnalyzerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MoodAnalyzer.app/MoodAnalyzer";
+			};
+			name = Debug;
+		};
+		34F03FF321C46B9000B9E262 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77921156C879E25966332EB4 /* Pods-MoodAnalyzerTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 744TR3CQ96;
+				INFOPLIST_FILE = MoodAnalyzerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CarlosSalvador.MoodAnalyzerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MoodAnalyzer.app/MoodAnalyzer";
+			};
+			name = Release;
+		};
+		34F03FF521C46B9000B9E262 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B5C614C267B5E09200E69EC /* Pods-MoodAnalyzerUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 744TR3CQ96;
+				INFOPLIST_FILE = MoodAnalyzerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CarlosSalvador.MoodAnalyzerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MoodAnalyzer;
+			};
+			name = Debug;
+		};
+		34F03FF621C46B9000B9E262 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6BD82CDBE3F8B88B80A4ED7B /* Pods-MoodAnalyzerUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 744TR3CQ96;
+				INFOPLIST_FILE = MoodAnalyzerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CarlosSalvador.MoodAnalyzerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MoodAnalyzer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		34F03FBE21C46B8E00B9E262 /* Build configuration list for PBXProject "MoodAnalyzer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34F03FEC21C46B9000B9E262 /* Debug */,
+				34F03FED21C46B9000B9E262 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		34F03FEE21C46B9000B9E262 /* Build configuration list for PBXNativeTarget "MoodAnalyzer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34F03FEF21C46B9000B9E262 /* Debug */,
+				34F03FF021C46B9000B9E262 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		34F03FF121C46B9000B9E262 /* Build configuration list for PBXNativeTarget "MoodAnalyzerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34F03FF221C46B9000B9E262 /* Debug */,
+				34F03FF321C46B9000B9E262 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		34F03FF421C46B9000B9E262 /* Build configuration list for PBXNativeTarget "MoodAnalyzerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34F03FF521C46B9000B9E262 /* Debug */,
+				34F03FF621C46B9000B9E262 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		34F03FCD21C46B8E00B9E262 /* MoodAnalyzer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				34F03FCE21C46B8E00B9E262 /* MoodAnalyzer.xcdatamodel */,
+			);
+			currentVersion = 34F03FCE21C46B8E00B9E262 /* MoodAnalyzer.xcdatamodel */;
+			path = MoodAnalyzer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 34F03FBB21C46B8E00B9E262 /* Project object */;
+}

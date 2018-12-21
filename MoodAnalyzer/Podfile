@@ -1,0 +1,16 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '9.0'
+
+target 'MoodAnalyzer' do
+  use_frameworks!
+  pod 'JNKeychain'
+
+  target 'MoodAnalyzerTests' do
+    inherit! :search_paths
+  end
+
+  target 'MoodAnalyzerUITests' do
+    inherit! :search_paths
+  end
+
+end

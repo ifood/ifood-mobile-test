@@ -1,0 +1,975 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1E9C922FE7AE1EB1C6514BC318DB0CC7 /* JNKeychain-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 923E64AF7848641905CF21CCCB582922 /* JNKeychain-dummy.m */; };
+		20703F12703E16A996450176C5DD1C27 /* Pods-MoodAnalyzerTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4D9CB89E8E6DE455E30A6942187A63 /* Pods-MoodAnalyzerTests-dummy.m */; };
+		2A526EB907C409E645CE2CB5BF861731 /* JNKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFF983E28D49BD0C244BE5F4E24905B /* JNKeychain.m */; };
+		49AF171E2550AD85CE957CF98A2CBF99 /* Pods-MoodAnalyzer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F410096D0B71BB2ECADA76EDF2A3170A /* Pods-MoodAnalyzer-dummy.m */; };
+		4DDF511664D787ECA904A4B38520BA4E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
+		73D39E62C622CA35FECA3E0A53BFF85B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
+		783488BCBF5A18A2BD2553E1FB11B8A2 /* Pods-MoodAnalyzerTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CD95967EFCE2B629604FE33E1DE40871 /* Pods-MoodAnalyzerTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		83A5A33BF12B699CDDB4436209950BA2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
+		CC51A4694E43945EECA64445E2563018 /* JNKeychain.h in Headers */ = {isa = PBXBuildFile; fileRef = DADCF444C99D77974D17D6CFF403B2F7 /* JNKeychain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD3CCD673AB461B4B9E7BC127151F687 /* JNKeychain-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B624F2429541B2E38EFF862D70947529 /* JNKeychain-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E80AC9280F80A742FE2881DDD9243D6A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
+		F15F90C0A2443CAA6EFB618EA1312710 /* Pods-MoodAnalyzerUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9116029E9AE5B4B31D9716C89131CF76 /* Pods-MoodAnalyzerUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F6C3F85890849F6DBEBA1897712AF4D4 /* Pods-MoodAnalyzerUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BA081489DAE41484FFAFB6FAC0699917 /* Pods-MoodAnalyzerUITests-dummy.m */; };
+		FFAA467FC3CC6C8665B7D8E44D3B663D /* Pods-MoodAnalyzer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 63BF3751DB7E1D1F5B86393C86842F6F /* Pods-MoodAnalyzer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		737F597C673630EA7B94190CA7952A4E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AA4EF339E43D9645FFB647636C909F0;
+			remoteInfo = "Pods-MoodAnalyzer";
+		};
+		A9B8E13104564AA2643BCEE44700FC03 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C79341BA7214637484139F0C4639CEB;
+			remoteInfo = JNKeychain;
+		};
+		DCBB8FD000A52ADE6B99564CD37F5052 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AA4EF339E43D9645FFB647636C909F0;
+			remoteInfo = "Pods-MoodAnalyzer";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04CB894985135A9B45FCBB59629B8A44 /* Pods_MoodAnalyzerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MoodAnalyzerUITests.framework; path = "Pods-MoodAnalyzerUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		07278621F21A4A9D9E190FFB7745967E /* Pods-MoodAnalyzerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MoodAnalyzerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		0C12D07EB98A27D91CC1ABC5292DE4AA /* JNKeychain.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JNKeychain.xcconfig; sourceTree = "<group>"; };
+		1E3F0064897E64350BD97DC7DCC68187 /* Pods_MoodAnalyzer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MoodAnalyzer.framework; path = "Pods-MoodAnalyzer.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FC7217853D50EAB0B0968E64B9137F4 /* Pods_MoodAnalyzerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MoodAnalyzerTests.framework; path = "Pods-MoodAnalyzerTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		25A448F87A2107AD75F5E995FE3A8A79 /* Pods-MoodAnalyzerUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MoodAnalyzerUITests.modulemap"; sourceTree = "<group>"; };
+		29914D4181E3B9E3702622EBAEBB149E /* JNKeychain.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JNKeychain.modulemap; sourceTree = "<group>"; };
+		2A84D2304D94BD42ED273DDB56A4AB37 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BFF983E28D49BD0C244BE5F4E24905B /* JNKeychain.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JNKeychain.m; path = Pod/Classes/JNKeychain.m; sourceTree = "<group>"; };
+		2D0550FC94E92534E46076EE17934C11 /* JNKeychain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JNKeychain.framework; path = JNKeychain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3410C0A21812F02879B563C0828F22C4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3418B779458DA2DC23BCF5F42C3FF0C6 /* Pods-MoodAnalyzer-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MoodAnalyzer-frameworks.sh"; sourceTree = "<group>"; };
+		3C4D9CB89E8E6DE455E30A6942187A63 /* Pods-MoodAnalyzerTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MoodAnalyzerTests-dummy.m"; sourceTree = "<group>"; };
+		3DDBE468DE916B7884BC09296B2A9D45 /* Pods-MoodAnalyzer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MoodAnalyzer.modulemap"; sourceTree = "<group>"; };
+		40D45C4F6EBBA50D393C50DEFF2969C7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42BAFC4688C61BEAC5BF728F298D907C /* Pods-MoodAnalyzerTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MoodAnalyzerTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		4D0A3F5FDDBDFB4CC8C89ADB9390B36D /* Pods-MoodAnalyzerUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MoodAnalyzerUITests-resources.sh"; sourceTree = "<group>"; };
+		5B2AC5D556D20170D6D6676FC7820B22 /* Pods-MoodAnalyzer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MoodAnalyzer.release.xcconfig"; sourceTree = "<group>"; };
+		63BF3751DB7E1D1F5B86393C86842F6F /* Pods-MoodAnalyzer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MoodAnalyzer-umbrella.h"; sourceTree = "<group>"; };
+		6B801E30245227FD08471994A5A74883 /* Pods-MoodAnalyzer-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MoodAnalyzer-acknowledgements.plist"; sourceTree = "<group>"; };
+		724609371C197753052031618E7FD0B4 /* Pods-MoodAnalyzerTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MoodAnalyzerTests.modulemap"; sourceTree = "<group>"; };
+		76EFF1D68D2BD39E1E306023E55E9610 /* Pods-MoodAnalyzerUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MoodAnalyzerUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		80366A4DC6984E6AE6FF2BA2CD43BC94 /* Pods-MoodAnalyzerUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MoodAnalyzerUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		8B3FE9F67CD184243714478F63BEFFEB /* Pods-MoodAnalyzerTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MoodAnalyzerTests-frameworks.sh"; sourceTree = "<group>"; };
+		8F089DE671FD7076051129526C6EBDA9 /* Pods-MoodAnalyzerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MoodAnalyzerTests.release.xcconfig"; sourceTree = "<group>"; };
+		9116029E9AE5B4B31D9716C89131CF76 /* Pods-MoodAnalyzerUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MoodAnalyzerUITests-umbrella.h"; sourceTree = "<group>"; };
+		923E64AF7848641905CF21CCCB582922 /* JNKeychain-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JNKeychain-dummy.m"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A6BE8B67E4FA62D9BF23FDEBC4D9718E /* JNKeychain-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JNKeychain-prefix.pch"; sourceTree = "<group>"; };
+		A9E73EDB2BBEB6E9507E2A98C791DB8C /* Pods-MoodAnalyzer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MoodAnalyzer.debug.xcconfig"; sourceTree = "<group>"; };
+		AD1B8C0253941E8FB7442E59E6542DB5 /* Pods-MoodAnalyzerUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MoodAnalyzerUITests-frameworks.sh"; sourceTree = "<group>"; };
+		B43D3FA850C7FC4E0C21DE81FF5A5BF4 /* Pods-MoodAnalyzer-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MoodAnalyzer-resources.sh"; sourceTree = "<group>"; };
+		B624F2429541B2E38EFF862D70947529 /* JNKeychain-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JNKeychain-umbrella.h"; sourceTree = "<group>"; };
+		BA081489DAE41484FFAFB6FAC0699917 /* Pods-MoodAnalyzerUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MoodAnalyzerUITests-dummy.m"; sourceTree = "<group>"; };
+		BAEDBEA776BA2FDE5D05788999F26D0C /* Pods-MoodAnalyzerTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MoodAnalyzerTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		CD95967EFCE2B629604FE33E1DE40871 /* Pods-MoodAnalyzerTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MoodAnalyzerTests-umbrella.h"; sourceTree = "<group>"; };
+		D26B930CD607DC38B897A381338951DB /* Pods-MoodAnalyzer-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MoodAnalyzer-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		DADCF444C99D77974D17D6CFF403B2F7 /* JNKeychain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JNKeychain.h; path = Pod/Classes/JNKeychain.h; sourceTree = "<group>"; };
+		DCCCBD8563D803A9C37CEB646177BFE0 /* Pods-MoodAnalyzerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MoodAnalyzerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E546B67CED71D578F25E8B976623CC41 /* Pods-MoodAnalyzerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MoodAnalyzerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		EC81AA080CFB4A35C5C5FF8E9F718E26 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F410096D0B71BB2ECADA76EDF2A3170A /* Pods-MoodAnalyzer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MoodAnalyzer-dummy.m"; sourceTree = "<group>"; };
+		FE8C1FB3BDCA45FC5F84DF2314828B1C /* Pods-MoodAnalyzerTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MoodAnalyzerTests-resources.sh"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3E17911C746787A02D81B19385C60BF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E80AC9280F80A742FE2881DDD9243D6A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6319566A51D5CC4480BB10D54B2FBD9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73D39E62C622CA35FECA3E0A53BFF85B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0CE0D1745CD1814BA954F1D639FF785 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DDF511664D787ECA904A4B38520BA4E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB9174DC521FB10D7F54D7F78A9278BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83A5A33BF12B699CDDB4436209950BA2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		20A69796ED7DBFE47F4CF0C288D95E98 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				681508FDC342FE80239AEEF82CB4B5A4 /* Pods-MoodAnalyzer */,
+				2BF6EC91ADA552EB09CD14C4D3EF07C0 /* Pods-MoodAnalyzerTests */,
+				751E5F550FD7751C48B66A5F829075E5 /* Pods-MoodAnalyzerUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		2BF6EC91ADA552EB09CD14C4D3EF07C0 /* Pods-MoodAnalyzerTests */ = {
+			isa = PBXGroup;
+			children = (
+				40D45C4F6EBBA50D393C50DEFF2969C7 /* Info.plist */,
+				724609371C197753052031618E7FD0B4 /* Pods-MoodAnalyzerTests.modulemap */,
+				BAEDBEA776BA2FDE5D05788999F26D0C /* Pods-MoodAnalyzerTests-acknowledgements.markdown */,
+				42BAFC4688C61BEAC5BF728F298D907C /* Pods-MoodAnalyzerTests-acknowledgements.plist */,
+				3C4D9CB89E8E6DE455E30A6942187A63 /* Pods-MoodAnalyzerTests-dummy.m */,
+				8B3FE9F67CD184243714478F63BEFFEB /* Pods-MoodAnalyzerTests-frameworks.sh */,
+				FE8C1FB3BDCA45FC5F84DF2314828B1C /* Pods-MoodAnalyzerTests-resources.sh */,
+				CD95967EFCE2B629604FE33E1DE40871 /* Pods-MoodAnalyzerTests-umbrella.h */,
+				DCCCBD8563D803A9C37CEB646177BFE0 /* Pods-MoodAnalyzerTests.debug.xcconfig */,
+				8F089DE671FD7076051129526C6EBDA9 /* Pods-MoodAnalyzerTests.release.xcconfig */,
+			);
+			name = "Pods-MoodAnalyzerTests";
+			path = "Target Support Files/Pods-MoodAnalyzerTests";
+			sourceTree = "<group>";
+		};
+		44D5347904CF754D6785B84253F2574A /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		62856B22BB9D8CD1E7C640BDF600461E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EC81AA080CFB4A35C5C5FF8E9F718E26 /* Info.plist */,
+				29914D4181E3B9E3702622EBAEBB149E /* JNKeychain.modulemap */,
+				0C12D07EB98A27D91CC1ABC5292DE4AA /* JNKeychain.xcconfig */,
+				923E64AF7848641905CF21CCCB582922 /* JNKeychain-dummy.m */,
+				A6BE8B67E4FA62D9BF23FDEBC4D9718E /* JNKeychain-prefix.pch */,
+				B624F2429541B2E38EFF862D70947529 /* JNKeychain-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/JNKeychain";
+			sourceTree = "<group>";
+		};
+		681508FDC342FE80239AEEF82CB4B5A4 /* Pods-MoodAnalyzer */ = {
+			isa = PBXGroup;
+			children = (
+				3410C0A21812F02879B563C0828F22C4 /* Info.plist */,
+				3DDBE468DE916B7884BC09296B2A9D45 /* Pods-MoodAnalyzer.modulemap */,
+				D26B930CD607DC38B897A381338951DB /* Pods-MoodAnalyzer-acknowledgements.markdown */,
+				6B801E30245227FD08471994A5A74883 /* Pods-MoodAnalyzer-acknowledgements.plist */,
+				F410096D0B71BB2ECADA76EDF2A3170A /* Pods-MoodAnalyzer-dummy.m */,
+				3418B779458DA2DC23BCF5F42C3FF0C6 /* Pods-MoodAnalyzer-frameworks.sh */,
+				B43D3FA850C7FC4E0C21DE81FF5A5BF4 /* Pods-MoodAnalyzer-resources.sh */,
+				63BF3751DB7E1D1F5B86393C86842F6F /* Pods-MoodAnalyzer-umbrella.h */,
+				A9E73EDB2BBEB6E9507E2A98C791DB8C /* Pods-MoodAnalyzer.debug.xcconfig */,
+				5B2AC5D556D20170D6D6676FC7820B22 /* Pods-MoodAnalyzer.release.xcconfig */,
+			);
+			name = "Pods-MoodAnalyzer";
+			path = "Target Support Files/Pods-MoodAnalyzer";
+			sourceTree = "<group>";
+		};
+		751E5F550FD7751C48B66A5F829075E5 /* Pods-MoodAnalyzerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2A84D2304D94BD42ED273DDB56A4AB37 /* Info.plist */,
+				25A448F87A2107AD75F5E995FE3A8A79 /* Pods-MoodAnalyzerUITests.modulemap */,
+				76EFF1D68D2BD39E1E306023E55E9610 /* Pods-MoodAnalyzerUITests-acknowledgements.markdown */,
+				80366A4DC6984E6AE6FF2BA2CD43BC94 /* Pods-MoodAnalyzerUITests-acknowledgements.plist */,
+				BA081489DAE41484FFAFB6FAC0699917 /* Pods-MoodAnalyzerUITests-dummy.m */,
+				AD1B8C0253941E8FB7442E59E6542DB5 /* Pods-MoodAnalyzerUITests-frameworks.sh */,
+				4D0A3F5FDDBDFB4CC8C89ADB9390B36D /* Pods-MoodAnalyzerUITests-resources.sh */,
+				9116029E9AE5B4B31D9716C89131CF76 /* Pods-MoodAnalyzerUITests-umbrella.h */,
+				07278621F21A4A9D9E190FFB7745967E /* Pods-MoodAnalyzerUITests.debug.xcconfig */,
+				E546B67CED71D578F25E8B976623CC41 /* Pods-MoodAnalyzerUITests.release.xcconfig */,
+			);
+			name = "Pods-MoodAnalyzerUITests";
+			path = "Target Support Files/Pods-MoodAnalyzerUITests";
+			sourceTree = "<group>";
+		};
+		77E486B606D6BB1B57DB8BC3E6816F5C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FACBDF8EB238F965A72A2B417BD60E0E /* JNKeychain */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				77E486B606D6BB1B57DB8BC3E6816F5C /* Pods */,
+				8EE8A37C14682A3A634405BCF259C82C /* Products */,
+				20A69796ED7DBFE47F4CF0C288D95E98 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8EE8A37C14682A3A634405BCF259C82C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2D0550FC94E92534E46076EE17934C11 /* JNKeychain.framework */,
+				1E3F0064897E64350BD97DC7DCC68187 /* Pods_MoodAnalyzer.framework */,
+				1FC7217853D50EAB0B0968E64B9137F4 /* Pods_MoodAnalyzerTests.framework */,
+				04CB894985135A9B45FCBB59629B8A44 /* Pods_MoodAnalyzerUITests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				44D5347904CF754D6785B84253F2574A /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FACBDF8EB238F965A72A2B417BD60E0E /* JNKeychain */ = {
+			isa = PBXGroup;
+			children = (
+				DADCF444C99D77974D17D6CFF403B2F7 /* JNKeychain.h */,
+				2BFF983E28D49BD0C244BE5F4E24905B /* JNKeychain.m */,
+				62856B22BB9D8CD1E7C640BDF600461E /* Support Files */,
+			);
+			name = JNKeychain;
+			path = JNKeychain;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0A3BC74346C164BF8A573C215E684315 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD3CCD673AB461B4B9E7BC127151F687 /* JNKeychain-umbrella.h in Headers */,
+				CC51A4694E43945EECA64445E2563018 /* JNKeychain.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B7E9B35F099D68E05AD2EF0D71ED906 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F15F90C0A2443CAA6EFB618EA1312710 /* Pods-MoodAnalyzerUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56592AF3E14462CF5D66D181B1833CBF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				783488BCBF5A18A2BD2553E1FB11B8A2 /* Pods-MoodAnalyzerTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A90E833D8209BBC556F94210CADB94B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFAA467FC3CC6C8665B7D8E44D3B663D /* Pods-MoodAnalyzer-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2C79341BA7214637484139F0C4639CEB /* JNKeychain */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 744ECFDEB57543EFDD16E7C525034665 /* Build configuration list for PBXNativeTarget "JNKeychain" */;
+			buildPhases = (
+				0A3BC74346C164BF8A573C215E684315 /* Headers */,
+				DEC46614F151448190D4D090A7C62113 /* Sources */,
+				D0CE0D1745CD1814BA954F1D639FF785 /* Frameworks */,
+				A5339E1C94D521B9E26DF075D7419623 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JNKeychain;
+			productName = JNKeychain;
+			productReference = 2D0550FC94E92534E46076EE17934C11 /* JNKeychain.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3BDBDE131D378ED42A412FD70395A33C /* Pods-MoodAnalyzerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34DD821312A322E92BE835D83009EC5E /* Build configuration list for PBXNativeTarget "Pods-MoodAnalyzerTests" */;
+			buildPhases = (
+				56592AF3E14462CF5D66D181B1833CBF /* Headers */,
+				51F5E12D74DEBD776F8090497819F26B /* Sources */,
+				FB9174DC521FB10D7F54D7F78A9278BA /* Frameworks */,
+				6B7263BE4C5198E2B3A1418D85F934FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				82847EF7B5F32FF7497F8AB1BFEA80F4 /* PBXTargetDependency */,
+			);
+			name = "Pods-MoodAnalyzerTests";
+			productName = "Pods-MoodAnalyzerTests";
+			productReference = 1FC7217853D50EAB0B0968E64B9137F4 /* Pods_MoodAnalyzerTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		82E0E1FE1D860DA3F855B7202D93C656 /* Pods-MoodAnalyzerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2CDAC5E63405F1C221FE89BC9B50DC1 /* Build configuration list for PBXNativeTarget "Pods-MoodAnalyzerUITests" */;
+			buildPhases = (
+				1B7E9B35F099D68E05AD2EF0D71ED906 /* Headers */,
+				704C938E795738ED49C11BABFE762336 /* Sources */,
+				C6319566A51D5CC4480BB10D54B2FBD9 /* Frameworks */,
+				A249E06DFD242B96E3334C016C78D897 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2807FDF00214BF89F04A0C1CC7A59D64 /* PBXTargetDependency */,
+			);
+			name = "Pods-MoodAnalyzerUITests";
+			productName = "Pods-MoodAnalyzerUITests";
+			productReference = 04CB894985135A9B45FCBB59629B8A44 /* Pods_MoodAnalyzerUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9AA4EF339E43D9645FFB647636C909F0 /* Pods-MoodAnalyzer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC9EB5CD2EF8B93BBF4B9647E5052E43 /* Build configuration list for PBXNativeTarget "Pods-MoodAnalyzer" */;
+			buildPhases = (
+				5A90E833D8209BBC556F94210CADB94B /* Headers */,
+				FECB09A6D20EF2F5A9EDC54EFCFDFCDE /* Sources */,
+				3E17911C746787A02D81B19385C60BF1 /* Frameworks */,
+				12B79FDABFD44493BED9DC340816ED4C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				65DAB0D3E4634B6E1EE1B069DFB756F1 /* PBXTargetDependency */,
+			);
+			name = "Pods-MoodAnalyzer";
+			productName = "Pods-MoodAnalyzer";
+			productReference = 1E3F0064897E64350BD97DC7DCC68187 /* Pods_MoodAnalyzer.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 8EE8A37C14682A3A634405BCF259C82C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2C79341BA7214637484139F0C4639CEB /* JNKeychain */,
+				9AA4EF339E43D9645FFB647636C909F0 /* Pods-MoodAnalyzer */,
+				3BDBDE131D378ED42A412FD70395A33C /* Pods-MoodAnalyzerTests */,
+				82E0E1FE1D860DA3F855B7202D93C656 /* Pods-MoodAnalyzerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		12B79FDABFD44493BED9DC340816ED4C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B7263BE4C5198E2B3A1418D85F934FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A249E06DFD242B96E3334C016C78D897 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5339E1C94D521B9E26DF075D7419623 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		51F5E12D74DEBD776F8090497819F26B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20703F12703E16A996450176C5DD1C27 /* Pods-MoodAnalyzerTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		704C938E795738ED49C11BABFE762336 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6C3F85890849F6DBEBA1897712AF4D4 /* Pods-MoodAnalyzerUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEC46614F151448190D4D090A7C62113 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E9C922FE7AE1EB1C6514BC318DB0CC7 /* JNKeychain-dummy.m in Sources */,
+				2A526EB907C409E645CE2CB5BF861731 /* JNKeychain.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FECB09A6D20EF2F5A9EDC54EFCFDFCDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49AF171E2550AD85CE957CF98A2CBF99 /* Pods-MoodAnalyzer-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2807FDF00214BF89F04A0C1CC7A59D64 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-MoodAnalyzer";
+			target = 9AA4EF339E43D9645FFB647636C909F0 /* Pods-MoodAnalyzer */;
+			targetProxy = DCBB8FD000A52ADE6B99564CD37F5052 /* PBXContainerItemProxy */;
+		};
+		65DAB0D3E4634B6E1EE1B069DFB756F1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JNKeychain;
+			target = 2C79341BA7214637484139F0C4639CEB /* JNKeychain */;
+			targetProxy = A9B8E13104564AA2643BCEE44700FC03 /* PBXContainerItemProxy */;
+		};
+		82847EF7B5F32FF7497F8AB1BFEA80F4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-MoodAnalyzer";
+			target = 9AA4EF339E43D9645FFB647636C909F0 /* Pods-MoodAnalyzer */;
+			targetProxy = 737F597C673630EA7B94190CA7952A4E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0E2759E0667648E2673BD19D376B9BD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9E73EDB2BBEB6E9507E2A98C791DB8C /* Pods-MoodAnalyzer.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MoodAnalyzer/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MoodAnalyzer/Pods-MoodAnalyzer.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5D5131558794844051AEE4748C8D6205 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C12D07EB98A27D91CC1ABC5292DE4AA /* JNKeychain.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/JNKeychain/JNKeychain-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JNKeychain/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/JNKeychain/JNKeychain.modulemap";
+				PRODUCT_MODULE_NAME = JNKeychain;
+				PRODUCT_NAME = JNKeychain;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5DE19CECB206ACCCACF04D62F93FFDA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		6CDD6D11907D218B9E09B64C9AC4D620 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCCCBD8563D803A9C37CEB646177BFE0 /* Pods-MoodAnalyzerTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MoodAnalyzerTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MoodAnalyzerTests/Pods-MoodAnalyzerTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		74C82BEC512503A13EC982E9867EF937 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B2AC5D556D20170D6D6676FC7820B22 /* Pods-MoodAnalyzer.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MoodAnalyzer/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MoodAnalyzer/Pods-MoodAnalyzer.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		82A36FF4EE10BDD619E8D5C6BD248F40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07278621F21A4A9D9E190FFB7745967E /* Pods-MoodAnalyzerUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MoodAnalyzerUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MoodAnalyzerUITests/Pods-MoodAnalyzerUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		858D01EEFE984249A9581D18DBEA53F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		920FCF21BF5F964EC2F96D31A1999F95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F089DE671FD7076051129526C6EBDA9 /* Pods-MoodAnalyzerTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MoodAnalyzerTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MoodAnalyzerTests/Pods-MoodAnalyzerTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9D9675A4F2C3A4F43EE86AE95CB131E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E546B67CED71D578F25E8B976623CC41 /* Pods-MoodAnalyzerUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MoodAnalyzerUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MoodAnalyzerUITests/Pods-MoodAnalyzerUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BD14269F5C39559530E1D502028AFC92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C12D07EB98A27D91CC1ABC5292DE4AA /* JNKeychain.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/JNKeychain/JNKeychain-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JNKeychain/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/JNKeychain/JNKeychain.modulemap";
+				PRODUCT_MODULE_NAME = JNKeychain;
+				PRODUCT_NAME = JNKeychain;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				858D01EEFE984249A9581D18DBEA53F1 /* Debug */,
+				5DE19CECB206ACCCACF04D62F93FFDA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		34DD821312A322E92BE835D83009EC5E /* Build configuration list for PBXNativeTarget "Pods-MoodAnalyzerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CDD6D11907D218B9E09B64C9AC4D620 /* Debug */,
+				920FCF21BF5F964EC2F96D31A1999F95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		744ECFDEB57543EFDD16E7C525034665 /* Build configuration list for PBXNativeTarget "JNKeychain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D5131558794844051AEE4748C8D6205 /* Debug */,
+				BD14269F5C39559530E1D502028AFC92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2CDAC5E63405F1C221FE89BC9B50DC1 /* Build configuration list for PBXNativeTarget "Pods-MoodAnalyzerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				82A36FF4EE10BDD619E8D5C6BD248F40 /* Debug */,
+				9D9675A4F2C3A4F43EE86AE95CB131E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC9EB5CD2EF8B93BBF4B9647E5052E43 /* Build configuration list for PBXNativeTarget "Pods-MoodAnalyzer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E2759E0667648E2673BD19D376B9BD4 /* Debug */,
+				74C82BEC512503A13EC982E9867EF937 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
