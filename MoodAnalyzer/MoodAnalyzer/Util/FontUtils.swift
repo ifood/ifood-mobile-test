@@ -9,24 +9,8 @@
 import UIKit
 
 class FontUtils {
-    
-    
-    
-    
-    
-    
+
     static func getScaledFont(forFont name: String, textStyle: UIFont.TextStyle) -> UIFont {
-        
-        for family: String in UIFont.familyNames
-        {
-            print("\(family)")
-            for names: String in UIFont.fontNames(forFamilyName: family)
-            {
-                print("== \(names)")
-            }
-        }
-        
-        
         let userFont =  UIFontDescriptor.preferredFontDescriptor(withTextStyle: textStyle)
         let pointSize = userFont.pointSize
         guard let customFont = UIFont(name: name, size: pointSize) else {

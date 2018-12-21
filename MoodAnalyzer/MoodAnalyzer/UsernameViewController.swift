@@ -12,6 +12,9 @@ class UsernameViewController: UIViewController {
     
     // MARK: - Variables
     var viewModel = UsernameViewModel()
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     
     // MARK: - Constraints
     @IBOutlet weak var textFieldCenterYConstraint: NSLayoutConstraint!
@@ -48,7 +51,7 @@ class UsernameViewController: UIViewController {
     @IBOutlet weak var analyzeButton: UIButton! {
         didSet {
             self.analyzeButton.imageView?.contentMode = .scaleAspectFit
-            self.analyzeButton.isEnabled = false
+            self.analyzeButton.isHidden = true
         }
     }
     
@@ -81,6 +84,17 @@ class UsernameViewController: UIViewController {
     func setupView() {
         self.navigationController?.isNavigationBarHidden = true
         
+        // MARK: - Animate Button
+        let animation = CABasicAnimation()
+        animation.toValue = 10
+        animation.duration = 0.5
+        animation.repeatCount = Float.infinity
+        animation.autoreverses = true
+        animation.isRemovedOnCompletion = false
+        self.analyzeButton.imageView?.layer.add(animation, forKey: "transform.translation.y")
+        
+        self.navigationController?.isNavigationBarHidden = true
+        
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
@@ -98,7 +112,7 @@ class UsernameViewController: UIViewController {
     
     @IBAction func textFieldDidchange(_ textField: UITextField) {
         if let text = textField.text {
-            self.analyzeButton.isEnabled = text.isEmpty ? false : true
+            self.analyzeButton.isHidden = text.isEmpty ? true : false
         }
     }
 }

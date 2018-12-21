@@ -13,9 +13,17 @@ class TweetsViewController: UIViewController {
     // MARK: - Variables
     var viewModel = TweetsViewModel()
     var tweets : [Tweet]!
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .default
+    }
+    var isCollapsed = false
     
     // MARK: - Constraints
+        // Image
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var profileImageCenterYConstraint: NSLayoutConstraint!
+    @IBOutlet weak var profileImageTrailingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var profileImageBottomConstraint: NSLayoutConstraint!
     
     // MARK: - IBOutlets
     @IBOutlet weak var goBackButton: UIButton! {
@@ -87,6 +95,6 @@ class TweetsViewController: UIViewController {
     
     // MARK: - IBActions
     @IBAction func didTapGoBack(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true, completion: nil)
     }
 }

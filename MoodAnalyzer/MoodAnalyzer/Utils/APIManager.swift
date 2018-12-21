@@ -86,7 +86,6 @@ class APIManager {
             let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
             if let responseJSON = responseJSON as? [String: Any] {
                 completion(responseJSON, nil)
-                print(responseJSON)
             }
         }
         

@@ -15,10 +15,9 @@ class UsernameViewModel : NSObject {
         if let text = textField.text, !text.isEmpty {
             self.getTweets(username: text, count: 200) { (response, error) in
                 if let tweets = response, tweets.count > 0 {
-                    
                     DispatchQueue.main.async {
                         let vc = TweetsViewController(tweets: tweets)
-                        navigationController.pushViewController(vc, animated: true)
+                        navigationController.present(vc, animated: true, completion: nil)
                     }
                 } else {
                     // Show alert

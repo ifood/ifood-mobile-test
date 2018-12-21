@@ -42,6 +42,7 @@
 		3425836121CB0121001D1910 /* SentimentalySwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3425836021CB0121001D1910 /* SentimentalySwift.swift */; };
 		3425836321CB076A001D1910 /* AFINN.json in Resources */ = {isa = PBXBuildFile; fileRef = 3425836221CB076A001D1910 /* AFINN.json */; };
 		3425836521CB1F7D001D1910 /* UsernameViewController+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3425836421CB1F7D001D1910 /* UsernameViewController+Layout.swift */; };
+		3425836921CC6339001D1910 /* TweetsViewController+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3425836821CC6339001D1910 /* TweetsViewController+Animation.swift */; };
 		34E60B7521C4A33400CBBC99 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E60B7421C4A33400CBBC99 /* StringExtension.swift */; };
 		34F03FC721C46B8E00B9E262 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F03FC621C46B8E00B9E262 /* AppDelegate.swift */; };
 		34F03FC921C46B8E00B9E262 /* UsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F03FC821C46B8E00B9E262 /* UsernameViewController.swift */; };
@@ -112,6 +113,7 @@
 		3425836021CB0121001D1910 /* SentimentalySwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentalySwift.swift; sourceTree = "<group>"; };
 		3425836221CB076A001D1910 /* AFINN.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AFINN.json; sourceTree = "<group>"; };
 		3425836421CB1F7D001D1910 /* UsernameViewController+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UsernameViewController+Layout.swift"; sourceTree = "<group>"; };
+		3425836821CC6339001D1910 /* TweetsViewController+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TweetsViewController+Animation.swift"; sourceTree = "<group>"; };
 		34E60B7421C4A33400CBBC99 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		34F03FC321C46B8E00B9E262 /* MoodAnalyzer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoodAnalyzer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34F03FC621C46B8E00B9E262 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				3407EA8321C9542900878640 /* TweetsViewController.swift */,
+				3425836821CC6339001D1910 /* TweetsViewController+Animation.swift */,
 				3407EA8921CA911800878640 /* TweetsViewController+TableView.swift */,
 				3407EA8421C9542900878640 /* TweetsViewController.xib */,
 				3407EA9621CAAE7300878640 /* TweetsViewModel.swift */,
@@ -610,6 +613,7 @@
 				34F03FCF21C46B8E00B9E262 /* MoodAnalyzer.xcdatamodeld in Sources */,
 				3425835E21CAE5D2001D1910 /* CALayerExtension.swift in Sources */,
 				3407EA9721CAAE7300878640 /* TweetsViewModel.swift in Sources */,
+				3425836921CC6339001D1910 /* TweetsViewController+Animation.swift in Sources */,
 				3425836121CB0121001D1910 /* SentimentalySwift.swift in Sources */,
 				3425836521CB1F7D001D1910 /* UsernameViewController+Layout.swift in Sources */,
 				34F03FF921C46BB400B9E262 /* Constants.swift in Sources */,

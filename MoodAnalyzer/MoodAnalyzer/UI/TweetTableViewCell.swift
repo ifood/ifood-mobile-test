@@ -76,24 +76,6 @@ class TweetTableViewCell: UITableViewCell {
                 self.innerView.layer.borderColor = UIColor.charcoalGray.cgColor
                 CALayer.removeDropShadow(layer: self.innerView.layer)
             }
-            //
-            //            if self.isSelected {
-            //
-            //            } else {
-            //                self.moodLabel.text = ""
-            //                self.innerView.layer.borderColor = UIColor.charcoalGray.cgColor
-            //                CALayer.removeDropShadow(layer: self.innerView.layer)
-            //            }
-            
-            //            if self.isSelected {
-            //                self.moodLabel.text = ""
-            //                self.innerView.layer.borderColor = UIColor.charcoalGray.cgColor
-            //                CALayer.removeDropShadow(layer: self.innerView.layer)
-            //            } else {
-            //                if let mood = self.mood {
-            //                    self.setWithMood(mood: mood)
-            //                }
-            //            }
         }
     }
     

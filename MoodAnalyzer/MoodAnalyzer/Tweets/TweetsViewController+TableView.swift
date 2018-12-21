@@ -11,15 +11,9 @@ import UIKit
 extension TweetsViewController : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.tweets[indexPath.row].mood =  self.viewModel.tableView(tableView, didSelectRowAt: indexPath, tweets: self.tweets)
-    }
-    
-    func tableView(_ tableView: UITableView, didUnhighlightRowAt indexPath: IndexPath) {
-//        self.viewModel.tableView(tableView, didUnhighlightRowAt: indexPath)
-    }
-    
-    func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
-//        self.viewModel.tableView(tableView, didHighlightRowAt: indexPath)
+        if self.tweets[indexPath.row].mood == nil {
+            self.tweets[indexPath.row].mood =  self.viewModel.tableView(tableView, didSelectRowAt: indexPath, tweets: self.tweets)
+        }
     }
 }
 

@@ -10,8 +10,9 @@ import UIKit
 
 class TweetsViewModel: NSObject {
     
-    
-    
+    // MARK: - Var
+    let hapticFeedback = UIImpactFeedbackGenerator()
+
     // MARK: - Setup
     func setupView(nameLabel: UILabel, bioLabel: UILabel, profileImage: UIImageView, user: User) {
         nameLabel.text = user.name
@@ -54,29 +55,9 @@ class TweetsViewModel: NSObject {
     }
     
     // MARK: - Table View
-    func tableView(_ tableView: UITableView, didUnhighlightRowAt indexPath: IndexPath) {
-        if let cell = tableView.cellForRow(at: indexPath) as? TweetTableViewCell {
-            UIView.animate(withDuration: 0.3) {
-                cell.contentView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
-                cell.dateLabel.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
-                cell.moodLabel.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
-                cell.tweetTextLabel.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
-            }
-        }
-    }
-    
-    func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
-        if let cell = tableView.cellForRow(at: indexPath) as? TweetTableViewCell {
-            UIView.animate(withDuration: 0.3) {
-                cell.contentView.transform = CGAffineTransform(scaleX: 1.05, y: 1.05)
-                cell.dateLabel.transform = CGAffineTransform(scaleX: 1.05, y: 1.05)
-                cell.moodLabel.transform = CGAffineTransform(scaleX: 1.05, y: 1.05)
-                cell.tweetTextLabel.transform = CGAffineTransform(scaleX: 1.05, y: 1.05)
-            }
-        }
-    }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath, tweets: [Tweet]) -> Mood {
+        
+        hapticFeedback.impactOccurred()
         
         if let cell = tableView.cellForRow(at: indexPath) as? TweetTableViewCell {
             
