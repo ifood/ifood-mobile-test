@@ -1,0 +1,14 @@
+xcassets:
+  inputs: Resources/Icons.xcassets
+  outputs:
+    templateName: swift4
+    output: Resources/SwiftGen/Icons.swift
+    params:
+      publicAccess: true
+strings:
+  inputs: Resources/Localizable.strings
+  outputs:
+    templateName: structured-swift4
+    output: Resources/SwiftGen/Localizable.swift
+    params:
+      publicAccess: true

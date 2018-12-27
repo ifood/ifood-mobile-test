@@ -1,0 +1,24 @@
+excluded:
+    - Pods
+
+disabled_rules:
+    - identifier_name
+    - line_length
+    - trailing_whitespace
+    - type_name
+
+cyclomatic_complexity:
+  warning: 20
+
+function_parameter_count:
+  warning: 10
+
+variable_name_min_length:
+  warning: 1
+
+function_body_length:
+  warning: 250
+
+type_body_length:
+  warning: 400
+  error: 700
