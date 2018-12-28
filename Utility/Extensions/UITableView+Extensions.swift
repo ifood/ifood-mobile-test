@@ -18,6 +18,7 @@ extension UITableView {
         guard let cell = self.dequeueReusableCell(withIdentifier: `class`.className, for: indexPath) as? T else {
             throw Errors.cellCantBeNil
         }
+        cell.accessibilityIdentifier = "\(`class`.className)_\(indexPath.row)"
         return cell
     }
     

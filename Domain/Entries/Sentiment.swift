@@ -24,7 +24,7 @@ public struct SentimentOutput {
 }
 
 extension SentimentOutput: Equatable {
-    public static func ==(lhs: SentimentOutput, rhs: SentimentOutput) -> Bool {
+    public static func == (lhs: SentimentOutput, rhs: SentimentOutput) -> Bool {
         return lhs.sentiment == rhs.sentiment &&
                 lhs.emoji == rhs.emoji &&
                 lhs.text == rhs.text &&

@@ -30,10 +30,14 @@ target 'TwitterSentiment' do
      inherit! :search_paths
      lib_tests
    end
-  target 'TwitterSentimentUITests' do
-    inherit! :search_paths
-    lib_tests
-  end
+#  target 'TwitterSentimentUITests' do
+#    inherit! :search_paths
+#    lib_tests
+#  end
+end
+
+target 'TwitterSentimentUITests' do
+  libs
 end
 
 target 'Domain' do
