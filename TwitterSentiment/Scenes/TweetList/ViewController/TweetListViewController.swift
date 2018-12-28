@@ -15,7 +15,7 @@ import Utility
 
 typealias TweetSectionModel = SectionModel<String, Tweet>
 
-class TweetListViewController: ViewController<TweetListView>, BindableType {
+final class TweetListViewController: ViewController<TweetListView>, BindableType {
     
     // MARK: Var
     

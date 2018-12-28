@@ -25,4 +25,11 @@ public struct TwitterUser: Codable {
     public var decoratedUserName: String {
         return "@\(self.screenName)"
     }
+    
+    public init(_ id: String, name: String, screenName: String, profileImageURL: URL) {
+        self.id = id
+        self.name = name
+        self.screenName = screenName
+        self.profileImageURL = profileImageURL
+    }
 }

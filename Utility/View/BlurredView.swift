@@ -13,7 +13,7 @@ class BlurredView: View {
     
     // MARK: Var
     
-    lazy var blurLayer = UIVisualEffectView(backgroundColor: .black, alpha: 0.8)
+    lazy var blurLayer = UIVisualEffectView(backgroundColor: .white, alpha: 0.8)
     
     // MARK: Init
     
@@ -36,7 +36,7 @@ class BlurredView: View {
         UIView.animate(withDuration: 0.2, animations: { [weak self] in
             guard let self = self else { return }
             self.blurLayer.isHidden = false
-            self.blurLayer.effect = UIBlurEffect(style: .dark)
+            self.blurLayer.effect = UIBlurEffect(style: UIBlurEffect.Style.light)
         }, completion: { completed in
             observable.onNext(completed)
         })

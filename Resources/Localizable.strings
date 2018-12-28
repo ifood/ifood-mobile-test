@@ -20,6 +20,7 @@
 "request-error.unknown-error" = "request didn't complete.";
 "request-error.could-not-load" = "couldn't load content.";
 "twitter-error.could-not-load-sentiment" = "couldn't load tweet sentiment. \ntry again later.";
+"twitter-error.could-not-load-page" = "sorry, that page does not exist. \ntry another username.";
 
 "default-text.cancel" = "cancel";
 "default-text.ok" = "ok";

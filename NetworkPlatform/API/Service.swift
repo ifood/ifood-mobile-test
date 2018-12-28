@@ -55,29 +55,3 @@ extension PrimitiveSequence where TraitType == SingleTrait, ElementType == Respo
         }
     }
 }
-
-public enum TwitterMoyaError: Swift.Error {
-    case twitterError(Response)
-}
-
-public extension TwitterMoyaError {
-    var response: Moya.Response? {
-        switch self {
-        case .twitterError(let response):
-            return response
-        }
-    }
-}
-
-extension TwitterMoyaError: LocalizedError {
-    public var errorDescription: String? {
-        switch self {
-        case .twitterError(let response):
-            do {
-                return TwitterErrors.handleTwitterError(try response.map(TwitterErrors.self))
-            } catch let error {
-                return error.localizedDescription
-            }
-        }
-    }
-}

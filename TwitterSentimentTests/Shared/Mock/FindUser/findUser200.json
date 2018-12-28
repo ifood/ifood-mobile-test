@@ -1,0 +1,180 @@
+{
+    "id": 70799317,
+    "id_str": "70799317",
+    "name": "UOL",
+    "screen_name": "UOL",
+    "location": "Brasil",
+    "profile_location": null,
+    "description": "Perfil oficial do UOL. Acompanhe em tempo real as manchetes do maior provedor de conteúdo em língua portuguesa do mundo.",
+    "url": "http://t.co/w6eEBBFJKp",
+    "entities": {
+        "url": {
+            "urls": [
+                {
+                    "url": "http://t.co/w6eEBBFJKp",
+                    "expanded_url": "http://www.uol.com.br/",
+                    "display_url": "uol.com.br",
+                    "indices": [
+                        0,
+                        22
+                    ]
+                }
+            ]
+        },
+        "description": {
+            "urls": []
+        }
+    },
+    "protected": false,
+    "followers_count": 1077521,
+    "friends_count": 153,
+    "listed_count": 2784,
+    "created_at": "Tue Sep 01 22:02:44 +0000 2009",
+    "favourites_count": 480,
+    "utc_offset": null,
+    "time_zone": null,
+    "geo_enabled": false,
+    "verified": true,
+    "statuses_count": 297017,
+    "lang": "pt",
+    "status": {
+        "created_at": "Fri Dec 28 14:11:02 +0000 2018",
+        "id": 1078654561999568898,
+        "id_str": "1078654561999568898",
+        "text": "Violência doméstica | Homem que ateou fogo na ex-mulher, na Grande SP, continua foragido https://t.co/F6W40GYDtD https://t.co/QDM51evQx9",
+        "truncated": false,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": [
+                {
+                    "url": "https://t.co/F6W40GYDtD",
+                    "expanded_url": "https://trib.al/0knA2wQ",
+                    "display_url": "trib.al/0knA2wQ",
+                    "indices": [
+                        89,
+                        112
+                    ]
+                }
+            ],
+            "media": [
+                {
+                    "id": 1078654559722065921,
+                    "id_str": "1078654559722065921",
+                    "indices": [
+                        113,
+                        136
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/Dvgmm2uW0AEkLpM.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/Dvgmm2uW0AEkLpM.jpg",
+                    "url": "https://t.co/QDM51evQx9",
+                    "display_url": "pic.twitter.com/QDM51evQx9",
+                    "expanded_url": "https://twitter.com/UOL/status/1078654561999568898/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "small": {
+                            "w": 680,
+                            "h": 426,
+                            "resize": "fit"
+                        },
+                        "large": {
+                            "w": 1024,
+                            "h": 641,
+                            "resize": "fit"
+                        },
+                        "medium": {
+                            "w": 1024,
+                            "h": 641,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "extended_entities": {
+            "media": [
+                {
+                    "id": 1078654559722065921,
+                    "id_str": "1078654559722065921",
+                    "indices": [
+                        113,
+                        136
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/Dvgmm2uW0AEkLpM.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/Dvgmm2uW0AEkLpM.jpg",
+                    "url": "https://t.co/QDM51evQx9",
+                    "display_url": "pic.twitter.com/QDM51evQx9",
+                    "expanded_url": "https://twitter.com/UOL/status/1078654561999568898/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "small": {
+                            "w": 680,
+                            "h": 426,
+                            "resize": "fit"
+                        },
+                        "large": {
+                            "w": 1024,
+                            "h": 641,
+                            "resize": "fit"
+                        },
+                        "medium": {
+                            "w": 1024,
+                            "h": 641,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "source": "<a href=\"http://www.socialflow.com\" rel=\"nofollow\">SocialFlow</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 1,
+        "favorite_count": 3,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "pt"
+    },
+    "contributors_enabled": false,
+    "is_translator": false,
+    "is_translation_enabled": false,
+    "profile_background_color": "E6E6E6",
+    "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+    "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+    "profile_background_tile": false,
+    "profile_image_url": "http://pbs.twimg.com/profile_images/1019988631937798144/4Q0bhWyl_normal.jpg",
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/1019988631937798144/4Q0bhWyl_normal.jpg",
+    "profile_banner_url": "https://pbs.twimg.com/profile_banners/70799317/1542734125",
+    "profile_link_color": "990000",
+    "profile_sidebar_border_color": "FFFFFF",
+    "profile_sidebar_fill_color": "F4F3EF",
+    "profile_text_color": "000000",
+    "profile_use_background_image": true,
+    "has_extended_profile": false,
+    "default_profile": false,
+    "default_profile_image": false,
+    "following": null,
+    "follow_request_sent": null,
+    "notifications": null,
+    "translator_type": "none"
+}

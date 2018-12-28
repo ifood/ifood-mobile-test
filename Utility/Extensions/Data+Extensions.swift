@@ -8,20 +8,26 @@
 
 import Foundation
 
-extension Bundle {
-    static var correctBundle: Bundle? {
-        return Bundle.main
+import UIKit
+
+public protocol MockFile {
+    var name: String { get }
+}
+
+public extension RawRepresentable where RawValue == String, Self: MockFile {
+    public var name: String {
+        return self.rawValue
     }
 }
 
 extension Data {
 
-    public static func data(with mock: MockFile) -> Data {
-        return Data(json: mock.rawValue)
+    public static func data(with mock: MockFile, bundle: Bundle) -> Data {
+        return Data(json: mock.name, bundle: bundle)
     }
 
-    init(from resource: String, ext: String) {
-        guard let path = Bundle.correctBundle?.path(forResource: resource, ofType: ext) else {
+    init(from resource: String, ext: String, bundle: Bundle) {
+        guard let path = bundle.path(forResource: resource, ofType: ext) else {
             fatalError("path can't be nil")
         }
         do {
@@ -31,8 +37,8 @@ extension Data {
         }
     }
 
-    init(json filename: String) {
-        self.init(from: filename, ext: "json")
+    init(json filename: String, bundle: Bundle) {
+        self.init(from: filename, ext: "json", bundle: bundle)
     }
 
     public static var emptyJSON: Data {

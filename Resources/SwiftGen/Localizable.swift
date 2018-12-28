@@ -62,6 +62,8 @@ public enum L10n {
   }
 
   public enum TwitterError {
+    /// sorry, that page does not exist. \ntry another username.
+    public static let couldNotLoadPage = L10n.tr("Localizable", "twitter-error.could-not-load-page")
     /// couldn't load tweet sentiment. \ntry again later.
     public static let couldNotLoadSentiment = L10n.tr("Localizable", "twitter-error.could-not-load-sentiment")
   }

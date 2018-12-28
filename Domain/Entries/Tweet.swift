@@ -37,4 +37,11 @@ public struct Tweet: Codable {
         guard let date = DateFormatter.twitterDate.date(from: dateString) else { throw Errors.codableError }
         createdAt = date
     }
+    
+    public init(_ id: String, text: String, user: TwitterUser, createdAt: Date) {
+        self.id = id
+        self.text = text
+        self.user = user
+        self.createdAt = createdAt
+    }
 }

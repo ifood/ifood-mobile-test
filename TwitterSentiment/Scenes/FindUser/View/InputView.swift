@@ -25,8 +25,6 @@ class InputView: View {
             view.snp.updateConstraints { (make) in
                 make.bottom.equalToSuperview().inset(height)
             }
-            view.layoutIfNeeded()
-            view.setNeedsLayout()
         })
     }
     

@@ -1,0 +1,3236 @@
+[
+    {
+        "created_at": "Fri Dec 28 14:11:02 +0000 2018",
+        "id": 1078654561999568898,
+        "id_str": "1078654561999568898",
+        "text": "Violência doméstica | Homem que ateou fogo na ex-mulher, na Grande SP, continua foragido https://t.co/F6W40GYDtD https://t.co/QDM51evQx9",
+        "truncated": false,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": [
+                {
+                    "url": "https://t.co/F6W40GYDtD",
+                    "expanded_url": "https://trib.al/0knA2wQ",
+                    "display_url": "trib.al/0knA2wQ",
+                    "indices": [
+                        89,
+                        112
+                    ]
+                }
+            ],
+            "media": [
+                {
+                    "id": 1078654559722065921,
+                    "id_str": "1078654559722065921",
+                    "indices": [
+                        113,
+                        136
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/Dvgmm2uW0AEkLpM.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/Dvgmm2uW0AEkLpM.jpg",
+                    "url": "https://t.co/QDM51evQx9",
+                    "display_url": "pic.twitter.com/QDM51evQx9",
+                    "expanded_url": "https://twitter.com/UOL/status/1078654561999568898/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "small": {
+                            "w": 680,
+                            "h": 426,
+                            "resize": "fit"
+                        },
+                        "large": {
+                            "w": 1024,
+                            "h": 641,
+                            "resize": "fit"
+                        },
+                        "medium": {
+                            "w": 1024,
+                            "h": 641,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "extended_entities": {
+            "media": [
+                {
+                    "id": 1078654559722065921,
+                    "id_str": "1078654559722065921",
+                    "indices": [
+                        113,
+                        136
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/Dvgmm2uW0AEkLpM.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/Dvgmm2uW0AEkLpM.jpg",
+                    "url": "https://t.co/QDM51evQx9",
+                    "display_url": "pic.twitter.com/QDM51evQx9",
+                    "expanded_url": "https://twitter.com/UOL/status/1078654561999568898/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "small": {
+                            "w": 680,
+                            "h": 426,
+                            "resize": "fit"
+                        },
+                        "large": {
+                            "w": 1024,
+                            "h": 641,
+                            "resize": "fit"
+                        },
+                        "medium": {
+                            "w": 1024,
+                            "h": 641,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "source": "<a href=\"http://www.socialflow.com\" rel=\"nofollow\">SocialFlow</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 70799317,
+            "id_str": "70799317",
+            "name": "UOL",
+            "screen_name": "UOL",
+            "location": "Brasil",
+            "description": "Perfil oficial do UOL. Acompanhe em tempo real as manchetes do maior provedor de conteúdo em língua portuguesa do mundo.",
+            "url": "http://t.co/w6eEBBFJKp",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "http://t.co/w6eEBBFJKp",
+                            "expanded_url": "http://www.uol.com.br/",
+                            "display_url": "uol.com.br",
+                            "indices": [
+                                0,
+                                22
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 1077521,
+            "friends_count": 153,
+            "listed_count": 2784,
+            "created_at": "Tue Sep 01 22:02:44 +0000 2009",
+            "favourites_count": 480,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": false,
+            "verified": true,
+            "statuses_count": 297017,
+            "lang": "pt",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "E6E6E6",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/1019988631937798144/4Q0bhWyl_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/1019988631937798144/4Q0bhWyl_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/70799317/1542734125",
+            "profile_link_color": "990000",
+            "profile_sidebar_border_color": "FFFFFF",
+            "profile_sidebar_fill_color": "F4F3EF",
+            "profile_text_color": "000000",
+            "profile_use_background_image": true,
+            "has_extended_profile": false,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 1,
+        "favorite_count": 5,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "pt"
+    },
+    {
+        "created_at": "Fri Dec 28 14:05:43 +0000 2018",
+        "id": 1078653221760053250,
+        "id_str": "1078653221760053250",
+        "text": "Do @blogdosakamoto: Há 12,2 milhões de razões para rejeição a Temer seguir alta https://t.co/YtQaahtFMM https://t.co/R7PxMwzk7A",
+        "truncated": false,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [
+                {
+                    "screen_name": "blogdosakamoto",
+                    "name": "Leonardo Sakamoto",
+                    "id": 58668131,
+                    "id_str": "58668131",
+                    "indices": [
+                        3,
+                        18
+                    ]
+                }
+            ],
+            "urls": [
+                {
+                    "url": "https://t.co/YtQaahtFMM",
+                    "expanded_url": "https://trib.al/B4nzM9J",
+                    "display_url": "trib.al/B4nzM9J",
+                    "indices": [
+                        80,
+                        103
+                    ]
+                }
+            ],
+            "media": [
+                {
+                    "id": 1078653220266934275,
+                    "id_str": "1078653220266934275",
+                    "indices": [
+                        104,
+                        127
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/DvglY43XgAMCf6m.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/DvglY43XgAMCf6m.jpg",
+                    "url": "https://t.co/R7PxMwzk7A",
+                    "display_url": "pic.twitter.com/R7PxMwzk7A",
+                    "expanded_url": "https://twitter.com/UOL/status/1078653221760053250/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "large": {
+                            "w": 615,
+                            "h": 300,
+                            "resize": "fit"
+                        },
+                        "medium": {
+                            "w": 615,
+                            "h": 300,
+                            "resize": "fit"
+                        },
+                        "small": {
+                            "w": 615,
+                            "h": 300,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "extended_entities": {
+            "media": [
+                {
+                    "id": 1078653220266934275,
+                    "id_str": "1078653220266934275",
+                    "indices": [
+                        104,
+                        127
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/DvglY43XgAMCf6m.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/DvglY43XgAMCf6m.jpg",
+                    "url": "https://t.co/R7PxMwzk7A",
+                    "display_url": "pic.twitter.com/R7PxMwzk7A",
+                    "expanded_url": "https://twitter.com/UOL/status/1078653221760053250/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "large": {
+                            "w": 615,
+                            "h": 300,
+                            "resize": "fit"
+                        },
+                        "medium": {
+                            "w": 615,
+                            "h": 300,
+                            "resize": "fit"
+                        },
+                        "small": {
+                            "w": 615,
+                            "h": 300,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "source": "<a href=\"http://www.socialflow.com\" rel=\"nofollow\">SocialFlow</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 70799317,
+            "id_str": "70799317",
+            "name": "UOL",
+            "screen_name": "UOL",
+            "location": "Brasil",
+            "description": "Perfil oficial do UOL. Acompanhe em tempo real as manchetes do maior provedor de conteúdo em língua portuguesa do mundo.",
+            "url": "http://t.co/w6eEBBFJKp",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "http://t.co/w6eEBBFJKp",
+                            "expanded_url": "http://www.uol.com.br/",
+                            "display_url": "uol.com.br",
+                            "indices": [
+                                0,
+                                22
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 1077521,
+            "friends_count": 153,
+            "listed_count": 2784,
+            "created_at": "Tue Sep 01 22:02:44 +0000 2009",
+            "favourites_count": 480,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": false,
+            "verified": true,
+            "statuses_count": 297017,
+            "lang": "pt",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "E6E6E6",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/1019988631937798144/4Q0bhWyl_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/1019988631937798144/4Q0bhWyl_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/70799317/1542734125",
+            "profile_link_color": "990000",
+            "profile_sidebar_border_color": "FFFFFF",
+            "profile_sidebar_fill_color": "F4F3EF",
+            "profile_text_color": "000000",
+            "profile_use_background_image": true,
+            "has_extended_profile": false,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 2,
+        "favorite_count": 7,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "pt"
+    },
+    {
+        "created_at": "Fri Dec 28 14:00:05 +0000 2018",
+        "id": 1078651806522191873,
+        "id_str": "1078651806522191873",
+        "text": "'Inflação do aluguel' fica negativa no mês, mas fecha ano com alta de 7,54% https://t.co/oRLD9APf73 https://t.co/jjXe7GnO4D",
+        "truncated": false,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": [
+                {
+                    "url": "https://t.co/oRLD9APf73",
+                    "expanded_url": "https://trib.al/w5TR0Zi",
+                    "display_url": "trib.al/w5TR0Zi",
+                    "indices": [
+                        76,
+                        99
+                    ]
+                }
+            ],
+            "media": [
+                {
+                    "id": 1078651804957765634,
+                    "id_str": "1078651804957765634",
+                    "indices": [
+                        100,
+                        123
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/DvgkGgbXcAIi_zM.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/DvgkGgbXcAIi_zM.jpg",
+                    "url": "https://t.co/jjXe7GnO4D",
+                    "display_url": "pic.twitter.com/jjXe7GnO4D",
+                    "expanded_url": "https://twitter.com/UOL/status/1078651806522191873/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "medium": {
+                            "w": 615,
+                            "h": 300,
+                            "resize": "fit"
+                        },
+                        "small": {
+                            "w": 615,
+                            "h": 300,
+                            "resize": "fit"
+                        },
+                        "large": {
+                            "w": 615,
+                            "h": 300,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "extended_entities": {
+            "media": [
+                {
+                    "id": 1078651804957765634,
+                    "id_str": "1078651804957765634",
+                    "indices": [
+                        100,
+                        123
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/DvgkGgbXcAIi_zM.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/DvgkGgbXcAIi_zM.jpg",
+                    "url": "https://t.co/jjXe7GnO4D",
+                    "display_url": "pic.twitter.com/jjXe7GnO4D",
+                    "expanded_url": "https://twitter.com/UOL/status/1078651806522191873/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "medium": {
+                            "w": 615,
+                            "h": 300,
+                            "resize": "fit"
+                        },
+                        "small": {
+                            "w": 615,
+                            "h": 300,
+                            "resize": "fit"
+                        },
+                        "large": {
+                            "w": 615,
+                            "h": 300,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "source": "<a href=\"http://www.socialflow.com\" rel=\"nofollow\">SocialFlow</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 70799317,
+            "id_str": "70799317",
+            "name": "UOL",
+            "screen_name": "UOL",
+            "location": "Brasil",
+            "description": "Perfil oficial do UOL. Acompanhe em tempo real as manchetes do maior provedor de conteúdo em língua portuguesa do mundo.",
+            "url": "http://t.co/w6eEBBFJKp",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "http://t.co/w6eEBBFJKp",
+                            "expanded_url": "http://www.uol.com.br/",
+                            "display_url": "uol.com.br",
+                            "indices": [
+                                0,
+                                22
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 1077521,
+            "friends_count": 153,
+            "listed_count": 2784,
+            "created_at": "Tue Sep 01 22:02:44 +0000 2009",
+            "favourites_count": 480,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": false,
+            "verified": true,
+            "statuses_count": 297017,
+            "lang": "pt",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "E6E6E6",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/1019988631937798144/4Q0bhWyl_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/1019988631937798144/4Q0bhWyl_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/70799317/1542734125",
+            "profile_link_color": "990000",
+            "profile_sidebar_border_color": "FFFFFF",
+            "profile_sidebar_fill_color": "F4F3EF",
+            "profile_text_color": "000000",
+            "profile_use_background_image": true,
+            "has_extended_profile": false,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 1,
+        "favorite_count": 4,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "pt"
+    },
+    {
+        "created_at": "Fri Dec 28 13:54:54 +0000 2018",
+        "id": 1078650499661025281,
+        "id_str": "1078650499661025281",
+        "text": "Da @JovemPanNews: Novo Governo planeja diminuir regalias como voos da FAB https://t.co/dem8gyt2RG https://t.co/uDfSGw0TXn",
+        "truncated": false,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [
+                {
+                    "screen_name": "JovemPanNews",
+                    "name": "Jovem Pan News",
+                    "id": 106175018,
+                    "id_str": "106175018",
+                    "indices": [
+                        3,
+                        16
+                    ]
+                }
+            ],
+            "urls": [
+                {
+                    "url": "https://t.co/dem8gyt2RG",
+                    "expanded_url": "https://trib.al/KV7llEk",
+                    "display_url": "trib.al/KV7llEk",
+                    "indices": [
+                        74,
+                        97
+                    ]
+                }
+            ],
+            "media": [
+                {
+                    "id": 1078650497798688770,
+                    "id_str": "1078650497798688770",
+                    "indices": [
+                        98,
+                        121
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/Dvgi6a4W0AI8OQU.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/Dvgi6a4W0AI8OQU.jpg",
+                    "url": "https://t.co/uDfSGw0TXn",
+                    "display_url": "pic.twitter.com/uDfSGw0TXn",
+                    "expanded_url": "https://twitter.com/UOL/status/1078650499661025281/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "large": {
+                            "w": 1024,
+                            "h": 682,
+                            "resize": "fit"
+                        },
+                        "small": {
+                            "w": 680,
+                            "h": 453,
+                            "resize": "fit"
+                        },
+                        "medium": {
+                            "w": 1024,
+                            "h": 682,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "extended_entities": {
+            "media": [
+                {
+                    "id": 1078650497798688770,
+                    "id_str": "1078650497798688770",
+                    "indices": [
+                        98,
+                        121
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/Dvgi6a4W0AI8OQU.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/Dvgi6a4W0AI8OQU.jpg",
+                    "url": "https://t.co/uDfSGw0TXn",
+                    "display_url": "pic.twitter.com/uDfSGw0TXn",
+                    "expanded_url": "https://twitter.com/UOL/status/1078650499661025281/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "large": {
+                            "w": 1024,
+                            "h": 682,
+                            "resize": "fit"
+                        },
+                        "small": {
+                            "w": 680,
+                            "h": 453,
+                            "resize": "fit"
+                        },
+                        "medium": {
+                            "w": 1024,
+                            "h": 682,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "source": "<a href=\"http://www.socialflow.com\" rel=\"nofollow\">SocialFlow</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 70799317,
+            "id_str": "70799317",
+            "name": "UOL",
+            "screen_name": "UOL",
+            "location": "Brasil",
+            "description": "Perfil oficial do UOL. Acompanhe em tempo real as manchetes do maior provedor de conteúdo em língua portuguesa do mundo.",
+            "url": "http://t.co/w6eEBBFJKp",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "http://t.co/w6eEBBFJKp",
+                            "expanded_url": "http://www.uol.com.br/",
+                            "display_url": "uol.com.br",
+                            "indices": [
+                                0,
+                                22
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 1077521,
+            "friends_count": 153,
+            "listed_count": 2784,
+            "created_at": "Tue Sep 01 22:02:44 +0000 2009",
+            "favourites_count": 480,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": false,
+            "verified": true,
+            "statuses_count": 297017,
+            "lang": "pt",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "E6E6E6",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/1019988631937798144/4Q0bhWyl_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/1019988631937798144/4Q0bhWyl_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/70799317/1542734125",
+            "profile_link_color": "990000",
+            "profile_sidebar_border_color": "FFFFFF",
+            "profile_sidebar_fill_color": "F4F3EF",
+            "profile_text_color": "000000",
+            "profile_use_background_image": true,
+            "has_extended_profile": false,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 0,
+        "favorite_count": 10,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "pt"
+    },
+    {
+        "created_at": "Fri Dec 28 13:49:04 +0000 2018",
+        "id": 1078649032438890496,
+        "id_str": "1078649032438890496",
+        "text": "O fim da Infraero em 2022 | Projeto de Bolsonaro prevê leiloar Santos Dumont e Congonhas https://t.co/wa50Bp9RqG https://t.co/uQtAYtcHtI",
+        "truncated": false,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": [
+                {
+                    "url": "https://t.co/wa50Bp9RqG",
+                    "expanded_url": "https://trib.al/NUUSGKB",
+                    "display_url": "trib.al/NUUSGKB",
+                    "indices": [
+                        89,
+                        112
+                    ]
+                }
+            ],
+            "media": [
+                {
+                    "id": 1078649030824157185,
+                    "id_str": "1078649030824157185",
+                    "indices": [
+                        113,
+                        136
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/DvghlB-X4AE3iaY.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/DvghlB-X4AE3iaY.jpg",
+                    "url": "https://t.co/uQtAYtcHtI",
+                    "display_url": "pic.twitter.com/uQtAYtcHtI",
+                    "expanded_url": "https://twitter.com/UOL/status/1078649032438890496/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "small": {
+                            "w": 615,
+                            "h": 300,
+                            "resize": "fit"
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "large": {
+                            "w": 615,
+                            "h": 300,
+                            "resize": "fit"
+                        },
+                        "medium": {
+                            "w": 615,
+                            "h": 300,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "extended_entities": {
+            "media": [
+                {
+                    "id": 1078649030824157185,
+                    "id_str": "1078649030824157185",
+                    "indices": [
+                        113,
+                        136
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/DvghlB-X4AE3iaY.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/DvghlB-X4AE3iaY.jpg",
+                    "url": "https://t.co/uQtAYtcHtI",
+                    "display_url": "pic.twitter.com/uQtAYtcHtI",
+                    "expanded_url": "https://twitter.com/UOL/status/1078649032438890496/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "small": {
+                            "w": 615,
+                            "h": 300,
+                            "resize": "fit"
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "large": {
+                            "w": 615,
+                            "h": 300,
+                            "resize": "fit"
+                        },
+                        "medium": {
+                            "w": 615,
+                            "h": 300,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "source": "<a href=\"http://www.socialflow.com\" rel=\"nofollow\">SocialFlow</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 70799317,
+            "id_str": "70799317",
+            "name": "UOL",
+            "screen_name": "UOL",
+            "location": "Brasil",
+            "description": "Perfil oficial do UOL. Acompanhe em tempo real as manchetes do maior provedor de conteúdo em língua portuguesa do mundo.",
+            "url": "http://t.co/w6eEBBFJKp",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "http://t.co/w6eEBBFJKp",
+                            "expanded_url": "http://www.uol.com.br/",
+                            "display_url": "uol.com.br",
+                            "indices": [
+                                0,
+                                22
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 1077521,
+            "friends_count": 153,
+            "listed_count": 2784,
+            "created_at": "Tue Sep 01 22:02:44 +0000 2009",
+            "favourites_count": 480,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": false,
+            "verified": true,
+            "statuses_count": 297017,
+            "lang": "pt",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "E6E6E6",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/1019988631937798144/4Q0bhWyl_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/1019988631937798144/4Q0bhWyl_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/70799317/1542734125",
+            "profile_link_color": "990000",
+            "profile_sidebar_border_color": "FFFFFF",
+            "profile_sidebar_fill_color": "F4F3EF",
+            "profile_text_color": "000000",
+            "profile_use_background_image": true,
+            "has_extended_profile": false,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 2,
+        "favorite_count": 10,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "pt"
+    },
+    {
+        "created_at": "Fri Dec 28 13:49:04 +0000 2018",
+        "id": 1078649031792963587,
+        "id_str": "1078649031792963587",
+        "text": "Desafios da nova gestão | Tentativas de venda de ativos devem marcar 2019 da Petrobras https://t.co/ytDEaMddGA https://t.co/7fas9QVtEs",
+        "truncated": false,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": [
+                {
+                    "url": "https://t.co/ytDEaMddGA",
+                    "expanded_url": "https://trib.al/2P8GsL6",
+                    "display_url": "trib.al/2P8GsL6",
+                    "indices": [
+                        87,
+                        110
+                    ]
+                }
+            ],
+            "media": [
+                {
+                    "id": 1078649030203359232,
+                    "id_str": "1078649030203359232",
+                    "indices": [
+                        111,
+                        134
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/Dvghk_qXQAAxxxP.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/Dvghk_qXQAAxxxP.jpg",
+                    "url": "https://t.co/7fas9QVtEs",
+                    "display_url": "pic.twitter.com/7fas9QVtEs",
+                    "expanded_url": "https://twitter.com/UOL/status/1078649031792963587/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "medium": {
+                            "w": 768,
+                            "h": 512,
+                            "resize": "fit"
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "large": {
+                            "w": 768,
+                            "h": 512,
+                            "resize": "fit"
+                        },
+                        "small": {
+                            "w": 680,
+                            "h": 453,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "extended_entities": {
+            "media": [
+                {
+                    "id": 1078649030203359232,
+                    "id_str": "1078649030203359232",
+                    "indices": [
+                        111,
+                        134
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/Dvghk_qXQAAxxxP.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/Dvghk_qXQAAxxxP.jpg",
+                    "url": "https://t.co/7fas9QVtEs",
+                    "display_url": "pic.twitter.com/7fas9QVtEs",
+                    "expanded_url": "https://twitter.com/UOL/status/1078649031792963587/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "medium": {
+                            "w": 768,
+                            "h": 512,
+                            "resize": "fit"
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "large": {
+                            "w": 768,
+                            "h": 512,
+                            "resize": "fit"
+                        },
+                        "small": {
+                            "w": 680,
+                            "h": 453,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "source": "<a href=\"http://www.socialflow.com\" rel=\"nofollow\">SocialFlow</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 70799317,
+            "id_str": "70799317",
+            "name": "UOL",
+            "screen_name": "UOL",
+            "location": "Brasil",
+            "description": "Perfil oficial do UOL. Acompanhe em tempo real as manchetes do maior provedor de conteúdo em língua portuguesa do mundo.",
+            "url": "http://t.co/w6eEBBFJKp",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "http://t.co/w6eEBBFJKp",
+                            "expanded_url": "http://www.uol.com.br/",
+                            "display_url": "uol.com.br",
+                            "indices": [
+                                0,
+                                22
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 1077521,
+            "friends_count": 153,
+            "listed_count": 2784,
+            "created_at": "Tue Sep 01 22:02:44 +0000 2009",
+            "favourites_count": 480,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": false,
+            "verified": true,
+            "statuses_count": 297017,
+            "lang": "pt",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "E6E6E6",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/1019988631937798144/4Q0bhWyl_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/1019988631937798144/4Q0bhWyl_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/70799317/1542734125",
+            "profile_link_color": "990000",
+            "profile_sidebar_border_color": "FFFFFF",
+            "profile_sidebar_fill_color": "F4F3EF",
+            "profile_text_color": "000000",
+            "profile_use_background_image": true,
+            "has_extended_profile": false,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 2,
+        "favorite_count": 8,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "pt"
+    },
+    {
+        "created_at": "Fri Dec 28 13:45:10 +0000 2018",
+        "id": 1078648052972486657,
+        "id_str": "1078648052972486657",
+        "text": "Pesquisão UOL: Caio Ribeiro foi o melhor comentarista de 2018 na opinião dos boleiros; Neto é, de novo, eleito o pi… https://t.co/Ew3s3zWgOJ",
+        "truncated": true,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": [
+                {
+                    "url": "https://t.co/Ew3s3zWgOJ",
+                    "expanded_url": "https://twitter.com/i/web/status/1078648052972486657",
+                    "display_url": "twitter.com/i/web/status/1…",
+                    "indices": [
+                        117,
+                        140
+                    ]
+                }
+            ]
+        },
+        "source": "<a href=\"http://www.socialflow.com\" rel=\"nofollow\">SocialFlow</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 70799317,
+            "id_str": "70799317",
+            "name": "UOL",
+            "screen_name": "UOL",
+            "location": "Brasil",
+            "description": "Perfil oficial do UOL. Acompanhe em tempo real as manchetes do maior provedor de conteúdo em língua portuguesa do mundo.",
+            "url": "http://t.co/w6eEBBFJKp",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "http://t.co/w6eEBBFJKp",
+                            "expanded_url": "http://www.uol.com.br/",
+                            "display_url": "uol.com.br",
+                            "indices": [
+                                0,
+                                22
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 1077521,
+            "friends_count": 153,
+            "listed_count": 2784,
+            "created_at": "Tue Sep 01 22:02:44 +0000 2009",
+            "favourites_count": 480,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": false,
+            "verified": true,
+            "statuses_count": 297017,
+            "lang": "pt",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "E6E6E6",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/1019988631937798144/4Q0bhWyl_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/1019988631937798144/4Q0bhWyl_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/70799317/1542734125",
+            "profile_link_color": "990000",
+            "profile_sidebar_border_color": "FFFFFF",
+            "profile_sidebar_fill_color": "F4F3EF",
+            "profile_text_color": "000000",
+            "profile_use_background_image": true,
+            "has_extended_profile": false,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 5,
+        "favorite_count": 36,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "pt"
+    },
+    {
+        "created_at": "Fri Dec 28 13:44:38 +0000 2018",
+        "id": 1078647918821863426,
+        "id_str": "1078647918821863426",
+        "text": "Luto na música | Arcanjo: Privilegiada, Miúcha viveu a MPB em casa e cantou a emoção https://t.co/hrrkjZsnJf https://t.co/Gwt63ZaSUp",
+        "truncated": false,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": [
+                {
+                    "url": "https://t.co/hrrkjZsnJf",
+                    "expanded_url": "https://trib.al/HjO94xi",
+                    "display_url": "trib.al/HjO94xi",
+                    "indices": [
+                        85,
+                        108
+                    ]
+                }
+            ],
+            "media": [
+                {
+                    "id": 1078647916993105920,
+                    "id_str": "1078647916993105920",
+                    "indices": [
+                        109,
+                        132
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/DvggkMoW0AAB6Wk.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/DvggkMoW0AAB6Wk.jpg",
+                    "url": "https://t.co/Gwt63ZaSUp",
+                    "display_url": "pic.twitter.com/Gwt63ZaSUp",
+                    "expanded_url": "https://twitter.com/UOL/status/1078647918821863426/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "small": {
+                            "w": 615,
+                            "h": 300,
+                            "resize": "fit"
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "large": {
+                            "w": 615,
+                            "h": 300,
+                            "resize": "fit"
+                        },
+                        "medium": {
+                            "w": 615,
+                            "h": 300,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "extended_entities": {
+            "media": [
+                {
+                    "id": 1078647916993105920,
+                    "id_str": "1078647916993105920",
+                    "indices": [
+                        109,
+                        132
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/DvggkMoW0AAB6Wk.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/DvggkMoW0AAB6Wk.jpg",
+                    "url": "https://t.co/Gwt63ZaSUp",
+                    "display_url": "pic.twitter.com/Gwt63ZaSUp",
+                    "expanded_url": "https://twitter.com/UOL/status/1078647918821863426/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "small": {
+                            "w": 615,
+                            "h": 300,
+                            "resize": "fit"
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "large": {
+                            "w": 615,
+                            "h": 300,
+                            "resize": "fit"
+                        },
+                        "medium": {
+                            "w": 615,
+                            "h": 300,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "source": "<a href=\"http://www.socialflow.com\" rel=\"nofollow\">SocialFlow</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 70799317,
+            "id_str": "70799317",
+            "name": "UOL",
+            "screen_name": "UOL",
+            "location": "Brasil",
+            "description": "Perfil oficial do UOL. Acompanhe em tempo real as manchetes do maior provedor de conteúdo em língua portuguesa do mundo.",
+            "url": "http://t.co/w6eEBBFJKp",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "http://t.co/w6eEBBFJKp",
+                            "expanded_url": "http://www.uol.com.br/",
+                            "display_url": "uol.com.br",
+                            "indices": [
+                                0,
+                                22
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 1077521,
+            "friends_count": 153,
+            "listed_count": 2784,
+            "created_at": "Tue Sep 01 22:02:44 +0000 2009",
+            "favourites_count": 480,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": false,
+            "verified": true,
+            "statuses_count": 297017,
+            "lang": "pt",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "E6E6E6",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/1019988631937798144/4Q0bhWyl_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/1019988631937798144/4Q0bhWyl_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/70799317/1542734125",
+            "profile_link_color": "990000",
+            "profile_sidebar_border_color": "FFFFFF",
+            "profile_sidebar_fill_color": "F4F3EF",
+            "profile_text_color": "000000",
+            "profile_use_background_image": true,
+            "has_extended_profile": false,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 1,
+        "favorite_count": 9,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "pt"
+    },
+    {
+        "created_at": "Fri Dec 28 13:38:13 +0000 2018",
+        "id": 1078646304501317632,
+        "id_str": "1078646304501317632",
+        "text": "Termômetro \"Black Mirror\": Quão distante estamos do futuro representado na série tecno-paranoica?… https://t.co/lX5Iz2sZvE",
+        "truncated": true,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": [
+                {
+                    "url": "https://t.co/lX5Iz2sZvE",
+                    "expanded_url": "https://twitter.com/i/web/status/1078646304501317632",
+                    "display_url": "twitter.com/i/web/status/1…",
+                    "indices": [
+                        99,
+                        122
+                    ]
+                }
+            ]
+        },
+        "source": "<a href=\"http://www.socialflow.com\" rel=\"nofollow\">SocialFlow</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 70799317,
+            "id_str": "70799317",
+            "name": "UOL",
+            "screen_name": "UOL",
+            "location": "Brasil",
+            "description": "Perfil oficial do UOL. Acompanhe em tempo real as manchetes do maior provedor de conteúdo em língua portuguesa do mundo.",
+            "url": "http://t.co/w6eEBBFJKp",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "http://t.co/w6eEBBFJKp",
+                            "expanded_url": "http://www.uol.com.br/",
+                            "display_url": "uol.com.br",
+                            "indices": [
+                                0,
+                                22
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 1077521,
+            "friends_count": 153,
+            "listed_count": 2784,
+            "created_at": "Tue Sep 01 22:02:44 +0000 2009",
+            "favourites_count": 480,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": false,
+            "verified": true,
+            "statuses_count": 297017,
+            "lang": "pt",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "E6E6E6",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/1019988631937798144/4Q0bhWyl_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/1019988631937798144/4Q0bhWyl_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/70799317/1542734125",
+            "profile_link_color": "990000",
+            "profile_sidebar_border_color": "FFFFFF",
+            "profile_sidebar_fill_color": "F4F3EF",
+            "profile_text_color": "000000",
+            "profile_use_background_image": true,
+            "has_extended_profile": false,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 6,
+        "favorite_count": 16,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "pt"
+    },
+    {
+        "created_at": "Fri Dec 28 13:36:02 +0000 2018",
+        "id": 1078645754758160384,
+        "id_str": "1078645754758160384",
+        "text": "Chamou homem de pedófilo | Musk quer convencer Justiça de que não deve ser levado a sério https://t.co/0pWj5PCIEs https://t.co/3PJnu5vD63",
+        "truncated": false,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": [
+                {
+                    "url": "https://t.co/0pWj5PCIEs",
+                    "expanded_url": "https://trib.al/2tnENWR",
+                    "display_url": "trib.al/2tnENWR",
+                    "indices": [
+                        90,
+                        113
+                    ]
+                }
+            ],
+            "media": [
+                {
+                    "id": 1078645752820318209,
+                    "id_str": "1078645752820318209",
+                    "indices": [
+                        114,
+                        137
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/DvgemOdWwAEu2vV.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/DvgemOdWwAEu2vV.jpg",
+                    "url": "https://t.co/3PJnu5vD63",
+                    "display_url": "pic.twitter.com/3PJnu5vD63",
+                    "expanded_url": "https://twitter.com/UOL/status/1078645754758160384/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "medium": {
+                            "w": 615,
+                            "h": 300,
+                            "resize": "fit"
+                        },
+                        "large": {
+                            "w": 615,
+                            "h": 300,
+                            "resize": "fit"
+                        },
+                        "small": {
+                            "w": 615,
+                            "h": 300,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "extended_entities": {
+            "media": [
+                {
+                    "id": 1078645752820318209,
+                    "id_str": "1078645752820318209",
+                    "indices": [
+                        114,
+                        137
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/DvgemOdWwAEu2vV.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/DvgemOdWwAEu2vV.jpg",
+                    "url": "https://t.co/3PJnu5vD63",
+                    "display_url": "pic.twitter.com/3PJnu5vD63",
+                    "expanded_url": "https://twitter.com/UOL/status/1078645754758160384/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "medium": {
+                            "w": 615,
+                            "h": 300,
+                            "resize": "fit"
+                        },
+                        "large": {
+                            "w": 615,
+                            "h": 300,
+                            "resize": "fit"
+                        },
+                        "small": {
+                            "w": 615,
+                            "h": 300,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "source": "<a href=\"http://www.socialflow.com\" rel=\"nofollow\">SocialFlow</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 70799317,
+            "id_str": "70799317",
+            "name": "UOL",
+            "screen_name": "UOL",
+            "location": "Brasil",
+            "description": "Perfil oficial do UOL. Acompanhe em tempo real as manchetes do maior provedor de conteúdo em língua portuguesa do mundo.",
+            "url": "http://t.co/w6eEBBFJKp",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "http://t.co/w6eEBBFJKp",
+                            "expanded_url": "http://www.uol.com.br/",
+                            "display_url": "uol.com.br",
+                            "indices": [
+                                0,
+                                22
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 1077521,
+            "friends_count": 153,
+            "listed_count": 2784,
+            "created_at": "Tue Sep 01 22:02:44 +0000 2009",
+            "favourites_count": 480,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": false,
+            "verified": true,
+            "statuses_count": 297017,
+            "lang": "pt",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "E6E6E6",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/1019988631937798144/4Q0bhWyl_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/1019988631937798144/4Q0bhWyl_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/70799317/1542734125",
+            "profile_link_color": "990000",
+            "profile_sidebar_border_color": "FFFFFF",
+            "profile_sidebar_fill_color": "F4F3EF",
+            "profile_text_color": "000000",
+            "profile_use_background_image": true,
+            "has_extended_profile": false,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 0,
+        "favorite_count": 4,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "pt"
+    },
+    {
+        "created_at": "Fri Dec 28 13:30:17 +0000 2018",
+        "id": 1078644307886784512,
+        "id_str": "1078644307886784512",
+        "text": "Da @JovemPanNews: Adolescente morre em acidente de balsa no litoral paulista https://t.co/RUcOM7agcc https://t.co/qQplKJRrQ4",
+        "truncated": false,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [
+                {
+                    "screen_name": "JovemPanNews",
+                    "name": "Jovem Pan News",
+                    "id": 106175018,
+                    "id_str": "106175018",
+                    "indices": [
+                        3,
+                        16
+                    ]
+                }
+            ],
+            "urls": [
+                {
+                    "url": "https://t.co/RUcOM7agcc",
+                    "expanded_url": "https://trib.al/PeCq2v1",
+                    "display_url": "trib.al/PeCq2v1",
+                    "indices": [
+                        77,
+                        100
+                    ]
+                }
+            ],
+            "media": [
+                {
+                    "id": 1078644305915535360,
+                    "id_str": "1078644305915535360",
+                    "indices": [
+                        101,
+                        124
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/DvgdSAUX4AAjBuL.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/DvgdSAUX4AAjBuL.jpg",
+                    "url": "https://t.co/qQplKJRrQ4",
+                    "display_url": "pic.twitter.com/qQplKJRrQ4",
+                    "expanded_url": "https://twitter.com/UOL/status/1078644307886784512/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "small": {
+                            "w": 680,
+                            "h": 453,
+                            "resize": "fit"
+                        },
+                        "large": {
+                            "w": 1024,
+                            "h": 682,
+                            "resize": "fit"
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "medium": {
+                            "w": 1024,
+                            "h": 682,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "extended_entities": {
+            "media": [
+                {
+                    "id": 1078644305915535360,
+                    "id_str": "1078644305915535360",
+                    "indices": [
+                        101,
+                        124
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/DvgdSAUX4AAjBuL.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/DvgdSAUX4AAjBuL.jpg",
+                    "url": "https://t.co/qQplKJRrQ4",
+                    "display_url": "pic.twitter.com/qQplKJRrQ4",
+                    "expanded_url": "https://twitter.com/UOL/status/1078644307886784512/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "small": {
+                            "w": 680,
+                            "h": 453,
+                            "resize": "fit"
+                        },
+                        "large": {
+                            "w": 1024,
+                            "h": 682,
+                            "resize": "fit"
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "medium": {
+                            "w": 1024,
+                            "h": 682,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "source": "<a href=\"http://www.socialflow.com\" rel=\"nofollow\">SocialFlow</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 70799317,
+            "id_str": "70799317",
+            "name": "UOL",
+            "screen_name": "UOL",
+            "location": "Brasil",
+            "description": "Perfil oficial do UOL. Acompanhe em tempo real as manchetes do maior provedor de conteúdo em língua portuguesa do mundo.",
+            "url": "http://t.co/w6eEBBFJKp",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "http://t.co/w6eEBBFJKp",
+                            "expanded_url": "http://www.uol.com.br/",
+                            "display_url": "uol.com.br",
+                            "indices": [
+                                0,
+                                22
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 1077521,
+            "friends_count": 153,
+            "listed_count": 2784,
+            "created_at": "Tue Sep 01 22:02:44 +0000 2009",
+            "favourites_count": 480,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": false,
+            "verified": true,
+            "statuses_count": 297017,
+            "lang": "pt",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "E6E6E6",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/1019988631937798144/4Q0bhWyl_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/1019988631937798144/4Q0bhWyl_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/70799317/1542734125",
+            "profile_link_color": "990000",
+            "profile_sidebar_border_color": "FFFFFF",
+            "profile_sidebar_fill_color": "F4F3EF",
+            "profile_text_color": "000000",
+            "profile_use_background_image": true,
+            "has_extended_profile": false,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 0,
+        "favorite_count": 5,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "pt"
+    },
+    {
+        "created_at": "Fri Dec 28 13:25:24 +0000 2018",
+        "id": 1078643075566764032,
+        "id_str": "1078643075566764032",
+        "text": "'Para nós, todas as vidas importam' | Equipes de emergência indonésias resgatam tartarugas após tsunami… https://t.co/8jiGJ4jxOt",
+        "truncated": true,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": [
+                {
+                    "url": "https://t.co/8jiGJ4jxOt",
+                    "expanded_url": "https://twitter.com/i/web/status/1078643075566764032",
+                    "display_url": "twitter.com/i/web/status/1…",
+                    "indices": [
+                        105,
+                        128
+                    ]
+                }
+            ]
+        },
+        "source": "<a href=\"http://www.socialflow.com\" rel=\"nofollow\">SocialFlow</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 70799317,
+            "id_str": "70799317",
+            "name": "UOL",
+            "screen_name": "UOL",
+            "location": "Brasil",
+            "description": "Perfil oficial do UOL. Acompanhe em tempo real as manchetes do maior provedor de conteúdo em língua portuguesa do mundo.",
+            "url": "http://t.co/w6eEBBFJKp",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "http://t.co/w6eEBBFJKp",
+                            "expanded_url": "http://www.uol.com.br/",
+                            "display_url": "uol.com.br",
+                            "indices": [
+                                0,
+                                22
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 1077521,
+            "friends_count": 153,
+            "listed_count": 2784,
+            "created_at": "Tue Sep 01 22:02:44 +0000 2009",
+            "favourites_count": 480,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": false,
+            "verified": true,
+            "statuses_count": 297017,
+            "lang": "pt",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "E6E6E6",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/1019988631937798144/4Q0bhWyl_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/1019988631937798144/4Q0bhWyl_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/70799317/1542734125",
+            "profile_link_color": "990000",
+            "profile_sidebar_border_color": "FFFFFF",
+            "profile_sidebar_fill_color": "F4F3EF",
+            "profile_text_color": "000000",
+            "profile_use_background_image": true,
+            "has_extended_profile": false,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 11,
+        "favorite_count": 40,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "pt"
+    },
+    {
+        "created_at": "Fri Dec 28 13:21:51 +0000 2018",
+        "id": 1078642182175772673,
+        "id_str": "1078642182175772673",
+        "text": "Por que Zuckerberg perdeu US$ 19 bilhões enquanto Bezos ganhou US$ 23 bilhões em 2018 https://t.co/djUddVcCyn https://t.co/2VqxtCTR9j",
+        "truncated": false,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": [
+                {
+                    "url": "https://t.co/djUddVcCyn",
+                    "expanded_url": "https://trib.al/4gU59la",
+                    "display_url": "trib.al/4gU59la",
+                    "indices": [
+                        86,
+                        109
+                    ]
+                }
+            ],
+            "media": [
+                {
+                    "id": 1078642180485459969,
+                    "id_str": "1078642180485459969",
+                    "indices": [
+                        110,
+                        133
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/DvgbWSeWsAE1pxw.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/DvgbWSeWsAE1pxw.jpg",
+                    "url": "https://t.co/2VqxtCTR9j",
+                    "display_url": "pic.twitter.com/2VqxtCTR9j",
+                    "expanded_url": "https://twitter.com/UOL/status/1078642182175772673/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "small": {
+                            "w": 615,
+                            "h": 300,
+                            "resize": "fit"
+                        },
+                        "medium": {
+                            "w": 615,
+                            "h": 300,
+                            "resize": "fit"
+                        },
+                        "large": {
+                            "w": 615,
+                            "h": 300,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "extended_entities": {
+            "media": [
+                {
+                    "id": 1078642180485459969,
+                    "id_str": "1078642180485459969",
+                    "indices": [
+                        110,
+                        133
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/DvgbWSeWsAE1pxw.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/DvgbWSeWsAE1pxw.jpg",
+                    "url": "https://t.co/2VqxtCTR9j",
+                    "display_url": "pic.twitter.com/2VqxtCTR9j",
+                    "expanded_url": "https://twitter.com/UOL/status/1078642182175772673/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "small": {
+                            "w": 615,
+                            "h": 300,
+                            "resize": "fit"
+                        },
+                        "medium": {
+                            "w": 615,
+                            "h": 300,
+                            "resize": "fit"
+                        },
+                        "large": {
+                            "w": 615,
+                            "h": 300,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "source": "<a href=\"http://www.socialflow.com\" rel=\"nofollow\">SocialFlow</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 70799317,
+            "id_str": "70799317",
+            "name": "UOL",
+            "screen_name": "UOL",
+            "location": "Brasil",
+            "description": "Perfil oficial do UOL. Acompanhe em tempo real as manchetes do maior provedor de conteúdo em língua portuguesa do mundo.",
+            "url": "http://t.co/w6eEBBFJKp",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "http://t.co/w6eEBBFJKp",
+                            "expanded_url": "http://www.uol.com.br/",
+                            "display_url": "uol.com.br",
+                            "indices": [
+                                0,
+                                22
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 1077521,
+            "friends_count": 153,
+            "listed_count": 2784,
+            "created_at": "Tue Sep 01 22:02:44 +0000 2009",
+            "favourites_count": 480,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": false,
+            "verified": true,
+            "statuses_count": 297017,
+            "lang": "pt",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "E6E6E6",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/1019988631937798144/4Q0bhWyl_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/1019988631937798144/4Q0bhWyl_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/70799317/1542734125",
+            "profile_link_color": "990000",
+            "profile_sidebar_border_color": "FFFFFF",
+            "profile_sidebar_fill_color": "F4F3EF",
+            "profile_text_color": "000000",
+            "profile_use_background_image": true,
+            "has_extended_profile": false,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 0,
+        "favorite_count": 8,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "pt"
+    },
+    {
+        "created_at": "Fri Dec 28 13:18:12 +0000 2018",
+        "id": 1078641265649074176,
+        "id_str": "1078641265649074176",
+        "text": "Ex-assessor de Flávio | Para oposição, posse reduz efeitos do caso Queiroz sobre clã Bolsonaro… https://t.co/p6twMDdkBX",
+        "truncated": true,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": [
+                {
+                    "url": "https://t.co/p6twMDdkBX",
+                    "expanded_url": "https://twitter.com/i/web/status/1078641265649074176",
+                    "display_url": "twitter.com/i/web/status/1…",
+                    "indices": [
+                        96,
+                        119
+                    ]
+                }
+            ]
+        },
+        "source": "<a href=\"http://www.socialflow.com\" rel=\"nofollow\">SocialFlow</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 70799317,
+            "id_str": "70799317",
+            "name": "UOL",
+            "screen_name": "UOL",
+            "location": "Brasil",
+            "description": "Perfil oficial do UOL. Acompanhe em tempo real as manchetes do maior provedor de conteúdo em língua portuguesa do mundo.",
+            "url": "http://t.co/w6eEBBFJKp",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "http://t.co/w6eEBBFJKp",
+                            "expanded_url": "http://www.uol.com.br/",
+                            "display_url": "uol.com.br",
+                            "indices": [
+                                0,
+                                22
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 1077521,
+            "friends_count": 153,
+            "listed_count": 2784,
+            "created_at": "Tue Sep 01 22:02:44 +0000 2009",
+            "favourites_count": 480,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": false,
+            "verified": true,
+            "statuses_count": 297017,
+            "lang": "pt",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "E6E6E6",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/1019988631937798144/4Q0bhWyl_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/1019988631937798144/4Q0bhWyl_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/70799317/1542734125",
+            "profile_link_color": "990000",
+            "profile_sidebar_border_color": "FFFFFF",
+            "profile_sidebar_fill_color": "F4F3EF",
+            "profile_text_color": "000000",
+            "profile_use_background_image": true,
+            "has_extended_profile": false,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 2,
+        "favorite_count": 5,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "pt"
+    },
+    {
+        "created_at": "Fri Dec 28 13:14:57 +0000 2018",
+        "id": 1078640448909045761,
+        "id_str": "1078640448909045761",
+        "text": "Sensor de digital na tela: Samsung \"esquece\" Galaxy S10 e prioriza o A10 https://t.co/CE8yafe8UC https://t.co/79kz6BXXlB",
+        "truncated": false,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": [
+                {
+                    "url": "https://t.co/CE8yafe8UC",
+                    "expanded_url": "https://trib.al/DkyeAvj",
+                    "display_url": "trib.al/DkyeAvj",
+                    "indices": [
+                        73,
+                        96
+                    ]
+                }
+            ],
+            "media": [
+                {
+                    "id": 1078640447218728961,
+                    "id_str": "1078640447218728961",
+                    "indices": [
+                        97,
+                        120
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/DvgZxZjXQAEViHs.png",
+                    "media_url_https": "https://pbs.twimg.com/media/DvgZxZjXQAEViHs.png",
+                    "url": "https://t.co/79kz6BXXlB",
+                    "display_url": "pic.twitter.com/79kz6BXXlB",
+                    "expanded_url": "https://twitter.com/UOL/status/1078640448909045761/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "small": {
+                            "w": 680,
+                            "h": 382,
+                            "resize": "fit"
+                        },
+                        "medium": {
+                            "w": 750,
+                            "h": 421,
+                            "resize": "fit"
+                        },
+                        "large": {
+                            "w": 750,
+                            "h": 421,
+                            "resize": "fit"
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        }
+                    }
+                }
+            ]
+        },
+        "extended_entities": {
+            "media": [
+                {
+                    "id": 1078640447218728961,
+                    "id_str": "1078640447218728961",
+                    "indices": [
+                        97,
+                        120
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/DvgZxZjXQAEViHs.png",
+                    "media_url_https": "https://pbs.twimg.com/media/DvgZxZjXQAEViHs.png",
+                    "url": "https://t.co/79kz6BXXlB",
+                    "display_url": "pic.twitter.com/79kz6BXXlB",
+                    "expanded_url": "https://twitter.com/UOL/status/1078640448909045761/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "small": {
+                            "w": 680,
+                            "h": 382,
+                            "resize": "fit"
+                        },
+                        "medium": {
+                            "w": 750,
+                            "h": 421,
+                            "resize": "fit"
+                        },
+                        "large": {
+                            "w": 750,
+                            "h": 421,
+                            "resize": "fit"
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        }
+                    }
+                }
+            ]
+        },
+        "source": "<a href=\"http://www.socialflow.com\" rel=\"nofollow\">SocialFlow</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 70799317,
+            "id_str": "70799317",
+            "name": "UOL",
+            "screen_name": "UOL",
+            "location": "Brasil",
+            "description": "Perfil oficial do UOL. Acompanhe em tempo real as manchetes do maior provedor de conteúdo em língua portuguesa do mundo.",
+            "url": "http://t.co/w6eEBBFJKp",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "http://t.co/w6eEBBFJKp",
+                            "expanded_url": "http://www.uol.com.br/",
+                            "display_url": "uol.com.br",
+                            "indices": [
+                                0,
+                                22
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 1077521,
+            "friends_count": 153,
+            "listed_count": 2784,
+            "created_at": "Tue Sep 01 22:02:44 +0000 2009",
+            "favourites_count": 480,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": false,
+            "verified": true,
+            "statuses_count": 297017,
+            "lang": "pt",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "E6E6E6",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/1019988631937798144/4Q0bhWyl_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/1019988631937798144/4Q0bhWyl_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/70799317/1542734125",
+            "profile_link_color": "990000",
+            "profile_sidebar_border_color": "FFFFFF",
+            "profile_sidebar_fill_color": "F4F3EF",
+            "profile_text_color": "000000",
+            "profile_use_background_image": true,
+            "has_extended_profile": false,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 1,
+        "favorite_count": 3,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "pt"
+    },
+    {
+        "created_at": "Fri Dec 28 13:10:37 +0000 2018",
+        "id": 1078639357135859713,
+        "id_str": "1078639357135859713",
+        "text": "Brasileiros terão menos feriados prolongados em 2019; veja as datas https://t.co/NjPrGrsGJ6 https://t.co/J9qUY7Lpe5",
+        "truncated": false,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": [
+                {
+                    "url": "https://t.co/NjPrGrsGJ6",
+                    "expanded_url": "https://trib.al/NKgP7y7",
+                    "display_url": "trib.al/NKgP7y7",
+                    "indices": [
+                        68,
+                        91
+                    ]
+                }
+            ],
+            "media": [
+                {
+                    "id": 1078639355575652354,
+                    "id_str": "1078639355575652354",
+                    "indices": [
+                        92,
+                        115
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/DvgYx23X0AIR5LY.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/DvgYx23X0AIR5LY.jpg",
+                    "url": "https://t.co/J9qUY7Lpe5",
+                    "display_url": "pic.twitter.com/J9qUY7Lpe5",
+                    "expanded_url": "https://twitter.com/UOL/status/1078639357135859713/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "small": {
+                            "w": 615,
+                            "h": 300,
+                            "resize": "fit"
+                        },
+                        "large": {
+                            "w": 615,
+                            "h": 300,
+                            "resize": "fit"
+                        },
+                        "medium": {
+                            "w": 615,
+                            "h": 300,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "extended_entities": {
+            "media": [
+                {
+                    "id": 1078639355575652354,
+                    "id_str": "1078639355575652354",
+                    "indices": [
+                        92,
+                        115
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/DvgYx23X0AIR5LY.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/DvgYx23X0AIR5LY.jpg",
+                    "url": "https://t.co/J9qUY7Lpe5",
+                    "display_url": "pic.twitter.com/J9qUY7Lpe5",
+                    "expanded_url": "https://twitter.com/UOL/status/1078639357135859713/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "small": {
+                            "w": 615,
+                            "h": 300,
+                            "resize": "fit"
+                        },
+                        "large": {
+                            "w": 615,
+                            "h": 300,
+                            "resize": "fit"
+                        },
+                        "medium": {
+                            "w": 615,
+                            "h": 300,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "source": "<a href=\"http://www.socialflow.com\" rel=\"nofollow\">SocialFlow</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 70799317,
+            "id_str": "70799317",
+            "name": "UOL",
+            "screen_name": "UOL",
+            "location": "Brasil",
+            "description": "Perfil oficial do UOL. Acompanhe em tempo real as manchetes do maior provedor de conteúdo em língua portuguesa do mundo.",
+            "url": "http://t.co/w6eEBBFJKp",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "http://t.co/w6eEBBFJKp",
+                            "expanded_url": "http://www.uol.com.br/",
+                            "display_url": "uol.com.br",
+                            "indices": [
+                                0,
+                                22
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 1077521,
+            "friends_count": 153,
+            "listed_count": 2784,
+            "created_at": "Tue Sep 01 22:02:44 +0000 2009",
+            "favourites_count": 480,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": false,
+            "verified": true,
+            "statuses_count": 297017,
+            "lang": "pt",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "E6E6E6",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/1019988631937798144/4Q0bhWyl_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/1019988631937798144/4Q0bhWyl_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/70799317/1542734125",
+            "profile_link_color": "990000",
+            "profile_sidebar_border_color": "FFFFFF",
+            "profile_sidebar_fill_color": "F4F3EF",
+            "profile_text_color": "000000",
+            "profile_use_background_image": true,
+            "has_extended_profile": false,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 5,
+        "favorite_count": 22,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "pt"
+    },
+    {
+        "created_at": "Fri Dec 28 13:09:43 +0000 2018",
+        "id": 1078639129452261381,
+        "id_str": "1078639129452261381",
+        "text": "Espere antes de comprar um carro novo: veja as novidades que chegam em 2019 https://t.co/uWEUMUja6A https://t.co/UsiMSrO97a",
+        "truncated": false,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": [
+                {
+                    "url": "https://t.co/uWEUMUja6A",
+                    "expanded_url": "https://trib.al/lEZbIZ9",
+                    "display_url": "trib.al/lEZbIZ9",
+                    "indices": [
+                        76,
+                        99
+                    ]
+                }
+            ],
+            "media": [
+                {
+                    "id": 1078639127996846080,
+                    "id_str": "1078639127996846080",
+                    "indices": [
+                        100,
+                        123
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/DvgYknEW0AAmuWB.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/DvgYknEW0AAmuWB.jpg",
+                    "url": "https://t.co/UsiMSrO97a",
+                    "display_url": "pic.twitter.com/UsiMSrO97a",
+                    "expanded_url": "https://twitter.com/UOL/status/1078639129452261381/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "large": {
+                            "w": 615,
+                            "h": 300,
+                            "resize": "fit"
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "small": {
+                            "w": 615,
+                            "h": 300,
+                            "resize": "fit"
+                        },
+                        "medium": {
+                            "w": 615,
+                            "h": 300,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "extended_entities": {
+            "media": [
+                {
+                    "id": 1078639127996846080,
+                    "id_str": "1078639127996846080",
+                    "indices": [
+                        100,
+                        123
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/DvgYknEW0AAmuWB.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/DvgYknEW0AAmuWB.jpg",
+                    "url": "https://t.co/UsiMSrO97a",
+                    "display_url": "pic.twitter.com/UsiMSrO97a",
+                    "expanded_url": "https://twitter.com/UOL/status/1078639129452261381/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "large": {
+                            "w": 615,
+                            "h": 300,
+                            "resize": "fit"
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "small": {
+                            "w": 615,
+                            "h": 300,
+                            "resize": "fit"
+                        },
+                        "medium": {
+                            "w": 615,
+                            "h": 300,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "source": "<a href=\"http://www.socialflow.com\" rel=\"nofollow\">SocialFlow</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 70799317,
+            "id_str": "70799317",
+            "name": "UOL",
+            "screen_name": "UOL",
+            "location": "Brasil",
+            "description": "Perfil oficial do UOL. Acompanhe em tempo real as manchetes do maior provedor de conteúdo em língua portuguesa do mundo.",
+            "url": "http://t.co/w6eEBBFJKp",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "http://t.co/w6eEBBFJKp",
+                            "expanded_url": "http://www.uol.com.br/",
+                            "display_url": "uol.com.br",
+                            "indices": [
+                                0,
+                                22
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 1077521,
+            "friends_count": 153,
+            "listed_count": 2784,
+            "created_at": "Tue Sep 01 22:02:44 +0000 2009",
+            "favourites_count": 480,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": false,
+            "verified": true,
+            "statuses_count": 297017,
+            "lang": "pt",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "E6E6E6",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/1019988631937798144/4Q0bhWyl_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/1019988631937798144/4Q0bhWyl_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/70799317/1542734125",
+            "profile_link_color": "990000",
+            "profile_sidebar_border_color": "FFFFFF",
+            "profile_sidebar_fill_color": "F4F3EF",
+            "profile_text_color": "000000",
+            "profile_use_background_image": true,
+            "has_extended_profile": false,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 0,
+        "favorite_count": 5,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "pt"
+    },
+    {
+        "created_at": "Fri Dec 28 13:09:41 +0000 2018",
+        "id": 1078639123366404097,
+        "id_str": "1078639123366404097",
+        "text": "Netanyahu faz 1ª visita ao Brasil enquanto enfrenta acusações de corrupção https://t.co/WkD0zAhmdM https://t.co/1KaIZinHW2",
+        "truncated": false,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": [
+                {
+                    "url": "https://t.co/WkD0zAhmdM",
+                    "expanded_url": "https://trib.al/weVQG8Y",
+                    "display_url": "trib.al/weVQG8Y",
+                    "indices": [
+                        75,
+                        98
+                    ]
+                }
+            ],
+            "media": [
+                {
+                    "id": 1078639121562775552,
+                    "id_str": "1078639121562775552",
+                    "indices": [
+                        99,
+                        122
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/DvgYkPGWsAA9UFa.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/DvgYkPGWsAA9UFa.jpg",
+                    "url": "https://t.co/1KaIZinHW2",
+                    "display_url": "pic.twitter.com/1KaIZinHW2",
+                    "expanded_url": "https://twitter.com/UOL/status/1078639123366404097/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "small": {
+                            "w": 680,
+                            "h": 382,
+                            "resize": "fit"
+                        },
+                        "large": {
+                            "w": 750,
+                            "h": 421,
+                            "resize": "fit"
+                        },
+                        "medium": {
+                            "w": 750,
+                            "h": 421,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "extended_entities": {
+            "media": [
+                {
+                    "id": 1078639121562775552,
+                    "id_str": "1078639121562775552",
+                    "indices": [
+                        99,
+                        122
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/DvgYkPGWsAA9UFa.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/DvgYkPGWsAA9UFa.jpg",
+                    "url": "https://t.co/1KaIZinHW2",
+                    "display_url": "pic.twitter.com/1KaIZinHW2",
+                    "expanded_url": "https://twitter.com/UOL/status/1078639123366404097/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "small": {
+                            "w": 680,
+                            "h": 382,
+                            "resize": "fit"
+                        },
+                        "large": {
+                            "w": 750,
+                            "h": 421,
+                            "resize": "fit"
+                        },
+                        "medium": {
+                            "w": 750,
+                            "h": 421,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "source": "<a href=\"http://www.socialflow.com\" rel=\"nofollow\">SocialFlow</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 70799317,
+            "id_str": "70799317",
+            "name": "UOL",
+            "screen_name": "UOL",
+            "location": "Brasil",
+            "description": "Perfil oficial do UOL. Acompanhe em tempo real as manchetes do maior provedor de conteúdo em língua portuguesa do mundo.",
+            "url": "http://t.co/w6eEBBFJKp",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "http://t.co/w6eEBBFJKp",
+                            "expanded_url": "http://www.uol.com.br/",
+                            "display_url": "uol.com.br",
+                            "indices": [
+                                0,
+                                22
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 1077521,
+            "friends_count": 153,
+            "listed_count": 2784,
+            "created_at": "Tue Sep 01 22:02:44 +0000 2009",
+            "favourites_count": 480,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": false,
+            "verified": true,
+            "statuses_count": 297017,
+            "lang": "pt",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "E6E6E6",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/1019988631937798144/4Q0bhWyl_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/1019988631937798144/4Q0bhWyl_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/70799317/1542734125",
+            "profile_link_color": "990000",
+            "profile_sidebar_border_color": "FFFFFF",
+            "profile_sidebar_fill_color": "F4F3EF",
+            "profile_text_color": "000000",
+            "profile_use_background_image": true,
+            "has_extended_profile": false,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 7,
+        "favorite_count": 20,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "pt"
+    },
+    {
+        "created_at": "Fri Dec 28 13:04:26 +0000 2018",
+        "id": 1078637802613559303,
+        "id_str": "1078637802613559303",
+        "text": "Retrospectiva 2018: Eleição foi marcada por erros em pesquisas e prevalência de redes sociais… https://t.co/I0w9B0nqB5",
+        "truncated": true,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": [
+                {
+                    "url": "https://t.co/I0w9B0nqB5",
+                    "expanded_url": "https://twitter.com/i/web/status/1078637802613559303",
+                    "display_url": "twitter.com/i/web/status/1…",
+                    "indices": [
+                        95,
+                        118
+                    ]
+                }
+            ]
+        },
+        "source": "<a href=\"http://www.socialflow.com\" rel=\"nofollow\">SocialFlow</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 70799317,
+            "id_str": "70799317",
+            "name": "UOL",
+            "screen_name": "UOL",
+            "location": "Brasil",
+            "description": "Perfil oficial do UOL. Acompanhe em tempo real as manchetes do maior provedor de conteúdo em língua portuguesa do mundo.",
+            "url": "http://t.co/w6eEBBFJKp",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "http://t.co/w6eEBBFJKp",
+                            "expanded_url": "http://www.uol.com.br/",
+                            "display_url": "uol.com.br",
+                            "indices": [
+                                0,
+                                22
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 1077521,
+            "friends_count": 153,
+            "listed_count": 2784,
+            "created_at": "Tue Sep 01 22:02:44 +0000 2009",
+            "favourites_count": 480,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": false,
+            "verified": true,
+            "statuses_count": 297017,
+            "lang": "pt",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "E6E6E6",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/1019988631937798144/4Q0bhWyl_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/1019988631937798144/4Q0bhWyl_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/70799317/1542734125",
+            "profile_link_color": "990000",
+            "profile_sidebar_border_color": "FFFFFF",
+            "profile_sidebar_fill_color": "F4F3EF",
+            "profile_text_color": "000000",
+            "profile_use_background_image": true,
+            "has_extended_profile": false,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 1,
+        "favorite_count": 4,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "pt"
+    },
+    {
+        "created_at": "Fri Dec 28 13:00:58 +0000 2018",
+        "id": 1078636926733819904,
+        "id_str": "1078636926733819904",
+        "text": "Da @RedeTV: Suspeito de estuprar e engravidar sobrinha de 14 anos oferecia dinheiro e comida https://t.co/1VZTYHKge3 https://t.co/kbciQ07k1r",
+        "truncated": false,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [
+                {
+                    "screen_name": "RedeTV",
+                    "name": "RedeTV!",
+                    "id": 17850880,
+                    "id_str": "17850880",
+                    "indices": [
+                        3,
+                        10
+                    ]
+                }
+            ],
+            "urls": [
+                {
+                    "url": "https://t.co/1VZTYHKge3",
+                    "expanded_url": "https://trib.al/Gw4ocZf",
+                    "display_url": "trib.al/Gw4ocZf",
+                    "indices": [
+                        93,
+                        116
+                    ]
+                }
+            ],
+            "media": [
+                {
+                    "id": 1078636925114896384,
+                    "id_str": "1078636925114896384",
+                    "indices": [
+                        117,
+                        140
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/DvgWkYsX0AAXq9s.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/DvgWkYsX0AAXq9s.jpg",
+                    "url": "https://t.co/kbciQ07k1r",
+                    "display_url": "pic.twitter.com/kbciQ07k1r",
+                    "expanded_url": "https://twitter.com/UOL/status/1078636926733819904/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "medium": {
+                            "w": 575,
+                            "h": 361,
+                            "resize": "fit"
+                        },
+                        "small": {
+                            "w": 575,
+                            "h": 361,
+                            "resize": "fit"
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "large": {
+                            "w": 575,
+                            "h": 361,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "extended_entities": {
+            "media": [
+                {
+                    "id": 1078636925114896384,
+                    "id_str": "1078636925114896384",
+                    "indices": [
+                        117,
+                        140
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/DvgWkYsX0AAXq9s.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/DvgWkYsX0AAXq9s.jpg",
+                    "url": "https://t.co/kbciQ07k1r",
+                    "display_url": "pic.twitter.com/kbciQ07k1r",
+                    "expanded_url": "https://twitter.com/UOL/status/1078636926733819904/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "medium": {
+                            "w": 575,
+                            "h": 361,
+                            "resize": "fit"
+                        },
+                        "small": {
+                            "w": 575,
+                            "h": 361,
+                            "resize": "fit"
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "large": {
+                            "w": 575,
+                            "h": 361,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "source": "<a href=\"http://www.socialflow.com\" rel=\"nofollow\">SocialFlow</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 70799317,
+            "id_str": "70799317",
+            "name": "UOL",
+            "screen_name": "UOL",
+            "location": "Brasil",
+            "description": "Perfil oficial do UOL. Acompanhe em tempo real as manchetes do maior provedor de conteúdo em língua portuguesa do mundo.",
+            "url": "http://t.co/w6eEBBFJKp",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "http://t.co/w6eEBBFJKp",
+                            "expanded_url": "http://www.uol.com.br/",
+                            "display_url": "uol.com.br",
+                            "indices": [
+                                0,
+                                22
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 1077521,
+            "friends_count": 153,
+            "listed_count": 2784,
+            "created_at": "Tue Sep 01 22:02:44 +0000 2009",
+            "favourites_count": 480,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": false,
+            "verified": true,
+            "statuses_count": 297017,
+            "lang": "pt",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "E6E6E6",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/1019988631937798144/4Q0bhWyl_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/1019988631937798144/4Q0bhWyl_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/70799317/1542734125",
+            "profile_link_color": "990000",
+            "profile_sidebar_border_color": "FFFFFF",
+            "profile_sidebar_fill_color": "F4F3EF",
+            "profile_text_color": "000000",
+            "profile_use_background_image": true,
+            "has_extended_profile": false,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 0,
+        "favorite_count": 4,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "pt"
+    }
+]

@@ -15,7 +15,7 @@ public class ActivityIndicator: SharedSequenceConvertibleType {
     public typealias SharingStrategy = DriverSharingStrategy
     
     private let _lock = NSRecursiveLock()
-    private let _variable = Variable(false)
+    private var _variable = BehaviorRelay<Bool>(value: false)
     private let _loading: SharedSequence<SharingStrategy, Bool>
     
     public init() {
@@ -36,13 +36,13 @@ public class ActivityIndicator: SharedSequenceConvertibleType {
     
     private func subscribed() {
         _lock.lock()
-        _variable.value = true
+        _variable.accept(true)
         _lock.unlock()
     }
     
     private func sendStopLoading() {
         _lock.lock()
-        _variable.value = false
+        _variable.accept(false)
         _lock.unlock()
     }
     

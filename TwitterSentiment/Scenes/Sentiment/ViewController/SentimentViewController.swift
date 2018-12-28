@@ -9,7 +9,7 @@
 import UIKit
 import Utility
 
-class SentimentViewController: ViewController<SentimentView>, BindableType {
+final class SentimentViewController: ViewController<SentimentView>, BindableType {
     
     // MARK: Var
     

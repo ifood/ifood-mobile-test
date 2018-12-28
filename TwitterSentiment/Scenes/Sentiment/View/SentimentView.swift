@@ -10,8 +10,6 @@ import UIKit
 import Utility
 import Domain
 import Resources
-import RxCocoa
-import RxSwift
 
 class SentimentView: View {
     
@@ -21,7 +19,7 @@ class SentimentView: View {
     lazy var container = View(with: Customization().backgroundColor(.clear))
     lazy var background = UIVisualEffectView(backgroundColor: .white, alpha: 0.9)
     lazy var emojiLabel = Label(with: Customization().font(.systemFont(ofSize: 70)))
-    lazy var titleLabel = Label(with: Customization().titleColor(.black).font(.boldSystemFont(ofSize: 14)).numberOfLines(0).alignment(.center))
+    lazy var titleLabel = Label(with: Customization().titleColor(.black).font(.systemFont(ofSize: 12)).numberOfLines(0).alignment(.center))
     lazy var closeButton = Button(with: Customization().image(Asset.iconCloseX.image))
     
     // MARK: Init
@@ -31,21 +29,18 @@ class SentimentView: View {
     }
     
     override func initSubviews() {
+        self.addSubview(background)
         self.addSubview(container)
-        container.addSubview(background)
         container.addSubview(emojiLabel)
         container.addSubview(titleLabel)
         self.addSubview(closeButton)
-        self.addSubview(indicator)
+        container.addSubview(indicator)
         self.indicator.hidesWhenStopped = true
     }
     
     override func initConstraints() {
-        self.indicator.snp.makeConstraints { (make) in
-            make.center.equalToSuperview()
-        }
         self.container.snp.makeConstraints { (make) in
-            make.top.left.right.bottom.equalToSuperview()
+            make.center.equalToSuperview()
         }
         self.closeButton.snp.makeConstraints { (make) in
             make.top.left.equalToSuperview().inset(20)
@@ -60,6 +55,9 @@ class SentimentView: View {
         self.titleLabel.snp.makeConstraints { (make) in
             make.left.right.equalToSuperview().inset(40)
             make.top.equalTo(emojiLabel.snp.bottom).offset(10)
+        }
+        self.indicator.snp.makeConstraints { (make) in
+            make.center.equalToSuperview()
         }
     }
     

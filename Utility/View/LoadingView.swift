@@ -56,7 +56,7 @@ public class LoadingView: View {
     
     // MARK: Var
     
-    var activity: UIActivityIndicatorView
+    lazy var activity = UIActivityIndicatorView(style: .gray)
     lazy var blurredView = BlurredView()
     var isLoading = false
     
@@ -70,8 +70,7 @@ public class LoadingView: View {
     
     // MARK: Init
     
-    public init(with style: UIActivityIndicatorView.Style = .white) {
-        self.activity = UIActivityIndicatorView(style: style)
+    public override init() {
         super.init()
     }
     

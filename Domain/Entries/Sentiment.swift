@@ -23,6 +23,15 @@ public struct SentimentOutput {
     public let color: UIColor
 }
 
+extension SentimentOutput: Equatable {
+    public static func ==(lhs: SentimentOutput, rhs: SentimentOutput) -> Bool {
+        return lhs.sentiment == rhs.sentiment &&
+                lhs.emoji == rhs.emoji &&
+                lhs.text == rhs.text &&
+                lhs.color == rhs.color
+    }
+}
+
 private func color(_ sentiment: Sentiment) -> UIColor {
     switch sentiment {
     case .happy:

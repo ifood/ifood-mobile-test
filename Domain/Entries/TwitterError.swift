@@ -8,6 +8,7 @@
 
 import Foundation
 import Resources
+import Moya
 
 public struct TwitterErrors: Codable {
     public let errors: [TwitterError]
@@ -17,8 +18,10 @@ public struct TwitterErrors: Codable {
         switch code {
         case 50:
             return L10n.FindUser.userNotFound
+        case 34:
+            return L10n.TwitterError.couldNotLoadPage
         default:
-            return L10n.RequestError.unknownError
+            return errors.errors.first?.message ?? L10n.RequestError.unknownError
         }
     }
 }
@@ -26,4 +29,35 @@ public struct TwitterErrors: Codable {
 public struct TwitterError: Codable {
     public let message: String
     public let code: Int
+}
+
+public enum TwitterMoyaError: Swift.Error {
+    case twitterError(Response)
+    case testError(TwitterErrors)
+}
+
+public extension TwitterMoyaError {
+    var response: Moya.Response? {
+        switch self {
+        case .twitterError(let response):
+            return response
+        case .testError:
+            return nil
+        }
+    }
+}
+
+extension TwitterMoyaError: LocalizedError {
+    public var errorDescription: String? {
+        switch self {
+        case .twitterError(let response):
+            do {
+                return TwitterErrors.handleTwitterError(try response.map(TwitterErrors.self))
+            } catch let error {
+                return error.localizedDescription
+            }
+        case .testError(let errors):
+            return TwitterErrors.handleTwitterError(errors)
+        }
+    }
 }
