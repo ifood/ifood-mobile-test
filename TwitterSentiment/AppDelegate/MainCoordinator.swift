@@ -6,7 +6,7 @@
 //  Copyright © 2018 Jean Vinge. All rights reserved.
 //
 
-import Network
+import NetworkPlatform
 import Utility
 
 enum MainRoute {

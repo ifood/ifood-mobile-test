@@ -8,9 +8,9 @@
 
 import UIKit
 import RxCocoa
-import RxKeyboard
 import Resources
 import Utility
+import RxKeyboard
 
 class InputView: View {
     

@@ -6,7 +6,7 @@
 //  Copyright © 2018 Atlas Politico. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 extension NSObject {
     class var className: String {

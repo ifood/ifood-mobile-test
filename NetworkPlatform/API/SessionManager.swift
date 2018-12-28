@@ -40,7 +40,7 @@ extension TargetType {
     }
 }
 
-struct Network {
+struct NetworkProvider {
 
     // MARK: Var
 
@@ -56,7 +56,7 @@ struct Network {
         } else {
             switch Environment.env {
             case .test, .uiTest:
-                self.provider = Network.stubProvider()
+                self.provider = NetworkProvider.stubProvider()
             default:
                 self.provider = MoyaProvider<MultiTarget>(manager: SessionManager(), plugins: [NetworkLoggerPlugin(verbose: true, responseDataFormatter: Data().JSONPretty)])
             }
@@ -77,6 +77,6 @@ struct Network {
     }
 
     static func stubProvider() -> MoyaProvider<MultiTarget> {
-        return Network.stubProvider(closure: Network.endPointClosure(statusCode: 200))
+        return NetworkProvider.stubProvider(closure: NetworkProvider.endPointClosure(statusCode: 200))
     }
 }

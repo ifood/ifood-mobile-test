@@ -7,11 +7,9 @@
 //
 
 import Domain
-import Network
+import NetworkPlatform
 import Utility
 import Resources
-import RxSwift
-import RxCocoa
 
 enum TweetListRouter {
     case analizeSentiment(tweet: Tweet)

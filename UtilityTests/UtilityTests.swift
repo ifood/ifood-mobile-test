@@ -1,15 +1,15 @@
 //
-//  DomainTests.swift
-//  DomainTests
+//  UtilityTests.swift
+//  UtilityTests
 //
 //  Created by Jean Vinge on 27/12/18.
 //  Copyright © 2018 Jean Vinge. All rights reserved.
 //
 
 import XCTest
-@testable import Domain
+@testable import Utility
 
-class DomainTests: XCTestCase {
+class UtilityTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.

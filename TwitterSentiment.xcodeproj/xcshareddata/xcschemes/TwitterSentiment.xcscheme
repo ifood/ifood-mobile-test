@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "39B5284F21D1400D00049230"
+               BlueprintIdentifier = "391D63C321D5A5BD009004E9"
                BuildableName = "TwitterSentiment.app"
                BlueprintName = "TwitterSentiment"
                ReferencedContainer = "container:TwitterSentiment.xcodeproj">
@@ -23,7 +23,7 @@
       </BuildActionEntries>
    </BuildAction>
    <TestAction
-      buildConfiguration = "Dev"
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
@@ -32,7 +32,27 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "39B5296321D42D9E00049230"
+               BlueprintIdentifier = "391D656B21D5AE1D009004E9"
+               BuildableName = "TwitterSentimentTests.xctest"
+               BlueprintName = "TwitterSentimentTests"
+               ReferencedContainer = "container:TwitterSentiment.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "391D63D721D5A5BE009004E9"
+               BuildableName = "TwitterSentimentUITests.xctest"
+               BlueprintName = "TwitterSentimentUITests"
+               ReferencedContainer = "container:TwitterSentiment.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "391D640B21D5A672009004E9"
                BuildableName = "DomainTests.xctest"
                BlueprintName = "DomainTests"
                ReferencedContainer = "container:TwitterSentiment.xcodeproj">
@@ -42,7 +62,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "39B5298A21D42DC400049230"
+               BlueprintIdentifier = "391D642D21D5A67B009004E9"
                BuildableName = "NetworkTests.xctest"
                BlueprintName = "NetworkTests"
                ReferencedContainer = "container:TwitterSentiment.xcodeproj">
@@ -52,9 +72,29 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3974060121D4350E002E4DA5"
+               BlueprintIdentifier = "391D644F21D5A682009004E9"
                BuildableName = "UtilityTests.xctest"
                BlueprintName = "UtilityTests"
+               ReferencedContainer = "container:TwitterSentiment.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "391D647121D5A68C009004E9"
+               BuildableName = "ResourcesTests.xctest"
+               BlueprintName = "ResourcesTests"
+               ReferencedContainer = "container:TwitterSentiment.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "39D1330D21D644D800A8A62D"
+               BuildableName = "NetworkPlatformTests.xctest"
+               BlueprintName = "NetworkPlatformTests"
                ReferencedContainer = "container:TwitterSentiment.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -62,7 +102,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "39B5284F21D1400D00049230"
+            BlueprintIdentifier = "391D63C321D5A5BD009004E9"
             BuildableName = "TwitterSentiment.app"
             BlueprintName = "TwitterSentiment"
             ReferencedContainer = "container:TwitterSentiment.xcodeproj">
@@ -72,7 +112,7 @@
       </AdditionalOptions>
    </TestAction>
    <LaunchAction
-      buildConfiguration = "Dev"
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
@@ -85,7 +125,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "39B5284F21D1400D00049230"
+            BlueprintIdentifier = "391D63C321D5A5BD009004E9"
             BuildableName = "TwitterSentiment.app"
             BlueprintName = "TwitterSentiment"
             ReferencedContainer = "container:TwitterSentiment.xcodeproj">
@@ -104,7 +144,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "39B5284F21D1400D00049230"
+            BlueprintIdentifier = "391D63C321D5A5BD009004E9"
             BuildableName = "TwitterSentiment.app"
             BlueprintName = "TwitterSentiment"
             ReferencedContainer = "container:TwitterSentiment.xcodeproj">
@@ -112,10 +152,10 @@
       </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
-      buildConfiguration = "Dev">
+      buildConfiguration = "Debug">
    </AnalyzeAction>
    <ArchiveAction
-      buildConfiguration = "Dev"
+      buildConfiguration = "Release"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

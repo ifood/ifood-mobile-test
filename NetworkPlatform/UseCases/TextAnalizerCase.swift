@@ -7,6 +7,7 @@
 //
 
 import RxSwift
+import Moya
 import Domain
 
 public struct TextAnalizerUseCase: Domain.TextAnalizerUseCase {

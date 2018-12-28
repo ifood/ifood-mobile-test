@@ -1,12 +1,8 @@
 platform :ios, '10.0'
-
-def shared
-end
-
-def objectiveC
-end
+use_frameworks!
 
 def rxLibs
+  pod 'Moya/RxSwift'
     pod 'RxSwift'
     pod 'RxCocoa'
     pod 'RxDataSources'
@@ -14,13 +10,7 @@ def rxLibs
     pod 'RxKeyboard'
 end
 
-def network
-  pod 'Moya/RxSwift'
-end
-
 def libs
-  shared
-  objectiveC
   rxLibs
   pod 'SnapKit'
   pod 'Kingfisher'
@@ -34,8 +24,19 @@ def lib_tests
   pod 'RxTest'
 end
 
+target 'TwitterSentiment' do
+  libs
+   target 'TwitterSentimentTests' do
+     inherit! :search_paths
+     lib_tests
+   end
+  target 'TwitterSentimentUITests' do
+    inherit! :search_paths
+    lib_tests
+  end
+end
+
 target 'Domain' do
-  use_frameworks!
   libs
   target 'DomainTests' do
     inherit! :search_paths
@@ -43,19 +44,15 @@ target 'Domain' do
   end
 end
 
-target 'Network' do
-  use_frameworks!
-  network
+target 'NetworkPlatform' do
   libs
-  target 'NetworkTests' do
+  target 'NetworkPlatformTests' do
     inherit! :search_paths
     lib_tests
   end
 end
 
 target 'Utility' do
-  use_frameworks!
-  network
   libs
   target 'UtilityTests' do
     inherit! :search_paths
@@ -64,19 +61,8 @@ target 'Utility' do
 end
 
 target 'Resources' do
-  use_frameworks!
-end
-
-target 'TwitterSentiment' do
-  use_frameworks!
-  libs
-  target 'TwitterSentimentTests' do
+  target 'ResourcesTests' do
     inherit! :search_paths
     lib_tests
   end
-  target 'TwitterSentimentUITests' do
-    inherit! :search_paths
-    lib_tests
-  end
-
 end

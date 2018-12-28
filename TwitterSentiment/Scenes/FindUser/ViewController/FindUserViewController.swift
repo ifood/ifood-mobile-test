@@ -11,7 +11,6 @@ import RxSwift
 import RxCocoa
 import Utility
 import Network
-import RxKeyboard
 
 final class FindUserViewController: ViewController<FindUserView>, BindableType {
 

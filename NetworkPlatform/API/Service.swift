@@ -12,16 +12,22 @@ import RxCocoa
 import Alamofire
 import Domain
 
+extension Moya.Endpoint {
+    public convenience init(multiTarget: MultiTarget, sampleClosure: @escaping Moya.Endpoint.SampleResponseClosure) {
+        self.init(url: multiTarget.target.path, sampleResponseClosure: sampleClosure, method: multiTarget.target.method, task: multiTarget.target.task, httpHeaderFields: multiTarget.target.headers)
+    }
+}
+
 protocol ServiceType {
-    var network: Network { get set }
+    var network: NetworkProvider { get set }
 }
 
 final class Service: NSObject, ServiceType {
 
-    var network: Network
+    var network: NetworkProvider
 
     init(_ provider: MoyaProvider<MultiTarget>? = nil) {
-        self.network = Network(provider: provider)
+        self.network = NetworkProvider(provider: provider)
     }
 
     func request(endpoint: TargetType) -> Single<Response> {

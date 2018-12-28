@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:ifood-mobile-test.xcodeproj">
+      location = "self:TwitterSentiment.xcodeproj">
    </FileRef>
 </Workspace>
