@@ -1,0 +1,8 @@
+coverage_service: cobertura_xml
+xcodeproj: TwitterSentiment.xcodeproj
+scheme: TwitterSentiment
+configuration: TestedConfiguration
+source_directory: /
+output_directory: test/reports/
+ignore:
+  - Pods/*

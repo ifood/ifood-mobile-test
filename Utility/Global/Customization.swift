@@ -17,51 +17,28 @@ public class Customization: NSObject {
 
     // MARK: Var
 
-    var text: String
-    var placeholder: String
-    var titleColor: UIColor
-    var backgroundColor: UIColor
-    var font: UIFont
+    var text: String = ""
+    var placeholder: String = ""
+    var titleColor: UIColor = .systemBlue
+    var backgroundColor: UIColor = .clear
+    var font: UIFont = .systemFont(ofSize: 12)
     var image: UIImage?
-    var alignment: NSTextAlignment
-    var numberOfLines: Int
-    var adjustsFontSizeToFitWidth: Bool
-    var keyboardType: UIKeyboardType
-    var isSecureTextEntry: Bool
-    var returnKeyType: UIReturnKeyType
-    var autocorrectionType: UITextAutocorrectionType
-    var autocapitalizationType: UITextAutocapitalizationType
-    var lineSpacing: CGFloat
-    var spaceBetweenLetters: CGFloat
-    var imageControls: [ImageControlState]
+    var alignment: NSTextAlignment = .left
+    var numberOfLines: Int = 1
+    var adjustsFontSizeToFitWidth: Bool = false
+    var keyboardType: UIKeyboardType = .asciiCapable
+    var isSecureTextEntry: Bool = false
+    var returnKeyType: UIReturnKeyType = .send
+    var autocorrectionType: UITextAutocorrectionType = .default
+    var autocapitalizationType: UITextAutocapitalizationType = .allCharacters
+    var lineSpacing: CGFloat = 0
+    var spaceBetweenLetters: CGFloat = 0
+    var imageControls: [ImageControlState] = []
 
-    var cornerRadius: CGFloat
-    var masksToBounds: Bool
+    var cornerRadius: CGFloat = 0
+    var masksToBounds: Bool = false
 
     // MARK: Init
-
-    public init(text: String = "", placeholder: String = "", titleColor: UIColor = .systemBlue, backgroundColor: UIColor = .clear, font: UIFont = .systemFont(ofSize: 12), image: UIImage? = nil, alignment: NSTextAlignment = .left, numberOfLines: Int = 1, adjustsFontSizeToFitWidth: Bool = false, keyboardType: UIKeyboardType = .asciiCapable, isSecureTextEntry: Bool = false, returnKeyType: UIReturnKeyType = .send, autocorrectionType: UITextAutocorrectionType = .default, autocapitalizationType: UITextAutocapitalizationType = .allCharacters, lineSpacing: CGFloat = 0.0, spaceBetweenLetters: CGFloat = 0.0, cornerRadius: CGFloat = 0.0, masksToBounds: Bool = false, imageControls: [ImageControlState] = []) {
-        self.text = text
-        self.placeholder = placeholder
-        self.titleColor = titleColor
-        self.backgroundColor = backgroundColor
-        self.font = font
-        self.image = image
-        self.alignment = alignment
-        self.numberOfLines = numberOfLines
-        self.adjustsFontSizeToFitWidth = adjustsFontSizeToFitWidth
-        self.keyboardType = keyboardType
-        self.isSecureTextEntry = isSecureTextEntry
-        self.returnKeyType = returnKeyType
-        self.autocorrectionType = autocorrectionType
-        self.autocapitalizationType = autocapitalizationType
-        self.lineSpacing = lineSpacing
-        self.spaceBetweenLetters = spaceBetweenLetters
-        self.imageControls = imageControls
-
-        self.cornerRadius = cornerRadius
-        self.masksToBounds = masksToBounds
-    }
 
     @discardableResult
     public func text(_ text: String) -> Customization {

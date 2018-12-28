@@ -13,17 +13,17 @@ class TweetListView: View {
     
     // MARK: Var
     
-    lazy var collectionView = CollectionView()
+    lazy var tableView = TableView()
 
     // MARK: Init
     
     override func initSubviews() {
-        self.addSubview(collectionView)
-        self.collectionView.setupRefreshControl()
+        self.addSubview(tableView)
+        self.tableView.setupRefreshControl()
     }
     
     override func initConstraints() {
-        collectionView.snp.makeConstraints { (make) in
+        tableView.snp.makeConstraints { (make) in
             make.top.left.right.bottom.equalToSuperview()
         }
     }
