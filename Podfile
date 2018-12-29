@@ -21,7 +21,7 @@ end
 
 def lib_tests
   pod 'RxBlocking'
-  pod 'RxTest'
+  pod 'RxTest', "~> 4.4.0"
 end
 
 target 'TwitterSentiment' do

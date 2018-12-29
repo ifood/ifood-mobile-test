@@ -45,7 +45,7 @@ DEPENDENCIES:
   - RxDataSources
   - RxKeyboard
   - RxSwift
-  - RxTest
+  - RxTest (~> 4.4.0)
   - SnapKit
   - SwiftGen
   - SwiftLint
@@ -89,6 +89,6 @@ SPEC CHECKSUMS:
   SwiftGen: e5b047067aa84082826a0c4f1c4c2ddc95bcf74c
   SwiftLint: 47df60bdea6e7e902b193b6596db8683aafd86a3
 
-PODFILE CHECKSUM: 51a20931c9e2557240fd1a94a35146d4cf5297a3
+PODFILE CHECKSUM: d9415131750badeb785a57f6341526863156bf0c
 
 COCOAPODS: 1.6.0.beta.2
