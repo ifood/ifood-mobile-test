@@ -5,10 +5,7 @@ branches:
     - master
 cache:
   - bundler
-  - cocoapods
 podfile: ifood-mobile-test/Podfile
-before_install:
-  - gem install cocoapods --no-rdoc --no-ri --no-document --quiet
   - pod install
 env:
   global:
