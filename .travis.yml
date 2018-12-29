@@ -6,7 +6,8 @@ branches:
 cache:
   - bundler
 podfile: ifood-mobile-test/Podfile
-  - pod install
+before_install:
+  - bundle exec pod install
 env:
   global:
   - LC_CTYPE=en_US.UTF-8
