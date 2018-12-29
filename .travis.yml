@@ -9,11 +9,11 @@ env:
   - LC_CTYPE=en_US.UTF-8
   - LANG=en_US.UTF-8
   - WORKSPACE=TwitterSentiment.xcworkspace
-  - SCHEME="TwitterSentiment"
+  - SCHEME_NAME="TwitterSentiment"
   matrix:
-    - DESTINATION="OS=12.1,name=iPhone XS"       SCHEME="$SCHEME" RUN_TESTS="YES" BUILD="YES"
-    - DESTINATION="OS=11.4,name=iPhone X"        SCHEME="$SCHEME" RUN_TESTS="YES" BUILD="YES"
-    - DESTINATION="OS=10.3.1,name=iPhone 7 Plus" SCHEME="$SCHEME" RUN_TESTS="YES" BUILD="YES"
+    - DESTINATION="OS=12.1,name=iPhone XS"       SCHEME="$SCHEME_NAME" RUN_TESTS="YES" BUILD="YES"
+    - DESTINATION="OS=11.4,name=iPhone X"        SCHEME="$SCHEME_NAME" RUN_TESTS="YES" BUILD="YES"
+    - DESTINATION="OS=10.3.1,name=iPhone 7 Plus" SCHEME="$SCHEME_NAME" RUN_TESTS="YES" BUILD="YES"
 script:
   - set -o pipefail
   - xcodebuild -version
