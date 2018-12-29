@@ -9,6 +9,10 @@
 import XCTest
 import Resources
 
+func exists(shouldExist: Bool) -> NSPredicate {
+    return NSPredicate(format: "exists == \(shouldExist == true ? 1 : 0)")
+}
+
 class FindUserUITests: XCTestCase {
 
     override func setUp() {
@@ -24,20 +28,16 @@ class FindUserUITests: XCTestCase {
         app.buttons["icon search"].tap()
         
         let tableView = app.tables
-        expectation(for: NSPredicate(format: "exists == 1"), evaluatedWith: tableView, handler: nil)
+        expectation(for: exists(shouldExist: true), evaluatedWith: tableView, handler: nil)
         tableView.cells.element(boundBy: 5).tap()
         
-//        let isHittable = NSPredicate(format: "exists == 0")
-//        expectation(for: isHittable, evaluatedWith: app.activityIndicators.firstMatch, handler: nil)
+        expectation(for: exists(shouldExist: false), evaluatedWith: app.activityIndicators, handler: nil)
+        waitForExpectations(timeout: 5)
         app.buttons["icon close x"].tap()
         
         let tweetCloseButton = app.navigationBars.firstMatch.buttons["icon close"]
         tweetCloseButton.tap()
-//
-//        waitForExpectations(timeout: 3) { error in
-//            guard let error = error else { return }
-//            print(error.localizedDescription)
-//        }
+        waitForExpectations(timeout: 2)
     }
 
 }

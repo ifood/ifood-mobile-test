@@ -1908,7 +1908,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}\"/SwiftLint/swiftlint autocorrect && \"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+			shellScript = "#\"${PODS_ROOT}\"/SwiftLint/swiftlint autocorrect && \"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 			showEnvVarsInLog = 0;
 		};
 		391D654021D5A8E1009004E9 /* SwiftGen */ = {
