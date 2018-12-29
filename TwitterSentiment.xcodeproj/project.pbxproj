@@ -91,6 +91,7 @@
 		391D657F21D5B211009004E9 /* Utility.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 391D644821D5A682009004E9 /* Utility.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		391D658221D5B211009004E9 /* Resources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 391D646A21D5A68C009004E9 /* Resources.framework */; };
 		391D658321D5B211009004E9 /* Resources.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 391D646A21D5A68C009004E9 /* Resources.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		39BC4F1721D7A60B007C15C9 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BC4F1621D7A60B007C15C9 /* Keys.swift */; };
 		39D1330F21D644D800A8A62D /* NetworkPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39D1330621D644D800A8A62D /* NetworkPlatform.framework */; };
 		39D1331821D644D800A8A62D /* NetworkPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 39D1330821D644D800A8A62D /* NetworkPlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		39D1331B21D644D800A8A62D /* NetworkPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39D1330621D644D800A8A62D /* NetworkPlatform.framework */; };
@@ -362,6 +363,7 @@
 		391D657021D5AE1E009004E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		391D658721D5B256009004E9 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		391D658921D5B2A9009004E9 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		39BC4F1621D7A60B007C15C9 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		39D132CB21D61FCC00A8A62D /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		39D132D521D6362A00A8A62D /* KeychainSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainSwift.framework; path = Carthage/Build/iOS/KeychainSwift.framework; sourceTree = "<group>"; };
 		39D132D721D6365C00A8A62D /* RxMoya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxMoya.framework; path = Carthage/Build/iOS/RxMoya.framework; sourceTree = "<group>"; };
@@ -909,6 +911,7 @@
 				391D652E21D5A86E009004E9 /* Customization.swift */,
 				391D653021D5A86E009004E9 /* Errors.swift */,
 				391D653121D5A86E009004E9 /* Typealias.swift */,
+				39BC4F1621D7A60B007C15C9 /* Keys.swift */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -2275,6 +2278,7 @@
 				391D652321D5A85D009004E9 /* LoadingView.swift in Sources */,
 				391D64FE21D5A84B009004E9 /* DateFormatter+Extensions.swift in Sources */,
 				39D1333721D64EA700A8A62D /* TableView.swift in Sources */,
+				39BC4F1721D7A60B007C15C9 /* Keys.swift in Sources */,
 				391D650421D5A84B009004E9 /* UIColor+Extensions.swift in Sources */,
 				391D650021D5A84B009004E9 /* UIVisualEffectView+Extensions.swift in Sources */,
 				391D652421D5A85D009004E9 /* View.swift in Sources */,

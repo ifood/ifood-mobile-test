@@ -7,10 +7,10 @@
 //
 
 import Moya
+import Utility
 
 enum TextAnalizerTargetType {
     case analize(text: String)
-    private var apiKey: String { return "AIzaSyDUQA28O_fRnLj8QLTKAAriJX-bprlq8wM" }
 }
 
 extension TextAnalizerTargetType: TargetType {
@@ -35,7 +35,7 @@ extension TextAnalizerTargetType: TargetType {
         switch self {
         case .analize(let text):
             let params = ["document": ["content": text, "type": "PLAIN_TEXT"], "encodingType": "UTF8"] as [String: Any]
-            return .requestCompositeParameters(bodyParameters: params, bodyEncoding: JSONEncoding.default, urlParameters: ["key": apiKey])
+            return .requestCompositeParameters(bodyParameters: params, bodyEncoding: JSONEncoding.default, urlParameters: ["key": GoogleAPIKey.apiKey])
         }
     }
 }

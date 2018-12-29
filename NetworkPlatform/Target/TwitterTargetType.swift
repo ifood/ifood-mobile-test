@@ -7,14 +7,12 @@
 //
 
 import Moya
+import Utility
 
 enum TwitterTargetType {
     case accessToken
     case latestTweets(username: String)
     case user(username: String)
-
-    private var clientKey: String { return "mrbecy5yseOOyu2yjp6SIb4po" }
-    private var clientSecret: String { return "tU2y3LdBXOnSShuwOPedrLzAVkpr5b7DTNarZSggOeGRX6Ncjb" }
 }
 
 extension TwitterTargetType: TargetType {
@@ -53,8 +51,7 @@ extension TwitterTargetType: TargetType {
     var headers: [String: String]? {
         switch self {
         case .accessToken:
-            let encoded = "\(clientKey):\(clientSecret)".data(using: .utf8)?.base64EncodedString() ?? ""
-            return ["Authorization": "Basic \(encoded)"]
+            return ["Authorization": "Basic \(TwitterKeys.encoded())"]
         default:
             return ["Authorization": "Bearer \(UserDefaults.getToken())"]
         }
