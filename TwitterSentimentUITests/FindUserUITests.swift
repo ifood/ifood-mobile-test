@@ -25,13 +25,14 @@ class FindUserUITests: XCTestCase {
         
         let tableView = app.tables
         
-        let predicate = NSPredicate(format: "exists == 1")
-        expectation(for: predicate, evaluatedWith: tableView, handler: nil)
+        let exists = NSPredicate(format: "exists == 1")
+        expectation(for: exists, evaluatedWith: tableView, handler: nil)
         
         tableView.cells.element(boundBy: 5).tap()
         
-        let sentimentCloseButton = app.label
-        expectation(for: predicate, evaluatedWith: sentimentCloseButton, handler: nil)
+        let isHittable = NSPredicate(format: "alpha == 1")
+        
+        expectation(for: isHittable, evaluatedWith: app.staticTexts.firstMatch, handler: nil)
         app.buttons["icon close x"].tap()
         
         let tweetCloseButton = app.navigationBars.firstMatch.buttons["icon close"]
