@@ -11,9 +11,9 @@ env:
   - WORKSPACE=TwitterSentiment.xcworkspace
   - SCHEME="TwitterSentiment"
   matrix:
-    - DESTINATION="OS=12.1,name=iPhone XS"       SCHEME="$SCHEME" RUN_TESTS="YES" BUILD_EXAMPLE="YES"
-    - DESTINATION="OS=11.4,name=iPhone X"        SCHEME="$SCHEME" RUN_TESTS="YES" BUILD_EXAMPLE="YES"
-    - DESTINATION="OS=10.3.1,name=iPhone 7 Plus" SCHEME="$SCHEME" RUN_TESTS="YES" BUILD_EXAMPLE="YES"
+    - DESTINATION="OS=12.1,name=iPhone XS"       SCHEME="$SCHEME" RUN_TESTS="YES" BUILD="YES"
+    - DESTINATION="OS=11.4,name=iPhone X"        SCHEME="$SCHEME" RUN_TESTS="YES" BUILD="YES"
+    - DESTINATION="OS=10.3.1,name=iPhone 7 Plus" SCHEME="$SCHEME" RUN_TESTS="YES" BUILD="YES"
 script:
   - set -o pipefail
   - xcodebuild -version
@@ -27,6 +27,6 @@ script:
     fi
 
   # Build Example in Debug if specified
-  - if [ $BUILD_EXAMPLE == "YES" ]; then
+  - if [ $BUILD == "YES" ]; then
       xcodebuild -workspace "$WORKSPACE" -scheme "$SCHEME" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO build | xcpretty;
     fi
