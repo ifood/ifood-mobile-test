@@ -14,14 +14,12 @@ env:
     - DESTINATION="OS=12.1,name=iPhone XS"       SCHEME="$SCHEME_NAME" RUN_TESTS="YES" BUILD="YES"
     - DESTINATION="OS=11.4,name=iPhone X"        SCHEME="$SCHEME_NAME" RUN_TESTS="YES" BUILD="YES"
     - DESTINATION="OS=10.3.1,name=iPhone 7 Plus" SCHEME="$SCHEME_NAME" RUN_TESTS="YES" BUILD="YES"
-  before_install:
-    - rvm install ruby-2.2.2
-    - gem install cocoapods
-    - gem install xcpretty -N
 script:
   - set -o pipefail
   - xcodebuild -version
   - xcodebuild -showsdks
+before_install:
+    - gem install cocoapods --no-rdoc --no-ri --no-document --quiet
 
   # Build Framework in Release and Run Tests if specified
   - if [ $RUN_TESTS == "YES" ]; then
