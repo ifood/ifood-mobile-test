@@ -21,7 +21,7 @@ class SentimentViewModelTests: XCTestCase {
     }
     
     private func createViewModel(tweet: Tweet, with useCase: TextAnalizerUseCaseMock) -> SentimentViewModel {
-        return SentimentViewModel(tweet: tweet, useCase: useCase, coordinator: Coordinator(SentimentViewController()))
+        return SentimentViewModel(tweet: tweet, useCase: useCase, router: ScreenRouter(SentimentViewController()))
     }
     
     let tweet = Tweet("1", text: "teste teste", user: TwitterUser("1", name: "test", screenName: "test", profileImageURL: URL(string: "www.fake.com.br")!), createdAt: Date())

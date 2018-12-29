@@ -11,16 +11,27 @@ import UIKit
 import RxSwift
 import NSObject_Rx
 
+public protocol CoordinatorProvider {
+    func start(window: UIWindow)
+}
+
+extension CoordinatorProvider {
+    public func rootViewController(in window: UIWindow, with viewController: UIViewController) {
+        window.rootViewController = viewController
+        window.makeKeyAndVisible()
+    }
+}
+
 public protocol Router {
     func present() -> Transition
 }
 
-public protocol CoordinatorProvider: class {
+public protocol RouterProvider: class {
     var rootViewController: UIViewController { get set }
     func transition(with router: Router) -> Observable<Void>
 }
 
-open class Coordinator: NSObject, CoordinatorProvider, Presenter {
+open class ScreenRouter: NSObject, RouterProvider, Presenter {
 
     // MARK: Var
 
@@ -39,7 +50,6 @@ open class Coordinator: NSObject, CoordinatorProvider, Presenter {
 }
 
 public enum Transition {
-    case rootController(window: UIWindow, viewController: UIViewController)
     case push(viewController: UIViewController)
     case present(viewController: UIViewController, animated: Bool)
     case dismiss(animated: Bool)
@@ -47,20 +57,16 @@ public enum Transition {
 }
 
 protocol Presenter {
-    func makeTransition(with coordinator: Coordinator, transition: Transition) -> Observable<Void>
+    func makeTransition(with coordinator: RouterProvider, transition: Transition) -> Observable<Void>
 }
 
 extension Presenter where Self: NSObject {
     @discardableResult
-    func makeTransition(with coordinator: Coordinator, transition: Transition) -> Observable<Void> {
+    func makeTransition(with coordinator: RouterProvider, transition: Transition) -> Observable<Void> {
 
         let subject = PublishSubject<Void>()
 
         switch transition {
-        case .rootController(let window, let viewController):
-            window.rootViewController = viewController
-            window.makeKeyAndVisible()
-            subject.onCompleted()
         case .push(let vc):
             coordinator.rootViewController.navigationController?.show(vc, sender: coordinator.rootViewController)
             coordinator.rootViewController.navigationController?.rx.didShow.map { _ in }.bind(to: subject).disposed(by: self.rx.disposeBag)

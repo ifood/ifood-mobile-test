@@ -12,20 +12,20 @@ import RxCocoa
 import Domain
 import Utility
 
-struct TweetListViewModel: ViewModelProtocol {
+struct TweetListViewModel: ViewModel {
     
     // MARK: Var
     
-    var coordinator: CoordinatorProvider
+    var router: RouterProvider
     var useCase: TwitterUseCase
     var user: TwitterUser
     
     // MARK: Init
     
-    init(user: TwitterUser, useCase: TwitterUseCase, coordinator: CoordinatorProvider) {
+    init(user: TwitterUser, useCase: TwitterUseCase, router: RouterProvider) {
         self.user = user
         self.useCase = useCase
-        self.coordinator = coordinator
+        self.router = router
     }
     
     func transform(input: Input) -> Output {
@@ -34,11 +34,11 @@ struct TweetListViewModel: ViewModelProtocol {
         
         let loadList = input.trigger.map { self.user }.flatMapLatest { user -> Driver<[Tweet]> in
             return self.useCase.latestTweets(from: user).trackActivity(activityIndicator).do(onError: { error in _ =
-                self.coordinator.transition(with: TweetListRouter.error(error: error))}).asDriverOnErrorJustComplete()
+                self.router.transition(with: TweetListRouter.error(error: error))}).asDriverOnErrorJustComplete()
             }.map { [TweetSectionModel(model: "", items: $0)] }
 
         let onTapTweet = input.onTapTweet.flatMapLatest { tweet -> Driver<Void> in
-            return self.coordinator.transition(with: TweetListRouter.analizeSentiment(tweet: tweet)).asDriverOnErrorJustComplete()
+            return self.router.transition(with: TweetListRouter.analizeSentiment(tweet: tweet)).asDriverOnErrorJustComplete()
         }
         return Output(tweetList: loadList, onTapTweet: onTapTweet, title: .just(self.user.decoratedUserName), fetching: activityIndicator.asDriver())
     }

@@ -13,13 +13,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // MARK: Var
     
-    var coordinator: MainCoordinator?
+    lazy var coordinator = MainCoordinator()
     let window = UIWindow(frame: UIScreen.main.bounds)
     
     // MARK: Init
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
-        self.coordinator = MainCoordinator(self.window)
+        self.coordinator.start(window: self.window)
         return true
     }
 }

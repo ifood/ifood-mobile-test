@@ -36,7 +36,7 @@ class BlurredView: View {
         UIView.animate(withDuration: 0.2, animations: { [weak self] in
             guard let self = self else { return }
             self.blurLayer.isHidden = false
-            self.blurLayer.effect = UIBlurEffect(style: UIBlurEffect.Style.light)
+            self.blurLayer.effect = UIBlurEffect(style: .light)
         }, completion: { completed in
             observable.onNext(completed)
         })

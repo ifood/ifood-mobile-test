@@ -13,10 +13,10 @@ end
 def libs
   rxLibs
   pod 'SnapKit'
-  pod 'Kingfisher'
   pod 'SwiftLint'
   pod 'SwiftGen'
   pod 'KeychainSwift'
+  pod 'AlamofireImage'
 end
 
 def lib_tests
@@ -30,10 +30,6 @@ target 'TwitterSentiment' do
      inherit! :search_paths
      lib_tests
    end
-#  target 'TwitterSentimentUITests' do
-#    inherit! :search_paths
-#    lib_tests
-#  end
 end
 
 target 'TwitterSentimentUITests' do

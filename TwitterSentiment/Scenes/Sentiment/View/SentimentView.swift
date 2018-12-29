@@ -18,7 +18,7 @@ class SentimentView: View {
     lazy var indicator = UIActivityIndicatorView(style: .gray)
     lazy var container = View(with: Customization().backgroundColor(.clear))
     lazy var background = UIVisualEffectView(backgroundColor: .white, alpha: 0.9)
-    lazy var emojiLabel = Label(with: Customization().font(.systemFont(ofSize: 70)))
+    lazy var emojiLabel = Label(with: Customization().font(.systemFont(ofSize: 70)).numberOfLines(0).alignment(.center))
     lazy var titleLabel = Label(with: Customization().titleColor(.black).font(.systemFont(ofSize: 12)).numberOfLines(0).alignment(.center))
     lazy var closeButton = Button(with: Customization().image(Asset.iconCloseX.image))
     
@@ -41,23 +41,24 @@ class SentimentView: View {
     override func initConstraints() {
         self.container.snp.makeConstraints { (make) in
             make.center.equalToSuperview()
+            make.left.right.equalToSuperview().inset(40)
         }
         self.closeButton.snp.makeConstraints { (make) in
             make.top.left.equalToSuperview().inset(20)
             make.height.width.equalTo(50)
         }
-        self.background.snp.makeConstraints { (make) in
-            make.top.left.right.bottom.equalToSuperview()
-        }
         self.emojiLabel.snp.makeConstraints { (make) in
-            make.center.equalToSuperview()
+            make.top.left.right.equalToSuperview()
         }
         self.titleLabel.snp.makeConstraints { (make) in
-            make.left.right.equalToSuperview().inset(40)
             make.top.equalTo(emojiLabel.snp.bottom).offset(10)
+            make.left.right.bottom.equalToSuperview()
         }
         self.indicator.snp.makeConstraints { (make) in
-            make.center.equalToSuperview()
+            make.top.left.right.bottom.equalToSuperview()
+        }
+        self.background.snp.makeConstraints { (make) in
+            make.top.left.right.bottom.equalToSuperview()
         }
     }
     

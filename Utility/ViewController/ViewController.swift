@@ -40,9 +40,15 @@ open class ViewController<T: UIView>: UIViewController, ConfigurableView {
         fatalError("init coder not implemented")
     }
 
-    public func initSubviews() {
+    open func initSubviews() {
     }
 
-    public func initConstraints() {
+    open func initConstraints() {
+    }
+    
+    open override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        self.view.setNeedsUpdateConstraints()
+        self.view.frame = UIScreen.main.bounds
     }
 }

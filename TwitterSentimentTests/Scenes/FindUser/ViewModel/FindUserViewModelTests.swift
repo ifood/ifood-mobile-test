@@ -20,7 +20,7 @@ class FindUserViewModelTests: XCTestCase {
     }
     
     private func createViewModel(with useCase: TwitterUseCaseMock) -> FindUserViewModel {
-        return FindUserViewModel(useCase: useCase, coordinator: Coordinator(FindUserViewController()))
+        return FindUserViewModel(useCase: useCase, router: ScreenRouter(FindUserViewController()))
     }
     
     var disposeBag = DisposeBag()

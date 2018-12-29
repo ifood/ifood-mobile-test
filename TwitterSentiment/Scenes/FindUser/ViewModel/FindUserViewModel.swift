@@ -12,17 +12,17 @@ import RxCocoa
 import Utility
 import Domain
 
-struct FindUserViewModel: ViewModelProtocol {
+struct FindUserViewModel: ViewModel {
     
     // MARK: Var
     
-    var coordinator: CoordinatorProvider
+    var router: RouterProvider
     var useCase: TwitterUseCase
     
     // MARK: Init
     
-    init(useCase: TwitterUseCase, coordinator: CoordinatorProvider) {
-        self.coordinator = coordinator
+    init(useCase: TwitterUseCase, router: RouterProvider) {
+        self.router = router
         self.useCase = useCase
     }
     
@@ -30,9 +30,9 @@ struct FindUserViewModel: ViewModelProtocol {
         let activity = ActivityIndicator()
         let twitterUser = input.searchUserName.flatMapLatest { (text: String) -> Driver<TwitterUser> in
             return self.useCase.user(text).trackActivity(activity).do(onNext: { user in
-                _ = self.coordinator.transition(with: FindUserRouter.toTweetList(user: user, useCase: self.useCase))
+                _ = self.router.transition(with: FindUserRouter.toTweetList(user: user, useCase: self.useCase))
             }, onError: { error in
-                _ = self.coordinator.transition(with: FindUserRouter.error(error: error))
+                _ = self.router.transition(with: FindUserRouter.error(error: error))
             }).asDriverOnErrorJustComplete()
             }
         return Output(toUserTweetList: twitterUser, fetching: activity.asDriver())

@@ -9,27 +9,13 @@
 import NetworkPlatform
 import Utility
 
-enum MainRoute {
-    case home(window: UIWindow)
-}
-
-extension MainRoute: Router {
-    func present() -> Transition {
-        switch self {
-        case .home(let window):
-            var vc = FindUserViewController()
-            vc.bind(to: FindUserViewModel(useCase: TwitterUseCase(), coordinator: Coordinator(vc)))
-            return .rootController(window: window, viewController: vc)
-        }
-    }
-}
-
-class MainCoordinator: Coordinator {
+class MainCoordinator: CoordinatorProvider {
 
     // MARK: Init
-
-    init(_ window: UIWindow) {
-        super.init(UIViewController())
-        self.transition(with: MainRoute.home(window: window))
+    
+    func start(window: UIWindow) {
+        var vc = FindUserViewController()
+        vc.bind(to: FindUserViewModel(useCase: TwitterUseCase(), router: ScreenRouter(vc)))
+        self.rootViewController(in: window, with: vc)
     }
 }

@@ -12,18 +12,18 @@ import RxCocoa
 import Domain
 import Utility
 
-struct SentimentViewModel: ViewModelProtocol {
+struct SentimentViewModel: ViewModel {
     
     // MARK: Var
     
-    var coordinator: CoordinatorProvider
+    var router: RouterProvider
     var useCase: TextAnalizerUseCase
     var tweet: Tweet
     
     // MARK: Init
     
-    init(tweet: Tweet, useCase: TextAnalizerUseCase, coordinator: CoordinatorProvider) {
-        self.coordinator = coordinator
+    init(tweet: Tweet, useCase: TextAnalizerUseCase, router: RouterProvider) {
+        self.router = router
         self.useCase = useCase
         self.tweet = tweet
     }
@@ -37,7 +37,7 @@ struct SentimentViewModel: ViewModelProtocol {
         }
         
         let dismiss = input.onDismiss.flatMap { _ -> Driver<Void> in
-            return self.coordinator.transition(with: SentimentRouter.dismiss).asDriverOnErrorJustComplete()
+            return self.router.transition(with: SentimentRouter.dismiss).asDriverOnErrorJustComplete()
         }
         
         return Output(showSentiment: analize, onDismiss: dismiss, fetching: activity.asDriver())

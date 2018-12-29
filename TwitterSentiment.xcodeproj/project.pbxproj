@@ -78,7 +78,6 @@
 		391D652C21D5A865009004E9 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391D652821D5A865009004E9 /* ViewModel.swift */; };
 		391D653221D5A86E009004E9 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391D652D21D5A86E009004E9 /* ActivityIndicator.swift */; };
 		391D653321D5A86E009004E9 /* Customization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391D652E21D5A86E009004E9 /* Customization.swift */; };
-		391D653421D5A86E009004E9 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391D652F21D5A86E009004E9 /* Environment.swift */; };
 		391D653521D5A86E009004E9 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391D653021D5A86E009004E9 /* Errors.swift */; };
 		391D653621D5A86E009004E9 /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391D653121D5A86E009004E9 /* Typealias.swift */; };
 		391D653A21D5A87D009004E9 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391D653921D5A87C009004E9 /* Coordinator.swift */; };
@@ -353,7 +352,6 @@
 		391D652821D5A865009004E9 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		391D652D21D5A86E009004E9 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		391D652E21D5A86E009004E9 /* Customization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Customization.swift; sourceTree = "<group>"; };
-		391D652F21D5A86E009004E9 /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		391D653021D5A86E009004E9 /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		391D653121D5A86E009004E9 /* Typealias.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
 		391D653921D5A87C009004E9 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -591,8 +589,8 @@
 		391D63DB21D5A5BE009004E9 /* TwitterSentimentUITests */ = {
 			isa = PBXGroup;
 			children = (
-				391D63DE21D5A5BE009004E9 /* Info.plist */,
 				39D1338221D6A07900A8A62D /* FindUserUITests.swift */,
+				391D63DE21D5A5BE009004E9 /* Info.plist */,
 			);
 			path = TwitterSentimentUITests;
 			sourceTree = "<group>";
@@ -909,7 +907,6 @@
 			children = (
 				391D652D21D5A86E009004E9 /* ActivityIndicator.swift */,
 				391D652E21D5A86E009004E9 /* Customization.swift */,
-				391D652F21D5A86E009004E9 /* Environment.swift */,
 				391D653021D5A86E009004E9 /* Errors.swift */,
 				391D653121D5A86E009004E9 /* Typealias.swift */,
 			);
@@ -958,6 +955,7 @@
 			children = (
 				391D64EF21D5A84A009004E9 /* Data+Extensions.swift */,
 				391D64EB21D5A84A009004E9 /* DateFormatter+Extensions.swift */,
+				39D1336321D66CEA00A8A62D /* JSONDecoder+Extensions.swift */,
 				391D64E721D5A849009004E9 /* NSObject+Extensions.swift */,
 				391D64EA21D5A84A009004E9 /* Observable+Extensions.swift */,
 				391D64F621D5A84B009004E9 /* UIAlertController+Extension.swift */,
@@ -973,7 +971,6 @@
 				391D64F021D5A84A009004E9 /* UIViewController+Extensions.swift */,
 				391D64ED21D5A84A009004E9 /* UIVisualEffectView+Extensions.swift */,
 				391D64F321D5A84B009004E9 /* UserDefaults+Extensions.swift */,
-				39D1336321D66CEA00A8A62D /* JSONDecoder+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -981,8 +978,8 @@
 		391D656D21D5AE1E009004E9 /* TwitterSentimentTests */ = {
 			isa = PBXGroup;
 			children = (
-				39D1336021D66A5300A8A62D /* Shared */,
 				39D1333821D6573200A8A62D /* Scenes */,
+				39D1336021D66A5300A8A62D /* Shared */,
 				391D657021D5AE1E009004E9 /* Info.plist */,
 			);
 			path = TwitterSentimentTests;
@@ -1098,9 +1095,9 @@
 			isa = PBXGroup;
 			children = (
 				39D1337921D68D4800A8A62D /* Analizer */,
+				39D1334D21D6663F00A8A62D /* FindUser */,
 				39D1335B21D669D100A8A62D /* Token */,
 				39D1335621D667AC00A8A62D /* TweetList */,
-				39D1334D21D6663F00A8A62D /* FindUser */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -1135,9 +1132,9 @@
 		39D1336021D66A5300A8A62D /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				39D1336821D6729800A8A62D /* UseCase */,
 				39D1336721D6728700A8A62D /* Helpers */,
 				39D1334C21D6663700A8A62D /* Mock */,
+				39D1336821D6729800A8A62D /* UseCase */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -1145,8 +1142,8 @@
 		39D1336721D6728700A8A62D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				39D1336121D66A6200A8A62D /* StatusCode.swift */,
 				39D1336521D670B600A8A62D /* Decoder.swift */,
+				39D1336121D66A6200A8A62D /* StatusCode.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1154,8 +1151,8 @@
 		39D1336821D6729800A8A62D /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
-				39D1335221D666CB00A8A62D /* TwitterUseCaseMock.swift */,
 				39D1337721D68A5100A8A62D /* TextAnalizerUseCaseMock.swift */,
+				39D1335221D666CB00A8A62D /* TwitterUseCaseMock.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -1163,8 +1160,8 @@
 		39D1337921D68D4800A8A62D /* Analizer */ = {
 			isa = PBXGroup;
 			children = (
-				39D1337A21D68D5B00A8A62D /* analizerNeutral.json */,
 				39D1337C21D699C100A8A62D /* analizerHappy.json */,
+				39D1337A21D68D5B00A8A62D /* analizerNeutral.json */,
 				39D1337E21D699CF00A8A62D /* analizerSad.json */,
 			);
 			path = Analizer;
@@ -1685,9 +1682,9 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TwitterSentimentUITests/Pods-TwitterSentimentUITests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/NSObject+Rx/NSObject_Rx.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
@@ -1703,9 +1700,9 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NSObject_Rx.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
@@ -2034,9 +2031,9 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TwitterSentiment/Pods-TwitterSentiment-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/NSObject+Rx/NSObject_Rx.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
@@ -2052,9 +2049,9 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NSObject_Rx.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
@@ -2263,7 +2260,6 @@
 				39D1336421D66CEA00A8A62D /* JSONDecoder+Extensions.swift in Sources */,
 				391D650F21D5A853009004E9 /* ViewController.swift in Sources */,
 				39D1333621D64EA700A8A62D /* TableViewCell.swift in Sources */,
-				391D653421D5A86E009004E9 /* Environment.swift in Sources */,
 				391D652021D5A85D009004E9 /* TextField.swift in Sources */,
 				391D653321D5A86E009004E9 /* Customization.swift in Sources */,
 				391D653A21D5A87D009004E9 /* Coordinator.swift in Sources */,
@@ -2555,7 +2551,7 @@
 				DEVELOPMENT_TEAM = SFLM2JCB4V;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/TwitterSentiment/Resources/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"@executable_path/Frameworks",
 					"$(inherited)",
@@ -2577,7 +2573,7 @@
 				DEVELOPMENT_TEAM = SFLM2JCB4V;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/TwitterSentiment/Resources/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"@executable_path/Frameworks",
 					"$(inherited)",
@@ -2652,7 +2648,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Domain/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2686,7 +2682,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Domain/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2759,7 +2755,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Utility/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2792,7 +2788,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Utility/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2865,7 +2861,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Resources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2899,7 +2895,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Resources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3020,7 +3016,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = NetworkPlatform/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3051,7 +3047,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = NetworkPlatform/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

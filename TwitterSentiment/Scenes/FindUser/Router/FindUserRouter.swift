@@ -19,7 +19,7 @@ extension FindUserRouter: Router {
         switch self {
         case .toTweetList(let user, let useCase):
             var vc = TweetListViewController()
-            vc.bind(to: TweetListViewModel(user: user, useCase: useCase, coordinator: Coordinator(vc)))
+            vc.bind(to: TweetListViewModel(user: user, useCase: useCase, router: ScreenRouter(vc)))
             return .present(viewController: CloseButtonDecorator.closeButton(vc), animated: true)
         case .error(let error):
             return .present(viewController: UIAlertController(alerWithError: error), animated: true)

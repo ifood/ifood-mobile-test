@@ -21,7 +21,7 @@ class TweetListViewModelTests: XCTestCase {
     }
     
     private func createViewModel(user: TwitterUser, with useCase: TwitterUseCaseMock) -> TweetListViewModel {
-        return TweetListViewModel(user: user, useCase: useCase, coordinator: Coordinator(TweetListViewController()))
+        return TweetListViewModel(user: user, useCase: useCase, router: ScreenRouter(TweetListViewController()))
     }
     
     let user = TwitterUser("1", name: "Test", screenName: "test", profileImageURL: URL(string: "www.fake.com.br")!)

@@ -8,11 +8,11 @@
 
 import Foundation
 
-public protocol ViewModelProtocol {
+public protocol ViewModel {
     associatedtype Input
     associatedtype Output
 
-    var coordinator: CoordinatorProvider { get set }
+    var router: RouterProvider { get set }
 
     func transform(input: Input) -> Output
 }

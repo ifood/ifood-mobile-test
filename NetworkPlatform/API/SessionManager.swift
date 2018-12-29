@@ -54,12 +54,7 @@ struct NetworkProvider {
         if let provider = provider {
             self.provider = provider
         } else {
-            switch Environment.env {
-            case .test, .uiTest:
-                self.provider = NetworkProvider.stubProvider()
-            default:
-                self.provider = MoyaProvider<MultiTarget>(manager: SessionManager(), plugins: [NetworkLoggerPlugin(verbose: true, responseDataFormatter: Data().JSONPretty)])
-            }
+            self.provider = MoyaProvider<MultiTarget>(manager: SessionManager(), plugins: [NetworkLoggerPlugin(verbose: true, responseDataFormatter: Data().JSONPretty)])
         }
     }
 

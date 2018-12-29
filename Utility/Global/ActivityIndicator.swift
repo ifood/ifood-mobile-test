@@ -24,14 +24,13 @@ public class ActivityIndicator: SharedSequenceConvertibleType {
     }
     
     fileprivate func trackActivityOfObservable<O: ObservableConvertibleType>(_ source: O) -> Observable<O.E> {
-        return source.asObservable()
-            .do(onNext: { _ in
-                self.sendStopLoading()
-            }, onError: { _ in
-                self.sendStopLoading()
-            }, onCompleted: {
-                self.sendStopLoading()
-            }, onSubscribe: subscribed)
+        return source.asObservable().do(onNext: { _ in
+            self.sendStopLoading()
+        }, onError: { _ in
+            self.sendStopLoading()
+        }, onCompleted: {
+            self.sendStopLoading()
+        }, onSubscribe: subscribed)
     }
     
     private func subscribed() {

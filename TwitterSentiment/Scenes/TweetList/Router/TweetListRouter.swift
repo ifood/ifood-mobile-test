@@ -21,7 +21,7 @@ extension TweetListRouter: Router {
         switch self {
         case .analizeSentiment(let tweet):
             var vc = SentimentViewController.init(theme: ClearTheme())
-            vc.bind(to: SentimentViewModel(tweet: tweet, useCase: TextAnalizerUseCase(), coordinator: Coordinator(vc)))
+            vc.bind(to: SentimentViewModel(tweet: tweet, useCase: TextAnalizerUseCase(), router: ScreenRouter(vc)))
             vc.modalPresentationStyle = .overCurrentContext
             return .present(viewController: vc, animated: true)
         case .error(let error):

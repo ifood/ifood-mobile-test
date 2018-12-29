@@ -21,21 +21,4 @@ extension BindableType where Self: UIViewController {
         loadViewIfNeeded()
         bindViewModel()
     }
-
-}
-
-extension BindableType where Self: UITableViewCell {
-    public mutating func bind(to model: Self.ViewModelType) {
-        viewModel = model
-        bindViewModel()
-    }
-
-}
-
-extension BindableType where Self: UICollectionViewCell {
-    public mutating func bind(to model: Self.ViewModelType) {
-        viewModel = model
-        bindViewModel()
-    }
-
 }

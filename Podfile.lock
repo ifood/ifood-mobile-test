@@ -1,8 +1,9 @@
 PODS:
   - Alamofire (4.8.0)
+  - AlamofireImage (3.5.0):
+    - Alamofire (~> 4.8)
   - Differentiator (3.1.0)
   - KeychainSwift (13.0.0)
-  - Kingfisher (5.0.1)
   - Moya/Core (12.0.1):
     - Alamofire (~> 4.1)
     - Result (~> 4.0)
@@ -35,8 +36,8 @@ PODS:
   - SwiftLint (0.29.2)
 
 DEPENDENCIES:
+  - AlamofireImage
   - KeychainSwift
-  - Kingfisher
   - Moya/RxSwift
   - "NSObject+Rx"
   - RxBlocking
@@ -52,9 +53,9 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - AlamofireImage
     - Differentiator
     - KeychainSwift
-    - Kingfisher
     - Moya
     - "NSObject+Rx"
     - Result
@@ -71,9 +72,9 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
+  AlamofireImage: 1aea346f4dda2f6c67622fa5a89fcbb80d79cc16
   Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
   KeychainSwift: 23d6c16cbc33f20fafa30c3d783241b4b87d998c
-  Kingfisher: 4f771421b9208185217550528a06fd48756cb7c2
   Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
   "NSObject+Rx": 9884a92f19b610795c431e10b4e601913b59c9e9
   Result: 7645bb3f50c2ce726dd0ff2fa7b6f42bbe6c3713
@@ -88,6 +89,6 @@ SPEC CHECKSUMS:
   SwiftGen: e5b047067aa84082826a0c4f1c4c2ddc95bcf74c
   SwiftLint: 47df60bdea6e7e902b193b6596db8683aafd86a3
 
-PODFILE CHECKSUM: fa1bb3ebf89f2a4fb05d11a903bf374576e32dc1
+PODFILE CHECKSUM: 51a20931c9e2557240fd1a94a35146d4cf5297a3
 
 COCOAPODS: 1.6.0.beta.2

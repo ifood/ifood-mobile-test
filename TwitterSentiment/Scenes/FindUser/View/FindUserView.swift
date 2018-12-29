@@ -17,7 +17,7 @@ class FindUserView: View, LoadingViewProtocol {
     
     lazy var logoImageView = ImageView(image: Asset.iconTwitter.image)
     lazy var inputTextView = InputView()
-    lazy var titleLabel = Label(with: Customization().text(L10n.FindUser.titleLabel).font(.boldSystemFont(ofSize: 32)).titleColor(.black).numberOfLines(0))
+    lazy var titleLabel = Label(with: Customization().text(L10n.FindUser.titleLabel).font(.boldSystemFont(ofSize: 35)).titleColor(.black).numberOfLines(0))
     
     var shouldBecomeResponder: Binder<Bool> {
         return Binder(self.rx.base, binding: { (view, shouldBecomeResponder) in
@@ -47,10 +47,23 @@ class FindUserView: View, LoadingViewProtocol {
         }
         self.titleLabel.snp.makeConstraints { (make) in
             make.top.equalTo(logoImageView.snp.bottom).offset(30)
-            make.left.right.equalToSuperview().inset(30)
+            make.left.equalToSuperview().inset(30)
+            make.right.equalToSuperview().inset(50)
         }
         self.inputTextView.snp.makeConstraints { (make) in
             make.left.right.bottom.equalToSuperview()
+        }
+    }
+    
+    override func setNeedsUpdateConstraints() {
+        super.setNeedsUpdateConstraints()
+        self.logoImageView.snp.updateConstraints { (make) in
+            switch UIDevice.current.orientation {
+            case .landscapeLeft, .landscapeRight:
+                make.top.equalToSuperview().inset(20)
+            default:
+                make.top.equalToSuperview().inset(100)
+            }
         }
     }
 }

@@ -7,9 +7,9 @@
 //
 
 import UIKit
-import Kingfisher
 import Domain
 import Utility
+import AlamofireImage
 
 class TweetCell: TableViewCell {
     
@@ -71,9 +71,18 @@ class TweetCell: TableViewCell {
         }
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.photoImageView.af_cancelImageRequest()
+        self.nameLabel.text = ""
+        self.userNameLabel.text = ""
+        self.messageLabel.text = ""
+        self.dateLabel.text = ""
+    }
+    
     override func configure(at indexPath: IndexPath?, with object: Any?) {
         guard let tweet = object as? Tweet else { return }
-        self.photoImageView.kf.setImage(with: tweet.user.profileImageURL)
+        self.photoImageView.af_setImage(withURL: tweet.user.profileImageURL)
         self.nameLabel.text = tweet.user.name
         self.userNameLabel.text = tweet.user.decoratedUserName
         self.messageLabel.text = tweet.text
