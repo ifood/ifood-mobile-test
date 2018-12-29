@@ -4,6 +4,8 @@ branches:
   only:
     - master
 cache: bundler
+before_install:
+  - gem install cocoapods --no-rdoc --no-ri --no-document --quiet
 env:
   global:
   - LC_CTYPE=en_US.UTF-8
@@ -18,8 +20,6 @@ script:
   - set -o pipefail
   - xcodebuild -version
   - xcodebuild -showsdks
-before_install:
-    - gem install cocoapods --no-rdoc --no-ri --no-document --quiet
 
   # Build Framework in Release and Run Tests if specified
   - if [ $RUN_TESTS == "YES" ]; then
