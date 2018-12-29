@@ -10,13 +10,22 @@ def rxLibs
     pod 'RxKeyboard'
 end
 
+def lint_code_generation
+  pod 'SwiftLint'
+  pod 'SwiftGen'
+end
+
 def libs
   rxLibs
   pod 'SnapKit'
-  pod 'SwiftLint'
-  pod 'SwiftGen'
   pod 'KeychainSwift'
   pod 'AlamofireImage'
+end
+
+def all_libs
+  lint_code_generation
+  libs
+  rxLibs
 end
 
 def lib_tests
@@ -25,7 +34,7 @@ def lib_tests
 end
 
 target 'TwitterSentiment' do
-  libs
+  all_libs
    target 'TwitterSentimentTests' do
      inherit! :search_paths
      lib_tests

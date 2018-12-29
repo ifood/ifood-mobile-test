@@ -24,6 +24,7 @@ open class Label: UILabel, ConfigurableView {
         self.textAlignment = customization.alignment
         self.numberOfLines = customization.numberOfLines
         self.adjustsFontSizeToFitWidth = customization.adjustsFontSizeToFitWidth
+        self.accessibilityIdentifier = String(describing: self)
         self.initLayout()
     }
 
