@@ -28,16 +28,17 @@ class FindUserUITests: XCTestCase {
         app.buttons["icon search"].tap()
         
         let tableView = app.tables
-        expectation(for: exists(shouldExist: true), evaluatedWith: tableView, handler: nil)
+        let tableExpec = expectation(for: exists(shouldExist: true), evaluatedWith: tableView, handler: nil)
+        tableExpec.isInverted = true
         tableView.cells.element(boundBy: 5).tap()
-        
-        expectation(for: exists(shouldExist: false), evaluatedWith: app.activityIndicators, handler: nil)
-        waitForExpectations(timeout: 5)
+
+        let activityExpec = expectation(for: exists(shouldExist: true), evaluatedWith: app.activityIndicators, handler: nil)
+        activityExpec.isInverted = true
         app.buttons["icon close x"].tap()
-        
+
         let tweetCloseButton = app.navigationBars.firstMatch.buttons["icon close"]
         tweetCloseButton.tap()
-        waitForExpectations(timeout: 2)
+        waitForExpectations(timeout: 2, handler: nil)
     }
 
 }
