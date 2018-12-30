@@ -435,7 +435,7 @@
 		391D658721D5B256009004E9 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		391D658921D5B2A9009004E9 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		39BC4F1621D7A60B007C15C9 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
-		39BC4F4721D7C517007C15C9 /* Travis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travis.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		39BC4F4721D7C517007C15C9 /* CI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39BC4F4821D7C517007C15C9 /* TwitterSentiment copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "TwitterSentiment copy-Info.plist"; path = "/Users/jeanvinge/Desktop/Projetos iOS/ifood-mobile-test/TwitterSentiment copy-Info.plist"; sourceTree = "<absolute>"; };
 		39D132CB21D61FCC00A8A62D /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		39D132D521D6362A00A8A62D /* KeychainSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainSwift.framework; path = Carthage/Build/iOS/KeychainSwift.framework; sourceTree = "<group>"; };
@@ -663,7 +663,7 @@
 				391D656C21D5AE1D009004E9 /* TwitterSentimentTests.xctest */,
 				39D1330621D644D800A8A62D /* NetworkPlatform.framework */,
 				39D1330E21D644D800A8A62D /* NetworkPlatformTests.xctest */,
-				39BC4F4721D7C517007C15C9 /* Travis.app */,
+				39BC4F4721D7C517007C15C9 /* CI.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1552,9 +1552,9 @@
 			productReference = 391D656C21D5AE1D009004E9 /* TwitterSentimentTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		39BC4F1821D7C517007C15C9 /* Travis */ = {
+		39BC4F1821D7C517007C15C9 /* CI */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 39BC4F4421D7C517007C15C9 /* Build configuration list for PBXNativeTarget "Travis" */;
+			buildConfigurationList = 39BC4F4421D7C517007C15C9 /* Build configuration list for PBXNativeTarget "CI" */;
 			buildPhases = (
 				39BC4F2121D7C517007C15C9 /* [CP] Check Pods Manifest.lock */,
 				39BC4F2221D7C517007C15C9 /* Sources */,
@@ -1571,9 +1571,9 @@
 				39BC4F1D21D7C517007C15C9 /* PBXTargetDependency */,
 				39BC4F1F21D7C517007C15C9 /* PBXTargetDependency */,
 			);
-			name = Travis;
+			name = CI;
 			productName = TwitterSentiment;
-			productReference = 39BC4F4721D7C517007C15C9 /* Travis.app */;
+			productReference = 39BC4F4721D7C517007C15C9 /* CI.app */;
 			productType = "com.apple.product-type.application";
 		};
 		39D1330521D644D800A8A62D /* NetworkPlatform */ = {
@@ -1683,7 +1683,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				39BC4F1821D7C517007C15C9 /* Travis */,
+				39BC4F1821D7C517007C15C9 /* CI */,
 				391D63C321D5A5BD009004E9 /* TwitterSentiment */,
 				391D656B21D5AE1D009004E9 /* TwitterSentimentTests */,
 				391D63D721D5A5BE009004E9 /* TwitterSentimentUITests */,
@@ -3484,7 +3484,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		39BC4F4421D7C517007C15C9 /* Build configuration list for PBXNativeTarget "Travis" */ = {
+		39BC4F4421D7C517007C15C9 /* Build configuration list for PBXNativeTarget "CI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				39BC4F4521D7C517007C15C9 /* Debug */,
