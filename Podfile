@@ -41,10 +41,6 @@ target 'TwitterSentiment' do
    end
 end
 
-target 'Travis' do
-  libs
-end
-
 target 'TwitterSentimentUITests' do
   libs
 end
