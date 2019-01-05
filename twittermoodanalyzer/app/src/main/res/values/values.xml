@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="twitter_api_key">jPSWYIckd5bhiaFb4EkHimJPs</string>
+    <string name="twitter_api_secret_key">5b6vy3dONFLUmkIBcoJGOqqOeENkrDNgz9wojPM7UpLdmcU7rM</string>
+
+    <string name="gcp_api_key">AIzaSyA8YwFzQdfTSarrU7r0Kn89EtSIKzzLqo4</string>
+</resources>
