@@ -2,6 +2,8 @@
 <resources>
     <string name="twitter_api_key">jPSWYIckd5bhiaFb4EkHimJPs</string>
     <string name="twitter_api_secret_key">5b6vy3dONFLUmkIBcoJGOqqOeENkrDNgz9wojPM7UpLdmcU7rM</string>
+    <string name="twitter_api_access_token">28257087-mtJn2MRSKSYUsRBXoDizGV3Tp9t4MMFIgcegTuWxl</string>
+    <string name="twitter_api_token_secret">NKiFHMK8kKuC9Jjz4DnMgvs3i8mcMc1F3wXfHwx29vg0r</string>
 
     <string name="gcp_api_key">AIzaSyA8YwFzQdfTSarrU7r0Kn89EtSIKzzLqo4</string>
 </resources>

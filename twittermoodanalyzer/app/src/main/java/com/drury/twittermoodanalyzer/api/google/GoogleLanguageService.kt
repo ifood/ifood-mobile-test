@@ -1,11 +1,11 @@
 package com.drury.twittermoodanalyzer.api.google
 
 import com.drury.twittermoodanalyzer.api.SentimentResult
+import io.reactivex.Observable
 import okhttp3.RequestBody
 import retrofit2.http.Body
 import retrofit2.http.POST
 import retrofit2.http.Query
-import rx.Observable
 
 interface GoogleLanguageService {
     // Check
