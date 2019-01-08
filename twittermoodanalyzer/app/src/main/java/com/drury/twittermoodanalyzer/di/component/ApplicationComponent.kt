@@ -5,6 +5,7 @@ import com.drury.twittermoodanalyzer.di.module.ActivityModule
 import com.drury.twittermoodanalyzer.di.module.ApplicationModule
 import com.drury.twittermoodanalyzer.presenter.MainPresenter
 import com.drury.twittermoodanalyzer.view.MainActivity
+import com.drury.twittermoodanalyzer.view.MoodActivity
 import dagger.Component
 
 @Component(modules = arrayOf(
@@ -14,4 +15,5 @@ interface ApplicationComponent {
 
     fun inject(application: BaseApp)
     fun inject(mainActivity: MainActivity)
+    fun inject(moodActivity: MoodActivity)
 }

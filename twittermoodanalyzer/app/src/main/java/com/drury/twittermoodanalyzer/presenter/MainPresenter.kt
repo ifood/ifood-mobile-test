@@ -8,7 +8,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject
 
-class MainPresenter @Inject constructor(var mainActivity: MainActivity) : Interfaces.Presenter {
+class MainPresenter @Inject constructor(var mainActivity: MainActivity) : IPresenter.MainPresenter {
 
     lateinit var analyzerController: Interfaces.Controller
 
@@ -16,14 +16,17 @@ class MainPresenter @Inject constructor(var mainActivity: MainActivity) : Interf
         analyzerController = AnalyzerController(mainActivity.applicationContext as BaseApp)
     }
 
-    fun getTweets(username: String) {
+    override fun getTweets(username: String) {
         // Call loading screen
+        mainActivity.showLoadingDialog()
         analyzerController.getTweetsByUsername(username)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe( { tweetList ->
+                    mainActivity.hideLoadingDialog()
                     mainActivity.populateTweets(tweetList.toMutableList())
                 }, { e ->
+                    mainActivity.hideLoadingDialog()
                     e.printStackTrace()
                 })
     }

@@ -12,7 +12,9 @@ interface Interfaces {
     }
 
     interface View {
-        fun loadItems(tweets: List<Tweet>)
+        fun populateTweets(tweetList: MutableList<TweetModel>)
+        fun showLoadingDialog()
+        fun hideLoadingDialog()
     }
 
     interface Controller {

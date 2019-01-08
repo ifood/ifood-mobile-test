@@ -8,18 +8,24 @@ import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.SearchView
 import android.view.Menu
 import com.drury.twittermoodanalyzer.BaseApp
+import com.drury.twittermoodanalyzer.Interfaces
 import com.drury.twittermoodanalyzer.R
 import com.drury.twittermoodanalyzer.model.TweetModel
+import com.drury.twittermoodanalyzer.presenter.IPresenter
 import com.drury.twittermoodanalyzer.presenter.MainPresenter
 import com.drury.twittermoodanalyzer.view.adapter.TweetAdapter
+import com.drury.twittermoodanalyzer.view.component.ViewDialog
 import kotlinx.android.synthetic.main.activity_main.*
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), IView.MainActivity {
 
-    lateinit var mainPresenter: MainPresenter
+    lateinit var mainPresenter: IPresenter.MainPresenter
 
     lateinit var tweetAdapter: TweetAdapter
+
+    lateinit var loadingDialog: ViewDialog
+
     var tweets: MutableList<TweetModel> = mutableListOf<TweetModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -61,20 +67,16 @@ class MainActivity : AppCompatActivity() {
         return super.onCreateOptionsMenu(menu)
     }
 
-    internal fun initViewComponents() {
+    private fun initViewComponents() {
         mainPresenter = MainPresenter(this)
-        mainPresenter.mainActivity = this
         mainPresenter.onCreate()
         tweetAdapter = TweetAdapter(tweets, this)
+        loadingDialog = ViewDialog(this)
         my_recycler_view.layoutManager = LinearLayoutManager(this)
         my_recycler_view.adapter = tweetAdapter
     }
 
-    internal fun getEmojiByUnicode(unicode: Int): String {
-        return String(Character.toChars(unicode))
-    }
-
-    fun populateTweets(tweetList: MutableList<TweetModel>) {
+    override fun populateTweets(tweetList: MutableList<TweetModel>) {
         tweets = tweetList
         tweetAdapter = TweetAdapter(tweets, this)
         my_recycler_view.layoutManager = LinearLayoutManager(this)
@@ -87,4 +89,13 @@ class MainActivity : AppCompatActivity() {
         }
         super.onSaveInstanceState(savedInstanceState)
     }
+
+    override fun showLoadingDialog() {
+        loadingDialog.showDialog()
+    }
+
+    override fun hideLoadingDialog() {
+        loadingDialog.hideDialog()
+    }
+
 }

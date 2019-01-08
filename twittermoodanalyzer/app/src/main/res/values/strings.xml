@@ -1,9 +1,10 @@
 <resources>
     <string name="app_name">Twitter Mood Analyzer</string>
     <string name="mood_sad">This tweet was analysed as SAD.</string>
-    <string name="mood_happy">This tweet was analysed as SAD.</string>
-    <string name="mood_neutral">This tweet was analysed as SAD.</string>
+    <string name="mood_happy">This tweet was analysed as HAPPY.</string>
+    <string name="mood_neutral">This tweet was analysed as NEUTRAL.</string>
     <string name="app_label">Twitter User.</string>
     <string name="search_hint">username</string>
+    <string name="title_activity_mood">MoodActivity</string>
 
 </resources>

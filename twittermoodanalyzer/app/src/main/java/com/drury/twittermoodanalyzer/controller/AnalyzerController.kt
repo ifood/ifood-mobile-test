@@ -26,8 +26,8 @@ class AnalyzerController(val application: BaseApp): Interfaces.Controller {
                 .flatMap { sentimentResult -> Observable.just(sentimentResult.documentSentiment) }
     }
 
-    internal fun transformTweetResult(tweetResult: List<Tweet>): List<TweetModel> {
-        var listTweetModel = ArrayList<TweetModel>()
+    private fun transformTweetResult(tweetResult: List<Tweet>): List<TweetModel> {
+        val listTweetModel = ArrayList<TweetModel>()
         tweetResult.map {
             tweet -> listTweetModel.add(TweetModel(created = tweet.createdAt, text = tweet.text))
         }
