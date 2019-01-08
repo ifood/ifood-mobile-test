@@ -29,3 +29,12 @@ data class Text(
     val beginOffset: Int,
     val content: String
 )
+
+data class SentimentRequest(
+    val document: DocumentSentimentRequest
+)
+
+data class DocumentSentimentRequest(
+    val content: String,
+    val type: String = "PLAIN_TEXT"
+)

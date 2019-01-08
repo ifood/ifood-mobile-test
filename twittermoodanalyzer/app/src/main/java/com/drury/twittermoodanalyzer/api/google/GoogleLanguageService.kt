@@ -1,5 +1,6 @@
 package com.drury.twittermoodanalyzer.api.google
 
+import com.drury.twittermoodanalyzer.Interfaces
 import com.drury.twittermoodanalyzer.api.SentimentResult
 import io.reactivex.Observable
 import okhttp3.RequestBody
