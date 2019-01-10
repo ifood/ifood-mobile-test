@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Twitter Mood Analyzer</string>
+    <string name="mood_sad">This tweet was analysed as SAD.</string>
+    <string name="mood_happy">This tweet was analysed as HAPPY.</string>
+    <string name="mood_neutral">This tweet was analysed as NEUTRAL.</string>
+    <string name="app_label">Twitter User.</string>
+    <string name="search_hint">username</string>
+    <string name="title_activity_mood">Tweet\'s Mood</string>
+    <!-- ERRORS -->
+    <string name="error_user_not_found">User was not found!</string>
+    <string name="error_could_not_process_sentence">It was not possible to process the tweet\'s mood</string>
+    <string name="error_no_network_connection">There is no Internet Connection</string>
+    <string name="error_window_title">Error</string>
+    <string name="error_unknown">Unknown Error</string>
+</resources>

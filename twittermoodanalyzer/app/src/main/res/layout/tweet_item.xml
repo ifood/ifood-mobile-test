@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/cardviewHeight"
+    android:orientation="vertical"
+    android:tag="cards main container">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        card_view:cardCornerRadius="10dp"
+        card_view:cardElevation="5dp"
+        card_view:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:tag="image_tag"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_twitter"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:text="Date"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+                <TextView
+                    android:id="@+id/textViewTweet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:maxLines="4"
+                    android:lines="4"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
+

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="cardviewHeight">200dp</dimen>
+    <dimen name="emojiTextSize">200sp</dimen>
+    <dimen name="tweetDateSize">18sp</dimen>
+    <dimen name="tweetTextSize">20sp</dimen>
+</resources>

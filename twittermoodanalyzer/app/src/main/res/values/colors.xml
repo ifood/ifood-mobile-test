@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <!-- https://material.io/design/color/the-color-system.html#tools-for-picking-colors -->
+    <color name="colorYellowHappy">#FFDE03</color>
+    <color name="colorGrayNeutral">#757575</color>
+    <color name="colorBlueSad">#64B5F6</color>
+
+    <color name="splashBackground">#08a0e9</color>
+</resources>
