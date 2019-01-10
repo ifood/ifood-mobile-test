@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import com.drury.twittermoodanalyzer.R
 import com.drury.twittermoodanalyzer.extension.toSimpleString
 import com.drury.twittermoodanalyzer.model.TweetModel
+import com.drury.twittermoodanalyzer.utils.AppConstants
 import com.drury.twittermoodanalyzer.view.MoodActivity
 import kotlinx.android.synthetic.main.tweet_item.view.*
 import java.util.*
@@ -32,8 +33,8 @@ class TweetAdapter(var dataset: MutableList<TweetModel>, var activity: Activity)
                 .inflate(R.layout.tweet_item, parent, false)
 
         return TweetViewHolder(view).listen { pos, type ->
-            val item = dataset.get(pos)
-            val intent = Intent(activity, MoodActivity::class.java).putExtra("TWEET", item)
+            val item = dataset[pos]
+            val intent = Intent(activity, MoodActivity::class.java).putExtra(AppConstants.TWEET, item)
             activity.startActivity(intent)
         }
     }

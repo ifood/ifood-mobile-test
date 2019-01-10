@@ -8,11 +8,12 @@ import com.drury.twittermoodanalyzer.api.google.GoogleLanguageService
 import com.drury.twittermoodanalyzer.api.twitter.TwitterService
 import com.drury.twittermoodanalyzer.utils.AppConstants
 import com.google.gson.Gson
+import com.twitter.sdk.android.core.models.Tweet
 import io.reactivex.Observable
 import okhttp3.MediaType
 import okhttp3.RequestBody
 
-class ConnectionManager(private val context: Application): IConnectionManager {
+class ConnectionManager(private val context: Context): IConnectionManager {
 
     override fun hasInternetConnection(): Boolean {
         val localConnectivityManager = context.getSystemService(
@@ -25,7 +26,7 @@ class ConnectionManager(private val context: Application): IConnectionManager {
 
     }
 
-    override fun getTweetsByUserName(user: String): Observable<TweetResult> {
+    override fun getTweetsByUserName(user: String): Observable<List<Tweet>> {
         val api = TwitterServiceFactory(context).createService(TwitterService::class.java)
         return api.getTweetsByUsername(user)
     }

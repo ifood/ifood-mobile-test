@@ -2,17 +2,15 @@ package com.drury.twittermoodanalyzer.view
 
 import android.os.Bundle
 import android.os.Parcelable
-import android.os.PersistableBundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.SearchView
 import android.view.Menu
-import com.drury.twittermoodanalyzer.BaseApp
-import com.drury.twittermoodanalyzer.Interfaces
 import com.drury.twittermoodanalyzer.R
 import com.drury.twittermoodanalyzer.model.TweetModel
 import com.drury.twittermoodanalyzer.presenter.IPresenter
 import com.drury.twittermoodanalyzer.presenter.MainPresenter
+import com.drury.twittermoodanalyzer.utils.AppConstants
 import com.drury.twittermoodanalyzer.view.adapter.TweetAdapter
 import com.drury.twittermoodanalyzer.view.component.ViewDialog
 import kotlinx.android.synthetic.main.activity_main.*
@@ -32,11 +30,10 @@ class MainActivity : AppCompatActivity(), IView.MainActivity {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        if (savedInstanceState != null && savedInstanceState.containsKey("TWEETS")) {
-            tweets = savedInstanceState.getParcelableArrayList<TweetModel>("TWEETS")
+        if (savedInstanceState != null && savedInstanceState.containsKey(AppConstants.TWEETS)) {
+            tweets = savedInstanceState.getParcelableArrayList<TweetModel>(AppConstants.TWEETS)
         }
 
-        (applicationContext as BaseApp).component.inject(this)
         initViewComponents()
     }
 
@@ -68,7 +65,8 @@ class MainActivity : AppCompatActivity(), IView.MainActivity {
     }
 
     private fun initViewComponents() {
-        mainPresenter = MainPresenter(this)
+        mainPresenter = MainPresenter()
+        mainPresenter.attachView(this)
         mainPresenter.onCreate()
         tweetAdapter = TweetAdapter(tweets, this)
         loadingDialog = ViewDialog(this)
@@ -85,7 +83,7 @@ class MainActivity : AppCompatActivity(), IView.MainActivity {
 
     override fun onSaveInstanceState(savedInstanceState: Bundle?) {
         savedInstanceState?.let {
-            savedInstanceState.putParcelableArrayList("TWEETS", ArrayList<Parcelable>(tweets))
+            savedInstanceState.putParcelableArrayList(AppConstants.TWEETS, ArrayList<Parcelable>(tweets))
         }
         super.onSaveInstanceState(savedInstanceState)
     }
@@ -98,4 +96,8 @@ class MainActivity : AppCompatActivity(), IView.MainActivity {
         loadingDialog.hideDialog()
     }
 
+    override fun onDestroy() {
+        mainPresenter.detachView()
+        super.onDestroy()
+    }
 }

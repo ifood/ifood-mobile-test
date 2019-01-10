@@ -19,4 +19,11 @@ object AppConstants {
     const val COLOR_HAPPY = R.color.colorYellowHappy
     const val COLOR_NEUTRAL = R.color.colorGrayNeutral
     const val COLOR_SAD = R.color.colorBlueSad
+
+    // Parcelable key
+    const val TWEET = "TWEET"
+    const val TWEETS = "TWEETS"
+
+    // Animations
+    const val ANIMATION_TIME = 2000L
 }

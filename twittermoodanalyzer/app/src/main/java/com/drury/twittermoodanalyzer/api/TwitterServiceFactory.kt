@@ -1,8 +1,10 @@
 package com.drury.twittermoodanalyzer.api
 
 import android.app.Application
+import android.content.Context
 import com.drury.twittermoodanalyzer.R
 import com.drury.twittermoodanalyzer.utils.AppConstants
+import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
@@ -11,7 +13,7 @@ import se.akerfeldt.okhttp.signpost.OkHttpOAuthConsumer
 import se.akerfeldt.okhttp.signpost.SigningInterceptor
 import java.util.concurrent.TimeUnit
 
-open class TwitterServiceFactory(val application: Application) {
+open class TwitterServiceFactory(val context: Context) {
 
     private var baseUrl: String = AppConstants.BASE_URL_TWITTER_API
 
@@ -21,10 +23,10 @@ open class TwitterServiceFactory(val application: Application) {
 
     private fun buildClient(): OkHttpClient {
 
-        val consumer = OkHttpOAuthConsumer(application.getString(R.string.twitter_api_key),
-                application.getString(R.string.twitter_api_secret_key))
-        consumer.setTokenWithSecret(application.getString(R.string.twitter_api_access_token),
-                application.getString(R.string.twitter_api_token_secret))
+        val consumer = OkHttpOAuthConsumer(context.getString(R.string.twitter_api_key),
+                context.getString(R.string.twitter_api_secret_key))
+        consumer.setTokenWithSecret(context.getString(R.string.twitter_api_access_token),
+                context.getString(R.string.twitter_api_token_secret))
 
 
         return OkHttpClient.Builder()
@@ -45,7 +47,9 @@ open class TwitterServiceFactory(val application: Application) {
     }
 
     fun <S> createService(serviceClass: Class<S>): S {
-        retrofit = builder.build()
+        if (retrofit == null) {
+            retrofit = builder.build()
+        }
         return retrofit!!.create(serviceClass)
     }
 }

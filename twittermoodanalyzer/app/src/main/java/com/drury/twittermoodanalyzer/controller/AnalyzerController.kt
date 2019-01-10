@@ -1,27 +1,24 @@
 package com.drury.twittermoodanalyzer.controller
 
-import com.drury.twittermoodanalyzer.BaseApp
-import com.drury.twittermoodanalyzer.Interfaces
+import android.content.Context
 import com.drury.twittermoodanalyzer.api.ConnectionManager
 import com.drury.twittermoodanalyzer.api.DocumentSentiment
-import com.drury.twittermoodanalyzer.api.SentimentResult
 import com.drury.twittermoodanalyzer.model.TweetModel
 import com.twitter.sdk.android.core.models.Tweet
 import io.reactivex.Observable
-import okhttp3.RequestBody
 
-class AnalyzerController(val application: BaseApp): Interfaces.Controller {
+class AnalyzerController(val context: Context): IController.AnalyzerController {
 
     lateinit var connectionManager: ConnectionManager
 
     override fun getTweetsByUsername(username: String): Observable<List<TweetModel>> {
-        connectionManager = ConnectionManager(application)
+        connectionManager = ConnectionManager(context)
         return connectionManager.getTweetsByUserName(username)
-                .flatMap { tweetResult -> Observable.just(transformTweetResult(tweetResult.statuses)) }
+                .flatMap { tweetResult -> Observable.just(transformTweetResult(tweetResult)) }
     }
 
     override fun analyzeTweetMood(sentence: String): Observable<DocumentSentiment> {
-        connectionManager = ConnectionManager(application)
+        connectionManager = ConnectionManager(context)
         return connectionManager.sendSentencesToCloudLanguageNatural(sentence)
                 .flatMap { sentimentResult -> Observable.just(sentimentResult.documentSentiment) }
     }

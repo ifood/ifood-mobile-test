@@ -5,7 +5,8 @@ import android.app.Dialog
 import android.view.Window
 import android.widget.ImageView
 import com.bumptech.glide.Glide
-import com.bumptech.glide.request.target.GlideDrawableImageViewTarget
+import com.bumptech.glide.request.RequestOptions
+import com.bumptech.glide.request.target.DrawableImageViewTarget
 import com.drury.twittermoodanalyzer.R
 
 
@@ -22,13 +23,11 @@ class ViewDialog(var activity: Activity) {
 
         val gifImageView = dialog.findViewById<ImageView>(R.id.custom_loading_imageView)
 
-        val imageViewTarget = GlideDrawableImageViewTarget(gifImageView)
+        val imageViewTarget = DrawableImageViewTarget(gifImageView)
 
         Glide.with(activity)
                 .load(R.drawable.twitterfly)
-                .placeholder(R.drawable.twitterfly)
-                .centerCrop()
-                .crossFade()
+                .apply(RequestOptions().placeholder(R.drawable.twitterfly).centerCrop())
                 .into(imageViewTarget)
 
         dialog.show()

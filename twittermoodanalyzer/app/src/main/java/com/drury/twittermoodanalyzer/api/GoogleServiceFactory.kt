@@ -34,7 +34,9 @@ open class GoogleServiceFactory {
         }
 
         fun <S> createService(serviceClass: Class<S>): S {
-            retrofit = builder.build()
+            if (retrofit == null) {
+                retrofit = builder.build()
+            }
             return retrofit!!.create(serviceClass)
         }
 }
