@@ -27,9 +27,9 @@ script:
 
   # Build Framework in Release and Run Tests if specified
   - if [ $RUN_TESTS == "YES" ]; then
-      xcodebuild -workspace "$WORKSPACE" -scheme "$SCHEME" -destination "$DESTINATION" CODE_SIGNING_REQUIRED="$CODE_SIGN" -configuration Release ONLY_ACTIVE_ARCH=NO ENABLE_TESTABILITY=YES test | xcpretty;
+      xcodebuild -workspace "$WORKSPACE" -scheme "$SCHEME" -destination "$DESTINATION" CODE_SIGNING_REQUIRED="$CODE_SIGN" -UseModernBuildSystem=NO -configuration Release ONLY_ACTIVE_ARCH=NO ENABLE_TESTABILITY=YES test | xcpretty;
     else
-      xcodebuild -workspace "$WORKSPACE" -scheme "$SCHEME" -destination "$DESTINATION" CODE_SIGNING_REQUIRED="$CODE_SIGN" -configuration Release ONLY_ACTIVE_ARCH=NO build | xcpretty;
+      xcodebuild -workspace "$WORKSPACE" -scheme "$SCHEME" -destination "$DESTINATION" CODE_SIGNING_REQUIRED="$CODE_SIGN" -UseModernBuildSystem=NO -configuration Release ONLY_ACTIVE_ARCH=NO build | xcpretty;
     fi
 
   # Build Example in Debug if specified
