@@ -1,0 +1,45 @@
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+ext {
+    //Android libraries
+    androidx_support_version = '1.0.0'
+    androidx_material_desing = '1.0.0-rc01'
+    constraintLayout_version = '2.0.0-alpha3'
+    lifecycle_version = "2.0.0"
+    retrofit_version = '2.5.0'
+    twitter_version = '3.1.1'
+
+    //Third party libraries
+    kotlin_coroutines_version = '1.1.1'
+
+    mainApplication = [
+            kotlin                 : "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version",
+            kotlinCoroutines       : "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlin_coroutines_version",
+            kotlinCoroutinesAndroid: "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlin_coroutines_version",
+            appCompat              : "androidx.appcompat:appcompat:$androidx_support_version",
+            cardView               : "androidx.cardview:cardview:$androidx_support_version",
+            recyclerView           : "androidx.recyclerview:recyclerview:$androidx_support_version",
+            design                 : "com.google.android.material:material:$androidx_material_desing",
+            constraintLayout       : "androidx.constraintlayout:constraintlayout:$constraintLayout_version",
+            androidAnnotations     : "androidx.annotation:annotation:$androidx_support_version",
+            archComponents         : "androidx.lifecycle:lifecycle-extensions:$lifecycle_version",
+            archComponentsCompiler : "android.arch.lifecycle:compiler:$lifecycle_version",
+            retrofit               : "com.squareup.retrofit2:retrofit:$retrofit_version",
+            retrofitConverter      : "com.squareup.retrofit2:converter-gson:$retrofit_version",
+            twitter                : "com.twitter.sdk.android:twitter-core:$twitter_version"
+    ]
+
+//  unitTesting = [
+//      kotlin:             "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version",
+//      kotlinTest:         "org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version",
+//      robolectric:        "org.robolectric:robolectric:$robolectric_version",
+//      junit:              "junit:junit:$junit_version",
+//      mockito:            "com.nhaarman:mockito-kotlin:$mockito_version",
+//      kluent:             "org.amshove.kluent:kluent:$kluent_version",
+//  ]
+}
