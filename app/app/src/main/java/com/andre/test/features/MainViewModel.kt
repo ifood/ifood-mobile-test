@@ -17,15 +17,17 @@ class MainViewModel : ViewModel() {
         uiState.value = UiState.Empty
     }
 
-    fun queryTweet() {
-        val repository = TwitterRepository(
-            TwitterCore.getInstance().apiClient.searchService,
-            NetworkHandler(TestApplication.context)
-        )
-        val getTweets = GetTweets(repository)
+    fun queryTweet(query: String?) {
+        query?.let {
+            val repository = TwitterRepository(
+                TwitterCore.getInstance().apiClient.searchService,
+                NetworkHandler(TestApplication.context)
+            )
+            val getTweets = GetTweets(repository)
 
-        uiState.value = UiState.Loading
-        getTweets.execute(GetTweets.Params("nasa"), ::handleResponse)
+            uiState.value = UiState.Loading
+            getTweets.execute(GetTweets.Params(it), ::handleResponse)
+        }
     }
 
     private fun handleResponse(networkResponse: NetworkResponse) {

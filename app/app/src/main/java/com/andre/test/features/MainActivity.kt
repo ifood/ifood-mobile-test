@@ -6,6 +6,7 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.SearchView
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -22,19 +23,18 @@ class MainActivity : AppCompatActivity() {
         Toast.makeText(this, "Tweet from ${it.user.name} clicked", Toast.LENGTH_LONG).show()
     }
 
+    private lateinit var viewModel : MainViewModel
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
 
-        val viewModel =
-            ViewModelProvider.AndroidViewModelFactory.getInstance(application).create(MainViewModel::class.java)
+        viewModel = ViewModelProvider.AndroidViewModelFactory.getInstance(application).create(MainViewModel::class.java)
 
         tweet_list.visibility = View.VISIBLE
         tweet_list.layoutManager = LinearLayoutManager(this)
         tweet_list.adapter = listAdapter
-
-        viewModel.queryTweet()
 
         viewModel.uiState.observe(this, Observer { uiState ->
             when (uiState) {
@@ -75,6 +75,18 @@ class MainActivity : AppCompatActivity() {
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.menu_main, menu)
+
+        val searchView = menu.findItem(R.id.action_search).actionView as SearchView
+        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextChange(newText: String?): Boolean {
+                return true
+            }
+
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                viewModel.queryTweet(query)
+                return true
+            }
+        })
         return true
     }
 
@@ -83,7 +95,7 @@ class MainActivity : AppCompatActivity() {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         return when (item.itemId) {
-            R.id.action_settings -> true
+            R.id.action_search -> true
             else -> super.onOptionsItemSelected(item)
         }
     }
