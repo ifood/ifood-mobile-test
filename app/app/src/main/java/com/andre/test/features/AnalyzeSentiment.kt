@@ -7,8 +7,10 @@ import com.google.api.services.language.v1.model.AnnotateTextRequest
 import com.google.api.services.language.v1.model.Document
 import com.google.api.services.language.v1.model.Features
 import java.io.IOException
+import javax.inject.Inject
 
-class AnalyzeSentiment(private val naturalLanguageService: CloudNaturalLanguage) :
+class AnalyzeSentiment
+@Inject constructor(private val naturalLanguageService: CloudNaturalLanguage) :
     UseCase<NetworkResponse, AnalyzeSentiment.Params>() {
 
     override suspend fun run(params: Params): NetworkResponse {

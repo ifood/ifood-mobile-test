@@ -51,6 +51,8 @@ dependencies {
     kapt applicationDependencies.daggerCompiler
     kapt applicationDependencies.archComponentsCompiler
     kapt applicationDependencies.glideCompiler
+    compileOnly applicationDependencies.javaxAnnotation
+    compileOnly applicationDependencies.javaxInject
 
 
     testImplementation 'junit:junit:4.12'

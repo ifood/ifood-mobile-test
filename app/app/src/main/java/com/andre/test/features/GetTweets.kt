@@ -2,9 +2,10 @@ package com.andre.test.features
 
 import com.andre.test.core.network.NetworkResponse
 import com.andre.test.core.interactor.UseCase
+import javax.inject.Inject
 
 class GetTweets
-    constructor(private val twitterRepository: TwitterRepository) : UseCase<NetworkResponse, GetTweets.Params>() {
+@Inject constructor(private val twitterRepository: TwitterRepository) : UseCase<NetworkResponse, GetTweets.Params>() {
 
     override suspend fun run(params: Params) = twitterRepository.getTweets(params)
 

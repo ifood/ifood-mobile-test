@@ -4,14 +4,16 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.andre.test.R
 import com.andre.test.core.network.NetworkResponse
-import com.andre.test.core.platform.NetworkHandler
-import com.google.api.services.language.v1.CloudNaturalLanguage
 import com.google.api.services.language.v1.model.Sentiment
-import com.twitter.sdk.android.core.TwitterCore
 import com.twitter.sdk.android.core.models.Search
 import com.twitter.sdk.android.core.models.Tweet
+import javax.inject.Inject
 
-class MainViewModel : ViewModel() {
+class MainViewModel
+@Inject constructor(
+    private val getTweets: GetTweets,
+    private val analyzeSentiment: AnalyzeSentiment
+) : ViewModel() {
 
     val uiState = MutableLiveData<UiState>()
     val tweetData = MutableLiveData<List<Tweet>>()
@@ -23,19 +25,12 @@ class MainViewModel : ViewModel() {
 
     fun queryTweet(query: String?) {
         query?.let {
-            val repository = TwitterRepository(
-                TwitterCore.getInstance().apiClient.searchService,
-                NetworkHandler(TestApplication.context)
-            )
-            val getTweets = GetTweets(repository)
-
             uiState.value = UiState.Loading
             getTweets.execute(GetTweets.Params(it), ::handleTwitterResponse)
         }
     }
 
-    fun analyzeSentiment(naturalLanguage: CloudNaturalLanguage, twitterContent: String) {
-        val analyzeSentiment = AnalyzeSentiment(naturalLanguage)
+    fun analyzeSentiment(twitterContent: String) {
         analyzeSentiment.execute(AnalyzeSentiment.Params(twitterContent), ::handleAnalyzeResponse)
     }
 

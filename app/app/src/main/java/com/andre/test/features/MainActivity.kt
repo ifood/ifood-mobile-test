@@ -10,41 +10,36 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.andre.test.R
+import com.andre.test.core.di.AppComponent
 import com.andre.test.features.UiState.*
-import com.google.api.client.extensions.android.http.AndroidHttp
-import com.google.api.client.extensions.android.json.AndroidJsonFactory
-import com.google.api.services.language.v1.CloudNaturalLanguage
-import com.google.api.services.language.v1.CloudNaturalLanguageRequestInitializer
 import com.twitter.sdk.android.core.models.Tweet
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
+import javax.inject.Inject
 
 
 class MainActivity : AppCompatActivity() {
 
-    private val listAdapter = TweetListAdapter {
-        viewModel.analyzeSentiment(naturalLanguageService, it.text)
+    val appComponent: AppComponent by lazy(mode = LazyThreadSafetyMode.NONE) {
+        (application as TestApplication).appComponent
     }
 
-    private lateinit var viewModel: MainViewModel
-    private val naturalLanguageService by lazy {
-        CloudNaturalLanguage.Builder(
-            AndroidHttp.newCompatibleTransport(),
-            AndroidJsonFactory(),
-            null
-        ).setCloudNaturalLanguageRequestInitializer(
-            CloudNaturalLanguageRequestInitializer("AIzaSyDqepAUcbxla0TGr-SYlPBNZQj-2gq5gt8")
-        ).build()
+    @Inject lateinit var viewModel: MainViewModel
+    @Inject lateinit var viewModelFactory: ViewModelProvider.Factory
+    private val listAdapter = TweetListAdapter {
+        viewModel.analyzeSentiment(it.text)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        appComponent.inject(this)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
 
-        viewModel = ViewModelProvider.AndroidViewModelFactory.getInstance(application).create(MainViewModel::class.java)
+        viewModel = ViewModelProviders.of(this, viewModelFactory)[MainViewModel::class.java]
 
         tweet_list.visibility = VISIBLE
         tweet_list.layoutManager = LinearLayoutManager(this)

@@ -18,6 +18,8 @@ ext {
     google_language_api = 'v1-rev452-1.25.0'
     glide_version = '4.8.0'
     dagger_version = '2.11'
+    javaxAnnotations_version = '1.0'
+    javaxInject_version = '1'
 
     mainApplication = [
             kotlin                 : "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version",
@@ -39,7 +41,9 @@ ext {
             glide                  : "com.github.bumptech.glide:glide:$glide_version",
             glideCompiler          : "com.github.bumptech.glide:compiler:$glide_version",
             daggerCompiler         : "com.google.dagger:dagger-compiler:$dagger_version",
-            dagger                 : "com.google.dagger:dagger:$dagger_version"
+            dagger                 : "com.google.dagger:dagger:$dagger_version",
+            javaxAnnotation:            "javax.annotation:jsr250-api:$javaxAnnotations_version",
+            javaxInject:                "javax.inject:javax.inject:$javaxInject_version",
     ]
 
 //  unitTesting = [

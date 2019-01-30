@@ -1,18 +1,25 @@
 package com.andre.test.features
 
 import android.app.Application
-import android.content.Context
+import com.andre.test.core.di.AppComponent
+import com.andre.test.core.di.ApplicationModule
+import com.andre.test.core.di.DaggerAppComponent
 import com.twitter.sdk.android.core.Twitter
 
 class TestApplication : Application() {
 
-    companion object {
-        lateinit var context: Context
+    val appComponent: AppComponent by lazy(mode = LazyThreadSafetyMode.NONE) {
+        DaggerAppComponent
+            .builder()
+            .applicationModule(ApplicationModule(this))
+            .build()
     }
 
     override fun onCreate() {
         super.onCreate()
         Twitter.initialize(this)
-        context = this
+        this.injectMembers()
     }
+
+    private fun injectMembers() = appComponent.inject(this)
 }
