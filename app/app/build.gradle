@@ -46,7 +46,9 @@ dependencies {
     implementation applicationDependencies.googleServicesLanguage
     implementation applicationDependencies.googleApiClient
     implementation applicationDependencies.glide
+    implementation applicationDependencies.dagger
 
+    kapt applicationDependencies.daggerCompiler
     kapt applicationDependencies.archComponentsCompiler
     kapt applicationDependencies.glideCompiler
 
