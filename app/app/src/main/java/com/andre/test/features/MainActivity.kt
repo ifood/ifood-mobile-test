@@ -3,7 +3,8 @@ package com.andre.test.features
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
+import android.view.View.GONE
+import android.view.View.VISIBLE
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
@@ -11,47 +12,23 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.andre.test.R
+import com.andre.test.features.UiState.*
 import com.google.api.client.extensions.android.http.AndroidHttp
 import com.google.api.client.extensions.android.json.AndroidJsonFactory
 import com.google.api.services.language.v1.CloudNaturalLanguage
 import com.google.api.services.language.v1.CloudNaturalLanguageRequestInitializer
-import com.google.api.services.language.v1.model.AnnotateTextRequest
-import com.google.api.services.language.v1.model.Document
-import com.google.api.services.language.v1.model.Features
-
-import kotlinx.android.synthetic.main.activity_main.*
 import com.twitter.sdk.android.core.models.Tweet
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.async
-import kotlinx.coroutines.launch
 
 
 class MainActivity : AppCompatActivity() {
 
     private val listAdapter = TweetListAdapter {
-        val document = Document()
-        document.type = "PLAIN_TEXT"
-        document.content = it.text
-
-        val features = Features()
-        features.extractDocumentSentiment = true
-
-        val request = AnnotateTextRequest()
-        request.document = document
-        request.features = features
-
-        val job = GlobalScope.async(Dispatchers.IO) { naturalLanguageService.documents().annotateText(request).execute() }
-        GlobalScope.launch (Dispatchers.Main) {
-            val response = job.await()
-            val sentiment = response.documentSentiment
-
-            Toast.makeText(this@MainActivity, "Tweet from ${it.user.name} magnitude: ${sentiment.magnitude} score: ${sentiment.score}", Toast.LENGTH_LONG).show()
-        }
+        viewModel.analyzeSentiment(naturalLanguageService, it.text)
     }
 
-    private lateinit var viewModel : MainViewModel
+    private lateinit var viewModel: MainViewModel
     private val naturalLanguageService by lazy {
         CloudNaturalLanguage.Builder(
             AndroidHttp.newCompatibleTransport(),
@@ -69,41 +46,74 @@ class MainActivity : AppCompatActivity() {
 
         viewModel = ViewModelProvider.AndroidViewModelFactory.getInstance(application).create(MainViewModel::class.java)
 
-        tweet_list.visibility = View.VISIBLE
+        tweet_list.visibility = VISIBLE
         tweet_list.layoutManager = LinearLayoutManager(this)
         tweet_list.adapter = listAdapter
 
         viewModel.uiState.observe(this, Observer { uiState ->
             when (uiState) {
-                is UiState.Loading -> showProgress()
-                is UiState.Empty -> showEmptyList()
-                is UiState.Error -> showEmptyList()
-                is UiState.Sucess -> {
+                is Initial -> showInitialText()
+                is Loading -> {
+                    hideDataList()
+                    hideInfoText()
+                    showProgress()
+                }
+                is Empty -> {
                     hideProgress()
-                    hideEmptyList()
+                    hideDataList()
+                    showEmptyText()
+                }
+                is Error -> {
+                    hideProgress()
+                    hideDataList()
+                    showErrorText(uiState.errorId)
+                }
+                is Success -> {
+                    hideProgress()
+                    hideInfoText()
+                    showDataList()
                 }
             }
         })
 
         viewModel.tweetData.observe(this, Observer(this::loadList))
 
+        viewModel.analyzeData.observe(this, Observer {
+            Toast.makeText(this@MainActivity, "Sentiment ${it.score} : ${it.magnitude}", Toast.LENGTH_SHORT).show()
+        })
+
+    }
+
+    private fun showDataList() {
+        tweet_list.visibility = VISIBLE
+    }
+
+    private fun hideDataList() {
+        tweet_list.visibility = GONE
     }
 
     private fun showProgress() {
-        progressbar.visibility = View.VISIBLE
+        progressbar.visibility = VISIBLE
     }
 
     private fun hideProgress() {
-        progressbar.visibility = View.GONE
+        progressbar.visibility = GONE
     }
 
-    private fun showEmptyList() {
-        tweet_list.visibility = View.GONE
+    private fun hideInfoText() {
+        info_tv.visibility = GONE
     }
 
-    private fun hideEmptyList() {
-        tweet_list.visibility = View.VISIBLE
+    private fun setInfoText(stringId: Int) {
+        info_tv.visibility = VISIBLE
+        info_tv.text = getString(stringId)
     }
+
+    private fun showInitialText() = setInfoText(R.string.initial_text)
+
+    private fun showEmptyText() = setInfoText(R.string.empty_tweet_text)
+
+    private fun showErrorText(errorId: Int) = setInfoText(errorId)
 
     private fun loadList(list: List<Tweet>) {
         listAdapter.submitList(list)

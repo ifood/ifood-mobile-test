@@ -1,8 +1,7 @@
 apply plugin: 'com.android.application'
-
 apply plugin: 'kotlin-android'
-
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 28
@@ -46,19 +45,13 @@ dependencies {
     implementation applicationDependencies.twitter
     implementation applicationDependencies.googleServicesLanguage
     implementation applicationDependencies.googleApiClient
+    implementation applicationDependencies.glide
+
     kapt applicationDependencies.archComponentsCompiler
+    kapt applicationDependencies.glideCompiler
 
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.0-alpha4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha4'
 }
-
-//task copySecretKey(type: Copy) {
-//    File secretKey = file "$System.env.GOOGLE_APPLICATION_CREDENTIALS"
-//    from secretKey.getParent()
-//    include secretKey.getName()
-//    into 'src/main/res/raw'
-//    rename secretKey.getName(), "credential.json"
-//}
-//preBuild.dependsOn(copySecretKey)
