@@ -1,6 +1,6 @@
 package com.andre.test.features
 
-import com.andre.test.core.NetworkResponse
+import com.andre.test.core.network.NetworkResponse
 import com.andre.test.core.network.Repository
 import com.andre.test.core.platform.NetworkHandler
 import com.twitter.sdk.android.core.models.Search

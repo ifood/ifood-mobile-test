@@ -1,6 +1,6 @@
 package com.andre.test.core.interactor
 
-import com.andre.test.core.NetworkResponse
+import com.andre.test.core.network.NetworkResponse
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.async

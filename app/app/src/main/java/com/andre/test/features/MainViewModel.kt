@@ -2,7 +2,7 @@ package com.andre.test.features
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.andre.test.core.NetworkResponse
+import com.andre.test.core.network.NetworkResponse
 import com.andre.test.core.platform.NetworkHandler
 import com.twitter.sdk.android.core.TwitterCore
 import com.twitter.sdk.android.core.models.Search

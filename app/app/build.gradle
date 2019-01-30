@@ -20,7 +20,12 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/INDEX.LIST'
+    }
 }
+
 
 dependencies {
     def applicationDependencies = rootProject.ext.mainApplication
@@ -39,6 +44,8 @@ dependencies {
     implementation applicationDependencies.retrofit
     implementation applicationDependencies.retrofitConverter
     implementation applicationDependencies.twitter
+    implementation applicationDependencies.googleServicesLanguage
+    implementation applicationDependencies.googleApiClient
     kapt applicationDependencies.archComponentsCompiler
 
 
@@ -46,3 +53,12 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.1.0-alpha4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha4'
 }
+
+//task copySecretKey(type: Copy) {
+//    File secretKey = file "$System.env.GOOGLE_APPLICATION_CREDENTIALS"
+//    from secretKey.getParent()
+//    include secretKey.getName()
+//    into 'src/main/res/raw'
+//    rename secretKey.getName(), "credential.json"
+//}
+//preBuild.dependsOn(copySecretKey)

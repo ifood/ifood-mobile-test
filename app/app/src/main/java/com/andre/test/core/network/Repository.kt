@@ -1,6 +1,5 @@
 package com.andre.test.core.network
 
-import com.andre.test.core.NetworkResponse
 import retrofit2.Call
 
 abstract class Repository {

@@ -11,11 +11,11 @@ ext {
     androidx_material_desing = '1.0.0-rc01'
     constraintLayout_version = '2.0.0-alpha3'
     lifecycle_version = "2.0.0"
+    kotlin_coroutines_version = '1.1.1'
     retrofit_version = '2.5.0'
     twitter_version = '3.1.1'
-
-    //Third party libraries
-    kotlin_coroutines_version = '1.1.1'
+    google_api_client = '1.25.0'
+    google_language_api = 'v1-rev452-1.25.0'
 
     mainApplication = [
             kotlin                 : "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version",
@@ -31,7 +31,9 @@ ext {
             archComponentsCompiler : "android.arch.lifecycle:compiler:$lifecycle_version",
             retrofit               : "com.squareup.retrofit2:retrofit:$retrofit_version",
             retrofitConverter      : "com.squareup.retrofit2:converter-gson:$retrofit_version",
-            twitter                : "com.twitter.sdk.android:twitter-core:$twitter_version"
+            twitter                : "com.twitter.sdk.android:twitter-core:$twitter_version",
+            googleServicesLanguage : "com.google.apis:google-api-services-language:$google_language_api",
+            googleApiClient        : "com.google.api-client:google-api-client-android:$google_api_client"
     ]
 
 //  unitTesting = [

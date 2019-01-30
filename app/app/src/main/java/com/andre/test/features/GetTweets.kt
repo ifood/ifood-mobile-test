@@ -1,6 +1,6 @@
 package com.andre.test.features
 
-import com.andre.test.core.NetworkResponse
+import com.andre.test.core.network.NetworkResponse
 import com.andre.test.core.interactor.UseCase
 
 class GetTweets

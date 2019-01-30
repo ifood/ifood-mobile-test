@@ -11,19 +11,56 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.andre.test.R
+import com.google.api.client.extensions.android.http.AndroidHttp
+import com.google.api.client.extensions.android.json.AndroidJsonFactory
+import com.google.api.services.language.v1.CloudNaturalLanguage
+import com.google.api.services.language.v1.CloudNaturalLanguageRequestInitializer
+import com.google.api.services.language.v1.model.AnnotateTextRequest
+import com.google.api.services.language.v1.model.Document
+import com.google.api.services.language.v1.model.Features
 
 import kotlinx.android.synthetic.main.activity_main.*
 import com.twitter.sdk.android.core.models.Tweet
 import kotlinx.android.synthetic.main.content_main.*
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.async
+import kotlinx.coroutines.launch
 
 
 class MainActivity : AppCompatActivity() {
 
     private val listAdapter = TweetListAdapter {
-        Toast.makeText(this, "Tweet from ${it.user.name} clicked", Toast.LENGTH_LONG).show()
+        val document = Document()
+        document.type = "PLAIN_TEXT"
+        document.content = it.text
+
+        val features = Features()
+        features.extractDocumentSentiment = true
+
+        val request = AnnotateTextRequest()
+        request.document = document
+        request.features = features
+
+        val job = GlobalScope.async(Dispatchers.IO) { naturalLanguageService.documents().annotateText(request).execute() }
+        GlobalScope.launch (Dispatchers.Main) {
+            val response = job.await()
+            val sentiment = response.documentSentiment
+
+            Toast.makeText(this@MainActivity, "Tweet from ${it.user.name} magnitude: ${sentiment.magnitude} score: ${sentiment.score}", Toast.LENGTH_LONG).show()
+        }
     }
 
     private lateinit var viewModel : MainViewModel
+    private val naturalLanguageService by lazy {
+        CloudNaturalLanguage.Builder(
+            AndroidHttp.newCompatibleTransport(),
+            AndroidJsonFactory(),
+            null
+        ).setCloudNaturalLanguageRequestInitializer(
+            CloudNaturalLanguageRequestInitializer("AIzaSyDqepAUcbxla0TGr-SYlPBNZQj-2gq5gt8")
+        ).build()
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
