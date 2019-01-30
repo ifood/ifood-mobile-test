@@ -4,6 +4,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.andre.test.R
 import com.andre.test.core.network.NetworkResponse
+import com.andre.test.features.SentimentState.*
+import com.andre.test.features.UiState.*
 import com.google.api.services.language.v1.model.Sentiment
 import com.twitter.sdk.android.core.models.Search
 import com.twitter.sdk.android.core.models.Tweet
@@ -17,31 +19,39 @@ class MainViewModel
 
     val uiState = MutableLiveData<UiState>()
     val tweetData = MutableLiveData<List<Tweet>>()
-    val analyzeData = MutableLiveData<Sentiment>()
+    val analyzeData = MutableLiveData<SentimentState>()
 
     init {
-        uiState.value = UiState.Initial
+        uiState.value = Initial
     }
 
     fun queryTweet(query: String?) {
         query?.let {
-            uiState.value = UiState.Loading
+            uiState.value = Loading
             getTweets.execute(GetTweets.Params(it), ::handleTwitterResponse)
         }
     }
 
     fun analyzeSentiment(twitterContent: String) {
+        uiState.value = Loading
         analyzeSentiment.execute(AnalyzeSentiment.Params(twitterContent), ::handleAnalyzeResponse)
     }
 
-    private fun handleAnalyzeResponse(networkResponse: NetworkResponse) {
-        when (networkResponse) {
-            is NetworkResponse.Success<*> -> {
-                analyzeData.value = networkResponse.response as Sentiment
-            }
-            is NetworkResponse.FetchFailure -> uiState.value = UiState.Error(R.string.fetch_error_text)
-            is NetworkResponse.NetworkFailure -> uiState.value = UiState.Error(R.string.network_error_text)
+    private fun handleAnalyzeResponse(networkResponse: NetworkResponse) = when (networkResponse) {
+        is NetworkResponse.Success<*> -> {
+            uiState.value = Success
+            val sentiment = networkResponse.response as Sentiment
+
+            val sentimentState =
+                when {
+                    sentiment.score > 0.25 -> HappyTweet
+                    sentiment.score > -0.75 -> NeutralTweet
+                    else -> SadTweet
+                }
+            analyzeData.value = sentimentState
         }
+        is NetworkResponse.FetchFailure -> uiState.value = Error(R.string.fetch_error_text)
+        is NetworkResponse.NetworkFailure -> uiState.value = Error(R.string.network_error_text)
     }
 
     private fun handleTwitterResponse(networkResponse: NetworkResponse) {
@@ -49,14 +59,14 @@ class MainViewModel
             is NetworkResponse.Success<*> -> {
                 val tweets = (networkResponse.response as Search).tweets
                 if (tweets.size > 0) {
-                    uiState.value = UiState.Success
+                    uiState.value = Success
                     tweetData.value = tweets
                 } else {
-                    uiState.value = UiState.Empty
+                    uiState.value = Empty
                 }
             }
-            is NetworkResponse.FetchFailure -> uiState.value = UiState.Error(R.string.fetch_error_text)
-            is NetworkResponse.NetworkFailure -> uiState.value = UiState.Error(R.string.network_error_text)
+            is NetworkResponse.FetchFailure -> uiState.value = Error(R.string.fetch_error_text)
+            is NetworkResponse.NetworkFailure -> uiState.value = Error(R.string.network_error_text)
         }
     }
 }

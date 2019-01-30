@@ -35,7 +35,7 @@ class TweetListAdapter(private val clickListener: (Tweet) -> Unit) :
             itemView.message.text = tweet.text
             itemView.createdDate.text = tweet.createdAt
 
-            itemView.setOnClickListener { clickListener(tweet)}
+            itemView.container.setOnClickListener { clickListener(tweet)}
         }
     }
 }

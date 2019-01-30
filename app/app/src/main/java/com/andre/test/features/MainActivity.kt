@@ -1,11 +1,13 @@
 package com.andre.test.features
 
+import android.app.Dialog
 import android.os.Bundle
+import android.view.Gravity
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View.GONE
 import android.view.View.VISIBLE
-import android.widget.Toast
+import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.lifecycle.Observer
@@ -14,21 +16,25 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.andre.test.R
 import com.andre.test.core.di.AppComponent
+import com.andre.test.core.extension.hideKeyboard
 import com.andre.test.features.UiState.*
 import com.twitter.sdk.android.core.models.Tweet
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
+import kotlinx.android.synthetic.main.sentiment_dialog_layout.view.*
 import javax.inject.Inject
 
 
 class MainActivity : AppCompatActivity() {
 
-    val appComponent: AppComponent by lazy(mode = LazyThreadSafetyMode.NONE) {
+    private val appComponent: AppComponent by lazy(mode = LazyThreadSafetyMode.NONE) {
         (application as TestApplication).appComponent
     }
 
-    @Inject lateinit var viewModel: MainViewModel
-    @Inject lateinit var viewModelFactory: ViewModelProvider.Factory
+    @Inject
+    lateinit var viewModel: MainViewModel
+    @Inject
+    lateinit var viewModelFactory: ViewModelProvider.Factory
     private val listAdapter = TweetListAdapter {
         viewModel.analyzeSentiment(it.text)
     }
@@ -49,8 +55,6 @@ class MainActivity : AppCompatActivity() {
             when (uiState) {
                 is Initial -> showInitialText()
                 is Loading -> {
-                    hideDataList()
-                    hideInfoText()
                     showProgress()
                 }
                 is Empty -> {
@@ -73,9 +77,7 @@ class MainActivity : AppCompatActivity() {
 
         viewModel.tweetData.observe(this, Observer(this::loadList))
 
-        viewModel.analyzeData.observe(this, Observer {
-            Toast.makeText(this@MainActivity, "Sentiment ${it.score} : ${it.magnitude}", Toast.LENGTH_SHORT).show()
-        })
+        viewModel.analyzeData.observe(this, Observer(this::showSentimentDialog))
 
     }
 
@@ -88,10 +90,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showProgress() {
+        progress_background.visibility = VISIBLE
         progressbar.visibility = VISIBLE
     }
 
     private fun hideProgress() {
+        progress_background.visibility = GONE
         progressbar.visibility = GONE
     }
 
@@ -102,6 +106,37 @@ class MainActivity : AppCompatActivity() {
     private fun setInfoText(stringId: Int) {
         info_tv.visibility = VISIBLE
         info_tv.text = getString(stringId)
+    }
+
+    private fun showSentimentDialog(sentimentState: SentimentState) {
+        val dialog = Dialog(this)
+        val view = with(layoutInflater.inflate(R.layout.sentiment_dialog_layout, null)) {
+            when (sentimentState) {
+                is SentimentState.HappyTweet -> {
+                    this.sentiment_emoji.text = String(Character.toChars(0x1F600))
+                    setBackgroundColor(resources.getColor(R.color.happyColor, null))
+                }
+                is SentimentState.NeutralTweet -> {
+                    this.sentiment_emoji.text = String(Character.toChars(0x1F610))
+                    setBackgroundColor(resources.getColor(R.color.neutralColor, null))
+                }
+                is SentimentState.SadTweet -> {
+                    this.sentiment_emoji.text = String(Character.toChars(0x1F61E))
+                    setBackgroundColor(resources.getColor(R.color.sadColor, null))
+                }
+            }
+
+            setOnClickListener {
+                dialog.dismiss()
+            }
+            this
+        }
+
+        dialog.setContentView(view)
+
+        dialog.show()
+        dialog.window?.setGravity(Gravity.CENTER)
+        dialog.window?.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT)
     }
 
     private fun showInitialText() = setInfoText(R.string.initial_text)
@@ -126,6 +161,8 @@ class MainActivity : AppCompatActivity() {
 
             override fun onQueryTextSubmit(query: String?): Boolean {
                 viewModel.queryTweet(query)
+                searchView.clearFocus()
+                hideKeyboard()
                 return true
             }
         })

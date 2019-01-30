@@ -9,15 +9,6 @@
         tools:context=".features.MainActivity"
         tools:showIn="@layout/activity_main">
 
-    <ProgressBar
-            android:layout_width="wrap_content" android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:visibility="gone"
-            android:id="@+id/progressbar"/>
-
     <TextView
             android:id="@+id/info_tv"
             android:layout_width="wrap_content"
@@ -38,5 +29,23 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
+
+    <ProgressBar
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="gone"
+            android:id="@+id/progressbar"/>
+
+    <View
+            android:id="@+id/progress_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/background_dark"
+            android:visibility="gone"
+            android:alpha="0.3"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
