@@ -55,7 +55,6 @@ dependencies {
     compileOnly applicationDependencies.javaxAnnotation
     compileOnly applicationDependencies.javaxInject
 
-
     testImplementation unitTestDependencies.kotlin
     testImplementation unitTestDependencies.kotlinTest
     testImplementation unitTestDependencies.robolectric
