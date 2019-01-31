@@ -21,6 +21,10 @@ ext {
     javaxAnnotations_version = '1.0'
     javaxInject_version = '1'
 
+    robolectric_version = '3.8'
+    junit_version = '4.12'
+    mockito_version = '2.10.0'
+
     mainApplication = [
             kotlin                 : "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version",
             kotlinCoroutines       : "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlin_coroutines_version",
@@ -42,16 +46,15 @@ ext {
             glideCompiler          : "com.github.bumptech.glide:compiler:$glide_version",
             daggerCompiler         : "com.google.dagger:dagger-compiler:$dagger_version",
             dagger                 : "com.google.dagger:dagger:$dagger_version",
-            javaxAnnotation:            "javax.annotation:jsr250-api:$javaxAnnotations_version",
-            javaxInject:                "javax.inject:javax.inject:$javaxInject_version",
+            javaxAnnotation        : "javax.annotation:jsr250-api:$javaxAnnotations_version",
+            javaxInject            : "javax.inject:javax.inject:$javaxInject_version",
     ]
 
-//  unitTesting = [
-//      kotlin:             "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version",
-//      kotlinTest:         "org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version",
-//      robolectric:        "org.robolectric:robolectric:$robolectric_version",
-//      junit:              "junit:junit:$junit_version",
-//      mockito:            "com.nhaarman:mockito-kotlin:$mockito_version",
-//      kluent:             "org.amshove.kluent:kluent:$kluent_version",
-//  ]
+    unitTesting = [
+            kotlin     : "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version",
+            kotlinTest : "org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version",
+            robolectric: "org.robolectric:robolectric:$robolectric_version",
+            junit      : "junit:junit:$junit_version",
+            mockito    : "org.mockito:mockito-core:$mockito_version",
+    ]
 }

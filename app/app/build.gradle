@@ -28,6 +28,7 @@ android {
 
 dependencies {
     def applicationDependencies = rootProject.ext.mainApplication
+    def unitTestDependencies = rootProject.ext.unitTesting
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation applicationDependencies.kotlin
@@ -55,7 +56,12 @@ dependencies {
     compileOnly applicationDependencies.javaxInject
 
 
-    testImplementation 'junit:junit:4.12'
+    testImplementation unitTestDependencies.kotlin
+    testImplementation unitTestDependencies.kotlinTest
+    testImplementation unitTestDependencies.robolectric
+    testImplementation unitTestDependencies.junit
+    testImplementation unitTestDependencies.mockito
+
     androidTestImplementation 'androidx.test:runner:1.1.0-alpha4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha4'
 }
