@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Test</string>
+    <string name="action_search">Search</string>
+
+    <string name="initial_text">Tap on the search icon to fetch user tweets</string>
+    <string name="network_error_text">Could not fetch content due to network problems</string>
+    <string name="fetch_error_text">Could not fetch content due to generic problems</string>
+    <string name="empty_tweet_text">Could not find any tweets for this account</string>
+
+    <string name="happy_emojy">0x1F601</string>
+    <string name="neutral_emojy">0x1F602</string>
+    <string name="sad_emojy">0x1F603</string>
+
+    <string name="com.twitter.sdk.android.CONSUMER_KEY">wsYRdI6clLH12j9YbAdlOlm17</string>
+    <string name="com.twitter.sdk.android.CONSUMER_SECRET">ALraDiv78y8OtcafREkKLdMQ1w85Kfv5sfcJo9PYS3yruTDn6O</string>
+</resources>
