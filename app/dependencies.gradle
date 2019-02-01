@@ -55,6 +55,6 @@ ext {
             kotlinTest : "org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version",
             robolectric: "org.robolectric:robolectric:$robolectric_version",
             junit      : "junit:junit:$junit_version",
-            mockito    : "com.nhaarman.mockitokotlin2:mockito-kotlin:$mockito_version",
+            mockito    : "com.nhaarman.mockitokotlin2:mockito-kotlin:$mockito_version"
     ]
 }

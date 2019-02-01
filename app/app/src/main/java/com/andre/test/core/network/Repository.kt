@@ -9,10 +9,10 @@ abstract class Repository {
             if (response.isSuccessful) {
                 NetworkResponse.Success(response.body())
             }  else {
-                NetworkResponse.NetworkFailure()
+                NetworkResponse.FetchFailure()
             }
         } catch (exception: Throwable) {
-            NetworkResponse.NetworkFailure()
+            NetworkResponse.FetchFailure()
         }
     }
 }
