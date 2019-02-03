@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="unknown_error">The unknown error occurred!</string>
+    <string name="network_error">No internet connection!</string>
+    <string name="not_found_account_error">Account not found!</string>
+    <string name="private_account_error">This is a private account!</string>
+</resources>

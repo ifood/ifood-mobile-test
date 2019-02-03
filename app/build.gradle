@@ -1,0 +1,64 @@
+apply plugin: 'com.android.application'
+apply from: '../config-android.gradle'
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// APP NAME AND VERSION                                                                           //
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+enum BuildType {
+    DEBUG
+}
+
+static def getAppName(BuildType buildType) {
+    String APP_NAME = "Twitter Analyzer"
+    switch (buildType) {
+        case BuildType.DEBUG:
+            return APP_NAME + " - " + BuildType.DEBUG.name()
+    }
+}
+
+def versionMajor = 1
+def versionMinor = 0
+def versionPatch = 0
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// ANDROID                                                                                        //
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+android {
+    defaultConfig {
+        applicationId "com.spider.twitteranalyzer"
+        versionCode versionMajor * 100000 + versionMinor * 1000 + versionPatch * 10
+        versionName "${versionMajor}.${versionMinor}.${versionPatch}"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        buildTypes {
+            debug {
+                applicationIdSuffix ".debug"
+                resValue "string", "app_name", getAppName(BuildType.DEBUG)
+                debugging true
+            }
+        }
+    }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// DEPENDENCIES                                                                                   //
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+dependencies {
+    libraries()
+    kotlin()
+    debugging()
+    dagger()
+    networking()
+    rx()
+    architectureComponents()
+    view()
+    testing()
+
+    implementation project(path: ':base')
+    implementation project(path: ':feature_list')
+    implementation project(path: ':feature_detail')
+
+}

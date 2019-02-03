@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="mine_shaft">#404040</color>
+    <color name="black">#D9000000</color>
+    <color name="grey_medium">#ECEFF1</color>
+
+    <color name="lochmara">#0083ca</color>
+    <color name="lochmara_foreground">#570083CA</color>
+    <color name="dark_blue">#026596</color>
+
+</resources>

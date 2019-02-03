@@ -1,0 +1,56 @@
+.DS_Store
+ 
+# built application files
+*.apk
+*.ap_
+  
+# files for the dex VM
+*.dex
+  
+# Java class files
+*.class
+  
+# generated files
+bin/
+gen/
+
+# Gradle files
+.gradle/
+build/
+/*/build/
+*.iml
+
+# Local configuration file (sdk path, etc)
+local.properties
+  
+# Eclipse project files
+.classpath
+.project
+  
+# Android Studio
+.idea/
+.gradle
+/*/local.properties
+/*/out
+/*/*/build
+build
+/*/*/production
+*.iws
+*.ipr
+*~
+*.swp
+
+# Fastlane temporary profiling data
+/fastlane/report.xml
+/fastlane/GitTagName
+# Deliver temporary error output
+/fastlane/Error*.png
+# Deliver temporary preview output
+/fastlane/Preview.html
+# Snapshot generated screenshots
+/fastlane/screenshots/*/*-portrait.png
+/fastlane/screenshots/*/*-landscape.png
+/fastlane/screenshots/screenshots.html
+# Frameit generated screenshots
+/fastlane/screenshots/*/*-portrait_framed.png
+/fastlane/screenshots/*/*-landscape_framed.png

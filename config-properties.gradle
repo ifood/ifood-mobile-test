@@ -1,0 +1,30 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// Config                                                                                         //
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+class Config {
+    Properties commonProperties
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// Pull in config properties                                                                      //
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ext {
+    config = new Config()
+    def basePath = rootDir.absolutePath + "/config/"
+
+    config.commonProperties = new Properties()
+    def commonPropertiesFileName = "common.properties"
+    config.commonProperties.load(new FileInputStream(rootProject.file((basePath + commonPropertiesFileName))))
+}
+
+android {
+    defaultConfig {
+        buildConfigField "String", "TWITTER_BASE_URL", "\"${config.commonProperties.twitter_base_url}\""
+        buildConfigField "String", "TWITTER_CONSUMER_KEY", "\"${config.commonProperties.twitter_consumer_key}\""
+        buildConfigField "String", "TWITTER_CONSUMER_SECRET", "\"${config.commonProperties.twitter_consumer_secret}\""
+        buildConfigField "String", "GOOGLE_KEY", "\"${config.commonProperties.google_key}\""
+        buildConfigField "String", "GOOGLE_BASE_URL", "\"${config.commonProperties.google_base_url}\""
+    }
+}

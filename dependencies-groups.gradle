@@ -1,0 +1,144 @@
+def Group(Closure closure) {
+    closure.delegate = dependencies
+    return closure
+}
+
+/**
+ All groups below for easy copy/pasting:
+
+ libraries()
+ kotlin()
+ debugging()
+ dagger()
+ networking()
+ rx()
+ architectureComponents()
+ view()
+ testing()
+
+ **/
+
+ext {
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    // LIBRARIES                                                                                  //
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+
+    libraries = Group {
+        implementation deps.libs
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    // KOTLIN                                                                                     //
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+
+    kotlin = Group {
+        implementation deps.kotlin.lib
+        implementation deps.kotlin.ktx
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    // DEBUGGING                                                                                  //
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+
+    debugging = Group {
+        implementation deps.timber
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    // DAGGER                                                                                      //
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+
+    dagger = Group {
+        implementation deps.dagger.dagger
+        kapt deps.dagger.compiler
+        implementation deps.dagger.android
+        implementation deps.dagger.support
+        kapt deps.dagger.processor
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    // NETWORKING                                                                                 //
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+
+    networking = Group {
+        implementation deps.retrofit.retrofit
+        implementation deps.retrofit.gson
+        implementation deps.retrofit.rx
+
+        implementation deps.okHttp.okHttp
+        implementation deps.okHttp.logging
+        implementation deps.okHttp.mockServer
+
+        implementation deps.hawk
+        implementation deps.ok2curl
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    // RX                                                                                         //
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+
+    rx = Group {
+        implementation deps.rx.android
+        implementation deps.rx.java
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    // ARCHITECTURE COMPONENTS                                                                    //
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+
+    architectureComponents = Group {
+        implementation deps.ac.viewModel
+        implementation deps.ac.liveData
+        implementation deps.ac.extensions
+        implementation deps.ac.streams
+        kapt deps.ac.compiler
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    // VIEW                                                                                       //
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+
+    view = Group {
+        implementation deps.support.compat
+        implementation deps.support.app
+        implementation deps.support.cardView
+        implementation deps.support.recyclerView
+        implementation deps.support.design
+        implementation deps.support.emoji
+        implementation('com.github.florent37:tutoshowcase:1.0.1') {
+            exclude module: 'support-v4'
+        }
+
+        implementation deps.picasso
+        implementation deps.materialsearchview
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    // TESTING                                                                                     //
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+
+    testing = Group {
+
+        testImplementation(deps.jUnit) { exclude group: 'org.hamcrest' }
+        testImplementation deps.truth
+
+        testImplementation deps.mockito.core
+        testImplementation deps.mockito.inline
+
+        testImplementation deps.ac.testing
+
+        androidTestImplementation deps.supporttest.runner
+        androidTestImplementation deps.supporttest.rules
+        androidTestImplementation deps.supporttest.uiautomator
+        androidTestImplementation deps.espresso.core
+        implementation deps.espresso.idlingresource
+        androidTestImplementation deps.espresso.idlingconcurrent
+
+        androidTestImplementation deps.kakao
+        androidTestImplementation deps.mockito.core
+        androidTestImplementation deps.mockito.android
+
+
+    }
+}

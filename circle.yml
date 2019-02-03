@@ -1,0 +1,60 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/code
+    docker:
+    - image: circleci/android:api-28
+    environment:
+        JVM_OPTS: -Xmx3200m
+    steps:
+    - checkout
+    - restore_cache:
+        key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
+    - run:
+        name: bundle check
+        command: bundle check --path=vendor/bundle || bundle install --path=vendor/bundle --retry=3
+    - run:
+        name: fastlane install
+        command: gem install fastlane
+    - run:
+        name: chmod permissions
+        command: chmod +x ./gradlew
+    - run:
+        name: accept sdk licenses
+        command: yes | sdkmanager --licenses  || exit 0
+    - run:
+        name: update sdk
+        command: yes | sdkmanager --update  || exit 0
+    - run:
+        name: Download Dependencies
+        command: ./gradlew androidDependencies
+    - save_cache:
+        paths:
+        - ~/.gradle
+        key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
+    - run:
+          name: Run Base Module Unit Tests
+          command: ./gradlew :base:testDebugUnitTest
+    - store_artifacts:
+          path: base/build/reports
+    - store_test_results:
+          path: base/build/test-results
+    - run:
+          name: Run Feature List Module Unit Tests
+          command: ./gradlew :feature_list:testDebugUnitTest
+    - store_artifacts:
+          path: feature_list/build/reports
+    - store_test_results:
+          path: feature_list/build/test-results
+    - run:
+          name: Run Feature Detail Module Unit Tests
+          command: ./gradlew :feature_detail:testDebugUnitTest
+    - store_artifacts:
+          path: feature_detail/build/reports
+    - store_test_results:
+          path: feature_detail/build/test-results
+    - run:
+          name: Run Lint Test
+          command: ./gradlew lint
+    - store_artifacts:
+          path: base/build/reports

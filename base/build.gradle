@@ -1,0 +1,27 @@
+apply plugin: 'com.android.feature'
+apply from: '../config-android.gradle'
+apply from: '../config-properties.gradle'
+
+android {
+    baseFeature true
+}
+
+
+dependencies {
+    application project(':app')
+    feature project(':feature_list')
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// DEPENDENCIES                                                                                   //
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+dependencies {
+    kotlin()
+    debugging()
+    dagger()
+    networking()
+    rx()
+    view()
+    testing()
+}

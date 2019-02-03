@@ -1,0 +1,35 @@
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+    }
+
+    dependencies {
+        apply from: 'dependencies-versions.gradle'
+        apply from: 'dependencies-all.gradle'
+
+        classpath deps.build.gradle
+        classpath deps.build.kotlin
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+    }
+
+    gradle.projectsEvaluated {
+        tasks.withType(JavaCompile) {
+            options.compilerArgs << "-Xmaxerrs" << "1000"
+        }
+    }
+
+    dependencies { apply from: "$rootProject.rootDir/dependencies-groups.gradle" }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

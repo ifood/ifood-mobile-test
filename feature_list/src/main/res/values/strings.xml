@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="empty_state">Has no content to show!</string>
+    <string name="username_search_hint">Twitter user name</string>
+    <string name="showcase_list">Tap on this button to you can search the user you want to display his timeline. \ne.g: anderson</string>
+    <string name="btn_got_it">GOT IT!</string>
+</resources>

@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">feature_tweet_detail</string>
+    <string name="btn_analyze_tweet">analyze mood</string>
+    <string name="showcase_detail">Tap on this button to analyze tweet mood.</string>
+    <string name="btn_got_it">GOT IT!</string>
+</resources>

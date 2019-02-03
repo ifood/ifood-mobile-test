@@ -1,5 +1,9 @@
-# twitter-mood-analyzer
-Create an app that given an Twitter username it will list user's tweets. When I tap one of the tweets the app will visualy indicate if it's a happy, neutral or sad tweet.
+# Twitter-mood-analyzer
+![CircleCi](https://img.shields.io/circleci/project/github/andersoncfsilva/twitter-mood-analyzer/master.svg?style=flat)
+![Code Size](https://img.shields.io/github/languages/code-size/andersoncfsilva/twitter-mood-analyzer.svg?style=flat)
+[![Kotlin version badge](https://img.shields.io/badge/kotlin-1.3.0-blue.svg)](http://kotlinlang.org/)
+
+This app that given an Twitter username it will list user's tweets. When I tap one of the tweets the app will visualy indicate if it's a happy, neutral or sad tweet.
 
 ## Business rules
 * Happy Tweet: We want a vibrant yellow color on screen with a 😃 emoji
@@ -7,12 +11,20 @@ Create an app that given an Twitter username it will list user's tweets. When I 
 * Sad Tweet: We want a blue color on screen with a 😔 emoji
 * For the first release we will only support english language
 
-### Hints
-* You may use Twitter's oficial API (https://developer.twitter.com) to fetch user's tweets 
-* Google's Natural Language API (https://cloud.google.com/natural-language/) may help you with sentimental analysis.
+## App features:
+- 100% Kotlin
+- Architecture components
+- Vertical feature modules
+- Modular views
+- BDD tests
+- UI tests
 
-## Non functional requirements
-* As this app will be a worldwide success, it must be prepared to be fault tolerant, responsive and resilient.
-* Use whatever language, tools and frameworks you feel comfortable to.
-* Briefly elaborate on your solution, architecture details, choice of patterns and frameworks.
-* Fork this repository and submit your code.
+## Components:
+#### Repository
+This layer abstracts away our data sources (GoogleApi and TwitterApi)
+#### Use Cases
+This is where we interact with our repositories to do very specific tasks, asynchronously.
+#### View Model
+This makes use of the new architecture components so that we don’t need to know about our view, which you may traditionally need to know about if you was using a presenter. 
+#### View
+This layer comprises of our platform specific view, i.e. a fragment or an activity.
