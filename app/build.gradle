@@ -16,6 +16,8 @@ android {
         buildConfigField "String", "TWITTER_API", "\"http://api.twitter.com/\""
         buildConfigField "String", "CONSUMER_KEY", "\"FlCDB6zukvciOCKiyo5fRDWZp\""
         buildConfigField "String", "CONSUMER_SECRET", "\"ZlWCeFZoepZqKMmyMIcx3OGPvgF7MqqDnPdMWuu0ba20PX70ik\""
+        buildConfigField "String", "ACCESS_TOKEN", "\"3072180578-FOGtljSHwrOwkwahgiW7qgnTKEz6nCBrWkHQA53\""
+        buildConfigField "String", "ACCESS_TOKEN_SECRET", "\"MthILBm8rZRVxcYIXL5f62n3ltboxICeSYTmxcZ90WyMZ\""
     }
     buildTypes {
         release {
@@ -33,11 +35,6 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
-    //Twitter
-    implementation('com.twitter.sdk.android:twitter-core:3.3.0') {
-        exclude group: 'com.android.support'
-    }
-
     //Constraint Layout
     implementation "com.android.support.constraint:constraint-layout:$constraintVersion"
 
@@ -52,6 +49,8 @@ dependencies {
     //OKHttp
     implementation "com.squareup.okhttp3:okhttp:$okhttpVersion"
     implementation "com.squareup.okhttp3:logging-interceptor:$okhttpVersion"
+    implementation 'se.akerfeldt:okhttp-signpost:1.1.0'
+    implementation 'oauth.signpost:signpost-core:1.2.1.2'
 
     //Dagger
     implementation "com.google.dagger:dagger:$daggerVersion"
