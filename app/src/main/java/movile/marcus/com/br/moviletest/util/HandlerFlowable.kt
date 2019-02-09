@@ -2,8 +2,8 @@ package movile.marcus.com.br.moviletest.util
 
 import android.arch.lifecycle.MutableLiveData
 import io.reactivex.Flowable
-import movile.marcus.com.br.moviletest.model.data.Resource
-import movile.marcus.com.br.moviletest.model.data.Status
+import movile.marcus.com.br.moviletest.model.Resource
+import movile.marcus.com.br.moviletest.model.Status
 import movile.marcus.com.br.moviletest.ui.BaseViewModel
 import java.io.IOException
 
