@@ -25,6 +25,7 @@ ext {
     rxVersion = '2.1.5'
     rxAndroidVersion = '2.1.0'
     rxKotlinVersion = '2.3.0'
+    picassoVersion = '2.71828'
 }
 
 allprojects {

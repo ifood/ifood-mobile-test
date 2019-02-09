@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp">
+
+    <ImageView
+            android:id="@+id/itemTweetImage"
+            android:contentDescription="@null"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="50dp"
+            tools:src="@tools:sample/avatars"
+            android:layout_height="50dp"/>
+
+    <TextView
+            android:id="@+id/itemTweetUser"
+            app:layout_constraintTop_toTopOf="@+id/itemTweetImage"
+            app:layout_constraintStart_toEndOf="@+id/itemTweetImage"
+            android:layout_marginStart="18dp"
+            android:layout_width="wrap_content"
+            tools:text="Movile Pay"
+            android:layout_height="wrap_content"/>
+
+    <TextView
+            android:id="@+id/itemTweetDate"
+            android:layout_width="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/itemTweetUser"
+            app:layout_constraintTop_toTopOf="@+id/itemTweetImage"
+            android:layout_marginStart="16dp"
+            tools:text="9 min"
+            android:layout_height="wrap_content"/>
+
+    <TextView
+            android:id="@+id/itemTweetText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/itemTweetUser"
+            app:layout_constraintTop_toBottomOf="@+id/itemTweetUser"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"
+            tools:text="@tools:sample/lorem/random"/>
+
+</android.support.constraint.ConstraintLayout>

@@ -69,4 +69,7 @@ dependencies {
     implementation "io.reactivex.rxjava2:rxjava:$rxVersion"
     implementation "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion"
     implementation "io.reactivex.rxjava2:rxkotlin:$rxKotlinVersion"
+
+    //Picasso
+    implementation "com.squareup.picasso:picasso:$picassoVersion"
 }

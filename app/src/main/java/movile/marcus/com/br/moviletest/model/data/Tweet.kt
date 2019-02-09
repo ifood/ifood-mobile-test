@@ -8,7 +8,7 @@ enum class SentimentalEnum {
 
 data class TweetData(
     @field:Json(name = "created_at") val createdAt: String?,
-    @field:Json(name = "id") val id: Int?,
+    @field:Json(name = "id_str") val id: String?,
     @field:Json(name = "text") val text: String?,
     @field:Json(name = "user") val user: UserResult?
 )
