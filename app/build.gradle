@@ -13,7 +13,7 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
-        buildConfigField "String", "TWITTER_API", "\"http://api.twitter.com/\""
+        buildConfigField "String", "TWITTER_API", "\"https://api.twitter.com/\""
         buildConfigField "String", "CONSUMER_KEY", "\"FlCDB6zukvciOCKiyo5fRDWZp\""
         buildConfigField "String", "CONSUMER_SECRET", "\"ZlWCeFZoepZqKMmyMIcx3OGPvgF7MqqDnPdMWuu0ba20PX70ik\""
         buildConfigField "String", "ACCESS_TOKEN", "\"3072180578-FOGtljSHwrOwkwahgiW7qgnTKEz6nCBrWkHQA53\""

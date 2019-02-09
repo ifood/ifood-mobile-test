@@ -9,11 +9,11 @@ import java.io.IOException
 
 fun <T> Flowable<T>.toHandlerFlowable() = HandlerFlowable(this)
 
-data class HandlerFlowable<T>(val observable: Flowable<T>) {
+data class HandlerFlowable<T>(val flowable: Flowable<T>) {
 
     fun subscribeLiveData(viewModel: BaseViewModel, liveData: ResourceLiveData<T>) {
         viewModel.disposables.add(
-            observable
+            flowable
                 .doOnError { viewModel.loading.postValue(false) }
                 .subscribe(
                     { liveData.postValue(Resource.success(it)) },
