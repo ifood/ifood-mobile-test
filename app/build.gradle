@@ -14,10 +14,12 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
         buildConfigField "String", "TWITTER_API", "\"https://api.twitter.com/\""
+        buildConfigField "String", "GOOGLE_API", "\"https://language.googleapis.com/\""
         buildConfigField "String", "CONSUMER_KEY", "\"FlCDB6zukvciOCKiyo5fRDWZp\""
         buildConfigField "String", "CONSUMER_SECRET", "\"ZlWCeFZoepZqKMmyMIcx3OGPvgF7MqqDnPdMWuu0ba20PX70ik\""
         buildConfigField "String", "ACCESS_TOKEN", "\"3072180578-FOGtljSHwrOwkwahgiW7qgnTKEz6nCBrWkHQA53\""
         buildConfigField "String", "ACCESS_TOKEN_SECRET", "\"MthILBm8rZRVxcYIXL5f62n3ltboxICeSYTmxcZ90WyMZ\""
+        buildConfigField "String", "GOOGLE_NATURAL_LANGUAGE", "\"AIzaSyAvkYV5DVQBkmB9uGGl6wVzkPLc2ZAVdwI\""
     }
     buildTypes {
         release {

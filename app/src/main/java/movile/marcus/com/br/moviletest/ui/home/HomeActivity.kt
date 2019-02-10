@@ -15,6 +15,7 @@ import movile.marcus.com.br.moviletest.ui.BaseRecyclerAdapter
 class HomeActivity : BaseActivity(), BaseRecyclerAdapter.OnItemClickListener {
 
     private val homeTweetListAdapter = HomeTweetListAdapter()
+    private var user: String? = null
 
     private val homeViewModel by lazy {
         ViewModelProviders.of(this, viewModelFactory)
@@ -58,6 +59,19 @@ class HomeActivity : BaseActivity(), BaseRecyclerAdapter.OnItemClickListener {
                 }
             }
         })
+
+        homeViewModel.googleResult.observeResource(this, onSuccess = {
+            Snackbar.make(activityHomeContainer, it.documentSentiment.score.toString(), Snackbar.LENGTH_LONG).show()
+        }, onError = {
+            when (it.status) {
+                Status.INTERNET_ERROR -> {
+
+                }
+                else -> {
+                    showDefaultErro()
+                }
+            }
+        })
     }
 
     private fun completeLayout(tweeList: List<TweetData>) {
@@ -65,11 +79,17 @@ class HomeActivity : BaseActivity(), BaseRecyclerAdapter.OnItemClickListener {
     }
 
     private fun showDefaultErro() {
-        val snackbar = Snackbar.make(activityHomeContainer, "Ocorreu um erro!", Snackbar.LENGTH_LONG)
+        val snackbar = Snackbar.make(activityHomeContainer, "Ocorreu um erro!", Snackbar.LENGTH_INDEFINITE)
+        snackbar.setAction("Tentar Novamente") {
+            homeViewModel.getTweetByUser("globoesporte")
+        }
         snackbar.show()
     }
 
     override fun onItemClick(view: View, position: Int) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        val tweetData = homeTweetListAdapter.getItem(position)
+        tweetData.text?.let {
+            homeViewModel.getTextAnalyzer(it)
+        }
     }
 }

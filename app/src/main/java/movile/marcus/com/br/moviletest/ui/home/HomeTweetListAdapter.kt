@@ -15,7 +15,7 @@ class HomeTweetListAdapter : BaseRecyclerAdapter<TweetData>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_tweet, parent, false)
-        return ViewHolder(view)
+        return ViewHolder(view, listener)
     }
 
     override fun getItemCount() = recyclerList.size
@@ -24,7 +24,12 @@ class HomeTweetListAdapter : BaseRecyclerAdapter<TweetData>() {
         (holder as ViewHolder).bind(recyclerList[position])
     }
 
-    class ViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
+    class ViewHolder(private val view: View, private val listener: OnItemClickListener?) :
+        RecyclerView.ViewHolder(view), View.OnClickListener {
+
+        init {
+            view.setOnClickListener(this)
+        }
 
         fun bind(tweetData: TweetData) = with(view) {
             Picasso
@@ -34,6 +39,12 @@ class HomeTweetListAdapter : BaseRecyclerAdapter<TweetData>() {
                 .into(itemTweetImage)
             itemTweetUser.text = tweetData.user?.screenName
             itemTweetText.text = tweetData.text
+        }
+
+        override fun onClick(view: View?) {
+            view?.let {
+                listener?.onItemClick(it, adapterPosition)
+            }
         }
     }
 }
