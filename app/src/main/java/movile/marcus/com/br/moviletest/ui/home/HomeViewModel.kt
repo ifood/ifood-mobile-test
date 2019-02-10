@@ -18,6 +18,7 @@ class HomeViewModel @Inject constructor(
     val googleResult = ResourceLiveData<SentimentResult>()
 
     fun getTweetByUser(user: String) {
+        twitterRepository.saveLastSearch(user)
         twitterRepository
             .getTweetByUser(user)
             .doOnSubscribe { loading.postValue(true) }
@@ -31,5 +32,12 @@ class HomeViewModel @Inject constructor(
             .getTextAnalyzer(text)
             .toHandlerFlowable()
             .subscribeLiveData(this, googleResult)
+    }
+
+    fun getLastSearch() {
+        val lastSearch = twitterRepository.getLastSearch()
+        lastSearch?.let {
+            getTweetByUser(lastSearch)
+        }
     }
 }

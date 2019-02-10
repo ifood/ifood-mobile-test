@@ -34,7 +34,7 @@ class HomeActivity : BaseActivity(), BaseRecyclerAdapter.OnItemClickListener {
         setupRecyclerView()
         initObservers()
         if (homeViewModel.tweetResult.value == null) {
-            homeViewModel.getTweetByUser("globoesporte")
+            homeViewModel.getLastSearch()
         }
     }
 
@@ -85,9 +85,9 @@ class HomeActivity : BaseActivity(), BaseRecyclerAdapter.OnItemClickListener {
     }
 
     private fun showDefaultError() {
-        val snackbar = Snackbar.make(activityHomeContainer, "Ocorreu um erro!", Snackbar.LENGTH_INDEFINITE)
-        snackbar.setAction("Tentar Novamente") {
-            homeViewModel.getTweetByUser("globoesporte")
+        val snackbar = Snackbar.make(activityHomeContainer, getString(R.string.text_error), Snackbar.LENGTH_INDEFINITE)
+        snackbar.setAction(getString(R.string.btn_retry)) {
+            homeViewModel.getLastSearch()
         }
         snackbar.show()
     }

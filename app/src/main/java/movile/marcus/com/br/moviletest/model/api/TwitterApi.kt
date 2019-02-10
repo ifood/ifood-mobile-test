@@ -1,4 +1,4 @@
-package movile.marcus.com.br.moviletest.model.remote
+package movile.marcus.com.br.moviletest.model.api
 
 import io.reactivex.Flowable
 import movile.marcus.com.br.moviletest.model.data.TweetData

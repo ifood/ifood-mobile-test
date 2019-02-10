@@ -5,8 +5,8 @@ import dagger.Module
 import dagger.Provides
 import dagger.multibindings.IntoSet
 import movile.marcus.com.br.moviletest.BuildConfig
-import movile.marcus.com.br.moviletest.model.remote.GoogleApi
-import movile.marcus.com.br.moviletest.model.remote.TwitterApi
+import movile.marcus.com.br.moviletest.model.api.GoogleApi
+import movile.marcus.com.br.moviletest.model.api.TwitterApi
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

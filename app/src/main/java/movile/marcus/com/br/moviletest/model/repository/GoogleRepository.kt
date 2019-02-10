@@ -8,7 +8,7 @@ import io.reactivex.schedulers.Schedulers
 import movile.marcus.com.br.moviletest.model.data.ContentSentimentRequest
 import movile.marcus.com.br.moviletest.model.data.SentimentRequest
 import movile.marcus.com.br.moviletest.model.data.SentimentResult
-import movile.marcus.com.br.moviletest.model.remote.GoogleApi
+import movile.marcus.com.br.moviletest.model.api.GoogleApi
 import okhttp3.MediaType
 import okhttp3.RequestBody
 import javax.inject.Inject

@@ -4,4 +4,8 @@
 
     //BUTTON
     <string name="btn_close">X</string>
+    <string name="btn_retry">Try again!</string>
+
+    //TEXT
+    <string name="text_error">An error occurred.</string>
 </resources>

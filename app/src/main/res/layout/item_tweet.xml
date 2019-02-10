@@ -22,7 +22,7 @@
             app:layout_constraintStart_toEndOf="@+id/itemTweetImage"
             android:layout_marginStart="18dp"
             android:layout_width="wrap_content"
-            tools:text="Movile Pay"
+            tools:text="@tools:sample/first_names"
             android:layout_height="wrap_content"/>
 
     <TextView
