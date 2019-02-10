@@ -74,4 +74,7 @@ dependencies {
 
     //Picasso
     implementation "com.squareup.picasso:picasso:$picassoVersion"
+
+    //Hawk
+    implementation "com.orhanobut:hawk:2.0.1"
 }
