@@ -8,9 +8,11 @@ import android.view.View
 import kotlinx.android.synthetic.main.activity_home.*
 import movile.marcus.com.br.moviletest.R
 import movile.marcus.com.br.moviletest.model.Status
+import movile.marcus.com.br.moviletest.model.data.TweetAnalyzer
 import movile.marcus.com.br.moviletest.model.data.TweetData
 import movile.marcus.com.br.moviletest.ui.BaseActivity
 import movile.marcus.com.br.moviletest.ui.BaseRecyclerAdapter
+import movile.marcus.com.br.moviletest.ui.custom.CustomSentimentDialog
 
 class HomeActivity : BaseActivity(), BaseRecyclerAdapter.OnItemClickListener {
 
@@ -31,7 +33,6 @@ class HomeActivity : BaseActivity(), BaseRecyclerAdapter.OnItemClickListener {
     private fun init() {
         setupRecyclerView()
         initObservers()
-
         if (homeViewModel.tweetResult.value == null) {
             homeViewModel.getTweetByUser("globoesporte")
         }
@@ -55,20 +56,20 @@ class HomeActivity : BaseActivity(), BaseRecyclerAdapter.OnItemClickListener {
 
                 }
                 else -> {
-                    showDefaultErro()
+                    showDefaultError()
                 }
             }
         })
 
         homeViewModel.googleResult.observeResource(this, onSuccess = {
-            Snackbar.make(activityHomeContainer, it.documentSentiment.score.toString(), Snackbar.LENGTH_LONG).show()
+            showSentimental(it.documentSentiment.score)
         }, onError = {
             when (it.status) {
                 Status.INTERNET_ERROR -> {
 
                 }
                 else -> {
-                    showDefaultErro()
+                    showDefaultError()
                 }
             }
         })
@@ -78,7 +79,12 @@ class HomeActivity : BaseActivity(), BaseRecyclerAdapter.OnItemClickListener {
         homeTweetListAdapter.addToList(tweeList as ArrayList<TweetData>)
     }
 
-    private fun showDefaultErro() {
+    private fun showSentimental(score: Double) {
+        val sentimental = TweetAnalyzer(score).getSentimental()
+        CustomSentimentDialog.Builder(sentimental, this@HomeActivity).build().show()
+    }
+
+    private fun showDefaultError() {
         val snackbar = Snackbar.make(activityHomeContainer, "Ocorreu um erro!", Snackbar.LENGTH_INDEFINITE)
         snackbar.setAction("Tentar Novamente") {
             homeViewModel.getTweetByUser("globoesporte")

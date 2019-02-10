@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Movile Test</string>
+
+
+    //BUTTON
+    <string name="btn_close">X</string>
 </resources>
