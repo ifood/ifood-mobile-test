@@ -33,7 +33,15 @@ class NetworkModule {
 
     @Provides
     @Singleton
-    fun provideOkHttpClient(builder: OkHttpClient.Builder): OkHttpClient = builder.build()
+    @Named("TWITTER_CLIENT")
+    fun provideOkHttpTwitterClient(@Named(value = "OKHTTP_TWITTER") builder: OkHttpClient.Builder): OkHttpClient =
+        builder.build()
+
+    @Provides
+    @Singleton
+    @Named("GOOGLE_CLIENT")
+    fun provideOkHttpGoogleClient(@Named(value = "OKHTTP_GOOGLE") builder: OkHttpClient.Builder): OkHttpClient =
+        builder.build()
 
     @Provides
     @IntoSet
@@ -48,7 +56,8 @@ class NetworkModule {
 
     @Provides
     @Singleton
-    fun provideOkHttpClientBuilder(interceptors: Set<@JvmSuppressWildcards Interceptor>): OkHttpClient.Builder {
+    @Named(value = "OKHTTP_TWITTER")
+    fun provideOkHttpTwitterBuilder(interceptors: Set<@JvmSuppressWildcards Interceptor>): OkHttpClient.Builder {
         val builder = OkHttpClient.Builder()
         interceptors.forEach { builder.addInterceptor(it) }
         if (BuildConfig.DEBUG) {
@@ -70,7 +79,20 @@ class NetworkModule {
 
     @Provides
     @Singleton
-    fun provideTwitterApi(client: OkHttpClient, moshi: Moshi, @Named("HTTP_TWITTER_URL") url: String): TwitterApi {
+    @Named(value = "OKHTTP_GOOGLE")
+    fun provideOkHttpGoogleBuilder(interceptors: Set<@JvmSuppressWildcards Interceptor>): OkHttpClient.Builder {
+        val builder = OkHttpClient.Builder()
+        interceptors.forEach { builder.addInterceptor(it) }
+        if (BuildConfig.DEBUG) {
+            builder.addInterceptor(HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))
+        }
+
+        return builder
+    }
+
+    @Provides
+    @Singleton
+    fun provideTwitterApi(@Named(value = "TWITTER_CLIENT") client: OkHttpClient, moshi: Moshi, @Named("HTTP_TWITTER_URL") url: String): TwitterApi {
         return Retrofit.Builder()
             .client(client)
             .baseUrl(url)
@@ -82,7 +104,7 @@ class NetworkModule {
 
     @Provides
     @Singleton
-    fun provideGoogleApi(client: OkHttpClient, moshi: Moshi, @Named("HTTP_GOOGLE_URL") url: String): GoogleApi {
+    fun provideGoogleApi(@Named(value = "GOOGLE_CLIENT") client: OkHttpClient, moshi: Moshi, @Named("HTTP_GOOGLE_URL") url: String): GoogleApi {
         return Retrofit.Builder()
             .client(client)
             .baseUrl(url)
