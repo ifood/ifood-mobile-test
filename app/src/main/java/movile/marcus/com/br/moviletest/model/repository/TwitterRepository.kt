@@ -4,8 +4,8 @@ import com.orhanobut.hawk.Hawk
 import io.reactivex.Flowable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
-import movile.marcus.com.br.moviletest.model.data.TweetData
 import movile.marcus.com.br.moviletest.model.api.TwitterApi
+import movile.marcus.com.br.moviletest.model.data.TweetData
 import javax.inject.Inject
 
 class TwitterRepository @Inject constructor(

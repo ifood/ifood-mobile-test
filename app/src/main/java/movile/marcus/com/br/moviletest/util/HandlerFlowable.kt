@@ -22,10 +22,14 @@ data class HandlerFlowable<T>(val flowable: Flowable<T>) {
     }
 
     private fun handleError(liveData: MutableLiveData<Resource<T>>, it: Throwable) {
-        if (it is IOException) {
-            liveData.postValue(Resource.error(it, Status.INTERNET_ERROR))
-        } else {
-            liveData.postValue(Resource.error(it))
+        it.message?.let { message ->
+            when {
+                it is IOException -> liveData.postValue(Resource.error(it, Status.INTERNET_ERROR))
+                message.contains("401") -> {
+                    liveData.postValue(Resource.error(it, Status.UNAUTHORIZED))
+                }
+                else -> liveData.postValue(Resource.error(it))
+            }
         }
     }
 }

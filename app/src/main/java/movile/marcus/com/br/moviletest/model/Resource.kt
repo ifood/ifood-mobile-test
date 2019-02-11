@@ -1,7 +1,7 @@
 package movile.marcus.com.br.moviletest.model
 
 
-enum class Status { SUCCESS, DEFAULT_ERROR, INTERNET_ERROR }
+enum class Status { SUCCESS, DEFAULT_ERROR, INTERNET_ERROR, UNAUTHORIZED }
 
 data class Resource<out T>(
     val exception: Throwable?,
@@ -14,6 +14,7 @@ data class Resource<out T>(
             Status.SUCCESS,
             data
         )
+
         fun error(exception: Throwable?, status: Status = Status.DEFAULT_ERROR) =
             Resource(exception, status, null)
     }
