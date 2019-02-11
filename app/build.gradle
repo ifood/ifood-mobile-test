@@ -1,9 +1,10 @@
-def twitterPropertiesFile = rootProject.file("twitter-api.properties")
+def twitterPropertiesFile = rootProject.file("api-keys.properties")
 def twitterProperties = new Properties()
 twitterProperties.load(new FileInputStream(twitterPropertiesFile))
 
 def TWITTER_CONSUMER_KEY = "twitterConsumerKey"
 def TWITTER_CONSUMER_SECRET = "twitterConsumerSecret"
+def GCLOU_API_KEY = "gcloudApiKey"
 
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
@@ -22,6 +23,7 @@ android {
 
         buildConfigField "String", TWITTER_CONSUMER_KEY, twitterProperties[TWITTER_CONSUMER_KEY]
         buildConfigField "String", TWITTER_CONSUMER_SECRET, twitterProperties[TWITTER_CONSUMER_SECRET]
+        buildConfigField "String", GCLOU_API_KEY, twitterProperties[GCLOU_API_KEY]
 
         compileOptions {
             sourceCompatibility 1.8
@@ -68,7 +70,6 @@ dependencies {
 
     //Twitter API
     implementation 'com.twitter.sdk.android:twitter-core:3.3.0'
-
     implementation 'com.android.support:support-emoji:28.0.0'
 
 

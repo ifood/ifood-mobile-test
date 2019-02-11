@@ -1,5 +1,6 @@
 package com.drss.ifoodmobiletest.repository.interfaces
 
+import com.drss.ifoodmobiletest.BuildConfig
 import com.drss.ifoodmobiletest.data.GCloudSentimentBody
 import com.drss.ifoodmobiletest.data.SentimentResponse
 import io.reactivex.Single
@@ -13,7 +14,7 @@ interface GCloudApiInterface {
 
     @POST("/v1/documents:analyzeSentiment")
     fun analyzeDocumentSentiment(@Body body: GCloudSentimentBody,
-                                 @Query("key") apiKey: String = "AIzaSyDyYJH6ZQnM4Qx6Ut9BvWbmR_rUisZn__8"): Single<SentimentResponse>
+                                 @Query("key") apiKey: String = BuildConfig.gcloudApiKey): Single<SentimentResponse>
 
     companion object Factory {
         const val GCLOUD_API = "https://language.googleapis.com"
