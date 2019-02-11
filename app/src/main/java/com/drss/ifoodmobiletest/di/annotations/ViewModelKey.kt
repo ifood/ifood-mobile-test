@@ -1,9 +1,8 @@
-package com.drss.ifoodmobiletest.di
+package com.drss.ifoodmobiletest.di.annotations
 
 import androidx.lifecycle.ViewModel
 import dagger.MapKey
 import kotlin.reflect.KClass
-
 
 @MustBeDocumented
 @Target(AnnotationTarget.FUNCTION, AnnotationTarget.PROPERTY_GETTER, AnnotationTarget.PROPERTY_SETTER)

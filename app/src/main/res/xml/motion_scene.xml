@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+            app:constraintSetStart="@id/start"
+            app:constraintSetEnd="@id/end"
+            app:duration="1000">
+
+        <OnSwipe
+                app:touchAnchorId="@+id/tweets_recyclerview"
+                app:touchAnchorSide="top"
+                app:dragDirection="dragUp"/>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+
+        <Constraint android:id="@id/usertagEditText"
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="8dp" android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <Constraint android:layout_width="0dp" android:layout_height="0dp"
+                    android:src="@drawable/tw__ic_logo_default"
+                    android:tint="@color/colorAccent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="8dp" android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toTopOf="parent" android:id="@+id/ic_twitter"
+                    android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="@+id/usertagEditText"/>
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+
+        <Constraint android:id="@id/usertagEditText"
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:layout_constraintStart_toEndOf="@id/ic_twitter"
+                    android:layout_marginStart="8dp" android:layout_marginTop="16dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginEnd="32dp" app:layout_constraintEnd_toEndOf="parent"/>
+
+        <Constraint android:id="@id/ic_twitter"
+                    android:layout_width="32dp" android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="32dp"
+                    app:layout_constraintTop_toTopOf="@id/usertagEditText"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintBottom_toBottomOf="@id/usertagEditText"/>
+    </ConstraintSet>
+
+</MotionScene>

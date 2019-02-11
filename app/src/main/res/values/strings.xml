@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">iFoodMobileTest</string>
+    <string name="enter_user_tag">Enter user tag</string>
+
+    <string name="happy_emoji">😃</string>
+    <string name="sad_emoji">😔</string>
+    <string name="neutral_emoji">😐</string>
 </resources>

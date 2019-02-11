@@ -1,8 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-        android:id="@+id/fragment_container_framelayout"
-        xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".view.MainActivity"/>
+>
+
+    <data>
+        <variable name="viewModel" type="com.drss.ifoodmobiletest.viewmodel.UserTweetsViewModel"/>
+    </data>
+
+    <androidx.constraintlayout.motion.widget.MotionLayout android:layout_width="match_parent"
+                                                          android:layout_height="match_parent"
+                                                          android:background="@color/background_color"
+                                                          app:layoutDescription="@xml/motion_scene">
+
+        <EditText android:layout_width="0dp" android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:hint="@string/enter_user_tag"
+                  android:background="@drawable/search_background"
+                  android:text="@={viewModel.searchUserInput}"
+                  app:layout_constraintStart_toStartOf="parent"
+                  android:padding="10dp"
+                  android:singleLine="true"
+                  android:layout_marginStart="8dp" android:layout_marginTop="8dp"
+                  app:layout_constraintTop_toTopOf="parent" android:id="@+id/usertagEditText"
+                  android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+                  android:drawableEnd="@drawable/ic_search"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/usertagEditText" android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="32dp" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="32dp" android:id="@+id/tweets_recyclerview"
+                tools:listitem="@layout/tweet_item_layout"/>
+
+
+        <ImageView android:layout_width="0dp" android:layout_height="0dp"
+                   android:src="@drawable/ic_twitter"
+                   android:tint="@color/colorAccent"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
+                   android:layout_marginStart="8dp" android:layout_marginTop="8dp"
+                   app:layout_constraintTop_toTopOf="parent" android:id="@+id/ic_twitter"
+                   android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="@+id/usertagEditText"/>
+
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+
+
+</layout>

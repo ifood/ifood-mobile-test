@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable name="viewModel" type="com.drss.ifoodmobiletest.viewmodel.SentimentViewModel"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/sentiment_root"
+            android:layout_width="match_parent"
+            android:background="@color/background_color"
+            android:layout_height="match_parent">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/emoji_textview" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toTopOf="parent" android:textSize="64sp"
+                app:layout_constraintHorizontal_bias="0.5" app:layout_constraintBottom_toTopOf="@+id/tweet_text"
+                app:layout_constraintVertical_chainStyle="packed"/>
+
+        <TextView
+                android:text="@={viewModel.text}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tweet_text" android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/emoji_textview" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+                android:textSize="24sp"
+                android:gravity="center"
+                android:layout_marginEnd="8dp" app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintBottom_toTopOf="@+id/tweet_date"/>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tweet_date" android:layout_marginTop="8dp"
+                android:gravity="end"
+                android:text="@{viewModel.date}"
+                app:layout_constraintTop_toBottomOf="@+id/tweet_text" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp" app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <ImageButton
+                android:layout_width="32dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:layout_height="32dp" app:srcCompat="@drawable/ic_back"
+                android:id="@+id/backButton" android:layout_marginTop="16dp" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+                android:onClick="onBackClick"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -2,5 +2,12 @@
 <resources>
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorAccent">#1DA1F2</color>
+    <color name="background_color">#10171f</color>
+    <color name="item_background_color">#1d2938</color>
+
+    <color name="happyColor">#fee772</color>
+    <color name="sadColor">#124799</color>
+    <color name="neutralColor">#575757</color>
+
 </resources>
