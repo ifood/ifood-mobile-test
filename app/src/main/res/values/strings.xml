@@ -20,4 +20,7 @@
 
     <!-- Menu -->
     <string name="menu_search">Search</string>
+
+    <!-- Error View -->
+    <string name="text_error_view">An internet error occurred.</string>
 </resources>

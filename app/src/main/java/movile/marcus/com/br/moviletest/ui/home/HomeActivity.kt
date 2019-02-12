@@ -18,8 +18,10 @@ import movile.marcus.com.br.moviletest.model.data.TweetData
 import movile.marcus.com.br.moviletest.ui.BaseActivity
 import movile.marcus.com.br.moviletest.ui.BaseRecyclerAdapter
 import movile.marcus.com.br.moviletest.ui.custom.CustomSentimentDialog
+import movile.marcus.com.br.moviletest.ui.custom.ErrorView
 
-class HomeActivity : BaseActivity(), BaseRecyclerAdapter.OnItemClickListener, SearchView.OnQueryTextListener {
+class HomeActivity : BaseActivity(), BaseRecyclerAdapter.OnItemClickListener, SearchView.OnQueryTextListener,
+    ErrorView.ErrorListener {
 
     private val homeTweetListAdapter = HomeTweetListAdapter()
     private var customSentimentDialog: CustomSentimentDialog? = null
@@ -40,9 +42,14 @@ class HomeActivity : BaseActivity(), BaseRecyclerAdapter.OnItemClickListener, Se
         setupToolbar()
         setupRecyclerView()
         initObservers()
+        initListeners()
         if (homeViewModel.tweetResult.value == null) {
             homeViewModel.getLastSearch()
         }
+    }
+
+    private fun initListeners() {
+        activityHomeErrorView.setListeners(this)
     }
 
     private fun setupToolbar() {
@@ -73,6 +80,8 @@ class HomeActivity : BaseActivity(), BaseRecyclerAdapter.OnItemClickListener, Se
             it?.let { loading ->
                 if (loading) {
                     activityHomeLoading.visibility = View.VISIBLE
+                    activityHomeTweetList.visibility = View.GONE
+                    activityHomeErrorView.visibility = View.GONE
                 } else {
                     activityHomeLoading.visibility = View.GONE
                 }
@@ -84,7 +93,7 @@ class HomeActivity : BaseActivity(), BaseRecyclerAdapter.OnItemClickListener, Se
         }, onError = {
             when (it.status) {
                 Status.INTERNET_ERROR -> {
-
+                    activityHomeErrorView.visibility = View.VISIBLE
                 }
                 else -> {
                     showDefaultError()
@@ -100,7 +109,7 @@ class HomeActivity : BaseActivity(), BaseRecyclerAdapter.OnItemClickListener, Se
         }, onError = {
             when (it.status) {
                 Status.INTERNET_ERROR -> {
-
+                    activityHomeErrorView.visibility = View.VISIBLE
                 }
                 else -> {
                     showDefaultError()
@@ -110,6 +119,7 @@ class HomeActivity : BaseActivity(), BaseRecyclerAdapter.OnItemClickListener, Se
     }
 
     private fun completeLayout(tweeList: List<TweetData>) {
+        activityHomeTweetList.visibility = View.VISIBLE
         homeTweetListAdapter.addToList(tweeList as ArrayList<TweetData>)
     }
 
@@ -149,5 +159,10 @@ class HomeActivity : BaseActivity(), BaseRecyclerAdapter.OnItemClickListener, Se
 
     override fun onQueryTextChange(p0: String?): Boolean {
         return false
+    }
+
+    override fun retry() {
+        activityHomeErrorView.visibility = View.GONE
+        homeViewModel.getLastSearch()
     }
 }
