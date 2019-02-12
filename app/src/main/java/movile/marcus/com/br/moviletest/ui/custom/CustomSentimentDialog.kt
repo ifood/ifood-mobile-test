@@ -47,6 +47,10 @@ class CustomSentimentDialog : ConstraintLayout {
         closeBtn.setOnClickListener { dialog.dismiss() }
     }
 
+    fun dismiss() {
+        dialog.dismiss()
+    }
+
     fun show() {
         when (sentimental) {
             SentimentalEnum.SAD -> {

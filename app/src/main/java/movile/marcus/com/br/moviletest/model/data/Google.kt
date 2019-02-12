@@ -12,7 +12,7 @@ data class ContentSentimentRequest(
 )
 
 data class SentimentResult(
-    @field:Json(name = "documentSentiment") val documentSentiment: Sentiment
+    @field:Json(name = "documentSentiment") val documentSentiment: Sentiment?
 )
 
 data class Sentiment(

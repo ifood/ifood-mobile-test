@@ -1,5 +1,7 @@
 package movile.marcus.com.br.moviletest.ui.home
 
+import movile.marcus.com.br.moviletest.model.Resource
+import movile.marcus.com.br.moviletest.model.Status
 import movile.marcus.com.br.moviletest.model.data.SentimentResult
 import movile.marcus.com.br.moviletest.model.data.TweetData
 import movile.marcus.com.br.moviletest.model.repository.GoogleRepository
@@ -32,6 +34,10 @@ class HomeViewModel @Inject constructor(
             .getTextAnalyzer(text)
             .toHandlerFlowable()
             .subscribeLiveData(this, googleResult)
+    }
+
+    fun removeGoogleResult() {
+        googleResult.postValue(Resource(null, Status.SUCCESS, null))
     }
 
     fun getLastSearch() {

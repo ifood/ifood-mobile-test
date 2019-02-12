@@ -21,6 +21,7 @@ import movile.marcus.com.br.moviletest.ui.custom.CustomSentimentDialog
 class HomeActivity : BaseActivity(), BaseRecyclerAdapter.OnItemClickListener, SearchView.OnQueryTextListener {
 
     private val homeTweetListAdapter = HomeTweetListAdapter()
+    private var customSentimentDialog: CustomSentimentDialog? = null
 
     private val homeViewModel by lazy {
         ViewModelProviders.of(this, viewModelFactory)
@@ -80,7 +81,10 @@ class HomeActivity : BaseActivity(), BaseRecyclerAdapter.OnItemClickListener, Se
         })
 
         homeViewModel.googleResult.observeResource(this, onSuccess = {
-            showSentimental(it.documentSentiment.score)
+            it.documentSentiment?.let { sentiment ->
+                showSentimental(sentiment.score)
+                homeViewModel.removeGoogleResult()
+            }
         }, onError = {
             when (it.status) {
                 Status.INTERNET_ERROR -> {
@@ -99,7 +103,13 @@ class HomeActivity : BaseActivity(), BaseRecyclerAdapter.OnItemClickListener, Se
 
     private fun showSentimental(score: Double) {
         val sentimental = TweetAnalyzer(score).getSentimental()
-        CustomSentimentDialog.Builder(sentimental, this@HomeActivity).build().show()
+        customSentimentDialog = CustomSentimentDialog.Builder(sentimental, this@HomeActivity).build()
+        customSentimentDialog?.show()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        customSentimentDialog?.dismiss()
     }
 
     private fun showDefaultError() {
