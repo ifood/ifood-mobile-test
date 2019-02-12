@@ -32,10 +32,6 @@ android {
         main {
             assets.srcDirs = ['src/main/assets', 'src/androidTest/assets/']
             res.srcDirs = ['src/main/res', 'src/androidTest/res']
-
-
-            manifest.srcFile
-            'src/androidTest/AndroidManifest.xml'
         }
     }
 
