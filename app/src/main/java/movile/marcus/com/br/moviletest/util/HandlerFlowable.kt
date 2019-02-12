@@ -5,6 +5,7 @@ import io.reactivex.Flowable
 import movile.marcus.com.br.moviletest.model.Resource
 import movile.marcus.com.br.moviletest.model.Status
 import movile.marcus.com.br.moviletest.ui.BaseViewModel
+import retrofit2.HttpException
 import java.io.IOException
 
 fun <T> Flowable<T>.toHandlerFlowable() = HandlerFlowable(this)
@@ -22,11 +23,11 @@ data class HandlerFlowable<T>(val flowable: Flowable<T>) {
     }
 
     private fun handleError(liveData: MutableLiveData<Resource<T>>, it: Throwable) {
-        it.message?.let { message ->
+        (it as HttpException).run {
             when {
                 it is IOException -> liveData.postValue(Resource.error(it, Status.INTERNET_ERROR))
-                message.contains("401") -> {
-                    liveData.postValue(Resource.error(it, Status.UNAUTHORIZED))
+                it.response().code() == 404 -> {
+                    liveData.postValue(Resource.error(it, Status.NOT_FOUND))
                 }
                 else -> liveData.postValue(Resource.error(it))
             }

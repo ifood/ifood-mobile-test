@@ -22,5 +22,6 @@
     <string name="menu_search">Search</string>
 
     <!-- Error View -->
-    <string name="text_error_view">An internet error occurred.</string>
+    <string name="text_no_internet">An internet error occurred.</string>
+    <string name="text_not_found">Page not found.</string>
 </resources>

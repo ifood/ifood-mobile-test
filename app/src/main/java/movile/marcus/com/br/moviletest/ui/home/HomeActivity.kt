@@ -42,14 +42,9 @@ class HomeActivity : BaseActivity(), BaseRecyclerAdapter.OnItemClickListener, Se
         setupToolbar()
         setupRecyclerView()
         initObservers()
-        initListeners()
         if (homeViewModel.tweetResult.value == null) {
             homeViewModel.getLastSearch()
         }
-    }
-
-    private fun initListeners() {
-        activityHomeErrorView.setListeners(this)
     }
 
     private fun setupToolbar() {
@@ -93,7 +88,10 @@ class HomeActivity : BaseActivity(), BaseRecyclerAdapter.OnItemClickListener, Se
         }, onError = {
             when (it.status) {
                 Status.INTERNET_ERROR -> {
-                    activityHomeErrorView.visibility = View.VISIBLE
+                    noInternetError()
+                }
+                Status.NOT_FOUND -> {
+                    notFoundError()
                 }
                 else -> {
                     showDefaultError()
@@ -109,13 +107,23 @@ class HomeActivity : BaseActivity(), BaseRecyclerAdapter.OnItemClickListener, Se
         }, onError = {
             when (it.status) {
                 Status.INTERNET_ERROR -> {
-                    activityHomeErrorView.visibility = View.VISIBLE
+                    noInternetError()
                 }
                 else -> {
                     showDefaultError()
                 }
             }
         })
+    }
+
+    private fun noInternetError() {
+        activityHomeErrorView.visibility = View.VISIBLE
+        activityHomeErrorView.noInternetError(this)
+    }
+
+    private fun notFoundError() {
+        activityHomeErrorView.visibility = View.VISIBLE
+        activityHomeErrorView.notFoundError()
     }
 
     private fun completeLayout(tweeList: List<TweetData>) {

@@ -25,4 +25,10 @@
     <style name="Custom.Close" parent="AppTheme">
         <item name="android:textSize">30sp</item>
     </style>
+
+    <!-- ERROR VIEW -->
+    <style name="Error.Title" parent="AppTheme">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 </resources>
