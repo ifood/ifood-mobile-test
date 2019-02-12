@@ -1,5 +1,6 @@
 package movile.marcus.com.br.moviletest.ui.home
 
+import android.arch.lifecycle.MutableLiveData
 import movile.marcus.com.br.moviletest.model.Resource
 import movile.marcus.com.br.moviletest.model.Status
 import movile.marcus.com.br.moviletest.model.data.SentimentResult
@@ -18,6 +19,7 @@ class HomeViewModel @Inject constructor(
 
     val tweetResult = ResourceLiveData<List<TweetData>>()
     val googleResult = ResourceLiveData<SentimentResult>()
+    val loadingAnalyzerResult = MutableLiveData<Boolean>()
 
     fun getTweetByUser(user: String) {
         twitterRepository.saveLastSearch(user)
@@ -32,6 +34,8 @@ class HomeViewModel @Inject constructor(
     fun getTextAnalyzer(text: String) {
         googleRepository
             .getTextAnalyzer(text)
+            .doOnSubscribe { loadingAnalyzerResult.postValue(true) }
+            .doFinally { loadingAnalyzerResult.postValue(false) }
             .toHandlerFlowable()
             .subscribeLiveData(this, googleResult)
     }

@@ -83,6 +83,16 @@ class HomeActivity : BaseActivity(), BaseRecyclerAdapter.OnItemClickListener, Se
             }
         })
 
+        homeViewModel.loadingAnalyzerResult.observe(this, Observer {
+            it?.let { loading ->
+                if (loading) {
+                    showLoadingDialog()
+                } else {
+                    hideLoadingDialog()
+                }
+            }
+        })
+
         homeViewModel.tweetResult.observeResource(this, onSuccess = {
             completeLayout(it)
         }, onError = {
@@ -114,6 +124,17 @@ class HomeActivity : BaseActivity(), BaseRecyclerAdapter.OnItemClickListener, Se
                 }
             }
         })
+    }
+
+    private fun showLoadingDialog() {
+        activityHomeLoading.visibility = View.VISIBLE
+        activityHomeTweetList.visibility = View.GONE
+        activityHomeErrorView.visibility = View.GONE
+    }
+
+    private fun hideLoadingDialog() {
+        activityHomeLoading.visibility = View.GONE
+        activityHomeTweetList.visibility = View.VISIBLE
     }
 
     private fun noInternetError() {
