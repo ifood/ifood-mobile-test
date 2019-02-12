@@ -22,6 +22,7 @@ class HomeActivity : BaseActivity(), BaseRecyclerAdapter.OnItemClickListener, Se
 
     private val homeTweetListAdapter = HomeTweetListAdapter()
     private var customSentimentDialog: CustomSentimentDialog? = null
+    private lateinit var searchView: SearchView
 
     private val homeViewModel by lazy {
         ViewModelProviders.of(this, viewModelFactory)
@@ -52,7 +53,7 @@ class HomeActivity : BaseActivity(), BaseRecyclerAdapter.OnItemClickListener, Se
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_search, menu)
         val myActionMenuItem = menu?.findItem(R.id.action_search)
-        val searchView = myActionMenuItem?.actionView as SearchView
+        searchView = myActionMenuItem?.actionView as SearchView
         searchView.setOnQueryTextListener(this)
         return true
     }
@@ -130,6 +131,7 @@ class HomeActivity : BaseActivity(), BaseRecyclerAdapter.OnItemClickListener, Se
     override fun onQueryTextSubmit(text: String?): Boolean {
         text?.let {
             homeViewModel.getTweetByUser(it)
+            searchView.clearFocus()
         }
         return true
     }
