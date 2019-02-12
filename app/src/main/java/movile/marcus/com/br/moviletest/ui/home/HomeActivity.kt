@@ -1,5 +1,6 @@
 package movile.marcus.com.br.moviletest.ui.home
 
+import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.support.design.widget.Snackbar
@@ -68,6 +69,16 @@ class HomeActivity : BaseActivity(), BaseRecyclerAdapter.OnItemClickListener, Se
     }
 
     private fun initObservers() {
+        homeViewModel.loading.observe(this, Observer {
+            it?.let { loading ->
+                if (loading) {
+                    activityHomeLoading.visibility = View.VISIBLE
+                } else {
+                    activityHomeLoading.visibility = View.GONE
+                }
+            }
+        })
+
         homeViewModel.tweetResult.observeResource(this, onSuccess = {
             completeLayout(it)
         }, onError = {
