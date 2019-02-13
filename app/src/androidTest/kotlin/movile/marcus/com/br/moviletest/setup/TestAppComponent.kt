@@ -26,7 +26,7 @@ import javax.inject.Singleton
 )
 interface TestAppComponent : AndroidInjector<DaggerApplication> {
 
-    abstract fun inject(app: TestApp)
+    fun inject(app: TestApp)
 
     @Component.Builder
     interface Builder {

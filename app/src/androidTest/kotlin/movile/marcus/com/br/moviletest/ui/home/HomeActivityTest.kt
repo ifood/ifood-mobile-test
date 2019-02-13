@@ -5,6 +5,7 @@ import android.support.test.rule.ActivityTestRule
 import android.support.test.runner.AndroidJUnit4
 import movile.marcus.com.br.moviletest.BaseTest
 import org.junit.Rule
+import org.junit.Test
 import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
@@ -18,9 +19,11 @@ class HomeActivityTest : BaseTest() {
 
     private val intent = Intent()
 
+    @Test
     fun testIfHomeAppear() {
         robots {
             initActivity(intent)
+            validateIfNoOverlapView()
         }
     }
 }

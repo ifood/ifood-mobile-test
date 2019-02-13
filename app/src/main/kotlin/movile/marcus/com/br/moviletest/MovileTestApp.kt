@@ -2,13 +2,15 @@ package movile.marcus.com.br.moviletest
 
 import com.orhanobut.hawk.Hawk
 import dagger.android.AndroidInjector
-import dagger.android.DaggerApplication
+import dagger.android.support.DaggerApplication
 import movile.marcus.com.br.moviletest.di.DaggerAppComponent
 
 open class MovileTestApp : DaggerApplication() {
 
     override fun applicationInjector(): AndroidInjector<out DaggerApplication> {
-        return DaggerAppComponent.builder().application(this).build()
+        val component = DaggerAppComponent.builder().application(this).build()
+        component.inject(this)
+        return component
     }
 
     override fun onCreate() {

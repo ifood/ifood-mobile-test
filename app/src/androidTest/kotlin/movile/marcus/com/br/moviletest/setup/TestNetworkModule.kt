@@ -24,12 +24,12 @@ class TestNetworkModule {
     @Provides
     @Singleton
     @Named("HTTP_TWITTER_URL")
-    fun provideTwitterHttpUrl() = ""
+    fun provideTwitterHttpUrl() = "http://localhost/"
 
     @Provides
     @Singleton
     @Named(value = "HTTP_GOOGLE_URL")
-    fun provideGoogleHttpUrl() = ""
+    fun provideGoogleHttpUrl() = "http://localhost/"
 
     @Provides
     @Singleton

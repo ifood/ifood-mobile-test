@@ -1,9 +1,8 @@
 package movile.marcus.com.br.moviletest.setup
 
 import dagger.android.AndroidInjector
-import dagger.android.DaggerApplication
+import dagger.android.support.DaggerApplication
 import movile.marcus.com.br.moviletest.MovileTestApp
-
 
 class TestApp : MovileTestApp() {
 
