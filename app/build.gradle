@@ -104,8 +104,10 @@ dependencies {
     implementation "io.reactivex.rxjava2:rxkotlin:$rxKotlinVersion"
 
     //Picasso
-    implementation "com.squareup.picasso:picasso:$picassoVersion"
+    implementation ("com.squareup.picasso:picasso:$picassoVersion") {
+        exclude group: 'com.android.support'
+    }
 
     //Hawk
-    implementation "com.orhanobut:hawk:2.0.1"
+    implementation "com.orhanobut:hawk:$hawkVersion"
 }
