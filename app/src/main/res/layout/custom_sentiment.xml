@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:id="@+id/customSentimentContainer"
+        android:layout_height="match_parent"
+        tools:background="@android:color/holo_blue_bright">
+
+    <TextView
+            android:id="@+id/customSentimentTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="@tools:sample/first_names"
+            android:layout_marginTop="56dp"
+            style="@style/Custom.Title"
+            app:layout_constraintBottom_toTopOf="@+id/customSentimentImage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+            android:id="@+id/customSentimentImage"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:src="@tools:sample/avatars"
+            android:contentDescription="@null"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+
+    <TextView
+            android:id="@+id/customSentimentCloseBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_margin="16dp"
+            android:padding="10dp"
+            android:text="@string/btn_close"
+            style="@style/Custom.Close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <TextView
+            android:id="@+id/customSentimentText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:text="@tools:sample/lorem"
+            android:layout_margin="16dp"
+            style="@style/Custom.Text"
+            app:layout_constraintTop_toBottomOf="@+id/customSentimentImage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+</android.support.constraint.ConstraintLayout>

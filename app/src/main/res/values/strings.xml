@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Movile Test</string>
+
+
+    <!-- BUTTON -->
+    <string name="btn_close">X</string>
+    <string name="btn_retry">Try again!</string>
+
+    <!-- TEXT -->
+    <string name="text_error">An error occurred.</string>
+
+    <!-- Custom -->
+    <string name="title_sad">OUCH!</string>
+    <string name="title_neutral">OPS!</string>
+    <string name="title_happy">HEY!</string>
+
+    <string name="text_sad">I saw you\'re sad. I hope your mood improves.</string>
+    <string name="text_neutral">I can not tell if you\'re happy or sad.</string>
+    <string name="text_happy">I see you\'re happy. I hope it stays that way.</string>
+
+    <!-- Menu -->
+    <string name="menu_search">Search</string>
+
+    <!-- Error View -->
+    <string name="text_no_internet">An internet error occurred.</string>
+    <string name="text_not_found">Page not found.</string>
+</resources>
