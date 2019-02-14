@@ -34,7 +34,7 @@ class HomeActivityTest : BaseTest() {
     fun testIfHomeAppearWith2Items() {
         robots {
             mockLocalSaveUser(twitterRepository)
-            mockResponseSuccess("get_tweets_success.json")
+            mockResponseSuccess()
             initActivity(intent)
             validateIfViewAppearWithItems(2)
         }
@@ -46,6 +46,15 @@ class HomeActivityTest : BaseTest() {
             mockNotFound()
             initActivity(intent)
             validateIfNotFoundLayoutAppear()
+        }
+    }
+
+    @Test
+    fun testIfNoInternetLayoutAppear() {
+        robots {
+            mockNoInternet()
+            initActivity(intent)
+            validateIfNotInternetLayoutAppear()
         }
     }
 }

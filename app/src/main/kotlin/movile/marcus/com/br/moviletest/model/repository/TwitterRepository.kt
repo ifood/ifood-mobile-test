@@ -23,5 +23,5 @@ class TwitterRepository @Inject constructor(
         Hawk.put(lastSearch, user)
     }
 
-    fun getLastSearch(): String? = Hawk.get<String>(lastSearch, null)
+    fun getLastSearch(): String? = Hawk.get<String>(lastSearch)
 }

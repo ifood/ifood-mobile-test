@@ -13,6 +13,7 @@ import movile.marcus.com.br.moviletest.util.RecyclerViewItemCountAssertion
 import movile.marcus.com.br.moviletest.util.TestHelper
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer
+import okhttp3.mockwebserver.SocketPolicy
 
 class HomeRobots(private var rule: ActivityTestRule<HomeActivity>, private val server: MockWebServer) {
 
@@ -20,11 +21,11 @@ class HomeRobots(private var rule: ActivityTestRule<HomeActivity>, private val s
         rule.launchActivity(intent)
     }
 
-    fun mockResponseSuccess(fileName: String) {
+    fun mockResponseSuccess() {
         server.enqueue(
             MockResponse()
                 .setResponseCode(200)
-                .setBody(TestHelper.getStringFromFile(getInstrumentation().context, fileName))
+                .setBody(TestHelper.getStringFromFile(getInstrumentation().context, "get_tweets_success.json"))
         )
     }
 
@@ -32,6 +33,14 @@ class HomeRobots(private var rule: ActivityTestRule<HomeActivity>, private val s
         server.enqueue(
             MockResponse()
                 .setResponseCode(404)
+        )
+    }
+
+    fun mockNoInternet() {
+        server.enqueue(
+            MockResponse()
+                .setResponseCode(200)
+                .setSocketPolicy(SocketPolicy.DISCONNECT_AFTER_REQUEST)
         )
     }
 
@@ -46,5 +55,10 @@ class HomeRobots(private var rule: ActivityTestRule<HomeActivity>, private val s
     fun validateIfNotFoundLayoutAppear() {
         onView(withId(R.id.activityHomeErrorView)).check(matches(isDisplayed()))
         onView(withText("Page not found.")).check(matches(isDisplayed()))
+    }
+
+    fun validateIfNotInternetLayoutAppear() {
+        onView(withId(R.id.activityHomeErrorView)).check(matches(isDisplayed()))
+        onView(withText("An internet error occurred.")).check(matches(isDisplayed()))
     }
 }
