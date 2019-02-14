@@ -16,3 +16,15 @@ Create an app that given an Twitter username it will list user's tweets. When I 
 * Use whatever language, tools and frameworks you feel comfortable to.
 * Briefly elaborate on your solution, architecture details, choice of patterns and frameworks.
 * Fork this repository and submit your code.
+
+## Libs Used
+* Dagger
+* RX
+* AAC
+* Picasso
+* Okhttp
+* Moshi
+* HAWK
+
+## Tests
+* Implemented Instrumentation Tests
