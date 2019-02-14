@@ -31,12 +31,21 @@ class HomeActivityTest : BaseTest() {
     }
 
     @Test
-    fun testIfHomeAppear() {
+    fun testIfHomeAppearWith2Items() {
         robots {
             mockLocalSaveUser(twitterRepository)
             mockResponseSuccess("get_tweets_success.json")
             initActivity(intent)
             validateIfViewAppearWithItems(2)
+        }
+    }
+
+    @Test
+    fun testIfNotFoundLayoutAppear() {
+        robots {
+            mockNotFound()
+            initActivity(intent)
+            validateIfNotFoundLayoutAppear()
         }
     }
 }

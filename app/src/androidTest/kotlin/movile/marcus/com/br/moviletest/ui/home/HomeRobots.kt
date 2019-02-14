@@ -3,7 +3,8 @@ package movile.marcus.com.br.moviletest.ui.home
 import android.content.Intent
 import android.support.test.InstrumentationRegistry.getInstrumentation
 import android.support.test.espresso.Espresso.onView
-import android.support.test.espresso.matcher.ViewMatchers.withId
+import android.support.test.espresso.assertion.ViewAssertions.matches
+import android.support.test.espresso.matcher.ViewMatchers.*
 import android.support.test.rule.ActivityTestRule
 import io.mockk.every
 import movile.marcus.com.br.moviletest.R
@@ -27,11 +28,23 @@ class HomeRobots(private var rule: ActivityTestRule<HomeActivity>, private val s
         )
     }
 
+    fun mockNotFound() {
+        server.enqueue(
+            MockResponse()
+                .setResponseCode(404)
+        )
+    }
+
     fun mockLocalSaveUser(twitterRepository: TwitterRepository) {
         every { twitterRepository.getLastSearch() } returns "movile"
     }
 
     fun validateIfViewAppearWithItems(total: Int) {
         onView(withId(R.id.activityHomeTweetList)).check(RecyclerViewItemCountAssertion(total))
+    }
+
+    fun validateIfNotFoundLayoutAppear() {
+        onView(withId(R.id.activityHomeErrorView)).check(matches(isDisplayed()))
+        onView(withText("Page not found.")).check(matches(isDisplayed()))
     }
 }
