@@ -91,6 +91,26 @@ class TestNetworkModule {
     }
 
     @Provides
+    @IntoSet
+    fun providesMockWebServerInterceptor(): Interceptor {
+        return Interceptor {
+            var request = it.request()
+            TestServerUrl.url?.let {
+                request = request.newBuilder()
+                    .url(
+                        request.url()
+                            .newBuilder()
+                            .host(TestServerUrl.url!!.host())
+                            .port(TestServerUrl.url!!.port())
+                            .build()
+                    )
+                    .build()
+            }
+            it.proceed(request)
+        }
+    }
+
+    @Provides
     @Singleton
     fun provideTwitterApi(@Named(value = "TWITTER_CLIENT") client: OkHttpClient, moshi: Moshi, @Named("HTTP_TWITTER_URL") url: String): TwitterApi {
         return Retrofit.Builder()

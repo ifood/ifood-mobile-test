@@ -4,6 +4,7 @@ import movile.marcus.com.br.moviletest.setup.TestServerUrl
 import okhttp3.mockwebserver.MockWebServer
 import org.junit.Before
 import org.junit.Rule
+import org.mockito.MockitoAnnotations
 
 open class BaseTest {
 
@@ -13,6 +14,7 @@ open class BaseTest {
 
     @Before
     fun setup() {
+        MockitoAnnotations.initMocks(this)
         TestServerUrl.url = server.url("/")
     }
 }
