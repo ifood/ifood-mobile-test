@@ -57,4 +57,15 @@ class HomeActivityTest : BaseTest() {
             validateIfNotInternetLayoutAppear()
         }
     }
+
+    @Test
+    fun testIfHappyScreenAppearOnClick() {
+        robots {
+            mockResponseSuccess()
+            initActivity(intent)
+            mockGoogleResponse()
+            clickOnFirstItem()
+            validateIfDialogAnalyzerAppear()
+        }
+    }
 }

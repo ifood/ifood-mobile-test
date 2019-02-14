@@ -3,7 +3,10 @@ package movile.marcus.com.br.moviletest.ui.home
 import android.content.Intent
 import android.support.test.InstrumentationRegistry.getInstrumentation
 import android.support.test.espresso.Espresso.onView
+import android.support.test.espresso.action.ViewActions.click
 import android.support.test.espresso.assertion.ViewAssertions.matches
+import android.support.test.espresso.contrib.RecyclerViewActions
+import android.support.test.espresso.matcher.RootMatchers.isDialog
 import android.support.test.espresso.matcher.ViewMatchers.*
 import android.support.test.rule.ActivityTestRule
 import io.mockk.every
@@ -44,6 +47,14 @@ class HomeRobots(private var rule: ActivityTestRule<HomeActivity>, private val s
         )
     }
 
+    fun mockGoogleResponse() {
+        server.enqueue(
+            MockResponse()
+                .setResponseCode(200)
+                .setBody(TestHelper.getStringFromFile(getInstrumentation().context, "get_google_success.json"))
+        )
+    }
+
     fun mockLocalSaveUser(twitterRepository: TwitterRepository) {
         every { twitterRepository.getLastSearch() } returns "movile"
     }
@@ -60,5 +71,18 @@ class HomeRobots(private var rule: ActivityTestRule<HomeActivity>, private val s
     fun validateIfNotInternetLayoutAppear() {
         onView(withId(R.id.activityHomeErrorView)).check(matches(isDisplayed()))
         onView(withText("An internet error occurred.")).check(matches(isDisplayed()))
+    }
+
+    fun clickOnFirstItem() {
+        onView(withId(R.id.activityHomeTweetList)).perform(
+            RecyclerViewActions.actionOnItemAtPosition<HomeTweetListAdapter.ViewHolder>(
+                0,
+                click()
+            )
+        )
+    }
+
+    fun validateIfDialogAnalyzerAppear() {
+        onView(withId(R.id.customSentimentText)).inRoot(isDialog()).check(matches(isDisplayed()))
     }
 }
