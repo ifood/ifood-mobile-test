@@ -109,5 +109,5 @@ dependencies {
     }
 
     //Hawk
-    implementation "com.orhanobut:hawk:$hawkVersion"
+    implementation "com.orhanobut:hawk:2.0.1"
 }

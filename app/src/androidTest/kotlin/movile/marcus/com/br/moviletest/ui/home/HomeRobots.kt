@@ -82,7 +82,7 @@ class HomeRobots(private var rule: ActivityTestRule<HomeActivity>, private val s
         )
     }
 
-    fun validateIfDialogAnalyzerAppear() {
+    fun validateIfHappyLayoutAppear() {
         onView(withId(R.id.customSentimentText)).inRoot(isDialog()).check(matches(isDisplayed()))
     }
 }

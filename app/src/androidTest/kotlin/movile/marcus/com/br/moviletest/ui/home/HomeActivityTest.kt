@@ -65,7 +65,7 @@ class HomeActivityTest : BaseTest() {
             initActivity(intent)
             mockGoogleResponse()
             clickOnFirstItem()
-            validateIfDialogAnalyzerAppear()
+            validateIfHappyLayoutAppear()
         }
     }
 }
