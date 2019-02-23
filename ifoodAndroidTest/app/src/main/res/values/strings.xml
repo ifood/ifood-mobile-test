@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Ifood Android Test</string>
+    <string name="hint_username">Enter the username Twitter</string>
+
+</resources>
