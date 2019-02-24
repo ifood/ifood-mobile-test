@@ -6,18 +6,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 import android.widget.EditText;
-
-import java.util.ArrayList;
+import android.widget.ProgressBar;
 import java.util.List;
-
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import test.ifood.uellisson.ifoodandroidtest.R;
 import test.ifood.uellisson.ifoodandroidtest.model.Tweet;
+import test.ifood.uellisson.ifoodandroidtest.presenter.TweetsPresenter;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements TweetsPresenter.View {
 
     @Bind(R.id.twitter_username)
     EditText twitterUserName;
@@ -25,11 +25,14 @@ public class MainActivity extends AppCompatActivity {
     @Bind(R.id.list_tweets)
     RecyclerView listTweets;
 
+    @Bind(R.id.loading)
+    ProgressBar loading;
+
     private TweetAdapter tweetAdapter;
     LinearLayoutManager layoutManager;
     DividerItemDecoration itemDecor;
+    TweetsPresenter tweetsPresenter;
 
-    List<Tweet> lt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,14 +43,14 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick (R.id.search_button)
     public void showTwitter (){
-        Tweet t1 = new Tweet("mensagem 1", "hoje");
-        Tweet t2 = new Tweet("mensagem 2", "ontem");
-        Tweet t3 = new Tweet("mensagem 3", "quinta");
-        lt = new ArrayList<>();
-        lt.add(t1);
-        lt.add(t2);
-        lt.add(t3);
-        tweetAdapter = new TweetAdapter(this, lt);
+        tweetsPresenter = new TweetsPresenter();
+        tweetsPresenter.setView(this);
+        tweetsPresenter.initialize();
+    }
+
+    @Override
+    public void showTwittes(List<Tweet> tweetList) {
+        tweetAdapter = new TweetAdapter(this, tweetList);
         layoutManager = new LinearLayoutManager(getApplicationContext());
         listTweets.setLayoutManager(layoutManager);
 
@@ -56,5 +59,15 @@ public class MainActivity extends AppCompatActivity {
 
         listTweets.addItemDecoration(itemDecor);
         listTweets.setAdapter(tweetAdapter);
+    }
+
+    @Override
+    public void showLoading() {
+        loading.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void hideLoading() {
+        loading.setVisibility(View.GONE);
     }
 }
