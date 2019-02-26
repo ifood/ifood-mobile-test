@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 import java.util.List;
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -45,7 +46,11 @@ public class MainActivity extends AppCompatActivity implements TweetsPresenter.V
     public void showTwitter (){
         tweetsPresenter = new TweetsPresenter();
         tweetsPresenter.setView(this);
-        tweetsPresenter.initialize();
+        if (twitterUserName.getText().toString().isEmpty()) {
+            Toast.makeText(getApplicationContext(), getString(R.string.empty_userName), Toast.LENGTH_LONG).show();
+        } else {
+            tweetsPresenter.initialize(twitterUserName.getText().toString().replace(" ", ""));
+        }
     }
 
     @Override

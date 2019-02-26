@@ -12,7 +12,7 @@ public class Presenter <V extends Presenter.BaseView> {
         this.view = view;
     }
 
-    public void initialize () {}
+    public void initialize (String username) {}
 
     interface BaseView {
         void showLoading();

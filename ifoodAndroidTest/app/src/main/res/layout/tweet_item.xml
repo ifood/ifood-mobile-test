@@ -20,6 +20,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/colorText"
-        android:text="@string/hint_username"/>
+        android:text="@string/hint_username"
+        android:textAlignment="viewEnd"
+        android:gravity="end" />
 
 </android.support.v7.widget.LinearLayoutCompat>
