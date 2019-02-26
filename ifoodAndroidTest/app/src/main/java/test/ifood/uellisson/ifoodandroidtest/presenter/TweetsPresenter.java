@@ -7,7 +7,7 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import test.ifood.uellisson.ifoodandroidtest.Constants;
+import test.ifood.uellisson.ifoodandroidtest.ConstantsUtil;
 import test.ifood.uellisson.ifoodandroidtest.data.mapper.TweetMapper;
 import test.ifood.uellisson.ifoodandroidtest.data.model.AuthorizationToken;
 import test.ifood.uellisson.ifoodandroidtest.data.model.TweetEntity;
@@ -37,14 +37,14 @@ public class TweetsPresenter extends Presenter<TweetsPresenter.View>{
         twitterAPI.getAccessToken(getAuthorizationHeader(), "client_credentials").enqueue(new Callback<AuthorizationToken>() {
             @Override
             public void onResponse(Call<AuthorizationToken> call, Response<AuthorizationToken> response) {
-                String token = Constants.TOKEN_PREFIX + response.body().getAccessToken();
+                String token = ConstantsUtil.TOKEN_PREFIX + response.body().getAccessToken();
                 twitterAPI.getTweetsByUsername(token, userName).enqueue(new Callback<List<TweetEntity>>() {
                     @Override
                     public void onResponse(Call<List<TweetEntity>> call, Response<List<TweetEntity>> response) {
                         if (response.errorBody() != null) {
                             getView().showErrorMessage(getError(response));
                         } else if (response.body().isEmpty()){
-                            getView().showErrorMessage(Constants.EMPTY_ERROR);
+                            getView().showErrorMessage(ConstantsUtil.EMPTY_ERROR);
                             getView().showTwittes(null);
                         } else {
                             TweetMapper mapper = new TweetMapper(response.body());
@@ -56,7 +56,7 @@ public class TweetsPresenter extends Presenter<TweetsPresenter.View>{
                     @Override
                     public void onFailure(Call<List<TweetEntity>> call, Throwable t) {
                         Log.e("Error", t.getMessage());
-                        getView().showErrorMessage(Constants.API_ERROR);
+                        getView().showErrorMessage(ConstantsUtil.API_ERROR);
                         getView().hideLoading();
                     }
                 });
@@ -66,14 +66,14 @@ public class TweetsPresenter extends Presenter<TweetsPresenter.View>{
             public void onFailure(Call<AuthorizationToken> call, Throwable t) {
                 Log.e("Error", t.getMessage());
                 getView().hideLoading();
-                getView().showErrorMessage(Constants.API_ERROR);
+                getView().showErrorMessage(ConstantsUtil.API_ERROR);
             }
         });
     }
 
     private String getAuthorizationHeader() {
         try {
-            String consumerKeyAndSecret = Constants.API_KEY_TWITTER + ":" + Constants.API_SECRET_KEY_TWITTER;
+            String consumerKeyAndSecret = ConstantsUtil.API_KEY_TWITTER + ":" + ConstantsUtil.API_SECRET_KEY_TWITTER;
             byte[] data = consumerKeyAndSecret.getBytes("UTF-8");
             String base64 = Base64.encodeToString(data, Base64.NO_WRAP);
 
@@ -85,9 +85,9 @@ public class TweetsPresenter extends Presenter<TweetsPresenter.View>{
 
     public String getError(Response<List<TweetEntity>> response) {
         if (response.code() == 404) {
-            return Constants.INVALIDE_USER_ERROR;
+            return ConstantsUtil.INVALID_USER_ERROR;
         } else {
-            return Constants.API_ERROR;
+            return ConstantsUtil.API_ERROR;
         }
     }
 }

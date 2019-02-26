@@ -20,6 +20,7 @@ import java.util.List;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import test.ifood.uellisson.ifoodandroidtest.ConstantsUtil;
 import test.ifood.uellisson.ifoodandroidtest.R;
 import test.ifood.uellisson.ifoodandroidtest.model.Tweet;
 import test.ifood.uellisson.ifoodandroidtest.presenter.TweetsPresenter;
@@ -42,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements TweetsPresenter.V
     LinearLayoutManager layoutManager;
     DividerItemDecoration itemDecor;
     TweetsPresenter tweetsPresenter;
-
+    String lastUserName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +55,7 @@ public class MainActivity extends AppCompatActivity implements TweetsPresenter.V
     @OnClick (R.id.search_button)
     public void searchTwittes(){
         searchTweetsByUserName(twitterUserName.getText().toString());
+        hideKeyBoard(searchButton);
     }
 
     @OnClick ({R.id.twitter_username})
@@ -71,12 +73,17 @@ public class MainActivity extends AppCompatActivity implements TweetsPresenter.V
     }
 
     public void searchTweetsByUserName(String username) {
-        tweetsPresenter = new TweetsPresenter();
-        tweetsPresenter.setView(this);
-        if (twitterUserName.getText().toString().isEmpty()) {
-            Toast.makeText(getApplicationContext(), getString(R.string.empty_userName), Toast.LENGTH_LONG).show();
+        if (username.equals(lastUserName)) {
+            Toast.makeText(getApplicationContext(), ConstantsUtil.EQUAL_USER_ERROR, Toast.LENGTH_LONG).show();
         } else {
-            tweetsPresenter.initialize(username.replace(" ", ""));
+            lastUserName = username;
+            tweetsPresenter = new TweetsPresenter();
+            tweetsPresenter.setView(this);
+            if (twitterUserName.getText().toString().isEmpty()) {
+                Toast.makeText(getApplicationContext(), getString(R.string.empty_userName), Toast.LENGTH_LONG).show();
+            } else {
+                tweetsPresenter.initialize(username.replace(" ", ""));
+            }
         }
     }
 
