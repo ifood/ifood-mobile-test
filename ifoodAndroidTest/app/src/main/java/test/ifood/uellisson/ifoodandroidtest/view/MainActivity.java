@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements TweetsPresenter.V
     }
 
     @OnClick (R.id.search_button)
-    public void showTwitter (){
+    public void searchTwittes(){
         tweetsPresenter = new TweetsPresenter();
         tweetsPresenter.setView(this);
         if (twitterUserName.getText().toString().isEmpty()) {
@@ -61,9 +61,13 @@ public class MainActivity extends AppCompatActivity implements TweetsPresenter.V
 
         itemDecor = new DividerItemDecoration(getApplicationContext(), layoutManager.getOrientation());
         itemDecor.setDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.horizontal_line));
-
         listTweets.addItemDecoration(itemDecor);
-        listTweets.setAdapter(tweetAdapter);
+
+        if (tweetList == null) {
+            listTweets.setAdapter(null);
+        } else {
+            listTweets.setAdapter(tweetAdapter);
+        }
     }
 
     @Override
@@ -74,5 +78,10 @@ public class MainActivity extends AppCompatActivity implements TweetsPresenter.V
     @Override
     public void hideLoading() {
         loading.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void showErrorMessage(String message) {
+        Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG).show();
     }
 }

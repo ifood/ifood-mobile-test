@@ -9,10 +9,6 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
-        buildConfigField 'String', 'BASE_URL_TWITTER', '"https://api.twitter.com/"'
-        buildConfigField 'String', 'API_KEY_TWITTER', '"iE5QvXWgt9SQYKBiz2PfVnZLF"'
-        buildConfigField 'String', 'API_SECRET_KEY_TWITTER', '"yFWavhsuzO9cHrIPrmvynTlti0WQQCcXnoa8nVEXcue34csWHS"'
     }
     buildTypes {
         release {

@@ -8,7 +8,7 @@ import okhttp3.Response;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
-import test.ifood.uellisson.ifoodandroidtest.BuildConfig;
+import test.ifood.uellisson.ifoodandroidtest.Constants;
 
 public class TwitterApiProvide {
     private static Retrofit retrofit;
@@ -21,7 +21,7 @@ public class TwitterApiProvide {
     public static Retrofit provide() {
         if (retrofit == null) {
             retrofit = new Retrofit.Builder()
-                    .baseUrl(BuildConfig.BASE_URL_TWITTER)
+                    .baseUrl(Constants.BASE_URL_TWITTER)
                     .addConverterFactory(GsonConverterFactory.create())
                     .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                     .client(getDefaultOkHttpClient())

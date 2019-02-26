@@ -22,7 +22,6 @@ public interface TwitterAPI {
     @GET("1.1/statuses/user_timeline.json")
     Call<List<TweetEntity>> getTweetsByUsername(
             @Header("Authorization") String authorization,
-            @Query("screen_name") String query,
-            @Query("count") int count
+            @Query("screen_name") String query
     );
 }

@@ -17,5 +17,6 @@ public class Presenter <V extends Presenter.BaseView> {
     interface BaseView {
         void showLoading();
         void hideLoading();
+        void showErrorMessage(String message);
     }
 }
