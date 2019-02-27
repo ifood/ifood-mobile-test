@@ -1,16 +1,17 @@
 package test.ifood.uellisson.ifoodandroidtest.view;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import test.ifood.uellisson.ifoodandroidtest.ConstantsUtil;
-import test.ifood.uellisson.ifoodandroidtest.R;
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import test.ifood.uellisson.ifoodandroidtest.ConstantsUtil;
+import test.ifood.uellisson.ifoodandroidtest.R;
+import test.ifood.uellisson.ifoodandroidtest.presenter.AnalisePresenter;
 
-public class TweetDetailActivity extends AppCompatActivity {
+public class TweetDetailActivity extends AppCompatActivity implements AnalisePresenter.View{
 
     @Bind(R.id.iv_emoji)
     ImageView IvEmoji;
@@ -20,6 +21,8 @@ public class TweetDetailActivity extends AppCompatActivity {
 
     @Bind(R.id.create_at)
     TextView createAt;
+    private AnalisePresenter analisePresenter;
+    private String tweet_message;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,5 +33,29 @@ public class TweetDetailActivity extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         tweetMessage.setText(extras.getString(ConstantsUtil.TWEET_MESSAGE));
         createAt.setText(extras.getString(ConstantsUtil.CREATE_AT));
+        this.tweet_message = extras.getString(ConstantsUtil.TWEET_MESSAGE);
+
+        analisePresenter = new AnalisePresenter(this);
+        analisePresenter.prepareApi();
+    }
+
+    @Override
+    public void showLoading() {
+
+    }
+
+    @Override
+    public void hideLoading() {
+
+    }
+
+    @Override
+    public void showErrorMessage(String message) {
+
+    }
+
+    @Override
+    public void showSentiment(int score) {
+
     }
 }
