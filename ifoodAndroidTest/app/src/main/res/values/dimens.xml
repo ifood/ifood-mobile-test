@@ -1,4 +1,5 @@
 <resources>
   <dimen name="spacing_medium">8dp</dimen>
   <dimen name="spacing_large">16dp</dimen>
+  <dimen name="emoji_size">48dp</dimen>
 </resources>

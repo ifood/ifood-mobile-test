@@ -17,4 +17,6 @@ public class ConstantsUtil {
     public static String API_KEY_TWITTER  = "iE5QvXWgt9SQYKBiz2PfVnZLF";
     public static String API_SECRET_KEY_TWITTER = "yFWavhsuzO9cHrIPrmvynTlti0WQQCcXnoa8nVEXcue34csWHS";
 
+    /** enum sentiments */
+    public enum SENTIMENT {HAPPY, NEUTRAL, SAD}
 }
