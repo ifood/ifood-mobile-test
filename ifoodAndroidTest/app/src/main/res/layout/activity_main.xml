@@ -22,7 +22,6 @@
             android:layout_height="wrap_content"
             android:imeOptions="actionSearch"
             android:inputType="textPersonName"
-            android:text="realdonaldtrump"
             android:hint="@string/hint_username"
             android:layout_weight="9"
             />

@@ -80,13 +80,14 @@ public class AnalisePresenter extends Presenter<AnalisePresenter.View> {
                         break;
                     }
                     try {
-                        // API calls are executed here in this worker thread
                         deliverResponse(mRequests.take().execute());
                     } catch (InterruptedException e) {
                         Log.e("Error", "Interrupted.", e);
+                        getView().showErrorMessage(ConstantsUtil.ANALISE_ERROR);
                         getView().hideLoading();
                         break;
                     } catch (IOException e) {
+                        getView().showErrorMessage(ConstantsUtil.ANALISE_ERROR);
                         getView().hideLoading();
                         Log.e("Error", "Failed to execute a request.", e);
                     }

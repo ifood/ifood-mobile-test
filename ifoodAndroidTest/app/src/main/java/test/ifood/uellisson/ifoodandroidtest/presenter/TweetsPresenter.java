@@ -9,7 +9,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import test.ifood.uellisson.ifoodandroidtest.ConstantsUtil;
 import test.ifood.uellisson.ifoodandroidtest.data.mapper.TweetMapper;
-import test.ifood.uellisson.ifoodandroidtest.data.model.AuthorizationToken;
+import test.ifood.uellisson.ifoodandroidtest.data.model.TwitterAuthorizationToken;
 import test.ifood.uellisson.ifoodandroidtest.data.model.TweetEntity;
 import test.ifood.uellisson.ifoodandroidtest.data.network.TwitterAPI;
 import test.ifood.uellisson.ifoodandroidtest.data.network.TwitterApiProvide;
@@ -34,9 +34,9 @@ public class TweetsPresenter extends Presenter<TweetsPresenter.View>{
 
     private void requestAccessToken(final String userName) {
         getView().showLoading();
-        twitterAPI.getAccessToken(getAuthorizationHeader(), "client_credentials").enqueue(new Callback<AuthorizationToken>() {
+        twitterAPI.getAccessToken(getAuthorizationHeader(), "client_credentials").enqueue(new Callback<TwitterAuthorizationToken>() {
             @Override
-            public void onResponse(Call<AuthorizationToken> call, Response<AuthorizationToken> response) {
+            public void onResponse(Call<TwitterAuthorizationToken> call, Response<TwitterAuthorizationToken> response) {
                 String token = ConstantsUtil.TOKEN_PREFIX + response.body().getAccessToken();
                 twitterAPI.getTweetsByUsername(token, userName).enqueue(new Callback<List<TweetEntity>>() {
                     @Override
@@ -63,7 +63,7 @@ public class TweetsPresenter extends Presenter<TweetsPresenter.View>{
             }
 
             @Override
-            public void onFailure(Call<AuthorizationToken> call, Throwable t) {
+            public void onFailure(Call<TwitterAuthorizationToken> call, Throwable t) {
                 Log.e("Error", t.getMessage());
                 getView().hideLoading();
                 getView().showErrorMessage(ConstantsUtil.API_ERROR);

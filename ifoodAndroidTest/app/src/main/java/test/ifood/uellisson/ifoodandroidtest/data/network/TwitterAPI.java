@@ -8,15 +8,15 @@ import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.POST;
 import retrofit2.http.Query;
-import test.ifood.uellisson.ifoodandroidtest.data.model.AuthorizationToken;
+import test.ifood.uellisson.ifoodandroidtest.data.model.TwitterAuthorizationToken;
 import test.ifood.uellisson.ifoodandroidtest.data.model.TweetEntity;
 
 public interface TwitterAPI {
 
     @POST("oauth2/token")
     @FormUrlEncoded
-    Call<AuthorizationToken> getAccessToken(@Header("Authorization") String authorization,
-                                            @Field("grant_type") String grantType);
+    Call<TwitterAuthorizationToken> getAccessToken(@Header("Authorization") String authorization,
+                                                   @Field("grant_type") String grantType);
 
 
     @GET("1.1/statuses/user_timeline.json")

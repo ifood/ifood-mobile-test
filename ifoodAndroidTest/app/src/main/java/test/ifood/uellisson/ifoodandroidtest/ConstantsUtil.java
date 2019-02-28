@@ -10,6 +10,7 @@ public class ConstantsUtil {
     public static String EMPTY_ERROR = "no tweet from this username";
     public static String INVALID_USER_ERROR = "username does not exist on twitter";
     public static String EQUAL_USER_ERROR = "search a new username";
+    public static String ANALISE_ERROR = "Could not parse this tweet";
 
     /** APIs */
     public static String TOKEN_PREFIX = "Bearer ";
