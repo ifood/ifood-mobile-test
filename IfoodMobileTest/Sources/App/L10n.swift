@@ -11,8 +11,8 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name
 internal enum L10n {
-  /// teste swift gen
-  internal static let test = L10n.tr("Localizable", "test")
+  /// 😔 Infelizmente não conseguimos pegar o token para iniciar a plaicação, por favor tente novamente
+  internal static let tokenErrorMessage = L10n.tr("Localizable", "token_error_message")
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name

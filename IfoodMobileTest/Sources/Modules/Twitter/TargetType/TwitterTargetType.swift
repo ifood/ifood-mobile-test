@@ -1,5 +1,5 @@
 //
-//  OAuthTargetType.swift
+//  TwitterTargetType.swift
 //  IfoodMobileTest
 //
 //  Created by André Vieira on 09/06/19.
@@ -8,11 +8,11 @@
 
 import Foundation
 
-enum OAuthTargetType {
+enum TwitterTargetType {
     case oauth
 }
 
-extension OAuthTargetType: TargetType {
+extension TwitterTargetType: TargetType {
     var baseURL: URL {
         return URL(string: "https://api.twitter.com")!
     }
