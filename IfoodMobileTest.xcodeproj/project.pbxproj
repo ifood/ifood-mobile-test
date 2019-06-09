@@ -15,6 +15,8 @@
 		47FB447722AC9F480047C0AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47FB446D22AC9F480047C0AA /* Main.storyboard */; };
 		47FB447822AC9F480047C0AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB446E22AC9F480047C0AA /* AppDelegate.swift */; };
 		47FB447B22ACA1DA0047C0AA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 47FB447A22ACA1DA0047C0AA /* Localizable.strings */; };
+		47FB447E22ACA55B0047C0AA /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB447D22ACA55B0047C0AA /* L10n.swift */; };
+		47FB448122ACA62C0047C0AA /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB448022ACA62C0047C0AA /* Assets.swift */; };
 		DFDB3D8914495CF97439F63C /* Pods_IfoodMobileTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F686051E1BB9228C46E0918 /* Pods_IfoodMobileTestTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +44,8 @@
 		47FB446D22AC9F480047C0AA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		47FB446E22AC9F480047C0AA /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47FB447A22ACA1DA0047C0AA /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		47FB447D22ACA55B0047C0AA /* L10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = L10n.swift; sourceTree = "<group>"; };
+		47FB448022ACA62C0047C0AA /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		67D082BAD08C009C64B6F1B3 /* Pods-IfoodMobileTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IfoodMobileTest.release.xcconfig"; path = "Target Support Files/Pods-IfoodMobileTest/Pods-IfoodMobileTest.release.xcconfig"; sourceTree = "<group>"; };
 		6F686051E1BB9228C46E0918 /* Pods_IfoodMobileTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IfoodMobileTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84343BD8E948F4A229F44727 /* Pods-IfoodMobileTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IfoodMobileTestTests.release.xcconfig"; path = "Target Support Files/Pods-IfoodMobileTestTests/Pods-IfoodMobileTestTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -161,6 +165,8 @@
 		47FB446C22AC9F480047C0AA /* App */ = {
 			isa = PBXGroup;
 			children = (
+				47FB448022ACA62C0047C0AA /* Assets.swift */,
+				47FB447D22ACA55B0047C0AA /* L10n.swift */,
 				47FB446D22AC9F480047C0AA /* Main.storyboard */,
 				47FB446E22AC9F480047C0AA /* AppDelegate.swift */,
 			);
@@ -211,6 +217,8 @@
 			buildConfigurationList = 474C24D822AC943400632E62 /* Build configuration list for PBXNativeTarget "IfoodMobileTest" */;
 			buildPhases = (
 				302B7381B144D47B7E2F6344 /* [CP] Check Pods Manifest.lock */,
+				47FB447F22ACA5780047C0AA /* SwiftGen - Assets */,
+				47FB447C22ACA2940047C0AA /* SwiftGen - Strings */,
 				476415D522AC9C5C006FC012 /* Swift Lint */,
 				474C24B722AC943100632E62 /* Sources */,
 				474C24B822AC943100632E62 /* Frameworks */,
@@ -384,6 +392,42 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
+		47FB447C22ACA2940047C0AA /* SwiftGen - Strings */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "SwiftGen - Strings";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftGen/bin/swiftgen\" strings -t structured-swift4 \"${SOURCE_ROOT}/IfoodMobileTest/Resources/Localization/Localizable.strings\" --output \"${SOURCE_ROOT}/IfoodMobileTest/Sources/App/L10n.swift\"\n";
+		};
+		47FB447F22ACA5780047C0AA /* SwiftGen - Assets */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "SwiftGen - Assets";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftGen/bin/swiftgen\" xcassets -t swift4 \"${SOURCE_ROOT}/IfoodMobileTest/Resources/Assets.xcassets\" --output \"${SOURCE_ROOT}/IfoodMobileTest/Sources/App/Assets.swift\"\n\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -393,6 +437,8 @@
 			files = (
 				47FB447822AC9F480047C0AA /* AppDelegate.swift in Sources */,
 				47FB447622AC9F480047C0AA /* ViewController.swift in Sources */,
+				47FB448122ACA62C0047C0AA /* Assets.swift in Sources */,
+				47FB447E22ACA55B0047C0AA /* L10n.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
