@@ -17,8 +17,6 @@ public struct URLEncoding: ParameterEncoding {
         }
         
         guard let parameters = parameters,
-            let httpMethod = HTTPMethod(rawValue: urlRequest.httpMethod ?? "GET"),
-            (httpMethod == .get || httpMethod == .delete || httpMethod == .head),
             var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false) else { return urlRequest }
         
         var components: [(String, String)] = []
@@ -36,7 +34,7 @@ public struct URLEncoding: ParameterEncoding {
         return urlRequest
     }
     
-    public func parseParameter(fromKey key: String, value: Any) -> [(String, String)] {
+    private func parseParameter(fromKey key: String, value: Any) -> [(String, String)] {
         var components: [(String, String)] = []
         
         if let dictionary = value as? [String: Any] {
@@ -62,7 +60,7 @@ public struct URLEncoding: ParameterEncoding {
         return components
     }
     
-    public func escape(_ string: String) -> String {
+    private func escape(_ string: String) -> String {
         let generalDelimitersToEncode = ":#[]@"
         let subDelimitersToEncode = "!$&'()*+,;="
         

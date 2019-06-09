@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0F3FB99F6DFADB139660B5FE /* Pods_IfoodMobileTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 443A1CAE653DF410C6B39FBD /* Pods_IfoodMobileTest.framework */; };
-		474C24D422AC943400632E62 /* IfoodMobileTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474C24D322AC943400632E62 /* IfoodMobileTestTests.swift */; };
 		47FB447322AC9F480047C0AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47FB446522AC9F480047C0AA /* Assets.xcassets */; };
 		47FB447422AC9F480047C0AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47FB446622AC9F480047C0AA /* LaunchScreen.storyboard */; };
 		47FB447622AC9F480047C0AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB446B22AC9F480047C0AA /* ViewController.swift */; };
@@ -24,6 +23,7 @@
 		47FB448D22AD2B9A0047C0AA /* NSNumberExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB448C22AD2B9A0047C0AA /* NSNumberExtension.swift */; };
 		47FB449022AD2C670047C0AA /* DataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB448F22AD2C670047C0AA /* DataError.swift */; };
 		47FB449222AD2C880047C0AA /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB449122AD2C880047C0AA /* HTTPMethod.swift */; };
+		47FB449722AD2F540047C0AA /* URLEncodingSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB449622AD2F540047C0AA /* URLEncodingSpec.swift */; };
 		DFDB3D8914495CF97439F63C /* Pods_IfoodMobileTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F686051E1BB9228C46E0918 /* Pods_IfoodMobileTestTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,7 +42,6 @@
 		443A1CAE653DF410C6B39FBD /* Pods_IfoodMobileTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IfoodMobileTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		474C24BB22AC943100632E62 /* IfoodMobileTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IfoodMobileTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		474C24CF22AC943400632E62 /* IfoodMobileTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IfoodMobileTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		474C24D322AC943400632E62 /* IfoodMobileTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IfoodMobileTestTests.swift; sourceTree = "<group>"; };
 		474C24D522AC943400632E62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47FB446522AC9F480047C0AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47FB446722AC9F480047C0AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,6 +59,7 @@
 		47FB448C22AD2B9A0047C0AA /* NSNumberExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNumberExtension.swift; sourceTree = "<group>"; };
 		47FB448F22AD2C670047C0AA /* DataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataError.swift; sourceTree = "<group>"; };
 		47FB449122AD2C880047C0AA /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		47FB449622AD2F540047C0AA /* URLEncodingSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLEncodingSpec.swift; sourceTree = "<group>"; };
 		67D082BAD08C009C64B6F1B3 /* Pods-IfoodMobileTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IfoodMobileTest.release.xcconfig"; path = "Target Support Files/Pods-IfoodMobileTest/Pods-IfoodMobileTest.release.xcconfig"; sourceTree = "<group>"; };
 		6F686051E1BB9228C46E0918 /* Pods_IfoodMobileTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IfoodMobileTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84343BD8E948F4A229F44727 /* Pods-IfoodMobileTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IfoodMobileTestTests.release.xcconfig"; path = "Target Support Files/Pods-IfoodMobileTestTests/Pods-IfoodMobileTestTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -138,7 +138,7 @@
 		474C24D222AC943400632E62 /* IfoodMobileTestTests */ = {
 			isa = PBXGroup;
 			children = (
-				474C24D322AC943400632E62 /* IfoodMobileTestTests.swift */,
+				47FB449422AD2F0F0047C0AA /* Network */,
 				474C24D522AC943400632E62 /* Info.plist */,
 			);
 			path = IfoodMobileTestTests;
@@ -252,6 +252,22 @@
 				47FB449122AD2C880047C0AA /* HTTPMethod.swift */,
 			);
 			path = Enums;
+			sourceTree = "<group>";
+		};
+		47FB449422AD2F0F0047C0AA /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				47FB449522AD2F240047C0AA /* Encoding */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		47FB449522AD2F240047C0AA /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				47FB449622AD2F540047C0AA /* URLEncodingSpec.swift */,
+			);
+			path = Encoding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -516,7 +532,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				474C24D422AC943400632E62 /* IfoodMobileTestTests.swift in Sources */,
+				47FB449722AD2F540047C0AA /* URLEncodingSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
