@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		0F3FB99F6DFADB139660B5FE /* Pods_IfoodMobileTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 443A1CAE653DF410C6B39FBD /* Pods_IfoodMobileTest.framework */; };
-		474C24BF22AC943100632E62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474C24BE22AC943100632E62 /* AppDelegate.swift */; };
-		474C24C122AC943100632E62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474C24C022AC943100632E62 /* ViewController.swift */; };
-		474C24C422AC943100632E62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 474C24C222AC943100632E62 /* Main.storyboard */; };
-		474C24C622AC943400632E62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 474C24C522AC943400632E62 /* Assets.xcassets */; };
-		474C24C922AC943400632E62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 474C24C722AC943400632E62 /* LaunchScreen.storyboard */; };
 		474C24D422AC943400632E62 /* IfoodMobileTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474C24D322AC943400632E62 /* IfoodMobileTestTests.swift */; };
+		47FB447322AC9F480047C0AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47FB446522AC9F480047C0AA /* Assets.xcassets */; };
+		47FB447422AC9F480047C0AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47FB446622AC9F480047C0AA /* LaunchScreen.storyboard */; };
+		47FB447622AC9F480047C0AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB446B22AC9F480047C0AA /* ViewController.swift */; };
+		47FB447722AC9F480047C0AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47FB446D22AC9F480047C0AA /* Main.storyboard */; };
+		47FB447822AC9F480047C0AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB446E22AC9F480047C0AA /* AppDelegate.swift */; };
 		DFDB3D8914495CF97439F63C /* Pods_IfoodMobileTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F686051E1BB9228C46E0918 /* Pods_IfoodMobileTestTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,15 +31,15 @@
 		2F302B687225188E78BAC1EC /* Pods-IfoodMobileTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IfoodMobileTest.debug.xcconfig"; path = "Target Support Files/Pods-IfoodMobileTest/Pods-IfoodMobileTest.debug.xcconfig"; sourceTree = "<group>"; };
 		443A1CAE653DF410C6B39FBD /* Pods_IfoodMobileTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IfoodMobileTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		474C24BB22AC943100632E62 /* IfoodMobileTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IfoodMobileTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		474C24BE22AC943100632E62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		474C24C022AC943100632E62 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		474C24C322AC943100632E62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		474C24C522AC943400632E62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		474C24C822AC943400632E62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		474C24CA22AC943400632E62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		474C24CF22AC943400632E62 /* IfoodMobileTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IfoodMobileTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		474C24D322AC943400632E62 /* IfoodMobileTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IfoodMobileTestTests.swift; sourceTree = "<group>"; };
 		474C24D522AC943400632E62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47FB446522AC9F480047C0AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		47FB446722AC9F480047C0AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		47FB446922AC9F480047C0AA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47FB446B22AC9F480047C0AA /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		47FB446D22AC9F480047C0AA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		47FB446E22AC9F480047C0AA /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67D082BAD08C009C64B6F1B3 /* Pods-IfoodMobileTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IfoodMobileTest.release.xcconfig"; path = "Target Support Files/Pods-IfoodMobileTest/Pods-IfoodMobileTest.release.xcconfig"; sourceTree = "<group>"; };
 		6F686051E1BB9228C46E0918 /* Pods_IfoodMobileTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IfoodMobileTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84343BD8E948F4A229F44727 /* Pods-IfoodMobileTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IfoodMobileTestTests.release.xcconfig"; path = "Target Support Files/Pods-IfoodMobileTestTests/Pods-IfoodMobileTestTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -109,12 +109,8 @@
 		474C24BD22AC943100632E62 /* IfoodMobileTest */ = {
 			isa = PBXGroup;
 			children = (
-				474C24BE22AC943100632E62 /* AppDelegate.swift */,
-				474C24C022AC943100632E62 /* ViewController.swift */,
-				474C24C222AC943100632E62 /* Main.storyboard */,
-				474C24C522AC943400632E62 /* Assets.xcassets */,
-				474C24C722AC943400632E62 /* LaunchScreen.storyboard */,
-				474C24CA22AC943400632E62 /* Info.plist */,
+				47FB446422AC9F480047C0AA /* Resources */,
+				47FB446A22AC9F480047C0AA /* Sources */,
 			);
 			path = IfoodMobileTest;
 			sourceTree = "<group>";
@@ -126,6 +122,74 @@
 				474C24D522AC943400632E62 /* Info.plist */,
 			);
 			path = IfoodMobileTestTests;
+			sourceTree = "<group>";
+		};
+		47FB446422AC9F480047C0AA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				47FB446522AC9F480047C0AA /* Assets.xcassets */,
+				47FB446622AC9F480047C0AA /* LaunchScreen.storyboard */,
+				47FB446822AC9F480047C0AA /* SupportFiles */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		47FB446822AC9F480047C0AA /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				47FB446922AC9F480047C0AA /* Info.plist */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		47FB446A22AC9F480047C0AA /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				47FB446B22AC9F480047C0AA /* ViewController.swift */,
+				47FB446C22AC9F480047C0AA /* App */,
+				47FB446F22AC9F480047C0AA /* Network */,
+				47FB447022AC9F480047C0AA /* Extensions */,
+				47FB447122AC9F480047C0AA /* Modules */,
+				47FB447222AC9F480047C0AA /* Protocols */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		47FB446C22AC9F480047C0AA /* App */ = {
+			isa = PBXGroup;
+			children = (
+				47FB446D22AC9F480047C0AA /* Main.storyboard */,
+				47FB446E22AC9F480047C0AA /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		47FB446F22AC9F480047C0AA /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		47FB447022AC9F480047C0AA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		47FB447122AC9F480047C0AA /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		47FB447222AC9F480047C0AA /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,9 +277,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				474C24C922AC943400632E62 /* LaunchScreen.storyboard in Resources */,
-				474C24C622AC943400632E62 /* Assets.xcassets in Resources */,
-				474C24C422AC943100632E62 /* Main.storyboard in Resources */,
+				47FB447322AC9F480047C0AA /* Assets.xcassets in Resources */,
+				47FB447422AC9F480047C0AA /* LaunchScreen.storyboard in Resources */,
+				47FB447722AC9F480047C0AA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,8 +379,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				474C24C122AC943100632E62 /* ViewController.swift in Sources */,
-				474C24BF22AC943100632E62 /* AppDelegate.swift in Sources */,
+				47FB447822AC9F480047C0AA /* AppDelegate.swift in Sources */,
+				47FB447622AC9F480047C0AA /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,18 +403,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		474C24C222AC943100632E62 /* Main.storyboard */ = {
+		47FB446622AC9F480047C0AA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				474C24C322AC943100632E62 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		474C24C722AC943400632E62 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				474C24C822AC943400632E62 /* Base */,
+				47FB446722AC9F480047C0AA /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -480,7 +536,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = IfoodMobileTest/Info.plist;
+				INFOPLIST_FILE = IfoodMobileTest/Resources/SupportFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -498,7 +554,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = IfoodMobileTest/Info.plist;
+				INFOPLIST_FILE = IfoodMobileTest/Resources/SupportFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

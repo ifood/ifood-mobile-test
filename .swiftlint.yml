@@ -1,5 +1,5 @@
 included:
-  - IfoodMobileTest
+  - IfoodMobileTest/Sources
 excluded:
   - Pods
 disabled_rules:
