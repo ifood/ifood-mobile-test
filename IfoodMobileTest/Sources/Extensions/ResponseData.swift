@@ -21,7 +21,7 @@ extension JSONDecoder {
 
 public extension Data {
     
-    func mapModel<Model: Codable>() throws -> Model {
+    func mapToObject<Model: Codable>() throws -> Model {
         do {
             let json = try self.mapToJSON()
             return try self.mapModel(json: json)
@@ -30,7 +30,7 @@ public extension Data {
         }
     }
     
-    func mapModel<Model: Codable>() throws -> [Model] {
+    func mapToArray<Model: Codable>() throws -> [Model] {
         do {
             let json = try self.mapToJSON()
             guard let array = json as? NSArray else {
