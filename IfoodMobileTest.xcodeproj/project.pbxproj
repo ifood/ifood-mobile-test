@@ -27,6 +27,7 @@
 		47FB449A22AD37660047C0AA /* ProviderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB449922AD37660047C0AA /* ProviderType.swift */; };
 		47FB449C22AD38380047C0AA /* ResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB449B22AD38380047C0AA /* ResponseData.swift */; };
 		47FB449E22AD3B330047C0AA /* RequestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB449D22AD3B330047C0AA /* RequestProvider.swift */; };
+		47FB44A122AD49C40047C0AA /* ResponseDataSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB44A022AD49C40047C0AA /* ResponseDataSpec.swift */; };
 		DFDB3D8914495CF97439F63C /* Pods_IfoodMobileTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F686051E1BB9228C46E0918 /* Pods_IfoodMobileTestTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,7 @@
 		47FB449922AD37660047C0AA /* ProviderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderType.swift; sourceTree = "<group>"; };
 		47FB449B22AD38380047C0AA /* ResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseData.swift; sourceTree = "<group>"; };
 		47FB449D22AD3B330047C0AA /* RequestProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProvider.swift; sourceTree = "<group>"; };
+		47FB44A022AD49C40047C0AA /* ResponseDataSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseDataSpec.swift; sourceTree = "<group>"; };
 		67D082BAD08C009C64B6F1B3 /* Pods-IfoodMobileTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IfoodMobileTest.release.xcconfig"; path = "Target Support Files/Pods-IfoodMobileTest/Pods-IfoodMobileTest.release.xcconfig"; sourceTree = "<group>"; };
 		6F686051E1BB9228C46E0918 /* Pods_IfoodMobileTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IfoodMobileTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84343BD8E948F4A229F44727 /* Pods-IfoodMobileTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IfoodMobileTestTests.release.xcconfig"; path = "Target Support Files/Pods-IfoodMobileTestTests/Pods-IfoodMobileTestTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 		474C24D222AC943400632E62 /* IfoodMobileTestTests */ = {
 			isa = PBXGroup;
 			children = (
+				47FB449F22AD499E0047C0AA /* Extensions */,
 				47FB449422AD2F0F0047C0AA /* Network */,
 				474C24D522AC943400632E62 /* Info.plist */,
 			);
@@ -285,6 +288,14 @@
 				47FB449D22AD3B330047C0AA /* RequestProvider.swift */,
 			);
 			path = Provider;
+			sourceTree = "<group>";
+		};
+		47FB449F22AD499E0047C0AA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				47FB44A022AD49C40047C0AA /* ResponseDataSpec.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -553,6 +564,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				47FB449722AD2F540047C0AA /* URLEncodingSpec.swift in Sources */,
+				47FB44A122AD49C40047C0AA /* ResponseDataSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

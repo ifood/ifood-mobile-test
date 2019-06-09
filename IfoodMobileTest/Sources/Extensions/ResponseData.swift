@@ -54,7 +54,7 @@ public extension Data {
         }
     }
     
-    func mapToJSON() throws -> Any {
+    private func mapToJSON() throws -> Any {
         do {
             return try JSONSerialization.jsonObject(with: self, options: [])
         } catch {
