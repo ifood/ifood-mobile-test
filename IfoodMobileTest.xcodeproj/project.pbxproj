@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -83,7 +83,6 @@
 				B4FFBD3B18EE9F29B6632453 /* Pods-IfoodMobileTestTests.debug.xcconfig */,
 				84343BD8E948F4A229F44727 /* Pods-IfoodMobileTestTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -137,6 +136,7 @@
 			buildConfigurationList = 474C24D822AC943400632E62 /* Build configuration list for PBXNativeTarget "IfoodMobileTest" */;
 			buildPhases = (
 				302B7381B144D47B7E2F6344 /* [CP] Check Pods Manifest.lock */,
+				476415D522AC9C5C006FC012 /* Swift Lint */,
 				474C24B722AC943100632E62 /* Sources */,
 				474C24B822AC943100632E62 /* Frameworks */,
 				474C24B922AC943100632E62 /* Resources */,
@@ -289,6 +289,24 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		476415D522AC9C5C006FC012 /* Swift Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Swift Lint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
