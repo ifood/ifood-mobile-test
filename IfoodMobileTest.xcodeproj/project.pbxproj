@@ -24,6 +24,7 @@
 		47FB449022AD2C670047C0AA /* DataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB448F22AD2C670047C0AA /* DataError.swift */; };
 		47FB449222AD2C880047C0AA /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB449122AD2C880047C0AA /* HTTPMethod.swift */; };
 		47FB449722AD2F540047C0AA /* URLEncodingSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB449622AD2F540047C0AA /* URLEncodingSpec.swift */; };
+		47FB449A22AD37660047C0AA /* ProviderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB449922AD37660047C0AA /* ProviderType.swift */; };
 		DFDB3D8914495CF97439F63C /* Pods_IfoodMobileTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F686051E1BB9228C46E0918 /* Pods_IfoodMobileTestTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		47FB448F22AD2C670047C0AA /* DataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataError.swift; sourceTree = "<group>"; };
 		47FB449122AD2C880047C0AA /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		47FB449622AD2F540047C0AA /* URLEncodingSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLEncodingSpec.swift; sourceTree = "<group>"; };
+		47FB449922AD37660047C0AA /* ProviderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderType.swift; sourceTree = "<group>"; };
 		67D082BAD08C009C64B6F1B3 /* Pods-IfoodMobileTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IfoodMobileTest.release.xcconfig"; path = "Target Support Files/Pods-IfoodMobileTest/Pods-IfoodMobileTest.release.xcconfig"; sourceTree = "<group>"; };
 		6F686051E1BB9228C46E0918 /* Pods_IfoodMobileTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IfoodMobileTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84343BD8E948F4A229F44727 /* Pods-IfoodMobileTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IfoodMobileTestTests.release.xcconfig"; path = "Target Support Files/Pods-IfoodMobileTestTests/Pods-IfoodMobileTestTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 		47FB446F22AC9F480047C0AA /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				47FB449822AD373F0047C0AA /* Provider */,
 				47FB448E22AD2C570047C0AA /* Enums */,
 				47FB448922AD2AED0047C0AA /* Encoding */,
 			);
@@ -268,6 +271,14 @@
 				47FB449622AD2F540047C0AA /* URLEncodingSpec.swift */,
 			);
 			path = Encoding;
+			sourceTree = "<group>";
+		};
+		47FB449822AD373F0047C0AA /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				47FB449922AD37660047C0AA /* ProviderType.swift */,
+			);
+			path = Provider;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -524,6 +535,7 @@
 				47FB448122ACA62C0047C0AA /* Assets.swift in Sources */,
 				47FB447E22ACA55B0047C0AA /* L10n.swift in Sources */,
 				47FB448B22AD2B380047C0AA /* URLEncoding.swift in Sources */,
+				47FB449A22AD37660047C0AA /* ProviderType.swift in Sources */,
 				47FB448422AD291C0047C0AA /* RequestProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
