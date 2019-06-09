@@ -287,6 +287,7 @@
 				474C24CB22AC943400632E62 /* Sources */,
 				474C24CC22AC943400632E62 /* Frameworks */,
 				474C24CD22AC943400632E62 /* Resources */,
+				EEBBD32E60D9A2FEB4AC4E24 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -472,6 +473,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftGen/bin/swiftgen\" xcassets -t swift4 \"${SOURCE_ROOT}/IfoodMobileTest/Resources/Assets.xcassets\" --output \"${SOURCE_ROOT}/IfoodMobileTest/Sources/App/Assets.swift\"\n\n";
+		};
+		EEBBD32E60D9A2FEB4AC4E24 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IfoodMobileTestTests/Pods-IfoodMobileTestTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IfoodMobileTestTests/Pods-IfoodMobileTestTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IfoodMobileTestTests/Pods-IfoodMobileTestTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -680,7 +698,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B4FFBD3B18EE9F29B6632453 /* Pods-IfoodMobileTestTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = IfoodMobileTestTests/Info.plist;
@@ -701,7 +719,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 84343BD8E948F4A229F44727 /* Pods-IfoodMobileTestTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = IfoodMobileTestTests/Info.plist;

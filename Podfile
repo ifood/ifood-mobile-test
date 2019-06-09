@@ -10,6 +10,8 @@ target 'IfoodMobileTest' do
 
   target 'IfoodMobileTestTests' do
     inherit! :search_paths
+    pod 'Nimble'
+    pod 'Quick'
   end
 
 end
