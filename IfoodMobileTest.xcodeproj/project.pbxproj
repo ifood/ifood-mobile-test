@@ -17,6 +17,13 @@
 		47FB447B22ACA1DA0047C0AA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 47FB447A22ACA1DA0047C0AA /* Localizable.strings */; };
 		47FB447E22ACA55B0047C0AA /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB447D22ACA55B0047C0AA /* L10n.swift */; };
 		47FB448122ACA62C0047C0AA /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB448022ACA62C0047C0AA /* Assets.swift */; };
+		47FB448422AD291C0047C0AA /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB448322AD291C0047C0AA /* RequestProtocol.swift */; };
+		47FB448622AD29640047C0AA /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB448522AD29640047C0AA /* TargetType.swift */; };
+		47FB448822AD2A680047C0AA /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB448722AD2A680047C0AA /* ParameterEncoding.swift */; };
+		47FB448B22AD2B380047C0AA /* URLEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB448A22AD2B380047C0AA /* URLEncoding.swift */; };
+		47FB448D22AD2B9A0047C0AA /* NSNumberExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB448C22AD2B9A0047C0AA /* NSNumberExtension.swift */; };
+		47FB449022AD2C670047C0AA /* DataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB448F22AD2C670047C0AA /* DataError.swift */; };
+		47FB449222AD2C880047C0AA /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB449122AD2C880047C0AA /* HTTPMethod.swift */; };
 		DFDB3D8914495CF97439F63C /* Pods_IfoodMobileTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F686051E1BB9228C46E0918 /* Pods_IfoodMobileTestTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +53,13 @@
 		47FB447A22ACA1DA0047C0AA /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		47FB447D22ACA55B0047C0AA /* L10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = L10n.swift; sourceTree = "<group>"; };
 		47FB448022ACA62C0047C0AA /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		47FB448322AD291C0047C0AA /* RequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
+		47FB448522AD29640047C0AA /* TargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetType.swift; sourceTree = "<group>"; };
+		47FB448722AD2A680047C0AA /* ParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		47FB448A22AD2B380047C0AA /* URLEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLEncoding.swift; sourceTree = "<group>"; };
+		47FB448C22AD2B9A0047C0AA /* NSNumberExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNumberExtension.swift; sourceTree = "<group>"; };
+		47FB448F22AD2C670047C0AA /* DataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataError.swift; sourceTree = "<group>"; };
+		47FB449122AD2C880047C0AA /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		67D082BAD08C009C64B6F1B3 /* Pods-IfoodMobileTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IfoodMobileTest.release.xcconfig"; path = "Target Support Files/Pods-IfoodMobileTest/Pods-IfoodMobileTest.release.xcconfig"; sourceTree = "<group>"; };
 		6F686051E1BB9228C46E0918 /* Pods_IfoodMobileTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IfoodMobileTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84343BD8E948F4A229F44727 /* Pods-IfoodMobileTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IfoodMobileTestTests.release.xcconfig"; path = "Target Support Files/Pods-IfoodMobileTestTests/Pods-IfoodMobileTestTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -176,6 +190,8 @@
 		47FB446F22AC9F480047C0AA /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				47FB448E22AD2C570047C0AA /* Enums */,
+				47FB448922AD2AED0047C0AA /* Encoding */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -183,6 +199,7 @@
 		47FB447022AC9F480047C0AA /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				47FB448C22AD2B9A0047C0AA /* NSNumberExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -197,6 +214,7 @@
 		47FB447222AC9F480047C0AA /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				47FB448222AD290A0047C0AA /* Network */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -207,6 +225,33 @@
 				47FB447A22ACA1DA0047C0AA /* Localizable.strings */,
 			);
 			path = Localization;
+			sourceTree = "<group>";
+		};
+		47FB448222AD290A0047C0AA /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				47FB448322AD291C0047C0AA /* RequestProtocol.swift */,
+				47FB448522AD29640047C0AA /* TargetType.swift */,
+				47FB448722AD2A680047C0AA /* ParameterEncoding.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		47FB448922AD2AED0047C0AA /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				47FB448A22AD2B380047C0AA /* URLEncoding.swift */,
+			);
+			path = Encoding;
+			sourceTree = "<group>";
+		};
+		47FB448E22AD2C570047C0AA /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				47FB448F22AD2C670047C0AA /* DataError.swift */,
+				47FB449122AD2C880047C0AA /* HTTPMethod.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -435,10 +480,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47FB449022AD2C670047C0AA /* DataError.swift in Sources */,
+				47FB448822AD2A680047C0AA /* ParameterEncoding.swift in Sources */,
+				47FB448622AD29640047C0AA /* TargetType.swift in Sources */,
+				47FB449222AD2C880047C0AA /* HTTPMethod.swift in Sources */,
 				47FB447822AC9F480047C0AA /* AppDelegate.swift in Sources */,
+				47FB448D22AD2B9A0047C0AA /* NSNumberExtension.swift in Sources */,
 				47FB447622AC9F480047C0AA /* ViewController.swift in Sources */,
 				47FB448122ACA62C0047C0AA /* Assets.swift in Sources */,
 				47FB447E22ACA55B0047C0AA /* L10n.swift in Sources */,
+				47FB448B22AD2B380047C0AA /* URLEncoding.swift in Sources */,
+				47FB448422AD291C0047C0AA /* RequestProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
