@@ -11,7 +11,6 @@
 		47FB447322AC9F480047C0AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47FB446522AC9F480047C0AA /* Assets.xcassets */; };
 		47FB447422AC9F480047C0AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47FB446622AC9F480047C0AA /* LaunchScreen.storyboard */; };
 		47FB447622AC9F480047C0AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB446B22AC9F480047C0AA /* ViewController.swift */; };
-		47FB447722AC9F480047C0AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47FB446D22AC9F480047C0AA /* Main.storyboard */; };
 		47FB447822AC9F480047C0AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB446E22AC9F480047C0AA /* AppDelegate.swift */; };
 		47FB447B22ACA1DA0047C0AA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 47FB447A22ACA1DA0047C0AA /* Localizable.strings */; };
 		47FB447E22ACA55B0047C0AA /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB447D22ACA55B0047C0AA /* L10n.swift */; };
@@ -28,6 +27,11 @@
 		47FB449C22AD38380047C0AA /* ResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB449B22AD38380047C0AA /* ResponseData.swift */; };
 		47FB449E22AD3B330047C0AA /* RequestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB449D22AD3B330047C0AA /* RequestProvider.swift */; };
 		47FB44A122AD49C40047C0AA /* ResponseDataSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB44A022AD49C40047C0AA /* ResponseDataSpec.swift */; };
+		47FB44A422AD53B50047C0AA /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB44A322AD53B50047C0AA /* BaseCoordinator.swift */; };
+		47FB44A622AD54250047C0AA /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB44A522AD54250047C0AA /* AppCoordinator.swift */; };
+		47FB44A922AD59AC0047C0AA /* OAuthTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB44A822AD59AC0047C0AA /* OAuthTargetType.swift */; };
+		47FB44AB22ADBAEC0047C0AA /* OAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB44AA22ADBAEC0047C0AA /* OAuthService.swift */; };
+		47FB44AE22ADBC120047C0AA /* OAuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB44AD22ADBC120047C0AA /* OAuthModel.swift */; };
 		DFDB3D8914495CF97439F63C /* Pods_IfoodMobileTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F686051E1BB9228C46E0918 /* Pods_IfoodMobileTestTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,7 +55,6 @@
 		47FB446722AC9F480047C0AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		47FB446922AC9F480047C0AA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47FB446B22AC9F480047C0AA /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		47FB446D22AC9F480047C0AA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		47FB446E22AC9F480047C0AA /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47FB447A22ACA1DA0047C0AA /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		47FB447D22ACA55B0047C0AA /* L10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = L10n.swift; sourceTree = "<group>"; };
@@ -68,6 +71,11 @@
 		47FB449B22AD38380047C0AA /* ResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseData.swift; sourceTree = "<group>"; };
 		47FB449D22AD3B330047C0AA /* RequestProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProvider.swift; sourceTree = "<group>"; };
 		47FB44A022AD49C40047C0AA /* ResponseDataSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseDataSpec.swift; sourceTree = "<group>"; };
+		47FB44A322AD53B50047C0AA /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		47FB44A522AD54250047C0AA /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		47FB44A822AD59AC0047C0AA /* OAuthTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthTargetType.swift; sourceTree = "<group>"; };
+		47FB44AA22ADBAEC0047C0AA /* OAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthService.swift; sourceTree = "<group>"; };
+		47FB44AD22ADBC120047C0AA /* OAuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthModel.swift; sourceTree = "<group>"; };
 		67D082BAD08C009C64B6F1B3 /* Pods-IfoodMobileTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IfoodMobileTest.release.xcconfig"; path = "Target Support Files/Pods-IfoodMobileTest/Pods-IfoodMobileTest.release.xcconfig"; sourceTree = "<group>"; };
 		6F686051E1BB9228C46E0918 /* Pods_IfoodMobileTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IfoodMobileTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84343BD8E948F4A229F44727 /* Pods-IfoodMobileTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IfoodMobileTestTests.release.xcconfig"; path = "Target Support Files/Pods-IfoodMobileTestTests/Pods-IfoodMobileTestTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -175,6 +183,7 @@
 		47FB446A22AC9F480047C0AA /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				47FB44AC22ADBBF50047C0AA /* Model */,
 				47FB446B22AC9F480047C0AA /* ViewController.swift */,
 				47FB446C22AC9F480047C0AA /* App */,
 				47FB446F22AC9F480047C0AA /* Network */,
@@ -188,9 +197,10 @@
 		47FB446C22AC9F480047C0AA /* App */ = {
 			isa = PBXGroup;
 			children = (
+				47FB44A722AD59970047C0AA /* Network */,
+				47FB44A222AD53A50047C0AA /* Coordinator */,
 				47FB448022ACA62C0047C0AA /* Assets.swift */,
 				47FB447D22ACA55B0047C0AA /* L10n.swift */,
-				47FB446D22AC9F480047C0AA /* Main.storyboard */,
 				47FB446E22AC9F480047C0AA /* AppDelegate.swift */,
 			);
 			path = App;
@@ -298,6 +308,32 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		47FB44A222AD53A50047C0AA /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				47FB44A322AD53B50047C0AA /* BaseCoordinator.swift */,
+				47FB44A522AD54250047C0AA /* AppCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		47FB44A722AD59970047C0AA /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				47FB44A822AD59AC0047C0AA /* OAuthTargetType.swift */,
+				47FB44AA22ADBAEC0047C0AA /* OAuthService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		47FB44AC22ADBBF50047C0AA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				47FB44AD22ADBC120047C0AA /* OAuthModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -389,7 +425,6 @@
 				47FB447322AC9F480047C0AA /* Assets.xcassets in Resources */,
 				47FB447B22ACA1DA0047C0AA /* Localizable.strings in Resources */,
 				47FB447422AC9F480047C0AA /* LaunchScreen.storyboard in Resources */,
-				47FB447722AC9F480047C0AA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,15 +581,20 @@
 				47FB448822AD2A680047C0AA /* ParameterEncoding.swift in Sources */,
 				47FB448622AD29640047C0AA /* TargetType.swift in Sources */,
 				47FB449222AD2C880047C0AA /* HTTPMethod.swift in Sources */,
+				47FB44A622AD54250047C0AA /* AppCoordinator.swift in Sources */,
 				47FB447822AC9F480047C0AA /* AppDelegate.swift in Sources */,
 				47FB448D22AD2B9A0047C0AA /* NSNumberExtension.swift in Sources */,
 				47FB449C22AD38380047C0AA /* ResponseData.swift in Sources */,
 				47FB447622AC9F480047C0AA /* ViewController.swift in Sources */,
 				47FB448122ACA62C0047C0AA /* Assets.swift in Sources */,
 				47FB447E22ACA55B0047C0AA /* L10n.swift in Sources */,
+				47FB44A422AD53B50047C0AA /* BaseCoordinator.swift in Sources */,
 				47FB449E22AD3B330047C0AA /* RequestProvider.swift in Sources */,
 				47FB448B22AD2B380047C0AA /* URLEncoding.swift in Sources */,
 				47FB449A22AD37660047C0AA /* ProviderType.swift in Sources */,
+				47FB44AB22ADBAEC0047C0AA /* OAuthService.swift in Sources */,
+				47FB44AE22ADBC120047C0AA /* OAuthModel.swift in Sources */,
+				47FB44A922AD59AC0047C0AA /* OAuthTargetType.swift in Sources */,
 				47FB448422AD291C0047C0AA /* RequestProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
