@@ -18,6 +18,7 @@
 
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 internal enum Asset {
+  internal static let icBack = ImageAsset(name: "icBack")
   internal static let icTwitter = ImageAsset(name: "icTwitter")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name

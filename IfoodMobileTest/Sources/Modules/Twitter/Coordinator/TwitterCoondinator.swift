@@ -31,6 +31,9 @@ final class TwitterCoordinator: BaseCoordinator<Void> {
     
     private func navigationToList(tweets: [TweetModel]) {
         let controller = TweetListController(viewModel: TweetListViewModel(tweets: tweets))
+        controller.onBack.subscribe(onNext: {[weak self]  in
+            self?.navController.popViewController(animated: true)
+        }).disposed(by: bag)
         navController.pushViewController(controller, animated: true)
     }
 }

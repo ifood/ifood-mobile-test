@@ -15,6 +15,8 @@ final class TweetListController: UIViewController {
     private var viewModel: TweetListViewModelInput & TweetListViewModelOutput
     private var bag = DisposeBag()
     
+    var onBack = PublishSubject<Void>()
+    
     init(viewModel: TweetListViewModelInput & TweetListViewModelOutput) {
         self.viewModel = viewModel
         tweetListView = TweetListView()
@@ -37,6 +39,9 @@ final class TweetListController: UIViewController {
     
     private func setupNavigationbar() {
         self.navigationController?.isNavigationBarHidden = false
+        let backButton = UIBarButtonItem(image: Asset.icBack.image, style: .plain, target: nil, action: nil)
+        backButton.rx.tap.bind(to: onBack).disposed(by: bag)
+        navigationItem.leftBarButtonItem = backButton
     }
     
     private func bindTableView() {
