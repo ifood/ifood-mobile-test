@@ -38,11 +38,11 @@ final class TweetListCell: UITableViewCell {
         return label
     }()
     
-    func configuretion(tweet: TweetModel) {
+    func configuretion(viewModel: TweetListCellViewModelOutput & TweetListCellViewModelInput) {
         setupViewConfiguration()
-        lbTweet.text = tweet.text
-        lbDate.text = tweet.createdAt
-        imgProfile.loadImage(url: tweet.user?.profileImageURL)
+        lbTweet.text = viewModel.tweetText
+        lbDate.text = viewModel.tweetDate
+        imgProfile.loadImage(url: viewModel.imgProfile)
     }
 }
 

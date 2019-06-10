@@ -46,7 +46,7 @@ final class TweetListController: UIViewController {
                 .rx
                 .items(cellIdentifier: "TweetListCell",
                        cellType: TweetListCell.self)) { (_, tweet: TweetModel, cell: TweetListCell) in
-                        cell.configuretion(tweet: tweet)
+                        cell.configuretion(viewModel: TweetListCellViewModel(tweet: tweet))
             }.disposed(by: bag)
     }
 }
