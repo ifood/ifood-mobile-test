@@ -45,16 +45,7 @@ extension SentimentalAnalyzerTargetType: TargetType {
         }
     }
     
-    var parameters: [String: Any]? {
-        switch self {
-        case .oauth:
-            return  ["grant_type": "client_credentials"]
-        case .findTweets(let username):
-            return ["screen_name": username]
-        }
-    }
-    
-    var parameterEncoding: ParameterEncoding {
-        return URLEncoding.default
+    var task: Task {
+        return .requestParameters(parameters: [:], encoding: URLEncoding.default)
     }
 }

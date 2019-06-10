@@ -45,16 +45,14 @@ extension TwitterTargetType: TargetType {
         }
     }
     
-    var parameters: [String: Any]? {
+    var task: Task {
         switch self {
         case .oauth:
-            return  ["grant_type": "client_credentials"]
-        case .findTweets(let username):
-            return ["screen_name": username]
+            return .requestParameters(parameters: ["grant_type": "client_credentials"],
+                                      encoding: URLEncoding.default)
+        case .findTweets(let screenName):
+            return .requestParameters(parameters: ["screen_name": screenName],
+                                      encoding: URLEncoding.default)
         }
-    }
-    
-    var parameterEncoding: ParameterEncoding {
-        return URLEncoding.default
     }
 }

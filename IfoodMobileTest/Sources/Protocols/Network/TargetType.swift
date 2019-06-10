@@ -18,7 +18,5 @@ public protocol TargetType {
     
     var headers: [String: String]? { get }
     
-    var parameters: [String: Any]? { get }
-    
-    var parameterEncoding: ParameterEncoding { get }
+    var task: Task { get }
 }

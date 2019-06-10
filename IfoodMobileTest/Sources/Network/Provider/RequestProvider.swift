@@ -40,25 +40,26 @@ final class RequestProvider<Target: TargetType>: ProviderType<Target> {
         let session = URLSession.shared
         return Observable.create {[weak self] observer in
             
+            guard let `self` = self else {
+                observer.onError(DataError.generic(message: "couldn't access self for target: \(target.self)"))
+                observer.onCompleted()
+                return Disposables.create()
+            }
+            
             guard CheckInternet.connection() else {
                 observer.onError(DataError.withoutInternet)
                 observer.onCompleted()
                 return Disposables.create()
             }
             
-            guard var request = self?.endpoint(target) else {
-                observer.onError(DataError.generic(message: "couldn't access self for target: \(target.self)"))
+            guard var request = try? self.configParam(target: target) else {
+                observer.onError(DataError.generic(message: "couldn't Configurate parameters"))
                 observer.onCompleted()
                 return Disposables.create()
             }
+            
             request.httpMethod = target.method.rawValue
             request.allHTTPHeaderFields = target.headers
-            do {
-                request = try target.parameterEncoding.encode(request: request, parameters: target.parameters)
-            } catch let error {
-                observer.onError(error)
-                observer.onCompleted()
-            }
             
             let task = session.dataTask(with: request, completionHandler: { data, response, error in
                 
@@ -88,6 +89,22 @@ final class RequestProvider<Target: TargetType>: ProviderType<Target> {
                 task.cancel()
             }
             
+        }
+    }
+    
+    private func configParam(target: Target) throws -> URLRequest {
+        var request = self.endpoint(target)
+        do {
+            switch target.task {
+            case .requestParameters(let parameters, let encoding):
+                request = try encoding.encode(request: request, parameters: parameters)
+            case .requestCompositeParameters(let bodyParameters, let bodyEncoding, let urlParameters):
+                request = try bodyEncoding.encode(request: request, parameters: bodyParameters)
+                request = try URLEncoding.default.encode(request: request, parameters: urlParameters)
+            }
+            return request
+        } catch let error {
+            throw error
         }
     }
 }
