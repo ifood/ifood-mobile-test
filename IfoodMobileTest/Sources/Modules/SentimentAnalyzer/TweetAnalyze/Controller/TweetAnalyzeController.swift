@@ -21,6 +21,7 @@ final class TweetAnalyzeController: UIViewController {
         tweetAnalyzeView = TweetAnalyzeView()
         super.init(nibName: nil, bundle: nil)
         bindProperties()
+        bindError()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -47,5 +48,14 @@ final class TweetAnalyzeController: UIViewController {
     private func bindProperties() {
         viewModel.bgColor.bind(to: tweetAnalyzeView.rx.backgroundColor).disposed(by: bag)
         viewModel.emoji.bind(to: tweetAnalyzeView.emoji.rx.text).disposed(by: bag)
+    }
+    
+    private func bindError() {
+        viewModel.errorMessage
+            .observeOn(MainScheduler.instance)
+            .filter { $0 != nil }
+            .subscribe(onNext: {[weak self] error in
+                self?.present(UIAlertController(errorWithMessage: error ?? ""), animated: true, completion: nil)
+            }).disposed(by: bag)
     }
 }

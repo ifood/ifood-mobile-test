@@ -62,7 +62,6 @@ final class FindTwitterController: UIViewController {
             .filter { $0 != nil }
             .subscribe(onNext: {[weak self] error in
                 self?.present(UIAlertController(errorWithMessage: error ?? ""), animated: true, completion: nil)
-                
             }).disposed(by: bag)
     }
     

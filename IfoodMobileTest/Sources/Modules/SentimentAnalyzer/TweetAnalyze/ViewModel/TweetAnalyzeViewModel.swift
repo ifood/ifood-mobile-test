@@ -12,6 +12,7 @@ import RxSwift
 protocol TweetAnalyzeViewModelOutput {
     var bgColor: BehaviorSubject<UIColor> { get }
     var emoji: BehaviorSubject<String> { get }
+    var errorMessage: BehaviorSubject<String?> { get }
 }
 
 protocol TweetAnalyzeViewModelInput {}
@@ -20,6 +21,7 @@ final class TweetAnalyzeViewModel: TweetAnalyzeViewModelOutput, TweetAnalyzeView
     
     var bgColor: BehaviorSubject<UIColor>
     var emoji: BehaviorSubject<String>
+    var errorMessage: BehaviorSubject<String?>
     
     private var service: TweetAnalyzeService
     private var bag = DisposeBag()
@@ -28,14 +30,15 @@ final class TweetAnalyzeViewModel: TweetAnalyzeViewModelOutput, TweetAnalyzeView
         self.service = service
         bgColor = BehaviorSubject<UIColor>(value: .white)
         emoji = BehaviorSubject<String>(value: "")
-        fetchSentimentAnalyze(tweet: "")
+        errorMessage = BehaviorSubject<String?>(value: nil)
+        fetchSentimentAnalyze(tweet: tweet)
     }
     
     private func fetchSentimentAnalyze(tweet: String) {
         service.getFeeling(tweet: tweet).subscribe(onNext: {[weak self] sentiment in
             self?.analyzeSentiment(score: sentiment.sentiment?.score)
-        }, onError: { error in
-            print(error.localizedDescription)
+        }, onError: {[weak self] error in
+            self?.errorMessage.onNext(L10n.DefaultText.genericError)
         }).disposed(by: bag)
     }
     
