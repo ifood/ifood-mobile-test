@@ -1116,6 +1116,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W7XT52LHR8;
 				GOOGLE_API_KEY = "AIzaSyDFPUEvyJwc-CaFXtyRT4Vzyi6U_8G0KD8";
 				GOOGLE_BASE_URL = "https://language.googleapis.com";
 				INFOPLIST_FILE = IfoodMobileTest/Resources/SupportFiles/Info.plist;
@@ -1139,6 +1140,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W7XT52LHR8;
 				GOOGLE_API_KEY = "AIzaSyDFPUEvyJwc-CaFXtyRT4Vzyi6U_8G0KD8";
 				GOOGLE_BASE_URL = "https://language.googleapis.com";
 				INFOPLIST_FILE = IfoodMobileTest/Resources/SupportFiles/Info.plist;

@@ -29,19 +29,19 @@ class FindTwitterViewModelSpec: QuickSpec {
                     self.viewModel.findTweets()
                 }
                 
-                it("isValidUser", closure: {
+                it("isValidUser to be valid", closure: {
                     expect(try? self.viewModel.isValidUser.value()).to(beTrue())
                 })
                 
-                it("tweets", closure: {
+                it("tweets to be fill an register", closure: {
                     expect(try? self.viewModel.tweets.value().count).to(equal(1))
                 })
                 
-                it("errorMessage", closure: {
+                it("errorMessage to be nil", closure: {
                     expect(try? self.viewModel.errorMessage.value()).to(beNil())
                 })
                 
-                it("showLoader", closure: {
+                it("showLoader to be false", closure: {
                     expect(try? self.viewModel.showLoader.value()).to(beFalse())
                 })
             })
@@ -55,19 +55,19 @@ class FindTwitterViewModelSpec: QuickSpec {
                     self.viewModel.findTweets()
                 }
                 
-                it("isValidUser", closure: {
+                it("isValidUser to be valid", closure: {
                     expect(try? self.viewModel.isValidUser.value()).to(beTrue())
                 })
                 
-                it("tweets", closure: {
+                it("tweets to be not fill", closure: {
                     expect(try? self.viewModel.tweets.value().count).to(equal(0))
                 })
                 
-                it("errorMessage", closure: {
+                it("errorMessage to be fill with not internet msg", closure: {
                     expect(try? self.viewModel.errorMessage.value()).to(equal("You are offline or with problem in your internet"))
                 })
                 
-                it("showLoader", closure: {
+                it("showLoader to be false", closure: {
                     expect(try? self.viewModel.showLoader.value()).to(beFalse())
                 })
             })
@@ -81,24 +81,24 @@ class FindTwitterViewModelSpec: QuickSpec {
                     self.viewModel.findTweets()
                 }
                 
-                it("isValidUser", closure: {
+                it("isValidUser to be valid", closure: {
                     expect(try? self.viewModel.isValidUser.value()).to(beTrue())
                 })
                 
-                it("tweets", closure: {
+                it("tweets to be not fill", closure: {
                     expect(try? self.viewModel.tweets.value().count).to(equal(0))
                 })
                 
-                it("errorMessage", closure: {
+                it("errorMessage to be fill with not found msg", closure: {
                     expect(try? self.viewModel.errorMessage.value()).to(equal("We couldn't find this user. \n Please, try another username."))
                 })
                 
-                it("showLoader", closure: {
+                it("showLoader to be false", closure: {
                     expect(try? self.viewModel.showLoader.value()).to(beFalse())
                 })
             })
             
-            context("twettir not found", closure: {
+            context("twettir Generic Error", closure: {
                 beforeEach {
                     self.service = FindTwitterServiceMock()
                     self.service.errorGeneric = true
@@ -107,19 +107,19 @@ class FindTwitterViewModelSpec: QuickSpec {
                     self.viewModel.findTweets()
                 }
                 
-                it("isValidUser", closure: {
+                it("isValidUser to be valid", closure: {
                     expect(try? self.viewModel.isValidUser.value()).to(beTrue())
                 })
                 
-                it("tweets", closure: {
+                it("tweets to be not fill", closure: {
                     expect(try? self.viewModel.tweets.value().count).to(equal(0))
                 })
                 
-                it("errorMessage", closure: {
+                it("errorMessage to be fill with generic msg", closure: {
                     expect(try? self.viewModel.errorMessage.value()).to(equal("Sorry an error occurred. \n Please try again"))
                 })
                 
-                it("showLoader", closure: {
+                it("showLoader to be false", closure: {
                     expect(try? self.viewModel.showLoader.value()).to(beFalse())
                 })
             })
