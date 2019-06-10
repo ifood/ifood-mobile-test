@@ -14,7 +14,7 @@ enum SentimentalAnalyzerTargetType {
 
 extension SentimentalAnalyzerTargetType: TargetType {
     var baseURL: URL {
-        return URL(string: "https://language.googleapis.com")!
+        return EnvironmentConfigs.load().googleBaseUrl
     }
     
     var path: String {
@@ -43,7 +43,7 @@ extension SentimentalAnalyzerTargetType: TargetType {
                                                                     "type": "PLAIN_TEXT",
                                                                     "content": tweet]],
                                                bodyEncoding: JSONEncoding.default,
-                                               urlParameters: ["key": "AIzaSyDFPUEvyJwc-CaFXtyRT4Vzyi6U_8G0KD8"])
+                                               urlParameters: ["key": EnvironmentConfigs.load().googleApiKey])
         }
     }
 }

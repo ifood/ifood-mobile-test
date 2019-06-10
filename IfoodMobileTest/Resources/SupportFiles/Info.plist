@@ -32,6 +32,19 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>Environment</key>
+	<dict>
+		<key>googleApiKey</key>
+		<string>$(GOOGLE_API_KEY)</string>
+		<key>googleBaseUrl</key>
+		<string>$(GOOGLE_BASE_URL)</string>
+		<key>twitterApiSecretKey</key>
+		<string>$(TWITTER_API_SECRET_KEY)</string>
+		<key>twitterApiKey</key>
+		<string>$(TWITTER_API_KEY)</string>
+		<key>twitterBaseUrl</key>
+		<string>$(TWITTER_BASE_URL)</string>
+	</dict>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

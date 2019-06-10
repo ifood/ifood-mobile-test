@@ -15,7 +15,7 @@ enum TwitterTargetType {
 
 extension TwitterTargetType: TargetType {
     var baseURL: URL {
-        return URL(string: "https://api.twitter.com")!
+        return EnvironmentConfigs.load().twitterBaseUrl
     }
     
     var path: String {
@@ -39,7 +39,7 @@ extension TwitterTargetType: TargetType {
     var headers: [String: String]? {
         switch self {
         case .oauth:
-            return ["Authorization": "Basic " + ("h43koqUZDVh32XLsyP9JmH4Aw:SWhkGqn9BNWINWf6TjeebUx0DmTvZuAKMcomxnCn0MjjllE78J".data(using: .utf8)?.base64EncodedString() ?? "")]
+            return ["Authorization": "Basic \(EnvironmentConfigs.load().twiiterBasicToken)"]
         case .findTweets:
             return ["Authorization": "Bearer \(UserDefaults.getToken())"]
         }

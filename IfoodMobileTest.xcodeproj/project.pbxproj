@@ -26,6 +26,7 @@
 		479C32A922AECA6C00CE234F /* SentimentAnalyzerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479C32A822AECA6C00CE234F /* SentimentAnalyzerCoordinator.swift */; };
 		479C32AB22AEDDA000CE234F /* TweetAnalyzeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479C32AA22AEDDA000CE234F /* TweetAnalyzeService.swift */; };
 		479C32AD22AEE03200CE234F /* SentimentAnalyzeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479C32AC22AEE03200CE234F /* SentimentAnalyzeModel.swift */; };
+		479C32AF22AEFB7400CE234F /* EnvironmentConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479C32AE22AEFB7400CE234F /* EnvironmentConfigs.swift */; };
 		47FB447322AC9F480047C0AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47FB446522AC9F480047C0AA /* Assets.xcassets */; };
 		47FB447422AC9F480047C0AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47FB446622AC9F480047C0AA /* LaunchScreen.storyboard */; };
 		47FB447622AC9F480047C0AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB446B22AC9F480047C0AA /* ViewController.swift */; };
@@ -96,6 +97,7 @@
 		479C32A822AECA6C00CE234F /* SentimentAnalyzerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentAnalyzerCoordinator.swift; sourceTree = "<group>"; };
 		479C32AA22AEDDA000CE234F /* TweetAnalyzeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetAnalyzeService.swift; sourceTree = "<group>"; };
 		479C32AC22AEE03200CE234F /* SentimentAnalyzeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentAnalyzeModel.swift; sourceTree = "<group>"; };
+		479C32AE22AEFB7400CE234F /* EnvironmentConfigs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentConfigs.swift; sourceTree = "<group>"; };
 		47FB446522AC9F480047C0AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47FB446722AC9F480047C0AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		47FB446922AC9F480047C0AA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -368,6 +370,7 @@
 				47FB448022ACA62C0047C0AA /* Assets.swift */,
 				47FB447D22ACA55B0047C0AA /* L10n.swift */,
 				47FB446E22AC9F480047C0AA /* AppDelegate.swift */,
+				479C32AE22AEFB7400CE234F /* EnvironmentConfigs.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -853,6 +856,7 @@
 				47FB449E22AD3B330047C0AA /* RequestProvider.swift in Sources */,
 				47FB448B22AD2B380047C0AA /* URLEncoding.swift in Sources */,
 				479C32A722AEC6EE00CE234F /* TweetAnalyzeViewModel.swift in Sources */,
+				479C32AF22AEFB7400CE234F /* EnvironmentConfigs.swift in Sources */,
 				47FB449A22AD37660047C0AA /* ProviderType.swift in Sources */,
 				4702D43D22AE846E00DA88BE /* TweetListCellViewModel.swift in Sources */,
 				47FB44C722ADD12E0047C0AA /* TwitterTargetType.swift in Sources */,
@@ -1028,6 +1032,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GOOGLE_API_KEY = "AIzaSyDFPUEvyJwc-CaFXtyRT4Vzyi6U_8G0KD8";
+				GOOGLE_BASE_URL = "https://language.googleapis.com";
 				INFOPLIST_FILE = IfoodMobileTest/Resources/SupportFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1037,6 +1043,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TWITTER_API_KEY = h43koqUZDVh32XLsyP9JmH4Aw;
+				TWITTER_API_SECRET_KEY = SWhkGqn9BNWINWf6TjeebUx0DmTvZuAKMcomxnCn0MjjllE78J;
+				TWITTER_BASE_URL = "https://api.twitter.com";
 			};
 			name = Debug;
 		};
@@ -1046,6 +1055,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GOOGLE_API_KEY = "AIzaSyDFPUEvyJwc-CaFXtyRT4Vzyi6U_8G0KD8";
+				GOOGLE_BASE_URL = "https://language.googleapis.com";
 				INFOPLIST_FILE = IfoodMobileTest/Resources/SupportFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1055,6 +1066,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TWITTER_API_KEY = h43koqUZDVh32XLsyP9JmH4Aw;
+				TWITTER_API_SECRET_KEY = SWhkGqn9BNWINWf6TjeebUx0DmTvZuAKMcomxnCn0MjjllE78J;
+				TWITTER_BASE_URL = "https://api.twitter.com";
 			};
 			name = Release;
 		};
