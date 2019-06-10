@@ -17,15 +17,49 @@ protocol TweetAnalyzeViewModelOutput {
 protocol TweetAnalyzeViewModelInput {}
 
 final class TweetAnalyzeViewModel: TweetAnalyzeViewModelOutput, TweetAnalyzeViewModelInput {
-
-    private var text: String
     
     var bgColor: BehaviorSubject<UIColor>
     var emoji: BehaviorSubject<String>
     
-    init(text: String) {
-        self.text = text
+    private var service: TweetAnalyzeService
+    private var bag = DisposeBag()
+    
+    init(tweet: String, service: TweetAnalyzeService = TweetAnalyzeServiceImpl()) {
+        self.service = service
         bgColor = BehaviorSubject<UIColor>(value: .white)
-        emoji = BehaviorSubject<String>(value: "😃")
+        emoji = BehaviorSubject<String>(value: "")
+        fetchSentimentAnalyze(tweet: "")
+    }
+    
+    private func fetchSentimentAnalyze(tweet: String) {
+        service.getFeeling(tweet: tweet).subscribe(onNext: {[weak self] sentiment in
+            self?.analyzeSentiment(score: sentiment.sentiment?.score)
+        }, onError: { error in
+            print(error.localizedDescription)
+        }).disposed(by: bag)
+    }
+    
+    private func analyzeSentiment(score: Double?) {
+        guard let score = score else {
+            self.emoji.onNext("❌")
+            self.bgColor.onNext(.white)
+            return
+        }
+        var sentmentEmoji = ""
+        var sentmentColor = UIColor.white
+        switch score {
+        case let score where score < 0:
+            sentmentEmoji = "😔"
+            sentmentColor = .blue
+        case let score where score > 0:
+            sentmentEmoji = "😃"
+            sentmentColor = .yellow
+        default:
+            sentmentEmoji = "😐"
+            sentmentColor = .gray
+        }
+        
+        self.emoji.onNext(sentmentEmoji)
+        self.bgColor.onNext(sentmentColor)
     }
 }

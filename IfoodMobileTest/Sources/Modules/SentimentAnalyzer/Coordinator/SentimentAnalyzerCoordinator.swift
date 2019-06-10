@@ -21,7 +21,7 @@ final class SentimentAnalyzerCoordinator: BaseCoordinator<Void> {
     
     override func start(parameters: [String: Any]) -> Observable<Void> {
         let text = (parameters["text"] as? String) ?? ""
-        let controller = TweetAnalyzeController(viewModel: TweetAnalyzeViewModel(text: text))
+        let controller = TweetAnalyzeController(viewModel: TweetAnalyzeViewModel(tweet: text))
         controller.onBack.bind(to: free).disposed(by: disposeBag)
         rootController.navigationController?.pushViewController(controller, animated: true)
         return free.do(onNext: {[weak self] _ in

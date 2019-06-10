@@ -9,43 +9,41 @@
 import Foundation
 
 enum SentimentalAnalyzerTargetType {
-    case oauth
-    case findTweets(String)
+    case getFeeling(String)
 }
 
 extension SentimentalAnalyzerTargetType: TargetType {
     var baseURL: URL {
-        return URL(string: "https://api.twitter.com")!
+        return URL(string: "https://language.googleapis.com")!
     }
     
     var path: String {
         switch self {
-        case .oauth:
-            return "oauth2/token"
-        case .findTweets:
-            return "/1.1/statuses/user_timeline.json"
+        case .getFeeling:
+            return "/v1/documents:analyzeSentiment"
         }
     }
     
     var method: HTTPMethod {
         switch self {
-        case .oauth:
+        case .getFeeling:
             return .post
-        case .findTweets:
-            return .get
         }
     }
     
     var headers: [String: String]? {
-        switch self {
-        case .oauth:
-            return ["Authorization": "Basic " + ("h43koqUZDVh32XLsyP9JmH4Aw:SWhkGqn9BNWINWf6TjeebUx0DmTvZuAKMcomxnCn0MjjllE78J".data(using: .utf8)?.base64EncodedString() ?? "")]
-        case .findTweets:
-            return ["Authorization": "Bearer \(UserDefaults.getToken())"]
-        }
+        return nil
     }
     
     var task: Task {
-        return .requestParameters(parameters: [:], encoding: URLEncoding.default)
+        switch self {
+        case .getFeeling(let tweet):
+            return .requestCompositeParameters(bodyParameters: ["encodingType": "UTF8",
+                                                                "document": [
+                                                                    "type": "PLAIN_TEXT",
+                                                                    "content": tweet]],
+                                               bodyEncoding: JSONEncoding.default,
+                                               urlParameters: ["key": "AIzaSyDFPUEvyJwc-CaFXtyRT4Vzyi6U_8G0KD8"])
+        }
     }
 }
