@@ -11,9 +11,11 @@ import RxSwift
 import RxCocoa
 
 final class FindTwitterController: UIViewController {
-    var findTwitterView: FindTwitterView
-    var viewModel: FindTwitterViewModelOutput & FindTwitterViewModelInput
     
+    var onList = PublishSubject<[TweetModel]>()
+    
+    private var findTwitterView: FindTwitterView
+    private var viewModel: FindTwitterViewModelOutput & FindTwitterViewModelInput
     private let bag = DisposeBag()
     
     init(viewModel: FindTwitterViewModelOutput & FindTwitterViewModelInput) {
@@ -49,6 +51,8 @@ final class FindTwitterController: UIViewController {
         findTwitterView.btnFind.rx.tap.subscribe(onNext: {[weak self] _ in
             self?.viewModel.findTweets()
         }).disposed(by: bag)
+        
+        viewModel.tweets.bind(to: onList).disposed(by: bag)
     }
     
     private func bindUserName() {

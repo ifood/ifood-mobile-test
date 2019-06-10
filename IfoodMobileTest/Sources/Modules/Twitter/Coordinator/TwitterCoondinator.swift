@@ -11,6 +11,7 @@ import RxSwift
 
 final class TwitterCoordinator: BaseCoordinator<Void> {
     private var navController: UINavigationController
+    private var bag = DisposeBag()
     
     init(navController: UINavigationController) {
         self.navController = navController
@@ -19,6 +20,13 @@ final class TwitterCoordinator: BaseCoordinator<Void> {
     override func start() -> Observable<Void> {
         let controller = FindTwitterController(viewModel: FindTwitterViewModel())
         navController.pushViewController(controller, animated: true)
+        controller.onList.subscribe(onNext: {[weak self] tweets in
+            self?.navigationToList(tweets: tweets)
+        }).disposed(by: bag)
         return Observable.never()
+    }
+    
+    private func navigationToList(tweets: [TweetModel]) {
+        print(tweets)
     }
 }
