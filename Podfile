@@ -1,4 +1,4 @@
-platform :ios, '9.0'
+platform :ios, '12.0'
 
 target 'IfoodMobileTest' do
   use_frameworks!
@@ -9,7 +9,7 @@ target 'IfoodMobileTest' do
   pod 'SwiftLint'
   pod 'KeychainSwift'
   pod 'Kingfisher'
-
+  
   target 'IfoodMobileTestTests' do
     inherit! :search_paths
     pod 'Nimble'
