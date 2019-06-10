@@ -26,6 +26,6 @@ final class TweetAnalyzeViewModel: TweetAnalyzeViewModelOutput, TweetAnalyzeView
     init(text: String) {
         self.text = text
         bgColor = BehaviorSubject<UIColor>(value: .white)
-        emoji = BehaviorSubject<String>(value: "")
+        emoji = BehaviorSubject<String>(value: "😃")
     }
 }

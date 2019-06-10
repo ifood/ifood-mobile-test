@@ -12,9 +12,8 @@ final class TweetAnalyzeView: UIView {
     lazy var emoji: UILabel = {
         let label = UILabel(frame: .zero)
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.systemFont(ofSize: 50)
+        label.font = UIFont.systemFont(ofSize: 150)
         label.textAlignment = .center
-        label.text = "😃"
         return label
     }()
     

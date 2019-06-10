@@ -22,6 +22,8 @@ final class TweetListController: UIViewController {
         self.viewModel = viewModel
         tweetListView = TweetListView()
         super.init(nibName: nil, bundle: nil)
+        setupNavigationbar()
+        bindTableView()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -34,8 +36,6 @@ final class TweetListController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setupNavigationbar()
-        bindTableView()
     }
     
     private func setupNavigationbar() {
