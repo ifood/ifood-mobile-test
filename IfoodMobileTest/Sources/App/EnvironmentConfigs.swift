@@ -30,7 +30,7 @@ extension EnvironmentConfigs {
         
         do {
             return try JSONDecoder().decode(EnvironmentConfigs.self, from: envDic)
-        } catch  {
+        } catch {
             fatalError("couldn’t be completed parse \(envDic.description) to Environment")
         }
     }

@@ -59,19 +59,6 @@
             </objects>
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="Kjj-gf-XIw">
-            <objects>
-                <viewController id="T8T-S7-hmI" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="eCk-G0-k5R">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QWj-7Q-n2Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
     </scenes>
     <resources>
         <image name="icTwitter" width="42" height="34"/>
