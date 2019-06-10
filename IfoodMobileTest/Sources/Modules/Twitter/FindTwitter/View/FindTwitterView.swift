@@ -41,6 +41,14 @@ final class FindTwitterView: UIView {
         return button
     }()
     
+    lazy var load: UIActivityIndicatorView = {
+        let load = UIActivityIndicatorView(style: .whiteLarge)
+        load.translatesAutoresizingMaskIntoConstraints = false
+        load.hidesWhenStopped = true
+        load.color = UIColor(red: 29/255.0, green: 161/255.0, blue: 242/255.0, alpha: 1.0)
+        return load
+    }()
+    
     convenience init() {
         self.init(frame: .zero)
         self.backgroundColor = .white
@@ -53,6 +61,7 @@ extension FindTwitterView: ViewConfiguration {
         self.addSubview(lbMesage)
         self.addSubview(btnFind)
         self.addSubview(txtTwitter)
+        self.addSubview(load)
     }
     
     func setupConstraints() {
@@ -73,6 +82,13 @@ extension FindTwitterView: ViewConfiguration {
             btnFind.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
             btnFind.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
             btnFind.heightAnchor.constraint(equalToConstant: 44)
+        ])
+        
+        NSLayoutConstraint.activate([
+            load.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            load.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            load.widthAnchor.constraint(equalToConstant: 40),
+            load.heightAnchor.constraint(equalToConstant: 40)
         ])
     }
 }

@@ -54,6 +54,8 @@ final class FindTwitterController: UIViewController {
         }).disposed(by: bag)
         
         viewModel.tweets.bind(to: onList).disposed(by: bag)
+        
+        viewModel.showLoad.bind(to: findTwitterView.load.rx.isAnimating).disposed(by: bag)
     }
     
     private func bindError() {
