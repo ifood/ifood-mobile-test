@@ -39,6 +39,13 @@ final class RequestProvider<Target: TargetType>: ProviderType<Target> {
     private func doRequest(_ target: Target) -> Observable<(response: URLResponse, data: Data)> {
         let session = URLSession.shared
         return Observable.create {[weak self] observer in
+            
+            guard CheckInternet.connection() else {
+                observer.onError(DataError.withoutInternet)
+                observer.onCompleted()
+                return Disposables.create()
+            }
+            
             guard var request = self?.endpoint(target) else {
                 observer.onError(DataError.generic(message: "couldn't access self for target: \(target.self)"))
                 observer.onCompleted()
@@ -54,13 +61,24 @@ final class RequestProvider<Target: TargetType>: ProviderType<Target> {
             }
             
             let task = session.dataTask(with: request, completionHandler: { data, response, error in
-                if let error = error {
-                    observer.onError(error)
-                    observer.onCompleted()
-                }
                 
-                if let response = response, let data = data {
-                    observer.onNext((response: response, data: data))
+                if let httpResponse = response as? HTTPURLResponse {
+                    if let error = error {
+                        observer.onError(error)
+                        observer.onCompleted()
+                    }
+                    
+                    if httpResponse.statusCode >= 300 && httpResponse.statusCode <= 500 {
+                        observer.onError(DataError.statusCode(httpResponse.statusCode))
+                        observer.onCompleted()
+                    }
+                    
+                    if let response = response, let data = data {
+                        observer.onNext((response: response, data: data))
+                        observer.onCompleted()
+                    }
+                } else {
+                    observer.onError(DataError.generic(message: "response invalid"))
                     observer.onCompleted()
                 }
             })

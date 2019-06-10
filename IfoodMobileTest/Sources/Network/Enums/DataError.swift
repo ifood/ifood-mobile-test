@@ -10,9 +10,10 @@ import Foundation
 
 public enum DataError: Swift.Error {
     case jsonParse(JSONParseError, Any)
-    case statusCode(NSErrorDomain)
+    case statusCode(Int)
     case underlying(Swift.Error)
     case generic(message: String)
+    case withoutInternet
 }
 
 public enum JSONParseError: Swift.Error {
