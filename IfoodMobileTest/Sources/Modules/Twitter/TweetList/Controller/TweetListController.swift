@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 final class TweetListController: UIViewController {
     private var tweetListView: TweetListView
     private var viewModel: TweetListViewModelInput & TweetListViewModelOutput
+    private var bag = DisposeBag()
     
     init(viewModel: TweetListViewModelInput & TweetListViewModelOutput) {
         self.viewModel = viewModel
@@ -29,9 +32,21 @@ final class TweetListController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setupNavigationbar()
+        bindTableView()
     }
     
     private func setupNavigationbar() {
         self.navigationController?.isNavigationBarHidden = false
+    }
+    
+    private func bindTableView() {
+        viewModel
+            .tweets
+            .bind(to: tweetListView
+                .rx
+                .items(cellIdentifier: "TweetListCell",
+                       cellType: TweetListCell.self)) { (_, tweet: TweetModel, cell: TweetListCell) in
+                        cell.configuretion(tweet: tweet)
+            }.disposed(by: bag)
     }
 }

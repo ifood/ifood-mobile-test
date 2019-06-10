@@ -37,6 +37,12 @@ extension UIImageView {
         }
     }
     
+    func loadImage(url: URL?) {
+        guard let imageUrl = url else { return }
+        let resource = ImageResource(downloadURL: imageUrl, cacheKey: imageUrl.absoluteString)
+        self.kf.setImage(with: resource)
+    }
+    
     func loadImage(url: String = "") {
         guard let imageUrl = URL(string: url) else { return }
         let resource = ImageResource(downloadURL: imageUrl, cacheKey: url)

@@ -16,7 +16,7 @@ public struct TwitterUser: Codable {
     var profileImageURL: URL?
     
     enum CodingKeys: String, CodingKey {
-        case profileImageURL = "profile_image_url"
+        case profileImageURL = "profile_image_url_https"
         case id = "id_str"
         case name
         case screenName = "screen_name"

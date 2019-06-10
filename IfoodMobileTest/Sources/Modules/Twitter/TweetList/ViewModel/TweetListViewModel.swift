@@ -17,9 +17,9 @@ protocol TweetListViewModelInput {}
 
 final class TweetListViewModel: TweetListViewModelOutput, TweetListViewModelInput {
     
-    var tweets: BehaviorSubject<[TweetModel]>
+    var tweets = BehaviorSubject<[TweetModel]>(value: [])
     
     init(tweets: [TweetModel]) {
-        self.tweets = BehaviorSubject<[TweetModel]>(value: tweets)
+        self.tweets.onNext(tweets)
     }
 }

@@ -23,6 +23,7 @@ final class TweetListCell: UITableViewCell {
         label.textColor = .black
         label.font = UIFont.systemFont(ofSize: 12)
         label.textAlignment = .left
+        label.text = "djkhfakjshdkjsadfhaksjdfhksjdfhksjdfh"
         label.numberOfLines = 0
         return label
     }()
@@ -33,14 +34,17 @@ final class TweetListCell: UITableViewCell {
         label.textColor = .black
         label.font = UIFont.boldSystemFont(ofSize: 10)
         label.textAlignment = .left
+        label.text = "23/03/2344 09:30"
         return label
     }()
     
     func configuretion(tweet: TweetModel) {
-        configureViews()
+        setupViewConfiguration()
+        lbTweet.text = tweet.text
+        lbDate.text = tweet.createdAt
+        imgProfile.loadImage(url: tweet.user?.profileImageURL)
     }
 }
-
 
 extension TweetListCell: ViewConfiguration {
     func buildViewHierarchy() {
@@ -53,8 +57,9 @@ extension TweetListCell: ViewConfiguration {
         NSLayoutConstraint.activate([
             imgProfile.widthAnchor.constraint(equalToConstant: 50),
             imgProfile.heightAnchor.constraint(equalToConstant: 50),
-            imgProfile.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 5),
-            imgProfile.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 16)
+            imgProfile.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 15),
+            imgProfile.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 16),
+            imgProfile.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -15)
         ])
         
         NSLayoutConstraint.activate([
@@ -65,9 +70,10 @@ extension TweetListCell: ViewConfiguration {
         ])
         
         NSLayoutConstraint.activate([
-            lbDate.topAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -5),
-            lbTweet.leadingAnchor.constraint(equalTo: imgProfile.trailingAnchor, constant: 10),
-            lbTweet.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: -16)
+            lbDate.heightAnchor.constraint(equalToConstant: 15),
+            lbDate.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -10),
+            lbDate.leadingAnchor.constraint(equalTo: imgProfile.trailingAnchor, constant: 10),
+            lbDate.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: -16)
         ])
     }
 }
