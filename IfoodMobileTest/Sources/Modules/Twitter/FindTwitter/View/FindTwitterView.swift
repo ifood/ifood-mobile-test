@@ -26,6 +26,7 @@ final class FindTwitterView: UIView {
         textField.textColor = .black
         textField.tintColor = .black
         textField.borderStyle = .roundedRect
+        textField.text = "LewisHamilton"
         textField.placeholder = "iFood"
         return textField
     }()

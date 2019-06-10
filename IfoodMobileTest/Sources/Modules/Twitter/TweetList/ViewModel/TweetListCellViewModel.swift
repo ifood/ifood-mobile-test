@@ -27,7 +27,7 @@ final class TweetListCellViewModel: TweetListCellViewModelOutput, TweetListCellV
     }
     
     var tweetDate: String? {
-        guard let date = DateFormatter.twitterDate.date(from: tweet.createdAt ?? "") else {
+        guard let date = DateFormatter.EEEMMMddHHmmssZyyyy.date(from: tweet.createdAt ?? "") else {
             return ""
         }
         return DateFormatter.ddMMyyyyHHmm.string(from: date)

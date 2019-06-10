@@ -9,7 +9,7 @@
 import Foundation
 
 extension DateFormatter {
-    public static let twitterDate: DateFormatter = {
+    public static let EEEMMMddHHmmssZyyyy: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "EEE MMM dd HH:mm:ss Z yyyy"
         formatter.calendar = Calendar(identifier: .iso8601)
