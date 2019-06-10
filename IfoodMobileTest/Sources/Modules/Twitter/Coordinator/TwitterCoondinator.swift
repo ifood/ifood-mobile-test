@@ -20,13 +20,17 @@ final class TwitterCoordinator: BaseCoordinator<Void> {
     override func start() -> Observable<Void> {
         let controller = FindTwitterController(viewModel: FindTwitterViewModel())
         navController.pushViewController(controller, animated: true)
-        controller.onList.subscribe(onNext: {[weak self] tweets in
+        controller
+            .onList
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: {[weak self] tweets in
             self?.navigationToList(tweets: tweets)
         }).disposed(by: bag)
         return Observable.never()
     }
     
     private func navigationToList(tweets: [TweetModel]) {
-        print(tweets)
+        let controller = TweetListController(viewModel: TweetListViewModel(tweets: tweets))
+        navController.pushViewController(controller, animated: true)
     }
 }
