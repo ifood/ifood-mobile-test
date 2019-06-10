@@ -126,10 +126,3 @@ class FindTwitterViewModelSpec: QuickSpec {
         }
     }
 }
-
-
-/*
- var tweets: BehaviorSubject<[TweetModel]> { get }
- var errorMessage: BehaviorSubject<String?> { get }
- var showLoader: BehaviorSubject<Bool> { get }
- */
