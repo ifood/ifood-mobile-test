@@ -16,6 +16,7 @@ final class TweetListController: UIViewController {
     private var bag = DisposeBag()
     
     var onBack = PublishSubject<Void>()
+    var onSentimentAnalyzer = PublishSubject<String>()
     
     init(viewModel: TweetListViewModelInput & TweetListViewModelOutput) {
         self.viewModel = viewModel
@@ -53,5 +54,12 @@ final class TweetListController: UIViewController {
                        cellType: TweetListCell.self)) { (_, tweet: TweetModel, cell: TweetListCell) in
                         cell.configuretion(viewModel: TweetListCellViewModel(tweet: tweet))
             }.disposed(by: bag)
+        
+        tweetListView
+            .rx
+            .modelSelected(TweetModel.self)
+            .map { $0.text ?? "" }
+            .bind(to: onSentimentAnalyzer)
+            .disposed(by: bag)
     }
 }
