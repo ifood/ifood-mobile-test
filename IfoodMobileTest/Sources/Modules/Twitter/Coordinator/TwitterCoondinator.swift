@@ -35,12 +35,12 @@ final class TwitterCoordinator: BaseCoordinator<Void> {
             self?.navController.popViewController(animated: true)
         }).disposed(by: bag)
         controller.onSentimentAnalyzer.subscribe(onNext: {[weak self] text in
-            self?.navigationToonSentimentAnalyzer(text: text)
+            self?.navigationToSentimentAnalyzer(text: text)
         }).disposed(by: bag)
         navController.pushViewController(controller, animated: true)
     }
     
-    private func navigationToonSentimentAnalyzer(text: String) {
+    private func navigationToSentimentAnalyzer(text: String) {
         print(text)
     }
 }

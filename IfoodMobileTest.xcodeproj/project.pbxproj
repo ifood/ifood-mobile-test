@@ -16,6 +16,7 @@
 		477B379822AE61D6009838CA /* TweetListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477B379722AE61D6009838CA /* TweetListController.swift */; };
 		477B379A22AE6D9B009838CA /* UIImage+load.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477B379922AE6D9B009838CA /* UIImage+load.swift */; };
 		477B379C22AE6E46009838CA /* TweetListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477B379B22AE6E46009838CA /* TweetListCell.swift */; };
+		479C329A22AEA6F800CE234F /* SentimentalAnalyzerTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479C329922AEA6F800CE234F /* SentimentalAnalyzerTargetType.swift */; };
 		47FB447322AC9F480047C0AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47FB446522AC9F480047C0AA /* Assets.xcassets */; };
 		47FB447422AC9F480047C0AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47FB446622AC9F480047C0AA /* LaunchScreen.storyboard */; };
 		47FB447622AC9F480047C0AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB446B22AC9F480047C0AA /* ViewController.swift */; };
@@ -76,6 +77,7 @@
 		477B379722AE61D6009838CA /* TweetListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetListController.swift; sourceTree = "<group>"; };
 		477B379922AE6D9B009838CA /* UIImage+load.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+load.swift"; sourceTree = "<group>"; };
 		477B379B22AE6E46009838CA /* TweetListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetListCell.swift; sourceTree = "<group>"; };
+		479C329922AEA6F800CE234F /* SentimentalAnalyzerTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentalAnalyzerTargetType.swift; sourceTree = "<group>"; };
 		47FB446522AC9F480047C0AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47FB446722AC9F480047C0AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		47FB446922AC9F480047C0AA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -231,6 +233,78 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		479C329022AEA6CA00CE234F /* SentimentAnalyzer */ = {
+			isa = PBXGroup;
+			children = (
+				479C329122AEA6CA00CE234F /* TweetAnalyze */,
+				479C329622AEA6CB00CE234F /* Coordinator */,
+				479C329722AEA6CB00CE234F /* Model */,
+				479C329822AEA6CB00CE234F /* TargetType */,
+			);
+			path = SentimentAnalyzer;
+			sourceTree = "<group>";
+		};
+		479C329122AEA6CA00CE234F /* TweetAnalyze */ = {
+			isa = PBXGroup;
+			children = (
+				479C329222AEA6CA00CE234F /* ViewModel */,
+				479C329322AEA6CA00CE234F /* Network */,
+				479C329422AEA6CA00CE234F /* Controller */,
+				479C329522AEA6CB00CE234F /* View */,
+			);
+			path = TweetAnalyze;
+			sourceTree = "<group>";
+		};
+		479C329222AEA6CA00CE234F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		479C329322AEA6CA00CE234F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		479C329422AEA6CA00CE234F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		479C329522AEA6CB00CE234F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		479C329622AEA6CB00CE234F /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		479C329722AEA6CB00CE234F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		479C329822AEA6CB00CE234F /* TargetType */ = {
+			isa = PBXGroup;
+			children = (
+				479C329922AEA6F800CE234F /* SentimentalAnalyzerTargetType.swift */,
+			);
+			path = TargetType;
+			sourceTree = "<group>";
+		};
 		47FB446422AC9F480047C0AA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -301,6 +375,7 @@
 			isa = PBXGroup;
 			children = (
 				47FB44B122ADC3F10047C0AA /* Twitter */,
+				479C329022AEA6CA00CE234F /* SentimentAnalyzer */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -760,6 +835,7 @@
 				477B379822AE61D6009838CA /* TweetListController.swift in Sources */,
 				47FB448422AD291C0047C0AA /* RequestProtocol.swift in Sources */,
 				47FB44D722ADE80D0047C0AA /* TweetModel.swift in Sources */,
+				479C329A22AEA6F800CE234F /* SentimentalAnalyzerTargetType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
