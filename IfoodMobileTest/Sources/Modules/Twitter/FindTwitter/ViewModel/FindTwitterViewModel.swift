@@ -12,6 +12,7 @@ import RxSwift
 protocol FindTwitterViewModelOutput {
     var isValidUser: BehaviorSubject<Bool> { get }
     var tweets: BehaviorSubject<[TweetModel]> { get }
+    var errorMessage: BehaviorSubject<String?> { get }
 }
 
 protocol FindTwitterViewModelInput {
@@ -24,6 +25,7 @@ final class FindTwitterViewModel: FindTwitterViewModelOutput, FindTwitterViewMod
     var isValidUser: BehaviorSubject<Bool>
     var userName: BehaviorSubject<String?>
     var tweets: BehaviorSubject<[TweetModel]>
+    var errorMessage: BehaviorSubject<String?>
     
     private let bag = DisposeBag()
     private var service: FindTwitterService
@@ -33,6 +35,7 @@ final class FindTwitterViewModel: FindTwitterViewModelOutput, FindTwitterViewMod
         userName = BehaviorSubject<String?>(value: nil)
         isValidUser = BehaviorSubject<Bool>(value: false)
         tweets = BehaviorSubject<[TweetModel]>(value: [])
+        errorMessage = BehaviorSubject<String?>(value: nil)
         validateUserName()
     }
     
@@ -54,27 +57,30 @@ final class FindTwitterViewModel: FindTwitterViewModelOutput, FindTwitterViewMod
         }
         
         service
-            .getTweets(screenName: screenName).do(onError: {[weak self] error in
+            .getTweets(screenName: screenName)
+            .subscribe(onNext: {[weak self] tweets in
+                self?.tweets.onNext(tweets)
+            }, onError: {[weak self] error in
                 self?.handler(error: error)
-            })
-            .bind(to: tweets)
-            .disposed(by: bag)
+            }).disposed(by: bag)
     }
     
     private func handler(error: Error) {
         guard let dataError = error as? DataError else {
-            print("algo deu errado")
+            errorMessage.onNext(L10n.DefaultText.genericError)
             return
         }
         switch dataError {
         case .statusCode(let code):
-            if code == 404 {
-                print("Usuario não encontrado")
-            } else {
-                print("algo deu errado")
+            guard code == 404 else {
+                errorMessage.onNext(L10n.DefaultText.genericError)
+                return
             }
+            errorMessage.onNext(L10n.FindUser.userNotFound)
+        case .withoutInternet:
+            errorMessage.onNext(L10n.DefaultText.withoutInternet)
         default:
-            print("algo deu errado")
+            errorMessage.onNext(L10n.DefaultText.genericError)
         }
     }
 }

@@ -24,6 +24,7 @@ final class FindTwitterController: UIViewController {
         super.init(nibName: nil, bundle: nil)
         bindUserName()
         bindBtnFind()
+        bindError()
     }
     
     required init?(coder: NSCoder) {
@@ -53,6 +54,16 @@ final class FindTwitterController: UIViewController {
         }).disposed(by: bag)
         
         viewModel.tweets.bind(to: onList).disposed(by: bag)
+    }
+    
+    private func bindError() {
+        viewModel.errorMessage
+            .observeOn(MainScheduler.instance)
+            .filter { $0 != nil }
+            .subscribe(onNext: {[weak self] error in
+                self?.present(UIAlertController(errorWithMessage: error ?? ""), animated: true, completion: nil)
+                
+            }).disposed(by: bag)
     }
     
     private func bindUserName() {

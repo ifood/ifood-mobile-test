@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0F3FB99F6DFADB139660B5FE /* Pods_IfoodMobileTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 443A1CAE653DF410C6B39FBD /* Pods_IfoodMobileTest.framework */; };
+		477B378E22AE052F009838CA /* UIAlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477B378D22AE052F009838CA /* UIAlertController+Extension.swift */; };
 		47FB447322AC9F480047C0AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47FB446522AC9F480047C0AA /* Assets.xcassets */; };
 		47FB447422AC9F480047C0AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47FB446622AC9F480047C0AA /* LaunchScreen.storyboard */; };
 		47FB447622AC9F480047C0AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB446B22AC9F480047C0AA /* ViewController.swift */; };
@@ -60,6 +61,7 @@
 		474C24BB22AC943100632E62 /* IfoodMobileTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IfoodMobileTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		474C24CF22AC943400632E62 /* IfoodMobileTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IfoodMobileTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		474C24D522AC943400632E62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		477B378D22AE052F009838CA /* UIAlertController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extension.swift"; sourceTree = "<group>"; };
 		47FB446522AC9F480047C0AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47FB446722AC9F480047C0AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		47FB446922AC9F480047C0AA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 				47FB448C22AD2B9A0047C0AA /* NSNumberExtension.swift */,
 				47FB449B22AD38380047C0AA /* ResponseData.swift */,
 				47FB44AF22ADC1070047C0AA /* UserDefaults+Extension.swift */,
+				477B378D22AE052F009838CA /* UIAlertController+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -689,6 +692,7 @@
 				47FB448B22AD2B380047C0AA /* URLEncoding.swift in Sources */,
 				47FB449A22AD37660047C0AA /* ProviderType.swift in Sources */,
 				47FB44C722ADD12E0047C0AA /* TwitterTargetType.swift in Sources */,
+				477B378E22AE052F009838CA /* UIAlertController+Extension.swift in Sources */,
 				47FB44DB22ADF42E0047C0AA /* CheckInternet.swift in Sources */,
 				47FB44D022ADD4F30047C0AA /* FindTwitterController.swift in Sources */,
 				47FB44B022ADC1070047C0AA /* UserDefaults+Extension.swift in Sources */,

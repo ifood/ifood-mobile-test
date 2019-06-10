@@ -15,7 +15,7 @@ final class FindTwitterView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .black
         label.textAlignment = .center
-        label.text = L10n.findTwitterMessage
+        label.text = L10n.FindUser.twitterMessage
         label.numberOfLines = 0
         return label
     }()
@@ -35,7 +35,7 @@ final class FindTwitterView: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.tintColor = .black
         button.backgroundColor = UIColor(red: 29/255.0, green: 161/255.0, blue: 242/255.0, alpha: 1.0)
-        button.setTitle(L10n.find, for: .normal)
+        button.setTitle(L10n.DefaultText.find, for: .normal)
         button.layer.cornerRadius = 22
         return button
     }()

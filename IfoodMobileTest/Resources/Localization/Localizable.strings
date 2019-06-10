@@ -1,3 +1,11 @@
-"token_error_message" = "😔 Infelizmente não conseguimos pegar o token para iniciar a plaicação, por favor tente novamente";
-"find" = "Find";
-"find_twitter_message" = "let's find out what user's are feeling";
+"find-user.token-error" = "Sorry, we can't get a Access Token. \n Please, try another username.";
+"find-user.twitter-message" = "Tell me who you want find";
+"find-user.user-not-found" = "We couldn't find this user. \n Please, try another username.";
+
+//Default text
+"default-text.cancel" = "cancel";
+"default-text.ok" = "Ok";
+"default-text.error" = "Error";
+"default-text.find" = "Find";
+"default-text.generic-error" = "Sorry an error occurred. \n Please try again";
+"default-text.without-internet" = "You are offline or with problem in your internet";
