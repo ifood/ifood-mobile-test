@@ -7,3 +7,18 @@
 //
 
 import Foundation
+
+public struct TwitterUser: Codable {
+    
+    var id: String?
+    var name: String?
+    var screenName: String?
+    var profileImageURL: URL?
+    
+    enum CodingKeys: String, CodingKey {
+        case profileImageURL = "profile_image_url"
+        case id = "id_str"
+        case name
+        case screenName = "screen_name"
+    }
+}

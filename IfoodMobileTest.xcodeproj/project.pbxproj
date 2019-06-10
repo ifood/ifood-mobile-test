@@ -38,6 +38,9 @@
 		47FB44D022ADD4F30047C0AA /* FindTwitterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB44CF22ADD4F30047C0AA /* FindTwitterController.swift */; };
 		47FB44D222ADD4FE0047C0AA /* FindTwitterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB44D122ADD4FE0047C0AA /* FindTwitterViewModel.swift */; };
 		47FB44D522ADD57B0047C0AA /* ViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB44D422ADD57B0047C0AA /* ViewConfiguration.swift */; };
+		47FB44D722ADE80D0047C0AA /* TweetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB44D622ADE80D0047C0AA /* TweetModel.swift */; };
+		47FB44D922ADE88F0047C0AA /* TwitterUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB44D822ADE88F0047C0AA /* TwitterUserModel.swift */; };
+		47FB44DB22ADF42E0047C0AA /* CheckInternet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB44DA22ADF42E0047C0AA /* CheckInternet.swift */; };
 		DFDB3D8914495CF97439F63C /* Pods_IfoodMobileTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F686051E1BB9228C46E0918 /* Pods_IfoodMobileTestTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +91,9 @@
 		47FB44CF22ADD4F30047C0AA /* FindTwitterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindTwitterController.swift; sourceTree = "<group>"; };
 		47FB44D122ADD4FE0047C0AA /* FindTwitterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindTwitterViewModel.swift; sourceTree = "<group>"; };
 		47FB44D422ADD57B0047C0AA /* ViewConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConfiguration.swift; sourceTree = "<group>"; };
+		47FB44D622ADE80D0047C0AA /* TweetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetModel.swift; sourceTree = "<group>"; };
+		47FB44D822ADE88F0047C0AA /* TwitterUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterUserModel.swift; sourceTree = "<group>"; };
+		47FB44DA22ADF42E0047C0AA /* CheckInternet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInternet.swift; sourceTree = "<group>"; };
 		67D082BAD08C009C64B6F1B3 /* Pods-IfoodMobileTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IfoodMobileTest.release.xcconfig"; path = "Target Support Files/Pods-IfoodMobileTest/Pods-IfoodMobileTest.release.xcconfig"; sourceTree = "<group>"; };
 		6F686051E1BB9228C46E0918 /* Pods_IfoodMobileTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IfoodMobileTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84343BD8E948F4A229F44727 /* Pods-IfoodMobileTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IfoodMobileTestTests.release.xcconfig"; path = "Target Support Files/Pods-IfoodMobileTestTests/Pods-IfoodMobileTestTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -309,6 +315,7 @@
 			children = (
 				47FB449922AD37660047C0AA /* ProviderType.swift */,
 				47FB449D22AD3B330047C0AA /* RequestProvider.swift */,
+				47FB44DA22ADF42E0047C0AA /* CheckInternet.swift */,
 			);
 			path = Provider;
 			sourceTree = "<group>";
@@ -404,6 +411,8 @@
 			isa = PBXGroup;
 			children = (
 				47FB44CB22ADD2A10047C0AA /* OAuthModel.swift */,
+				47FB44D622ADE80D0047C0AA /* TweetModel.swift */,
+				47FB44D822ADE88F0047C0AA /* TwitterUserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -666,6 +675,7 @@
 				47FB44A622AD54250047C0AA /* AppCoordinator.swift in Sources */,
 				47FB447822AC9F480047C0AA /* AppDelegate.swift in Sources */,
 				47FB448D22AD2B9A0047C0AA /* NSNumberExtension.swift in Sources */,
+				47FB44D922ADE88F0047C0AA /* TwitterUserModel.swift in Sources */,
 				47FB44C922ADD15B0047C0AA /* FindTwitterService.swift in Sources */,
 				47FB44D522ADD57B0047C0AA /* ViewConfiguration.swift in Sources */,
 				47FB44CC22ADD2A10047C0AA /* OAuthModel.swift in Sources */,
@@ -679,11 +689,13 @@
 				47FB448B22AD2B380047C0AA /* URLEncoding.swift in Sources */,
 				47FB449A22AD37660047C0AA /* ProviderType.swift in Sources */,
 				47FB44C722ADD12E0047C0AA /* TwitterTargetType.swift in Sources */,
+				47FB44DB22ADF42E0047C0AA /* CheckInternet.swift in Sources */,
 				47FB44D022ADD4F30047C0AA /* FindTwitterController.swift in Sources */,
 				47FB44B022ADC1070047C0AA /* UserDefaults+Extension.swift in Sources */,
 				47FB44D222ADD4FE0047C0AA /* FindTwitterViewModel.swift in Sources */,
 				47FB44BD22ADCF100047C0AA /* TwitterCoondinator.swift in Sources */,
 				47FB448422AD291C0047C0AA /* RequestProtocol.swift in Sources */,
+				47FB44D722ADE80D0047C0AA /* TweetModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

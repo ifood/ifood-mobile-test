@@ -39,4 +39,3 @@ extension KeychainSwift {
         self.set(object, forKey: key.name)
     }
 }
-

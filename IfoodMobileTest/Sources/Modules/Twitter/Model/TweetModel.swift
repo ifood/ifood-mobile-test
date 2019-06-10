@@ -7,3 +7,17 @@
 //
 
 import Foundation
+
+struct TweetModel: Codable {
+    var text: String?
+    var id: Int64?
+    var createdAt: String?
+    var user: TwitterUser?
+    
+    public enum CodingKeys: String, CodingKey {
+        case text
+        case id
+        case createdAt = "created_at"
+        case user
+    }
+}

@@ -11,6 +11,7 @@ import RxSwift
 
 protocol FindTwitterViewModelOutput {
     var isValidUser: BehaviorSubject<Bool> { get }
+    var tweets: BehaviorSubject<[TweetModel]> { get }
 }
 
 protocol FindTwitterViewModelInput {
@@ -22,6 +23,7 @@ final class FindTwitterViewModel: FindTwitterViewModelOutput, FindTwitterViewMod
     
     var isValidUser: BehaviorSubject<Bool>
     var userName: BehaviorSubject<String?>
+    var tweets: BehaviorSubject<[TweetModel]>
     
     private let bag = DisposeBag()
     private var service: FindTwitterService
@@ -30,6 +32,7 @@ final class FindTwitterViewModel: FindTwitterViewModelOutput, FindTwitterViewMod
         self.service = service
         userName = BehaviorSubject<String?>(value: nil)
         isValidUser = BehaviorSubject<Bool>(value: false)
+        tweets = BehaviorSubject<[TweetModel]>(value: [])
         validateUserName()
     }
     
@@ -46,6 +49,32 @@ final class FindTwitterViewModel: FindTwitterViewModelOutput, FindTwitterViewMod
     }
     
     func findTweets() {
+        guard let screenName = try? userName.value() else {
+            return
+        }
         
+        service
+            .getTweets(screenName: screenName).do(onError: {[weak self] error in
+                self?.handler(error: error)
+            })
+            .bind(to: tweets)
+            .disposed(by: bag)
+    }
+    
+    private func handler(error: Error) {
+        guard let dataError = error as? DataError else {
+            print("algo deu errado")
+            return
+        }
+        switch dataError {
+        case .statusCode(let code):
+            if code == 404 {
+                print("Usuario não encontrado")
+            } else {
+                print("algo deu errado")
+            }
+        default:
+            print("algo deu errado")
+        }
     }
 }
