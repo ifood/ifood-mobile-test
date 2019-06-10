@@ -11,10 +11,9 @@ import RxSwift
 
 protocol FindTwitterService {
     func getAccessToken() -> Observable<OAuthModel>
-    func getTweets(userName: String) -> Observable<Void>
 }
 
-final class FindTwitterServiceImpl: OAuthService {
+final class FindTwitterServiceImpl: FindTwitterService {
     typealias Target = TwitterTargetType
     private var provider: ProviderType<Target>
     

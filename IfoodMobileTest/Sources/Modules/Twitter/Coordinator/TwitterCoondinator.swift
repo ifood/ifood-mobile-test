@@ -17,6 +17,8 @@ final class TwitterCoordinator: BaseCoordinator<Void> {
     }
     
     override func start() -> Observable<Void> {
+        let controller = FindTwitterController(viewModel: FindTwitterViewModel())
+        navController.pushViewController(controller, animated: true)
         return Observable.never()
     }
 }
