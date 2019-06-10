@@ -50,6 +50,7 @@ final class FindTwitterController: UIViewController {
             .disposed(by: bag)
         
         findTwitterView.btnFind.rx.tap.subscribe(onNext: {[weak self] _ in
+            self?.findTwitterView.txtTwitter.resignFirstResponder()
             self?.viewModel.findTweets()
         }).disposed(by: bag)
         

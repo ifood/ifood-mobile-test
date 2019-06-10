@@ -86,9 +86,7 @@ extension FindTwitterView: ViewConfiguration {
         
         NSLayoutConstraint.activate([
             loader.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            loader.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            loader.widthAnchor.constraint(equalToConstant: 40),
-            loader.heightAnchor.constraint(equalToConstant: 40)
+            loader.topAnchor.constraint(equalTo: btnFind.bottomAnchor, constant: 10)
         ])
     }
 }
