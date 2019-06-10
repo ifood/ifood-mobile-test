@@ -43,6 +43,7 @@ final class TweetListController: UIViewController {
         let backButton = UIBarButtonItem(image: Asset.icBack.image, style: .plain, target: nil, action: nil)
         backButton.rx.tap.bind(to: onBack).disposed(by: bag)
         navigationItem.leftBarButtonItem = backButton
+        navigationItem.title = viewModel.title
     }
     
     private func bindTableView() {

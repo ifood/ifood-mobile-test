@@ -11,6 +11,7 @@ import RxSwift
 
 protocol TweetListViewModelOutput {
     var tweets: BehaviorSubject<[TweetModel]> { get }
+    var title: String { get }
 }
 
 protocol TweetListViewModelInput {}
@@ -18,6 +19,9 @@ protocol TweetListViewModelInput {}
 final class TweetListViewModel: TweetListViewModelOutput, TweetListViewModelInput {
     
     var tweets = BehaviorSubject<[TweetModel]>(value: [])
+    var title: String {
+        return "Tweets"
+    }
     
     init(tweets: [TweetModel]) {
         self.tweets.onNext(tweets)
