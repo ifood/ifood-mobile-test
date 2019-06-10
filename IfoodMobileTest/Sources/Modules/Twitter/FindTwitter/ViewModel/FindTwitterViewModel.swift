@@ -13,7 +13,7 @@ protocol FindTwitterViewModelOutput {
     var isValidUser: BehaviorSubject<Bool> { get }
     var tweets: BehaviorSubject<[TweetModel]> { get }
     var errorMessage: BehaviorSubject<String?> { get }
-    var showLoad: BehaviorSubject<Bool> { get }
+    var showLoader: BehaviorSubject<Bool> { get }
 }
 
 protocol FindTwitterViewModelInput {
@@ -27,7 +27,7 @@ final class FindTwitterViewModel: FindTwitterViewModelOutput, FindTwitterViewMod
     var userName: BehaviorSubject<String?>
     var tweets: BehaviorSubject<[TweetModel]>
     var errorMessage: BehaviorSubject<String?>
-    var showLoad: BehaviorSubject<Bool>
+    var showLoader: BehaviorSubject<Bool>
     
     private let bag = DisposeBag()
     private var service: FindTwitterService
@@ -38,7 +38,7 @@ final class FindTwitterViewModel: FindTwitterViewModelOutput, FindTwitterViewMod
         isValidUser = BehaviorSubject<Bool>(value: false)
         tweets = BehaviorSubject<[TweetModel]>(value: [])
         errorMessage = BehaviorSubject<String?>(value: nil)
-        showLoad = BehaviorSubject<Bool>(value: false)
+        showLoader = BehaviorSubject<Bool>(value: false)
         validateUserName()
     }
     
@@ -58,16 +58,16 @@ final class FindTwitterViewModel: FindTwitterViewModelOutput, FindTwitterViewMod
         guard let screenName = try? userName.value() else {
             return
         }
-        showLoad.onNext(true)
+        showLoader.onNext(true)
         service
             .getTweets(screenName: screenName)
             .subscribe(onNext: {[weak self] tweets  in
-                self?.tweets.onNext(tweets)
+                    self?.tweets.onNext(tweets)
+                    self?.showLoader.onNext(false)
                 }, onError: {[weak self] error  in
                     self?.handler(error: error)
-                }, onCompleted: {[weak self] in
-                    self?.showLoad.onNext(false)
-            }).disposed(by: bag)
+                    self?.showLoader.onNext(false)
+                }).disposed(by: bag)
     }
     
     private func handler(error: Error) {

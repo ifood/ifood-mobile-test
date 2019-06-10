@@ -13,6 +13,7 @@ protocol TweetAnalyzeViewModelOutput {
     var bgColor: BehaviorSubject<UIColor> { get }
     var emoji: BehaviorSubject<String> { get }
     var errorMessage: BehaviorSubject<String?> { get }
+    var showLoader: BehaviorSubject<Bool> { get }
 }
 
 protocol TweetAnalyzeViewModelInput {}
@@ -22,6 +23,7 @@ final class TweetAnalyzeViewModel: TweetAnalyzeViewModelOutput, TweetAnalyzeView
     var bgColor: BehaviorSubject<UIColor>
     var emoji: BehaviorSubject<String>
     var errorMessage: BehaviorSubject<String?>
+    var showLoader: BehaviorSubject<Bool>
     
     private var service: TweetAnalyzeService
     private var bag = DisposeBag()
@@ -31,14 +33,18 @@ final class TweetAnalyzeViewModel: TweetAnalyzeViewModelOutput, TweetAnalyzeView
         bgColor = BehaviorSubject<UIColor>(value: .white)
         emoji = BehaviorSubject<String>(value: "")
         errorMessage = BehaviorSubject<String?>(value: nil)
+        showLoader = BehaviorSubject<Bool>(value: false)
         fetchSentimentAnalyze(tweet: tweet)
     }
     
     private func fetchSentimentAnalyze(tweet: String) {
+        showLoader.onNext(true)
         service.getFeeling(tweet: tweet).subscribe(onNext: {[weak self] sentiment in
             self?.analyzeSentiment(score: sentiment.sentiment?.score)
-        }, onError: {[weak self] error in
+            self?.showLoader.onNext(false)
+        }, onError: {[weak self] _ in
             self?.errorMessage.onNext(L10n.DefaultText.genericError)
+            self?.showLoader.onNext(false)
         }).disposed(by: bag)
     }
     

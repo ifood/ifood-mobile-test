@@ -48,6 +48,7 @@ final class TweetAnalyzeController: UIViewController {
     private func bindProperties() {
         viewModel.bgColor.bind(to: tweetAnalyzeView.rx.backgroundColor).disposed(by: bag)
         viewModel.emoji.bind(to: tweetAnalyzeView.emoji.rx.text).disposed(by: bag)
+        viewModel.showLoader.bind(to: tweetAnalyzeView.loader.rx.isAnimating).disposed(by: bag)
     }
     
     private func bindError() {
