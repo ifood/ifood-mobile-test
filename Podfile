@@ -8,6 +8,7 @@ target 'IfoodMobileTest' do
   pod 'SwiftGen'
   pod 'SwiftLint'
   pod 'KeychainSwift'
+  pod 'Kingfisher'
 
   target 'IfoodMobileTestTests' do
     inherit! :search_paths

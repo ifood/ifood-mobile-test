@@ -1,5 +1,6 @@
 PODS:
   - KeychainSwift (16.0.1)
+  - Kingfisher (4.10.1)
   - Nimble (8.0.2)
   - Quick (2.1.0)
   - RxCocoa (5.0.0):
@@ -13,6 +14,7 @@ PODS:
 
 DEPENDENCIES:
   - KeychainSwift
+  - Kingfisher
   - Nimble
   - Quick
   - RxCocoa
@@ -23,6 +25,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - KeychainSwift
+    - Kingfisher
     - Nimble
     - Quick
     - RxCocoa
@@ -33,6 +36,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   KeychainSwift: 4209611373ca4a098e09b1e547eebd87c544dcc4
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   Nimble: 622629381bda1dd5678162f21f1368cec7cbba60
   Quick: 4be43f6634acfa727dd106bdf3929ce125ffa79d
   RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
@@ -41,6 +45,6 @@ SPEC CHECKSUMS:
   SwiftGen: f872ca75cbd17bf7103c17f13dcfa0d9a15667b0
   SwiftLint: fed9c66336e41fc74dc48a73678380718f0c8b0e
 
-PODFILE CHECKSUM: 93168288d1943013bfeaab108e670e2372864648
+PODFILE CHECKSUM: 8b29d4715c817d222bbc6037c3d1328550134453
 
 COCOAPODS: 1.7.1
