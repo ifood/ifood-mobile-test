@@ -1,0 +1,12 @@
+included:
+  - IfoodMobileTest/Sources
+excluded:
+  - Pods
+disabled_rules:
+ - trailing_whitespace
+identifier_name:
+  excluded:
+    - id
+line_length: 120
+number_separator:
+  minimum_length: 5
