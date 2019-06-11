@@ -34,7 +34,6 @@
 		47BE2E2122AF112300805177 /* TweetAnalyzeServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BE2E2022AF112300805177 /* TweetAnalyzeServiceSpec.swift */; };
 		47FB447322AC9F480047C0AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47FB446522AC9F480047C0AA /* Assets.xcassets */; };
 		47FB447422AC9F480047C0AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47FB446622AC9F480047C0AA /* LaunchScreen.storyboard */; };
-		47FB447622AC9F480047C0AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB446B22AC9F480047C0AA /* ViewController.swift */; };
 		47FB447822AC9F480047C0AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB446E22AC9F480047C0AA /* AppDelegate.swift */; };
 		47FB447B22ACA1DA0047C0AA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 47FB447A22ACA1DA0047C0AA /* Localizable.strings */; };
 		47FB447E22ACA55B0047C0AA /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB447D22ACA55B0047C0AA /* L10n.swift */; };
@@ -111,7 +110,6 @@
 		47FB446522AC9F480047C0AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47FB446722AC9F480047C0AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		47FB446922AC9F480047C0AA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		47FB446B22AC9F480047C0AA /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		47FB446E22AC9F480047C0AA /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47FB447A22ACA1DA0047C0AA /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		47FB447D22ACA55B0047C0AA /* L10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = L10n.swift; sourceTree = "<group>"; };
@@ -432,7 +430,6 @@
 		47FB446A22AC9F480047C0AA /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				47FB446B22AC9F480047C0AA /* ViewController.swift */,
 				47FB446C22AC9F480047C0AA /* App */,
 				47FB446F22AC9F480047C0AA /* Network */,
 				47FB447022AC9F480047C0AA /* Extensions */,
@@ -925,7 +922,6 @@
 				479C32AB22AEDDA000CE234F /* TweetAnalyzeService.swift in Sources */,
 				47FB44CC22ADD2A10047C0AA /* OAuthModel.swift in Sources */,
 				47FB449C22AD38380047C0AA /* ResponseData.swift in Sources */,
-				47FB447622AC9F480047C0AA /* ViewController.swift in Sources */,
 				4702D43B22AE82CD00DA88BE /* DateFormater+Extension.swift in Sources */,
 				47FB448122ACA62C0047C0AA /* Assets.swift in Sources */,
 				47FB447E22ACA55B0047C0AA /* L10n.swift in Sources */,
