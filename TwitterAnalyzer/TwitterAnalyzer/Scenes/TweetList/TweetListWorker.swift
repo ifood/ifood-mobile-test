@@ -8,11 +8,26 @@
 
 import UIKit
 
-class TweetListWorker {    
+protocol TweetListWorkerProtocol {
+    func requestUserProfileImage(from stringUrl: String,
+                                 success: @escaping ((Data?) -> Void),
+                                 failure: @escaping ((ApplicationError) -> Void))
+    func analyzeTweet(text: String,
+                      success: @escaping ((SentimentAnalysis) -> Void),
+                      failure: @escaping ((ApplicationError) -> Void))
+}
+
+class TweetListWorker: TweetListWorkerProtocol {
+    private let service: TwitterAnalyzerServiceProtocol
+    
+    init(service: TwitterAnalyzerServiceProtocol) {
+        self.service = service
+    }
+    
     func requestUserProfileImage(from stringUrl: String,
                                  success: @escaping ((Data?) -> Void),
                                  failure: @escaping ((ApplicationError) -> Void)) {
-        TwitterAnalyzerService().getUserProfileImage(from: stringUrl, success: success) { (networkError) in
+        service.getUserProfileImage(from: stringUrl, success: success) { (networkError) in
             failure(ApplicationError(.userInfoUnavailable))
         }
     }
@@ -20,7 +35,7 @@ class TweetListWorker {
     func analyzeTweet(text: String,
                       success: @escaping ((SentimentAnalysis) -> Void),
                       failure: @escaping ((ApplicationError) -> Void)) {
-        TwitterAnalyzerService().getTweetAnalysis(text: text, success: success) { (networkError) in
+        service.getTweetAnalysis(text: text, success: success) { (networkError) in
             failure(ApplicationError(.textAnalysisUnavailable))
         }
     }

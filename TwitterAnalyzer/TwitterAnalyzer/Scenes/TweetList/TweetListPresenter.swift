@@ -15,7 +15,11 @@ protocol TweetListPresentationLogic {
 }
 
 class TweetListPresenter: TweetListPresentationLogic {
-    weak var viewController: TweetListDisplayLogic?
+    private weak var viewController: TweetListDisplayLogic?
+    
+    init(viewController: TweetListDisplayLogic) {
+        self.viewController = viewController
+    }
     
     // MARK: Load Information
     

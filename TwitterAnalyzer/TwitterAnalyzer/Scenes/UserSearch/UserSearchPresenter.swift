@@ -15,7 +15,11 @@ protocol UserSearchPresentationLogic {
 }
 
 class UserSearchPresenter: UserSearchPresentationLogic {
-    weak var viewController: UserSearchDisplayLogic?
+    private weak var viewController: UserSearchDisplayLogic?
+    
+    init(viewController: UserSearchDisplayLogic) {
+        self.viewController = viewController
+    }
     
     // MARK: Authenticate Twitter
     

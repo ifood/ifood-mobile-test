@@ -38,13 +38,10 @@ class TweetSentimentViewController: UIViewController, TweetSentimentDisplayLogic
     
     private func setup() {
         let viewController = self
-        let interactor = TweetSentimentInteractor()
-        let presenter = TweetSentimentPresenter()
+        let interactor = TweetSentimentInteractor(presenter: TweetSentimentPresenter(viewController: self), worker: TweetSentimentWorker())
         let router = TweetSentimentRouter()
         viewController.interactor = interactor
         viewController.router = router
-        interactor.presenter = presenter
-        presenter.viewController = viewController
         router.viewController = viewController
         router.dataStore = interactor
     }

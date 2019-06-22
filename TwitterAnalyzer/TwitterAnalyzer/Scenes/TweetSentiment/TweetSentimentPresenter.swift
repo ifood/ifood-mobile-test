@@ -13,7 +13,11 @@ protocol TweetSentimentPresentationLogic {
 }
 
 class TweetSentimentPresenter: TweetSentimentPresentationLogic {
-    weak var viewController: TweetSentimentDisplayLogic?
+    private weak var viewController: TweetSentimentDisplayLogic?
+    
+    init(viewController: TweetSentimentDisplayLogic) {
+        self.viewController = viewController
+    }
     
     // MARK: Load Information
     

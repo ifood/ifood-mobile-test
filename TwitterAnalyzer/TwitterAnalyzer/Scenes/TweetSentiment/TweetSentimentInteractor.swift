@@ -17,10 +17,15 @@ protocol TweetSentimentDataStore {
 }
 
 class TweetSentimentInteractor: TweetSentimentBusinessLogic, TweetSentimentDataStore {
-    var presenter: TweetSentimentPresentationLogic?
-    var worker: TweetSentimentWorker?
+    private var presenter: TweetSentimentPresentationLogic?
+    private var worker: TweetSentimentWorker?
     var sentiment: SentimentAnalysis?
 
+    init(presenter: TweetSentimentPresentationLogic, worker: TweetSentimentWorker) {
+        self.presenter = presenter
+        self.worker = worker
+    }
+    
     // MARK: Load Information
     func loadInformation(request: TweetSentiment.LoadInformation.Request) {
         guard let sentimentScore = sentiment?.analysis?.score else {

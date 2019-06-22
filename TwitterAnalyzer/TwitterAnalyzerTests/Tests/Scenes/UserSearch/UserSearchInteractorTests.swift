@@ -14,8 +14,7 @@ class UserSearchInteractorTests: XCTestCase {
     func testAuthenticateTwitterCallsWorker() {
         // Given
         let userSearchWorkerSpy = UserSearchWorkerSpy(.success)
-        let sut = UserSearchInteractor()
-        sut.worker = userSearchWorkerSpy
+        let sut = UserSearchInteractor(presenter: UserSearchPresenterSpy(), worker: userSearchWorkerSpy)
         // When
         sut.authenticateTwitter(request: UserSearch.AuthenticateTwitter.Request())
         // Then
@@ -26,9 +25,7 @@ class UserSearchInteractorTests: XCTestCase {
         // Given
         let userSearchPresenterSpy = UserSearchPresenterSpy()
         let userSearchWorkerSpy = UserSearchWorkerSpy(.success)
-        let sut = UserSearchInteractor()
-        sut.presenter = userSearchPresenterSpy
-        sut.worker = userSearchWorkerSpy
+        let sut = UserSearchInteractor(presenter: userSearchPresenterSpy, worker: userSearchWorkerSpy)
         // When
         sut.authenticateTwitter(request: UserSearch.AuthenticateTwitter.Request())
         // Then
@@ -39,9 +36,7 @@ class UserSearchInteractorTests: XCTestCase {
         // Given
         let userSearchPresenterSpy = UserSearchPresenterSpy()
         let userSearchWorkerSpy = UserSearchWorkerSpy(.failure)
-        let sut = UserSearchInteractor()
-        sut.presenter = userSearchPresenterSpy
-        sut.worker = userSearchWorkerSpy
+        let sut = UserSearchInteractor(presenter: userSearchPresenterSpy, worker: userSearchWorkerSpy)
         // When
         sut.authenticateTwitter(request: UserSearch.AuthenticateTwitter.Request())
         // Then

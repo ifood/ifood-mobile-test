@@ -8,6 +8,10 @@
 
 import UIKit
 
-class TweetSentimentWorker {
+protocol TweetSentimentWorkerProtocol {
+    
+}
+
+class TweetSentimentWorker: TweetSentimentWorkerProtocol {
     
 }

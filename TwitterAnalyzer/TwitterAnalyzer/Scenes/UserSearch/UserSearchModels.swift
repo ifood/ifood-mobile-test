@@ -10,7 +10,7 @@ import UIKit
 
 enum UserSearch {
     // MARK: Use cases
-    enum AuthenticateTwitter{
+    enum AuthenticateTwitter {
         struct Request {}
         struct Response {}
         struct ViewModel {}

@@ -14,8 +14,7 @@ class UserSearchPresenterTests: XCTestCase {
     func testPresentAuthenticateUserCallsViewController() {
         // Given
         let userSearchViewControllerSpy = UserSearchViewControllerSpy()
-        let sut = UserSearchPresenter()
-        sut.viewController = userSearchViewControllerSpy
+        let sut = UserSearchPresenter(viewController: userSearchViewControllerSpy)
         // When
         sut.presentAuthenticateTwitter(response: UserSearch.AuthenticateTwitter.Response())
         // Then
@@ -25,8 +24,7 @@ class UserSearchPresenterTests: XCTestCase {
     func testPresentSearchUserCallsViewController() {
         // Given
         let userSearchViewControllerSpy = UserSearchViewControllerSpy()
-        let sut = UserSearchPresenter()
-        sut.viewController = userSearchViewControllerSpy
+        let sut = UserSearchPresenter(viewController: userSearchViewControllerSpy)
         // When
         sut.presentSearchUser(response: UserSearch.SearchUser.Response(user: User.mockedUser()))
         // Then
@@ -36,8 +34,7 @@ class UserSearchPresenterTests: XCTestCase {
     func testPresentErrorCallsViewController() {
         // Given
         let userSearchViewControllerSpy = UserSearchViewControllerSpy()
-        let sut = UserSearchPresenter()
-        sut.viewController = userSearchViewControllerSpy
+        let sut = UserSearchPresenter(viewController: userSearchViewControllerSpy)
         // When
         sut.presentError(response: UserSearch.Error.Response(error: ApplicationError(.userNotFound)))
         // Then

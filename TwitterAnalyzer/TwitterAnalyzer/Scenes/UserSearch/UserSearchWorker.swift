@@ -17,9 +17,15 @@ protocol UserSearchWorkerProtocol {
 }
 
 class UserSearchWorker: UserSearchWorkerProtocol {
+    private let service: TwitterAnalyzerServiceProtocol
+    
+    init(service: TwitterAnalyzerServiceProtocol) {
+        self.service = service
+    }
+    
     func authenticateTwitter(success: @escaping (() -> Void),
                              failure: @escaping ((ApplicationError) -> Void)) {
-        TwitterAnalyzerService().authenticateTwitter(success: success) { (networkError) in
+        service.authenticateTwitter(success: success) { (networkError) in
             failure(ApplicationError(.unknown))
         }
     }
@@ -34,7 +40,7 @@ class UserSearchWorker: UserSearchWorkerProtocol {
         
         let group = DispatchGroup()
         group.enter()
-        TwitterAnalyzerService().getTwitterAccountInformation(user: account, success: { (responseUser) in
+        service.getTwitterAccountInformation(user: account, success: { (responseUser) in
             user = responseUser
             group.leave()
         }) { (networkError) in
@@ -42,7 +48,7 @@ class UserSearchWorker: UserSearchWorkerProtocol {
             group.leave()
         }
         group.enter()
-        TwitterAnalyzerService().getTweetList(user: account, success: { (responseTweets) in
+        service.getTweetList(user: account, success: { (responseTweets) in
             tweets = responseTweets
             group.leave()
         }) { (networkError) in

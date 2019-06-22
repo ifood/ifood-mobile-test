@@ -19,8 +19,13 @@ protocol UserSearchDataStore {
 
 class UserSearchInteractor: UserSearchBusinessLogic, UserSearchDataStore {
     var presenter: UserSearchPresentationLogic?
-    var worker: UserSearchWorkerProtocol? = UserSearchWorker()
+    var worker: UserSearchWorkerProtocol?
     var user: User?
+    
+    init(presenter: UserSearchPresentationLogic, worker: UserSearchWorkerProtocol) {
+        self.presenter = presenter
+        self.worker = worker
+    }
     
     // MARK: Authenticate Twitter
     

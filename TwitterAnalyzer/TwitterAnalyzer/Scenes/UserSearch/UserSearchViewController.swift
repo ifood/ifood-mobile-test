@@ -40,13 +40,10 @@ class UserSearchViewController: UIViewController, UserSearchDisplayLogic {
     
     private func setup() {
         let viewController = self
-        let interactor = UserSearchInteractor()
-        let presenter = UserSearchPresenter()
+        let interactor = UserSearchInteractor(presenter: UserSearchPresenter(viewController: self), worker: UserSearchWorker(service: TwitterAnalyzerService()))
         let router = UserSearchRouter()
         viewController.interactor = interactor
         viewController.router = router
-        interactor.presenter = presenter
-        presenter.viewController = viewController
         router.viewController = viewController
         router.dataStore = interactor
     }

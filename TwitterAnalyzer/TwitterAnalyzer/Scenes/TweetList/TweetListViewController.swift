@@ -41,13 +41,10 @@ class TweetListViewController: UIViewController, TweetListDisplayLogic {
     
     private func setup() {
         let viewController = self
-        let interactor = TweetListInteractor()
-        let presenter = TweetListPresenter()
+        let interactor = TweetListInteractor(presenter: TweetListPresenter(viewController: self), worker: TweetListWorker(service: TwitterAnalyzerService()))
         let router = TweetListRouter()
         viewController.interactor = interactor
         viewController.router = router
-        interactor.presenter = presenter
-        presenter.viewController = viewController
         router.viewController = viewController
         router.dataStore = interactor
     }
