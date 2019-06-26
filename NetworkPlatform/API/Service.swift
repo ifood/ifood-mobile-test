@@ -48,9 +48,9 @@ extension Response {
     }
 }
 
-extension PrimitiveSequence where TraitType == SingleTrait, ElementType == Response {
-    func handleRequest(with service: Service) -> Single<ElementType> {
-        return flatMap { response -> Single<ElementType> in
+extension PrimitiveSequence where Trait == SingleTrait, Element == Response {
+    func handleRequest(with service: Service) -> Single<Element> {
+        return flatMap { response -> Single<Element> in
             return .just(try response.handleStatusCode(with: service))
         }
     }

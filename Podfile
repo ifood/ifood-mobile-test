@@ -1,13 +1,13 @@
-platform :ios, '10.0'
+platform :ios, '11.0'
 use_frameworks!
 
 def rxLibs
-  pod 'Moya/RxSwift'
-    pod 'RxSwift'
-    pod 'RxCocoa'
-    pod 'RxDataSources'
-    pod 'NSObject+Rx'
-    pod 'RxKeyboard'
+  pod 'RxSwift', '~> 5'
+  pod 'RxCocoa', '~> 5'
+  pod 'Moya/RxSwift', '~> 14.0.0-alpha.1'
+  pod 'RxDataSources'
+  pod 'NSObject+Rx'
+  pod 'RxKeyboard'
 end
 
 def lint_code_generation
@@ -30,7 +30,7 @@ end
 
 def lib_tests
   pod 'RxBlocking'
-  pod 'RxTest', "~> 4.4.0"
+  pod 'RxTest'
 end
 
 target 'TwitterSentiment' do

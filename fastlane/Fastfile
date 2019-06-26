@@ -1,0 +1,11 @@
+desc "Run unit tests"
+lane :test do |options|
+  clear_derived_data
+  scan(scheme: "TwitterSentiment", devices: ["iPhone 8"])
+  coverage
+end
+
+desc "Gathered code coverage using slather"
+lane :coverage do
+  # bundle exec slather
+end

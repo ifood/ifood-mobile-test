@@ -1,38 +1,9 @@
 os: osx
-osx_image: xcode10.1
-branches:
-  only:
-    - master
-cache:
-  - bundler
-  - cocoapods
-podfile: ifood-mobile-test/Podfile
+osx_image: xcode10.2
 before_install:
-  - gem install cocoapods --pre
-  - pod install --repo-update
-env:
-  global:
-  - LC_CTYPE=en_US.UTF-8
-  - LANG=en_US.UTF-8
-  - WORKSPACE=TwitterSentiment.xcworkspace
-  - SCHEME_NAME="TwitterSentiment"
-  matrix:
-    - DESTINATION="OS=12.1,name=iPhone XS"       SCHEME="$SCHEME_NAME" RUN_TESTS="YES" BUILD="YES" CODE_SIGN="NO"
-    - DESTINATION="OS=11.4,name=iPhone X"        SCHEME="$SCHEME_NAME" RUN_TESTS="YES" BUILD="YES"
-    - DESTINATION="OS=10.3.1,name=iPhone 7 Plus" SCHEME="$SCHEME_NAME" RUN_TESTS="YES" BUILD="YES"
+- gem install bundler:2.0.1
+install:
+- bundle install
+- bundle exec pod install --repo-update
 script:
-  - set -o pipefail
-  - xcodebuild -version
-  - xcodebuild -showsdks
-
-  # Build Framework in Release and Run Tests if specified
-  - if [ $RUN_TESTS == "YES" ]; then
-      xcodebuild -workspace "$WORKSPACE" -scheme "$SCHEME" -destination "$DESTINATION" CODE_SIGNING_REQUIRED="$CODE_SIGN" -UseModernBuildSystem=NO -configuration Release ONLY_ACTIVE_ARCH=NO ENABLE_TESTABILITY=YES test | xcpretty;
-    else
-      xcodebuild -workspace "$WORKSPACE" -scheme "$SCHEME" -destination "$DESTINATION" CODE_SIGNING_REQUIRED="$CODE_SIGN" -UseModernBuildSystem=NO -configuration Release ONLY_ACTIVE_ARCH=NO build | xcpretty;
-    fi
-
-  # Build Example in Debug if specified
-  - if [ $BUILD == "YES" ]; then
-      xcodebuild -workspace "$WORKSPACE" -scheme "$SCHEME" -destination "$DESTINATION" CODE_SIGNING_REQUIRED="$CODE_SIGN" -configuration Debug ONLY_ACTIVE_ARCH=NO build | xcpretty;
-    fi
+- bundle exec fastlane test

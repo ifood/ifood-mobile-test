@@ -9,24 +9,24 @@
 import RxSwift
 import RxCocoa
 
-extension SharedSequenceConvertibleType {
-    public func mapToVoid() -> SharedSequence<SharingStrategy, Void> {
+public extension SharedSequenceConvertibleType {
+    func mapToVoid() -> SharedSequence<SharingStrategy, Void> {
         return map { _ in }
     }
 }
 
-extension ObservableType {
-    public func catchErrorJustComplete() -> Observable<E> {
+public extension ObservableType {
+    func catchErrorJustComplete() -> Observable<Element> {
         return catchError { _ in
             return .empty()
         }
     }
-    public func asDriverOnErrorJustComplete() -> Driver<E> {
+    func asDriverOnErrorJustComplete() -> Driver<Element> {
         return asDriver { _ in
             return .empty()
         }
     }
-    public func mapToVoid() -> Observable<Void> {
+    func mapToVoid() -> Observable<Void> {
         return map { _ in }
     }
 }

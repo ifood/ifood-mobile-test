@@ -15,7 +15,7 @@ public protocol MockFile {
 }
 
 public extension RawRepresentable where RawValue == String, Self: MockFile {
-    public var name: String {
+    var name: String {
         return self.rawValue
     }
 }
