@@ -10,12 +10,15 @@
 		0FD046E8DB6F4FDD982C50F0 /* Pods_TwitterSentimentUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16FDCB5198CDA9795635297C /* Pods_TwitterSentimentUITests.framework */; };
 		24C37948AAF5AB468FBA5DC0 /* Pods_Resources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C8852E7192F09B223BE4C62 /* Pods_Resources.framework */; };
 		29DE3D0992EF7AC3C10E840A /* Pods_UtilityTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF42F21665B8604EEF076841 /* Pods_UtilityTests.framework */; };
+		3800A9DF22C3DD8C00C3198F /* TestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3800A9DE22C3DD8C00C3198F /* TestCase.swift */; };
+		3800A9E122C3DD9700C3198F /* TestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3800A9E022C3DD9700C3198F /* TestCase.swift */; };
+		3800A9E322C3DDA500C3198F /* TestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3800A9E222C3DDA500C3198F /* TestCase.swift */; };
+		3800A9E522C3DDB000C3198F /* TestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3800A9E422C3DDB000C3198F /* TestCase.swift */; };
 		38D1CA2122BDD6B900F42217 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 38D1CA2322BDD6B900F42217 /* Localizable.strings */; };
 		391D63C821D5A5BD009004E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391D63C721D5A5BD009004E9 /* AppDelegate.swift */; };
 		391D63CF21D5A5BE009004E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 391D63CE21D5A5BE009004E9 /* Assets.xcassets */; };
 		391D63E821D5A5D6009004E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 391D63E721D5A5D6009004E9 /* LaunchScreen.storyboard */; };
 		391D640D21D5A672009004E9 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 391D640421D5A672009004E9 /* Domain.framework */; };
-		391D641421D5A672009004E9 /* DomainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391D641321D5A672009004E9 /* DomainTests.swift */; };
 		391D641621D5A672009004E9 /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = 391D640621D5A672009004E9 /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		391D645121D5A682009004E9 /* Utility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 391D644821D5A682009004E9 /* Utility.framework */; };
 		391D645A21D5A682009004E9 /* Utility.h in Headers */ = {isa = PBXBuildFile; fileRef = 391D644A21D5A682009004E9 /* Utility.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -268,6 +271,10 @@
 		2299E44A062C2DAA130DC48A /* Pods-TwitterSentiment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterSentiment.release.xcconfig"; path = "Target Support Files/Pods-TwitterSentiment/Pods-TwitterSentiment.release.xcconfig"; sourceTree = "<group>"; };
 		2793A3DEBB36CA8BF7246112 /* Pods-DomainTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DomainTests.debug.xcconfig"; path = "Target Support Files/Pods-DomainTests/Pods-DomainTests.debug.xcconfig"; sourceTree = "<group>"; };
 		28971C68E240DA0C328488FD /* Pods-Domain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.release.xcconfig"; path = "Target Support Files/Pods-Domain/Pods-Domain.release.xcconfig"; sourceTree = "<group>"; };
+		3800A9DE22C3DD8C00C3198F /* TestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCase.swift; sourceTree = "<group>"; };
+		3800A9E022C3DD9700C3198F /* TestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCase.swift; sourceTree = "<group>"; };
+		3800A9E222C3DDA500C3198F /* TestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCase.swift; sourceTree = "<group>"; };
+		3800A9E422C3DDB000C3198F /* TestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCase.swift; sourceTree = "<group>"; };
 		38D1CA2222BDD6B900F42217 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		38D1CA2422BDD6F700F42217 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		391D63C421D5A5BD009004E9 /* TwitterSentiment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterSentiment.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -281,7 +288,6 @@
 		391D640621D5A672009004E9 /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
 		391D640721D5A672009004E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		391D640C21D5A672009004E9 /* DomainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DomainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		391D641321D5A672009004E9 /* DomainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainTests.swift; sourceTree = "<group>"; };
 		391D641521D5A672009004E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		391D644821D5A682009004E9 /* Utility.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Utility.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		391D644A21D5A682009004E9 /* Utility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
@@ -652,8 +658,8 @@
 		391D641221D5A672009004E9 /* DomainTests */ = {
 			isa = PBXGroup;
 			children = (
-				391D641321D5A672009004E9 /* DomainTests.swift */,
 				391D641521D5A672009004E9 /* Info.plist */,
+				3800A9DE22C3DD8C00C3198F /* TestCase.swift */,
 			);
 			path = DomainTests;
 			sourceTree = "<group>";
@@ -678,6 +684,7 @@
 			isa = PBXGroup;
 			children = (
 				391D645921D5A682009004E9 /* Info.plist */,
+				3800A9E222C3DDA500C3198F /* TestCase.swift */,
 			);
 			path = UtilityTests;
 			sourceTree = "<group>";
@@ -698,6 +705,7 @@
 			isa = PBXGroup;
 			children = (
 				391D647B21D5A68C009004E9 /* Info.plist */,
+				3800A9E422C3DDB000C3198F /* TestCase.swift */,
 			);
 			path = ResourcesTests;
 			sourceTree = "<group>";
@@ -1008,6 +1016,7 @@
 			isa = PBXGroup;
 			children = (
 				39D1331721D644D800A8A62D /* Info.plist */,
+				3800A9E022C3DD9700C3198F /* TestCase.swift */,
 			);
 			path = NetworkPlatformTests;
 			sourceTree = "<group>";
@@ -1529,6 +1538,7 @@
 					};
 					391D640B21D5A672009004E9 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 391D63C321D5A5BD009004E9;
 					};
 					391D644721D5A682009004E9 = {
@@ -1536,6 +1546,7 @@
 					};
 					391D644F21D5A682009004E9 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 391D63C321D5A5BD009004E9;
 					};
 					391D646921D5A68C009004E9 = {
@@ -1544,6 +1555,7 @@
 					};
 					391D647121D5A68C009004E9 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 391D63C321D5A5BD009004E9;
 					};
 					391D656B21D5AE1D009004E9 = {
@@ -1556,6 +1568,7 @@
 					};
 					39D1330D21D644D800A8A62D = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 391D63C321D5A5BD009004E9;
 					};
 				};
@@ -2135,7 +2148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				391D641421D5A672009004E9 /* DomainTests.swift in Sources */,
+				3800A9DF22C3DD8C00C3198F /* TestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2191,6 +2204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3800A9E322C3DDA500C3198F /* TestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2207,6 +2221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3800A9E522C3DDB000C3198F /* TestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2245,6 +2260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3800A9E122C3DD9700C3198F /* TestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2623,6 +2639,7 @@
 			baseConfigurationReference = 2793A3DEBB36CA8BF7246112 /* Pods-DomainTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
@@ -2635,6 +2652,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.jean.vinge.DomainTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TwitterSentiment.app/TwitterSentiment";
@@ -2646,6 +2664,7 @@
 			baseConfigurationReference = 528112FCF129C32B7BD77E27 /* Pods-DomainTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
@@ -2735,6 +2754,7 @@
 			baseConfigurationReference = D48A463FACE90E8E82C77E48 /* Pods-UtilityTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
@@ -2747,6 +2767,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.jean.vinge.UtilityTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TwitterSentiment.app/TwitterSentiment";
@@ -2758,6 +2779,7 @@
 			baseConfigurationReference = A3CA3610DFBAB6F9194BE599 /* Pods-UtilityTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
@@ -2848,6 +2870,7 @@
 			baseConfigurationReference = DDB045C1D652AF078B7F6FAC /* Pods-ResourcesTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
@@ -2860,6 +2883,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.jean.vinge.ResourcesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TwitterSentiment.app/TwitterSentiment";
@@ -2871,6 +2895,7 @@
 			baseConfigurationReference = C2FD7A8BCFD56CD737BB19BC /* Pods-ResourcesTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
@@ -3011,6 +3036,7 @@
 			baseConfigurationReference = 81D62F5C4B729A222881C045 /* Pods-NetworkPlatformTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
@@ -3024,6 +3050,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.jean.vinge.NetworkPlatformTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TwitterSentiment.app/TwitterSentiment";
@@ -3035,6 +3062,7 @@
 			baseConfigurationReference = ABA4BF05943E35BC6870A66E /* Pods-NetworkPlatformTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";

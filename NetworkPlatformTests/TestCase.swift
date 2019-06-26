@@ -1,15 +1,14 @@
 //
-//  DomainTests.swift
-//  DomainTests
+//  TestCase.swift
+//  NetworkPlatformTests
 //
-//  Created by Jean Vinge on 27/12/18.
-//  Copyright © 2018 Jean Vinge. All rights reserved.
+//  Created by jean.vinge on 26/06/19.
+//  Copyright © 2019 Jean Vinge. All rights reserved.
 //
 
 import XCTest
-@testable import Domain
 
-class DomainTests: XCTestCase {
+class TestCase: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
