@@ -1,0 +1,19 @@
+{
+  "documentSentiment": {
+    "magnitude": 0.6,
+    "score": 0.6
+  },
+  "language": "pt-PT",
+  "sentences": [
+    {
+      "text": {
+        "content": "1 MILHÃO de views 🔥🔥🔥 @Ozuna_Pr\nMUITO CALOR 👉 https://t.co/8Q5u7scTeO https://t.co/k5kO0mf1wV",
+        "beginOffset": 0
+      },
+      "sentiment": {
+        "magnitude": 0.6,
+        "score": 0.6
+      }
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>apiVariablesTwitter</key>
+	<dict>
+		<key>domain</key>
+		<string>https://api.twitter.com</string>
+		<key>apiVersion</key>
+		<string>1.1</string>
+		<key>apiKey</key>
+		<string></string>
+	</dict>
+	<key>apiVariablesGoogle</key>
+	<dict>
+		<key>domain</key>
+		<string>https://language.googleapis.com</string>
+		<key>apiKey</key>
+		<string></string>
+		<key>apiVersion</key>
+		<string>v1</string>
+	</dict>
+</dict>
+</plist>
