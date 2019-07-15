@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="TwitterSentiments" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <viewController id="qiy-Pv-3KK" customClass="HomeViewController" customModule="TwitterSentiments" customModuleProvider="target">
+            <view key="view" contentMode="scaleToFill" id="bvS-vK-bGd">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type a username to show tweets" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r3U-lV-XaB">
+                        <rect key="frame" x="51.5" y="423" width="311.5" height="60"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="GBP-V9-GAI"/>
+                        </constraints>
+                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Twitter Sentiments" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cb2-Gx-VRE">
+                        <rect key="frame" x="51.5" y="357" width="323" height="46"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="38"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="7bu-Ar-VOc">
+                        <rect key="frame" x="197" y="540.5" width="20" height="20"/>
+                    </activityIndicatorView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NVa-9K-nbA">
+                        <rect key="frame" x="51.5" y="500" width="311.5" height="30"/>
+                        <color key="backgroundColor" red="0.51556873319999996" green="0.76967275140000002" blue="0.92551654579999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <state key="normal" title="  Show me how they feel!  ">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="r3U-lV-XaB" firstAttribute="trailing" secondItem="Cb2-Gx-VRE" secondAttribute="trailing" constant="-11.5" id="Ch0-Gs-1S7"/>
+                    <constraint firstItem="r3U-lV-XaB" firstAttribute="centerY" secondItem="iVP-DT-0um" secondAttribute="centerY" id="M9G-be-xUd"/>
+                    <constraint firstItem="7bu-Ar-VOc" firstAttribute="firstBaseline" secondItem="NVa-9K-nbA" secondAttribute="baseline" constant="20" id="NxO-Mp-W83"/>
+                    <constraint firstItem="NVa-9K-nbA" firstAttribute="trailing" secondItem="r3U-lV-XaB" secondAttribute="trailing" id="SWz-DZ-qRX"/>
+                    <constraint firstItem="NVa-9K-nbA" firstAttribute="top" secondItem="r3U-lV-XaB" secondAttribute="bottom" constant="17" id="iAr-Iq-0TD"/>
+                    <constraint firstItem="r3U-lV-XaB" firstAttribute="leading" secondItem="Cb2-Gx-VRE" secondAttribute="leading" id="iqr-7B-dYr"/>
+                    <constraint firstItem="r3U-lV-XaB" firstAttribute="top" secondItem="Cb2-Gx-VRE" secondAttribute="bottom" constant="20" id="keT-Pa-iAZ"/>
+                    <constraint firstItem="NVa-9K-nbA" firstAttribute="leading" secondItem="r3U-lV-XaB" secondAttribute="leading" id="o3D-qV-PYJ"/>
+                    <constraint firstItem="7bu-Ar-VOc" firstAttribute="centerX" secondItem="iVP-DT-0um" secondAttribute="centerX" id="qnP-2U-Juz"/>
+                    <constraint firstItem="r3U-lV-XaB" firstAttribute="centerX" secondItem="iVP-DT-0um" secondAttribute="centerX" id="xku-G0-FAT"/>
+                </constraints>
+                <viewLayoutGuide key="safeArea" id="iVP-DT-0um"/>
+            </view>
+            <connections>
+                <outlet property="activityIndicator" destination="7bu-Ar-VOc" id="wog-oA-I8A"/>
+                <outlet property="listTweetsButton" destination="NVa-9K-nbA" id="8oE-Zg-X8x"/>
+                <outlet property="usernameTextField" destination="r3U-lV-XaB" id="xBh-rN-MVQ"/>
+            </connections>
+            <point key="canvasLocation" x="93" y="-70"/>
+        </viewController>
+    </objects>
+</document>

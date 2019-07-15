@@ -1,0 +1,29 @@
+/* 
+  Localized-EN_US.strings
+  TwitterSentiments
+
+  Created by Marina Azevedo on 14/07/19.
+  Copyright © 2019 Marina Azevedo. All rights reserved.
+*/
+
+
+"Welcome" = "Welcome";
+
+/*
+ 
+ "home.could_not_load_user_alert.title" = "Invalid User";
+ "home.could_not_load_user_alert.message" = "Could not load user. Try another username!";
+ "home.could_not_load_user_alert.OK" = "OK";
+ 
+ "tweets.tweets_not_found" = "Tweets not found!";
+ "tweets.tweets_section_message" = "Select one tweet to analyse its sentiment.";
+ "tweets.user_has_not_tweeted_yet" = "@%@ has not tweeted yet.";
+ "tweets.user_has_not_tweeted_yet_default" = "User has not tweeted yet.";
+ 
+ "tweet_sentiment.error_message" = "Couldn't load tweet sentiment. Try again later!";
+ 
+ "tweet_sentiment.happy_message" = "This is a happy tweet!";
+ "tweet_sentiment.neutral_message" = "This is a normal tweet!";
+ "tweet_sentiment.sad_message" = "This is a sad tweet!";
+ 
+ */

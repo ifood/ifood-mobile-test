@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aT5-eg-Qjy">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Pkh-Pd-0Qm">
+            <objects>
+                <viewController id="aT5-eg-Qjy" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8OJ-GR-nWr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type a username to show tweets" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Eqb-MB-W98">
+                                <rect key="frame" x="15" y="423" width="372.5" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="4ay-Wu-4fS"/>
+                                </constraints>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Twitter Sentiments" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Bl-h8-mjm">
+                                <rect key="frame" x="15" y="357" width="384" height="46"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="38"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="hbn-Lx-HYQ">
+                                <rect key="frame" x="197" y="540.5" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ag-tC-VOA">
+                                <rect key="frame" x="15" y="500" width="372.5" height="30"/>
+                                <color key="backgroundColor" red="0.51556873319999996" green="0.76967275140000002" blue="0.92551654579999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="  Show me how they feel!  ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Eqb-MB-W98" firstAttribute="centerY" secondItem="HSR-aK-ZQy" secondAttribute="centerY" id="4Tm-7G-H4N"/>
+                            <constraint firstItem="hbn-Lx-HYQ" firstAttribute="firstBaseline" secondItem="9Ag-tC-VOA" secondAttribute="baseline" constant="20" id="5hP-z3-kWH"/>
+                            <constraint firstItem="HSR-aK-ZQy" firstAttribute="trailing" secondItem="1Bl-h8-mjm" secondAttribute="trailing" constant="15" id="A5L-Un-YQR"/>
+                            <constraint firstItem="9Ag-tC-VOA" firstAttribute="leading" secondItem="Eqb-MB-W98" secondAttribute="leading" id="Ca9-XB-cBh"/>
+                            <constraint firstItem="Eqb-MB-W98" firstAttribute="leading" secondItem="1Bl-h8-mjm" secondAttribute="leading" id="F2O-7l-PdU"/>
+                            <constraint firstItem="Eqb-MB-W98" firstAttribute="trailing" secondItem="1Bl-h8-mjm" secondAttribute="trailing" constant="-11.5" id="LP7-z4-afo"/>
+                            <constraint firstItem="9Ag-tC-VOA" firstAttribute="top" secondItem="Eqb-MB-W98" secondAttribute="bottom" constant="17" id="YKK-ZZ-Rdu"/>
+                            <constraint firstItem="Eqb-MB-W98" firstAttribute="top" secondItem="1Bl-h8-mjm" secondAttribute="bottom" constant="20" id="e7D-dl-uws"/>
+                            <constraint firstItem="1Bl-h8-mjm" firstAttribute="leading" secondItem="HSR-aK-ZQy" secondAttribute="leading" constant="15" id="mim-lh-PVf"/>
+                            <constraint firstItem="hbn-Lx-HYQ" firstAttribute="centerX" secondItem="HSR-aK-ZQy" secondAttribute="centerX" id="oj8-sa-FTd"/>
+                            <constraint firstItem="9Ag-tC-VOA" firstAttribute="trailing" secondItem="Eqb-MB-W98" secondAttribute="trailing" id="r7L-c4-Yby"/>
+                            <constraint firstItem="1Bl-h8-mjm" firstAttribute="centerX" secondItem="HSR-aK-ZQy" secondAttribute="centerX" id="slV-92-c1i"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HSR-aK-ZQy"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="hbn-Lx-HYQ" id="WTz-Hc-IaC"/>
+                        <outlet property="listTweetsButton" destination="9Ag-tC-VOA" id="tc6-zx-eIt"/>
+                        <outlet property="usernameTextField" destination="Eqb-MB-W98" id="D5B-Ko-Ian"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DC4-e5-gPg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="150.72463768115944" y="33.482142857142854"/>
+        </scene>
+    </scenes>
+</document>
