@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct Tweets: THCodable {
+struct Tweet: THCodable {
 
     var text: String
 

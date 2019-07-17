@@ -8,6 +8,23 @@
 
 import UIKit
 
-class DetailCoordinator: NSObject {
+class DetailCoordinator {
 
+    // MARK: - Properties
+    var view: DetailVC?
+    var navigation: UINavigationController?
+
+    var tweet: Tweet
+
+    // MARK: - Initializers
+    init(tweet: Tweet) {
+        self.tweet = tweet
+    }
+
+    func start() -> DetailVC {
+        let viewModel = DetailVM(tweet: self.tweet)
+        let viewController = DetailVC(viewModel: viewModel)
+        self.view = viewController
+        return viewController
+    }
 }

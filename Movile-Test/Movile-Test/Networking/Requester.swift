@@ -52,7 +52,7 @@ class Requester: NSObject {
         case .Twitter:
             self.env = API.Environment.twitter.getValue()
         case .Google:
-            break
+            self.env = API.Environment.google.getValue()
         }
 
         let url = (url: URL(string: "\(env)\(endpoint.uri)"), method: endpoint.method)
@@ -60,6 +60,14 @@ class Requester: NSObject {
     }
 
     func urlComposer(using endpoint: Endpoint.EndpointType, complement: String) -> (url: URL?, method: String) {
+
+        switch endpoint.domain {
+        case .Twitter:
+            self.env = API.Environment.twitter.getValue()
+        case .Google:
+            self.env = API.Environment.google.getValue()
+        }
+        
         let url = (url: URL(string: "\(env)\(endpoint.uri)\(complement)"), method: endpoint.method)
         return url
     }

@@ -39,11 +39,11 @@ class HomeAPI: Requester {
 
     func list(token: String,
               nickname: String,
-              success: @escaping CompletionWithSuccess<[Tweets]>,
+              success: @escaping CompletionWithSuccess<[Tweet]>,
               failure: @escaping CompletionWithFailure) {
 
         let header = HeaderHandler().generate(header: .twitter(token: token))
-        let url = urlComposer(using: Endpoint.Twitter.List)
+        let url = urlComposer(using: Endpoint.Twitter.List, complement: "\(nickname)&tweet_mode=extended")
         let requester = requestComposer(using: url as! (url: URL, method: String), headers: header)
 
         dataTask(using: requester) { data, error in
@@ -53,7 +53,7 @@ class HomeAPI: Requester {
             
             if error == nil, let data = data {
 
-                let model = self.JSONDecode(to: [Tweets].self, from: data)
+                let model = self.JSONDecode(to: [Tweet].self, from: data)
                 guard let resultModel = model else {
                     failure(self.getParseError(data: data))
                     return

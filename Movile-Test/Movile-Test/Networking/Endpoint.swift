@@ -17,6 +17,8 @@ public class Endpoint {
     /// A tuple that recieves an URI and the http request method
     typealias EndpointType = (domain: Domain, uri: String, method: String)
 
+    let googleKey = "AIzaSyARJwyVxOBcFTysVdy-4yV6oj6FKno7jik"
+
     /// Contains the http method String simplified for
     struct HTTPMethod {
         static let get = "GET"
@@ -29,6 +31,10 @@ public class Endpoint {
     // Endpoints list
     struct Twitter {
         static let Authentication: EndpointType = (domain: .Twitter, uri: "oauth2/token?grant_type=client_credentials", method: HTTPMethod.post)
-        static let List: EndpointType = (domain: .Twitter, uri: "1.1/statuses/user_timeline.json?screen_name=realDonaldTrump&tweet_mode=extended", method: HTTPMethod.get)
+        static let List: EndpointType = (domain: .Twitter, uri: "1.1/statuses/user_timeline.json?screen_name=", method: HTTPMethod.get)
+    }
+
+    struct Google {
+        static let Analyze: EndpointType = (domain: .Google, uri: "documents:analyzeSentiment?key=AIzaSyARJwyVxOBcFTysVdy-4yV6oj6FKno7jik", method: HTTPMethod.post)
     }
 }

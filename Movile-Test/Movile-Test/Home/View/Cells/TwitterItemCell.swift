@@ -12,7 +12,7 @@ class TwitterItemCell: UITableViewCell {
 
     @IBOutlet weak var lblText: UILabel!
 
-    func setup(tweet: Tweets) {
+    func setup(tweet: Tweet) {
         lblText.text = tweet.text
     }
     

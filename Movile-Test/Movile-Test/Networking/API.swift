@@ -12,7 +12,7 @@ class API {
     enum Environment: String {
 
         case twitter = "https://api.twitter.com/"
-        case google = "https://language.googleapis.com/v1"
+        case google = "https://language.googleapis.com/v1/"
 
         //Just to be more readable
         func getValue() -> String {

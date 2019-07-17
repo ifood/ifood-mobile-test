@@ -34,8 +34,10 @@
 		2A350F2922DBC6DA00FB6786 /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A350F2722DBC6DA00FB6786 /* HomeVC.xib */; };
 		2A350F2C22DBC70A00FB6786 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A350F2B22DBC70A00FB6786 /* HomeVM.swift */; };
 		2A350F2F22DBC79B00FB6786 /* HomeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A350F2E22DBC79B00FB6786 /* HomeAPI.swift */; };
-		2A350F3222DBC7F200FB6786 /* Tweets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A350F3122DBC7F200FB6786 /* Tweets.swift */; };
+		2A350F3222DBC7F200FB6786 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A350F3122DBC7F200FB6786 /* Tweet.swift */; };
 		2A350F3522DBCCE500FB6786 /* UIColor+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A350F3422DBCCE500FB6786 /* UIColor+Utils.swift */; };
+		D1B78AD422DF46CB00C610DE /* DetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B78AD322DF46CB00C610DE /* DetailVM.swift */; };
+		D1B78AD722DF4BFE00C610DE /* Sentiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B78AD622DF4BFE00C610DE /* Sentiment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,8 +91,10 @@
 		2A350F2722DBC6DA00FB6786 /* HomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
 		2A350F2B22DBC70A00FB6786 /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
 		2A350F2E22DBC79B00FB6786 /* HomeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAPI.swift; sourceTree = "<group>"; };
-		2A350F3122DBC7F200FB6786 /* Tweets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweets.swift; sourceTree = "<group>"; };
+		2A350F3122DBC7F200FB6786 /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 		2A350F3422DBCCE500FB6786 /* UIColor+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Utils.swift"; sourceTree = "<group>"; };
+		D1B78AD322DF46CB00C610DE /* DetailVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVM.swift; sourceTree = "<group>"; };
+		D1B78AD622DF4BFE00C610DE /* Sentiment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sentiment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +134,8 @@
 		2A2793A122DED2320040A5EA /* Sentiment */ = {
 			isa = PBXGroup;
 			children = (
+				D1B78AD522DF4BEE00C610DE /* Model */,
+				D1B78AD222DF46B500C610DE /* ViewModel */,
 				2A2793AA22DED2A10040A5EA /* Coordinator */,
 				2A2793A522DED2770040A5EA /* View */,
 				2A2793A222DED2420040A5EA /* Networking */,
@@ -305,8 +311,24 @@
 		2A350F3022DBC7E700FB6786 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2A350F3122DBC7F200FB6786 /* Tweets.swift */,
+				2A350F3122DBC7F200FB6786 /* Tweet.swift */,
 				2A27939822DEC1740040A5EA /* TwitterToken.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D1B78AD222DF46B500C610DE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D1B78AD322DF46CB00C610DE /* DetailVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D1B78AD522DF4BEE00C610DE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D1B78AD622DF4BFE00C610DE /* Sentiment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -448,18 +470,20 @@
 				2A350F2022DBC5F700FB6786 /* AppCoordinator.swift in Sources */,
 				2A350F0E22DBC43300FB6786 /* UIView+Utils.swift in Sources */,
 				2A2793AC22DED2B40040A5EA /* DetailCoordinator.swift in Sources */,
-				2A350F3222DBC7F200FB6786 /* Tweets.swift in Sources */,
+				2A350F3222DBC7F200FB6786 /* Tweet.swift in Sources */,
 				2A27939B22DECE6E0040A5EA /* UITableView+Utils.swift in Sources */,
 				2A350F1722DBC53B00FB6786 /* RequestStates.swift in Sources */,
 				2A350F2822DBC6DA00FB6786 /* HomeVC.swift in Sources */,
 				2A350F1B22DBC57B00FB6786 /* Endpoint.swift in Sources */,
 				2A350F2422DBC67400FB6786 /* HomeCoordinator.swift in Sources */,
 				2A350F2F22DBC79B00FB6786 /* HomeAPI.swift in Sources */,
+				D1B78AD422DF46CB00C610DE /* DetailVM.swift in Sources */,
 				2A2793A422DED25E0040A5EA /* SentimentAPI.swift in Sources */,
 				2A350EDC22DBC17800FB6786 /* AppDelegate.swift in Sources */,
 				2A350F1522DBC50700FB6786 /* Requester.swift in Sources */,
 				2A350F2C22DBC70A00FB6786 /* HomeVM.swift in Sources */,
 				2A350F1222DBC48B00FB6786 /* Observable.swift in Sources */,
+				D1B78AD722DF4BFE00C610DE /* Sentiment.swift in Sources */,
 				2A350F1922DBC55700FB6786 /* API.swift in Sources */,
 				2A350F1D22DBC59C00FB6786 /* HeaderHandler.swift in Sources */,
 				2A350F1022DBC46B00FB6786 /* ThCodable.swift in Sources */,
