@@ -10,4 +10,9 @@ import UIKit
 
 struct Tweets: THCodable {
 
+    var text: String
+
+    enum CodingKeys: String, CodingKey {
+        case text = "full_text"
+    }
 }

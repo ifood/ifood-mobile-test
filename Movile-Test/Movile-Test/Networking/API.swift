@@ -11,7 +11,8 @@ import Foundation
 class API {
     enum Environment: String {
 
-        case production = ""
+        case twitter = "https://api.twitter.com/"
+        case google = "https://language.googleapis.com/v1"
 
         //Just to be more readable
         func getValue() -> String {
@@ -22,8 +23,9 @@ class API {
     let environment: Environment
 
     init() {
-        environment = Environment.production
+        environment = Environment.twitter
     }
 
     lazy var homeServices = HomeAPI()
+    lazy var sentimentServices = SentimentAPI()
 }

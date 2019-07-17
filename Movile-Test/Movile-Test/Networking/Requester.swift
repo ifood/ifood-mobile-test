@@ -31,7 +31,7 @@ class Requester: NSObject {
     var env: String
 
     override init() {
-        self.env = API.Environment.production.getValue()
+        self.env = API.Environment.twitter.getValue()
         self.timeoutRequestType = .normal
         super.init()
     }
@@ -47,6 +47,14 @@ class Requester: NSObject {
     /// Return the full URI to deal with the request
     /// - Parameter: endpoint: The given endpoint in String Format
     func urlComposer(using endpoint: Endpoint.EndpointType) -> (url: URL?, method: String) {
+
+        switch endpoint.domain {
+        case .Twitter:
+            self.env = API.Environment.twitter.getValue()
+        case .Google:
+            break
+        }
+
         let url = (url: URL(string: "\(env)\(endpoint.uri)"), method: endpoint.method)
         return url
     }

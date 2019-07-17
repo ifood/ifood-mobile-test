@@ -8,9 +8,14 @@
 
 import Foundation
 
+enum Domain {
+    case Twitter
+    case Google
+}
+
 public class Endpoint {
     /// A tuple that recieves an URI and the http request method
-    typealias EndpointType = (uri: String, method: String)
+    typealias EndpointType = (domain: Domain, uri: String, method: String)
 
     /// Contains the http method String simplified for
     struct HTTPMethod {
@@ -22,7 +27,8 @@ public class Endpoint {
     }
 
     // Endpoints list
-    struct Home {
-        static let list: EndpointType = (uri: "", method: HTTPMethod.get)
+    struct Twitter {
+        static let Authentication: EndpointType = (domain: .Twitter, uri: "oauth2/token?grant_type=client_credentials", method: HTTPMethod.post)
+        static let List: EndpointType = (domain: .Twitter, uri: "1.1/statuses/user_timeline.json?screen_name=realDonaldTrump&tweet_mode=extended", method: HTTPMethod.get)
     }
 }
