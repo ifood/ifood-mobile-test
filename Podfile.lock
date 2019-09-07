@@ -1,0 +1,93 @@
+PODS:
+  - Alamofire (4.8.2)
+  - AlamofireImage (3.5.2):
+    - Alamofire (~> 4.8)
+  - Differentiator (4.0.1)
+  - KeychainSwift (16.0.1)
+  - Moya/Core (14.0.0-alpha.1):
+    - Alamofire (~> 4.1)
+    - Result (~> 4.1)
+  - Moya/RxSwift (14.0.0-alpha.1):
+    - Moya/Core
+    - RxSwift (~> 5.0)
+  - "NSObject+Rx (5.0.0)":
+    - RxSwift (~> 5.0)
+  - Result (4.1.0)
+  - RxBlocking (5.0.0):
+    - RxSwift (~> 5)
+  - RxCocoa (5.0.0):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxDataSources (4.0.1):
+    - Differentiator (~> 4.0)
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
+  - RxKeyboard (1.0.0):
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
+  - RxRelay (5.0.0):
+    - RxSwift (~> 5)
+  - RxSwift (5.0.0)
+  - RxTest (5.0.0):
+    - RxSwift (~> 5)
+  - SnapKit (5.0.0)
+  - SwiftGen (6.1.0)
+  - SwiftLint (0.33.0)
+
+DEPENDENCIES:
+  - AlamofireImage
+  - KeychainSwift
+  - Moya/RxSwift (~> 14.0.0-alpha.1)
+  - "NSObject+Rx"
+  - RxBlocking
+  - RxCocoa (~> 5)
+  - RxDataSources
+  - RxKeyboard
+  - RxSwift (~> 5)
+  - RxTest
+  - SnapKit
+  - SwiftGen
+  - SwiftLint
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AlamofireImage
+    - Differentiator
+    - KeychainSwift
+    - Moya
+    - "NSObject+Rx"
+    - Result
+    - RxBlocking
+    - RxCocoa
+    - RxDataSources
+    - RxKeyboard
+    - RxRelay
+    - RxSwift
+    - RxTest
+    - SnapKit
+    - SwiftGen
+    - SwiftLint
+
+SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  AlamofireImage: 63cfe3baf1370be6c498149687cf6db3e3b00999
+  Differentiator: 886080237d9f87f322641dedbc5be257061b0602
+  KeychainSwift: 4209611373ca4a098e09b1e547eebd87c544dcc4
+  Moya: 65485239114b3b327a17dc2e839f6c8b7143aae9
+  "NSObject+Rx": 6151a97d171f7187c4183746acc42d9451952a7b
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  RxBlocking: c67185d26498ea3cbe3e121917c3c16739e43123
+  RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
+  RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
+  RxKeyboard: 6683c4344304a00f943c158bd8a43ce5469c82a7
+  RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
+  RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
+  RxTest: 4349afe98f564e0a9bc19063368904622d17d49a
+  SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
+  SwiftGen: f872ca75cbd17bf7103c17f13dcfa0d9a15667b0
+  SwiftLint: fed9c66336e41fc74dc48a73678380718f0c8b0e
+
+PODFILE CHECKSUM: b93648bf237a781c1e34c7c934e8bfdb08d6d76d
+
+COCOAPODS: 1.7.2

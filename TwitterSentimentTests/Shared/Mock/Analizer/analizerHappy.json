@@ -1,0 +1,29 @@
+{
+    "documentSentiment": {
+        "magnitude": 0.7,
+        "score": 0.3
+    },
+    "language": "pt-PT",
+    "sentences": [
+        {
+            "text": {
+                "content": "Nova base curricular",
+                "beginOffset": 0
+            },
+            "sentiment": {
+                "magnitude": 0.2,
+                "score": 0.5
+            }
+        },
+        {
+            "text": {
+                "content": "Livros do ensino médio vão mudar para integrar diferentes disciplinas https://t.co/0mDtfnt4mR https://t.co/iN7bx7Wt9Y",
+                "beginOffset": 23
+            },
+            "sentiment": {
+                "magnitude": 0.5,
+                "score": 0.5
+            }
+        }
+    ]
+}

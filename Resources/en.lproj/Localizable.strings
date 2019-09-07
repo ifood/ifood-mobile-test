@@ -1,0 +1,27 @@
+/* 
+  Localizable.strings
+  TwitterSentiment
+
+  Created by Jean Vinge on 24/12/18.
+  Copyright © 2018 Jean Vinge. All rights reserved.
+*/
+
+"find-user.title-label" = "let's find out what user's are feeling.";
+"find-user.textfield-placeholder" = "search a twitter username.";
+"find-user.user-not-found" = "we couldn't find this user. \ntry another username.";
+
+"sentiment.sad-tweet" = "look's like this tweet is sad.";
+"sentiment.neutral-tweet" = "look's like this tweet is neutral.";
+"sentiment.happy-tweet" = "look's like this tweet is happy.";
+
+"error-base-url.cant-be-nil" = "base URL shouldn't be nil.";
+"cell-error.cant-be-nil" = "the cell can't be nil.";
+"codable-error.unknown-error" = "unknown codable error.";
+"request-error.unknown-error" = "request didn't complete.";
+"request-error.could-not-load" = "couldn't load content.";
+"twitter-error.could-not-load-sentiment" = "couldn't load tweet sentiment. \ntry again later.";
+"twitter-error.could-not-load-page" = "sorry, that page does not exist. \ntry another username.";
+
+"default-text.cancel" = "cancel";
+"default-text.ok" = "ok";
+"default-text.error" = "Error";

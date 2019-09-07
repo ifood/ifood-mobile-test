@@ -1,0 +1,9 @@
+os: osx
+osx_image: xcode10.2
+before_install:
+- gem install bundler:2.0.1
+install:
+- bundle install
+- bundle exec pod install --repo-update
+script:
+- bundle exec fastlane test

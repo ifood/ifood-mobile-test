@@ -1,0 +1,9 @@
+{
+    "errors": [
+        {
+            "code": 170,
+            "message": "Missing required parameter: grant_type",
+            "label": "forbidden_missing_parameter"
+        }
+    ]
+}
