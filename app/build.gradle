@@ -1,0 +1,200 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    def androidConfig = rootProject.ext.android
+    def endpoints = rootProject.ext.endpoints
+    def signing = rootProject.ext.signing
+
+    signingConfigs {
+        release {
+            storeFile file(signing.storeFile)
+            storePassword signing.storePassword
+            keyAlias signing.keyAlias
+            keyPassword signing.keyPassword
+        }
+    }
+
+    compileSdkVersion androidConfig.compileSdkVersion
+    buildToolsVersion androidConfig.buildToolsVersion
+
+    defaultConfig {
+        applicationId androidConfig.applicationId
+        minSdkVersion androidConfig.minSdkVersion
+        targetSdkVersion androidConfig.targetSdkVersion
+        versionCode androidConfig.versionCode
+        versionName androidConfig.versionName
+
+        testInstrumentationRunner androidConfig.testRunner
+        testInstrumentationRunnerArguments clearPackageData: 'true'
+
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+
+        // Reduce size APK
+        resConfigs 'en', 'pt'
+        vectorDrawables.generatedDensities = ["mdpi", "hdpi", "xhdpi"]
+    }
+
+    testOptions {
+
+        animationsDisabled = true
+
+        unitTests {
+            returnDefaultValues = true
+            includeAndroidResources = true
+            all {
+                testLogging {
+                    exceptionFormat "full"
+                    events 'passed', 'skipped', 'failed', 'standardOut', 'standardError'
+                    outputs.upToDateWhen { false }
+                    showStandardStreams = true
+                }
+            }
+        }
+    }
+
+    packagingOptions {
+        exclude 'LICENSE.txt'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+    }
+
+    lintOptions {
+        quiet true
+        abortOnError false
+        disable 'InvalidPackage'
+    }
+
+    buildTypes {
+        debug {
+            debuggable true
+            testCoverageEnabled true
+
+            applicationIdSuffix ".debug"
+            versionNameSuffix "-dev"
+
+            buildConfigField 'String', 'TWITTER_API_URL', endpoints.twitter
+            buildConfigField 'String', 'GOOGLE_API_URL', endpoints.google
+
+            resValue "string", "app_name", "iFood Challenge-Dev"
+
+            // disable multi APK generation for development build
+            splits.abi.enable = false
+            splits.density.enable = false
+        }
+
+        release {
+            shrinkResources true
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+
+            buildConfigField 'String', 'TWITTER_API_URL', endpoints.twitter
+            buildConfigField 'String', 'GOOGLE_API_URL', endpoints.google
+
+            resValue "string", "app_name", "iFood Challenge"
+        }
+    }
+
+    androidExtensions {
+        experimental = true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+        main.java.srcDirs += [file("$buildDir/generated/source/kapt/main")]
+        test.java.srcDirs += 'src/test/kotlin'
+        test.java.srcDirs += "$projectDir/src/testCommon"
+        androidTest.java.srcDirs += 'src/androidTest/kotlin'
+        androidTest.java.srcDirs += "$projectDir/src/testCommon"
+    }
+}
+
+dependencies {
+
+    def commonDependencies = rootProject.ext.commonDependencies
+    def commonTestDependencies = rootProject.ext.commonTestDependencies
+
+    // Architecture components
+    implementation commonDependencies.architectureComponentsExtensions
+
+    // Android
+    implementation commonDependencies.appCompat
+    implementation commonDependencies.materialDesign
+    implementation commonDependencies.supportCardView
+    implementation commonDependencies.supportRecyclerView
+    implementation commonDependencies.constraintLayout
+
+    // Multidex
+    implementation commonDependencies.multiDex
+
+    // Dagger 2
+    implementation commonDependencies.dagger2
+    kapt commonDependencies.dagger2Compiler
+
+    // Kotlin
+    implementation commonDependencies.kotlinJdk
+
+    // Retrofit
+    implementation commonDependencies.retrofit2
+    implementation commonDependencies.retrofitRxAdapter
+    implementation commonDependencies.retrofitConverterMoshi
+
+    // OkHttp
+    implementation commonDependencies.okHttp
+    implementation commonDependencies.okHttpInterceptor
+
+    // RxJava 2
+    implementation commonDependencies.rxJava2
+
+    // Moshi
+    implementation commonDependencies.moshi
+    kapt commonDependencies.moshiCodegen
+
+    // Unit Tests
+    testImplementation commonTestDependencies.junit
+    testImplementation commonTestDependencies.mockk
+    testImplementation commonTestDependencies.mockWebServer
+    testImplementation commonTestDependencies.assertj
+    testImplementation commonTestDependencies.architectureComponentsTesting
+
+    // Espresso Tests
+    androidTestImplementation commonTestDependencies.junit
+    androidTestImplementation commonTestDependencies.assertj
+    androidTestImplementation commonTestDependencies.androidRules
+
+    androidTestImplementation commonTestDependencies.architectureComponentsTesting
+
+    androidTestImplementation commonTestDependencies.mockkAndroid
+    androidTestImplementation commonTestDependencies.mockWebServer
+
+    androidTestImplementation commonTestDependencies.espressoCore
+    androidTestImplementation commonTestDependencies.espressoContrib
+    androidTestImplementation commonTestDependencies.espressoIntents
+    androidTestImplementation commonTestDependencies.kaspresso
+
+    // Barista
+    androidTestImplementation(commonTestDependencies.barista) {
+        exclude group: 'org.jetbrains.kotlin'
+    }
+
+    androidTestUtil commonTestDependencies.androidOrchestrator
+
+    // Dagger Mock Tests
+    kaptAndroidTest commonDependencies.dagger2Compiler
+
+}
