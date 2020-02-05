@@ -32,6 +32,8 @@ Create an app that given an Twitter username it will list user's tweets. When I 
 ## Run the code
 - Just clone the repo and execute!
 
+- Unit Tests: `./gradlew testDebug`
+
 ## Configuration
 - Project configuration, version, SDK version ... are in **[configurations.gradle](buildsystem/configurations.gradle)**
 - Dependencies configuration are in **[dependencies.gradle](buildsystem/dependencies.gradle)**
