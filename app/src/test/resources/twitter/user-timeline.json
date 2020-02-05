@@ -1,0 +1,2145 @@
+[
+  {
+    "created_at": "Wed Feb 05 00:30:59 +0000 2020",
+    "id": 1224852887270035457,
+    "id_str": "1224852887270035457",
+    "text": "@marzza_crf 😃",
+    "truncated": false,
+    "entities": {
+      "hashtags": [],
+      "symbols": [],
+      "user_mentions": [
+        {
+          "screen_name": "marzza_crf",
+          "name": "nath ❤🖤",
+          "id": 1857986107,
+          "id_str": "1857986107",
+          "indices": [
+            0,
+            11
+          ]
+        }
+      ],
+      "urls": []
+    },
+    "source": "<a href=\"http://www.keepcon.com\" rel=\"nofollow\">Keepcon Platform</a>",
+    "in_reply_to_status_id": 1224852867271548929,
+    "in_reply_to_status_id_str": "1224852867271548929",
+    "in_reply_to_user_id": 1857986107,
+    "in_reply_to_user_id_str": "1857986107",
+    "in_reply_to_screen_name": "marzza_crf",
+    "user": {
+      "id": 292383655,
+      "id_str": "292383655",
+      "name": "iFood",
+      "screen_name": "iFood",
+      "location": "Brasil",
+      "description": "#PedeUmiFood",
+      "url": "https://t.co/0ouZ4c9iZW",
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "url": "https://t.co/0ouZ4c9iZW",
+              "expanded_url": "http://www.ifood.com.br",
+              "display_url": "ifood.com.br",
+              "indices": [
+                0,
+                23
+              ]
+            }
+          ]
+        },
+        "description": {
+          "urls": []
+        }
+      },
+      "protected": false,
+      "followers_count": 257276,
+      "friends_count": 15807,
+      "listed_count": 242,
+      "created_at": "Tue May 03 15:24:00 +0000 2011",
+      "favourites_count": 9751,
+      "utc_offset": null,
+      "time_zone": null,
+      "geo_enabled": true,
+      "verified": true,
+      "statuses_count": 53288,
+      "lang": null,
+      "contributors_enabled": false,
+      "is_translator": false,
+      "is_translation_enabled": false,
+      "profile_background_color": "9A2529",
+      "profile_background_image_url": "http://abs.twimg.com/images/themes/theme17/bg.gif",
+      "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme17/bg.gif",
+      "profile_background_tile": false,
+      "profile_image_url": "http://pbs.twimg.com/profile_images/887672393648414720/TVMqDVLD_normal.jpg",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/887672393648414720/TVMqDVLD_normal.jpg",
+      "profile_banner_url": "https://pbs.twimg.com/profile_banners/292383655/1579896488",
+      "profile_link_color": "9A2529",
+      "profile_sidebar_border_color": "FFFFFF",
+      "profile_sidebar_fill_color": "E6F6F9",
+      "profile_text_color": "333333",
+      "profile_use_background_image": false,
+      "has_extended_profile": false,
+      "default_profile": false,
+      "default_profile_image": false,
+      "can_media_tag": true,
+      "followed_by": false,
+      "following": false,
+      "follow_request_sent": false,
+      "notifications": false,
+      "translator_type": "none"
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "is_quote_status": false,
+    "retweet_count": 0,
+    "favorite_count": 2,
+    "favorited": false,
+    "retweeted": false,
+    "lang": "und"
+  },
+  {
+    "created_at": "Tue Feb 04 21:42:56 +0000 2020",
+    "id": 1224810596958449664,
+    "id_str": "1224810596958449664",
+    "text": "@juaopauloreal Vai na DM",
+    "truncated": false,
+    "entities": {
+      "hashtags": [],
+      "symbols": [],
+      "user_mentions": [
+        {
+          "screen_name": "juaopauloreal",
+          "name": "Juão Paulo",
+          "id": 817540397966692352,
+          "id_str": "817540397966692352",
+          "indices": [
+            0,
+            14
+          ]
+        }
+      ],
+      "urls": []
+    },
+    "source": "<a href=\"http://www.keepcon.com\" rel=\"nofollow\">Keepcon Platform</a>",
+    "in_reply_to_status_id": 1224809780063166467,
+    "in_reply_to_status_id_str": "1224809780063166467",
+    "in_reply_to_user_id": 817540397966692352,
+    "in_reply_to_user_id_str": "817540397966692352",
+    "in_reply_to_screen_name": "juaopauloreal",
+    "user": {
+      "id": 292383655,
+      "id_str": "292383655",
+      "name": "iFood",
+      "screen_name": "iFood",
+      "location": "Brasil",
+      "description": "#PedeUmiFood",
+      "url": "https://t.co/0ouZ4c9iZW",
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "url": "https://t.co/0ouZ4c9iZW",
+              "expanded_url": "http://www.ifood.com.br",
+              "display_url": "ifood.com.br",
+              "indices": [
+                0,
+                23
+              ]
+            }
+          ]
+        },
+        "description": {
+          "urls": []
+        }
+      },
+      "protected": false,
+      "followers_count": 257276,
+      "friends_count": 15807,
+      "listed_count": 242,
+      "created_at": "Tue May 03 15:24:00 +0000 2011",
+      "favourites_count": 9751,
+      "utc_offset": null,
+      "time_zone": null,
+      "geo_enabled": true,
+      "verified": true,
+      "statuses_count": 53288,
+      "lang": null,
+      "contributors_enabled": false,
+      "is_translator": false,
+      "is_translation_enabled": false,
+      "profile_background_color": "9A2529",
+      "profile_background_image_url": "http://abs.twimg.com/images/themes/theme17/bg.gif",
+      "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme17/bg.gif",
+      "profile_background_tile": false,
+      "profile_image_url": "http://pbs.twimg.com/profile_images/887672393648414720/TVMqDVLD_normal.jpg",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/887672393648414720/TVMqDVLD_normal.jpg",
+      "profile_banner_url": "https://pbs.twimg.com/profile_banners/292383655/1579896488",
+      "profile_link_color": "9A2529",
+      "profile_sidebar_border_color": "FFFFFF",
+      "profile_sidebar_fill_color": "E6F6F9",
+      "profile_text_color": "333333",
+      "profile_use_background_image": false,
+      "has_extended_profile": false,
+      "default_profile": false,
+      "default_profile_image": false,
+      "can_media_tag": true,
+      "followed_by": false,
+      "following": false,
+      "follow_request_sent": false,
+      "notifications": false,
+      "translator_type": "none"
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "is_quote_status": false,
+    "retweet_count": 0,
+    "favorite_count": 0,
+    "favorited": false,
+    "retweeted": false,
+    "lang": "pt"
+  },
+  {
+    "created_at": "Tue Feb 04 21:38:40 +0000 2020",
+    "id": 1224809522671357954,
+    "id_str": "1224809522671357954",
+    "text": "@mesiascaio Vai de DM",
+    "truncated": false,
+    "entities": {
+      "hashtags": [],
+      "symbols": [],
+      "user_mentions": [
+        {
+          "screen_name": "mesiascaio",
+          "name": "Caio Messias",
+          "id": 4366946296,
+          "id_str": "4366946296",
+          "indices": [
+            0,
+            11
+          ]
+        }
+      ],
+      "urls": []
+    },
+    "source": "<a href=\"http://www.keepcon.com\" rel=\"nofollow\">Keepcon Platform</a>",
+    "in_reply_to_status_id": 1224805033302265856,
+    "in_reply_to_status_id_str": "1224805033302265856",
+    "in_reply_to_user_id": 4366946296,
+    "in_reply_to_user_id_str": "4366946296",
+    "in_reply_to_screen_name": "mesiascaio",
+    "user": {
+      "id": 292383655,
+      "id_str": "292383655",
+      "name": "iFood",
+      "screen_name": "iFood",
+      "location": "Brasil",
+      "description": "#PedeUmiFood",
+      "url": "https://t.co/0ouZ4c9iZW",
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "url": "https://t.co/0ouZ4c9iZW",
+              "expanded_url": "http://www.ifood.com.br",
+              "display_url": "ifood.com.br",
+              "indices": [
+                0,
+                23
+              ]
+            }
+          ]
+        },
+        "description": {
+          "urls": []
+        }
+      },
+      "protected": false,
+      "followers_count": 257276,
+      "friends_count": 15807,
+      "listed_count": 242,
+      "created_at": "Tue May 03 15:24:00 +0000 2011",
+      "favourites_count": 9751,
+      "utc_offset": null,
+      "time_zone": null,
+      "geo_enabled": true,
+      "verified": true,
+      "statuses_count": 53288,
+      "lang": null,
+      "contributors_enabled": false,
+      "is_translator": false,
+      "is_translation_enabled": false,
+      "profile_background_color": "9A2529",
+      "profile_background_image_url": "http://abs.twimg.com/images/themes/theme17/bg.gif",
+      "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme17/bg.gif",
+      "profile_background_tile": false,
+      "profile_image_url": "http://pbs.twimg.com/profile_images/887672393648414720/TVMqDVLD_normal.jpg",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/887672393648414720/TVMqDVLD_normal.jpg",
+      "profile_banner_url": "https://pbs.twimg.com/profile_banners/292383655/1579896488",
+      "profile_link_color": "9A2529",
+      "profile_sidebar_border_color": "FFFFFF",
+      "profile_sidebar_fill_color": "E6F6F9",
+      "profile_text_color": "333333",
+      "profile_use_background_image": false,
+      "has_extended_profile": false,
+      "default_profile": false,
+      "default_profile_image": false,
+      "can_media_tag": true,
+      "followed_by": false,
+      "following": false,
+      "follow_request_sent": false,
+      "notifications": false,
+      "translator_type": "none"
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "is_quote_status": false,
+    "retweet_count": 0,
+    "favorite_count": 32,
+    "favorited": false,
+    "retweeted": false,
+    "lang": "pt"
+  },
+  {
+    "created_at": "Tue Feb 04 21:24:02 +0000 2020",
+    "id": 1224805837572657155,
+    "id_str": "1224805837572657155",
+    "text": "@memeguy1997 Chega ali na DM",
+    "truncated": false,
+    "entities": {
+      "hashtags": [],
+      "symbols": [],
+      "user_mentions": [
+        {
+          "screen_name": "memeguy1997",
+          "name": "Bruno Lopes",
+          "id": 743196688836341760,
+          "id_str": "743196688836341760",
+          "indices": [
+            0,
+            12
+          ]
+        }
+      ],
+      "urls": []
+    },
+    "source": "<a href=\"http://www.keepcon.com\" rel=\"nofollow\">Keepcon Platform</a>",
+    "in_reply_to_status_id": 1224802294329376770,
+    "in_reply_to_status_id_str": "1224802294329376770",
+    "in_reply_to_user_id": 743196688836341760,
+    "in_reply_to_user_id_str": "743196688836341760",
+    "in_reply_to_screen_name": "memeguy1997",
+    "user": {
+      "id": 292383655,
+      "id_str": "292383655",
+      "name": "iFood",
+      "screen_name": "iFood",
+      "location": "Brasil",
+      "description": "#PedeUmiFood",
+      "url": "https://t.co/0ouZ4c9iZW",
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "url": "https://t.co/0ouZ4c9iZW",
+              "expanded_url": "http://www.ifood.com.br",
+              "display_url": "ifood.com.br",
+              "indices": [
+                0,
+                23
+              ]
+            }
+          ]
+        },
+        "description": {
+          "urls": []
+        }
+      },
+      "protected": false,
+      "followers_count": 257276,
+      "friends_count": 15807,
+      "listed_count": 242,
+      "created_at": "Tue May 03 15:24:00 +0000 2011",
+      "favourites_count": 9751,
+      "utc_offset": null,
+      "time_zone": null,
+      "geo_enabled": true,
+      "verified": true,
+      "statuses_count": 53288,
+      "lang": null,
+      "contributors_enabled": false,
+      "is_translator": false,
+      "is_translation_enabled": false,
+      "profile_background_color": "9A2529",
+      "profile_background_image_url": "http://abs.twimg.com/images/themes/theme17/bg.gif",
+      "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme17/bg.gif",
+      "profile_background_tile": false,
+      "profile_image_url": "http://pbs.twimg.com/profile_images/887672393648414720/TVMqDVLD_normal.jpg",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/887672393648414720/TVMqDVLD_normal.jpg",
+      "profile_banner_url": "https://pbs.twimg.com/profile_banners/292383655/1579896488",
+      "profile_link_color": "9A2529",
+      "profile_sidebar_border_color": "FFFFFF",
+      "profile_sidebar_fill_color": "E6F6F9",
+      "profile_text_color": "333333",
+      "profile_use_background_image": false,
+      "has_extended_profile": false,
+      "default_profile": false,
+      "default_profile_image": false,
+      "can_media_tag": true,
+      "followed_by": false,
+      "following": false,
+      "follow_request_sent": false,
+      "notifications": false,
+      "translator_type": "none"
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "is_quote_status": false,
+    "retweet_count": 0,
+    "favorite_count": 1,
+    "favorited": false,
+    "retweeted": false,
+    "lang": "pt"
+  },
+  {
+    "created_at": "Tue Feb 04 20:07:07 +0000 2020",
+    "id": 1224786482537357322,
+    "id_str": "1224786482537357322",
+    "text": "@Lemandss Me manda seu e-mail de cadastro na DM",
+    "truncated": false,
+    "entities": {
+      "hashtags": [],
+      "symbols": [],
+      "user_mentions": [
+        {
+          "screen_name": "Lemandss",
+          "name": "doutora estranha",
+          "id": 2317070681,
+          "id_str": "2317070681",
+          "indices": [
+            0,
+            9
+          ]
+        }
+      ],
+      "urls": []
+    },
+    "source": "<a href=\"http://www.keepcon.com\" rel=\"nofollow\">Keepcon Platform</a>",
+    "in_reply_to_status_id": 1222530244688654337,
+    "in_reply_to_status_id_str": "1222530244688654337",
+    "in_reply_to_user_id": 2317070681,
+    "in_reply_to_user_id_str": "2317070681",
+    "in_reply_to_screen_name": "Lemandss",
+    "user": {
+      "id": 292383655,
+      "id_str": "292383655",
+      "name": "iFood",
+      "screen_name": "iFood",
+      "location": "Brasil",
+      "description": "#PedeUmiFood",
+      "url": "https://t.co/0ouZ4c9iZW",
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "url": "https://t.co/0ouZ4c9iZW",
+              "expanded_url": "http://www.ifood.com.br",
+              "display_url": "ifood.com.br",
+              "indices": [
+                0,
+                23
+              ]
+            }
+          ]
+        },
+        "description": {
+          "urls": []
+        }
+      },
+      "protected": false,
+      "followers_count": 257276,
+      "friends_count": 15807,
+      "listed_count": 242,
+      "created_at": "Tue May 03 15:24:00 +0000 2011",
+      "favourites_count": 9751,
+      "utc_offset": null,
+      "time_zone": null,
+      "geo_enabled": true,
+      "verified": true,
+      "statuses_count": 53288,
+      "lang": null,
+      "contributors_enabled": false,
+      "is_translator": false,
+      "is_translation_enabled": false,
+      "profile_background_color": "9A2529",
+      "profile_background_image_url": "http://abs.twimg.com/images/themes/theme17/bg.gif",
+      "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme17/bg.gif",
+      "profile_background_tile": false,
+      "profile_image_url": "http://pbs.twimg.com/profile_images/887672393648414720/TVMqDVLD_normal.jpg",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/887672393648414720/TVMqDVLD_normal.jpg",
+      "profile_banner_url": "https://pbs.twimg.com/profile_banners/292383655/1579896488",
+      "profile_link_color": "9A2529",
+      "profile_sidebar_border_color": "FFFFFF",
+      "profile_sidebar_fill_color": "E6F6F9",
+      "profile_text_color": "333333",
+      "profile_use_background_image": false,
+      "has_extended_profile": false,
+      "default_profile": false,
+      "default_profile_image": false,
+      "can_media_tag": true,
+      "followed_by": false,
+      "following": false,
+      "follow_request_sent": false,
+      "notifications": false,
+      "translator_type": "none"
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "is_quote_status": false,
+    "retweet_count": 0,
+    "favorite_count": 1,
+    "favorited": false,
+    "retweeted": false,
+    "lang": "pt"
+  },
+  {
+    "created_at": "Tue Feb 04 19:49:37 +0000 2020",
+    "id": 1224782079734484997,
+    "id_str": "1224782079734484997",
+    "text": "@Gabus_ullrich Vai ali na DM e manda o seu e-mail cadastrado no app!",
+    "truncated": false,
+    "entities": {
+      "hashtags": [],
+      "symbols": [],
+      "user_mentions": [
+        {
+          "screen_name": "Gabus_ullrich",
+          "name": "Gaby",
+          "id": 806575617869283330,
+          "id_str": "806575617869283330",
+          "indices": [
+            0,
+            14
+          ]
+        }
+      ],
+      "urls": []
+    },
+    "source": "<a href=\"http://www.keepcon.com\" rel=\"nofollow\">Keepcon Platform</a>",
+    "in_reply_to_status_id": 1222648905021755392,
+    "in_reply_to_status_id_str": "1222648905021755392",
+    "in_reply_to_user_id": 806575617869283330,
+    "in_reply_to_user_id_str": "806575617869283330",
+    "in_reply_to_screen_name": "Gabus_ullrich",
+    "user": {
+      "id": 292383655,
+      "id_str": "292383655",
+      "name": "iFood",
+      "screen_name": "iFood",
+      "location": "Brasil",
+      "description": "#PedeUmiFood",
+      "url": "https://t.co/0ouZ4c9iZW",
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "url": "https://t.co/0ouZ4c9iZW",
+              "expanded_url": "http://www.ifood.com.br",
+              "display_url": "ifood.com.br",
+              "indices": [
+                0,
+                23
+              ]
+            }
+          ]
+        },
+        "description": {
+          "urls": []
+        }
+      },
+      "protected": false,
+      "followers_count": 257276,
+      "friends_count": 15807,
+      "listed_count": 242,
+      "created_at": "Tue May 03 15:24:00 +0000 2011",
+      "favourites_count": 9751,
+      "utc_offset": null,
+      "time_zone": null,
+      "geo_enabled": true,
+      "verified": true,
+      "statuses_count": 53288,
+      "lang": null,
+      "contributors_enabled": false,
+      "is_translator": false,
+      "is_translation_enabled": false,
+      "profile_background_color": "9A2529",
+      "profile_background_image_url": "http://abs.twimg.com/images/themes/theme17/bg.gif",
+      "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme17/bg.gif",
+      "profile_background_tile": false,
+      "profile_image_url": "http://pbs.twimg.com/profile_images/887672393648414720/TVMqDVLD_normal.jpg",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/887672393648414720/TVMqDVLD_normal.jpg",
+      "profile_banner_url": "https://pbs.twimg.com/profile_banners/292383655/1579896488",
+      "profile_link_color": "9A2529",
+      "profile_sidebar_border_color": "FFFFFF",
+      "profile_sidebar_fill_color": "E6F6F9",
+      "profile_text_color": "333333",
+      "profile_use_background_image": false,
+      "has_extended_profile": false,
+      "default_profile": false,
+      "default_profile_image": false,
+      "can_media_tag": true,
+      "followed_by": false,
+      "following": false,
+      "follow_request_sent": false,
+      "notifications": false,
+      "translator_type": "none"
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "is_quote_status": false,
+    "retweet_count": 0,
+    "favorite_count": 1,
+    "favorited": false,
+    "retweeted": false,
+    "lang": "pt"
+  },
+  {
+    "created_at": "Tue Feb 04 19:34:11 +0000 2020",
+    "id": 1224778195611811841,
+    "id_str": "1224778195611811841",
+    "text": "@carolkley Se ainda precisa de ajuda, manda o e-mail de cadastro na DM, por favor!",
+    "truncated": false,
+    "entities": {
+      "hashtags": [],
+      "symbols": [],
+      "user_mentions": [
+        {
+          "screen_name": "carolkley",
+          "name": "legalmente loira",
+          "id": 129580993,
+          "id_str": "129580993",
+          "indices": [
+            0,
+            10
+          ]
+        }
+      ],
+      "urls": []
+    },
+    "source": "<a href=\"http://www.keepcon.com\" rel=\"nofollow\">Keepcon Platform</a>",
+    "in_reply_to_status_id": 1222429128105828352,
+    "in_reply_to_status_id_str": "1222429128105828352",
+    "in_reply_to_user_id": 129580993,
+    "in_reply_to_user_id_str": "129580993",
+    "in_reply_to_screen_name": "carolkley",
+    "user": {
+      "id": 292383655,
+      "id_str": "292383655",
+      "name": "iFood",
+      "screen_name": "iFood",
+      "location": "Brasil",
+      "description": "#PedeUmiFood",
+      "url": "https://t.co/0ouZ4c9iZW",
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "url": "https://t.co/0ouZ4c9iZW",
+              "expanded_url": "http://www.ifood.com.br",
+              "display_url": "ifood.com.br",
+              "indices": [
+                0,
+                23
+              ]
+            }
+          ]
+        },
+        "description": {
+          "urls": []
+        }
+      },
+      "protected": false,
+      "followers_count": 257276,
+      "friends_count": 15807,
+      "listed_count": 242,
+      "created_at": "Tue May 03 15:24:00 +0000 2011",
+      "favourites_count": 9751,
+      "utc_offset": null,
+      "time_zone": null,
+      "geo_enabled": true,
+      "verified": true,
+      "statuses_count": 53288,
+      "lang": null,
+      "contributors_enabled": false,
+      "is_translator": false,
+      "is_translation_enabled": false,
+      "profile_background_color": "9A2529",
+      "profile_background_image_url": "http://abs.twimg.com/images/themes/theme17/bg.gif",
+      "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme17/bg.gif",
+      "profile_background_tile": false,
+      "profile_image_url": "http://pbs.twimg.com/profile_images/887672393648414720/TVMqDVLD_normal.jpg",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/887672393648414720/TVMqDVLD_normal.jpg",
+      "profile_banner_url": "https://pbs.twimg.com/profile_banners/292383655/1579896488",
+      "profile_link_color": "9A2529",
+      "profile_sidebar_border_color": "FFFFFF",
+      "profile_sidebar_fill_color": "E6F6F9",
+      "profile_text_color": "333333",
+      "profile_use_background_image": false,
+      "has_extended_profile": false,
+      "default_profile": false,
+      "default_profile_image": false,
+      "can_media_tag": true,
+      "followed_by": false,
+      "following": false,
+      "follow_request_sent": false,
+      "notifications": false,
+      "translator_type": "none"
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "is_quote_status": false,
+    "retweet_count": 0,
+    "favorite_count": 0,
+    "favorited": false,
+    "retweeted": false,
+    "lang": "pt"
+  },
+  {
+    "created_at": "Tue Feb 04 18:48:56 +0000 2020",
+    "id": 1224766806117822464,
+    "id_str": "1224766806117822464",
+    "text": "Tem gente que fica saudável no verão, eu fico com fome https://t.co/jzr0S2MO61",
+    "truncated": false,
+    "entities": {
+      "hashtags": [],
+      "symbols": [],
+      "user_mentions": [],
+      "urls": [],
+      "media": [
+        {
+          "id": 1224766784357785608,
+          "id_str": "1224766784357785608",
+          "indices": [
+            55,
+            78
+          ],
+          "media_url": "http://pbs.twimg.com/tweet_video_thumb/EP8-5rpX4AggkcH.jpg",
+          "media_url_https": "https://pbs.twimg.com/tweet_video_thumb/EP8-5rpX4AggkcH.jpg",
+          "url": "https://t.co/jzr0S2MO61",
+          "display_url": "pic.twitter.com/jzr0S2MO61",
+          "expanded_url": "https://twitter.com/iFood/status/1224766806117822464/photo/1",
+          "type": "photo",
+          "sizes": {
+            "thumb": {
+              "w": 150,
+              "h": 150,
+              "resize": "crop"
+            },
+            "large": {
+              "w": 464,
+              "h": 580,
+              "resize": "fit"
+            },
+            "small": {
+              "w": 464,
+              "h": 580,
+              "resize": "fit"
+            },
+            "medium": {
+              "w": 464,
+              "h": 580,
+              "resize": "fit"
+            }
+          },
+          "features": {}
+        }
+      ]
+    },
+    "extended_entities": {
+      "media": [
+        {
+          "id": 1224766784357785608,
+          "id_str": "1224766784357785608",
+          "indices": [
+            55,
+            78
+          ],
+          "media_url": "http://pbs.twimg.com/tweet_video_thumb/EP8-5rpX4AggkcH.jpg",
+          "media_url_https": "https://pbs.twimg.com/tweet_video_thumb/EP8-5rpX4AggkcH.jpg",
+          "url": "https://t.co/jzr0S2MO61",
+          "display_url": "pic.twitter.com/jzr0S2MO61",
+          "expanded_url": "https://twitter.com/iFood/status/1224766806117822464/photo/1",
+          "type": "animated_gif",
+          "sizes": {
+            "thumb": {
+              "w": 150,
+              "h": 150,
+              "resize": "crop"
+            },
+            "large": {
+              "w": 464,
+              "h": 580,
+              "resize": "fit"
+            },
+            "small": {
+              "w": 464,
+              "h": 580,
+              "resize": "fit"
+            },
+            "medium": {
+              "w": 464,
+              "h": 580,
+              "resize": "fit"
+            }
+          },
+          "video_info": {
+            "aspect_ratio": [
+              4,
+              5
+            ],
+            "variants": [
+              {
+                "bitrate": 0,
+                "content_type": "video/mp4",
+                "url": "https://video.twimg.com/tweet_video/EP8-5rpX4AggkcH.mp4"
+              }
+            ]
+          },
+          "features": {}
+        }
+      ]
+    },
+    "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Twitter Web App</a>",
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_screen_name": null,
+    "user": {
+      "id": 292383655,
+      "id_str": "292383655",
+      "name": "iFood",
+      "screen_name": "iFood",
+      "location": "Brasil",
+      "description": "#PedeUmiFood",
+      "url": "https://t.co/0ouZ4c9iZW",
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "url": "https://t.co/0ouZ4c9iZW",
+              "expanded_url": "http://www.ifood.com.br",
+              "display_url": "ifood.com.br",
+              "indices": [
+                0,
+                23
+              ]
+            }
+          ]
+        },
+        "description": {
+          "urls": []
+        }
+      },
+      "protected": false,
+      "followers_count": 257276,
+      "friends_count": 15807,
+      "listed_count": 242,
+      "created_at": "Tue May 03 15:24:00 +0000 2011",
+      "favourites_count": 9751,
+      "utc_offset": null,
+      "time_zone": null,
+      "geo_enabled": true,
+      "verified": true,
+      "statuses_count": 53288,
+      "lang": null,
+      "contributors_enabled": false,
+      "is_translator": false,
+      "is_translation_enabled": false,
+      "profile_background_color": "9A2529",
+      "profile_background_image_url": "http://abs.twimg.com/images/themes/theme17/bg.gif",
+      "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme17/bg.gif",
+      "profile_background_tile": false,
+      "profile_image_url": "http://pbs.twimg.com/profile_images/887672393648414720/TVMqDVLD_normal.jpg",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/887672393648414720/TVMqDVLD_normal.jpg",
+      "profile_banner_url": "https://pbs.twimg.com/profile_banners/292383655/1579896488",
+      "profile_link_color": "9A2529",
+      "profile_sidebar_border_color": "FFFFFF",
+      "profile_sidebar_fill_color": "E6F6F9",
+      "profile_text_color": "333333",
+      "profile_use_background_image": false,
+      "has_extended_profile": false,
+      "default_profile": false,
+      "default_profile_image": false,
+      "can_media_tag": true,
+      "followed_by": false,
+      "following": false,
+      "follow_request_sent": false,
+      "notifications": false,
+      "translator_type": "none"
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "is_quote_status": false,
+    "retweet_count": 9,
+    "favorite_count": 108,
+    "favorited": false,
+    "retweeted": false,
+    "possibly_sensitive": false,
+    "lang": "pt"
+  },
+  {
+    "created_at": "Tue Feb 04 18:44:58 +0000 2020",
+    "id": 1224765810213818370,
+    "id_str": "1224765810213818370",
+    "text": "@adrianomaca Se precisar tô ali na DM",
+    "truncated": false,
+    "entities": {
+      "hashtags": [],
+      "symbols": [],
+      "user_mentions": [
+        {
+          "screen_name": "adrianomaca",
+          "name": "Adriano Maca",
+          "id": 196586170,
+          "id_str": "196586170",
+          "indices": [
+            0,
+            12
+          ]
+        }
+      ],
+      "urls": []
+    },
+    "source": "<a href=\"http://www.keepcon.com\" rel=\"nofollow\">Keepcon Platform</a>",
+    "in_reply_to_status_id": 1221966694429667329,
+    "in_reply_to_status_id_str": "1221966694429667329",
+    "in_reply_to_user_id": 196586170,
+    "in_reply_to_user_id_str": "196586170",
+    "in_reply_to_screen_name": "adrianomaca",
+    "user": {
+      "id": 292383655,
+      "id_str": "292383655",
+      "name": "iFood",
+      "screen_name": "iFood",
+      "location": "Brasil",
+      "description": "#PedeUmiFood",
+      "url": "https://t.co/0ouZ4c9iZW",
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "url": "https://t.co/0ouZ4c9iZW",
+              "expanded_url": "http://www.ifood.com.br",
+              "display_url": "ifood.com.br",
+              "indices": [
+                0,
+                23
+              ]
+            }
+          ]
+        },
+        "description": {
+          "urls": []
+        }
+      },
+      "protected": false,
+      "followers_count": 257276,
+      "friends_count": 15807,
+      "listed_count": 242,
+      "created_at": "Tue May 03 15:24:00 +0000 2011",
+      "favourites_count": 9751,
+      "utc_offset": null,
+      "time_zone": null,
+      "geo_enabled": true,
+      "verified": true,
+      "statuses_count": 53288,
+      "lang": null,
+      "contributors_enabled": false,
+      "is_translator": false,
+      "is_translation_enabled": false,
+      "profile_background_color": "9A2529",
+      "profile_background_image_url": "http://abs.twimg.com/images/themes/theme17/bg.gif",
+      "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme17/bg.gif",
+      "profile_background_tile": false,
+      "profile_image_url": "http://pbs.twimg.com/profile_images/887672393648414720/TVMqDVLD_normal.jpg",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/887672393648414720/TVMqDVLD_normal.jpg",
+      "profile_banner_url": "https://pbs.twimg.com/profile_banners/292383655/1579896488",
+      "profile_link_color": "9A2529",
+      "profile_sidebar_border_color": "FFFFFF",
+      "profile_sidebar_fill_color": "E6F6F9",
+      "profile_text_color": "333333",
+      "profile_use_background_image": false,
+      "has_extended_profile": false,
+      "default_profile": false,
+      "default_profile_image": false,
+      "can_media_tag": true,
+      "followed_by": false,
+      "following": false,
+      "follow_request_sent": false,
+      "notifications": false,
+      "translator_type": "none"
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "is_quote_status": false,
+    "retweet_count": 0,
+    "favorite_count": 0,
+    "favorited": false,
+    "retweeted": false,
+    "lang": "pt"
+  },
+  {
+    "created_at": "Tue Feb 04 18:40:24 +0000 2020",
+    "id": 1224764659842109440,
+    "id_str": "1224764659842109440",
+    "text": "@bernardogears Bernardo, manda o e-mail de cadastro na DM? Assim, vejo o que está acontecendo!",
+    "truncated": false,
+    "entities": {
+      "hashtags": [],
+      "symbols": [],
+      "user_mentions": [
+        {
+          "screen_name": "bernardogears",
+          "name": "Bernardo Lucas",
+          "id": 3044671060,
+          "id_str": "3044671060",
+          "indices": [
+            0,
+            14
+          ]
+        }
+      ],
+      "urls": []
+    },
+    "source": "<a href=\"http://www.keepcon.com\" rel=\"nofollow\">Keepcon Platform</a>",
+    "in_reply_to_status_id": 1222251883722682368,
+    "in_reply_to_status_id_str": "1222251883722682368",
+    "in_reply_to_user_id": 3044671060,
+    "in_reply_to_user_id_str": "3044671060",
+    "in_reply_to_screen_name": "bernardogears",
+    "user": {
+      "id": 292383655,
+      "id_str": "292383655",
+      "name": "iFood",
+      "screen_name": "iFood",
+      "location": "Brasil",
+      "description": "#PedeUmiFood",
+      "url": "https://t.co/0ouZ4c9iZW",
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "url": "https://t.co/0ouZ4c9iZW",
+              "expanded_url": "http://www.ifood.com.br",
+              "display_url": "ifood.com.br",
+              "indices": [
+                0,
+                23
+              ]
+            }
+          ]
+        },
+        "description": {
+          "urls": []
+        }
+      },
+      "protected": false,
+      "followers_count": 257276,
+      "friends_count": 15807,
+      "listed_count": 242,
+      "created_at": "Tue May 03 15:24:00 +0000 2011",
+      "favourites_count": 9751,
+      "utc_offset": null,
+      "time_zone": null,
+      "geo_enabled": true,
+      "verified": true,
+      "statuses_count": 53288,
+      "lang": null,
+      "contributors_enabled": false,
+      "is_translator": false,
+      "is_translation_enabled": false,
+      "profile_background_color": "9A2529",
+      "profile_background_image_url": "http://abs.twimg.com/images/themes/theme17/bg.gif",
+      "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme17/bg.gif",
+      "profile_background_tile": false,
+      "profile_image_url": "http://pbs.twimg.com/profile_images/887672393648414720/TVMqDVLD_normal.jpg",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/887672393648414720/TVMqDVLD_normal.jpg",
+      "profile_banner_url": "https://pbs.twimg.com/profile_banners/292383655/1579896488",
+      "profile_link_color": "9A2529",
+      "profile_sidebar_border_color": "FFFFFF",
+      "profile_sidebar_fill_color": "E6F6F9",
+      "profile_text_color": "333333",
+      "profile_use_background_image": false,
+      "has_extended_profile": false,
+      "default_profile": false,
+      "default_profile_image": false,
+      "can_media_tag": true,
+      "followed_by": false,
+      "following": false,
+      "follow_request_sent": false,
+      "notifications": false,
+      "translator_type": "none"
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "is_quote_status": false,
+    "retweet_count": 0,
+    "favorite_count": 1,
+    "favorited": false,
+    "retweeted": false,
+    "lang": "pt"
+  },
+  {
+    "created_at": "Tue Feb 04 18:11:13 +0000 2020",
+    "id": 1224757313296314368,
+    "id_str": "1224757313296314368",
+    "text": "@arrobaeduu Chama ali na DM e manda seu e-mail!",
+    "truncated": false,
+    "entities": {
+      "hashtags": [],
+      "symbols": [],
+      "user_mentions": [
+        {
+          "screen_name": "arrobaeduu",
+          "name": "unknown",
+          "id": 367997122,
+          "id_str": "367997122",
+          "indices": [
+            0,
+            11
+          ]
+        }
+      ],
+      "urls": []
+    },
+    "source": "<a href=\"http://www.keepcon.com\" rel=\"nofollow\">Keepcon Platform</a>",
+    "in_reply_to_status_id": 1222679846242918400,
+    "in_reply_to_status_id_str": "1222679846242918400",
+    "in_reply_to_user_id": 367997122,
+    "in_reply_to_user_id_str": "367997122",
+    "in_reply_to_screen_name": "arrobaeduu",
+    "user": {
+      "id": 292383655,
+      "id_str": "292383655",
+      "name": "iFood",
+      "screen_name": "iFood",
+      "location": "Brasil",
+      "description": "#PedeUmiFood",
+      "url": "https://t.co/0ouZ4c9iZW",
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "url": "https://t.co/0ouZ4c9iZW",
+              "expanded_url": "http://www.ifood.com.br",
+              "display_url": "ifood.com.br",
+              "indices": [
+                0,
+                23
+              ]
+            }
+          ]
+        },
+        "description": {
+          "urls": []
+        }
+      },
+      "protected": false,
+      "followers_count": 257276,
+      "friends_count": 15807,
+      "listed_count": 242,
+      "created_at": "Tue May 03 15:24:00 +0000 2011",
+      "favourites_count": 9751,
+      "utc_offset": null,
+      "time_zone": null,
+      "geo_enabled": true,
+      "verified": true,
+      "statuses_count": 53288,
+      "lang": null,
+      "contributors_enabled": false,
+      "is_translator": false,
+      "is_translation_enabled": false,
+      "profile_background_color": "9A2529",
+      "profile_background_image_url": "http://abs.twimg.com/images/themes/theme17/bg.gif",
+      "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme17/bg.gif",
+      "profile_background_tile": false,
+      "profile_image_url": "http://pbs.twimg.com/profile_images/887672393648414720/TVMqDVLD_normal.jpg",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/887672393648414720/TVMqDVLD_normal.jpg",
+      "profile_banner_url": "https://pbs.twimg.com/profile_banners/292383655/1579896488",
+      "profile_link_color": "9A2529",
+      "profile_sidebar_border_color": "FFFFFF",
+      "profile_sidebar_fill_color": "E6F6F9",
+      "profile_text_color": "333333",
+      "profile_use_background_image": false,
+      "has_extended_profile": false,
+      "default_profile": false,
+      "default_profile_image": false,
+      "can_media_tag": true,
+      "followed_by": false,
+      "following": false,
+      "follow_request_sent": false,
+      "notifications": false,
+      "translator_type": "none"
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "is_quote_status": false,
+    "retweet_count": 0,
+    "favorite_count": 1,
+    "favorited": false,
+    "retweeted": false,
+    "lang": "pt"
+  },
+  {
+    "created_at": "Tue Feb 04 17:56:07 +0000 2020",
+    "id": 1224753513273667584,
+    "id_str": "1224753513273667584",
+    "text": "@ratafilhadaputa Ei, me chama na DM e manda seu e-mail!",
+    "truncated": false,
+    "entities": {
+      "hashtags": [],
+      "symbols": [],
+      "user_mentions": [
+        {
+          "screen_name": "ratafilhadaputa",
+          "name": "Laryssa",
+          "id": 1194411437168484352,
+          "id_str": "1194411437168484352",
+          "indices": [
+            0,
+            16
+          ]
+        }
+      ],
+      "urls": []
+    },
+    "source": "<a href=\"http://www.keepcon.com\" rel=\"nofollow\">Keepcon Platform</a>",
+    "in_reply_to_status_id": 1222690997123133440,
+    "in_reply_to_status_id_str": "1222690997123133440",
+    "in_reply_to_user_id": 1194411437168484352,
+    "in_reply_to_user_id_str": "1194411437168484352",
+    "in_reply_to_screen_name": "ratafilhadaputa",
+    "user": {
+      "id": 292383655,
+      "id_str": "292383655",
+      "name": "iFood",
+      "screen_name": "iFood",
+      "location": "Brasil",
+      "description": "#PedeUmiFood",
+      "url": "https://t.co/0ouZ4c9iZW",
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "url": "https://t.co/0ouZ4c9iZW",
+              "expanded_url": "http://www.ifood.com.br",
+              "display_url": "ifood.com.br",
+              "indices": [
+                0,
+                23
+              ]
+            }
+          ]
+        },
+        "description": {
+          "urls": []
+        }
+      },
+      "protected": false,
+      "followers_count": 257276,
+      "friends_count": 15807,
+      "listed_count": 242,
+      "created_at": "Tue May 03 15:24:00 +0000 2011",
+      "favourites_count": 9751,
+      "utc_offset": null,
+      "time_zone": null,
+      "geo_enabled": true,
+      "verified": true,
+      "statuses_count": 53288,
+      "lang": null,
+      "contributors_enabled": false,
+      "is_translator": false,
+      "is_translation_enabled": false,
+      "profile_background_color": "9A2529",
+      "profile_background_image_url": "http://abs.twimg.com/images/themes/theme17/bg.gif",
+      "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme17/bg.gif",
+      "profile_background_tile": false,
+      "profile_image_url": "http://pbs.twimg.com/profile_images/887672393648414720/TVMqDVLD_normal.jpg",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/887672393648414720/TVMqDVLD_normal.jpg",
+      "profile_banner_url": "https://pbs.twimg.com/profile_banners/292383655/1579896488",
+      "profile_link_color": "9A2529",
+      "profile_sidebar_border_color": "FFFFFF",
+      "profile_sidebar_fill_color": "E6F6F9",
+      "profile_text_color": "333333",
+      "profile_use_background_image": false,
+      "has_extended_profile": false,
+      "default_profile": false,
+      "default_profile_image": false,
+      "can_media_tag": true,
+      "followed_by": false,
+      "following": false,
+      "follow_request_sent": false,
+      "notifications": false,
+      "translator_type": "none"
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "is_quote_status": false,
+    "retweet_count": 0,
+    "favorite_count": 2,
+    "favorited": false,
+    "retweeted": false,
+    "lang": "pt"
+  },
+  {
+    "created_at": "Tue Feb 04 17:52:14 +0000 2020",
+    "id": 1224752536625860608,
+    "id_str": "1224752536625860608",
+    "text": "@Maicon_Abreu Tô ali na DM se precisa, belê?",
+    "truncated": false,
+    "entities": {
+      "hashtags": [],
+      "symbols": [],
+      "user_mentions": [
+        {
+          "screen_name": "Maicon_Abreu",
+          "name": "Maicabrew",
+          "id": 57625235,
+          "id_str": "57625235",
+          "indices": [
+            0,
+            13
+          ]
+        }
+      ],
+      "urls": []
+    },
+    "source": "<a href=\"http://www.keepcon.com\" rel=\"nofollow\">Keepcon Platform</a>",
+    "in_reply_to_status_id": 1222240883501936640,
+    "in_reply_to_status_id_str": "1222240883501936640",
+    "in_reply_to_user_id": 57625235,
+    "in_reply_to_user_id_str": "57625235",
+    "in_reply_to_screen_name": "Maicon_Abreu",
+    "user": {
+      "id": 292383655,
+      "id_str": "292383655",
+      "name": "iFood",
+      "screen_name": "iFood",
+      "location": "Brasil",
+      "description": "#PedeUmiFood",
+      "url": "https://t.co/0ouZ4c9iZW",
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "url": "https://t.co/0ouZ4c9iZW",
+              "expanded_url": "http://www.ifood.com.br",
+              "display_url": "ifood.com.br",
+              "indices": [
+                0,
+                23
+              ]
+            }
+          ]
+        },
+        "description": {
+          "urls": []
+        }
+      },
+      "protected": false,
+      "followers_count": 257276,
+      "friends_count": 15807,
+      "listed_count": 242,
+      "created_at": "Tue May 03 15:24:00 +0000 2011",
+      "favourites_count": 9751,
+      "utc_offset": null,
+      "time_zone": null,
+      "geo_enabled": true,
+      "verified": true,
+      "statuses_count": 53288,
+      "lang": null,
+      "contributors_enabled": false,
+      "is_translator": false,
+      "is_translation_enabled": false,
+      "profile_background_color": "9A2529",
+      "profile_background_image_url": "http://abs.twimg.com/images/themes/theme17/bg.gif",
+      "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme17/bg.gif",
+      "profile_background_tile": false,
+      "profile_image_url": "http://pbs.twimg.com/profile_images/887672393648414720/TVMqDVLD_normal.jpg",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/887672393648414720/TVMqDVLD_normal.jpg",
+      "profile_banner_url": "https://pbs.twimg.com/profile_banners/292383655/1579896488",
+      "profile_link_color": "9A2529",
+      "profile_sidebar_border_color": "FFFFFF",
+      "profile_sidebar_fill_color": "E6F6F9",
+      "profile_text_color": "333333",
+      "profile_use_background_image": false,
+      "has_extended_profile": false,
+      "default_profile": false,
+      "default_profile_image": false,
+      "can_media_tag": true,
+      "followed_by": false,
+      "following": false,
+      "follow_request_sent": false,
+      "notifications": false,
+      "translator_type": "none"
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "is_quote_status": false,
+    "retweet_count": 0,
+    "favorite_count": 0,
+    "favorited": false,
+    "retweeted": false,
+    "lang": "pt"
+  },
+  {
+    "created_at": "Tue Feb 04 17:03:09 +0000 2020",
+    "id": 1224740185973428225,
+    "id_str": "1224740185973428225",
+    "text": "@cheldouglas Oi? Me chama na DM!",
+    "truncated": false,
+    "entities": {
+      "hashtags": [],
+      "symbols": [],
+      "user_mentions": [
+        {
+          "screen_name": "cheldouglas",
+          "name": "michell douglas",
+          "id": 710901616417906688,
+          "id_str": "710901616417906688",
+          "indices": [
+            0,
+            12
+          ]
+        }
+      ],
+      "urls": []
+    },
+    "source": "<a href=\"http://www.keepcon.com\" rel=\"nofollow\">Keepcon Platform</a>",
+    "in_reply_to_status_id": 1222261051539935233,
+    "in_reply_to_status_id_str": "1222261051539935233",
+    "in_reply_to_user_id": 710901616417906688,
+    "in_reply_to_user_id_str": "710901616417906688",
+    "in_reply_to_screen_name": "cheldouglas",
+    "user": {
+      "id": 292383655,
+      "id_str": "292383655",
+      "name": "iFood",
+      "screen_name": "iFood",
+      "location": "Brasil",
+      "description": "#PedeUmiFood",
+      "url": "https://t.co/0ouZ4c9iZW",
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "url": "https://t.co/0ouZ4c9iZW",
+              "expanded_url": "http://www.ifood.com.br",
+              "display_url": "ifood.com.br",
+              "indices": [
+                0,
+                23
+              ]
+            }
+          ]
+        },
+        "description": {
+          "urls": []
+        }
+      },
+      "protected": false,
+      "followers_count": 257276,
+      "friends_count": 15807,
+      "listed_count": 242,
+      "created_at": "Tue May 03 15:24:00 +0000 2011",
+      "favourites_count": 9751,
+      "utc_offset": null,
+      "time_zone": null,
+      "geo_enabled": true,
+      "verified": true,
+      "statuses_count": 53288,
+      "lang": null,
+      "contributors_enabled": false,
+      "is_translator": false,
+      "is_translation_enabled": false,
+      "profile_background_color": "9A2529",
+      "profile_background_image_url": "http://abs.twimg.com/images/themes/theme17/bg.gif",
+      "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme17/bg.gif",
+      "profile_background_tile": false,
+      "profile_image_url": "http://pbs.twimg.com/profile_images/887672393648414720/TVMqDVLD_normal.jpg",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/887672393648414720/TVMqDVLD_normal.jpg",
+      "profile_banner_url": "https://pbs.twimg.com/profile_banners/292383655/1579896488",
+      "profile_link_color": "9A2529",
+      "profile_sidebar_border_color": "FFFFFF",
+      "profile_sidebar_fill_color": "E6F6F9",
+      "profile_text_color": "333333",
+      "profile_use_background_image": false,
+      "has_extended_profile": false,
+      "default_profile": false,
+      "default_profile_image": false,
+      "can_media_tag": true,
+      "followed_by": false,
+      "following": false,
+      "follow_request_sent": false,
+      "notifications": false,
+      "translator_type": "none"
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "is_quote_status": false,
+    "retweet_count": 0,
+    "favorite_count": 0,
+    "favorited": false,
+    "retweeted": false,
+    "lang": "pt"
+  },
+  {
+    "created_at": "Tue Feb 04 16:34:55 +0000 2020",
+    "id": 1224733080474267648,
+    "id_str": "1224733080474267648",
+    "text": "@1979Marcelobcs Me chama na DM",
+    "truncated": false,
+    "entities": {
+      "hashtags": [],
+      "symbols": [],
+      "user_mentions": [
+        {
+          "screen_name": "1979Marcelobcs",
+          "name": "marcelobcs_1979",
+          "id": 1221966521683075073,
+          "id_str": "1221966521683075073",
+          "indices": [
+            0,
+            15
+          ]
+        }
+      ],
+      "urls": []
+    },
+    "source": "<a href=\"http://www.keepcon.com\" rel=\"nofollow\">Keepcon Platform</a>",
+    "in_reply_to_status_id": 1221997587894587393,
+    "in_reply_to_status_id_str": "1221997587894587393",
+    "in_reply_to_user_id": 1221966521683075073,
+    "in_reply_to_user_id_str": "1221966521683075073",
+    "in_reply_to_screen_name": "1979Marcelobcs",
+    "user": {
+      "id": 292383655,
+      "id_str": "292383655",
+      "name": "iFood",
+      "screen_name": "iFood",
+      "location": "Brasil",
+      "description": "#PedeUmiFood",
+      "url": "https://t.co/0ouZ4c9iZW",
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "url": "https://t.co/0ouZ4c9iZW",
+              "expanded_url": "http://www.ifood.com.br",
+              "display_url": "ifood.com.br",
+              "indices": [
+                0,
+                23
+              ]
+            }
+          ]
+        },
+        "description": {
+          "urls": []
+        }
+      },
+      "protected": false,
+      "followers_count": 257276,
+      "friends_count": 15807,
+      "listed_count": 242,
+      "created_at": "Tue May 03 15:24:00 +0000 2011",
+      "favourites_count": 9751,
+      "utc_offset": null,
+      "time_zone": null,
+      "geo_enabled": true,
+      "verified": true,
+      "statuses_count": 53288,
+      "lang": null,
+      "contributors_enabled": false,
+      "is_translator": false,
+      "is_translation_enabled": false,
+      "profile_background_color": "9A2529",
+      "profile_background_image_url": "http://abs.twimg.com/images/themes/theme17/bg.gif",
+      "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme17/bg.gif",
+      "profile_background_tile": false,
+      "profile_image_url": "http://pbs.twimg.com/profile_images/887672393648414720/TVMqDVLD_normal.jpg",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/887672393648414720/TVMqDVLD_normal.jpg",
+      "profile_banner_url": "https://pbs.twimg.com/profile_banners/292383655/1579896488",
+      "profile_link_color": "9A2529",
+      "profile_sidebar_border_color": "FFFFFF",
+      "profile_sidebar_fill_color": "E6F6F9",
+      "profile_text_color": "333333",
+      "profile_use_background_image": false,
+      "has_extended_profile": false,
+      "default_profile": false,
+      "default_profile_image": false,
+      "can_media_tag": true,
+      "followed_by": false,
+      "following": false,
+      "follow_request_sent": false,
+      "notifications": false,
+      "translator_type": "none"
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "is_quote_status": false,
+    "retweet_count": 0,
+    "favorite_count": 0,
+    "favorited": false,
+    "retweeted": false,
+    "lang": "pt"
+  },
+  {
+    "created_at": "Tue Feb 04 15:39:24 +0000 2020",
+    "id": 1224719108098396161,
+    "id_str": "1224719108098396161",
+    "text": "@AstroNatasha Vamos conversar na DM? Me chama lá",
+    "truncated": false,
+    "entities": {
+      "hashtags": [],
+      "symbols": [],
+      "user_mentions": [
+        {
+          "screen_name": "AstroNatasha",
+          "name": "Natasha Costa",
+          "id": 1067893957319958539,
+          "id_str": "1067893957319958539",
+          "indices": [
+            0,
+            13
+          ]
+        }
+      ],
+      "urls": []
+    },
+    "source": "<a href=\"http://www.keepcon.com\" rel=\"nofollow\">Keepcon Platform</a>",
+    "in_reply_to_status_id": 1224716884546899969,
+    "in_reply_to_status_id_str": "1224716884546899969",
+    "in_reply_to_user_id": 1067893957319958539,
+    "in_reply_to_user_id_str": "1067893957319958539",
+    "in_reply_to_screen_name": "AstroNatasha",
+    "user": {
+      "id": 292383655,
+      "id_str": "292383655",
+      "name": "iFood",
+      "screen_name": "iFood",
+      "location": "Brasil",
+      "description": "#PedeUmiFood",
+      "url": "https://t.co/0ouZ4c9iZW",
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "url": "https://t.co/0ouZ4c9iZW",
+              "expanded_url": "http://www.ifood.com.br",
+              "display_url": "ifood.com.br",
+              "indices": [
+                0,
+                23
+              ]
+            }
+          ]
+        },
+        "description": {
+          "urls": []
+        }
+      },
+      "protected": false,
+      "followers_count": 257276,
+      "friends_count": 15807,
+      "listed_count": 242,
+      "created_at": "Tue May 03 15:24:00 +0000 2011",
+      "favourites_count": 9751,
+      "utc_offset": null,
+      "time_zone": null,
+      "geo_enabled": true,
+      "verified": true,
+      "statuses_count": 53288,
+      "lang": null,
+      "contributors_enabled": false,
+      "is_translator": false,
+      "is_translation_enabled": false,
+      "profile_background_color": "9A2529",
+      "profile_background_image_url": "http://abs.twimg.com/images/themes/theme17/bg.gif",
+      "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme17/bg.gif",
+      "profile_background_tile": false,
+      "profile_image_url": "http://pbs.twimg.com/profile_images/887672393648414720/TVMqDVLD_normal.jpg",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/887672393648414720/TVMqDVLD_normal.jpg",
+      "profile_banner_url": "https://pbs.twimg.com/profile_banners/292383655/1579896488",
+      "profile_link_color": "9A2529",
+      "profile_sidebar_border_color": "FFFFFF",
+      "profile_sidebar_fill_color": "E6F6F9",
+      "profile_text_color": "333333",
+      "profile_use_background_image": false,
+      "has_extended_profile": false,
+      "default_profile": false,
+      "default_profile_image": false,
+      "can_media_tag": true,
+      "followed_by": false,
+      "following": false,
+      "follow_request_sent": false,
+      "notifications": false,
+      "translator_type": "none"
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "is_quote_status": false,
+    "retweet_count": 0,
+    "favorite_count": 2,
+    "favorited": false,
+    "retweeted": false,
+    "lang": "pt"
+  },
+  {
+    "created_at": "Tue Feb 04 14:48:02 +0000 2020",
+    "id": 1224706183191322625,
+    "id_str": "1224706183191322625",
+    "text": "@samyxrodrigues Me chama na DM pra conversarmos?",
+    "truncated": false,
+    "entities": {
+      "hashtags": [],
+      "symbols": [],
+      "user_mentions": [
+        {
+          "screen_name": "samyxrodrigues",
+          "name": "samy",
+          "id": 968615383799336960,
+          "id_str": "968615383799336960",
+          "indices": [
+            0,
+            15
+          ]
+        }
+      ],
+      "urls": []
+    },
+    "source": "<a href=\"http://www.keepcon.com\" rel=\"nofollow\">Keepcon Platform</a>",
+    "in_reply_to_status_id": 1222315119717294080,
+    "in_reply_to_status_id_str": "1222315119717294080",
+    "in_reply_to_user_id": 968615383799336960,
+    "in_reply_to_user_id_str": "968615383799336960",
+    "in_reply_to_screen_name": "samyxrodrigues",
+    "user": {
+      "id": 292383655,
+      "id_str": "292383655",
+      "name": "iFood",
+      "screen_name": "iFood",
+      "location": "Brasil",
+      "description": "#PedeUmiFood",
+      "url": "https://t.co/0ouZ4c9iZW",
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "url": "https://t.co/0ouZ4c9iZW",
+              "expanded_url": "http://www.ifood.com.br",
+              "display_url": "ifood.com.br",
+              "indices": [
+                0,
+                23
+              ]
+            }
+          ]
+        },
+        "description": {
+          "urls": []
+        }
+      },
+      "protected": false,
+      "followers_count": 257276,
+      "friends_count": 15807,
+      "listed_count": 242,
+      "created_at": "Tue May 03 15:24:00 +0000 2011",
+      "favourites_count": 9751,
+      "utc_offset": null,
+      "time_zone": null,
+      "geo_enabled": true,
+      "verified": true,
+      "statuses_count": 53288,
+      "lang": null,
+      "contributors_enabled": false,
+      "is_translator": false,
+      "is_translation_enabled": false,
+      "profile_background_color": "9A2529",
+      "profile_background_image_url": "http://abs.twimg.com/images/themes/theme17/bg.gif",
+      "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme17/bg.gif",
+      "profile_background_tile": false,
+      "profile_image_url": "http://pbs.twimg.com/profile_images/887672393648414720/TVMqDVLD_normal.jpg",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/887672393648414720/TVMqDVLD_normal.jpg",
+      "profile_banner_url": "https://pbs.twimg.com/profile_banners/292383655/1579896488",
+      "profile_link_color": "9A2529",
+      "profile_sidebar_border_color": "FFFFFF",
+      "profile_sidebar_fill_color": "E6F6F9",
+      "profile_text_color": "333333",
+      "profile_use_background_image": false,
+      "has_extended_profile": false,
+      "default_profile": false,
+      "default_profile_image": false,
+      "can_media_tag": true,
+      "followed_by": false,
+      "following": false,
+      "follow_request_sent": false,
+      "notifications": false,
+      "translator_type": "none"
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "is_quote_status": false,
+    "retweet_count": 0,
+    "favorite_count": 0,
+    "favorited": false,
+    "retweeted": false,
+    "lang": "pt"
+  },
+  {
+    "created_at": "Tue Feb 04 14:23:03 +0000 2020",
+    "id": 1224699894323130368,
+    "id_str": "1224699894323130368",
+    "text": "@abissacot André, pode mandar o e-mail da sua conta por DM, por favor?",
+    "truncated": false,
+    "entities": {
+      "hashtags": [],
+      "symbols": [],
+      "user_mentions": [
+        {
+          "screen_name": "abissacot",
+          "name": "André Bissacot",
+          "id": 2922751858,
+          "id_str": "2922751858",
+          "indices": [
+            0,
+            10
+          ]
+        }
+      ],
+      "urls": []
+    },
+    "source": "<a href=\"http://www.keepcon.com\" rel=\"nofollow\">Keepcon Platform</a>",
+    "in_reply_to_status_id": 1222202510619877377,
+    "in_reply_to_status_id_str": "1222202510619877377",
+    "in_reply_to_user_id": 2922751858,
+    "in_reply_to_user_id_str": "2922751858",
+    "in_reply_to_screen_name": "abissacot",
+    "user": {
+      "id": 292383655,
+      "id_str": "292383655",
+      "name": "iFood",
+      "screen_name": "iFood",
+      "location": "Brasil",
+      "description": "#PedeUmiFood",
+      "url": "https://t.co/0ouZ4c9iZW",
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "url": "https://t.co/0ouZ4c9iZW",
+              "expanded_url": "http://www.ifood.com.br",
+              "display_url": "ifood.com.br",
+              "indices": [
+                0,
+                23
+              ]
+            }
+          ]
+        },
+        "description": {
+          "urls": []
+        }
+      },
+      "protected": false,
+      "followers_count": 257276,
+      "friends_count": 15807,
+      "listed_count": 242,
+      "created_at": "Tue May 03 15:24:00 +0000 2011",
+      "favourites_count": 9751,
+      "utc_offset": null,
+      "time_zone": null,
+      "geo_enabled": true,
+      "verified": true,
+      "statuses_count": 53288,
+      "lang": null,
+      "contributors_enabled": false,
+      "is_translator": false,
+      "is_translation_enabled": false,
+      "profile_background_color": "9A2529",
+      "profile_background_image_url": "http://abs.twimg.com/images/themes/theme17/bg.gif",
+      "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme17/bg.gif",
+      "profile_background_tile": false,
+      "profile_image_url": "http://pbs.twimg.com/profile_images/887672393648414720/TVMqDVLD_normal.jpg",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/887672393648414720/TVMqDVLD_normal.jpg",
+      "profile_banner_url": "https://pbs.twimg.com/profile_banners/292383655/1579896488",
+      "profile_link_color": "9A2529",
+      "profile_sidebar_border_color": "FFFFFF",
+      "profile_sidebar_fill_color": "E6F6F9",
+      "profile_text_color": "333333",
+      "profile_use_background_image": false,
+      "has_extended_profile": false,
+      "default_profile": false,
+      "default_profile_image": false,
+      "can_media_tag": true,
+      "followed_by": false,
+      "following": false,
+      "follow_request_sent": false,
+      "notifications": false,
+      "translator_type": "none"
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "is_quote_status": false,
+    "retweet_count": 0,
+    "favorite_count": 0,
+    "favorited": false,
+    "retweeted": false,
+    "lang": "pt"
+  },
+  {
+    "created_at": "Tue Feb 04 13:46:20 +0000 2020",
+    "id": 1224690653487124480,
+    "id_str": "1224690653487124480",
+    "text": "@pipocafeelings Pode me chamar na DM se precisar, blz?",
+    "truncated": false,
+    "entities": {
+      "hashtags": [],
+      "symbols": [],
+      "user_mentions": [
+        {
+          "screen_name": "pipocafeelings",
+          "name": "bebelle 🦈",
+          "id": 2975521150,
+          "id_str": "2975521150",
+          "indices": [
+            0,
+            15
+          ]
+        }
+      ],
+      "urls": []
+    },
+    "source": "<a href=\"http://www.keepcon.com\" rel=\"nofollow\">Keepcon Platform</a>",
+    "in_reply_to_status_id": 1222300452945125378,
+    "in_reply_to_status_id_str": "1222300452945125378",
+    "in_reply_to_user_id": 2975521150,
+    "in_reply_to_user_id_str": "2975521150",
+    "in_reply_to_screen_name": "pipocafeelings",
+    "user": {
+      "id": 292383655,
+      "id_str": "292383655",
+      "name": "iFood",
+      "screen_name": "iFood",
+      "location": "Brasil",
+      "description": "#PedeUmiFood",
+      "url": "https://t.co/0ouZ4c9iZW",
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "url": "https://t.co/0ouZ4c9iZW",
+              "expanded_url": "http://www.ifood.com.br",
+              "display_url": "ifood.com.br",
+              "indices": [
+                0,
+                23
+              ]
+            }
+          ]
+        },
+        "description": {
+          "urls": []
+        }
+      },
+      "protected": false,
+      "followers_count": 257276,
+      "friends_count": 15807,
+      "listed_count": 242,
+      "created_at": "Tue May 03 15:24:00 +0000 2011",
+      "favourites_count": 9751,
+      "utc_offset": null,
+      "time_zone": null,
+      "geo_enabled": true,
+      "verified": true,
+      "statuses_count": 53288,
+      "lang": null,
+      "contributors_enabled": false,
+      "is_translator": false,
+      "is_translation_enabled": false,
+      "profile_background_color": "9A2529",
+      "profile_background_image_url": "http://abs.twimg.com/images/themes/theme17/bg.gif",
+      "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme17/bg.gif",
+      "profile_background_tile": false,
+      "profile_image_url": "http://pbs.twimg.com/profile_images/887672393648414720/TVMqDVLD_normal.jpg",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/887672393648414720/TVMqDVLD_normal.jpg",
+      "profile_banner_url": "https://pbs.twimg.com/profile_banners/292383655/1579896488",
+      "profile_link_color": "9A2529",
+      "profile_sidebar_border_color": "FFFFFF",
+      "profile_sidebar_fill_color": "E6F6F9",
+      "profile_text_color": "333333",
+      "profile_use_background_image": false,
+      "has_extended_profile": false,
+      "default_profile": false,
+      "default_profile_image": false,
+      "can_media_tag": true,
+      "followed_by": false,
+      "following": false,
+      "follow_request_sent": false,
+      "notifications": false,
+      "translator_type": "none"
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "is_quote_status": false,
+    "retweet_count": 0,
+    "favorite_count": 0,
+    "favorited": false,
+    "retweeted": false,
+    "lang": "pt"
+  },
+  {
+    "created_at": "Tue Feb 04 00:11:39 +0000 2020",
+    "id": 1224485633319751681,
+    "id_str": "1224485633319751681",
+    "text": "@ramonpesci Voltou ao normal?",
+    "truncated": false,
+    "entities": {
+      "hashtags": [],
+      "symbols": [],
+      "user_mentions": [
+        {
+          "screen_name": "ramonpesci",
+          "name": "Ramon Pesci",
+          "id": 57848001,
+          "id_str": "57848001",
+          "indices": [
+            0,
+            11
+          ]
+        }
+      ],
+      "urls": []
+    },
+    "source": "<a href=\"http://www.keepcon.com\" rel=\"nofollow\">Keepcon Platform</a>",
+    "in_reply_to_status_id": 1224478073401290752,
+    "in_reply_to_status_id_str": "1224478073401290752",
+    "in_reply_to_user_id": 57848001,
+    "in_reply_to_user_id_str": "57848001",
+    "in_reply_to_screen_name": "ramonpesci",
+    "user": {
+      "id": 292383655,
+      "id_str": "292383655",
+      "name": "iFood",
+      "screen_name": "iFood",
+      "location": "Brasil",
+      "description": "#PedeUmiFood",
+      "url": "https://t.co/0ouZ4c9iZW",
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "url": "https://t.co/0ouZ4c9iZW",
+              "expanded_url": "http://www.ifood.com.br",
+              "display_url": "ifood.com.br",
+              "indices": [
+                0,
+                23
+              ]
+            }
+          ]
+        },
+        "description": {
+          "urls": []
+        }
+      },
+      "protected": false,
+      "followers_count": 257276,
+      "friends_count": 15807,
+      "listed_count": 242,
+      "created_at": "Tue May 03 15:24:00 +0000 2011",
+      "favourites_count": 9751,
+      "utc_offset": null,
+      "time_zone": null,
+      "geo_enabled": true,
+      "verified": true,
+      "statuses_count": 53288,
+      "lang": null,
+      "contributors_enabled": false,
+      "is_translator": false,
+      "is_translation_enabled": false,
+      "profile_background_color": "9A2529",
+      "profile_background_image_url": "http://abs.twimg.com/images/themes/theme17/bg.gif",
+      "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme17/bg.gif",
+      "profile_background_tile": false,
+      "profile_image_url": "http://pbs.twimg.com/profile_images/887672393648414720/TVMqDVLD_normal.jpg",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/887672393648414720/TVMqDVLD_normal.jpg",
+      "profile_banner_url": "https://pbs.twimg.com/profile_banners/292383655/1579896488",
+      "profile_link_color": "9A2529",
+      "profile_sidebar_border_color": "FFFFFF",
+      "profile_sidebar_fill_color": "E6F6F9",
+      "profile_text_color": "333333",
+      "profile_use_background_image": false,
+      "has_extended_profile": false,
+      "default_profile": false,
+      "default_profile_image": false,
+      "can_media_tag": true,
+      "followed_by": false,
+      "following": false,
+      "follow_request_sent": false,
+      "notifications": false,
+      "translator_type": "none"
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "is_quote_status": false,
+    "retweet_count": 0,
+    "favorite_count": 0,
+    "favorited": false,
+    "retweeted": false,
+    "lang": "pt"
+  }
+]

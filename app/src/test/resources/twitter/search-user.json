@@ -1,0 +1,467 @@
+[
+  {
+    "id": 292383655,
+    "id_str": "292383655",
+    "name": "iFood",
+    "screen_name": "iFood",
+    "location": "Brasil",
+    "description": "#PedeUmiFood",
+    "url": "https://t.co/0ouZ4c9iZW",
+    "entities": {
+      "url": {
+        "urls": [
+          {
+            "url": "https://t.co/0ouZ4c9iZW",
+            "expanded_url": "http://www.ifood.com.br",
+            "display_url": "ifood.com.br",
+            "indices": [
+              0,
+              23
+            ]
+          }
+        ]
+      },
+      "description": {
+        "urls": []
+      }
+    },
+    "protected": false,
+    "followers_count": 257276,
+    "friends_count": 15807,
+    "listed_count": 242,
+    "created_at": "Tue May 03 15:24:00 +0000 2011",
+    "favourites_count": 9751,
+    "utc_offset": null,
+    "time_zone": null,
+    "geo_enabled": true,
+    "verified": true,
+    "statuses_count": 53288,
+    "lang": null,
+    "status": {
+      "created_at": "Wed Feb 05 00:30:59 +0000 2020",
+      "id": 1224852887270035457,
+      "id_str": "1224852887270035457",
+      "text": "@marzza_crf 😃",
+      "truncated": false,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "user_mentions": [
+          {
+            "screen_name": "marzza_crf",
+            "name": "nath ❤🖤",
+            "id": 1857986107,
+            "id_str": "1857986107",
+            "indices": [
+              0,
+              11
+            ]
+          }
+        ],
+        "urls": []
+      },
+      "source": "<a href=\"http://www.keepcon.com\" rel=\"nofollow\">Keepcon Platform</a>",
+      "in_reply_to_status_id": 1224852867271548929,
+      "in_reply_to_status_id_str": "1224852867271548929",
+      "in_reply_to_user_id": 1857986107,
+      "in_reply_to_user_id_str": "1857986107",
+      "in_reply_to_screen_name": "marzza_crf",
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "is_quote_status": false,
+      "retweet_count": 0,
+      "favorite_count": 2,
+      "favorited": false,
+      "retweeted": false,
+      "lang": "und"
+    },
+    "contributors_enabled": false,
+    "is_translator": false,
+    "is_translation_enabled": false,
+    "profile_background_color": "9A2529",
+    "profile_background_image_url": "http://abs.twimg.com/images/themes/theme17/bg.gif",
+    "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme17/bg.gif",
+    "profile_background_tile": false,
+    "profile_image_url": "http://pbs.twimg.com/profile_images/887672393648414720/TVMqDVLD_normal.jpg",
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/887672393648414720/TVMqDVLD_normal.jpg",
+    "profile_banner_url": "https://pbs.twimg.com/profile_banners/292383655/1579896488",
+    "profile_link_color": "9A2529",
+    "profile_sidebar_border_color": "FFFFFF",
+    "profile_sidebar_fill_color": "E6F6F9",
+    "profile_text_color": "333333",
+    "profile_use_background_image": false,
+    "has_extended_profile": false,
+    "default_profile": false,
+    "default_profile_image": false,
+    "can_media_tag": true,
+    "followed_by": false,
+    "following": false,
+    "follow_request_sent": false,
+    "notifications": false,
+    "translator_type": "none"
+  },
+  {
+    "id": 466767037,
+    "id_str": "466767037",
+    "name": "IFood Cupom Desconto",
+    "screen_name": "IfoodCupomBR",
+    "location": "Brasil",
+    "description": "IFood Cupom Desconto. Quer R$20,00 agora? Use o código: Q8K87MRJBF\nIFood descontos. Códigos de desconto. Ganhe 20 Reais código: Q8K87MRJBF\n*Não somos do IFood",
+    "url": "https://t.co/0BXuM8IoHA",
+    "entities": {
+      "url": {
+        "urls": [
+          {
+            "url": "https://t.co/0BXuM8IoHA",
+            "expanded_url": "https://ifoodbr.onelink.me/F4X4/mgm?mgm_code=Q8K87MRJBF",
+            "display_url": "ifoodbr.onelink.me/F4X4/mgm?mgm_c…",
+            "indices": [
+              0,
+              23
+            ]
+          }
+        ]
+      },
+      "description": {
+        "urls": []
+      }
+    },
+    "protected": false,
+    "followers_count": 2368,
+    "friends_count": 22,
+    "listed_count": 1,
+    "created_at": "Tue Jan 17 19:29:53 +0000 2012",
+    "favourites_count": 13,
+    "utc_offset": null,
+    "time_zone": null,
+    "geo_enabled": false,
+    "verified": false,
+    "statuses_count": 69,
+    "lang": null,
+    "status": {
+      "created_at": "Tue Feb 04 22:57:49 +0000 2020",
+      "id": 1224829439827161088,
+      "id_str": "1224829439827161088",
+      "text": "IFOOD CUPOM DE 20 REAIS 😍\nAPROVEITE O AUMENTO NO DESCONTO PARA 20 REAIS.\nSeu pedido pode sair quase de graça. 🍟🍔❤️… https://t.co/k4LOO75u5l",
+      "truncated": true,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "user_mentions": [],
+        "urls": [
+          {
+            "url": "https://t.co/k4LOO75u5l",
+            "expanded_url": "https://twitter.com/i/web/status/1224829439827161088",
+            "display_url": "twitter.com/i/web/status/1…",
+            "indices": [
+              116,
+              139
+            ]
+          }
+        ]
+      },
+      "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Twitter Web App</a>",
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": null,
+      "in_reply_to_user_id_str": null,
+      "in_reply_to_screen_name": null,
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "is_quote_status": false,
+      "retweet_count": 0,
+      "favorite_count": 3,
+      "favorited": false,
+      "retweeted": false,
+      "possibly_sensitive": false,
+      "lang": "pt"
+    },
+    "contributors_enabled": false,
+    "is_translator": false,
+    "is_translation_enabled": false,
+    "profile_background_color": "C0DEED",
+    "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+    "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+    "profile_background_tile": false,
+    "profile_image_url": "http://pbs.twimg.com/profile_images/1182527355421626368/tKgkKrE2_normal.jpg",
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/1182527355421626368/tKgkKrE2_normal.jpg",
+    "profile_banner_url": "https://pbs.twimg.com/profile_banners/466767037/1570771467",
+    "profile_link_color": "0084B4",
+    "profile_sidebar_border_color": "C0DEED",
+    "profile_sidebar_fill_color": "DDEEF6",
+    "profile_text_color": "333333",
+    "profile_use_background_image": true,
+    "has_extended_profile": false,
+    "default_profile": false,
+    "default_profile_image": false,
+    "can_media_tag": true,
+    "followed_by": false,
+    "following": false,
+    "follow_request_sent": false,
+    "notifications": false,
+    "translator_type": "none"
+  },
+  {
+    "id": 1154805203633414144,
+    "id_str": "1154805203633414144",
+    "name": "Cupom iFood",
+    "screen_name": "CupomiFood1",
+    "location": "",
+    "description": "Cupons e códigos de desconto iFood!!! Cupom iFood: PBG9ZTKX22",
+    "url": null,
+    "entities": {
+      "description": {
+        "urls": []
+      }
+    },
+    "protected": false,
+    "followers_count": 1680,
+    "friends_count": 1798,
+    "listed_count": 0,
+    "created_at": "Fri Jul 26 17:26:30 +0000 2019",
+    "favourites_count": 17786,
+    "utc_offset": null,
+    "time_zone": null,
+    "geo_enabled": false,
+    "verified": false,
+    "statuses_count": 249,
+    "lang": null,
+    "status": {
+      "created_at": "Wed Feb 05 01:45:52 +0000 2020",
+      "id": 1224871731023810560,
+      "id_str": "1224871731023810560",
+      "text": "Cupom código de desconto promoção:\niFood R$20 em comida: \n\n🍔🍟🍕🍣🍦🍝🍜🌭🌮🥙\n\nPBG9ZTKX22\n\nou\n\nL6PDETRYR5\n\n🍔🍟🍕🍣🍦🍝🍜🌭🌮🍕🍕🍕🍕🍔",
+      "truncated": false,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "user_mentions": [],
+        "urls": []
+      },
+      "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": null,
+      "in_reply_to_user_id_str": null,
+      "in_reply_to_screen_name": null,
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "is_quote_status": false,
+      "retweet_count": 0,
+      "favorite_count": 2,
+      "favorited": false,
+      "retweeted": false,
+      "lang": "pt"
+    },
+    "contributors_enabled": false,
+    "is_translator": false,
+    "is_translation_enabled": false,
+    "profile_background_color": "F5F8FA",
+    "profile_background_image_url": null,
+    "profile_background_image_url_https": null,
+    "profile_background_tile": false,
+    "profile_image_url": "http://pbs.twimg.com/profile_images/1168719707547033600/QC8C40zG_normal.jpg",
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/1168719707547033600/QC8C40zG_normal.jpg",
+    "profile_banner_url": "https://pbs.twimg.com/profile_banners/1154805203633414144/1567479482",
+    "profile_link_color": "1DA1F2",
+    "profile_sidebar_border_color": "C0DEED",
+    "profile_sidebar_fill_color": "DDEEF6",
+    "profile_text_color": "333333",
+    "profile_use_background_image": true,
+    "has_extended_profile": false,
+    "default_profile": true,
+    "default_profile_image": false,
+    "can_media_tag": true,
+    "followed_by": false,
+    "following": false,
+    "follow_request_sent": false,
+    "notifications": false,
+    "translator_type": "none"
+  },
+  {
+    "id": 885117748040413185,
+    "id_str": "885117748040413185",
+    "name": "Cupom do Ifood",
+    "screen_name": "CupomdoIfood",
+    "location": "",
+    "description": "",
+    "url": null,
+    "entities": {
+      "description": {
+        "urls": []
+      }
+    },
+    "protected": false,
+    "followers_count": 1876,
+    "friends_count": 20,
+    "listed_count": 1,
+    "created_at": "Wed Jul 12 12:44:50 +0000 2017",
+    "favourites_count": 1571,
+    "utc_offset": null,
+    "time_zone": null,
+    "geo_enabled": false,
+    "verified": false,
+    "statuses_count": 4764,
+    "lang": null,
+    "status": {
+      "created_at": "Wed Feb 05 03:54:04 +0000 2020",
+      "id": 1224903996025995270,
+      "id_str": "1224903996025995270",
+      "text": "Usa todos hein!\nCupom ifood (usar no app) =&gt; EE6HZ487AL\nCódigo Rappi =&gt; 82q38640354\nShipp (delivery) -&gt; ALE1U4\nR$ 1… https://t.co/PxWwH4DTJ2",
+      "truncated": true,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "user_mentions": [],
+        "urls": [
+          {
+            "url": "https://t.co/PxWwH4DTJ2",
+            "expanded_url": "https://twitter.com/i/web/status/1224903996025995270",
+            "display_url": "twitter.com/i/web/status/1…",
+            "indices": [
+              126,
+              149
+            ]
+          }
+        ]
+      },
+      "source": "<a href=\"https://postcron.com\" rel=\"nofollow\">Postcron App</a>",
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": null,
+      "in_reply_to_user_id_str": null,
+      "in_reply_to_screen_name": null,
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "is_quote_status": false,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "favorited": false,
+      "retweeted": false,
+      "possibly_sensitive": false,
+      "lang": "pt"
+    },
+    "contributors_enabled": false,
+    "is_translator": false,
+    "is_translation_enabled": false,
+    "profile_background_color": "000000",
+    "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+    "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+    "profile_background_tile": false,
+    "profile_image_url": "http://pbs.twimg.com/profile_images/1169987185451458562/-GE3MfkV_normal.jpg",
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/1169987185451458562/-GE3MfkV_normal.jpg",
+    "profile_banner_url": "https://pbs.twimg.com/profile_banners/885117748040413185/1567781658",
+    "profile_link_color": "19CF86",
+    "profile_sidebar_border_color": "000000",
+    "profile_sidebar_fill_color": "000000",
+    "profile_text_color": "000000",
+    "profile_use_background_image": false,
+    "has_extended_profile": true,
+    "default_profile": false,
+    "default_profile_image": false,
+    "can_media_tag": true,
+    "followed_by": false,
+    "following": false,
+    "follow_request_sent": false,
+    "notifications": false,
+    "translator_type": "none"
+  },
+  {
+    "id": 2554705279,
+    "id_str": "2554705279",
+    "name": "Cupom Ifood",
+    "screen_name": "CupomIfood27",
+    "location": "",
+    "description": "",
+    "url": null,
+    "entities": {
+      "description": {
+        "urls": []
+      }
+    },
+    "protected": false,
+    "followers_count": 919,
+    "friends_count": 7,
+    "listed_count": 0,
+    "created_at": "Sun Jun 08 13:11:00 +0000 2014",
+    "favourites_count": 449,
+    "utc_offset": null,
+    "time_zone": null,
+    "geo_enabled": false,
+    "verified": false,
+    "statuses_count": 4750,
+    "lang": null,
+    "status": {
+      "created_at": "Wed Feb 05 04:00:34 +0000 2020",
+      "id": 1224905631997612032,
+      "id_str": "1224905631997612032",
+      "text": "+ barato + gostoso ;)\nCupom ifood (usar no app) =&gt; EE6HZ487AL\nCódigo Rappi =&gt; 82q38640354\nShipp (delivery) -&gt; ALE1U… https://t.co/aWBJjW0YSn",
+      "truncated": true,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "user_mentions": [],
+        "urls": [
+          {
+            "url": "https://t.co/aWBJjW0YSn",
+            "expanded_url": "https://twitter.com/i/web/status/1224905631997612032",
+            "display_url": "twitter.com/i/web/status/1…",
+            "indices": [
+              126,
+              149
+            ]
+          }
+        ]
+      },
+      "source": "<a href=\"https://postcron.com\" rel=\"nofollow\">Postcron App</a>",
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": null,
+      "in_reply_to_user_id_str": null,
+      "in_reply_to_screen_name": null,
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "is_quote_status": false,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "favorited": false,
+      "retweeted": false,
+      "possibly_sensitive": false,
+      "lang": "pt"
+    },
+    "contributors_enabled": false,
+    "is_translator": false,
+    "is_translation_enabled": false,
+    "profile_background_color": "C0DEED",
+    "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+    "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+    "profile_background_tile": false,
+    "profile_image_url": "http://pbs.twimg.com/profile_images/1186702906583588865/T3FrK_Wt_normal.jpg",
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/1186702906583588865/T3FrK_Wt_normal.jpg",
+    "profile_banner_url": "https://pbs.twimg.com/profile_banners/2554705279/1570284803",
+    "profile_link_color": "1DA1F2",
+    "profile_sidebar_border_color": "C0DEED",
+    "profile_sidebar_fill_color": "DDEEF6",
+    "profile_text_color": "333333",
+    "profile_use_background_image": true,
+    "has_extended_profile": false,
+    "default_profile": true,
+    "default_profile_image": false,
+    "can_media_tag": true,
+    "followed_by": false,
+    "following": false,
+    "follow_request_sent": false,
+    "notifications": false,
+    "translator_type": "none"
+  }
+]

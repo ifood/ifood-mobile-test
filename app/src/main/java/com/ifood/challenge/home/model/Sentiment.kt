@@ -6,4 +6,11 @@ sealed class Sentiment {
     object Neutral : Sentiment()
     object Sad : Sentiment()
     object None : Sentiment()
+
+    override fun toString(): String = when (this) {
+        Happy -> "Happy"
+        Neutral -> "Neutral"
+        Sad -> "Sad"
+        None -> "None"
+    }
 }
