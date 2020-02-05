@@ -17,4 +17,44 @@
 
         <item name="android:windowBackground">@color/windowBackground</item>
     </style>
+
+    <style name="SearchEditText">
+        <item name="android:textSize">@dimen/font_size_header</item>
+        <item name="android:textColor">@color/colorTextSecondary</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:background">@drawable/bg_search</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:drawableStart">@drawable/ic_search</item>
+        <item name="android:drawablePadding">8dp</item>
+    </style>
+
+
+    <style name="TextBody">
+        <item name="android:textSize">@dimen/font_size_body</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:lineSpacingExtra">2sp</item>
+        <item name="android:textColor">@color/colorTextSecondary</item>
+    </style>
+
+    <style name="TextBody.White" parent="TextBody">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="TextHeader">
+        <item name="android:textSize">@dimen/font_size_header</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:lineSpacingExtra">2sp</item>
+        <item name="android:textColor">@color/colorTextPrimary</item>
+    </style>
+
+    <style name="TextHeader.White" parent="TextHeader">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="TextHeader.White.Medium" parent="TextHeader.White">
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
 </resources>

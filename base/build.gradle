@@ -1,0 +1,100 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    def androidConfig = rootProject.ext.android
+
+    compileSdkVersion androidConfig.compileSdkVersion
+    buildToolsVersion androidConfig.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion androidConfig.minSdkVersion
+        targetSdkVersion androidConfig.targetSdkVersion
+
+        testInstrumentationRunner androidConfig.testRunner
+
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    buildTypes {
+        beta {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    androidExtensions {
+        experimental = true
+    }
+
+    testOptions {
+        unitTests {
+            returnDefaultValues = true
+            all {
+                testLogging {
+                    exceptionFormat "full"
+                    events 'passed', 'skipped', 'failed', 'standardOut', 'standardError'
+                    outputs.upToDateWhen { false }
+                    showStandardStreams = true
+                }
+            }
+        }
+    }
+}
+
+dependencies {
+
+    def commonDependencies = rootProject.ext.commonDependencies
+    def commonTestDependencies = rootProject.ext.commonTestDependencies
+
+    // Architecture components
+    implementation commonDependencies.architectureComponentsExtensions
+
+    // Android
+    implementation commonDependencies.appCompat
+    implementation commonDependencies.materialDesign
+    implementation commonDependencies.supportRecyclerView
+    implementation commonDependencies.constraintLayout
+
+    // Dagger 2
+    implementation commonDependencies.dagger2
+    kapt commonDependencies.dagger2Compiler
+
+    // Kotlin
+    implementation commonDependencies.kotlinJdk
+
+    // RxJava 2
+    implementation commonDependencies.rxJava2
+
+    // Moshi
+    implementation commonDependencies.moshi
+    kapt commonDependencies.moshiCodegen
+
+    // Glide to show images from web and caching
+    implementation(commonDependencies.glide) { exclude group: "com.android.support" }
+    kapt commonDependencies.glideProcessor
+
+    // Skeleton and ShimmerLayout for loading on screens
+    implementation commonDependencies.shimmer
+
+    // Timber
+    api commonDependencies.timber
+
+    // Unit tests
+    testImplementation commonTestDependencies.junit
+    testImplementation commonTestDependencies.assertj
+
+}

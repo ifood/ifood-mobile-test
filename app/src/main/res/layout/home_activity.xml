@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/helpToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:title="@string/app_name" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/homeTweetsRv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/bottom_sheet_spacing"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:listitem="@layout/tweet_item" />
+
+    <com.ifood.challenge.base.presentation.views.EmptyView
+        android:id="@+id/initialState"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/bottom_sheet_spacing"
+        app:ev_action_button_visibility="gone"
+        app:ev_icon="@drawable/ic_happy"
+        app:ev_subtitle="@string/search_timeline_initial_state_subtitle"
+        app:ev_title="@string/search_timeline_initial_state_title"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <com.ifood.challenge.base.presentation.views.EmptyView
+        android:id="@+id/emptyView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/bottom_sheet_spacing"
+        android:visibility="gone"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <com.ifood.challenge.base.presentation.views.ErrorView
+        android:id="@+id/errorView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/bottom_sheet_spacing"
+        android:visibility="gone"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <com.ifood.challenge.base.presentation.views.SkeletonView
+        android:id="@+id/skeletonView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/bottom_sheet_spacing"
+        android:visibility="gone"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:skeleton_elevation="4dp"
+        app:skeleton_layout="@layout/tweet_items_skeleton" />
+
+    <FrameLayout
+        android:id="@+id/homeNestedScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="true"
+        android:elevation="6dp"
+        android:fillViewport="true"
+        app:behavior_hideable="false"
+        app:behavior_peekHeight="@dimen/bottom_sheet_behaviour_peek"
+        app:layout_behavior="@string/bottom_sheet_behavior">
+
+        <include layout="@layout/search_users_bottom_sheet" />
+
+    </FrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

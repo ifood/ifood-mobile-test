@@ -1,0 +1,23 @@
+<resources>
+
+    <string name="action_error_title">Ooops!</string>
+
+    <!--====================== START ERROR VIEW ======================-->
+
+    <string name="error_no_internet_connection_title">Ooops dont\'be confused!</string>
+    <string name="error_no_internet_connection_subtitle">Looks like that you lose your internet connection, check your network and try again</string>
+    <string name="error_no_internet_connection_short_message">Ops looks like you are without internet</string>
+    <string name="error_occurred_some_problem">Occurred some problem =S</string>
+    <string name="error_try_again">Try again</string>
+
+    <!--====================== END ERROR VIEW ======================-->
+
+
+    <!--====================== START EMPTY VIEW ======================-->
+
+    <string name="search_again">Search again</string>
+    <string name="empty_view_no_information_found">No information found</string>
+
+    <!--====================== START EMPTY VIEW ======================-->
+
+</resources>

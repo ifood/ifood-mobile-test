@@ -1,3 +1,15 @@
 <resources>
 
+    <string name="twitter_user_prefix">\@</string>
+
+    <string name="search_user_hint">Search user name</string>
+    <string name="search_user_no_user_found">No users found…</string>
+
+    <string name="sentiment_emoji_happy">😃</string>
+    <string name="sentiment_emoji_neutral">😐</string>
+    <string name="sentiment_emoji_sad">😔</string>
+    <string name="sentiment_emoji_none" />
+    <string name="analyze_sentiment_error">Ops, an error occurred on analyze sentiment, please try again!</string>
+    <string name="search_timeline_initial_state_title">Hello</string>
+    <string name="search_timeline_initial_state_subtitle">Search for an user and you\'ll see the user tweets and sentiment</string>
 </resources>

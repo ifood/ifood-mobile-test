@@ -22,6 +22,14 @@ ext {
             google : "\"https://language.googleapis.com/\"",
     ]
 
+    keys = [
+            twitterConsumerKey : "\"naN8YuiDry2rR5XMqnzCHNeHk\"",
+            twitterConsumerSecret : "\"MQ0Yq28y2nySFRpo05UNoTdvWEQi84i5legIa91IDAYfZkH0yf\"",
+            twitterAccessToken : "\"2501754890-4npTby9PkVMLi08oX2SfV9yIrFmj9HSxIOLTf1Q\"",
+            twitterTokenSecret : "\"v61K5ulUNIbWq9pOsVQRxkPDfVHB974Sv2Rym8KtAR1I9\"",
+            googleKey : "\"AIzaSyA8YwFzQdfTSarrU7r0Kn89EtSIKzzLqo4\""
+    ]
+
 //  Used to save the signature data on CI/CD securely
     def keystorePropertiesFile = rootProject.file("keystore/keystore.properties")
     def keystoreProperties = new Properties()

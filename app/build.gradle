@@ -6,6 +6,7 @@ apply plugin: 'kotlin-kapt'
 android {
     def androidConfig = rootProject.ext.android
     def endpoints = rootProject.ext.endpoints
+    def keys = rootProject.ext.keys
     def signing = rootProject.ext.signing
 
     signingConfigs {
@@ -81,6 +82,12 @@ android {
             buildConfigField 'String', 'TWITTER_API_URL', endpoints.twitter
             buildConfigField 'String', 'GOOGLE_API_URL', endpoints.google
 
+            buildConfigField 'String', 'TWITTER_CONSUMER_KEY', keys.twitterConsumerKey
+            buildConfigField 'String', 'TWITTER_CONSUMER_SECRET', keys.twitterConsumerSecret
+            buildConfigField 'String', 'TWITTER_ACCESS_TOKEN', keys.twitterAccessToken
+            buildConfigField 'String', 'TWITTER_TOKEN_SECRET', keys.twitterTokenSecret
+            buildConfigField 'String', 'GOOGLE_API_KEY', keys.googleKey
+
             resValue "string", "app_name", "iFood Challenge-Dev"
 
             // disable multi APK generation for development build
@@ -96,6 +103,12 @@ android {
 
             buildConfigField 'String', 'TWITTER_API_URL', endpoints.twitter
             buildConfigField 'String', 'GOOGLE_API_URL', endpoints.google
+
+            buildConfigField 'String', 'TWITTER_CONSUMER_KEY', keys.twitterConsumerKey
+            buildConfigField 'String', 'TWITTER_CONSUMER_SECRET', keys.twitterConsumerSecret
+            buildConfigField 'String', 'TWITTER_ACCESS_TOKEN', keys.twitterAccessToken
+            buildConfigField 'String', 'TWITTER_TOKEN_SECRET', keys.twitterTokenSecret
+            buildConfigField 'String', 'GOOGLE_API_KEY', keys.googleKey
 
             resValue "string", "app_name", "iFood Challenge"
         }
@@ -129,6 +142,8 @@ dependencies {
     def commonDependencies = rootProject.ext.commonDependencies
     def commonTestDependencies = rootProject.ext.commonTestDependencies
 
+    implementation commonDependencies.baseProject
+
     // Architecture components
     implementation commonDependencies.architectureComponentsExtensions
 
@@ -157,6 +172,8 @@ dependencies {
     // OkHttp
     implementation commonDependencies.okHttp
     implementation commonDependencies.okHttpInterceptor
+    implementation commonDependencies.okHttpSignPost
+    implementation commonDependencies.oauthSignPost
 
     // RxJava 2
     implementation commonDependencies.rxJava2
@@ -164,6 +181,8 @@ dependencies {
     // Moshi
     implementation commonDependencies.moshi
     kapt commonDependencies.moshiCodegen
+
+    implementation commonDependencies.circleImageView
 
     // Unit Tests
     testImplementation commonTestDependencies.junit

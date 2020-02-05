@@ -37,6 +37,8 @@ ext {
     // Networking
     retrofit2 = '2.7.0'
     okHttp = '4.2.2'
+    okHttpSignPost = '1.1.0'
+    oauthSignPost = '1.2.1.2'
     moshi = '1.9.2'
 
     rxJava2 = '2.2.15'
@@ -64,6 +66,7 @@ ext {
     commonDependencies = [
 
             applicationProject              : project(':app'),
+            baseProject                     : project(':base'),
 
             architectureComponentsExtensions: "androidx.lifecycle:lifecycle-extensions:${architectureComponents}",
             architectureComponentsCompiler  : "android.arch.lifecycle:compiler:${architectureComponents}",
@@ -77,6 +80,8 @@ ext {
 
             okHttp                          : "com.squareup.okhttp3:okhttp:${okHttp}",
             okHttpInterceptor               : "com.squareup.okhttp3:logging-interceptor:${okHttp}",
+            okHttpSignPost                  : "se.akerfeldt:okhttp-signpost:${okHttpSignPost}",
+            oauthSignPost                   : "oauth.signpost:signpost-core:${oauthSignPost}",
 
             moshi                           : "com.squareup.moshi:moshi:${moshi}",
             moshiCodegen                    : "com.squareup.moshi:moshi-kotlin-codegen:${moshi}",

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:paddingStart="@dimen/margin"
+    android:paddingTop="@dimen/margin"
+    android:paddingEnd="@dimen/margin"
+    tools:background="@color/colorAccent">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/twitterUserImage"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/twitterUserNamePrefix"
+        style="@style/TextHeader.White"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin"
+        android:alpha="0.6"
+        android:text="@string/twitter_user_prefix"
+        app:layout_constraintStart_toEndOf="@id/twitterUserImage"
+        app:layout_constraintTop_toTopOf="@id/twitterUserImage" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/twitterUserName"
+        style="@style/TextHeader.White.Medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_mini"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/twitterUserNamePrefix"
+        app:layout_constraintTop_toTopOf="@+id/twitterUserNamePrefix"
+        tools:text="@tools:sample/first_names" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/twitterUserLocation"
+        style="@style/TextBody.White"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_min"
+        app:layout_constraintStart_toStartOf="@+id/twitterUserNamePrefix"
+        app:layout_constraintTop_toBottomOf="@+id/twitterUserName"
+        tools:text="@tools:sample/cities" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/margin"
+        android:alpha="0.2"
+        android:background="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/twitterUserLocation" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
