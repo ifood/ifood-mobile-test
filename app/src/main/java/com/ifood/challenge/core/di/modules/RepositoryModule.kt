@@ -1,8 +1,8 @@
 package com.ifood.challenge.core.di.modules
 
 import com.ifood.challenge.core.di.scopes.ApplicationScope
-import com.ifood.challenge.home.data.GoogleRepository
-import com.ifood.challenge.home.data.TwitterRepository
+import com.ifood.challenge.home.data.google.GoogleRepository
+import com.ifood.challenge.home.data.twitter.TwitterRepository
 import dagger.Module
 import dagger.Provides
 

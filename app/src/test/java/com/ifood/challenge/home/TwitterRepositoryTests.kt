@@ -2,10 +2,10 @@ package com.ifood.challenge.home
 
 import com.ifood.challenge.base.BaseTests
 import com.ifood.challenge.base.common.exception.NetworkError
-import com.ifood.challenge.home.data.TweetMapper
-import com.ifood.challenge.home.data.TwitterRepository
-import com.ifood.challenge.home.data.TwitterService
-import com.ifood.challenge.home.data.TwitterUserMapper
+import com.ifood.challenge.home.data.twitter.TweetMapper
+import com.ifood.challenge.home.data.twitter.TwitterRepository
+import com.ifood.challenge.home.data.twitter.TwitterService
+import com.ifood.challenge.home.data.twitter.TwitterUserMapper
 import com.ifood.challenge.home.model.Tweet
 import com.ifood.challenge.home.model.TwitterUser
 import org.junit.Before
@@ -22,7 +22,8 @@ class TwitterRepositoryTests : BaseTests() {
 
     private val service: TwitterService = retrofit.create()
 
-    private val twitterUserMapper = TwitterUserMapper()
+    private val twitterUserMapper =
+        TwitterUserMapper()
 
     private val tweetMapper = TweetMapper()
 

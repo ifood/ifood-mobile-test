@@ -3,9 +3,9 @@ package com.ifood.challenge.home
 import com.ifood.challenge.base.BaseTests
 import com.ifood.challenge.base.common.exception.EssentialParamMissingException
 import com.ifood.challenge.base.common.exception.NetworkError
-import com.ifood.challenge.home.data.GoogleRepository
-import com.ifood.challenge.home.data.GoogleService
-import com.ifood.challenge.home.data.SentimentMapper
+import com.ifood.challenge.home.data.google.GoogleRepository
+import com.ifood.challenge.home.data.google.GoogleService
+import com.ifood.challenge.home.data.google.SentimentMapper
 import com.ifood.challenge.home.model.Sentiment
 import org.junit.Before
 import org.junit.Test
@@ -18,7 +18,8 @@ class GoogleRepositoryTests : BaseTests() {
 
     private val service: GoogleService = retrofit.create()
 
-    private val sentimentMapper = SentimentMapper()
+    private val sentimentMapper =
+        SentimentMapper()
 
     private lateinit var repository: GoogleRepository.Remote
 

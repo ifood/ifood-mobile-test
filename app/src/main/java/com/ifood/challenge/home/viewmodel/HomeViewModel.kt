@@ -1,16 +1,14 @@
 package com.ifood.challenge.home.viewmodel
 
-import android.text.Editable
-import android.text.TextWatcher
-import android.widget.EditText
 import androidx.lifecycle.MutableLiveData
 import com.ifood.challenge.base.data.ViewState
 import com.ifood.challenge.base.extensions.addToComposite
+import com.ifood.challenge.base.extensions.empty
 import com.ifood.challenge.base.extensions.observeOnBackground
 import com.ifood.challenge.base.extensions.performOnBack
 import com.ifood.challenge.base.presentation.BaseViewModel
-import com.ifood.challenge.home.data.GoogleRepository
-import com.ifood.challenge.home.data.TwitterRepository
+import com.ifood.challenge.home.data.google.GoogleRepository
+import com.ifood.challenge.home.data.twitter.TwitterRepository
 import com.ifood.challenge.home.model.Sentiment
 import com.ifood.challenge.home.model.Tweet
 import com.ifood.challenge.home.model.TwitterUser
@@ -18,6 +16,9 @@ import io.reactivex.disposables.Disposable
 import io.reactivex.subjects.PublishSubject
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
+
+private const val SEARCH_TEXT_DEBOUNCE_SECONDS = 1L
+private const val SEARCH_MIN_TEXT_LENGTH = 3
 
 class HomeViewModel @Inject constructor(
     private val twitterRepository: TwitterRepository,
@@ -92,17 +93,11 @@ class HomeViewModel @Inject constructor(
         tweetAnalyzingSentiment.postValue(viewState)
     }
 
-    fun observeSearchTextChange(editText: EditText) {
-        editText.addTextChangedListener(object : TextWatcher {
-            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
-            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
-            override fun afterTextChanged(text: Editable?) {
-                val query = text?.toString() ?: ""
-                onTextChange(query)
-            }
-        })
-        searchTextDisposable = searchTextObservable.debounce(1, TimeUnit.SECONDS)
-            .filter { it != "" }
+    fun observeSearchTextChange() {
+        searchTextDisposable = searchTextObservable.debounce(
+                SEARCH_TEXT_DEBOUNCE_SECONDS,
+                TimeUnit.SECONDS
+            ).filter { it.isNotBlank() }
             .performOnBack()
             .observeOnBackground()
             .subscribe { newText ->
@@ -110,10 +105,10 @@ class HomeViewModel @Inject constructor(
             }
     }
 
-    private fun onTextChange(query: String) {
+    fun onTextChange(query: String) {
         when {
-            query.length >= 3 -> searchTextObservable.onNext(query)
-            else -> searchTextObservable.onNext("")
+            query.length >= SEARCH_MIN_TEXT_LENGTH -> searchTextObservable.onNext(query)
+            else -> searchTextObservable.onNext(String.empty())
         }
     }
 

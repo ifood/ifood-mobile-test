@@ -4,8 +4,8 @@ import com.ifood.challenge.BuildConfig
 import com.ifood.challenge.base.common.exception.HttpError
 import com.ifood.challenge.core.ApiConfig
 import com.ifood.challenge.core.di.scopes.ApplicationScope
-import com.ifood.challenge.home.data.GoogleService
-import com.ifood.challenge.home.data.TwitterService
+import com.ifood.challenge.home.data.google.GoogleService
+import com.ifood.challenge.home.data.twitter.TwitterService
 import com.squareup.moshi.Moshi
 import dagger.Module
 import dagger.Provides

@@ -8,6 +8,8 @@ import java.util.*
 const val TWITTER_DATE_FORMAT = "E MMM dd HH:mm:ss Z yyyy"
 const val US_DATE_FORMAT = "HH:mm MM/dd/yyyy"
 
+fun String.Companion.empty() = ""
+
 fun String?.fromTwitterDateToUsDate(): String {
     if (this == null) return ""
     return try {

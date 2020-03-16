@@ -3,8 +3,8 @@ package com.ifood.challenge.home
 import com.ifood.challenge.base.BaseViewModelTests
 import com.ifood.challenge.base.common.exception.NetworkError
 import com.ifood.challenge.base.data.ViewState
-import com.ifood.challenge.home.data.GoogleRepository
-import com.ifood.challenge.home.data.TwitterRepository
+import com.ifood.challenge.home.data.google.GoogleRepository
+import com.ifood.challenge.home.data.twitter.TwitterRepository
 import com.ifood.challenge.home.model.Sentiment
 import com.ifood.challenge.home.model.Tweet
 import com.ifood.challenge.home.model.TwitterUser

@@ -1,6 +1,8 @@
 package com.ifood.challenge.home.presentation
 
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.widget.Toast
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.ifood.challenge.R
@@ -44,13 +46,13 @@ class HomeActivity : BaseActivity() {
             observe(tweetAnalyzingSentiment, ::onTweetChange)
             observe(searchText, ::onSearchTextChange)
             failure(appException, ::onResponseError)
-            observeSearchTextChange(searchUsersEditText)
         }
 
         setupViews()
     }
 
     private fun setupViews() {
+        observeTextChange()
         searchUserEmptyView.apply {
             setActionButtonClick {
                 viewModel.trySearchUsersAgain()
@@ -155,6 +157,18 @@ class HomeActivity : BaseActivity() {
 
     private fun collapseBottomSheet() {
         bottomSheet.state = BottomSheetBehavior.STATE_COLLAPSED
+    }
+
+    private fun observeTextChange() {
+        viewModel.observeSearchTextChange()
+        searchUsersEditText.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
+            override fun afterTextChanged(text: Editable?) {
+                val query = text?.toString() ?: ""
+                viewModel.onTextChange(query)
+            }
+        })
     }
 
     override fun onBackPressed() {
