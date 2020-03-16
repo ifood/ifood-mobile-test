@@ -1,5 +1,8 @@
 ### Challenge done
-[![iFood Android Challenge](https://res.cloudinary.com/marcomontalbano/image/upload/v1580874056/video_to_markdown/images/youtube--n8762R8XU6I-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://youtu.be/n8762R8XU6I "iFood Android Challenge")
+
+<p align="center">
+<img src="https://github.com/ygorcesar/ifood-mobile-test/blob/master/screens/challenge-screen-record.gif?raw=true" width="320"/>
+</p>
 
 # ifood-mobile-test
 Create an app that given an Twitter username it will list user's tweets. When I tap one of the tweets the app will visualy indicate if it's a happy, neutral or sad tweet.
