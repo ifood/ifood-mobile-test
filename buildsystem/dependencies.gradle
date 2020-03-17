@@ -1,0 +1,134 @@
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+        maven { url 'https://maven.fabric.io/public' }
+    }
+}
+
+subprojects {
+    configurations.all {
+        resolutionStrategy {
+            forcedModules = [
+                    "org.jetbrains.kotlin:kotlin-stdlib:${kotlin_version}",
+                    "org.jetbrains.kotlin:kotlin-reflect:${kotlin_version}",
+            ]
+            // Solve problem on Mockito new versions
+            force 'net.bytebuddy:byte-buddy:1.8.22'
+            force 'net.bytebuddy:byte-buddy-agent:1.8.22'
+        }
+    }
+}
+
+ext {
+    // Android Libs
+    appCompat = '1.1.0'
+    androidLibrary = '1.0.0'
+    recyclerView = '1.1.0'
+    materialDesign = '1.1.0-beta02'
+    constraintLayout = '1.1.3'
+    swipeRefresh = '1.1.0-alpha03'
+    architectureComponents = '2.1.0'
+    multiDex = '2.0.1'
+
+
+    // Networking
+    retrofit2 = '2.7.0'
+    okHttp = '4.2.2'
+    okHttpSignPost = '1.1.0'
+    oauthSignPost = '1.2.1.2'
+    moshi = '1.9.2'
+
+    rxJava2 = '2.2.15'
+
+    dagger2 = '2.25.2'
+
+    // UI
+    circleImageview = '3.0.1'
+    shimmer = '0.5.0'
+    glide = '4.9.0'
+
+    // Testing
+    androidTest = '1.2.0'
+    assertJ = '3.14.0'
+    espresso = '3.2.0'
+    daggerMock = '0.8.4'
+    junit = '1.1.1'
+    mockk = '1.9'
+    barista = '3.2.0'
+    kaspresso = '1.0.1'
+
+    // Development
+    timber = '4.7.1'
+
+    commonDependencies = [
+
+            applicationProject              : project(':app'),
+            baseProject                     : project(':base'),
+
+            architectureComponentsExtensions: "androidx.lifecycle:lifecycle-extensions:${architectureComponents}",
+            architectureComponentsCompiler  : "android.arch.lifecycle:compiler:${architectureComponents}",
+
+            kotlinJdk                       : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlin_version}",
+
+            dagger2                         : "com.google.dagger:dagger:${dagger2}",
+            dagger2Compiler                 : "com.google.dagger:dagger-compiler:${dagger2}",
+            dagger2Support                  : "com.google.dagger:dagger-android-support:${dagger2}",
+            dagger2Processor                : "com.google.dagger:dagger-android-processor:${dagger2}",
+
+            okHttp                          : "com.squareup.okhttp3:okhttp:${okHttp}",
+            okHttpInterceptor               : "com.squareup.okhttp3:logging-interceptor:${okHttp}",
+            okHttpSignPost                  : "se.akerfeldt:okhttp-signpost:${okHttpSignPost}",
+            oauthSignPost                   : "oauth.signpost:signpost-core:${oauthSignPost}",
+
+            moshi                           : "com.squareup.moshi:moshi:${moshi}",
+            moshiCodegen                    : "com.squareup.moshi:moshi-kotlin-codegen:${moshi}",
+
+            retrofit2                       : "com.squareup.retrofit2:retrofit:${retrofit2}",
+            retrofitRxAdapter               : "com.squareup.retrofit2:adapter-rxjava2:${retrofit2}",
+            retrofitConverterMoshi          : "com.squareup.retrofit2:converter-moshi:${retrofit2}",
+
+            rxJava2                         : "io.reactivex.rxjava2:rxjava:${rxJava2}",
+
+            appCompat                       : "androidx.appcompat:appcompat:${appCompat}",
+            materialDesign                  : "com.google.android.material:material:${materialDesign}",
+            supportCardView                 : "androidx.cardview:cardview:${androidLibrary}",
+            supportRecyclerView             : "androidx.recyclerview:recyclerview:${recyclerView}",
+            constraintLayout                : "com.android.support.constraint:constraint-layout:${constraintLayout}",
+            swipeRefresh                    : "androidx.swiperefreshlayout:swiperefreshlayout:${swipeRefresh}",
+            multiDex                        : "androidx.multidex:multidex:${multiDex}",
+
+            shimmer                         : "com.facebook.shimmer:shimmer:${shimmer}",
+            circleImageView                 : "de.hdodenhof:circleimageview:${circleImageview}",
+            glide                           : "com.github.bumptech.glide:glide:${glide}",
+            glideProcessor                  : "com.github.bumptech.glide:compiler:${glide}",
+
+            timber        : "com.jakewharton.timber:timber:${timber}"
+    ]
+
+    commonTestDependencies = [
+            androidRules                 : "androidx.test:rules:${androidTest}",
+            androidOrchestrator          : "androidx.test:orchestrator:${androidTest}",
+
+            architectureComponentsTesting: "androidx.arch.core:core-testing:${architectureComponents}",
+
+            assertj                      : "org.assertj:assertj-core:${assertJ}",
+
+            daggerMock                   : "com.github.fabioCollini.daggermock:daggermock-kotlin:${daggerMock}",
+
+            espressoCore                 : "androidx.test.espresso:espresso-core:${espresso}",
+            espressoContrib              : "androidx.test.espresso:espresso-contrib:${espresso}",
+            espressoIntents              : "androidx.test.espresso:espresso-intents:${espresso}",
+
+            junit                        : "androidx.test.ext:junit:${junit}",
+
+            mockk                        : "io.mockk:mockk:${mockk}",
+            mockkAndroid                 : "io.mockk:mockk-android:${mockk}",
+            mockWebServer                : "com.squareup.okhttp3:mockwebserver:${okHttp}",
+
+            barista                      : "com.schibsted.spain:barista:${barista}",
+            kaspresso                    : "com.kaspersky.android-components:kaspresso:${kaspresso}"
+    ]
+}

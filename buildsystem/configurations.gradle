@@ -1,0 +1,51 @@
+ext {
+
+    def versionMajor = 1
+    def versionMinor = 0
+    def versionPatch = 0
+    def appVersionCode = versionMajor * 10000 + versionMinor * 100 + versionPatch
+
+    android = [
+            applicationId    : "com.ifood.challenge",
+            buildToolsVersion: "29.0.2",
+            minSdkVersion    : 21,
+            targetSdkVersion : 28,
+            compileSdkVersion: 28,
+            testRunner       : "com.ifood.challenge.base.EspressoTestRunner",
+            versionCode      : appVersionCode,
+            versionName      : "$versionMajor.$versionMinor.$versionPatch"
+    ]
+
+
+    endpoints = [
+            twitter : "\"https://api.twitter.com/\"",
+            google : "\"https://language.googleapis.com/\"",
+    ]
+
+    keys = [
+            twitterConsumerKey : "\"naN8YuiDry2rR5XMqnzCHNeHk\"",
+            twitterConsumerSecret : "\"MQ0Yq28y2nySFRpo05UNoTdvWEQi84i5legIa91IDAYfZkH0yf\"",
+            twitterAccessToken : "\"2501754890-4npTby9PkVMLi08oX2SfV9yIrFmj9HSxIOLTf1Q\"",
+            twitterTokenSecret : "\"v61K5ulUNIbWq9pOsVQRxkPDfVHB974Sv2Rym8KtAR1I9\"",
+            googleKey : "\"AIzaSyA8YwFzQdfTSarrU7r0Kn89EtSIKzzLqo4\""
+    ]
+
+//  Used to save the signature data on CI/CD securely
+    def keystorePropertiesFile = rootProject.file("keystore/keystore.properties")
+    def keystoreProperties = new Properties()
+
+    if (keystorePropertiesFile.exists()) {
+        keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+    } else {
+        keystoreProperties.setProperty("signing_keystore_password", "\"${System.getenv('signing_keystore_password')}\"")
+        keystoreProperties.setProperty("signing_key_alias", "\"${System.getenv('signing_key_alias')}\"")
+        keystoreProperties.setProperty("signing_key_password", "\"${System.getenv('signing_key_password')}\"")
+    }
+
+    signing = [
+            storeFile    : "../keystore/ifood.jks",
+            storePassword: keystoreProperties['signing_keystore_password'],
+            keyAlias     : keystoreProperties['signing_key_alias'],
+            keyPassword  : keystoreProperties['signing_key_password']
+    ]
+}
